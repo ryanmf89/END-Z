@@ -1,0 +1,17 @@
+<configs>
+	
+		<!-- Change Pack Mule Perk to unlock all slots -->
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@value='3,6,10,14,18']/@value">7,14,21,28,35</set>
+
+	<!--LESS GRIND-->
+	  <!-- MotherLode perk is rather, underwhelming, let's fix that -->
+  <set xpath="/progression/perks/perk[@name='perkMotherLode']/effect_group/passive_effect[@name='HarvestCount']/@value">.5,2</set>
+  <set xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='CraftingTime']/@value">-0.5</set>
+
+
+
+
+	
+	
+
+</configs>

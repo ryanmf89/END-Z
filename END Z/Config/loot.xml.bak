@@ -1,0 +1,15 @@
+<configs>
+
+
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT2']">
+		<item name="t3vibespearLLSchematic" loot_prob_template="high" />
+	</append>
+
+	    <!-- Make player dropped bags bigger to accomodate new size-->
+	<set xpath="/lootcontainers/lootcontainer[@id='2']/@size">11,11</set>
+
+
+</configs>
+
+
+

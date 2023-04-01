@@ -1,0 +1,25 @@
+<configs>
+
+ <append xpath="/materials">
+ 
+	<!-- forge material -->
+        <material id="resourceforgedmoonrockLL">
+            <property name="damage_category" value="metal"/>
+            <property name="surface_category" value="metal"/>
+            <property name="forge_category" value="forgedmoonrockLL"/>
+            <property name="Experience" value="1"/>
+        
+		</material>
+		
+	<!-- workbench material -->
+		<material id="resourceforgedvibeLL">
+            <property name="damage_category" value="metal"/>
+            <property name="surface_category" value="metal"/>
+            <property name="Workbench_category" value="forgedvibeLL"/>
+            <property name="Experience" value="1"/>
+        
+		</material>
+		
+		</append>
+
+</configs>

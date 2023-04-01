@@ -1,0 +1,150 @@
+<configs>
+
+<append xpath="/recipes">
+
+	<!-- NEW DUKES RECIPE -->
+	<recipe name="casinoCoin" count="1" craft_area="workbench" craft_time="15">
+		<ingredient name="oldCash" count="1"/>
+	</recipe>
+	
+	<!-- NEW ACID RECIPE -->
+	<recipe name="resourceAcid" count="2" craft_area="chemistryStation" craft_time="120">
+		<ingredient name="carBattery" count="1"/>
+	</recipe>
+
+	<!-- CANNED FOOD RECIPES -->
+		<recipe name="foodCanMiso" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="foodRawMeat" count="5"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+	</recipe>
+
+	<recipe name="foodCanPasta" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+		
+	</recipe>
+	
+	<recipe name="foodCanPeas" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="resourceYuccaFibers" count="10"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="resourceClayLump" count="5"/>
+	
+	</recipe>
+	
+	<recipe name="foodCanCatfood" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="foodRawMeat" count="5"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="resourceYuccaFibers" count="5"/>
+	
+	</recipe>
+	
+		<recipe name="foodCanDogfood" count="2" craft_area="campfire" craft_time="15">
+			<ingredient name="drinkCanEmpty" count="1"/>
+			<ingredient name="foodRawMeat" count="5"/>
+			<ingredient name="drinkJarRiverWater" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+	
+	</recipe>
+	
+	<recipe name="foodCanChili" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="foodRawMeat" count="5"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="resourceYuccaFibers" count="5"/>
+		<ingredient name="foodCanMiso" count="1"/>
+	
+	</recipe>
+	
+	<recipe name="foodCanSalmon" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="foodRawMeat" count="5"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+	
+	</recipe>
+	
+	<recipe name="foodCanSham" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="foodRawMeat" count="10"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+	
+	</recipe>
+	
+	<recipe name="foodCanBeef" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="foodRawMeat" count="5"/>
+	
+	</recipe>
+	
+	<recipe name="foodCanStock" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="foodCanBeef" count="1"/>
+	
+	</recipe>
+	
+	<recipe name="foodCanTuna" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="foodRawMeat" count="5"/>
+	
+	</recipe>
+	
+	<recipe name="foodCanChicken" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="foodRawMeat" count="5"/>
+	
+	</recipe>
+	
+	<!-- NEW VIBRANIUM INGREDIENTS AND CRAFT AREA RECIPES -->
+	
+	<recipe name="resourceforgedvibeLL" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" craft_time="30">
+		<ingredient name="unit_iron" count="70"/>
+		<ingredient name="unit_clay" count="35"/>
+
+	</recipe>
+
+	<recipe name="t3vibespearLL" count="1" craft_area="workbench" craft_time="240" tags="learnable,perkJavelinMaster,t3vibespearLLSchematic">
+		<ingredient name="resourceforgedvibeLL" count="100"/>
+		<ingredient name="resourceForgedSteel" count="100"/>
+		<ingredient name="resourceWood" count="100"/>
+		<ingredient name="resourceLeather" count="100"/>
+		<ingredient name="resourceDuctTape" count="50"/>
+		
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceforgedvibeLL,resourceForgedSteel,resourceWood,resourceLeather,resourceDuctTape"/>
+	</effect_group>
+
+	</recipe>
+	
+	<recipe name="vibeworkbenchLL" count="1" craft_time="300" tags="learnable,perkAdvancedEngineering,workbenchCrafting">
+		<ingredient name="resourceforgedvibeLL" count="50"/>
+		<ingredient name="resourceMechanicalParts" count="50"/>
+		<ingredient name="meleeToolSalvageT1Wrench" count="5"/>
+		<ingredient name="meleeToolRepairT1ClawHammer" count="5"/>
+		<ingredient name="resourceWood" count="500"/>
+	</recipe>
+	
+	  <!-- Why would you need 5 pieces of meat to make 1 cooked piece of meat? -->
+  <set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']/@count">2</set>
+  <set xpath="/recipes/recipe[@name='foodBoiledMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+  <set xpath="/recipes/recipe[@name='foodCharredMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+  <set xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']/@count">2</set>
+  <set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+  <set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">5</set>
+
+  <set xpath="/recipes/recipe[@name='ironBars']/ingredient[@name='unit_iron']/@count">50</set>
+  <set xpath="/recipes/recipe[@name='ironBarsCentered']/ingredient[@name='unit_iron']/@count">50</set>
+
+  <set xpath="/recipes/recipe[@name='trapSpikesIronDmg0']/ingredient[@name='resourceForgedIron']/@name">resourceScrapIron</set>
+  <set xpath="/recipes/recipe[@name='trapSpikesIronDmg0']/ingredient[@name='resourceScrapIron']/@count">40</set>
+
+	
+</append>
+
+</configs>

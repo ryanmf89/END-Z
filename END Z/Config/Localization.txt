@@ -1,0 +1,9 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+resourceforgedvibeLL,Items,Resource,,,"VIBRANIUM"
+resourceforgedvibeLLDesc,Items,Resource,,,"The strongest metal on the planet! search and craft at the workbench with other forged items"
+t3vibespearLL,Items,melee,,,"VIBRANIUM SPEAR"
+t3vibespearLLDesc,Items,melee,,,"VIBRANIUM SPEAR IS THE STRONGEST SPEAR IN THE GAME, read the vibranium spear schematic to unlock!"
+t3vibespearLLSchematic,Items,schematic,,,"Vibranium Spear Schematic"
+t3vibespearLLSchematicDesc,Items,schematic,,,"use this to unlock the vibranium spear"
+vibeworkbenchLL,Items,schematic,,,"Vibranium Workbench"
+vibeworkbenchLLDesc,Items,schematic,,,"this is where you craft all vibranium items"
