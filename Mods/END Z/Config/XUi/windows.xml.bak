@@ -90,7 +90,12 @@
 	<append xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']">
        <kh60_backpack_item_stack name="0"/>
 		
-	<!--FOOD AND WATER BARS-->
+			<!--hud test-->
+			<remove xpath="/windows/window[@name='windowToolbelt']/rect/rect[@stat_type='Water']" /><!--water display-->
+			<remove xpath="/windows/window[@name='windowToolbelt']/rect/rect[@stat_type='Food']" />	<!--food display-->
+			<remove xpath="/windows/window[@name='windowToolbelt']/rect/sprite[@pos='0,6']" />
+	
+	
 
 	</append>	
 	
@@ -104,6 +109,6 @@
 	
 	
 	
-	</append>
+
 		
 </configs>

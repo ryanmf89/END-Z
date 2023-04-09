@@ -1,25 +1,39 @@
 <configs>
 
- <append xpath="/materials">
- 
-	<!-- forge material -->
-        <material id="resourceforgedmoonrockLL">
-            <property name="damage_category" value="metal"/>
-            <property name="surface_category" value="metal"/>
-            <property name="forge_category" value="forgedmoonrockLL"/>
-            <property name="Experience" value="1"/>
-        
-		</material>
+	<append xpath="/materials">
 		
-	<!-- workbench material -->
-		<material id="resourceforgedvibeLL">
-            <property name="damage_category" value="metal"/>
-            <property name="surface_category" value="metal"/>
-            <property name="Workbench_category" value="forgedvibeLL"/>
-            <property name="Experience" value="1"/>
-        
-		</material>
-		
-		</append>
+	<material id="MmoonrockLL">
+		<property name="damage_category" value="metal"/>
+		<property name="surface_category" value="metal"/>
+		<property name="forge_category" value="iron"/>
+		<property name="Hardness" type="float" value="1"/>
+		<property name="stepsound" value="metal"/>
+		<property name="stability_glue" value="300"/>
+		<property name="Mass" type="int" value="20"/>
+		<property name="explosionresistance" value="1.5"/>
+		<property name="MaxDamage" value="12000"/>
+		<property name="Experience" value="25"/>
+	</material>
+	
+	<material id="MvibeblockLL">
+		<property name="damage_category" value="metal"/>
+		<property name="surface_category" value="metal"/>
+		<property name="forge_category" value="iron"/>
+		<property name="Hardness" type="float" value="1"/>
+		<property name="stepsound" value="metal"/>
+		<property name="stability_glue" value="300"/>
+		<property name="Mass" type="int" value="20"/>
+		<property name="explosionresistance" value="1.5"/>
+		<property name="MaxDamage" value="15000"/>
+		<property name="Experience" value="100"/>
+	</material>
+	
+	
+	
+	
+	
+	
+	
+	</append>
 
 </configs>

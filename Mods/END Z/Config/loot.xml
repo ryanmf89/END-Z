@@ -28,6 +28,28 @@
   <set xpath="/lootcontainers/lootgroup/item[@name='resourceLockPick']/@count">3,10</set>
 
 
+	<!--STARTER CRATE-->
+	<append xpath="/lootcontainers">
+		<!-- Our list of loot to give the player -->
+		<lootgroup name="endzStarterCrateContents" count="5" loot_quality_template="QLTemplateT0">
+			<item group="groupApparelHats" count="1" />
+			<item group="groupWeaponsMeleeScaled" count="1"/>
+			<item group="groupToolsT1" count="1"/> <!-- DOUGH: groupToolsT0 is stone. keep T1-->
+			<item group="groupArmorScaled" count="2" />
+			<item group="airdropMedicine" count="1" loot_prob_template="med" /> <!-- DOUGH: Dont like this?, can get beaker...but keeping it -->
+			<item group="airdropfood" count="2"/> <!-- DOUGH: was cannedFood. This gived a bit more variation -->
+		</lootgroup>
+
+		<!-- The loot id we need to call to get our loot group.
+		This may certainly cause conflicts with other mods. 
+		DOUGH: id now replaces with name, yet ids are still there.  leaving for now
+		-->
+		<lootcontainer id="798" name="endzStarterCrateLoot" count="1" size="8,9" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+			<item group="endzStarterCrateContents"/>
+		</lootcontainer>
+
+</append>
+
 </configs>
 
 

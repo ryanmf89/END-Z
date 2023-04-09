@@ -20,10 +20,9 @@
 		<window name="windowTargetBar" anchor="CenterTop" />
 	</append>
 	
-	<!--FOOD AND WATER BARS-->
+	<!--LOOTSTAGE-->
 	
-		<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='HUDLeftStatBars']/@name">KHHUDLeftStatBars </set>
-	
+
 	
 	
 </configs>

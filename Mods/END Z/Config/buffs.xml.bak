@@ -24,93 +24,93 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="boar" buff="buffBoarZEffect"/>
 			</effect_group>
 		</buff>
-		
 		<buff name="buffZombieZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAzombie" add="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAzombie" add="false"/>
+				<triggered_effect trigger="onSelfCrouch" action="SetNavObject" nav_object="ZAzombie" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAzombie" add="true"/>
 			</effect_group>
 		</buff>
 		<buff name="buffBanditZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAbandit" add="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAbandit" add="false"/>
+				<triggered_effect trigger="onSelfCrouch" action="SetNavObject" nav_object="ZAbandit" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAbandit" add="true"/>
 			</effect_group>
 		</buff>
 		<buff name="buffBearZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAbear" add="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAbear" add="false"/>
+				<triggered_effect trigger="onSelfCrouch" action="SetNavObject" nav_object="ZAbear" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAbear" add="true"/>
 			</effect_group>
 		</buff>
 		<buff name="buffChickenZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAchicken" add="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAchicken" add="false"/>
+				<triggered_effect trigger="onSelfCrouch" action="SetNavObject" nav_object="ZAchicken" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAchicken" add="true"/>
 			</effect_group>
 		</buff>
 		<buff name="buffDeerZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAdeer" add="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAdeer" add="false"/>
+				<triggered_effect trigger="onSelfCrouch" action="SetNavObject" nav_object="ZAdeer" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAdeer" add="true"/>
 			</effect_group>
 		</buff>
 		<buff name="buffRabbitZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZArabbit" add="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZArabbit" add="false"/>
+				<triggered_effect trigger="onSelfCrouch" action="SetNavObject" nav_object="ZArabbit" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZArabbit" add="true"/>
 			</effect_group>
 		</buff>
 		<buff name="buffWolfZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAwolf" add="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAwolf" add="false"/>
+				<triggered_effect trigger="onSelfCrouch" action="SetNavObject" nav_object="ZAwolf" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAwolf" add="true"/>
 			</effect_group>
 		</buff>
 		<buff name="buffMountainLionZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAmountainlion" add="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAmountainlion" add="false"/>
+				<triggered_effect trigger="onSelfCrouch" action="SetNavObject" nav_object="ZAmountainlion" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAmountainlion" add="true"/>
 			</effect_group>
 		</buff>
 		<buff name="buffVultureZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAvulture" add="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAvulture" add="false"/>
+				<triggered_effect trigger="onSelfCrouch" action="SetNavObject" nav_object="ZAvulture" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAvulture" add="true"/>
 			</effect_group>
 		</buff>
 		<buff name="buffSnakeZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAsnake" add="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAsnake" add="false"/>
+				<triggered_effect trigger="onSelfCrouch" action="SetNavObject" nav_object="ZAsnake" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAsnake" add="true"/>
 			</effect_group>
 		</buff>
 		<buff name="buffBoarZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAboar" add="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAboar" add="false"/>
+				<triggered_effect trigger="onSelfCrouch" action="SetNavObject" nav_object="ZAboar" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAboar" add="true"/>
 			</effect_group>
 		</buff>
 	</append>

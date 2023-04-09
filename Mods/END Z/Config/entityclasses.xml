@@ -47,6 +47,21 @@
 	<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='RunSpeed']/@value">1.5</set>
 	<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='WalkSpeed'][@tags='swimming']/@value">2.0</set>
 	
+	<!--ZOMBIE TRACKING-->
+	
+	<append xpath="/entity_classes/entity_class[@name='playerMale']">
+	<effect_group>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffZAlert"/>
+		<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffZAlert"/>
+	</effect_group>
+	</append>
+	
+	<!--STARTER CRATE-->
+	<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">,endzStarterCrate</append>
+	<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">,endzStarterCrate</append>
+	<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">,endzStarterCrate</append>
 
-
+	
+	
+	
 </configs>
