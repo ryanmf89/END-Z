@@ -8,15 +8,19 @@
 	
 	
 	<!--TRADER REFRESH-->
-	<set xpath="/traders/trader_info[@id='1']/@reset_interval">1</set>
-    <set xpath="/traders/trader_info[@id='6']/@reset_interval">1</set>
-    <set xpath="/traders/trader_info[@id='2']/@reset_interval">1</set>
-    <set xpath="/traders/trader_info[@id='7']/@reset_interval">1</set>
-    <set xpath="/traders/trader_info[@id='8']/@reset_interval">1</set>
+	<set xpath="/traders/trader_info[@id='1']/@reset_interval">2</set>
+    <set xpath="/traders/trader_info[@id='6']/@reset_interval">2</set>
+    <set xpath="/traders/trader_info[@id='2']/@reset_interval">2</set>
+    <set xpath="/traders/trader_info[@id='7']/@reset_interval">2</set>
+    <set xpath="/traders/trader_info[@id='8']/@reset_interval">2</set>
 
+	<!--TRADER CURRENCY-->
 
-
-
+	<set xpath="/traders/currency_item="oldCash"></set>
+    <set xpath="/traders/currency_item="oldCash"></set>
+    <set xpath="/traders/currency_item="oldCash"></set>
+    <set xpath="/traders/currency_item="oldCash"></set>
+    <set xpath="/traders/currency_item="oldCash"></set>
 
 
 

@@ -14,7 +14,7 @@
     <set xpath="/traders/trader_info[@id='7']/@reset_interval">2</set>
     <set xpath="/traders/trader_info[@id='8']/@reset_interval">2</set>
 
-
+	<!--TRADER CURRENCY-->
 
 
 

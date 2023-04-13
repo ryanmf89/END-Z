@@ -261,7 +261,7 @@
 		<property name="Meshfile" value="#Other/Items?Tools/shovel_stonePrefab.prefab"/>
 		<property name="Material" value="Mstone"/>
 		<property name="RepairTools" value="resourceMoonRocksLL"/>
-		<property name="DegradationBreaksAfter" value="true"/>
+		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="ItemNeedsRepair"/>
 		<property name="SoundDestroy" value="wooddestroy1"/>
 		<property name="EconomicValue" value="175"/>
@@ -323,7 +323,7 @@
 		<property name="EconomicValue" value="175"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property name="SellableToTrader" value="false"/>
-		<property name="DegradationBreaksAfter" value="true"/>
+		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="ItemNeedsRepair"/>
 		<property name="SoundDestroy" value="wooddestroy1"/>
 		<property name="ShowQuality" value="true"/>
@@ -3435,7 +3435,7 @@
 
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
-		<property name="Magazine_items" value="ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammo44slugLL"/>
+		<property name="Magazine_items" value="ammo44slugLL"/>
 		<property name="Sound_start" value="desertvulture_fire"/>
 		<property name="Sound_loop" value="desertvulture_fire"/>
 		<property name="Sound_end" value=""/>
@@ -3503,7 +3503,7 @@
 	<property name="Stacknumber" value="2500"/>
 	<effect_group name="ammo44MagnumBulletBall" tiered="false">
 		<!-- To split up the revolver and DVulture I'm providing base_set that the specific perk passives can latch on to -->
-		<passive_effect name="EntityDamage" operation="base_set" value="90" tags="perkGunslinger,revolver"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="120" tags="perkGunslinger,revolver"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="40" tags="perkGunslinger"/>
 		<passive_effect name="EntityPenetrationCount" operation="base_set" value="5" tags="perkGunslinger">
 	</passive_effect>
@@ -3511,6 +3511,28 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 	</effect_group>
 	</item>
+	
+	<!--BULLET FOR IMPROVED WEAPONS-->
+	<item name="impbulletLL">
+		<property name="Tags" value="ammo"/>
+		<property name="DisplayType" value="ammoBullet"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mbrass"/>
+		<property name="MeltTimePerUnit" value=".4"/>
+		<property name="Stacknumber" value="2500"/> <!-- STK ammo high -->
+		<property name="EconomicValue" value="9"/>
+		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+	<effect_group name="ammo9mmBulletBall" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="52" tags="perkGunslinger,9mmGun"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="4" tags="perkGunslinger"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+	</effect_group>
+	</item>
+	
+	
 	
 	</append>
 

@@ -118,11 +118,11 @@
   <set xpath="/recipes/recipe[@name='trapSpikesIronDmg0']/ingredient[@name='resourceScrapIron']/@count">40</set>
 
 	<!--NEW HOT COALS RECIPE-->
-	<recipe name="resourceHotCoalsLL" count="10" material_based="true" craft_area="campfire" craft_time="60">
+	<recipe name="resourceHotCoalsLL" count="10" material_based="true" craft_area="campfire" craft_time="30">
 		<ingredient name="resourceWood" count="5"/>
 	</recipe>
 	<!--NEW MOONROCK INGREDIENTS AND RECIPES-->
-	<recipe name="resourceMoonRocksLL" count="10" craft_time="40">
+	<recipe name="resourceMoonRocksLL" count="10" craft_time="15">
 		<ingredient name="resourceCobblestones" count="5"/>
 		<ingredient name="resourceHotCoalsLL" count="5"/>
 	</recipe>
@@ -130,22 +130,22 @@
 	<recipe name="moonrockBlockLL" count="1" craft_area="workbench" craft_time="20">
 		<ingredient name="resourceMoonRocksLL" count="50"/>
 	</recipe>
-	<recipe name="moonrockshovelLL" count="1" craft_time="90" tags="perkMiner69r">
+	<recipe name="moonrockshovelLL" count="1" craft_time="180" tags="perkMiner69r">
 		<ingredient name="resourceMoonRocksLL" count="50"/>
 		<ingredient name="resourceYuccaFibers" count="15"/>
 		<ingredient name="resourceWood" count="25"/>
 	</recipe>
-	<recipe name="moonrockaxeLL" count="1" craft_time="90" tags="perkMiner69r">
+	<recipe name="moonrockaxeLL" count="1" craft_time="180" tags="perkMiner69r">
 		<ingredient name="resourceMoonRocksLL" count="50"/>
 		<ingredient name="resourceYuccaFibers" count="15"/>
 		<ingredient name="resourceWood" count="25"/>
 	</recipe>
-	<recipe name="moonrockspearLL" count="1" tags="perkJavelinMaster">
+	<recipe name="moonrockspearLL" count="1" craft_time="180" tags="perkJavelinMaster">
 		<ingredient name="resourceMoonRocksLL" count="50"/>
 		<ingredient name="resourceYuccaFibers" count="15"/>
 		<ingredient name="resourceWood" count="25"/>
 	</recipe>
-	<recipe name="moonrocksledgeLL" count="1" tags="perkSkullCrusher">
+	<recipe name="moonrocksledgeLL" count="1" craft_time="180" tags="perkSkullCrusher">
 		<ingredient name="resourceMoonRocksLL" count="75"/>
 		<ingredient name="resourceYuccaFibers" count="25"/>
 		<ingredient name="resourceWood" count="30"/>
@@ -156,7 +156,7 @@
 		<ingredient name="unit_clay" count="5"/>
 	</recipe>
 	
-	<recipe name="brassshovelLL" count="1" craft_area="workbench" craft_time="240"  tags="perkMiner69r">
+	<recipe name="brassshovelLL" count="1" craft_area="workbench" craft_time="360"  tags="perkMiner69r">
 		<ingredient name="resourceForgedBrassLL" count="25"/>
 		<ingredient name="resourceWood" count="10"/>
 		<ingredient name="resourceLeather" count="2"/>
@@ -165,7 +165,7 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedBrassLL,resourceWood,resourceLeather,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	<recipe name="brassaxeLL" count="1" craft_area="workbench" craft_time="240" tags="perkMiner69r">
+	<recipe name="brassaxeLL" count="1" craft_area="workbench" craft_time="360" tags="perkMiner69r">
 		<ingredient name="resourceForgedBrassLL" count="25"/>
 		<ingredient name="resourceWood" count="10"/>
 		<ingredient name="resourceLeather" count="3"/>
@@ -174,7 +174,7 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedBrassLL,resourceWood,resourceLeather,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	<recipe name="brasspickaxeLL" count="1" craft_area="workbench" craft_time="240" tags="perkMiner69r">
+	<recipe name="brasspickaxeLL" count="1" craft_area="workbench" craft_time="360" tags="perkMiner69r">
 		<ingredient name="resourceForgedBrassLL" count="25"/>
 		<ingredient name="resourceWood" count="10"/>
 		<ingredient name="resourceLeather" count="3"/>
@@ -183,7 +183,7 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedBrassLL,resourceWood,resourceLeather,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	<recipe name="brasssledgeLL" count="1" craft_area="workbench" craft_time="240" tags="perkSkullCrusher">
+	<recipe name="brasssledgeLL" count="1" craft_area="workbench" craft_time="360" tags="perkSkullCrusher">
 		<ingredient name="resourceForgedBrassLL" count="30"/>
 		<ingredient name="resourceWood" count="10"/>
 		<ingredient name="resourceLeather" count="2"/>
@@ -192,7 +192,7 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedBrassLL,resourceWood,resourceLeather,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	<recipe name="brassknifeLL" count="1" craft_area="workbench" craft_time="120" tags="perkDeepCuts">
+	<recipe name="brassknifeLL" count="1" craft_area="workbench" craft_time="360" tags="perkDeepCuts">
 		<ingredient name="resourceForgedBrassLL" count="15"/>
 		<ingredient name="resourceWood" count="4"/>
 		<ingredient name="resourceLeather" count="2"/>
@@ -201,7 +201,7 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedBrassLL,resourceWood,resourceLeather,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	<recipe name="brassclubLL" count="1" craft_area="workbench" craft_time="120" tags="perkPummelPete">
+	<recipe name="brassclubLL" count="1" craft_area="workbench" craft_time="360" tags="perkPummelPete">
 		<ingredient name="resourceForgedBrassLL" count="20"/>
 		<ingredient name="resourceWood" count="10"/>
 		<ingredient name="resourceLeather" count="3"/>
@@ -210,7 +210,7 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedBrassLL,resourceWood,resourceLeather,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	<recipe name="brassknucksLL" count="1" craft_area="workbench" craft_time="120" tags="perkBrawler">
+	<recipe name="brassknucksLL" count="1" craft_area="workbench" craft_time="360" tags="perkBrawler">
 		<ingredient name="resourceForgedBrassLL" count="20"/>
 		<ingredient name="resourceMechanicalParts" count="4"/>
 		<ingredient name="resourceLeather" count="2"/>
@@ -219,7 +219,7 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedBrassLL,resourceMechanicalParts,resourceLeather,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	<recipe name="brassspearLL" count="1" craft_area="workbench" craft_time="120" tags="perkJavelinMaster">
+	<recipe name="brassspearLL" count="1" craft_area="workbench" craft_time="360" tags="perkJavelinMaster">
 		<ingredient name="resourceForgedBrassLL" count="22"/>
 		<ingredient name="resourceWood" count="10"/>
 		<ingredient name="resourceLeather" count="2"/>
@@ -236,11 +236,11 @@
 		<ingredient name="unit_clay" count="35"/>
 	</recipe>
 	<!--VIBRANIUM BLOCK-->
-	<recipe name="vibeblockLL" count="1" craft_area="workbench" craft_time="20">
+	<recipe name="vibeblockLL" count="1" craft_area="workbench" craft_time="30">
 		<ingredient name="resourceforgedvibeLL" count="10"/>
 	</recipe>
 
-	<recipe name="t3vibespearLL" count="1" craft_area="workbench" craft_time="240" tags="perkJavelinMaster">
+	<recipe name="t3vibespearLL" count="1" craft_area="workbench" craft_time="480" tags="perkJavelinMaster">
 		<ingredient name="resourceforgedvibeLL" count="100"/>
 		<ingredient name="resourceForgedSteel" count="100"/>
 		<ingredient name="resourceWood" count="100"/>
@@ -262,7 +262,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="vibesledgeLL" count="1" craft_area="workbench" craft_time="300" tags="perkSkullCrusher">
+	<recipe name="vibesledgeLL" count="1" craft_area="workbench" craft_time="480" tags="perkSkullCrusher">
 		<ingredient name="resourceforgedvibeLL" count="150"/>
 		<ingredient name="resourceForgedSteel" count="100"/>
 		<ingredient name="resourceWood" count="100"/>
@@ -273,7 +273,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="vibemacheteLL" count="1" craft_area="workbench" craft_time="300" tags="perkDeepCuts">
+	<recipe name="vibemacheteLL" count="1" craft_area="workbench" craft_time="480" tags="perkDeepCuts">
 		<ingredient name="resourceforgedvibeLL" count="125"/>
 		<ingredient name="resourceForgedSteel" count="100"/>
 		<ingredient name="resourceWood" count="100"/>
@@ -283,7 +283,7 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceforgedvibeLL,resourceForgedSteel,resourceWood,resourceLeather,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	<recipe name="vibeknucksLL" count="1" craft_area="workbench" craft_time="300" tags="perkBrawler">
+	<recipe name="vibeknucksLL" count="1" craft_area="workbench" craft_time="480" tags="perkBrawler">
 		<ingredient name="resourceforgedvibeLL" count="110"/>
 		<ingredient name="resourceForgedSteel" count="75"/>
 		<ingredient name="brassknucksLL" count="1"/>
@@ -292,7 +292,7 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceforgedvibeLL,resourceForgedSteel,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	<recipe name="vibebatLL" count="1" craft_area="workbench" craft_time="300" tags="perkPummelPete">
+	<recipe name="vibebatLL" count="1" craft_area="workbench" craft_time="480" tags="perkPummelPete">
 		<ingredient name="resourceforgedvibeLL" count="100"/>
 		<ingredient name="resourceWood" count="100"/>
 		<ingredient name="resourceLeather" count="25"/>
@@ -303,7 +303,7 @@
 	</recipe>
 
 	<!--NEW WEAPONS-->
-	<recipe name="gundubzyLL" count="1" craft_area="workbench" tags="perkBoomstick">
+	<recipe name="gundubzyLL" count="1" craft_area="workbench" craft_time="480" tags="perkBoomstick">
 		<ingredient name="gunShotgunT1DoubleBarrelParts" count="4"/>
 		<ingredient name="resourceForgedBrassLL" count="25"/>
 		<ingredient name="resourceDuctTape" count="2"/>
@@ -314,7 +314,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunpumpshotLL" count="1" craft_area="workbench" tags="perkBoomstick">
+	<recipe name="gunpumpshotLL" count="1" craft_area="workbench" craft_time="480" tags="perkBoomstick">
 		<ingredient name="gunShotgunT1DoubleBarrelParts" count="5"/>
 		<ingredient name="resourceForgedBrassLL" count="40"/>
 		<ingredient name="resourceForgedSteel" count="15"/>
@@ -326,7 +326,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunautoshotLL" count="1" craft_area="workbench" tags="perkBoomstick">
+	<recipe name="gunautoshotLL" count="1" craft_area="workbench" craft_time="480" tags="perkBoomstick">
 		<ingredient name="gunShotgunT1DoubleBarrelParts" count="6"/>
 		<ingredient name="resourceForgedBrassLL" count="40"/>
 		<ingredient name="resourceForgedSteel" count="30"/>
@@ -338,7 +338,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunhuntrifleLL" count="1" craft_area="workbench" tags="perkDeadEye">
+	<recipe name="gunhuntrifleLL" count="1" craft_area="workbench" craft_time="480" tags="perkDeadEye">
 		<ingredient name="gunRifleT1HuntingRifleParts" count="4"/>
 		<ingredient name="resourceForgedBrassLL" count="40"/>
 		<ingredient name="resourceForgedIron" count="10"/>
@@ -350,7 +350,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunleverrifleLL" count="1" craft_area="workbench" tags="perkDeadEye">
+	<recipe name="gunleverrifleLL" count="1" craft_area="workbench" craft_time="480" tags="perkDeadEye">
 		<ingredient name="gunRifleT1HuntingRifleParts" count="5"/>
 		<ingredient name="resourceForgedBrassLL" count="40"/>
 		<ingredient name="resourceForgedSteel" count="15"/>
@@ -362,7 +362,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunsniperLL" count="1" craft_area="workbench" tags="perkDeadEye">
+	<recipe name="gunsniperLL" count="1" craft_area="workbench" craft_time="480" tags="perkDeadEye">
 		<ingredient name="gunRifleT1HuntingRifleParts" count="6"/>
 		<ingredient name="resourceForgedBrassLL" count="40"/>
 		<ingredient name="resourceForgedSteel" count="30"/>
@@ -374,7 +374,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunak47LL" count="1" craft_area="workbench" tags="perkMachineGunner">
+	<recipe name="gunak47LL" count="1" craft_area="workbench" craft_time="480" tags="perkMachineGunner">
 		<ingredient name="gunMGT1AK47Parts" count="4"/>
 		<ingredient name="resourceForgedBrassLL" count="40"/>
 		<ingredient name="resourceForgedIron" count="10"/>
@@ -386,7 +386,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="guntacARLL" count="1" craft_area="workbench" tags="perkMachineGunner">
+	<recipe name="guntacARLL" count="1" craft_area="workbench" craft_time="480" tags="perkMachineGunner">
 		<ingredient name="gunMGT1AK47Parts" count="5"/>
 		<ingredient name="resourceForgedBrassLL" count="40"/>
 		<ingredient name="resourceForgedSteel" count="10"/>
@@ -398,7 +398,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunM60LL" count="1" craft_area="workbench" tags="perkMachineGunner">
+	<recipe name="gunM60LL" count="1" craft_area="workbench" craft_time="480" tags="perkMachineGunner">
 		<ingredient name="gunMGT1AK47Parts" count="10"/>
 		<ingredient name="resourceForgedBrassLL" count="50"/>
 		<ingredient name="resourceForgedSteel" count="20"/>
@@ -410,7 +410,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunwoodbowLL" count="1" craft_area="workbench" tags="perkArchery">
+	<recipe name="gunwoodbowLL" count="1" craft_area="workbench" craft_time="480" tags="perkArchery">
 		<ingredient name="gunBowT1WoodenBowParts" count="4"/>
 		<ingredient name="resourceForgedBrassLL" count="20"/>
 		<ingredient name="resourceWood" count="20"/>
@@ -422,7 +422,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="guncompoundbowLL" count="1" craft_area="workbench" tags="perkArchery">
+	<recipe name="guncompoundbowLL" count="1" craft_area="workbench" craft_time="480" tags="perkArchery">
 		<ingredient name="gunBowT1WoodenBowParts" count="5"/>
 		<ingredient name="resourceForgedBrassLL" count="20"/>
 		<ingredient name="resourceScrapPolymers" count="25"/>
@@ -434,7 +434,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunCompoundCrossbowLL" count="1" craft_area="workbench" tags="perkArchery">
+	<recipe name="gunCompoundCrossbowLL" count="1" craft_area="workbench" craft_time="480" tags="perkArchery">
 		<ingredient name="gunBowT1WoodenBowParts" count="5"/>
 		<ingredient name="resourceForgedBrassLL" count="30"/>
 		<ingredient name="resourceForgedSteel" count="15"/>
@@ -446,7 +446,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunjunkturrLL" count="1" craft_area="workbench" tags="perkTurrets">
+	<recipe name="gunjunkturrLL" count="1" craft_area="workbench" craft_time="480" tags="perkTurrets">
 		<ingredient name="gunBotRoboticsParts" count="4"/>
 		<ingredient name="resourceForgedBrassLL" count="45"/>
 		<ingredient name="resourceForgedSteel" count="40"/>
@@ -458,7 +458,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunpistolLL" count="1" craft_area="workbench" tags="perkGunslinger">
+	<recipe name="gunpistolLL" count="1" craft_area="workbench" craft_time="480" tags="perkGunslinger">
 		<ingredient name="gunHandgunT1PistolParts" count="4"/>
 		<ingredient name="resourceForgedBrassLL" count="26"/>
 		<ingredient name="resourceForgedIron" count="10"/>
@@ -470,7 +470,7 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="gunSMGLL" count="1" craft_area="workbench" tags="perkGunslinger">
+	<recipe name="gunSMGLL" count="1" craft_area="workbench" craft_time="480" tags="perkGunslinger">
 		<ingredient name="gunHandgunT1PistolParts" count="5"/>
 		<ingredient name="resourceForgedBrassLL" count="38"/>
 		<ingredient name="resourceForgedSteel" count="10"/>
@@ -496,10 +496,26 @@
 	</effect_group>
 	</recipe>
 	
-	<recipe name="ammo44slugLL" count="5" craft_time="15" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="ammo44slugLL" count="5" craft_time="25" craft_area="workbench" tags="workbenchCrafting">
 		<ingredient name="resourceforgedvibeLL" count="1"/>
 		<ingredient name="resourceForgedBrassLL" count="1"/>
 		<ingredient name="resourceBulletTip" count="1"/>
+	</recipe>
+	
+	<!--IMPROVED GENERATOR BANK-->
+	<recipe name="generatorbankLL" count="1" craft_area="workbench" craft_time="480" tags="perkAdvancedEngineering">
+		<ingredient name="resourceForgedBrassLL" count="25"/>
+		<ingredient name="resourceMechanicalParts" count="20"/>
+		<ingredient name="resourceElectricParts" count="28"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceForgedBrassLL,resourceMechanicalParts,resourceElectricParts"/>
+	</effect_group>
+	</recipe>
+	
+	<!--BULLET FOR IMPROVED WEAPONS-->
+	<recipe name="impbulletLL" count="3" craft_area="workbench" craft_time="9" tags="workbenchCrafting">
+		<ingredient name="resourceGunPowder" count="1"/>
+		<ingredient name="resourceForgedBrassLL" count="1"/>
 	</recipe>
 	
 	

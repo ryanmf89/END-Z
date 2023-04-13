@@ -438,7 +438,7 @@
 		<property name="PassThroughDamage" value="true"/>
 		<property name="Texture" value="543"/>
 		<property class="RepairItems">
-			<property name="resourceMoonRocksLL" value="8"/>
+			<property name="resourceforgedvibeLL" value="8"/>
 		</property>
 		<property name="CustomUpgradeSound" value="place_block_metal"/>
 		<property name="DowngradeBlock" value="moonrockMasterLL"/>
@@ -458,6 +458,50 @@
 	</block>
 	
 
+	<!--IMPROVED GENERATOR BANK-->
+	
+	<block name="generatorbankLL">
+		<property name="CreativeMode" value="Player"/>
+		<property name="Class" value="Generator"/>
+		<property name="DisplayType" value="blockElectricalHardened"/>
+		<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+		<property name="Material" value="Mmetal_medium"/>
+		<property name="StabilitySupport" value="false"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Mesh" value="models"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Entities/Electrical/generatorPrefab"/>
+		<property name="HandleFace" value="Bottom"/>
+		<property name="ImposterDontBlock" value="true"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="DescriptionKey" value="powerSourceDesc"/>
+		<property name="MaxFuel" value="10000"/>
+		<property name="OutputPerFuel" value="11250"/>
+		<property name="MaxPower" value="12250"/>
+		<property name="OutputPerStack" value="600"/>
+		<property name="SlotItem" value="smallEngine"/>
+		<property name="Group" value="Science"/>
+		<property class="RepairItems">
+		<property name="resourceForgedBrassLL" value="5"/>
+		<property name="resourceMechanicalParts" value="8"/>
+		<property name="resourceElectricParts" value="8"/>
+		<property name="resourceElectricParts" value="3"/>
+	</property>
+		<drop event="Harvest" name="resourceScrapIron" count="192" tag="allHarvest"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceMechanicalParts" count="3" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceElectricParts" count="3,4" tag="salvageHarvest"/>
+		<drop event="Destroy" count="0"/>
+		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="TakeDelay" value="15"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
+		<property name="SortOrder1" value="70a0"/>
+	</block>
+	
+	
 	
 	
 	</append>
