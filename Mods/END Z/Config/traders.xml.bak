@@ -16,11 +16,7 @@
 
 	<!--TRADER CURRENCY-->
 
-	<set xpath="/traders/currency_item="oldCash"></set>
-    <set xpath="/traders/currency_item="oldCash"></set>
-    <set xpath="/traders/currency_item="oldCash"></set>
-    <set xpath="/traders/currency_item="oldCash"></set>
-    <set xpath="/traders/currency_item="oldCash"></set>
+
 
 
 
