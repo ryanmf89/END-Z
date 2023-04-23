@@ -115,7 +115,12 @@
 		</buff>
 	</append>
 
-
+	<!--append xpath="/buffs/buff[@name='buffStatusCheck01']">
+    <effect_group name="Startup">
+        <requirement name="PlayerLevel" operation="Equals" value="100"/>
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="t3vibespearLL" operation="set" value="1"/>
+    </effect_group>
+	</append-->
 
 
 

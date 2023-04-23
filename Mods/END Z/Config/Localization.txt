@@ -1,12 +1,9 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english
-resourceforgedvibeLL,Items,Resource,,,"Forged Vibranium"
-resourceforgedvibeLLDesc,Items,Resource,,,"The strongest metal on the planet! search and craft at the workbench with other forged items"
-t3vibespearLL,Items,melee,,,"VIBRANIUM SPEAR"
-t3vibespearLLDesc,Items,melee,,,"VIBRANIUM SPEAR IS THE STRONGEST SPEAR IN THE GAME, read the vibranium spear schematic to unlock!"
-t3vibespearLLSchematic,Items,schematic,,,"Vibranium Spear Schematic"
-t3vibespearLLSchematicDesc,Items,schematic,,,"use this to unlock the vibranium spear"
+
+
 resourceHotCoalsLL,Items,Resource,,,"Hot Coals"
 resourceHotCoalsLLDesc,Items,Resource,,,"crafted in the campfire"
+
 resourceMoonRocksLL,Items,Resource,,,"Moon Rocks"
 resourceMoonRocksLLDesc,Items,Resource,,,"From the temp of those hot coals made this stronger material known as moon rocks use this to craft tiered weapons and tools stronger then stone"
 moonrockshovelLL,Items,melee,,,"Moon Rock Shovel"
@@ -17,6 +14,7 @@ moonrockspearLL,Items,melee,,,"Moon Rock Spear"
 moonrockspearLLDesc,Items,melee,,,"A spear crafted from moon rocks and is slightly better then the stone spear"
 moonrocksledgeLL,Items,melee,,,"Moon Rock SledgeHammer"
 moonrocksledgeLLDesc,Items,melee,,,"A sledge crafted from moon rocks and early in your life this will be a lifesaver against the zombie jerks!"
+
 resourceForgedBrassLL,Items,Resource,,,"Forged Brass"
 resourceForgedBrassLLDesc,Items,Resource,,,"Brass smelted into bars and used to make weapons and tools stronger then forged iron"
 brassshovelLL,Items,melee,,,"Brass Shovel"
@@ -35,6 +33,16 @@ brassknucksLL,Items,melee,,,"Brass Knuckles"
 brassknucksLLDesc,Items,melee,,,"Everyone loves a set of deadly brass knucks now its time to go punch some undead pricks"
 brassspearLL,Items,melee,,,"Brass Long Spear"
 brassspearLLDesc,Items,melee,,,"Crafted from forged brass and super sharp"
+
+resourcebrassRepairKitLL,Items,Resource,,,"Brass Repair Kit"
+resourcebrassRepairKitLLDesc,Items,Resource,,,"use this repair kit to repair brass weapons and tools"
+resourcevibeRepairKitLL,Items,Resource,,,"Vibranium Repair Kit"
+resourcevibeRepairKitLLDesc,Items,Resource,,,"use this repair kit to repair vibranium weapons and tools"
+resourceIMPRepairKitLL,Items,Resource,,,"Improved Weapon Repair Kit"
+resourceIMPRepairKitLLDesc,Items,Resource,,,"use this repair kit to repair improved weapons"
+
+resourceforgedvibeLL,Items,Resource,,,"Forged Vibranium"
+resourceforgedvibeLLDesc,Items,Resource,,,"The strongest metal on the planet! search and craft at the workbench with other forged items"
 vibeaugerLL,Items,melee,,,"Vibranium Auger"
 vibeaugerLLDesc,Items,melee,,,"Crafted from vibranium and is the best auger you can find"
 vibesledgeLL,Items,melee,,,"Vibranium Sledgehammer"
@@ -45,13 +53,13 @@ vibeknucksLL,Items,melee,,,"Vibranium Knuckles"
 vibeknucksLLDesc,Items,melee,,,"Crafted from vibranium and these knuckles have power like THOR!"
 vibebatLL,Items,melee,,,"Vibranium Electric Bat"
 vibebatLLDesc,Items,melee,,,"Crafted from vibranium and this bat will electrify the heck outta zombies"
+t3vibespearLL,Items,melee,,,"Vibranium Spear"
+t3vibespearLLDesc,Items,melee,,,"VIBRANIUM SPEAR IS THE STRONGEST SPEAR IN THE GAME, read the vibranium spear schematic to unlock!"
+
 endzStarterCrate,blocks,Container,,,EndZ Starter Crate
 endzStarterCrateDesc,blocks,Container,,,"Your Starting gear. Place on the ground and break to open. Its not much but it helps"
 endzStarterCrateOpen,blocks,Container,,,"Starting Gear: Open This"
-moonrockBlockLL,Blocks,Block,,,"MoonRock block"
-moonrockBlockLLDesc,Blocks,Block,,,"stronger then steel and looks awesome"
-vibeblockLL,Blocks,Block,,,"Vibranium Block"
-vibeblockLLDesc,Blocks,Block,,,"stronger then steel and looks awesome"
+
 gundubzyLL,Items,gun,,,"Improved DoubleBarrel"
 gundubzyLLDesc,Items,gun,,,"quad tap that zitch"
 gunpumpshotLL,Items,gun,,,"Improved Pump Shotgun"
@@ -88,5 +96,106 @@ ammo44slugLL,Items,ammo,,,"44 Magnum Slugs"
 ammo44slugLLDesc,Items,ammo,,,"used in the golden vulture"
 generatorbankLL,Blocks,Block,,,"Improved Generator Bank"
 generatorbankLLDesc,Blocks,Block,,,"will suck the gas from your pocket but will produce high volts to power more items with one genny"
+
 impbulletLL,Items,ammo,,,"Improved Bullet"
 impbulletLLDesc,Items,ammo,,,"used in the improved guns aside from shotguns"
+junkammoLL,Items,ammo,,,"Improved Junkie Ammo"
+junkammoLLDesc,Items,ammo,,,"used in the improved junk turret"
+
+brassshovelLLSchematic,Items,schematic,,,"Brass Shovel Schematic"
+brassshovelLLSchematicDesc,Items,schematic,,,"use this to unlock the brass shovel"
+brassaxeLLSchematic,Items,schematic,,,"Brass Axe Schematic"
+brassaxeLLSchematicDesc,Items,schematic,,,"use this to unlock the brass axe"
+brasspickaxeLLSchematic,Items,schematic,,,"Brass PickAxe Schematic"
+brasspickaxeLLSchematicDesc,Items,schematic,,,"use this to unlock the brass pickaxe"
+brasssledgeLLSchematic,Items,schematic,,,"Brass SledgeHammer Schematic"
+brasssledgeLLSchematicDesc,Items,schematic,,,"use this to unlock the brass sledgehammer"
+brassknifeLLSchematic,Items,schematic,,,"Brass Knife Schematic"
+brassknifeLLSchematicDesc,Items,schematic,,,"use this to unlock the brass knife"
+brassclubLLSchematic,Items,schematic,,,"Brass Club Schematic"
+brassclubLLSchematicDesc,Items,schematic,,,"use this to unlock the brass club"
+brassknucksLLSchematic,Items,schematic,,,"Brass Knuckles Schematic"
+brassknucksLLSchematicDesc,Items,schematic,,,"use this to unlock the brass knucks"
+brassspearLLSchematic,Items,schematic,,,"Brass Spear Schematic"
+brassspearLLSchematicDesc,Items,schematic,,,"use this to unlock the brass spear"
+t3vibespearLLSchematic,Items,schematic,,,"Vibranium Spear Schematic"
+t3vibespearLLSchematicDesc,Items,schematic,,,"use this to unlock the vibranium spear"
+vibeaugerLLSchematic,Items,schematic,,,"Vibranium Auger Schematic"
+vibeaugerLLSchematicDesc,Items,schematic,,,"use this to unlock the vibranium auger"
+vibesledgeLLSchematic,Items,schematic,,,"Vibranium Sledge Schematic"
+vibesledgeLLSchematicDesc,Items,schematic,,,"use this to unlock the vibranium sledge"
+vibemacheteLLSchematic,Items,schematic,,,"Vibranium Machete Schematic"
+vibemacheteLLSchematicDesc,Items,schematic,,,"use this to unlock the vibranium machete"
+vibeknucksLLSchematic,Items,schematic,,,"Vibranium Knuckles Schematic"
+vibeknucksLLSchematicDesc,Items,schematic,,,"use this to unlock the vibranium knucks"
+vibebatLLSchematic,Items,schematic,,,"Vibranium Bat Schematic"
+vibebatLLSchematicDesc,Items,schematic,,,"use this to unlock the vibranium bat"
+improvedDUBZYLLSchematic,Items,schematic,,,"Improved Dubzy Schematic"
+improvedDUBZYLLSchematicDesc,Items,schematic,,,"use this to unlock the improved dubzy shotgun"
+gunpumpshotLLSchematic,Items,schematic,,,"Improved Pump Shotgun Schematic"
+gunpumpshotLLSchematicDesc,Items,schematic,,,"use this to unlock the improved pump shotgun"
+gunautoshotLLSchematic,Items,schematic,,,"Improved Auto Shotgun Schematic"
+gunautoshotLLSchematicDesc,Items,schematic,,,"use this to unlock the improved auto shotgun"
+gunhuntrifleLLSchematic,Items,schematic,,,"Improved Hunting Rifle Schematic"
+gunhuntrifleLLSchematicDesc,Items,schematic,,,"use this to unlock the improved hunting rifle"
+gunsniperLLSchematic,Items,schematic,,,"Improved Sniper Rifle Schematic"
+gunsniperLLSchematicDesc,Items,schematic,,,"use this to unlock the improved sniper rifle"
+gunak47LLSchematic,Items,schematic,,,"Improved AK-47 Schematic"
+gunak47LLSchematicDesc,Items,schematic,,,"use this to unlock the improved ak-47"
+guntacARLLSchematic,Items,schematic,,,"Improved Tac Rifle Schematic"
+guntacARLLSchematicDesc,Items,schematic,,,"use this to unlock the improved tac rifle"
+gunM60LLSchematic,Items,schematic,,,"Improved M60 Schematic"
+gunM60LLSchematicDesc,Items,schematic,,,"use this to unlock the improved m60"
+gunwoodbowLLSchematic,Items,schematic,,,"Improved Wooden Bow Schematic"
+gunwoodbowLLSchematicDesc,Items,schematic,,,"use this to unlock the improved wooden bow"
+guncompoundbowLLSchematic,Items,schematic,,,"Improved Compound Bow Schematic"
+guncompoundbowLLSchematicDesc,Items,schematic,,,"use this to unlock the improved compound bow"
+gunCompoundCrossbowLLSchematic,Items,schematic,,,"Improved Compound CrossBow Schematic"
+gunCompoundCrossbowLLSchematicDesc,Items,schematic,,,"use this to unlock the improved compound crossbow"
+gunjunkturrLLSchematic,Items,schematic,,,"Improved Junk Turret Schematic"
+gunjunkturrLLSchematicDesc,Items,schematic,,,"use this to unlock the improved junkie"
+gunpistolLLSchematic,Items,schematic,,,"Improved Pistol Schematic"
+gunpistolLLSchematicDesc,Items,schematic,,,"use this to unlock the improved pistol"
+gunSMGLLSchematic,Items,schematic,,,"Improved SMG Schematic"
+gunSMGLLSchematicDesc,Items,schematic,,,"use this to unlock the improved smg"
+gungoldenvultureLLSchematic,Items,schematic,,,"Improved Golden Vulture Schematic"
+gungoldenvultureLLSchematicDesc,Items,schematic,,,"use this to unlock the improved golden vulture"
+
+
+
+cntWallOvenWorking,blocks,Container,,,Working Wall Oven
+cntWallOvenPowered,blocks,Container,,,Powered Wall Oven
+faucet02Working,blocks,Block,,,Working Household Faucet 2
+faucet04Working,blocks,Block,,,Working Household Faucet
+faucetBrass02Working,blocks,Block,,,Working Brass Faucet 2
+faucetBrass04Working,blocks,Block,,,Working Brass Faucet
+tableLampLightPlayer,blocks,Light,,,Table Lamp
+workLightPlayer,blocks,Light,,,Work Light
+signExitLightPlayer,blocks,Light,,,Exit Sign
+industrialLight02RedPlayer,blocks,Light,,,Red Industrial Light
+ceilingFanLightPlayer,blocks,Light,,,Ceiling Fan Light
+signShopOpenPlayer,blocks,Sign,,,Shop Sign: Open
+deskLampLightPlayer,blocks,Light,,,Desk Lamp
+lightPlayerVariantHelper,blocks,Light,,,Working Lamps and Lights
+sconce1LightShadowPlayer,blocks,Light,,,Sconce Light
+porchLight01Player,blocks,Light,,,Old Outdoor Light
+porchLight04BrassPlayer,blocks,Light,,,Brass Outdoor Light
+wirelessWireRelay,blocks,Electricity,,,Wireless Wire Relay
+wirelessWireRelayDesc,blocks,Electricity,,,Use this in place of a Wire Relay to connect devices without those pesky cables ruining the aesthetic of your base.
+cntGasGrillWorking,blocks,Block,,,Working Gas Grill
+cntCharcoalGrillWorking,blocks,Block,,,Working Charcoal Grill
+porchLight04Player,blocks,Light,,,Iron Outdoor Light
+ceilingLight02Player,blocks,Light,,,Silver Dome Light
+ceilingLight02BrassPlayer,blocks,Light,,,Brass Dome Light
+ceilingLight04Player,blocks,Light,,,Warehouse Ceiling Light
+ceilingLight05Player,blocks,Light,,,Silver Glass Light
+ceilingLight05BrassPlayer,blocks,Light,,,Brass Glass Light
+recessedLightPlayer,blocks,Light,,,Recessed Light
+wallLight01Player,blocks,Light,,,Warehouse Outdoor Light
+fluorescentLightPlayer,blocks,Light,,,Hanging Fluorescent Light
+trackLightPlayer,blocks,Light,,,Track Light
+chandelierLightPlayer,blocks,Light,,,Chandelier
+faucet04WorkingSchematic,items,Schematic,,,Working Faucet Schematic
+cntWallOvenWorkingSchematic,items,Schematic,,,Working Ovens and Grills Schematic
+decoClawFootBathTubWorking,blocks,Block,,,Working Clawfoot Bathtub
+cntBathTubEmptyWorking,blocks,Block,,,Working Bathtub

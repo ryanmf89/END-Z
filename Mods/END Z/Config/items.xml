@@ -240,18 +240,7 @@
 		<property name="RepairTime" value="1"/>
 		<property name="RepairAmount" value="400"/>
 	</item>
-	<!--item name="moonrockBlockLL">
-		<property name="HoldType" value="45"/>
-		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
-		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-		<property name="Material" value="MmoonrockLL"/>
-		<property name="Stacknumber" value="500"/> 
-		<property name="EconomicValue" value="15000"/>
-		<property name="Group" value="Resources"/>
-		<property name="CraftingIngredientTime" value="15"/>
-		<property name="RepairTime" value="1"/>
-		<property name="RepairAmount" value="400"/>
-	</item-->
+
 	<item name="moonrockshovelLL">
 		<property name="CustomIcon" value="meleeToolShovelT0StoneShovel" />
 		<property name="CustomIconTint" value="7ec2c0" />
@@ -598,6 +587,22 @@
 	</item>
 	<!--END OF MOONROCK RECIPES-->
 	
+	<!--BRASS REPAIR KIT-->
+	<item name="resourcebrassRepairKitLL">
+		<property name="CustomIcon" value="resourceRepairKit" />
+		<property name="CustomIconTint" value="8f6f17" />
+		<property name="HoldType" value="45"/>
+		<property name="Tags" value="junk"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Msteel"/>
+		<property name="Stacknumber" value="500"/> <!-- STK resourceRepairKit -->
+		<property name="EconomicValue" value="186"/>
+		<property name="RepairTime" value="3"/>
+		<property name="RepairAmount" value="32000"/>
+		<property name="Group" value="Resources"/>
+	</item>
+	
 	<!--FORGED BRASS AND WEAPONS-->
 	<item name="resourceForgedBrassLL">
 		<property name="CustomIcon" value="resourceForgedSteel" />
@@ -613,6 +618,19 @@
 		<property name="RepairTime" value="1"/>
 		<property name="RepairAmount" value="400"/>
 	</item>
+	<!--BRASS SHOVEL SCHEMATIC-->
+	<item name="brassshovelLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="meleeToolShovelT1IronShovel" />
+		<property name="CustomIconTint" value="8f6f17" />
+		<property name="Unlocks" value="brassshovelLL"/>
+		<property name="EconomicValue" value="100"/>
+		<property name="SellableToTrader" value="true"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="brassshovelLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
 	<item name="brassshovelLL">
 		<property name="CustomIcon" value="meleeToolShovelT1IronShovel" />
 		<property name="CustomIconTint" value="8f6f17" />
@@ -620,15 +638,15 @@
 		<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic"/>
 		<property name="Meshfile" value="#Other/Items?Tools/shovel_ironPrefab.prefab"/>
 		<property name="Material" value="Mmetal"/>
-		<property name="RepairTools" value="resourceForgedBrassLL"/>
+		<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 		<property name="EconomicValue" value="350"/>
 		<property name="SellableToTrader" value="true"/>
-		<property name="UnlockedBy" value="perkMiner69r"/>
+		<property name="UnlockedBy" value="perkMiner69r,brassshovelLLSchematic"/>
 	<effect_group name="meleeToolShovelT1IronShovel">
 		<passive_effect name="EntityDamage" operation="base_set" value="15" tags="perkMiner69r"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="60" tags="perkMiner69r"/>
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="50" tags="perkMiner69r"/>
-		<passive_effect name="StaminaLoss" operation="base_set" value="18" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="75" tags="perkMiner69r"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="10" tags="primary"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="250,750" tier="1,6" tags="perkMiner69r"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
 		<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkMiner69r"/>
@@ -658,14 +676,27 @@
 	</effect_group>
 	<property name="Group" value="Tools/Traps"/>
 	</item>
+	<!--BRASS AXE SCHEMATIC-->
+	<item name="brassaxeLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="meleeToolAxeT2SteelAxe" />
+		<property name="CustomIconTint" value="8f6f17" />
+		<property name="Unlocks" value="brassaxeLL"/>
+		<property name="EconomicValue" value="100"/>
+		<property name="SellableToTrader" value="true"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="brassaxeLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
 	<item name="brassaxeLL">
 		<property name="CustomIcon" value="meleeToolAxeT2SteelAxe" />
 		<property name="CustomIconTint" value="8f6f17" />
 		<property name="Extends" value="meleeToolAxeT1IronFireaxe"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Melee/Axe/steelAxePrefab.prefab"/>
-		<property name="RepairTools" value="resourceForgedBrassLL"/>
+		<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 		<property name="EconomicValue" value="700"/>
-		<property name="UnlockedBy" value="perkMiner69r"/>
+		<property name="UnlockedBy" value="perkMiner69r,brassaxeLLSchematic"/>
 		<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="6"/>
 
 	<property class="Action0">
@@ -679,7 +710,7 @@
 		<passive_effect name="EntityDamage" operation="base_set" value="28.9" tags="perkMiner69r"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="86.2" tags="perkMiner69r"/>
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="65" tags="perkMiner69r,axe"/>
-		<passive_effect name="StaminaLoss" operation="base_set" value="18" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="10" tags="primary"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="250,1100" tier="1,6" tags="perkMiner69r"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
 		<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkMiner69r"/>
@@ -710,6 +741,19 @@
 		<passive_effect name="StaminaLoss" operation="base_set" value="61.7" tags="secondary"/>
 	</effect_group>
 	</item>
+	<!--BRASS PICK SCHEMATIC-->
+	<item name="brasspickaxeLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="meleeToolPickT2SteelPickaxe" />
+		<property name="CustomIconTint" value="8f6f17" />
+		<property name="Unlocks" value="brasspickaxeLL"/>
+		<property name="EconomicValue" value="100"/>
+		<property name="SellableToTrader" value="true"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="brasspickaxeLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
 	<item name="brasspickaxeLL">
 		<property name="CustomIcon" value="meleeToolPickT2SteelPickaxe" />
 		<property name="CustomIconTint" value="8f6f17" />
@@ -717,10 +761,10 @@
 		<property name="DisplayType" value="melee"/>
 		<property name="HoldType" value="4"/>
 		<property name="Meshfile" value="#Other/Items?Tools/pickaxe_steelPrefab.prefab"/>
-		<property name="RepairTools" value="resourceForgedBrassLL"/>
+		<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 		<property name="EconomicValue" value="700"/>
 		<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="6"/>
-		<property name="UnlockedBy" value="perkMiner69r"/>
+		<property name="UnlockedBy" value="perkMiner69r,brasspickaxeLLSchematic"/>
 		<property class="Action0">
 		<property name="GrazeStart" value=".5"/>
 		<property name="GrazeEnd" value=".6"/>
@@ -741,7 +785,7 @@
 		<passive_effect name="EntityDamage" operation="base_set" value="15" tags="perkMiner69r"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="47" tags="perkMiner69r,miningTool"/>
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="60" tags="perkMiner69r"/>
-		<passive_effect name="StaminaLoss" operation="base_set" value="18" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="10" tags="primary"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="250,1287" tier="1,6" tags="perkMiner69r"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
 		<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkMiner69r"/>
@@ -772,6 +816,19 @@
 		<passive_effect name="StaminaLoss" operation="base_set" value="52.7" tags="secondary"/>
 	</effect_group>
 	</item>
+	<!--BRASS SLEDGE SCHEMATIC-->
+	<item name="brasssledgeLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="meleeWpnSledgeT1IronSledgehammer" />
+		<property name="CustomIconTint" value="8f6f17" />
+		<property name="Unlocks" value="brasssledgeLL"/>
+		<property name="EconomicValue" value="100"/>
+		<property name="SellableToTrader" value="true"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="brasssledgeLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
 	<item name="brasssledgeLL">
 		<property name="CustomIcon" value="meleeWpnSledgeT1IronSledgehammer" />
 		<property name="CustomIconTint" value="8f6f17" />
@@ -780,13 +837,13 @@
 		<property name="HoldType" value="33"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Melee/SledgeHammer/ironSledgehammerPrefab.prefab"/>
 		<property name="Material" value="Mmetal"/>
-		<property name="RepairTools" value="resourceForgedBrassLL"/>
+		<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="ItemNeedsRepair"/>
 		<property name="SoundDestroy" value="metaldestroy1"/>
 		<property name="EconomicValue" value="350"/>
 		<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
-		<property name="UnlockedBy" value="perkSkullCrusher"/>
+		<property name="UnlockedBy" value="perkSkullCrusher,brasssledgeLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -827,8 +884,8 @@
 	<effect_group name="meleeWpnSledgeT1IronSledgehammer">
 		<passive_effect name="EntityDamage" operation="base_set" value="39" tags="perkSkullCrusher"/> <!-- meleeWpnSledgeT1IronSledgehammer -->
 		<passive_effect name="BlockDamage" operation="base_set" value="69" tags="perkSkullCrusher"/>
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="40" tags="perkSkullCrusher"/>
-		<passive_effect name="StaminaLoss" operation="base_set" value="18" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="65" tags="perkSkullCrusher"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="10" tags="primary"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="200,363" tier="1,6" tags="perkSkullCrusher"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSkullCrusher"/>
 		<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkSkullCrusher"/>
@@ -855,6 +912,19 @@
 		<passive_effect name="DismemberChance" operation="base_add" value=".3" tags="secondary"/>
 	</effect_group>
 	</item>
+	<!--BRASS KNIFE SCHEMATIC-->
+	<item name="brassknifeLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="meleeWpnBladeT1HuntingKnife" />
+		<property name="CustomIconTint" value="8f6f17" />
+		<property name="Unlocks" value="brassknifeLL"/>
+		<property name="EconomicValue" value="100"/>
+		<property name="SellableToTrader" value="true"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="brassknifeLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
 	<item name="brassknifeLL">
 		<property name="CustomIcon" value="meleeWpnBladeT1HuntingKnife" />
 		<property name="CustomIconTint" value="8f6f17" />
@@ -863,12 +933,12 @@
 		<property name="HoldType" value="36"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/hunting_knifePrefab.prefab"/>
 		<property name="Material" value="Mmetal"/>
-		<property name="RepairTools" value="resourceForgedBrassLL"/>
+		<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="EconomicValue" value="350"/>
 		<property name="SoundJammed" value="ItemNeedsRepair"/>
 		<property name="SoundDestroy" value="wooddestroy1"/>
-		<property name="UnlockedBy" value="perkDeepCuts"/>
+		<property name="UnlockedBy" value="perkDeepCuts,brassknifeLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -957,6 +1027,20 @@
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 	</item>
+	<!--BRASS CLUB SCHEMATIC-->
+	<item name="brassclubLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="meleeWpnClubT3SteelClub" />
+		<property name="CustomIconTint" value="8f6f17" />
+		<property name="Unlocks" value="brassclubLL"/>
+		<property name="EconomicValue" value="100"/>
+		<property name="SellableToTrader" value="true"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="brassclubLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
 	<item name="brassclubLL"> 
 		<property name="CustomIcon" value="meleeWpnClubT3SteelClub" />
 		<property name="CustomIconTint" value="8f6f17" />
@@ -966,12 +1050,12 @@
 		<property name="Meshfile" value="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab"/>
 		<property name="HoldType" value="2"/>
 		<property name="Material" value="MmeleeWpnClubParts"/> <property name="Weight" value="6"/>
-		<property name="RepairTools" value="resourceForgedBrassLL"/>
+		<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 		<property name="SoundDestroy" value="wooddestroy1"/>
 		<property name="RepairExpMultiplier" value="5.5"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property name="EconomicValue" value="700"/>
-		<property name="UnlockedBy" value="perkBatterUpBaseballBats"/>
+		<property name="UnlockedBy" value="perkBatterUpBaseballBats,brassclubLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -1017,8 +1101,8 @@
 	<effect_group name="meleeWpnClubT3SteelClub">
 		<passive_effect name="EntityDamage" operation="base_set" value="21" tags="perkPummelPete"/> <!-- meleeWpnClubT3SteelClub -->
 		<passive_effect name="BlockDamage" operation="base_set" value="18" tags="perkPummelPete"/>
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="52" tags="perkPummelPete,perkFlurryOfBlows"/>
-		<passive_effect name="StaminaLoss" operation="base_set" value="18" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="75" tags="perkPummelPete,perkFlurryOfBlows"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="10" tags="primary"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="250,700" tier="1,6" tags="perkPummelPete"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
 		<passive_effect name="MaxRange" operation="base_set" value="2.4" tags="perkPummelPete"/>
@@ -1047,6 +1131,21 @@
 		<passive_effect name="StaminaLoss" operation="base_set" value="40.3" tags="secondary"/>
 	</effect_group>
 	</item>
+	
+	<!--BRASS KNUCKLES SCHEMATIC-->
+	<item name="brassknucksLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="meleeWpnKnucklesT1IronKnuckles" />
+		<property name="CustomIconTint" value="8f6f17" />
+		<property name="Unlocks" value="brassknucksLL"/>
+		<property name="EconomicValue" value="100"/>
+		<property name="SellableToTrader" value="true"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="brassknucksLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
 	<item name="brassknucksLL">
 		<property name="CustomIcon" value="meleeWpnKnucklesT1IronKnuckles" />
 		<property name="CustomIconTint" value="8f6f17" />
@@ -1054,7 +1153,7 @@
 		<property name="Material" value="Mmetal"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knuckles/knucklesRight_Prefab.prefab"/>
 		<property name="HoldType" value="61"/>
-		<property name="RepairTools" value="resourceForgedBrassLL"/>
+		<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="ItemNeedsRepair"/>
 		<property name="SoundDestroy" value="wooddestroy1"/>
@@ -1062,7 +1161,7 @@
 		<property name="Canhold" value="true"/>
 		<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 		<property name="EconomicValue" value="350"/>
-		<property name="UnlockedBy" value="perkBrawler"/>
+		<property name="UnlockedBy" value="perkBrawler,brassknucksLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 		<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
@@ -1104,9 +1203,9 @@
 		</property>
 	</property>
 	<effect_group name="meleeWpnKnucklesT1IronKnuckles">
-		<passive_effect name="EntityDamage" operation="base_set" value="20" tags="perkBrawler"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="30" tags="perkBrawler"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="8" tags="perkBrawler"/>
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="150" tags="perkBrawler"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="170" tags="perkBrawler"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="7" tags="primary"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="450,961" tier="1,6" tags="perkBrawler"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBrawler"/>
@@ -1142,6 +1241,21 @@
 		<passive_effect name="StaminaLoss" operation="base_set" value="16.3" tags="secondary"/>
 	</effect_group>
 	</item>
+	
+		<!--BRASS SPEAR SCHEMATIC-->
+	<item name="brassspearLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear" />
+		<property name="CustomIconTint" value="8f6f17" />
+		<property name="Unlocks" value="brassspearLL"/>
+		<property name="EconomicValue" value="100"/>
+		<property name="SellableToTrader" value="true"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="brassspearLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
 	<item name="brassspearLL">
 		<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear" />
 		<property name="CustomIconTint" value="8f6f17" />
@@ -1150,10 +1264,10 @@
 		<property name="HoldType" value="18"/>
 		<property name="Material" value="Mmetal"/>
 		<property name="StickyMaterial" value="#Other/Items?Weapons/Melee/Spear/Materials/spearIron_sticky.mat"/>
-		<property name="RepairTools" value="resourceForgedBrassLL"/>
+		<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 		<property name="EconomicValue" value="350"/>
 		<property name="SellableToTrader" value="true"/>
-		<property name="UnlockedBy" value="perkJavelinMaster"/>
+		<property name="UnlockedBy" value="perkJavelinMaster,brassspearLLSchematic"/>
 
 	<property class="Action0">
 				<property name="Class" value="DynamicMelee"/>
@@ -1197,10 +1311,10 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="MaxRange" operation="base_set" value="3.4"/>
 				<passive_effect name="BlockRange" operation="base_set" value="4"/>
-				<passive_effect name="EntityDamage" operation="base_set" value="15"/> 
+				<passive_effect name="EntityDamage" operation="base_set" value="25"/> 
 				<passive_effect name="BlockDamage" operation="base_set" value="8"/>
-				<passive_effect name="AttacksPerMinute" operation="base_set" value="60"/>
-				<passive_effect name="StaminaLoss" operation="base_set" value="12,10" tier="1,80" tags="primary"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="10,10" tier="1,80" tags="primary"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="250,2250" tier="1,80" />
 				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeepCuts"/>
 				
@@ -1227,7 +1341,24 @@
 	</item>
 	<!--END OF BRASS RECIPES-->
 	
+		<!--VIBE REPAIR KIT-->
+	<item name="resourcevibeRepairKitLL">
+		<property name="CustomIcon" value="resourceRepairKit" />
+		<property name="CustomIconTint" value="b804af" />
+		<property name="HoldType" value="45"/>
+		<property name="Tags" value="junk"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Msteel"/>
+		<property name="Stacknumber" value="500"/> <!-- STK resourceRepairKit -->
+		<property name="EconomicValue" value="186"/>
+		<property name="RepairTime" value="3"/>
+		<property name="RepairAmount" value="32000"/>
+		<property name="Group" value="Resources"/>
+	</item>
+	
 	<!--FORGED VIBRANIUM AND ELECTRIC WEAPONS -->
+	
 	<item name="resourceforgedvibeLL">
 		<property name="CustomIcon" value="resourceForgedSteel" />
 		<property name="CustomIconTint" value="b804af" />
@@ -1242,7 +1373,19 @@
 		<property name="RepairTime" value="1"/>
 		<property name="RepairAmount" value="400"/>
 	</item>
-	
+		<!--SCHEMATIC FOR VIBE SPEAR-->
+	<item name="t3vibespearLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear"/>
+		<property name="CustomIconTint" value="b804af" />
+		<property name="Unlocks" value="t3vibespearLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="t3vibespearLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
 	<item name="t3vibespearLL" craft_area="workbench">
 		<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear" />
 		<property name="CustomIconTint" value="b804af" />
@@ -1252,7 +1395,8 @@
 		<property name="Material" value="MmeleeWpnSpearParts"/><property name="Weight" value="6"/>
 		<property name="StickyMaterial" value="#Other/Items?Weapons/Melee/Spear/Materials/spearIron_sticky.mat"/>
 		<property name="EconomicValue" value="700"/>
-		<property name="UnlockedBy" value="perkJavelinMaster"/>
+		<property name="RepairTools" value="resourcevibeRepairKitLL"/>
+		<property name="UnlockedBy" value="perkJavelinMaster,t3vibespearLLSchematic"/>
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Hitmask_override" value="Melee"/>
@@ -1296,7 +1440,7 @@
 		<passive_effect name="EntityDamage" operation="base_set" value="50"/> 
 		<passive_effect name="BlockDamage" operation="base_set" value="15"/>
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="125"/>
-		<passive_effect name="StaminaLoss" operation="base_set" value="12,10" tier="1,80" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="10,10" tier="1,80" tags="primary"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="450,2250" tier="1,80" />
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeepCuts"/>
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5,6,7,8" tier="1,11,21,31,41,51,61,71,80"/>
@@ -1353,9 +1497,20 @@
 					<requirement name="ProgressionLevel" progression_name="perkJavelinMaster" operation="Equals" value="1"/>
 				</triggered_effect>
 	</effect_group>
+	</item>
 	
-	
-	
+	<!--AUGER SCHEMATIC-->
+	<item name="vibeaugerLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="meleeToolPickT3Auger"/>
+		<property name="CustomIconTint" value="b804af" />
+		<property name="Unlocks" value="vibeaugerLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vibeaugerLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
 	</item>
 	
 	<item name="vibeaugerLL">
@@ -1366,13 +1521,13 @@
 		<property name="HoldType" value="20"/>
 		<property name="Meshfile" value="#Other/Items?Tools/auger/augerPrefab.prefab"/>
 		<property name="Material" value="MMotorToolParts"/> <property name="Weight" value="6"/>
-		<property name="RepairTools" value="resourceforgedvibeLL"/>
+		<property name="RepairTools" value="resourcevibeRepairKitLL"/>
 		<property name="SoundIdle" value="auger_idle"/>
 		<property name="Particles_muzzle_smoke" value="nozzlesmoke_chainsaw"/>
 		<property name="Group" value="Tools/Traps"/>
 		<property name="RepairExpMultiplier" value="10.8"/>
 		<property name="EconomicValue" value="1500"/>
-		<property name="UnlockedBy" value="perkMiner69r"/>
+		<property name="UnlockedBy" value="perkMiner69r,vibeaugerLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -1479,7 +1634,19 @@
 	
 	</item>
 	
-	
+		<!--AUGER SCHEMATIC-->
+	<item name="vibesledgeLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="meleeWpnSledgeT3SteelSledgehammer"/>
+		<property name="CustomIconTint" value="b804af" />
+		<property name="Unlocks" value="vibesledgeLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vibesledgeLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
 	
 	
 	<item name="vibesledgeLL">
@@ -1490,13 +1657,13 @@
 		<property name="HoldType" value="33"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Melee/SledgeHammer/steelSledgeHammerPrefab.prefab"/>
 		<property name="Material" value="MmeleeWpnSledgeParts"/> <property name="Weight" value="6"/>
-		<property name="RepairTools" value="resourceforgedvibeLL"/>
+		<property name="RepairTools" value="resourcevibeRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="ItemNeedsRepair"/>
 		<property name="SoundDestroy" value="metaldestroy1"/>
 		<property name="EconomicValue" value="700"/>
 		<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
-		<property name="UnlockedBy" value="perkSkullCrusher"/>
+		<property name="UnlockedBy" value="perkSkullCrusher,vibesledgeLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -1604,8 +1771,19 @@
 	</effect_group>
 	</item>
 	
-	
-	
+	<!--vibemachete schematic-->
+	<item name="vibemacheteLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="meleeWpnBladeT3Machete"/>
+		<property name="CustomIconTint" value="b804af" />
+		<property name="Unlocks" value="vibemacheteLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vibemacheteLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
 	
 	
 	<item name="vibemacheteLL">
@@ -1616,14 +1794,14 @@
 		<property name="HoldType" value="47"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/machetePrefab.prefab"/>
 		<property name="Material" value="MmeleeWpnBladeParts"/> <property name="Weight" value="6"/>
-		<property name="RepairTools" value="resourceforgedvibeLL"/>
+		<property name="RepairTools" value="resourcevibeRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="EconomicValue" value="700"/>
 		<property name="SoundJammed" value="ItemNeedsRepair"/>
 		<property name="SoundDestroy" value="wooddestroy1"/>
 		<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 		<property name="RepairExpMultiplier" value="5.5"/>
-		<property name="UnlockedBy" value="perkDeepCuts"/>
+		<property name="UnlockedBy" value="perkDeepCuts,vibemacheteLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -1747,7 +1925,19 @@
 	</item>
 	
 	
-	
+	<!--vibeknucks schematic-->
+	<item name="vibeknucksLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="meleeWpnKnucklesT3SteelKnuckles"/>
+		<property name="CustomIconTint" value="b804af" />
+		<property name="Unlocks" value="vibeknucksLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vibeknucksLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
 	
 	
 	<item name="vibeknucksLL">
@@ -1757,7 +1947,7 @@
 		<property name="Material" value="Mmetal"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knuckles/knucklesRight_Prefab.prefab"/>
 		<property name="HoldType" value="61"/>
-		<property name="RepairTools" value="resourceForgedBrassLL"/>
+		<property name="RepairTools" value="resourcevibeRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="ItemNeedsRepair"/>
 		<property name="SoundDestroy" value="wooddestroy1"/>
@@ -1765,7 +1955,7 @@
 		<property name="Canhold" value="true"/>
 		<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 		<property name="EconomicValue" value="350"/>
-		<property name="UnlockedBy" value="perkBrawler"/>
+		<property name="UnlockedBy" value="perkBrawler,vibeknucksLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 		<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
@@ -1872,11 +2062,23 @@
 					<requirement name="ProgressionLevel" progression_name="perkBrawler" operation="Equals" value="1"/>
 				</triggered_effect>
 	</effect_group>
-	
-	
-	
-	
 	</item>
+	
+	
+		<!--vibe bat schematic-->
+	<item name="vibebatLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="meleeWpnClubT1BaseballBat"/>
+		<property name="CustomIconTint" value="b804af" />
+		<property name="Unlocks" value="vibebatLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vibebatLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
 	<item name="vibebatLL">
 		<property name="CustomIcon" value="meleeWpnClubT1BaseballBat" />
 		<property name="CustomIconTint" value="b804af" />
@@ -1886,12 +2088,12 @@
 		<property name="Meshfile" value="#Other/Items?Weapons/Melee/Bat/bat_Prefab.prefab"/>
 		<property name="HoldType" value="65"/>
 		<property name="Material" value="Mwood"/>
-		<property name="RepairTools" value="resourceforgedvibeLL"/>
+		<property name="RepairTools" value="resourcevibeRepairKitLL"/>
 		<property name="SoundDestroy" value="wooddestroy1"/>
 		<property name="RepairExpMultiplier" value="5.5"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property name="EconomicValue" value="350"/>
-		<property name="UnlockedBy" value="perkPummelPete"/>
+		<property name="UnlockedBy" value="perkPummelPete,vibebatLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 		<property name="Mass" value="450"/>
 
@@ -2021,18 +2223,7 @@
 	
 	
 	
-	<!--SCHEMATICS-->
-	<item name="t3vibespearLLSchematic">
-		<property name="Extends" value="schematicMaster"/>
-		<property name="CreativeMode" value="Player"/>
-		<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear"/>
-		<property name="CustomIconTint" value="b804af" />
-		<property name="Unlocks" value="t3vibespearLL"/>
-		<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="t3vibespearLL" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
-	</effect_group>
-	</item>
+
 	
 	  <!--LESS CRAFT-->
 	  <!-- Crafting time -->
@@ -2051,7 +2242,36 @@
 	  <set xpath="/items/item[@name='unit_iron']/property[@name='MeltTimePerUnit']/@value">0.05</set>
 	  <set xpath="/items/item[@name='toolBellows']/effect_group/passive_effect[@name='CraftingSmeltTime']/@value">-.5</set>
 	
-	<!--NEW GUNS-->
+	<!--NEW GUNS AND REPAIR KIT-->
+	
+	<item name="resourceIMPRepairKitLL">
+		<property name="CustomIcon" value="resourceRepairKit" />
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="HoldType" value="45"/>
+		<property name="Tags" value="junk"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Msteel"/>
+		<property name="Stacknumber" value="500"/> <!-- STK resourceRepairKit -->
+		<property name="EconomicValue" value="186"/>
+		<property name="RepairTime" value="3"/>
+		<property name="RepairAmount" value="32000"/>
+		<property name="Group" value="Resources"/>
+	</item>
+	
+	<item name="improvedDUBZYLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gundubzyLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gundubzyLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gundubzyLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
 	
 	<item name="gundubzyLL">
 		<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,dBarrel,barrelAttachments,sideAttachments,stock,bottomAttachments,attStrength,perkBoomstick,canHaveCosmetic"/>
@@ -2059,7 +2279,7 @@
 		<property name="HoldType" value="56"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/DoubleBarrelShotgun/doubleBarrelShotgunPrefab.prefab"/>
 		<property name="Material" value="MShotgunParts"/> <property name="Weight" value="4"/>
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="weapon_jam"/>
 		<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -2075,13 +2295,13 @@
 		<property name="PickupJournalEntry" value="alternateAmmoTip"/>
 		<property name="LightValue" value=".45"/>
 		<property name="EconomicValue" value="500"/>
-		<property name="UnlockedBy" value="perkBoomstick"/>
+		<property name="UnlockedBy" value="perkBoomstick,improvedDUBZYLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
 		<property name="Magazine_items" value="ammoShotgunSlug"/>
-		<property name="Reload_time" value="4"/>
+		<property name="Reload_time" value="2.5"/>
 		<property name="Sound_start" value="shotgundb_fire"/>
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
@@ -2132,13 +2352,28 @@
 	</effect_group>
 	</item>
 	
+	<item name="gunpumpshotLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunpumpshotLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunpumpshotLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunpumpshotLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
 	<item name="gunpumpshotLL">
 		<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,bottomAttachments,attStrength,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedShotgun"/>
 		<property name="HoldType" value="5"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Pump Shotgun/pumpShotgunPrefab.prefab"/>
 		<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="weapon_jam"/>
 		<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -2154,14 +2389,14 @@
 		<property name="PickupJournalEntry" value="alternateAmmoTip"/>
 		<property name="LightValue" value=".45"/>
 		<property name="EconomicValue" value="1000"/>
-		<property name="UnlockedBy" value="perkBoomstick"/>
+		<property name="UnlockedBy" value="perkBoomstick,gunpumpshotLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
 		<property name="Magazine_items" value="ammoShotgunSlug"/>
-		<property name="Reload_time" value="2.6"/>
+		<property name="Reload_time" value="2"/>
 		<property name="Sound_start" value="pump_shotgun_fire"/>
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
@@ -2188,7 +2423,7 @@
 		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
 
 		<passive_effect name="MagazineSize" operation="base_set" value="16" tags="perkBoomstick"/>
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="4" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="2.4" tags="perkBoomstick"/> <!-- 2.3s -->
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -2216,13 +2451,28 @@
 	</effect_group>
 	</item>
 	
+	<item name="gunautoshotLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunautoshotLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunautoshotLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunautoshotLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
 	<item name="gunautoshotLL">
 		<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,magazine,drumMagazine,firingMode,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedShotgun"/>
 		<property name="HoldType" value="76"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Auto Shotgun/autoShotgunPrefab.prefab"/>
 		<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="weapon_jam"/>
 		<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -2238,14 +2488,14 @@
 		<property name="PickupJournalEntry" value="alternateAmmoTip"/>
 		<property name="LightValue" value=".45"/>
 		<property name="EconomicValue" value="1500"/>
-		<property name="UnlockedBy" value="perkBoomstick"/>
+		<property name="UnlockedBy" value="perkBoomstick,gunautoshotLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
 		<property name="Magazine_items" value="ammoShotgunSlug"/>
-		<property name="Reload_time" value="2.6"/>
+		<property name="Reload_time" value="2"/>
 		<property name="Sound_start" value="autoshotgun_fire"/>
 		<property name="Sound_loop" value="autoshotgun_fire"/>
 		<property name="Sound_repeat" value=""/>
@@ -2271,7 +2521,7 @@
 		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
 
 		<passive_effect name="MagazineSize" operation="base_set" value="32" tags="perkBoomstick"/>
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="4" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="2.4" tags="perkBoomstick"/> <!-- 2.3s -->
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -2298,6 +2548,21 @@
 		<display_value name="dStatStunEffect" value="4"/>
 	</effect_group>
 	</item>
+	<!--END OF SHOTGUNS-->
+	
+	<item name="gunhuntrifleLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunhuntrifleLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunhuntrifleLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunhuntrifleLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
 	
 	
 	<item name="gunhuntrifleLL">
@@ -2306,7 +2571,7 @@
 		<property name="HoldType" value="30"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/HuntingRifle/HuntingRiflePrefab.prefab"/>
 		<property name="Material" value="MRifleParts"/> <property name="Weight" value="4"/>
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="ItemNeedsRepair"/>
 		<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -2321,7 +2586,7 @@
 		<property name="RepairExpMultiplier" value="10.8"/>
 		<property name="LightValue" value=".45"/>
 		<property name="EconomicValue" value="500"/>
-		<property name="UnlockedBy" value="perkDeadEye"/>
+		<property name="UnlockedBy" value="perkDeadEye,gunhuntrifleLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -2394,13 +2659,28 @@
 	</item>
 	
 	
+	<item name="gunleverrifleLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunleverrifleLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunleverrifleLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunleverrifleLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
 	<item name="gunleverrifleLL">
 		<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedGun"/>
 		<property name="HoldType" value="85"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/LeverActionRifle/leverActionRiflePrefab.prefab"/>
 		<property name="Material" value="MRifleParts"/> <property name="Weight" value="5"/>
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="weapon_jam"/>
 		<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -2415,7 +2695,7 @@
 		<property name="RepairExpMultiplier" value="10.8"/>
 		<property name="LightValue" value=".45"/>
 		<property name="EconomicValue" value="1000"/>
-		<property name="UnlockedBy" value="perkDeadEye"/>
+		<property name="UnlockedBy" value="perkDeadEye,gunleverrifleLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -2491,13 +2771,29 @@
 	</effect_group>
 	</item>
 	
+	<item name="gunsniperLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunsniperLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunsniperLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunsniperLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
+	
 	<item name="gunsniperLL">
 		<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,firingMode,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedGun"/>
 		<property name="HoldType" value="77"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Sharp Shooter/sharpShooterGunPrefab.prefab"/>
 		<property name="Material" value="MRifleParts"/> <property name="Weight" value="6"/>
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="weapon_jam"/>
 		<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -2512,7 +2808,7 @@
 		<property name="RepairExpMultiplier" value="10.8"/>
 		<property name="LightValue" value=".45"/>
 		<property name="EconomicValue" value="1500"/>
-		<property name="UnlockedBy" value="perkDeadEye"/>
+		<property name="UnlockedBy" value="perkDeadEye,gunsniperLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -2586,26 +2882,35 @@
 	</effect_group>
 	</item>
 	
+	<item name="gunak47LLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunak47LL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunak47LL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunak47LL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
 	<item name="gunak47LL">
 		<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedGun"/>
 		<property name="HoldType" value="48"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/ak47/ak47Prefab.prefab"/>
 		<property name="Material" value="MMachineGunParts"/> <property name="Weight" value="4"/>
-
 		<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
 		<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
-
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
-
 		<property name="SoundJammed" value="weapon_jam"/>
 		<property name="Sound_Sight_In" value="rifle_sight_in"/>
 		<property name="Sound_Sight_Out" value="rifle_sight_out"/>
-
 		<property name="RepairExpMultiplier" value="10.8"/>
 		<property name="EconomicValue" value="500"/>
-		<property name="UnlockedBy" value="perkMachineGunner"/>
+		<property name="UnlockedBy" value="perkMachineGunner,gunak47LLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 		<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
 
@@ -2675,6 +2980,23 @@
 		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
 	</effect_group>
 	</item>
+	
+	<item name="guntacARLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="guntacARLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="guntacARLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="guntacARLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
+	
 
 	<item name="guntacARLL">
 		<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic"/><!-- attachmentsIncluded -->
@@ -2686,7 +3008,7 @@
 		<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
 		<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
 
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 
 		<property name="SoundJammed" value="weapon_jam"/>
@@ -2695,7 +3017,7 @@
 
 		<property name="RepairExpMultiplier" value="10.8"/>
 		<property name="EconomicValue" value="1000"/>
-		<property name="UnlockedBy" value="perkMachineGunner"/>
+		<property name="UnlockedBy" value="perkMachineGunner,guntacARLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 		<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
 
@@ -2764,6 +3086,23 @@
 	</effect_group>
 	</item>
 	
+	
+	<item name="gunM60LLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunM60LL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunM60LL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunM60LL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
+	
 	<item name="gunM60LL">
 	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,bottomAttachments,mediumTopAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
 	<property name="DisplayType" value="rangedGun"/>
@@ -2774,7 +3113,7 @@
 	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
 	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
 
-	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 
 	<property name="SoundJammed" value="weapon_jam"/>
@@ -2783,7 +3122,7 @@
 
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="EconomicValue" value="1500"/>
-	<property name="UnlockedBy" value="perkMachineGunner"/>
+	<property name="UnlockedBy" value="perkMachineGunner,gunM60LLSchematic"/>
 	<property name="ShowQuality" value="true"/>
 	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
 
@@ -2858,13 +3197,30 @@
 	</effect_group>
 	</item>
 	
+	<item name="gunwoodbowLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunwoodbowLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunwoodbowLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunwoodbowLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
+	
+	
 	<item name="gunwoodbowLL">
 		<property name="Tags" value="weapon,ranged,bowDrawPenalty,archery,bow,attAgility,perkArchery,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedBow"/>
 		<property name="HoldType" value="68"/> <!-- "Sway Off" is hardcoded for hold types 26, 27, 53 -->
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/AdvancedBow/AdvancedWoodenBow/AdvancedWoodenBowPrefab.prefab"/>
 		<property name="Material" value="MBowCrossbowParts"/> <property name="Weight" value="4"/>
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="EconomicValue" value="500"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property name="SellableToTrader" value="true"/>
@@ -2875,7 +3231,7 @@
 		<property name="CrosshairUpAfterShot" value="false"/>
 		<property name="RepairExpMultiplier" value="5.5"/>
 		<property name="PickupJournalEntry" value="alternateAmmoTip"/>
-		<property name="UnlockedBy" value="perkArchery"/>
+		<property name="UnlockedBy" value="perkArchery,gunwoodbowLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 		<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
 	<property class="Action0">
@@ -2953,13 +3309,29 @@
 	</effect_group>
 	</item>
 	
+	<item name="guncompoundbowLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="guncompoundbowLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="guncompoundbowLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="guncompoundbowLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
+	
 	<item name="guncompoundbowLL">
 		<property name="Tags" value="weapon,ranged,bowDrawPenalty,archery,bow,attAgility,perkArchery,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedBow"/>
 		<property name="HoldType" value="53"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/advancedBow/advancedCompoundBow/advancedCompoundBowPrefab.prefab"/>
 		<property name="Material" value="MBowCrossbowParts"/> <property name="Weight" value="6"/>
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="ItemNeedsRepair"/>
 		<property name="SoundDestroy" value="wooddestroy1"/>
@@ -2970,7 +3342,7 @@
 		<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
 		<property name="RepairExpMultiplier" value="5.5"/>
 		<property name="PickupJournalEntry" value="alternateAmmoTip"/>
-		<property name="UnlockedBy" value="perkArchery"/>
+		<property name="UnlockedBy" value="perkArchery,guncompoundbowLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="Catapult"/>
@@ -3048,6 +3420,22 @@
 	</effect_group>
 	</item>
 	
+	<item name="gunCompoundCrossbowLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunCompoundCrossbowLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunCompoundCrossbowLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunCompoundCrossbowLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
+	
 	<item name="gunCompoundCrossbowLL">
 		<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,sideAttachments,smallTopAttachments,mediumTopAttachments,bottomAttachments,attAgility,perkArchery,crossbow,attachmentsIncluded,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedBow"/>
@@ -3055,7 +3443,7 @@
 		<property name="HoldType" value="69"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/AdvancedBow/AdvancedCompoundCrossbow/AdvancedCompoundCrossbowPrefab.prefab"/>
 		<property name="Material" value="MBowCrossbowParts"/> <property name="Weight" value="6"/>
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="EconomicValue" value="1000"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -3069,7 +3457,7 @@
 		<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
 		<property name="RepairExpMultiplier" value="5.5"/>
 		<property name="PickupJournalEntry" value="alternateAmmoTip"/>
-		<property name="UnlockedBy" value="perkArchery"/>
+		<property name="UnlockedBy" value="perkArchery,gunCompoundCrossbowLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="Launcher"/>
@@ -3139,6 +3527,22 @@
 	</effect_group>
 	</item>
 	
+	<item name="gunjunkturrLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunjunkturrLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunjunkturrLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunjunkturrLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
+	
 	<item name="gunjunkturrLL">
 		<property name="Tags" value="turretRanged,weapon,ranged,reloadPenalty,drumMagazine,attIntellect,perkTurrets,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedTurret"/>
@@ -3149,13 +3553,13 @@
 		<property name="Material" value="MJunkTurretParts"/> <property name="Weight" value="4"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="weapon_jam"/>
-		<property name="RepairTools" value="resourceForgedBrassLL"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="Group" value="Ammo/Weapons,Robotics"/>
 		<property name="Stacknumber" value="1"/>
 		<property name="EconomicValue" value="500"/>
 		<property name="SellableToTrader" value="true"/>
 		<property name="RequiredPower" value="15"/>
-		<property name="UnlockedBy" value="perkTurrets"/>
+		<property name="UnlockedBy" value="perkTurrets,gunjunkturrLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 		<property name="IgnoreKeystoneSound" value="true"/>
 
@@ -3163,7 +3567,7 @@
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
 		<!-- <property name="Range" value="40"/> -->
-		<property name="Magazine_items" value="ammoJunkTurretAP"/>
+		<property name="Magazine_items" value="junkammoLL"/>
 		<property name="Reload_time" value="6.5"/>
 		<property name="Sound_start" value="junkturret_fire"/>
 		<property name="Sound_loop" value="junkturret_fire"/>
@@ -3227,13 +3631,29 @@
 	</effect_group>
 	</item>
 	
+	<item name="gunpistolLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunpistolLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunpistolLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunpistolLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
+	
 	<item name="gunpistolLL">
 		<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedGun"/>
 		<property name="HoldType" value="1"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Pistol/PistolPrefab.prefab"/>
 		<property name="Material" value="MHandGunParts"/> <property name="Weight" value="4"/>
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="weapon_jam"/>
 		<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -3248,7 +3668,7 @@
 		<property name="RepairExpMultiplier" value="10.8"/>
 		<property name="LightValue" value=".45"/>
 		<property name="EconomicValue" value="500"/>
-		<property name="UnlockedBy" value="perkGunslinger"/>
+		<property name="UnlockedBy" value="perkGunslinger,gunpistolLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -3315,13 +3735,30 @@
 	</effect_group>
 	</item>
 	
+	
+	<item name="gunSMGLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gunSMGLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gunSMGLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunSMGLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
+	
+	
 	<item name="gunSMGLL">
 		<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,firingMode,bottomAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedGun"/>
 		<property name="HoldType" value="6"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/SMG/SMGPrefab.prefab"/>
 		<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
-		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="weapon_jam"/>
 		<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -3334,7 +3771,7 @@
 		<property name="RepairExpMultiplier" value="10.8"/>
 		<property name="LightValue" value=".45"/>
 		<property name="EconomicValue" value="1500"/>
-		<property name="UnlockedBy" value="perkGunslinger"/>
+		<property name="UnlockedBy" value="perkGunslinger,gunSMGLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -3409,13 +3846,28 @@
 	</effect_group>
 	</item>
 	
+	
+	<item name="gungoldenvultureLLSchematic">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="gungoldenvultureLL"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Unlocks" value="gungoldenvultureLL"/>
+		<property name="EconomicValue" value="100"/>
+		<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gungoldenvultureLL" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="500"/>
+	</effect_group>
+	</item>
+	
+	
 	<item name="gungoldenvultureLL">
 		<property name="Tags" value="weapon,ranged,revolver,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger,attachmentsIncluded,canHaveCosmetic"/>
 		<property name="DisplayType" value="rangedGun"/>
 		<property name="HoldType" value="75"/>
 		<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Desert Eagle/DesertEaglePrefab.prefab"/>
 		<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
-		<property name="RepairTools" value="resourceforgedvibeLL"/>
+		<property name="RepairTools" value="resourceIMPRepairKitLL"/>
 		<property name="DegradationBreaksAfter" value="false"/>
 		<property name="SoundJammed" value="weapon_jam"/>
 		<property name="Attachments" value="meleeToolFlashlight02"/>
@@ -3430,7 +3882,7 @@
 		<property name="RepairExpMultiplier" value="10.8"/>
 		<property name="LightValue" value=".45"/>
 		<property name="EconomicValue" value="1500"/>
-		<property name="UnlockedBy" value="perkGunslinger"/>
+		<property name="UnlockedBy" value="perkGunslinger,gungoldenvultureLLSchematic"/>
 		<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -3532,10 +3984,140 @@
 	</effect_group>
 	</item>
 	
+		<!--BULLET FOR IMPROVED junkie-->
+	<item name="junkammoLL">
+		<property name="CustomIcon" value="ammoJunkTurretRegular"/>
+		<property name="CustomIconTint" value="0622d4" />
+		<property name="Tags" value="ammo"/>
+		<property name="DisplayType" value="ammoBullet"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mbrass"/>
+		<property name="MeltTimePerUnit" value=".4"/>
+		<property name="Stacknumber" value="10000"/> <!-- STK ammo high -->
+		<property name="EconomicValue" value="9"/>
+		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+	<effect_group name="ammo9mmBulletBall" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="32" tags="perkGunslinger,9mmGun"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="4" tags="perkGunslinger"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+	</effect_group>
+	</item>
 	
 	
 	</append>
 
+	<!--working work stations-->
+	 <remove xpath="/items/item[@name='drinkJarEmpty']"/>
+    <remove xpath="/items/item[@name='bucketEmpty']"/>
+    <insertBefore xpath="/items/item[@name='drinkJarRiverWater']">
+        <item name="drinkJarEmpty">
+            <property name="HoldType" value="3"/>
+            <property name="Meshfile" value="#Other/Items?Food/emptyJarPrefab.prefab"/>
+            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mglass"/>
+            <property name="Stacknumber" value="5000"/> <!-- STK resource -->
+            <property name="Weight" value="10"/>
+            <property name="EconomicValue" value="6"/>
+            <property name="CraftingIngredientTime" value="9"/>
+            <property class="Action1"> <!-- UseAction -->
+                <property name="Class" value="ExchangeItem"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Change_item_to" value="drinkJarRiverWater"/>
+                <property name="Do_block_action" value="deplete1"/>
+                <property name="Focused_blockname_1" value="water"/>
+                <property name="Focused_blockname_2" value="waterMoving"/>
+                <property name="Focused_blockname_3" value="waterStaticBucket"/>
+                <property name="Focused_blockname_4" value="waterMovingBucket"/>
+                <property name="Focused_blockname_5" value="terrWaterPOI"/>
+                <property name="Focused_blockname_6" value="faucet02Working"/>
+                <property name="Focused_blockname_7" value="faucet04Working"/>
+                <property name="Focused_blockname_8" value="faucetBrass02Working"/>
+                <property name="Focused_blockname_9" value="faucetBrass04Working"/>
+                <property name="Focused_blockname_10" value="decoClawFootBathTubWorking"/>
+                <property name="Focused_blockname_11" value="cntBathTubEmptyWorking"/>
+                <property name="Sound_start" value="bucketfill_water"/>
+            </property>
+            <property name="Group" value="Resources"/>
+        </item>
+    </insertBefore>
+    <insertBefore xpath="/items/item[@name='bucketRiverWater']">
+        <item name="bucketEmpty">
+            <property name="HoldType" value="34"/>
+            <property name="Meshfile" value="#Other/Items?Crafting/Metal/IronBucket.fbx"/>
+            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mmetal"/>
+            <property name="Stacknumber" value="100"/>
+            <property name="EconomicValue" value="84"/>
+            <property class="Action0">
+                <property name="Class" value="BailLiquid"/>
+                <property name="Delay" value=".35"/>
+                <property name="Sound_start" value="bucketbail_water"/>
+            </property>
+            <property class="Action1"> <!-- UseAction -->
+                <property name="Class" value="ExchangeItem"/>
+                <property name="Delay" value=".35"/>
+                <property name="Change_item_to" value="bucketRiverWater"/>
+                <property name="Do_block_action" value="deplete3"/>
+                <property name="Focused_blockname_1" value="water"/>
+                <property name="Focused_blockname_2" value="waterMoving"/>
+                <property name="Focused_blockname_3" value="waterStaticBucket"/>
+                <property name="Focused_blockname_4" value="waterMovingBucket"/>
+                <property name="Focused_blockname_5" value="terrWaterPOI"/>
+                <property name="Focused_blockname_6" value="faucet02Working"/>
+                <property name="Focused_blockname_7" value="faucet04Working"/>
+                <property name="Focused_blockname_8" value="faucetBrass02Working"/>
+                <property name="Focused_blockname_9" value="faucetBrass04Working"/>
+                <property name="Focused_blockname_10" value="decoClawFootBathTubWorking"/>
+                <property name="Focused_blockname_11" value="cntBathTubEmptyWorking"/>
+                <property name="Sound_start" value="bucketfill_water"/>
+            </property>
+            <property name="Group" value="Tools/Traps"/>
+        </item>
+    </insertBefore>
+
+
+<!-- SJ: Generator bank schematic unlocks working lamps and lights, and wireless -->
+
+	<append xpath="items/item[@name='generatorbankSchematic']/effect_group[@tiered='false']">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="lightPlayerVariantHelper" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="wirelessWireRelay" operation="set" value="1"/>
+	</append>
+
+<!-- SJ: Add schematic for working ovens and faucets to allow intelligence to be ignored -->
+
+    <insertAfter xpath="items/item[@name='plantedPumpkin1Schematic']">
+        <item name="faucet04WorkingSchematic">
+            <property name="Extends" value="schematicNoQualityRecipeMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="faucet04"/>
+            <property name="Unlocks" value="faucet04Working"/>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="faucet02Working" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="faucetBrass02Working" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="faucet04Working" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="faucetBrass04Working" operation="set" value="1"/>                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="faucet04Working" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="decoClawFootBathTubWorking" operation="set" value="1"/>                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="faucet04Working" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntBathTubEmptyWorking" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+            </effect_group>
+        </item>
+
+        <item name="cntWallOvenWorkingSchematic">
+            <property name="Extends" value="schematicNoQualityRecipeMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="cntWallOven"/>
+            <property name="Unlocks" value="cntWallOvenWorking"/>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntWallOvenWorking" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntCharcoalGrillWorking" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntGasGrillWorking" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+            </effect_group>
+        </item>
+    </insertAfter>
 
 
 	</configs>

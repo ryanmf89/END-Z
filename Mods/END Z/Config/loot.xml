@@ -1,9 +1,7 @@
 <configs>
 
 
-	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT2']">
-		<item name="t3vibespearLLSchematic" loot_prob_template="high" />
-	</append>
+
 
 	    <!-- Make player dropped bags bigger to accomodate new size-->
 	<set xpath="/lootcontainers/lootcontainer[@id='2']/@size">11,11</set>
@@ -49,6 +47,134 @@
 		</lootcontainer>
 
 </append>
+
+<!--loot container for AIRDROP is id 34-->
+<!--loot container for SMALL AMMO PILE is id 108-->
+<!--loot container for MED AMMO PILE is id 109-->
+<!--loot container for LARGE AMMO PILE is id 110-->
+<!--loot container for MUNITIONS BOX is id 40-->
+<!--loot container for SMALL WEAPONS BAG is id 100-->
+<!--loot container for LARGE WEAPONS BAG is id 101-->
+<!--loot container for BOOKCASE is id 49-->
+<!--loot container for CRACKABOOK CRATE is id 89-->
+<!--loot container for SHOTGUN MESS is id 50-->
+<!--loot container for WORKING STIFF is id 53-->
+<!--zombie loot yellow bag id 70-->
+<!--zombie loot blue bag id 71-->
+<!--zombie loot red bag id 73-->
+	
+	<!--FORGED BRASS IN THE WORKING STIFF CRATES WITH PROB OF 20%-->
+		<append xpath="//lootcontainer[@id='53']">
+			<item name="resourceForgedBrassLL" loot_prob_template="low"/>
+			<item name="resourceforgedvibeLL" loot_prob_template="veryLow"/>
+		</append>
+	<!--BRASS TOOLS SCHEMATICS IN AIRDROP,BOOKCASE,CRACKABOOK CRATE AND YELLOW ZOMBIE BAGS WITH PROB OF 5%-->
+		<append xpath="//lootcontainer[@id='34' or @id='89' or @id='49' or @id='70']">
+			<item name="brassshovelLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brassaxeLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brasspickaxeLLSchematic" loot_prob_template="veryLow"/>
+		</append>
+	<!--BRASS WEAPONS SCHEMATICS IN AIRDROP,BOOKCASE,CRACKABOOK CRATE AND YELLOW ZOMBIE BAGS WITH PROB OF 5%-->
+		<append xpath="//lootcontainer[@id='34' or @id='89' or @id='49' or @id='70']">
+			<item name="brasssledgeLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brassknifeLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brassclubLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brassknucksLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brassspearLLSchematic" loot_prob_template="veryLow"/>
+		</append>
+	<!--BRASS TOOLS PREMADE IN THE WORLD LOOT AIRDROP,SMALL AND LARGE WEAPONS BAG, WORKINGSTIFF WITH A PROB OF 20%-->
+		<append xpath="//lootcontainer[@id='34' or @id='100' or @id='101' or @id='53']">
+			<item name="brassshovelLL" loot_prob_template="low"/>
+			<item name="brassaxeLL" loot_prob_template="low"/>
+			<item name="brasspickaxeLL" loot_prob_template="low"/>
+		</append>
+	<!--BRASS WEAPONS PREMADE IN THE WORLD LOOT AIRDROP,SMALL AND LARGE WEAPONS BAG, SHOTGUNMESS WITH A PROB OF 20%-->
+		<append xpath="//lootcontainer[@id='34' or @id='100' or @id='101' or @id='50' or @id='70']">
+			<item name="brasssledgeLL" loot_prob_template="low"/>
+			<item name="brassknifeLL" loot_prob_template="low"/>
+			<item name="brassclubLL" loot_prob_template="low"/>
+			<item name="brassknucksLL" loot_prob_template="low"/>
+			<item name="brassspearLL" loot_prob_template="low"/>
+		</append>
+	
+	<!--VIBRANIUM TOOLS SCHEMATICS IN AIRDROP AND CRACKABOOK CRATE AND BLUE RED ZOMBIE BAGS WITH PROB OF 5%-->
+		<append xpath="//lootcontainer[@id='34' or @id='89' or @id='71' or @id='73']">
+			<item name="vibeaugerLLSchematic" loot_prob_template="veryLow"/>
+		</append>
+	<!--VIBRANIUM WEAPONS SCHEMATICS IN AIRDROP AND CRACKABOOK CRATE AND BLUE RED ZOMBIE BAGS WITH PROB OF 5%-->
+		<append xpath="//lootcontainer[@id='34' or @id='89' or @id='71' or @id='73']">
+			<item name="t3vibespearLLSchematic" loot_prob_template="veryLow"/>
+			<item name="vibesledgeLLSchematic" loot_prob_template="veryLow"/>
+			<item name="vibemacheteLLSchematic" loot_prob_template="veryLow"/>
+			<item name="vibeknucksLLSchematic" loot_prob_template="veryLow"/>
+			<item name="vibebatLLSchematic" loot_prob_template="veryLow"/>
+			<!--improved shotguns-->
+			<item name="improvedDUBZYLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunpumpshotLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunautoshotLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunhuntrifleLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunleverrifleLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunsniperLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunak47LLSchematic" loot_prob_template="veryLow"/>
+			<item name="guntacARLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunM60LLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunwoodbowLLSchematic" loot_prob_template="veryLow"/>
+			<item name="guncompoundbowLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunCompoundCrossbowLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunjunkturrLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunpistolLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunSMGLLSchematic" loot_prob_template="veryLow"/>
+		</append>
+	<!--VIBRANIUM TOOLS PREMADE IN THE WORLD LOOT WITH A PROB OF 5%-->
+		<append xpath="//lootcontainer[@id='34' or @id='100' or @id='101' or @id='50' or @id='71' or @id='73']">
+			<item name="vibeaugerLL" loot_prob_template="veryLow"/>
+		</append>
+	
+	<!--VIBRANIUM WEAPONS PREMADE IN THE WORLD LOOT WITH A PROB OF 5%-->
+		<append xpath="//lootcontainer[@id='34' or @id='100' or @id='101' or @id='50' or @id='73']">
+			<item name="t3vibespearLL" loot_prob_template="veryLow"/>
+			<item name="vibesledgeLL" loot_prob_template="veryLow"/>
+			<item name="vibemacheteLL" loot_prob_template="veryLow"/>
+			<item name="vibeknucksLL" loot_prob_template="veryLow"/>
+			<item name="vibebatLL" loot_prob_template="veryLow"/>
+			<!--IMPROVED SHOTGUNS-->
+			<item name="gundubzyLL" loot_prob_template="veryLow"/>
+			<item name="gunpumpshotLL" loot_prob_template="veryLow"/>
+			<item name="gunautoshotLL" loot_prob_template="veryLow"/>
+			<!--IMPROVED AUTO GUNS-->
+			<item name="gunhuntrifleLL" loot_prob_template="veryLow"/>
+			<item name="gunleverrifleLL" loot_prob_template="veryLow"/>
+			<item name="gunsniperLL" loot_prob_template="veryLow"/>
+			<item name="gunak47LL" loot_prob_template="veryLow"/>
+			<item name="guntacARLL" loot_prob_template="veryLow"/>
+			<item name="gunM60LL" loot_prob_template="veryLow"/>
+			<!--IMPROVED BOWS-->
+			<item name="gunwoodbowLL" loot_prob_template="veryLow"/>
+			<item name="guncompoundbowLL" loot_prob_template="veryLow"/>
+			<item name="gunCompoundCrossbowLL" loot_prob_template="veryLow"/>
+			<!--JUNK TURRET-->
+			<item name="gunjunkturrLL" loot_prob_template="veryLow"/>
+			<!--IMPROVED PISTOLS-->
+			<item name="gunpistolLL" loot_prob_template="veryLow"/>
+			<item name="gunSMGLL" loot_prob_template="veryLow"/>
+		</append>	
+		
+		<!--GOLDEN DESERT VULTURE-->
+		<append xpath="//lootcontainer[@id='34' or @id='153']">
+			<item name="gungoldenvultureLL" loot_prob_template="veryLow"/>
+			<item name="gungoldenvultureLLSchematic" loot_prob_template="veryLow"/>
+		</append>	
+			
+		<append xpath="//lootcontainer[@id='110' or @id='100']">
+			<item name="ammo44slugLL" loot_prob_template="veryLow" count="20,40"/>
+			<item name="impbulletLL" loot_prob_template="veryLow" count="20,40"/>
+		</append>
+
+		<!--working work stations-->
+		 <append xpath="lootcontainers/lootgroup[@name='schematicsElectrical']">
+        <item name="faucet04WorkingSchematic"/>
+        <item name="cntWallOvenWorkingSchematic"/>
+    </append>
 
 </configs>
 

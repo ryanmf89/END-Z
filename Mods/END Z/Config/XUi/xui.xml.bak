@@ -1,0 +1,30 @@
+
+<configs>
+	
+	<!--VIBRANIUM WORKBENCH -->
+	<!--append xpath="/xui/ruleset[@name='default']">
+
+		<window_group name="workstation_vibeworkbenchLL" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">	
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+			<window name="windowCraftingQueue" />
+		</window_group>				
+		
+	</append-->
+		
+	
+	<!--ENEMY HEALTH BAR -->
+	<append xpath="/xui/ruleset[@name='default']/window_group[@name='compass']">
+		<window name="windowTargetBar" anchor="CenterTop" />
+	</append>
+	
+	<!--3 slot forge input-->
+	
+	<set xpath="/xui/ruleset/window_group[@name='workstation_forge']/window[@name='windowForgeInput']/@name">windowThreeForgeInput</set>
+	<set xpath="/xui/ruleset/window_group[@name='workstation_forge']/window[@name='windowOutput']/@name">windowThreeForgeOutput</set>
+	
+	
+</configs>
