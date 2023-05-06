@@ -11,7 +11,7 @@
 			<update_rate value=".45"/>
 			<effect_group>
 				<passive_effect name="Tracking" operation="base_set" value="1" tags="zombie,mutant,alien,bandit,animal"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="zombie" buff="buffZombieZEffect"/>
+				<!--triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="zombie" buff="buffZombieZEffect"/-->
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="mutant,alien,bandit" buff="buffBanditZEffect"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="bear" buff="buffBearZEffect"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="chicken" buff="buffChickenZEffect"/>
@@ -22,17 +22,84 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="vulture" buff="buffVultureZEffect"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="snake" buff="buffSnakeZEffect"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="boar" buff="buffBoarZEffect"/>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="normaltrack" buff="buffZombieZEffect1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="feraltrack" buff="buffZombieZEffect2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="radiatedtrack" buff="buffZombieZEffect3"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="elitetrack" buff="buffZombieZEffect4"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="screamertrack" buff="buffZombieZEffect5"/>
+				
 			</effect_group>
 		</buff>
 		
-		<buff name="buffZombieZEffect" hidden="true">
+		<!--buff name="buffZombieZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAzombie" add="true"/>
 				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAzombie" add="false"/>
 			</effect_group>
+		</buff-->
+		
+		
+		<buff name="buffZombieZEffect1" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+			<!--normal zombie-->
+				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAnormalzombie" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAnormalzombie" add="false"/>
+		</effect_group>
 		</buff>
+		
+		
+		<buff name="buffZombieZEffect2" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+			<!--feral zombie-->
+				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAferalzombie" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAferalzombie" add="false"/>
+		</effect_group>
+		</buff>
+		
+		<buff name="buffZombieZEffect3" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+			<!--radiated zombie-->
+				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAradiatedzombie" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAradiatedzombie" add="false"/>
+		</effect_group>
+		</buff>
+		
+		<buff name="buffZombieZEffect4" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+			<!--elite zombie-->
+				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAelitezombie" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAelitezombie" add="false"/>
+		</effect_group>
+		</buff>
+		
+		<buff name="buffZombieZEffect5" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+			<!--screamer zombie-->
+				<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAscreamerzombie" add="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAscreamerzombie" add="false"/>
+		</effect_group>
+		</buff>
+		
+
+		
+		
+		
+		
+		
+		
 		<buff name="buffBanditZEffect" hidden="true">
 			<stack_type value="replace"/>
 			<duration value="1"/>
@@ -122,6 +189,96 @@
     </effect_group>
 	</append-->
 
+
+	<!--ZOMBIE SMELL MEAT AND FAT-->
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+		<effect_group name="Get Stalked">
+			<!-- vanilla stinky animal products -->
+			<!-- the values on the random roll are intentionally low because the check will be made frequently so the odds of having it not hit when carrying the offending item for more than 10 seconds are quite low. More likely a hunt for meat will result in being chased by wolves or worse all the way home. -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="foodRawMeat" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="8"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceAnimalFat" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="7"/></triggered_effect>
+
+			<!-- if using stressed out mod by irishmanjmo uncomment the following lines -->
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="Raw Game Meat" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="23"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="Raw Chicken" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="17"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="Raw Fish" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="Raw Pork" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="26"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="Raw Rabbit Meat" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="11"/></triggered_effect> -->
+			
+			<!-- if using the alchemy mod by bad poly uncomment the following lines -->
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRabbitMeat_AM" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="11"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceBearMeat_AM" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="23"/></triggered_effect> -->
+
+			<!-- if using telric's fishing mod uncomment the following lines -->
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRawTunaFillet" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRawMackerelFillet" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRawShadRoe" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRawTroutFillet" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRawStripedBassFillet" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRawRedSnapperFillet" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRawLargeMouthBassFillet" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRawGrouperFillet" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRawCrappieFillet" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRawCatfishFillet" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="resourceRawBluegilFishFillet" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="37"/></triggered_effect> -->
+
+			<!-- if using dough's sous chef of the apocalypse uncomment the following lines -->
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+				<requirement name="PlayerItemCount" item_name="doughsFoodMeatScraps" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="67"/></triggered_effect> -->
+		</effect_group>
+
+	</append>
+
+	<append xpath="/buffs">
+
+
+		<buff name="buffScentofPrey" hidden="false" name_key="buffScentofPreyName" description_key="buffScentofPreyDesc" icon="ui_game_symbol_smell" icon_color="219,124,29" showonhud="true" >
+			<stack_type value="replace"/>
+			<duration value="30"/>
+			<effect_group name="Get Noticed">
+				<requirement name="ProgressionLevel" progression_name="perkFromTheShadows" operation="LTE" value="1"/>
+					<passive_effect name="LightMultiplier" operation="perc_add" value=".67">
+						<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="65"/>
+					</passive_effect>
+					<passive_effect name="NoiseMultiplier" operation="perc_add" value="3"/>
+					<passive_effect name="EnemySearchDuration" operation="perc_add" value="3"/>
+			</effect_group>
+			<effect_group name="Get Seen Low">
+				<requirement name="ProgressionLevel" progression_name="perkFromTheShadows" operation="GTE" value="2"/>
+					<passive_effect name="LightMultiplier" operation="perc_add" value=".33">
+						<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="65"/>
+					</passive_effect>
+					<passive_effect name="NoiseMultiplier" operation="perc_add" value="1"/>
+					<passive_effect name="EnemySearchDuration" operation="perc_add" value="1"/>
+			</effect_group>
+			<effect_group name="Get Spawns">
+				<requirement name="ProgressionLevel" progression_name="perkFromTheShadows" operation="LTE" value="4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="mj_predators_horde1">
+						<requirement name="RandomRoll" seed_type="Random" min_max="0,200" operation="LTE" value="3"/>
+					</triggered_effect>				
+			</effect_group>
+		</buff>
+	</append>
 
 
 </configs>

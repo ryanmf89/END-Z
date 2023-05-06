@@ -431,11 +431,8 @@
 		<property name="SortOrder1" value="40p0"/>
 		<property name="SortOrder2" value="0002"/>
 	</block>
-	<!--DOWNGRADE-->
-	<!--block name="vibeblockLL">
-		<property name="Extends" value="vibeblockMasterLL"/>
-		<property name="DowngradeBlock" value="moonrockMasterLL"/>
-	</block-->
+
+
 	
 
 	<!--IMPROVED GENERATOR BANK-->
@@ -1014,5 +1011,75 @@
         </block>
 
 	</append>
+	
+	<!--BETTER FARMING-->
+	<!--GROWTH SPEED IN MINUTES-->
+	<set xpath="//block[@name='cropsGrowingMaster']/property[@name='PlantGrowing.GrowthRate']/@value">
+	,30
+	</set>
+	<!--SEED STAYS AFTER HARVEST-->
+	<!--MUSHROOM-->
+	<append xpath="//block[@name='plantedMushroom3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedMushroom1"/>
+	</append>
+	<!--ALOE-->
+	<append xpath="//block[@name='plantedAloe3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedAloe1"/>
+	</append>
+	<!--BLUEBERRY-->
+	<append xpath="//block[@name='plantedBlueberry3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedBlueberry1"/>
+	</append>
+	<!--Chrysanthemum-->
+	<append xpath="//block[@name='plantedChrysanthemum3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedChrysanthemum1"/>
+	</append>
+	<!--COFFEE-->
+	<append xpath="//block[@name='plantedCoffee3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedCoffee1"/>
+	</append>
+	<!--CORN-->
+	<append xpath="//block[@name='plantedCorn3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedCorn1"/>
+	</append>
+	<!--COTTON-->
+	<append xpath="//block[@name='plantedCotton3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedCotton1"/>
+	</append>
+	<!--GOLDENROD-->
+	<append xpath="//block[@name='plantedGoldenrod3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedGoldenrod1"/>
+	</append>
+	<!--HOPS-->
+	<append xpath="//block[@name='plantedHop3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedHop1"/>
+	</append>
+	<!--POTATO-->
+	<append xpath="//block[@name='plantedPotato3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedPotato1"/>
+	</append>
+	<!--PUMPKIN-->
+	<append xpath="//block[@name='plantedPumpkin3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedPumpkin1"/>
+	</append>
+	<!--SUPER CORN-->
+	<append xpath="//block[@name='plantedGraceCorn3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedGraceCorn1"/>
+	</append>
+	<!--YUCCA-->
+	<append xpath="//block[@name='plantedYucca3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedYucca1"/>
+	</append>
+
+	<insertAfter xpath="/blocks/block[@name='treeGrassMaster']/drop[@event='Destroy']">
+		<drop event="Destroy" name="survivalBerriesLL" count="4,8" prob="0.5"/>
+		<drop event="Destroy" name="survivalNutsLL" count="4,8" prob="0.5"/>
+	</insertAfter>
+
+
+
+
+
+
 
 </configs>

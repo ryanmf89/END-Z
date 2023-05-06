@@ -14,8 +14,10 @@
 		</window_group>				
 		
 	</append-->
-		
 	
+	<!--zombie kill display-->
+	
+
 	<!--ENEMY HEALTH BAR -->
 	<append xpath="/xui/ruleset[@name='default']/window_group[@name='compass']">
 		<window name="windowTargetBar" anchor="CenterTop" />

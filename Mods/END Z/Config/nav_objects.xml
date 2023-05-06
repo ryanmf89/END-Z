@@ -1,16 +1,105 @@
 <configs>
 	<append xpath="/nav_object_classes">
-		<nav_object_class name="ZAzombie">
+		<!--nav_object_class name="ZAzombie">
 			<property name="requirement_type" value="Tracking" />
 			<compass_settings>
 				<property name="sprite_name" value="ui_game_symbol_zombie"/>
 				<property name="min_distance" value="2"/>
 				<property name="max_distance" value="30"/>
-				<property name="color" value="255,0,0,255"/>
+				<property name="color" value="176,40,255,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class-->
+		
+		<nav_object_class name="ZAnormalzombie">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="30"/>
+				<property name="color" value="0,244,255,255"/>
 				<property name="has_pulse" value="true"/>
 				<property name="icon_clamped" value="false"/>
 			</compass_settings>
 		</nav_object_class>
+		
+		</append>
+		
+		<append xpath="/nav_object_classes">
+		
+		
+		<nav_object_class name="ZAferalzombie">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="30"/>
+				<property name="color" value="255,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		
+		</append>
+		
+		
+		<append xpath="/nav_object_classes">
+		
+		
+		<nav_object_class name="ZAradiatedzombie">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="30"/>
+				<property name="color" value="76,255,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		
+		</append>
+		
+		<append xpath="/nav_object_classes">
+		
+		
+		<nav_object_class name="ZAelitezombie">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="30"/>
+				<property name="color" value="181,45,255,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		
+		</append>
+		
+		<append xpath="/nav_object_classes">
+		
+		
+		<nav_object_class name="ZAscreamerzombie">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="30"/>
+				<property name="color" value="255,0,220,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		
+		</append>
+		
+		
+		
+		
+		<append xpath="/nav_object_classes">
+		
 		<nav_object_class name="ZAbandit">
 			<property name="requirement_type" value="Tracking" />
 			<compass_settings>

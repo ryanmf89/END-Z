@@ -3,8 +3,8 @@
 <append xpath="/recipes">
 
 	<!-- NEW DUKES RECIPE -->
-	<recipe name="casinoCoin" count="1" craft_area="workbench" craft_time="15">
-		<ingredient name="oldCash" count="1"/>
+	<recipe name="oldCash" count="3" craft_area="workbench" craft_time="1">
+		<ingredient name="casinoCoin" count="1"/>
 	</recipe>
 	
 	<!-- NEW ACID RECIPE -->
@@ -18,107 +18,83 @@
 		<ingredient name="foodRawMeat" count="5"/>
 		<ingredient name="drinkJarRiverWater" count="1"/>
 	</recipe>
-
 	<recipe name="foodCanPasta" count="2" craft_area="campfire" craft_time="15">
 		<ingredient name="drinkCanEmpty" count="1"/>
 		<ingredient name="drinkJarRiverWater" count="1"/>
 		<ingredient name="resourceYuccaFibers" count="10"/>
 		<ingredient name="resourcePotassiumNitratePowder" count="5"/>
-		
 	</recipe>
-	
 	<recipe name="foodCanPeas" count="2" craft_area="campfire" craft_time="15">
 		<ingredient name="drinkCanEmpty" count="1"/>
 		<ingredient name="resourceYuccaFibers" count="10"/>
 		<ingredient name="drinkJarRiverWater" count="1"/>
 		<ingredient name="resourceClayLump" count="5"/>
-	
 	</recipe>
-	
 	<recipe name="foodCanCatfood" count="2" craft_area="campfire" craft_time="15">
 		<ingredient name="drinkCanEmpty" count="1"/>
 		<ingredient name="foodRawMeat" count="5"/>
 		<ingredient name="drinkJarRiverWater" count="1"/>
 		<ingredient name="resourceYuccaFibers" count="5"/>
-	
 	</recipe>
-	
-		<recipe name="foodCanDogfood" count="2" craft_area="campfire" craft_time="15">
-			<ingredient name="drinkCanEmpty" count="1"/>
-			<ingredient name="foodRawMeat" count="5"/>
-			<ingredient name="drinkJarRiverWater" count="1"/>
-			<ingredient name="resourceYuccaFibers" count="5"/>
-	
+	<recipe name="foodCanDogfood" count="2" craft_area="campfire" craft_time="15">
+		<ingredient name="drinkCanEmpty" count="1"/>
+		<ingredient name="foodRawMeat" count="5"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="resourceYuccaFibers" count="5"/>
 	</recipe>
-	
 	<recipe name="foodCanChili" count="2" craft_area="campfire" craft_time="15">
 		<ingredient name="drinkCanEmpty" count="1"/>
 		<ingredient name="foodRawMeat" count="5"/>
 		<ingredient name="drinkJarRiverWater" count="1"/>
 		<ingredient name="resourceYuccaFibers" count="5"/>
 		<ingredient name="foodCanMiso" count="1"/>
-	
 	</recipe>
-	
 	<recipe name="foodCanSalmon" count="2" craft_area="campfire" craft_time="15">
 		<ingredient name="drinkCanEmpty" count="1"/>
 		<ingredient name="foodRawMeat" count="5"/>
 		<ingredient name="drinkJarRiverWater" count="1"/>
-	
 	</recipe>
-	
 	<recipe name="foodCanSham" count="2" craft_area="campfire" craft_time="15">
 		<ingredient name="drinkCanEmpty" count="1"/>
 		<ingredient name="foodRawMeat" count="10"/>
 		<ingredient name="drinkJarRiverWater" count="1"/>
-	
 	</recipe>
-	
 	<recipe name="foodCanBeef" count="2" craft_area="campfire" craft_time="15">
 		<ingredient name="drinkCanEmpty" count="1"/>
 		<ingredient name="foodRawMeat" count="5"/>
-	
 	</recipe>
-	
 	<recipe name="foodCanStock" count="2" craft_area="campfire" craft_time="15">
 		<ingredient name="drinkCanEmpty" count="1"/>
 		<ingredient name="drinkJarRiverWater" count="1"/>
 		<ingredient name="foodCanBeef" count="1"/>
-	
 	</recipe>
-	
 	<recipe name="foodCanTuna" count="2" craft_area="campfire" craft_time="15">
 		<ingredient name="drinkCanEmpty" count="1"/>
 		<ingredient name="drinkJarRiverWater" count="1"/>
 		<ingredient name="foodRawMeat" count="5"/>
-	
 	</recipe>
-	
 	<recipe name="foodCanChicken" count="2" craft_area="campfire" craft_time="15">
 		<ingredient name="drinkCanEmpty" count="1"/>
 		<ingredient name="drinkJarRiverWater" count="1"/>
 		<ingredient name="foodRawMeat" count="5"/>
-	
 	</recipe>
 	
 
 
-		  <!-- Why would you need 5 pieces of meat to make 1 cooked piece of meat? -->
-  <set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']/@count">2</set>
-  <set xpath="/recipes/recipe[@name='foodBoiledMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
-  <set xpath="/recipes/recipe[@name='foodCharredMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
-  <set xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']/@count">2</set>
-  <set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
-  <set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">5</set>
-
-  <set xpath="/recipes/recipe[@name='ironBars']/ingredient[@name='unit_iron']/@count">50</set>
-  <set xpath="/recipes/recipe[@name='ironBarsCentered']/ingredient[@name='unit_iron']/@count">50</set>
-
-  <set xpath="/recipes/recipe[@name='trapSpikesIronDmg0']/ingredient[@name='resourceForgedIron']/@name">resourceScrapIron</set>
-  <set xpath="/recipes/recipe[@name='trapSpikesIronDmg0']/ingredient[@name='resourceScrapIron']/@count">40</set>
+	<!--BETTER COOKING-->
+    <set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']/@count">1</set>
+    <set xpath="/recipes/recipe[@name='foodBoiledMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+    <set xpath="/recipes/recipe[@name='foodCharredMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+    <set xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']/@count">1</set>
+    <set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+    <set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">1</set>
+	<set xpath="/recipes/recipe[@name='ironBars']/ingredient[@name='unit_iron']/@count">50</set>
+    <set xpath="/recipes/recipe[@name='ironBarsCentered']/ingredient[@name='unit_iron']/@count">50</set>
+	<set xpath="/recipes/recipe[@name='trapSpikesIronDmg0']/ingredient[@name='resourceForgedIron']/@name">resourceScrapIron</set>
+	<set xpath="/recipes/recipe[@name='trapSpikesIronDmg0']/ingredient[@name='resourceScrapIron']/@count">40</set>
 
 	<!--NEW HOT COALS RECIPE-->
-	<recipe name="resourceHotCoalsLL" count="10" material_based="true" craft_area="campfire" craft_time="30">
+	<recipe name="resourceHotCoalsLL" count="10" material_based="true" craft_area="campfire" craft_time="2">
 		<ingredient name="resourceWood" count="5"/>
 	</recipe>
 	<!--NEW MOONROCK INGREDIENTS AND RECIPES-->
@@ -127,22 +103,22 @@
 		<ingredient name="resourceHotCoalsLL" count="5"/>
 	</recipe>
 	<recipe name="moonrockshovelLL" count="1" craft_time="180" tags="perkMiner69r">
-		<ingredient name="resourceMoonRocksLL" count="50"/>
+		<ingredient name="resourceMoonRocksLL" count="15"/>
 		<ingredient name="resourceYuccaFibers" count="15"/>
 		<ingredient name="resourceWood" count="25"/>
 	</recipe>
 	<recipe name="moonrockaxeLL" count="1" craft_time="180" tags="perkMiner69r">
-		<ingredient name="resourceMoonRocksLL" count="50"/>
+		<ingredient name="resourceMoonRocksLL" count="15"/>
 		<ingredient name="resourceYuccaFibers" count="15"/>
 		<ingredient name="resourceWood" count="25"/>
 	</recipe>
 	<recipe name="moonrockspearLL" count="1" craft_time="180" tags="perkJavelinMaster">
-		<ingredient name="resourceMoonRocksLL" count="50"/>
+		<ingredient name="resourceMoonRocksLL" count="15"/>
 		<ingredient name="resourceYuccaFibers" count="15"/>
 		<ingredient name="resourceWood" count="25"/>
 	</recipe>
 	<recipe name="moonrocksledgeLL" count="1" craft_time="180" tags="perkSkullCrusher">
-		<ingredient name="resourceMoonRocksLL" count="75"/>
+		<ingredient name="resourceMoonRocksLL" count="15"/>
 		<ingredient name="resourceYuccaFibers" count="25"/>
 		<ingredient name="resourceWood" count="30"/>
 	</recipe>
@@ -151,7 +127,6 @@
 		<ingredient name="unit_brass" count="10"/>
 		<ingredient name="unit_clay" count="5"/>
 	</recipe>
-	
 	<recipe name="brassshovelLL" count="1" craft_area="workbench" craft_time="360"  tags="learnable,perkMiner69r">
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceWood" count="5"/>
@@ -224,7 +199,7 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedBrassLL,resourceWood,resourceLeather,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	<recipe name="resourcebrassRepairKitLL" count="2" craft_area="workbench" craft_time="2">
+	<recipe name="resourcebrassRepairKitLL" count="5" craft_area="workbench" craft_time="2">
 		<ingredient name="resourceForgedBrassLL" count="1"/>
 		<ingredient name="resourceLeather" count="1"/>
 	</recipe>
@@ -235,7 +210,7 @@
 		<ingredient name="unit_clay" count="35"/>
 	</recipe>
 	<!--NEW VIBRANIUM REPAIR KIT RECIPE -->
-	<recipe name="resourcevibeRepairKitLL" count="2" craft_area="workbench" craft_time="2">
+	<recipe name="resourcevibeRepairKitLL" count="5" craft_area="workbench" craft_time="2">
 		<ingredient name="resourceforgedvibeLL" count="1"/>
 		<ingredient name="resourceForgedSteel" count="1"/>
 	</recipe>
@@ -246,11 +221,9 @@
 		<ingredient name="resourceWood" count="100"/>
 		<ingredient name="resourceLeather" count="50"/>
 		<ingredient name="resourceDuctTape" count="4"/>
-		
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceforgedvibeLL,resourceForgedSteel,resourceWood,resourceLeather,resourceDuctTape"/>
 	</effect_group>
-
 	</recipe>
 	<recipe name="vibeaugerLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkMiner69r">
 		<ingredient name="resourceforgedvibeLL" count="15"/>
@@ -261,7 +234,6 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceforgedvibeLL,resourceForgedSteel"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="vibesledgeLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkSkullCrusher">
 		<ingredient name="resourceforgedvibeLL" count="14"/>
 		<ingredient name="resourceForgedSteel" count="8"/>
@@ -272,7 +244,6 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceforgedvibeLL,resourceForgedSteel,resourceWood,resourceLeather,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="vibemacheteLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkDeepCuts">
 		<ingredient name="resourceforgedvibeLL" count="12"/>
 		<ingredient name="resourceForgedSteel" count="7"/>
@@ -303,14 +274,13 @@
 	</recipe>
 
 	<!--NEW WEAPONS AND REPAIR KIT-->
-	<recipe name="resourceIMPRepairKitLL" count="2" craft_area="workbench" craft_time="2">
+	<recipe name="resourceIMPRepairKitLL" count="5" craft_area="workbench" craft_time="2">
 		<ingredient name="resourceforgedvibeLL" count="1"/>
 		<ingredient name="resourceForgedSteel" count="1"/>
 	</recipe>
-	
 	<recipe name="gundubzyLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkBoomstick">
-		<ingredient name="gunShotgunT1DoubleBarrelParts" count="4"/>
-		<ingredient name="resourceForgedBrassLL" count="25"/>
+		<ingredient name="gunShotgunT1DoubleBarrelParts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceDuctTape" count="2"/>
 		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceSpring" count="2"/>
@@ -318,10 +288,9 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunShotgunT1DoubleBarrelParts,resourceForgedBrassLL,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunpumpshotLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkBoomstick">
-		<ingredient name="gunShotgunT1DoubleBarrelParts" count="5"/>
-		<ingredient name="resourceForgedBrassLL" count="40"/>
+		<ingredient name="gunShotgunT1DoubleBarrelParts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="15"/>
 		<ingredient name="resourceDuctTape" count="3"/>
 		<ingredient name="resourceScrapPolymers" count="20"/>
@@ -330,10 +299,9 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunShotgunT1DoubleBarrelParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunautoshotLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkBoomstick">
-		<ingredient name="gunShotgunT1DoubleBarrelParts" count="6"/>
-		<ingredient name="resourceForgedBrassLL" count="40"/>
+		<ingredient name="gunShotgunT1DoubleBarrelParts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="30"/>
 		<ingredient name="resourceDuctTape" count="3"/>
 		<ingredient name="resourceScrapPolymers" count="40"/>
@@ -342,10 +310,9 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunShotgunT1DoubleBarrelParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunhuntrifleLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkDeadEye">
-		<ingredient name="gunRifleT1HuntingRifleParts" count="4"/>
-		<ingredient name="resourceForgedBrassLL" count="40"/>
+		<ingredient name="gunRifleT1HuntingRifleParts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedIron" count="10"/>
 		<ingredient name="resourceDuctTape" count="2"/>
 		<ingredient name="resourceScrapPolymers" count="10"/>
@@ -354,10 +321,9 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunRifleT1HuntingRifleParts,resourceForgedBrassLL,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunleverrifleLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkDeadEye">
-		<ingredient name="gunRifleT1HuntingRifleParts" count="5"/>
-		<ingredient name="resourceForgedBrassLL" count="40"/>
+		<ingredient name="gunRifleT1HuntingRifleParts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="15"/>
 		<ingredient name="resourceDuctTape" count="10"/>
 		<ingredient name="resourceScrapPolymers" count="20"/>
@@ -366,22 +332,20 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunRifleT1HuntingRifleParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunsniperLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkDeadEye">
-		<ingredient name="gunRifleT1HuntingRifleParts" count="6"/>
-		<ingredient name="resourceForgedBrassLL" count="40"/>
+		<ingredient name="gunRifleT1HuntingRifleParts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="30"/>
 		<ingredient name="resourceDuctTape" count="10"/>
-		<ingredient name="resourceScrapPolymers" count="40"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceSpring" count="12"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunRifleT1HuntingRifleParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunak47LL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkMachineGunner">
-		<ingredient name="gunMGT1AK47Parts" count="4"/>
-		<ingredient name="resourceForgedBrassLL" count="40"/>
+		<ingredient name="gunMGT1AK47Parts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedIron" count="10"/>
 		<ingredient name="resourceDuctTape" count="2"/>
 		<ingredient name="resourceScrapPolymers" count="10"/>
@@ -390,10 +354,9 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunMGT1AK47Parts,resourceForgedBrassLL,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="guntacARLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkMachineGunner">
-		<ingredient name="gunMGT1AK47Parts" count="5"/>
-		<ingredient name="resourceForgedBrassLL" count="40"/>
+		<ingredient name="gunMGT1AK47Parts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="10"/>
 		<ingredient name="resourceDuctTape" count="3"/>
 		<ingredient name="resourceScrapPolymers" count="5"/>
@@ -402,10 +365,9 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunMGT1AK47Parts,resourceForgedBrassLL,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunM60LL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkMachineGunner">
-		<ingredient name="gunMGT1AK47Parts" count="10"/>
-		<ingredient name="resourceForgedBrassLL" count="50"/>
+		<ingredient name="gunMGT1AK47Parts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="20"/>
 		<ingredient name="resourceDuctTape" count="3"/>
 		<ingredient name="resourceScrapPolymers" count="10"/>
@@ -414,11 +376,10 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunMGT1AK47Parts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunwoodbowLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkArchery">
 		<ingredient name="gunBowT1WoodenBowParts" count="4"/>
-		<ingredient name="resourceForgedBrassLL" count="20"/>
-		<ingredient name="resourceWood" count="20"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
+		<ingredient name="resourceWood" count="10"/>
 		<ingredient name="resourceLeather" count="3"/>
 		<ingredient name="resourceGlue" count="2"/>
 		<ingredient name="resourceDuctTape" count="3"/>
@@ -426,11 +387,10 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunBowT1WoodenBowParts,resourceForgedBrassLL,resourceWood,resourceLeather,resourceGlue,resourceDuctTape"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="guncompoundbowLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkArchery">
-		<ingredient name="gunBowT1WoodenBowParts" count="5"/>
-		<ingredient name="resourceForgedBrassLL" count="20"/>
-		<ingredient name="resourceScrapPolymers" count="25"/>
+		<ingredient name="gunBowT1WoodenBowParts" count="3"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceLeather" count="5"/>
 		<ingredient name="resourceDuctTape" count="5"/>
 		<ingredient name="resourceSpring" count="10"/>
@@ -438,23 +398,21 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunBowT1WoodenBowParts,resourceForgedBrassLL,resourceScrapPolymers,resourceLeather,resourceDuctTape,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunCompoundCrossbowLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkArchery">
-		<ingredient name="gunBowT1WoodenBowParts" count="5"/>
-		<ingredient name="resourceForgedBrassLL" count="30"/>
+		<ingredient name="gunBowT1WoodenBowParts" count="3"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="15"/>
 		<ingredient name="resourceDuctTape" count="3"/>
 		<ingredient name="resourceLeather" count="3"/>
-		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunBowT1WoodenBowParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunjunkturrLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkTurrets">
-		<ingredient name="gunBotRoboticsParts" count="4"/>
-		<ingredient name="resourceForgedBrassLL" count="45"/>
-		<ingredient name="resourceForgedSteel" count="40"/>
+		<ingredient name="gunBotRoboticsParts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
+		<ingredient name="resourceForgedSteel" count="10"/>
 		<ingredient name="resourceDuctTape" count="10"/>
 		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceSpring" count="10"/>
@@ -462,10 +420,9 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunBotRoboticsParts,resourceForgedBrassLL,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunpistolLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkGunslinger">
-		<ingredient name="gunHandgunT1PistolParts" count="4"/>
-		<ingredient name="resourceForgedBrassLL" count="26"/>
+		<ingredient name="gunHandgunT1PistolParts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedIron" count="10"/>
 		<ingredient name="resourceDuctTape" count="2"/>
 		<ingredient name="resourceScrapPolymers" count="5"/>
@@ -474,10 +431,9 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunHandgunT1PistolParts,resourceForgedBrassLL,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<recipe name="gunSMGLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkGunslinger">
-		<ingredient name="gunHandgunT1PistolParts" count="5"/>
-		<ingredient name="resourceForgedBrassLL" count="38"/>
+		<ingredient name="gunHandgunT1PistolParts" count="2"/>
+		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="10"/>
 		<ingredient name="resourceDuctTape" count="3"/>
 		<ingredient name="resourceScrapPolymers" count="10"/>
@@ -486,7 +442,6 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunHandgunT1PistolParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
 	<!--GOLDEN GUN AND BULLETS-->
 	<recipe name="gungoldenvultureLL" count="1" craft_time="1200" craft_area="workbench" tags="learnable,perkGunslinger">
 		<ingredient name="gunHandgunT1PistolParts" count="6"/>
@@ -500,13 +455,11 @@
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunHandgunT1PistolParts,resourceforgedvibeLL,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
 	</recipe>
-	
-	<recipe name="ammo44slugLL" count="5" craft_time="25" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="ammo44slugLL" count="20" craft_time="15" craft_area="workbench" tags="workbenchCrafting">
 		<ingredient name="resourceforgedvibeLL" count="1"/>
 		<ingredient name="resourceForgedBrassLL" count="1"/>
 		<ingredient name="resourceBulletTip" count="1"/>
 	</recipe>
-	
 	<!--IMPROVED GENERATOR BANK-->
 	<recipe name="generatorbankLL" count="1" craft_area="workbench" craft_time="480" tags="perkAdvancedEngineering">
 		<ingredient name="resourceForgedBrassLL" count="25"/>
@@ -516,18 +469,19 @@
 		<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceForgedBrassLL,resourceMechanicalParts,resourceElectricParts"/>
 	</effect_group>
 	</recipe>
-	
 	<!--BULLET FOR IMPROVED WEAPONS-->
-	<recipe name="impbulletLL" count="3" craft_area="workbench" craft_time="9" tags="workbenchCrafting">
+	<recipe name="impbulletLL" count="10" craft_area="workbench" craft_time="2" tags="workbenchCrafting">
 		<ingredient name="resourceGunPowder" count="1"/>
 		<ingredient name="resourceForgedBrassLL" count="1"/>
 	</recipe>
-	
-	<recipe name="junkammoLL" count="1" craft_area="workbench" craft_time="1">
+	<recipe name="junkammoLL" count="5" craft_area="workbench" craft_time="1">
 		<ingredient name="resourceScrapIron" count="8"/>
 	</recipe>
-	
-	
+	<recipe name="impshotshellLL" count="10" craft_area="workbench" craft_time="2" tags="workbenchCrafting">
+		<ingredient name="resourceForgedBrassLL" count="1"/>
+		<ingredient name="resourceGunPowder" count="1"/>
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
 	</append>
 
 	<!--working work stations-->
@@ -633,8 +587,74 @@
 				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".5,.5,.5,.3,.15" tags="resourceForgedIron,resourceElectricParts"/>
 			</effect_group>	
 		</recipe>
+		
+		
+		<recipe name="cntHardenedChestSecureT5" count="1" craft_time="60" craft_area="workbench">
+			<ingredient name="resourceForgedSteel" count="20"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".5,.5,.5,.3,.15" tags="resourceForgedSteel,resourceElectricParts"/>
+			</effect_group>	
+		</recipe>
 
+		<recipe name="cntHardenedChestSecure" count="1" craft_time="60" craft_area="workbench">
+			<ingredient name="resourceForgedSteel" count="17"/>
+			<ingredient name="resourceElectricParts" count="8"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".5,.5,.5,.3,.15" tags="resourceForgedSteel,resourceElectricParts"/>
+			</effect_group>	
+		</recipe>
+		
+		<recipe name="cntLootChestHero" count="1" craft_time="60" craft_area="workbench">
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="8"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".5,.5,.5,.3,.15" tags="resourceForgedIron,resourceMechanicalParts"/>
+			</effect_group>	
+		</recipe>
+		
+		<recipe name="cntLootChestHeroInsecureT2" count="1" craft_time="60">
+			<ingredient name="resourceLeather" count="20"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".5,.5,.5,.3,.15" tags="resourceLeather,resourceDuctTape"/>
+			</effect_group>	
+		</recipe>
+		
+		<recipe name="cntLootChestHeroInsecureT1" count="1" craft_time="60">
+			<ingredient name="resourceWood" count="50"/>
+			<ingredient name="resourceGlue" count="5"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".5,.5,.5,.3,.15" tags="resourceWood,resourceGlue"/>
+			</effect_group>	
+		</recipe>
+		</append>
+
+		<append xpath="/recipes">
+		<recipe name="solarbank" count="1" craft_area="workbench" tags="perkAdvancedEngineering">
+			<ingredient name="resourceWood" count="100"/>
+			<ingredient name="resourceNail" count="10"/>
+			<ingredient name="resourceMetalPipe" count="20"/>
+			<ingredient name="resourceBrokenGlass" count="10"/>
+		</recipe>
+		<recipe name="solarCell" count="1" craft_area="workbench" tags="perkAdvancedEngineering" craft_time="300"> <!-- Power -->
+			<ingredient name="resourceBrokenGlass" count="20"/>
+			<ingredient name="resourceScrapIron" count="30"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceSilverNugget" count="5"/>
+			<ingredient name="resourceGoldNugget" count="5"/>
+				<effect_group>
+					<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".2,.4,.6,.8,1.0" tags="resourceBrokenGlass,resourceScrapIron,resourceElectricParts,resourceSilverNugget,resourceGoldNugget"/>
+				</effect_group>
+		</recipe>
+		</append>
+		<!--NEW BERRIES FROM BUSHES-->
+		<append xpath="/recipes">
+		<recipe name="handfulOfNutsLL" count="2" craft_time="2">
+			<ingredient name="survivalNutsLL" count="5"/>
+		</recipe>
+		<recipe name="handfulOfBerriesLL" count="2" craft_time="2">
+			<ingredient name="survivalBerriesLL" count="5"/>
+		</recipe>
 	</append>
-
-
 </configs>

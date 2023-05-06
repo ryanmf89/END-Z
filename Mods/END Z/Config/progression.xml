@@ -23,4 +23,30 @@
     <append xpath="progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @level='2,5']/@tags">,faucet02Working,faucetBrass02Working,faucet04Working,faucetBrass04Working,decoClawFootBathTubWorking,cntBathTubEmptyWorking</append>
 
 
+
+	<!--new perk under strength tree-->
+	<append xpath="//perks">
+		<perk name="perkimagod" parent="skillStrengthGeneral" name_key="perkimagod" desc_key="perkimagod" icon="ui_game_symbol_bull">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="2" desc_key="reqStrengthLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
+
+	<effect_group>
+		<passive_effect name="Gamestage" operation="base_add" level="1" value="50"/>
+		<passive_effect name="Gamestage" operation="base_add" level="2" value="50"/>
+		<passive_effect name="Gamestage" operation="base_add" level="3" value="50"/>
+		<passive_effect name="Gamestage" operation="base_add" level="4" value="50"/>
+		<passive_effect name="Gamestage" operation="base_add" level="5" value="240"/>
+
+		<effect_description level="1" desc_key="perkimagod1Desc" long_desc_key="perkimagod1LongDesc"/>
+		<effect_description level="2" desc_key="perkimagod2Desc" long_desc_key="perkimagod2LongDesc"/>
+		<effect_description level="3" desc_key="perkimagod3Desc" long_desc_key="perkimagod3LongDesc"/>
+		<effect_description level="4" desc_key="perkimagod4Desc" long_desc_key="perkimagod4LongDesc"/>
+		<effect_description level="5" desc_key="perkimagod5Desc" long_desc_key="perkimagod5LongDesc"/>
+		</effect_group>
+	</perk>
+	</append>
+
 </configs>

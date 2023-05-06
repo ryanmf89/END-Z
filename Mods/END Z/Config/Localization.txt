@@ -101,6 +101,8 @@ impbulletLL,Items,ammo,,,"Improved Bullet"
 impbulletLLDesc,Items,ammo,,,"used in the improved guns aside from shotguns"
 junkammoLL,Items,ammo,,,"Improved Junkie Ammo"
 junkammoLLDesc,Items,ammo,,,"used in the improved junk turret"
+impshotshellLL,Items,ammo,,,"Improved Shotgun Shells"
+impshotshellLLDesc,Items,ammo,,,"used in the improved shotguns"
 
 brassshovelLLSchematic,Items,schematic,,,"Brass Shovel Schematic"
 brassshovelLLSchematicDesc,Items,schematic,,,"use this to unlock the brass shovel"
@@ -199,3 +201,33 @@ faucet04WorkingSchematic,items,Schematic,,,Working Faucet Schematic
 cntWallOvenWorkingSchematic,items,Schematic,,,Working Ovens and Grills Schematic
 decoClawFootBathTubWorking,blocks,Block,,,Working Clawfoot Bathtub
 cntBathTubEmptyWorking,blocks,Block,,,Working Bathtub
+
+
+buffScentofPreyDesc,buffs,Buff,,,"You are carrying [db7c1d]Something Smelly[ffffff], predators will come far and wide to find you because of it. Better stash it somewhere safe, like a vehicle to protect yourself."
+buffScentofPreyName,buffs,Buff,,,"[db7c1d]Scent of Prey"
+
+tutorialTipSmelly01,Journal Tip,,,,"You are carrying [db7c1d]Something Smelly[ffffff], predators will come far and wide to find you because of it. Better stash it somewhere safe, like a vehicle to protect yourself."
+tutorialTipSmelly01_title,Journal Tip,,,,"[db7c1d]Scent of Prey"
+
+survivalNutsLL,items,Food,,,"Mixed Nuts"
+survivalNutsLLDesc,items,Food,,,"Nuts provide much needed nutrition. Keep a bunch of these on you for emergencies. Eating a handful may provide an extra boost."
+survivalBerriesLL,items,Food,,,"Assorted Berries"
+survivalBerriesLLDesc,items,Food,,,"Safe to eat and can provide a boost to your energy. Eating a handful may provide an extra boost."
+handfulOfNutsLL,items,Food,,,"Handful of MixedNuts"
+handfulOfNutsLLDesc,items,Food,,,"This handful of nuts will provide the boost you are looking for out there."
+handfulOfBerriesLL,items,Food,,,"Handful of Assorted Berries"
+handfulOfBerriesLLDesc,items,Food,,,"This handful of berries will provide the boost you are looking for out there."
+
+
+perkimagod,,,,,"Im A Fearless Warrior"
+perkimagodDesc,,,,,"Someone with your strength seeks a real challenge. Only real men buy this perk!"
+perkimagod1Desc,,,,,"Wussy"
+perkimagod1LongDesc,,,,,"You still need to grow in strength in order to attract the real challenges. Raise gamestage by 50."
+perkimagod2Desc,,,,,"Wannabee"
+perkimagod2LongDesc,,,,,"Do you have what it takes or are you just a Wannabee? Raise gamestage by 50."
+perkimagod3Desc,,,,,"Contender"
+perkimagod3LongDesc,,,,,"Now we are talking, you are contending with the real fighters. Raise gamestage by 50."
+perkimagod4Desc,,,,,"Challenger"
+perkimagod4LongDesc,,,,,"You are a real challenger, only drawing in the hardiest of enemies. Raise gamestage by 50."
+perkimagod5Desc,,,,,"Show-Off"
+perkimagod5LongDesc,,,,,"Now you are just showing off. Raise gamestage by 240."
