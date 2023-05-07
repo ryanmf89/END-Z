@@ -1,11 +1,3 @@
-<!--
-Sam's Working Stuff
-v20.0.0
-by saminal
-
-ui_display.xml
--->
-
 <configs>
     <append xpath="/ui_display_info/crafting_category_display">
         <crafting_category_list display_type="cntWallOvenWorking">
@@ -26,4 +18,15 @@ ui_display.xml
 			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
 		</crafting_category_list>
     </append>
+	
+	<!--honey bandage ui display-->
+	<append xpath="//item_display">
+	<item_display_info display_type="medicalallLL" display_group="groupConsumables">
+		<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+		<display_entry name="dhealAbrasionMult" title_key="statHealAbrasionMult" display_type="Percent"/>
+		<display_entry name="dStopsBleeding" title_key="statStopsBleeding" display_type="Percent"/>
+		<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>
+	</item_display_info>
+	</append>
+	
 </configs>

@@ -98,7 +98,7 @@
 		<ingredient name="resourceWood" count="5"/>
 	</recipe>
 	<!--NEW MOONROCK INGREDIENTS AND RECIPES-->
-	<recipe name="resourceMoonRocksLL" count="10" craft_time="15">
+	<recipe name="resourceMoonRocksLL" count="10" craft_time="5">
 		<ingredient name="resourceCobblestones" count="5"/>
 		<ingredient name="resourceHotCoalsLL" count="5"/>
 	</recipe>
@@ -205,7 +205,7 @@
 	</recipe>
 	
 	<!--NEW VIBRANIUM INGREDIENTS RECIPES -->
-	<recipe name="resourceforgedvibeLL" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" craft_time="30">
+	<recipe name="resourceforgedvibeLL" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" craft_time="20">
 		<ingredient name="unit_iron" count="70"/>
 		<ingredient name="unit_clay" count="35"/>
 	</recipe>
@@ -278,11 +278,10 @@
 		<ingredient name="resourceforgedvibeLL" count="1"/>
 		<ingredient name="resourceForgedSteel" count="1"/>
 	</recipe>
-	<recipe name="gundubzyLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkBoomstick">
+	<recipe name="gundubzyLL" count="1" craft_time="480" tags="learnable,perkBoomstick">
 		<ingredient name="gunShotgunT1DoubleBarrelParts" count="2"/>
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceSpring" count="2"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunShotgunT1DoubleBarrelParts,resourceForgedBrassLL,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -293,7 +292,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="15"/>
 		<ingredient name="resourceDuctTape" count="3"/>
-		<ingredient name="resourceScrapPolymers" count="20"/>
 		<ingredient name="resourceSpring" count="3"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunShotgunT1DoubleBarrelParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -304,7 +302,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="30"/>
 		<ingredient name="resourceDuctTape" count="3"/>
-		<ingredient name="resourceScrapPolymers" count="40"/>
 		<ingredient name="resourceSpring" count="4"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunShotgunT1DoubleBarrelParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -315,7 +312,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedIron" count="10"/>
 		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceSpring" count="2"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunRifleT1HuntingRifleParts,resourceForgedBrassLL,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -326,7 +322,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="15"/>
 		<ingredient name="resourceDuctTape" count="10"/>
-		<ingredient name="resourceScrapPolymers" count="20"/>
 		<ingredient name="resourceSpring" count="10"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunRifleT1HuntingRifleParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -337,7 +332,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="30"/>
 		<ingredient name="resourceDuctTape" count="10"/>
-		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceSpring" count="12"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunRifleT1HuntingRifleParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -348,7 +342,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedIron" count="10"/>
 		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceSpring" count="2"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunMGT1AK47Parts,resourceForgedBrassLL,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -359,7 +352,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="10"/>
 		<ingredient name="resourceDuctTape" count="3"/>
-		<ingredient name="resourceScrapPolymers" count="5"/>
 		<ingredient name="resourceSpring" count="3"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunMGT1AK47Parts,resourceForgedBrassLL,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -370,7 +362,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="20"/>
 		<ingredient name="resourceDuctTape" count="3"/>
-		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceSpring" count="4"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunMGT1AK47Parts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -381,7 +372,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceWood" count="10"/>
 		<ingredient name="resourceLeather" count="3"/>
-		<ingredient name="resourceGlue" count="2"/>
 		<ingredient name="resourceDuctTape" count="3"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunBowT1WoodenBowParts,resourceForgedBrassLL,resourceWood,resourceLeather,resourceGlue,resourceDuctTape"/>
@@ -390,7 +380,6 @@
 	<recipe name="guncompoundbowLL" count="1" craft_area="workbench" craft_time="480" tags="learnable,perkArchery">
 		<ingredient name="gunBowT1WoodenBowParts" count="3"/>
 		<ingredient name="resourceForgedBrassLL" count="10"/>
-		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceLeather" count="5"/>
 		<ingredient name="resourceDuctTape" count="5"/>
 		<ingredient name="resourceSpring" count="10"/>
@@ -404,7 +393,6 @@
 		<ingredient name="resourceForgedSteel" count="15"/>
 		<ingredient name="resourceDuctTape" count="3"/>
 		<ingredient name="resourceLeather" count="3"/>
-		<ingredient name="resourceScrapPolymers" count="10"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunBowT1WoodenBowParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 	</effect_group>
@@ -414,7 +402,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="10"/>
 		<ingredient name="resourceDuctTape" count="10"/>
-		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceSpring" count="10"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunBotRoboticsParts,resourceForgedBrassLL,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -425,7 +412,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedIron" count="10"/>
 		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceScrapPolymers" count="5"/>
 		<ingredient name="resourceSpring" count="2"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunHandgunT1PistolParts,resourceForgedBrassLL,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -436,7 +422,6 @@
 		<ingredient name="resourceForgedBrassLL" count="10"/>
 		<ingredient name="resourceForgedSteel" count="10"/>
 		<ingredient name="resourceDuctTape" count="3"/>
-		<ingredient name="resourceScrapPolymers" count="10"/>
 		<ingredient name="resourceSpring" count="3"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunHandgunT1PistolParts,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -447,9 +432,7 @@
 		<ingredient name="gunHandgunT1PistolParts" count="6"/>
 		<ingredient name="resourceforgedvibeLL" count="50"/>
 		<ingredient name="resourceForgedBrassLL" count="60"/>
-		<ingredient name="resourceForgedSteel" count="45"/>
 		<ingredient name="resourceDuctTape" count="3"/>
-		<ingredient name="resourceScrapPolymers" count="20"/>
 		<ingredient name="resourceSpring" count="6"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunHandgunT1PistolParts,resourceforgedvibeLL,resourceForgedBrassLL,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
@@ -657,4 +640,13 @@
 			<ingredient name="survivalBerriesLL" count="5"/>
 		</recipe>
 	</append>
+	<append xpath="/recipes">
+	<recipe name="medicalhoneyBandageLL" count="2" tags="medical">
+		<ingredient name="medicalAloeCream" count="1"/>
+		<ingredient name="foodHoney" count="1"/>
+		<ingredient name="medicalBandage" count="1"/>
+	</recipe>
+	</append>
+	
+	
 </configs>

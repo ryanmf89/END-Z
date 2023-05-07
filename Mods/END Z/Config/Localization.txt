@@ -231,3 +231,7 @@ perkimagod4Desc,,,,,"Challenger"
 perkimagod4LongDesc,,,,,"You are a real challenger, only drawing in the hardiest of enemies. Raise gamestage by 50."
 perkimagod5Desc,,,,,"Show-Off"
 perkimagod5LongDesc,,,,,"Now you are just showing off. Raise gamestage by 240."
+
+
+medicalhoneyBandageLL,items,Medical,,,"Honey Bandage"
+medicalhoneyBandageLLDesc,items,Medical,,,"this bandage will cure bleeding, abrasions, and infections."

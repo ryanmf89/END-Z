@@ -1402,7 +1402,7 @@
 	</effect_group>
 	</item>
 	
-	<item name="t3vibespearLL" craft_area="workbench">
+	<item name="t3vibespearLL">
 		<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear" />
 		<property name="CustomIconTint" value="b804af" />
 		<property name="Extends" value="meleeWpnSpearT1IronSpear"/>
@@ -4201,4 +4201,100 @@
 </item>
 
 	</append>
+	
+	<append xpath="/items">
+		<item name="medicalhoneyBandageLL">
+		<property name="Tags" value="medical"/>
+		<property name="CustomIcon" value="medicalFirstAidBandage"/>
+		<property name="CustomIconTint" value="f7bf05" />
+		<property name="DisplayType" value="medicalallLL"/>
+		<property name="Extends" value="medicalBandage"/>
+		<property name="Group" value="Science,Medical"/>
+		<property name="EconomicValue" value="25"/>
+		<property name="DescriptionKey" value="medicalhoneyBandageLLDesc"/>
+		<property name="Stacknumber" value="500"/>
+		<property name="UnlockedBy" value="perkPhysician"/>
+
+	<effect_group tiered="false">
+		<!-- used on self -->
+		<display_value name="dCureInfection" value=".25"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="25"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="healAbrasionMult" operation="set" value="3"/> <!-- X -->
+		<display_value name="dhealAbrasionMult" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryAbrasionTreated">
+			<requirement name="HasBuff" buff="buffInjuryAbrasion"/></triggered_effect>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="add" value="50"/> <!-- X -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="@medicRegHealthIncreaseSpeed"/>
+		<display_value name="foodHealthAmount" value="30"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/><display_value name="dStopsBleeding" value="1"/>
+
+		<!-- used on other -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healAbrasionMult" operation="set" value="3"/> <!-- X -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medicalRegHealthAmount" operation="add" value="30"/> <!-- X -->
+
+		<!-- used on other, regular health per tick based on perkPhysician -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2.5">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2.8">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="3.1">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="3.5">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/></triggered_effect>
+
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffInjuryAbrasionTreated">
+			<requirement name="HasBuff" buff="buffInjuryAbrasion"/></triggered_effect>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<!-- medical XP gains -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="40">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="60">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="80">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/>
+		</triggered_effect>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<!-- medical XP secondary action gains -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="100"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="40">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="60">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="80">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="100">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/>
+		</triggered_effect>
+	</effect_group>
+
+	</item>
+	</append>
+	
+	
+	
+	
+	
+	
+	
+	
 	</configs>

@@ -1,0 +1,10 @@
+<configs>
+
+<!--changes the logo-->
+<set xpath="/windows/window[@name='mainMenuLogo']/texture/@texture">@modfolder(END Z)://Textures/endzlogo2.png</set>
+<!--changes the menu background-->
+<set xpath="/windows/window[@name='menuBackground']/texture/@texture">@modfolder(END Z)://Textures/endzbackground3.png</set>
+
+
+
+</configs>

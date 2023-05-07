@@ -5,8 +5,6 @@
 	<set xpath="//trader_info/@open_time">02:00</set>
 	<set xpath="//trader_info/@close_time">02:00</set>
 	
-	
-	
 	<!--TRADER REFRESH-->
 	<set xpath="/traders/trader_info[@id='1']/@reset_interval">2</set>
     <set xpath="/traders/trader_info[@id='6']/@reset_interval">2</set>
@@ -14,8 +12,8 @@
     <set xpath="/traders/trader_info[@id='7']/@reset_interval">2</set>
     <set xpath="/traders/trader_info[@id='8']/@reset_interval">2</set>
 
-	<!--TRADER CURRENCY-->
-
+	<!--TRADER CURRENCY DOES WORK NEEDS QUEST REWARDS TO BE ADJUSTED BEFORE USING-->
+	<!--set xpath="/traders/@currency_item">oldCash</set-->
 
 
 

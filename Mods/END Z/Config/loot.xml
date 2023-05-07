@@ -80,78 +80,78 @@
 	<!--VIBRANIUM WEAPONS SCHEMATICS IN AIRDROP AND CRACKABOOK CRATE AND BLUE RED ZOMBIE BAGS WITH PROB OF 5%-->
 		<append xpath="//lootgroup[@name='booksAllScaled']">
 			<!--brass items-->
-			<item name="brassshovelLLSchematic" loot_prob_template="med"/>
-			<item name="brassaxeLLSchematic" loot_prob_template="med"/>
-			<item name="brasspickaxeLLSchematic" loot_prob_template="med"/>
-			<item name="brasssledgeLLSchematic" loot_prob_template="med"/>
-			<item name="brassknifeLLSchematic" loot_prob_template="med"/>
-			<item name="brassclubLLSchematic" loot_prob_template="med"/>
-			<item name="brassknucksLLSchematic" loot_prob_template="med"/>
-			<item name="brassspearLLSchematic" loot_prob_template="med"/>
-			<item name="t3vibespearLLSchematic" loot_prob_template="low"/>
-			<item name="vibesledgeLLSchematic" loot_prob_template="low"/>
-			<item name="vibemacheteLLSchematic" loot_prob_template="low"/>
-			<item name="vibeknucksLLSchematic" loot_prob_template="low"/>
-			<item name="vibebatLLSchematic" loot_prob_template="low"/>
-			<item name="vibeaugerLLSchematic" loot_prob_template="low"/>
-			<item name="improvedDUBZYLLSchematic" loot_prob_template="low"/>
-			<item name="gunpumpshotLLSchematic" loot_prob_template="low"/>
-			<item name="gunautoshotLLSchematic" loot_prob_template="low"/>
-			<item name="gunhuntrifleLLSchematic" loot_prob_template="low"/>
-			<item name="gunleverrifleLLSchematic" loot_prob_template="low"/>
-			<item name="gunsniperLLSchematic" loot_prob_template="low"/>
-			<item name="gunak47LLSchematic" loot_prob_template="low"/>
-			<item name="guntacARLLSchematic" loot_prob_template="low"/>
-			<item name="gunM60LLSchematic" loot_prob_template="low"/>
-			<item name="gunwoodbowLLSchematic" loot_prob_template="low"/>
-			<item name="guncompoundbowLLSchematic" loot_prob_template="low"/>
-			<item name="gunCompoundCrossbowLLSchematic" loot_prob_template="low"/>
-			<item name="gunjunkturrLLSchematic" loot_prob_template="low"/>
-			<item name="gunpistolLLSchematic" loot_prob_template="low"/>
-			<item name="gunSMGLLSchematic" loot_prob_template="low"/>
-			<item name="gungoldenvultureLLSchematic" loot_prob_template="low"/>
+			<item name="brassshovelLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brassaxeLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brasspickaxeLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brasssledgeLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brassknifeLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brassclubLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brassknucksLLSchematic" loot_prob_template="veryLow"/>
+			<item name="brassspearLLSchematic" loot_prob_template="veryLow"/>
+			<item name="t3vibespearLLSchematic" loot_prob_template="veryLow"/>
+			<item name="vibesledgeLLSchematic" loot_prob_template="veryLow"/>
+			<item name="vibemacheteLLSchematic" loot_prob_template="veryLow"/>
+			<item name="vibeknucksLLSchematic" loot_prob_template="veryLow"/>
+			<item name="vibebatLLSchematic" loot_prob_template="veryLow"/>
+			<item name="vibeaugerLLSchematic" loot_prob_template="veryLow"/>
+			<item name="improvedDUBZYLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunpumpshotLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunautoshotLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunhuntrifleLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunleverrifleLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunsniperLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunak47LLSchematic" loot_prob_template="veryLow"/>
+			<item name="guntacARLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunM60LLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunwoodbowLLSchematic" loot_prob_template="veryLow"/>
+			<item name="guncompoundbowLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunCompoundCrossbowLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunjunkturrLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunpistolLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gunSMGLLSchematic" loot_prob_template="veryLow"/>
+			<item name="gungoldenvultureLLSchematic" loot_prob_template="veryLow"/>
 		</append>
 			
 		
 
 		<!--BRASS weapons WITH PROB OF 5%-->
 		<append xpath="//lootgroup[@name='groupWorkingStiffs01' or @name='groupWorkingStiffs02' or @name='groupConstructionCrate01' or @name='groupConstructionCrate02']">
-			<item name="brassshovelLL" loot_prob_template="low"/>
-			<item name="brassaxeLL" loot_prob_template="low"/>
-			<item name="brasspickaxeLL" loot_prob_template="low"/>
-			<item name="brasssledgeLL" loot_prob_template="low"/>
-			<item name="brassknifeLL" loot_prob_template="low"/>
-			<item name="brassclubLL" loot_prob_template="low"/>
-			<item name="brassknucksLL" loot_prob_template="low"/>
-			<item name="brassspearLL" loot_prob_template="low"/>
+			<item name="brassshovelLL" loot_prob_template="veryLow"/>
+			<item name="brassaxeLL" loot_prob_template="veryLow"/>
+			<item name="brasspickaxeLL" loot_prob_template="veryLow"/>
+			<item name="brasssledgeLL" loot_prob_template="veryLow"/>
+			<item name="brassknifeLL" loot_prob_template="veryLow"/>
+			<item name="brassclubLL" loot_prob_template="veryLow"/>
+			<item name="brassknucksLL" loot_prob_template="veryLow"/>
+			<item name="brassspearLL" loot_prob_template="veryLow"/>
 		</append>
 		<!--VIBRANIUM WEAPONS PREMADE IN THE WORLD LOOT WITH A PROB OF 5%-->
 		<append xpath="//lootgroup[@name='groupHardenedChestT5_02' or @name='groupHardenedChestT5_06' or @name='groupZpackStrong01' or @name='groupZpackStrong02' or @name='groupZpackStrong03' or @name='groupHardenedChestT4_04' or @name='groupHardenedChestT4_08']">
-			<item name="t3vibespearLL" loot_prob_template="low"/>
-			<item name="vibesledgeLL" loot_prob_template="low"/>
-			<item name="vibemacheteLL" loot_prob_template="low"/>
-			<item name="vibeknucksLL" loot_prob_template="low"/>
-			<item name="vibebatLL" loot_prob_template="low"/>
-			<item name="vibeaugerLL" loot_prob_template="low"/>
+			<item name="t3vibespearLL" loot_prob_template="veryLow"/>
+			<item name="vibesledgeLL" loot_prob_template="veryLow"/>
+			<item name="vibemacheteLL" loot_prob_template="veryLow"/>
+			<item name="vibeknucksLL" loot_prob_template="veryLow"/>
+			<item name="vibebatLL" loot_prob_template="veryLow"/>
+			<item name="vibeaugerLL" loot_prob_template="veryLow"/>
 			<!--IMPROVED WEAPONS-->
-			<item name="gundubzyLL" loot_prob_template="low"/>
-			<item name="gunpumpshotLL" loot_prob_template="low"/>
-			<item name="gunautoshotLL" loot_prob_template="low"/>
-			<item name="gunhuntrifleLL" loot_prob_template="low"/>
-			<item name="gunleverrifleLL" loot_prob_template="low"/>
-			<item name="gunsniperLL" loot_prob_template="low"/>
-			<item name="gunak47LL" loot_prob_template="low"/>
-			<item name="guntacARLL" loot_prob_template="low"/>
-			<item name="gunM60LL" loot_prob_template="low"/>
-			<item name="gunwoodbowLL" loot_prob_template="low"/>
-			<item name="guncompoundbowLL" loot_prob_template="low"/>
-			<item name="gunCompoundCrossbowLL" loot_prob_template="low"/>
-			<item name="gunpistolLL" loot_prob_template="low"/>
-			<item name="gunSMGLL" loot_prob_template="low"/>
+			<item name="gundubzyLL" loot_prob_template="veryLow"/>
+			<item name="gunpumpshotLL" loot_prob_template="veryLow"/>
+			<item name="gunautoshotLL" loot_prob_template="veryLow"/>
+			<item name="gunhuntrifleLL" loot_prob_template="veryLow"/>
+			<item name="gunleverrifleLL" loot_prob_template="veryLow"/>
+			<item name="gunsniperLL" loot_prob_template="veryLow"/>
+			<item name="gunak47LL" loot_prob_template="veryLow"/>
+			<item name="guntacARLL" loot_prob_template="veryLow"/>
+			<item name="gunM60LL" loot_prob_template="veryLow"/>
+			<item name="gunwoodbowLL" loot_prob_template="veryLow"/>
+			<item name="guncompoundbowLL" loot_prob_template="veryLow"/>
+			<item name="gunCompoundCrossbowLL" loot_prob_template="veryLow"/>
+			<item name="gunpistolLL" loot_prob_template="veryLow"/>
+			<item name="gunSMGLL" loot_prob_template="veryLow"/>
 			<!--JUNK TURRET-->
-			<item name="gunjunkturrLL" loot_prob_template="low"/>
+			<item name="gunjunkturrLL" loot_prob_template="veryLow"/>
 			<!--GOLDEN VULTURE-->
-			<item name="gungoldenvultureLL" loot_prob_template="medLow"/>
+			<item name="gungoldenvultureLL" loot_prob_template="veryLow"/>
 		</append>	
 			
 		<!--NEW AMMO-->	
@@ -212,6 +212,10 @@
 	<append xpath="/lootcontainers/lootgroup[@name='groupBirdNest']">
 		<item name="foodEgg" count="4,8" prob="0.8"/>
 		<item name="resourceFeather" count="6,12" prob="1"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupMedicalHighLow']">
+		<item name="medicalFirstAidBandage" loot_prob_template="med"/>
 	</append>
 
 </configs>
