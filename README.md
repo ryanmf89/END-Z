@@ -1,53 +1,33 @@
-	ENDZ
-	
-	"15 SLOT TOOLBELT"
+!!!END Z!!!
+This mod offers and there will be more!!
 
-	"LARGER BACKPACK"
-	
-	"FOOD AND WATER BARS"
-
-	"QUICKER HARVEST AND CRAFTING"
-
-	"BIGGER STACK SIZES"
-	
-	"TRADERS"
-		-ALWASYS OPEN
-		-REFRESH EVERY 2 DAYS
-		-DESTROYABLE
-
-	"ZOMBIE TRACKING AND COLOR COATED BY ZOMBIE TIER"
-	
-	"A NEW HIGHER TIER ZOMBIE"
-	
-	"LARGER WANDERING HORDES BY AN INDIVIDUALS GAMESTAGE"
-	
-	"PERK THAT ALLOWS FOR HIGHER GAMESTAGE"
-
-	"TIER 6 CRAFTING BESIDES SOLAR CELLS"
-	
-	"STARTER CRATE"
-	
-	"CHANCE TO LOOT BICYCLE FROM DUMPSTER"
-
-	"CRAFTABLE CANNED FOOD"
-	
-	"BETTER FARMING"
-		-TIME HAS BEEN HALVED AND SEEDS STAY
-
-	"NEW RESOURCES"
-	
-	"NEW HARVESTABLE FOOD TYPE FROM PLANT FIBER"
-	
-	"A TON OF NEW CRAFTABLE ITEMS THAT YOU COULDNT CRAFT BEFORE"
-	
-	"BLOCK UPGRADES FROM STEEL IN ORDER"
-		-MOONROCK BLOCK HP12000
-		-VIBRANIUM BLOCK HP15000
-
-	"MOON ROCK WEAPONS AND TOOLS"
-
-	"BRASS WEAPONS AND TOOLS"
-
-	"VIBRANIUM WEAPONS AND TOOLS"
-
-	"IMPROVED GUNS/BOWS" "INCLUDES BIGGER MAGS,FASTER RELOAD,HIGHER SNEAK DAMAGE AS WELL AS NEW AMMO FOR MOST WEAPONS"
+-Bdubz Vehicles
+-radiated wasteland(needs rad suit to protect) (will release on alpha 21)
+-larger output workbench windows (will release on alpha 21)
+-new resources(moon rock,vibranium)
+-new tools and weapons from a lower tier to higher tier
+(moonrock,brass,vibranium)
+-new ammo types(improved,slug,shotgun ammos)
+-new block upgrades past steel block(MR12k,Vibe15k) cant be crafted
+-new tiered zombie past radiated(boss zombie)
+-new food from plant fiber harvest(nuts and berries)
+-trader refresh every 2 days
+-no trader protection
+-zombie tracking(by color of zombie tier)
+(normal=cyan)
+(feral=yellow)
+(radiated=green)
+(bosszombie=purple)
+(screamer=pink)
+-15 slot toolbelt
+-96 slot backpack
+-lockable inventory slots
+-food and water bars(under health and stamina)
+-faster harvest and some crafting
+-tier 6 crafting(not solar cells)
+-better farming(seeds stay and growth time halved)
+-starter crate
+-larger stack sizes
+-larger wandering hordes for more difficulty
+-new perk for allowing much higher gamestage
+-canned food can be crafted
