@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+		
+		<Name value="CraftFromContainers" />
+		<DisplayName value="CraftFromContainers" />
+		<Description value="Lets you craft items using resources from nearby containers." />
+		<Author value="aedenthorn" />
+		<Version value="21.0.0" />
+		
+</xml>
