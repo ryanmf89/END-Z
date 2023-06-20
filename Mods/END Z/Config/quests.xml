@@ -1,0 +1,239 @@
+<configs>
+
+<!--changes trader reward items-->
+<set xpath="//reward[@id='casinoCoin']/@id">
+EZcurrencyLL
+</set>
+
+<!--STARTER QUESTS-->
+<append xpath="/quests/quest[@id='quest_BasicSurvival1']">
+	<reward type="Item" id="EZcurrencyLL" value="200"/>
+</append>
+<append xpath="/quests/quest[@id='quest_BasicSurvival2']">
+	<reward type="Item" id="EZcurrencyLL" value="300"/>
+</append>
+<append xpath="/quests/quest[@id='quest_BasicSurvival3']">
+	<reward type="Item" id="EZcurrencyLL" value="400"/>
+</append>
+<append xpath="/quests/quest[@id='quest_BasicSurvival4']">
+	<reward type="Item" id="EZcurrencyLL" value="500"/>
+</append>
+<append xpath="/quests/quest[@id='quest_BasicSurvival5']">
+	<reward type="Item" id="EZcurrencyLL" value="600"/>
+</append>
+<append xpath="/quests/quest[@id='quest_BasicSurvival6']">
+	<reward type="Item" id="EZcurrencyLL" value="700"/>
+</append>
+<append xpath="/quests/quest[@id='quest_BasicSurvival7']">
+	<reward type="Item" id="EZcurrencyLL" value="800"/>
+</append>
+<append xpath="/quests/quest[@id='quest_BasicSurvival8']">
+	<reward type="Item" id="EZcurrencyLL" value="1000"/>
+</append>
+
+<!--TRADER COMPLETION-->
+<append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
+	<reward type="Item" id="EZcurrencyLL" value="1500"/>
+	<reward type="Quest" id="quest_progressionZombieHunting1"/>
+	<reward type="Quest" id="quest_progressionAnimalHunting1"/>
+</append>
+<!--6000 COINS WHEN COMPLETE-->
+	
+<!-- Zombie Killing Progression -->
+<!-- Zombie Hunting 1 -->
+<append xpath="/quests">
+<quest id="quest_progressionZombieHunting1">
+	<property name="name_key" value="quest_progressionZombieHunting1_name"/>
+	<property name="subtitle_key" value="quest_progressionZombieHunting1_subtitle"/>
+	<property name="description_key" value="quest_progressionZombieHunting1_desc"/>
+	<property name="offer_key" value="quest_progressionZombieHunting1_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" value="50"/>
+		
+	<reward type="Exp" value="1000"/>
+	<reward type="Item" id="EZcurrencyLL" value="1000"/>
+	<reward type="Quest" id="quest_progressionZombieHunting2"/>
+</quest>
+	
+<!-- Zombie Hunting 2 -->
+<quest id="quest_progressionZombieHunting2">
+	<property name="name_key" value="quest_progressionZombieHunting2_name"/>
+	<property name="subtitle_key" value="quest_progressionZombieHunting2_subtitle"/>
+	<property name="description_key" value="quest_progressionZombieHunting2_desc"/>
+	<property name="offer_key" value="quest_progressionZombieHunting2_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" value="100"/>
+		
+	<reward type="Exp" value="1000"/>
+	<reward type="Item" id="EZcurrencyLL" value="1000"/>
+	<reward type="Quest" id="quest_progressionZombieHunting3"/>
+</quest>
+	
+<!-- Zombie Hunting 3 -->
+<quest id="quest_progressionZombieHunting3">
+	<property name="name_key" value="quest_progressionZombieHunting3_name"/>
+	<property name="subtitle_key" value="quest_progressionZombieHunting3_subtitle"/>
+	<property name="description_key" value="quest_progressionZombieHunting3_desc"/>
+	<property name="offer_key" value="quest_progressionZombieHunting3_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" value="200"/>
+		
+	<reward type="Exp" value="1000"/>
+	<reward type="Item" id="EZcurrencyLL" value="1000"/>
+	<reward type="Quest" id="quest_progressionZombieHunting4"/>
+</quest>
+	
+<!-- Zombie Hunting 4 -->
+<quest id="quest_progressionZombieHunting4">
+	<property name="name_key" value="quest_progressionZombieHunting4_name"/>
+	<property name="subtitle_key" value="quest_progressionZombieHunting4_subtitle"/>
+	<property name="description_key" value="quest_progressionZombieHunting4_desc"/>
+	<property name="offer_key" value="quest_progressionZombieHunting4_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" value="300"/>
+		
+	<reward type="Exp" value="1000"/>
+	<reward type="Item" id="EZcurrencyLL" value="1000"/>
+	<reward type="Quest" id="quest_progressionZombieHunting5"/>
+</quest>
+	
+<!-- Zombie Hunting 5 -->
+<quest id="quest_progressionZombieHunting5">
+	<property name="name_key" value="quest_progressionZombieHunting5_name"/>
+	<property name="subtitle_key" value="quest_progressionZombieHunting5_subtitle"/>
+	<property name="description_key" value="quest_progressionZombieHunting5_desc"/>
+	<property name="offer_key" value="quest_progressionZombieHunting5_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" value="400"/>
+		
+	<reward type="Exp" value="1000"/>
+	<reward type="Item" id="EZcurrencyLL" value="1000"/>
+	<reward type="Quest" id="quest_progressionZombieHunting6"/>
+</quest>
+	
+<!-- Zombie Hunting 6 -->
+<quest id="quest_progressionZombieHunting6">
+	<property name="name_key" value="quest_progressionZombieHunting6_name"/>
+	<property name="subtitle_key" value="quest_progressionZombieHunting6_subtitle"/>
+	<property name="description_key" value="quest_progressionZombieHunting6_desc"/>
+	<property name="offer_key" value="quest_progressionZombieHunting6_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" value="500"/>
+		
+	<reward type="Exp" value="1000"/>
+	<reward type="Item" id="EZcurrencyLL" value="1000"/>
+	<reward type="Quest" id="quest_progressionZombieHunting7"/>
+</quest>
+	
+<!-- Zombie Hunting 7 -->
+<quest id="quest_progressionZombieHunting7">
+	<property name="name_key" value="quest_progressionZombieHunting7_name"/>
+	<property name="subtitle_key" value="quest_progressionZombieHunting7_subtitle"/>
+	<property name="description_key" value="quest_progressionZombieHunting7_desc"/>
+	<property name="offer_key" value="quest_progressionZombieHunting7_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" value="1000"/>
+		
+	<reward type="Exp" value="1000"/>
+	<reward type="Item" id="EZcurrencyLL" value="5000"/>
+	<reward type="Quest" id="quest_progressionZombieHunting8"/>
+</quest>
+	
+<!-- Zombie Hunting 8 -->
+<quest id="quest_progressionZombieHunting8">
+	<property name="name_key" value="quest_progressionZombieHunting8_name"/>
+	<property name="subtitle_key" value="quest_progressionZombieHunting8_subtitle"/>
+	<property name="description_key" value="quest_progressionZombieHunting8_desc"/>
+	<property name="offer_key" value="quest_progressionZombieHunting8_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" value="1500"/>
+		
+	<reward type="Exp" value="1000"/>
+	<reward type="Item" id="EZcurrencyLL" value="5000"/>
+	<reward type="Quest" id="quest_progressionZombieHunting9"/>
+</quest>
+	
+<!-- Zombie Hunting 9 -->
+<quest id="quest_progressionZombieHunting9">
+	<property name="name_key" value="quest_progressionZombieHunting9_name"/>
+	<property name="subtitle_key" value="quest_progressionZombieHunting9_subtitle"/>
+	<property name="description_key" value="quest_progressionZombieHunting9_desc"/>
+	<property name="offer_key" value="quest_progressionZombieHunting9_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" value="1750"/>
+		
+	<reward type="Exp" value="1000"/>
+	<reward type="Item" id="EZcurrencyLL" value="5000"/>
+	<reward type="Quest" id="quest_progressionZombieHunting10"/>
+</quest>
+	
+<quest id="quest_progressionZombieHunting10">
+	<property name="name_key" value="quest_progressionZombieHunting10_name"/>
+	<property name="subtitle_key" value="quest_progressionZombieHunting10_subtitle"/>
+	<property name="description_key" value="quest_progressionZombieHunting10_desc"/>
+	<property name="offer_key" value="quest_progressionZombieHunting10_offer"/>
+	<property name="icon" value="ui_game_symbol_zombie"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="Quest"/>
+	<property name="difficulty" value="easy"/>
+	<property name="shareable" value="false"/>
+	
+	<objective type="EntityKill" value="2000"/>
+		
+	<reward type="Exp" value="10000"/>
+	<reward type="Item" id="EZcurrencyLL" value="10000"/>
+	<reward type="Level" value="1"/>
+	<reward type="SkillPoints" value="2"/>
+
+</quest>
+</append>
+	
+</configs>
+
+
+

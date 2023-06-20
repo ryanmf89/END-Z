@@ -1,39 +1,45 @@
 <configs>
 
-	<append xpath="/materials">
-		
-	<material id="MmoonrockLL">
-		<property name="damage_category" value="metal"/>
-		<property name="surface_category" value="metal"/>
-		<property name="forge_category" value="iron"/>
-		<property name="Hardness" type="float" value="1"/>
-		<property name="stepsound" value="metal"/>
-		<property name="stability_glue" value="300"/>
-		<property name="Mass" type="int" value="20"/>
-		<property name="explosionresistance" value="1.5"/>
-		<property name="MaxDamage" value="12000"/>
-		<property name="Experience" value="25"/>
-	</material>
+<append xpath="/materials">		
+<material id="MmoonrockLL">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="1.5"/>
+	<property name="MaxDamage" value="15000"/>
+	<property name="Experience" value="25"/>
+</material>
 	
-	<material id="MvibeLL">
-		<property name="damage_category" value="metal"/>
-		<property name="surface_category" value="metal"/>
-		<property name="forge_category" value="iron"/>
-		<property name="Hardness" type="float" value="1"/>
-		<property name="stepsound" value="metal"/>
-		<property name="stability_glue" value="300"/>
-		<property name="Mass" type="int" value="20"/>
-		<property name="explosionresistance" value="1.5"/>
-		<property name="MaxDamage" value="15000"/>
-		<property name="Experience" value="100"/>
-	</material>
+<material id="MvibeLL">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="1.5"/>
+	<property name="MaxDamage" value="30000"/>
+	<property name="Experience" value="100"/>
+</material>
 	
-	
-	
-	
-	
-	
-	
-	</append>
+<material id="MresourceHazmatFiberLL">
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="MmilitaryFiber"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="cloth"/>
+	<property name="lightopacity" value="4"/>
+	<property name="stability_glue" value="2"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="5"/>
+	<property name="Experience" value="40"/>
+</material>
+</append>
 
 </configs>

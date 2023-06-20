@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xml>
-	<ModInfo>
-		<Name value="END Z"/>
-		<Description value="MANY CHANGES"/>
-		<Author value="TheeLegion"/>
-		<Version value="1.0"/>
-	</ModInfo>
+		
+		<Name value="END_Z" />
+		<DisplayName value="END Z" />
+		<Description value="A nice little overhaul but still a vanilla feel" />
+		<Author value="TheeLegion" />
+		<Version value="21.0.0" />
+		
 </xml>

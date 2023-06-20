@@ -1,0 +1,80 @@
+<configs>
+
+<!--HAZMAT MODS FOR ARMOR-->
+<append xpath="/item_modifiers">
+<item_modifier name="modRadiationReadyhatLL" installable_tags="head" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+	<property name="CustomIcon" value="apparelHazmatMask" />
+	<property name="Material" value="MresourceHazmatFiberLL"/>
+	<property name="Extends" value="modGeneralMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<effect_group tiered="false">
+	<passive_effect name="ElementalDamageResist" operation="perc_add" value=".2" tags="radiation"/>
+</effect_group>
+	<effect_group tiered="false">
+	<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffRadSuitMask"/>
+	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuitMask"/>
+	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuit"/>
+</effect_group>
+</item_modifier>
+	
+<item_modifier name="modRadiationReadychestLL" installable_tags="armorChest" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+	<property name="CustomIcon" value="apparelHazmatJacket" />
+	<property name="Material" value="MresourceHazmatFiberLL"/>
+	<property name="Extends" value="modGeneralMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<effect_group tiered="false">
+	<passive_effect name="ElementalDamageResist" operation="perc_add" value=".2" tags="radiation"/>
+</effect_group>
+	<effect_group tiered="false">
+	<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffRadSuitChest"/>
+	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuitChest"/>
+	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuit"/>
+</effect_group>
+</item_modifier>
+	
+<item_modifier name="modRadiationReadyglovesLL" installable_tags="armor" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+	<property name="CustomIcon" value="apparelHazmatGloves" />
+	<property name="Material" value="MresourceHazmatFiberLL"/>
+	<property name="Extends" value="modGeneralMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<effect_group tiered="false">
+	<passive_effect name="ElementalDamageResist" operation="perc_add" value=".2" tags="radiation"/>
+</effect_group>
+	<effect_group tiered="false">
+	<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffRadSuitGloves"/>
+	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuitGloves"/>
+	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuit"/>
+</effect_group>
+</item_modifier>
+	
+<item_modifier name="modRadiationReadylegsLL" installable_tags="armorLegs" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+	<property name="CustomIcon" value="apparelHazmatPants" />
+	<property name="Material" value="MresourceHazmatFiberLL"/>
+	<property name="Extends" value="modGeneralMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<effect_group tiered="false">
+	<passive_effect name="ElementalDamageResist" operation="perc_add" value=".2" tags="radiation"/>
+</effect_group>
+	<effect_group tiered="false">
+	<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffRadSuitLegs"/>
+	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuitLegs"/>
+	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuit"/>
+</effect_group>
+</item_modifier>
+	
+<item_modifier name="modRadiationReadybootsLL" installable_tags="armor" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+	<property name="CustomIcon" value="apparelHazmatBoots" />
+	<property name="Material" value="MresourceHazmatFiberLL"/>
+	<property name="Extends" value="modGeneralMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<effect_group tiered="false">
+	<passive_effect name="ElementalDamageResist" operation="perc_add" value=".2" tags="radiation"/>
+</effect_group>
+	<effect_group tiered="false">
+	<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffRadSuitBoots"/>
+	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuitBoots"/>
+	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuit"/>
+</effect_group>
+</item_modifier>
+</append>
+</configs>

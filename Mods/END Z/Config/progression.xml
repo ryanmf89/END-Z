@@ -1,52 +1,36 @@
 <configs>
 	
-		<!-- Change Pack Mule Perk to unlock all slots -->
-	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@value='3,6,10,14,18']/@value">7,14,21,28,35</set>
+<!-- Change Pack Mule Perk to unlock all slots -->
+<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@value='3,6,10,14,18']/@value">7,14,21,28,35</set>
 
-	<!--LESS GRIND-->
-	  <!-- MotherLode perk is rather, underwhelming, let's fix that -->
-  <set xpath="/progression/perks/perk[@name='perkMotherLode']/effect_group/passive_effect[@name='HarvestCount']/@value">.5,2</set>
-  <set xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='CraftingTime']/@value">-0.5</set>
-
-	<!--TIER 6 CRAFTING-->
-	<set xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier' and @value='1,2,3,4,4']/@value">1,2,3,4,5</set>
-	<set xpath="/progression/perks/perk[@name='perkLightArmor']/effect_group/passive_effect[@name='CraftingTier'][@operation='base_add']/@value">1,5</set>
-	<set xpath="/progression/perks/perk[@name='perkHeavyArmor']/effect_group/passive_effect[@name='CraftingTier'][@operation='base_add']/@value">1,5</set>
-
-	 <append xpath="progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @level='3,5']/@tags">,lightPlayerVariantHelper,wirelessWireRelay</append>
-
-<!-- SJ: Add Working Wall Ovens to the MasterChef perk, and the new faucets to the Adv Engineering perk -->
-
-    <append xpath="progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @level='2,5']/@tags">,cntGasGrillWorking,cntCharcoalGrillWorking</append>
-    <append xpath="progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @level='3,5']/@tags">,cntWallOvenWorking</append>
-    <append xpath="progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @level='1,5']/@tags">,faucet02,faucetBrass02,faucet04,faucetBrass04</append>
-    <append xpath="progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @level='2,5']/@tags">,faucet02Working,faucetBrass02Working,faucet04Working,faucetBrass04Working,decoClawFootBathTubWorking,cntBathTubEmptyWorking</append>
+<!--LESS GRIND-->
+<!-- MotherLode perk is rather, underwhelming, let's fix that -->
+<set xpath="/progression/perks/perk[@name='perkMotherLode']/effect_group/passive_effect[@name='HarvestCount']/@value">.5,2</set>
+<set xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='CraftingTime']/@value">-0.5</set>
 
 
 
-	<!--new perk under strength tree-->
-	<append xpath="//perks">
-		<perk name="perkimagod" parent="skillStrengthGeneral" name_key="perkimagod" desc_key="perkimagod" icon="ui_game_symbol_bull">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="2" desc_key="reqStrengthLevel02"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
-		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
-
+<!--new perk under strength tree-->
+<append xpath="//perks">
+	<perk name="perkimagod" parent="skillStrengthGeneral" name_key="perkimagod" desc_key="perkimagod" icon="ui_game_symbol_bull">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="2" desc_key="reqStrengthLevel02"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
+	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
 	<effect_group>
-		<passive_effect name="Gamestage" operation="base_add" level="1" value="50"/>
-		<passive_effect name="Gamestage" operation="base_add" level="2" value="50"/>
-		<passive_effect name="Gamestage" operation="base_add" level="3" value="50"/>
-		<passive_effect name="Gamestage" operation="base_add" level="4" value="50"/>
-		<passive_effect name="Gamestage" operation="base_add" level="5" value="240"/>
-
-		<effect_description level="1" desc_key="perkimagod1Desc" long_desc_key="perkimagod1LongDesc"/>
-		<effect_description level="2" desc_key="perkimagod2Desc" long_desc_key="perkimagod2LongDesc"/>
-		<effect_description level="3" desc_key="perkimagod3Desc" long_desc_key="perkimagod3LongDesc"/>
-		<effect_description level="4" desc_key="perkimagod4Desc" long_desc_key="perkimagod4LongDesc"/>
-		<effect_description level="5" desc_key="perkimagod5Desc" long_desc_key="perkimagod5LongDesc"/>
-		</effect_group>
-	</perk>
-	</append>
+	<passive_effect name="Gamestage" operation="base_add" level="1" value="50"/>
+	<passive_effect name="Gamestage" operation="base_add" level="2" value="50"/>
+	<passive_effect name="Gamestage" operation="base_add" level="3" value="50"/>
+	<passive_effect name="Gamestage" operation="base_add" level="4" value="50"/>
+	<passive_effect name="Gamestage" operation="base_add" level="5" value="240"/>
+	<effect_description level="1" desc_key="perkimagod1Desc" long_desc_key="perkimagod1LongDesc"/>
+	<effect_description level="2" desc_key="perkimagod2Desc" long_desc_key="perkimagod2LongDesc"/>
+	<effect_description level="3" desc_key="perkimagod3Desc" long_desc_key="perkimagod3LongDesc"/>
+	<effect_description level="4" desc_key="perkimagod4Desc" long_desc_key="perkimagod4LongDesc"/>
+	<effect_description level="5" desc_key="perkimagod5Desc" long_desc_key="perkimagod5LongDesc"/>
+	</effect_group>
+</perk>
+</append>
 
 </configs>

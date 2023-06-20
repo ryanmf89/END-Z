@@ -1,223 +1,145 @@
 <configs>
-
-
-
-
-	    <!-- Make player dropped bags bigger to accomodate new size-->
-	<set xpath="/lootcontainers/lootcontainer[@id='2']/@size">11,11</set>
-	
-	
-  <!-- Increase the amount of feathers and eggs you find in nests -->
-  <set xpath="/lootcontainers/lootgroup[@name='groupBirdNest01']/item[@name='resourceFeather']/@count">5,10</set>
-  <set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='resourceFeather']/@count">5,10</set>
-  <set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='foodEgg']/@loot_prob_template">high</set>
-
-  <!-- Add acid to cupboards -->
-  <append xpath="/lootcontainers/lootgroup[@name='groupCupboard02']">
-    <item name="resourceAcid" count="1,2" loot_prob_template="low"/>
-  </append>
-
-  <!-- increase number of Eggs in refrigerators -->
-  <append xpath="/lootcontainers/lootgroup[@name='groupRefrigerator02']">
-    <item group="groupIngredientsRare" loot_prob_template="low"/>
-  </append>
-
-  <!-- increase number of lockpicks found -->
-  <set xpath="/lootcontainers/lootgroup/item[@name='resourceLockPick']/@count">3,10</set>
-
-
-	<!--STARTER CRATE-->
-	<append xpath="/lootcontainers">
-		<!-- Our list of loot to give the player -->
-		<lootgroup name="endzStarterCrateContents" count="5" loot_quality_template="QLTemplateT0">
-			<item group="groupApparelHats" count="1" />
-			<item group="groupWeaponsMeleeScaled" count="1"/>
-			<item group="groupToolsT1" count="1"/> <!-- DOUGH: groupToolsT0 is stone. keep T1-->
-			<item group="groupArmorScaled" count="2" />
-			<item group="airdropMedicine" count="1" loot_prob_template="med" /> <!-- DOUGH: Dont like this?, can get beaker...but keeping it -->
-			<item group="airdropfood" count="2"/> <!-- DOUGH: was cannedFood. This gived a bit more variation -->
-		</lootgroup>
-
-		<!-- The loot id we need to call to get our loot group.
-		This may certainly cause conflicts with other mods. 
-		DOUGH: id now replaces with name, yet ids are still there.  leaving for now
-		-->
-		<lootcontainer id="798" name="endzStarterCrateLoot" count="1" size="8,9" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
-			<item group="endzStarterCrateContents"/>
-		</lootcontainer>
-
-	</append>
-	
-	<!--find a bicycle in the dumpster-->
-	<append xpath="/lootcontainers/lootcontainer[@name='dumpster']"><item name="vehicleBicyclePlaceable" loot_prob_template="low"/>
-	</append>
-
-
-
-
-
-<!--loot container for AIRDROP is id 34-->
-<!--loot container for SMALL AMMO PILE is id 108-->
-<!--loot container for MED AMMO PILE is id 109-->
-<!--loot container for LARGE AMMO PILE is id 110-->
-<!--loot container for MUNITIONS BOX is id 40-->
-<!--loot container for SMALL WEAPONS BAG is id 100-->
-<!--loot container for LARGE WEAPONS BAG is id 101-->
-<!--loot container for BOOKCASE is id 49-->
-<!--loot container for CRACKABOOK CRATE is id 89-->
-<!--loot container for SHOTGUN MESS is id 50-->
-<!--loot container for WORKING STIFF is id 53-->
-<!--zombie loot yellow bag id 70-->
-<!--zombie loot blue bag id 71-->
-<!--zombie loot red bag id 73-->
-	
-	<!--FORGED BRASS IN THE WORKING STIFF CRATES WITH PROB OF 20%-->
-		<append xpath="//lootgroup[@name='groupJunk02']">
-			<item name="resourceForgedBrassLL" loot_prob_template="medLow"/>
-			<item name="resourceforgedvibeLL" loot_prob_template="low"/>
-		</append>
-
-	<!--VIBRANIUM WEAPONS SCHEMATICS IN AIRDROP AND CRACKABOOK CRATE AND BLUE RED ZOMBIE BAGS WITH PROB OF 5%-->
-		<append xpath="//lootgroup[@name='booksAllScaled']">
-			<!--brass items-->
-			<item name="brassshovelLLSchematic" loot_prob_template="veryLow"/>
-			<item name="brassaxeLLSchematic" loot_prob_template="veryLow"/>
-			<item name="brasspickaxeLLSchematic" loot_prob_template="veryLow"/>
-			<item name="brasssledgeLLSchematic" loot_prob_template="veryLow"/>
-			<item name="brassknifeLLSchematic" loot_prob_template="veryLow"/>
-			<item name="brassclubLLSchematic" loot_prob_template="veryLow"/>
-			<item name="brassknucksLLSchematic" loot_prob_template="veryLow"/>
-			<item name="brassspearLLSchematic" loot_prob_template="veryLow"/>
-			<item name="t3vibespearLLSchematic" loot_prob_template="veryLow"/>
-			<item name="vibesledgeLLSchematic" loot_prob_template="veryLow"/>
-			<item name="vibemacheteLLSchematic" loot_prob_template="veryLow"/>
-			<item name="vibeknucksLLSchematic" loot_prob_template="veryLow"/>
-			<item name="vibebatLLSchematic" loot_prob_template="veryLow"/>
-			<item name="vibeaugerLLSchematic" loot_prob_template="veryLow"/>
-			<item name="improvedDUBZYLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunpumpshotLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunautoshotLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunhuntrifleLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunleverrifleLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunsniperLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunak47LLSchematic" loot_prob_template="veryLow"/>
-			<item name="guntacARLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunM60LLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunwoodbowLLSchematic" loot_prob_template="veryLow"/>
-			<item name="guncompoundbowLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunCompoundCrossbowLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunjunkturrLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunpistolLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gunSMGLLSchematic" loot_prob_template="veryLow"/>
-			<item name="gungoldenvultureLLSchematic" loot_prob_template="veryLow"/>
-		</append>
-			
+<!-- Make player dropped bags bigger to accomodate new size-->
+<!--set xpath="/lootcontainers/lootcontainer[@id='2']/@size">11,11</set-->
 		
+<!-- Increase the amount of feathers and eggs you find in nests -->
+<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest01']/item[@name='resourceFeather']/@count">5,10</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='resourceFeather']/@count">5,10</set>
+<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='foodEgg']/@loot_prob_template">high</set>
 
-		<!--BRASS weapons WITH PROB OF 5%-->
-		<append xpath="//lootgroup[@name='groupWorkingStiffs01' or @name='groupWorkingStiffs02' or @name='groupConstructionCrate01' or @name='groupConstructionCrate02']">
-			<item name="brassshovelLL" loot_prob_template="veryLow"/>
-			<item name="brassaxeLL" loot_prob_template="veryLow"/>
-			<item name="brasspickaxeLL" loot_prob_template="veryLow"/>
-			<item name="brasssledgeLL" loot_prob_template="veryLow"/>
-			<item name="brassknifeLL" loot_prob_template="veryLow"/>
-			<item name="brassclubLL" loot_prob_template="veryLow"/>
-			<item name="brassknucksLL" loot_prob_template="veryLow"/>
-			<item name="brassspearLL" loot_prob_template="veryLow"/>
-		</append>
-		<!--VIBRANIUM WEAPONS PREMADE IN THE WORLD LOOT WITH A PROB OF 5%-->
-		<append xpath="//lootgroup[@name='groupHardenedChestT5_02' or @name='groupHardenedChestT5_06' or @name='groupZpackStrong01' or @name='groupZpackStrong02' or @name='groupZpackStrong03' or @name='groupHardenedChestT4_04' or @name='groupHardenedChestT4_08']">
-			<item name="t3vibespearLL" loot_prob_template="veryLow"/>
-			<item name="vibesledgeLL" loot_prob_template="veryLow"/>
-			<item name="vibemacheteLL" loot_prob_template="veryLow"/>
-			<item name="vibeknucksLL" loot_prob_template="veryLow"/>
-			<item name="vibebatLL" loot_prob_template="veryLow"/>
-			<item name="vibeaugerLL" loot_prob_template="veryLow"/>
-			<!--IMPROVED WEAPONS-->
-			<item name="gundubzyLL" loot_prob_template="veryLow"/>
-			<item name="gunpumpshotLL" loot_prob_template="veryLow"/>
-			<item name="gunautoshotLL" loot_prob_template="veryLow"/>
-			<item name="gunhuntrifleLL" loot_prob_template="veryLow"/>
-			<item name="gunleverrifleLL" loot_prob_template="veryLow"/>
-			<item name="gunsniperLL" loot_prob_template="veryLow"/>
-			<item name="gunak47LL" loot_prob_template="veryLow"/>
-			<item name="guntacARLL" loot_prob_template="veryLow"/>
-			<item name="gunM60LL" loot_prob_template="veryLow"/>
-			<item name="gunwoodbowLL" loot_prob_template="veryLow"/>
-			<item name="guncompoundbowLL" loot_prob_template="veryLow"/>
-			<item name="gunCompoundCrossbowLL" loot_prob_template="veryLow"/>
-			<item name="gunpistolLL" loot_prob_template="veryLow"/>
-			<item name="gunSMGLL" loot_prob_template="veryLow"/>
-			<!--JUNK TURRET-->
-			<item name="gunjunkturrLL" loot_prob_template="veryLow"/>
-			<!--GOLDEN VULTURE-->
-			<item name="gungoldenvultureLL" loot_prob_template="veryLow"/>
-		</append>	
+<!-- Add acid to cupboards -->
+<append xpath="/lootcontainers/lootgroup[@name='groupCupboard02']">
+	<item name="resourceAcid" count="1,2" loot_prob_template="low"/>
+</append>
+
+<!-- increase number of Eggs in refrigerators -->
+<append xpath="/lootcontainers/lootgroup[@name='groupRefrigerator02']">
+	<item group="groupIngredientsRare" loot_prob_template="low"/>
+</append>
+
+<!-- increase number of lockpicks found -->
+<set xpath="/lootcontainers/lootgroup/item[@name='resourceLockPick']/@count">3,10</set>
+
+
+<!--STARTER CRATE-->
+<append xpath="/lootcontainers">
+<lootgroup name="endzStarterCrateContents" count="5" loot_quality_template="QLTemplateT0">
+	<item group="groupApparelHats" count="1" />
+	<item group="groupWeaponsMeleeScaled" count="1"/>
+	<item group="groupToolsT1" count="1"/> 
+	<item group="groupArmorScaled" count="2" />
+	<item group="airdropMedicine" count="1" loot_prob_template="med" /> 
+	<item group="airdropfood" count="2"/> 
+</lootgroup>
+<lootcontainer id="798" name="endzStarterCrateLoot" count="1" size="8,9" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
+	<item group="endzStarterCrateContents"/>
+</lootcontainer>
+</append>
+	
+<!--find a bicycle in the dumpster-->
+<append xpath="/lootcontainers/lootcontainer[@name='dumpster']"><item name="vehicleBicyclePlaceable" loot_prob_template="low"/></append>
+
+<!--FORGED BRASS IN THE WORKING STIFF CRATES WITH PROB OF 20%-->
+<append xpath="//lootgroup[@name='groupJunk02']">
+	<item name="resourceForgedBrassLL" loot_prob_template="medLow"/>
+	<item name="resourceforgedvibeLL" loot_prob_template="low"/>
+</append>
+
+<!--BRASS weapons WITH PROB OF 5%-->
+<append xpath="//lootgroup[@name='groupWorkingStiffs01' or @name='groupWorkingStiffs02' or @name='groupConstructionCrate01' or @name='groupConstructionCrate02']">
+	<item name="brassshovelLL" loot_prob_template="veryLow"/>
+	<item name="brassaxeLL" loot_prob_template="veryLow"/>
+	<item name="brasspickaxeLL" loot_prob_template="veryLow"/>
+	<item name="brasssledgeLL" loot_prob_template="veryLow"/>
+	<item name="brassknifeLL" loot_prob_template="veryLow"/>
+	<item name="brassclubLL" loot_prob_template="veryLow"/>
+	<item name="brassknucksLL" loot_prob_template="veryLow"/>
+	<item name="brassspearLL" loot_prob_template="veryLow"/>
+	<item name="moonrockshovelLL" loot_prob_template="med"/>
+	<item name="moonrockaxeLL" loot_prob_template="med"/>
+	<item name="moonrockspearLL" loot_prob_template="med"/>
+	<item name="moonrocksledgeLL" loot_prob_template="med"/>
+</append>
+<!--VIBRANIUM WEAPONS PREMADE IN THE WORLD LOOT WITH A PROB OF 5%-->
+<append xpath="//lootgroup[@name='groupHardenedChestT5_02' or @name='groupHardenedChestT5_06' or @name='groupZpackStrong01' or @name='groupZpackStrong02' or @name='groupZpackStrong03' or @name='groupHardenedChestT4_04' or @name='groupHardenedChestT4_08']">
+	<item name="t3vibespearLL" loot_prob_template="veryLow"/>
+	<item name="vibesledgeLL" loot_prob_template="veryLow"/>
+	<item name="vibemacheteLL" loot_prob_template="veryLow"/>
+	<item name="vibeknucksLL" loot_prob_template="veryLow"/>
+	<item name="vibebatLL" loot_prob_template="veryLow"/>
+	<item name="vibeaugerLL" loot_prob_template="veryLow"/>
+	<!--IMPROVED WEAPONS-->
+	<item name="gunpumpshotLL" loot_prob_template="veryLow"/>
+	<item name="gunsniperLL" loot_prob_template="veryLow"/>
+	<item name="gunak47LL" loot_prob_template="veryLow"/>
+	<item name="gunCompoundCrossbowLL" loot_prob_template="veryLow"/>
+	<item name="gunSMGLL" loot_prob_template="veryLow"/>
+	<!--JUNK TURRET-->
+	<item name="gunjunkturrLL" loot_prob_template="veryLow"/>
+	<!--GOLDEN VULTURE-->
+	<item name="gungoldenvultureLL" loot_prob_template="veryLow"/>
+</append>	
 			
-		<!--NEW AMMO-->	
-		<append xpath="//lootgroup[@name='groupAmmoSmall' or @name='groupAmmoMedium' or @name='groupAmmoSmallNoArrow' or @name='groupAmmoMediumNoArrow' or @name='groupAmmoLarge']">
-            <item name="ammo44slugLL" loot_prob_template="low" count="30,50"/>
-            <item name="impbulletLL" loot_prob_template="med" count="30,50"/>
-            <item name="impshotshellLL" loot_prob_template="med" count="30,50"/>
-        </append>
+<!--NEW AMMO-->	
+<append xpath="//lootgroup[@name='groupAmmoSmall' or @name='groupAmmoMedium' or @name='groupAmmoSmallNoArrow' or @name='groupAmmoMediumNoArrow' or @name='groupAmmoLarge']">
+    <item name="ammo44slugLL" loot_prob_template="low" count="30,50"/>
+    <item name="impbulletLL" loot_prob_template="med" count="30,50"/>
+    <item name="impshotshellLL" loot_prob_template="med" count="30,50"/>
+</append>
+	
+<!--SOLAR POWER-->
+<append xpath="//lootgroup[@name='groupElectricalDevices']">
+	<item name="questRewardSolarBankBundle" loot_prob_template="Low"/>
+</append>
+<append xpath="//lootgroup[@name='groupWorkbenchLoot01']">
+	<item name="questRewardSolarBankBundle" loot_prob_template="veryLow"/>
+</append>
+<append xpath="//lootgroup[@name='groupWorkbenchLoot02']">
+	<item name="questRewardSolarBankBundle" loot_prob_template="Low"/>
+</append>
+<append xpath="//lootgroup[@name='groupRollingToolbox01']">
+	<item name="solarCell" loot_prob_template="veryLow"/>
+</append>
+<append xpath="//lootgroup[@name='groupRollingToolbox02']">
+	<item name="solarCell" loot_prob_template="Low"/>
+</append>	
+<append xpath="//lootgroup[@name='groupRollingToolbox03']">
+	<item name="solarCell" loot_prob_template="medLow"/>
+</append>
+<append xpath="//lootgroup[@name='groupMoPower01']">
+	<item name="solarCell" loot_prob_template="veryLow"/>
+</append>	
+<append xpath="//lootgroup[@name='groupMoPower02']">
+	<item name="solarCell" loot_prob_template="Low"/>
+</append>
+<append xpath="//lootgroup[@name='groupMoPower03']">
+	<item name="solarCell" loot_prob_template="medLow"/>
+</append>	
+<append xpath="//lootgroup[@name='groupSmallSafeLoot02']">
+	<item name="solarCell" loot_prob_template="medLow"/>
+</append>	
+<append xpath="//lootgroup[@name='groupSmallSafeLoot03']">
+	<item name="solarCell" loot_prob_template="medLow"/>
+</append>	
+<append xpath="//lootgroup[@name='groupLootChestBonusItems']">
+	<item name="solarCell" loot_prob_template="Low"/>
+</append>	
+<append xpath="//lootgroup[@name='groupAirDropT5Bundles']">
+	<item name="solarCell"/>
+</append>
+	
 
-		<!--working work stations-->
-		 <append xpath="lootcontainers/lootgroup[@name='schematicsElectrical']">
-        <item name="faucet04WorkingSchematic"/>
-        <item name="cntWallOvenWorkingSchematic"/>
-    </append>
-	
-	<!--SOLAR POWER-->
-	<append xpath="//lootgroup[@name='groupElectricalDevices']">
-		<item name="questRewardSolarBankBundle" loot_prob_template="Low"/>
-	</append>
-	<append xpath="//lootgroup[@name='groupWorkbenchLoot01']">
-		<item name="questRewardSolarBankBundle" loot_prob_template="veryLow"/>
-	</append>
-	<append xpath="//lootgroup[@name='groupWorkbenchLoot02']">
-		<item name="questRewardSolarBankBundle" loot_prob_template="Low"/>
-	</append>
-	<append xpath="//lootgroup[@name='groupRollingToolbox01']">
-		<item name="solarCell" loot_prob_template="veryLow"/>
-	</append>
-	<append xpath="//lootgroup[@name='groupRollingToolbox02']">
-		<item name="solarCell" loot_prob_template="Low"/>
-	</append>	
-	<append xpath="//lootgroup[@name='groupRollingToolbox03']">
-		<item name="solarCell" loot_prob_template="medLow"/>
-	</append>
-	<append xpath="//lootgroup[@name='groupMoPower01']">
-		<item name="solarCell" loot_prob_template="veryLow"/>
-	</append>	
-	<append xpath="//lootgroup[@name='groupMoPower02']">
-		<item name="solarCell" loot_prob_template="Low"/>
-	</append>
-	<append xpath="//lootgroup[@name='groupMoPower03']">
-		<item name="solarCell" loot_prob_template="medLow"/>
-	</append>	
-	<append xpath="//lootgroup[@name='groupSmallSafeLoot02']">
-		<item name="solarCell" loot_prob_template="medLow"/>
-	</append>	
-	<append xpath="//lootgroup[@name='groupSmallSafeLoot03']">
-		<item name="solarCell" loot_prob_template="medLow"/>
-	</append>	
-	<append xpath="//lootgroup[@name='groupLootChestBonusItems']">
-		<item name="solarCell" loot_prob_template="Low"/>
-	</append>	
-	<append xpath="//lootgroup[@name='groupAirDropT5Bundles']">
-		<item name="solarCell"/>
-	</append>
-	
-	<!--EGGS AND FEATHERS-->
-	<append xpath="/lootcontainers/lootgroup[@name='groupBirdNest']">
-		<item name="foodEgg" count="4,8" prob="0.8"/>
-		<item name="resourceFeather" count="6,12" prob="1"/>
-	</append>
-	
-	<append xpath="//lootgroup[@name='groupMedicalHighLow']">
-		<item name="medicalFirstAidBandage" loot_prob_template="med"/>
-	</append>
+<!--removes dukes and old cash from the loot and inputs new currency-->
+<set xpath="//item[@name='oldCash']/@name">EZcurrencyLL</set>
+<set xpath="//item[@name='casinoCoin']/@name">EZcurrencyLL</set>
 
+<!--ULTIMATE SCREAMER-->
+<append xpath="/lootcontainers">
+<!-- Knap Sack -->
+<lootcontainer id="998" name="KnapSack" count="4" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+	<item name="EZcurrencyLL" count="500,1000" prob="0.2"/>
+</lootcontainer>
+</append>
 </configs>
 
 

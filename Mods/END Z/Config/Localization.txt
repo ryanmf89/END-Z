@@ -202,6 +202,9 @@ cntWallOvenWorkingSchematic,items,Schematic,,,Working Ovens and Grills Schematic
 decoClawFootBathTubWorking,blocks,Block,,,Working Clawfoot Bathtub
 cntBathTubEmptyWorking,blocks,Block,,,Working Bathtub
 
+woodLogSpike1,blocks,Block,,,Wood LogSpike(upgradeable)
+woodLogSpike1Desc,blocks,Block,,,this is one sharp spike, can be upgraded further
+
 
 buffScentofPreyDesc,buffs,Buff,,,"You are carrying [db7c1d]Something Smelly[ffffff], predators will come far and wide to find you because of it. Better stash it somewhere safe, like a vehicle to protect yourself."
 buffScentofPreyName,buffs,Buff,,,"[db7c1d]Scent of Prey"
@@ -235,3 +238,133 @@ perkimagod5LongDesc,,,,,"Now you are just showing off. Raise gamestage by 240."
 
 medicalhoneyBandageLL,items,Medical,,,"Honey Bandage"
 medicalhoneyBandageLLDesc,items,Medical,,,"this bandage will cure bleeding, abrasions, and infections."
+
+buffRadiation01,buffs,Buff,New,,"Radiation"
+buffRadiation01Name,buffs,Buff,New,,"Radiation"
+buffRadiation01Desc,buffs,Buff,New,,"You have entered an area with radioactive contamination. Getting wet in the wasteland will increase radiation absorption. \nPut on the Hazmat Suit or seek shelter to reduce the radiation dosage. \nBeing out of the Wasteland slowly decreases radiation, while clean rain or immersion in uncontaminated water will more effectively remove radioactive contaminants. \nIncreased radiation will make you weaker and more susceptible to injuries. 100% radiation will give you mortal injuries."
+buffRadiation01Tooltip,buffs,Buff,New,,"You are exposed to high levels of radiation."
+buffRadSuit,buffs,Buff,New,,"Radiation Protection"
+buffRadSuitName,buffs,Buff,New,,"Radiation Protection"
+buffRadSuitDesc,buffs,Buff,New,,"You have put on the Hazmat Suit and are protected from radiation exposure. Your radiation levels will continue to decrease."
+buffRadSuitTooltip,buffs,Buff,,New,"You are protected from dangerous exposure to radiation"
+
+EZcurrencyLL,items,item,,,EndZ Coin
+EZcurrencyLLDesc,items,item,,,used at the trader to buy goods
+
+resourceradiofiberLL,Items,Resource,,,"Radioactive Tree Fibers"
+resourceradiofiberLLDesc,Items,Resource,,,"after the apocolypse happend the zeds have caused an unknown radiation to affect the trees that provide us with air, chop down trees to collect this rare material to craft hazard fibers"
+resourceHazmatFiberLL,Items,Resource,,,"Hazmat Fiber"
+resourceHazmatFiberLLDesc,Items,Resource,,,"crafted in the chemstation using radioactive tree fibers that are obtained from dead trees in the wasteland"
+modRadiationReadyhatLL,item_modifiers,mod,,,Rad Ready Helmet Mod
+modRadiationReadyhatLLDesc,item_modifiers,mod,,,equip this to a helmet to gain 20% radiation protection
+modRadiationReadychestLL,item_modifiers,mod,,,Rad Ready Chest Mod
+modRadiationReadychestLLDesc,item_modifiers,mod,,,equip this to chest armor to gain 20% radiation protection
+modRadiationReadyglovesLL,item_modifiers,mod,,,Rad Ready Gloves Mod
+modRadiationReadyglovesLLDesc,item_modifiers,mod,,,equip this to glove armor to gain 20% radiation protection
+modRadiationReadylegsLL,item_modifiers,mod,,,Rad Ready Legs Mod
+modRadiationReadylegsLLDesc,item_modifiers,mod,,,equip this to leg armor to gain 20% radiation protection
+modRadiationReadybootsLL,item_modifiers,mod,,,Rad Ready Boots Mod
+modRadiationReadybootsLLDesc,item_modifiers,mod,,,equip this to boot armor to gain 20% radiation protection
+
+zombiebitchQueen,entityclasses,Entity,,,Ghastly Screamer
+zombieJoe,entityclasses,Entity,,,MethHead Kenny
+zombieJoeFeral,entityclasses,Entity,,,Feral MethHead Kenny
+zombieJoeRadiated,entityclasses,Entity,,,Radiated MethHead Kenny
+zombieTomClark,entityclasses,Entity,,,Skinny Pete
+zombieTomClarkFeral,entityclasses,Entity,,,Feral Skinny Pete
+zombieTomClarkRadiated,entityclasses,Entity,,,Radiated Skinny Pete
+zombieSpider,entityclasses,Entity,,,Spider Monkey
+zombieSpiderFeral,entityclasses,Entity,,,Feral Spider Monkey
+zombieSpiderRadiated,entityclasses,Entity,,,Radiated Spider Monkey
+zombieFatHawaiian,entityclasses,Entity,,,Big Boy
+zombieFatHawaiianFeral,entityclasses,Entity,,,Feral Big Boy
+zombieFatHawaiianRadiated,entityclasses,Entity,,,Radiated Big Boy
+zombieFatCop,entityclasses,Entity,,,Donut Dumpster
+zombieFatCopFeral,entityclasses,Entity,,,Feral Donut Dumpster
+zombieFatCopRadiated,entityclasses,Entity,,,Radiated Donut Dumpster
+zombieScreamer,entityclasses,Entity,,,Karen
+zombieScreamerFeral,entityclasses,Entity,,,Feral Karen
+zombieScreamerRadiated,entityclasses,Entity,,,Radiated Karen
+zombieWight,entityclasses,Entity,,,OMG ALIEN
+zombieWightFeral,entityclasses,Entity,,,Psycho Alien
+zombieWightRadiated,entityclasses,Entity,,,Radiated Psycho Alien
+npcTraderRekt,entityclasses,Entity,,,Trader Asshole
+animalSnake,entityclasses,Entity,,,Nope Rope
+animalChicken,entityclasses,Entity,,,Drum Sticks
+animalZombieBear,entityclasses,Entity,,,Yogi Bear
+animalBear,entityclasses,Entity,,,Boo Boo
+
+quest_progressionZombieHunting1_name,quests,Quest,,,Zombie Hunting (1)
+quest_progressionZombieHunting1_subtitle,quests,Quest,,,Zombie Hunting Pt. 1
+quest_progressionZombieHunting1_desc,quests,Quest,,,"Kill 50 zombies."
+quest_progressionZombieHunting1_offer,quests,Quest,,,"Kill 50 zombies."
+quest_progressionZombieHunting2_name,quests,Quest,,,Zombie Hunting (2)
+quest_progressionZombieHunting2_subtitle,quests,Quest,,,Zombie Hunting Pt. 2
+quest_progressionZombieHunting2_desc,quests,Quest,,,"Kill 100 zombies."
+quest_progressionZombieHunting2_offer,quests,Quest,,,"Kill 100 zombies."
+quest_progressionZombieHunting3_name,quests,Quest,,,Zombie Hunting (3)
+quest_progressionZombieHunting3_subtitle,quests,Quest,,,Zombie Hunting Pt. 3
+quest_progressionZombieHunting3_desc,quests,Quest,,,"Kill 200 zombies."
+quest_progressionZombieHunting3_offer,quests,Quest,,,"Kill 200 zombies."
+quest_progressionZombieHunting4_name,quests,Quest,,,Zombie Hunting (4)
+quest_progressionZombieHunting4_subtitle,quests,Quest,,,Zombie Hunting Pt. 4
+quest_progressionZombieHunting4_desc,quests,Quest,,,"Kill 300 zombies."
+quest_progressionZombieHunting4_offer,quests,Quest,,,"Kill 300 zombies."
+quest_progressionZombieHunting5_name,quests,Quest,,,Zombie Hunting (5)
+quest_progressionZombieHunting5_subtitle,quests,Quest,,,Zombie Hunting Pt. 5
+quest_progressionZombieHunting5_desc,quests,Quest,,,"Kill 400 zombies."
+quest_progressionZombieHunting5_offer,quests,Quest,,,"Kill 400 zombies."
+quest_progressionZombieHunting6_name,quests,Quest,,,Zombie Hunting (6)
+quest_progressionZombieHunting6_subtitle,quests,Quest,,,Zombie Hunting Pt. 6
+quest_progressionZombieHunting6_desc,quests,Quest,,,"Kill 500 zombies."
+quest_progressionZombieHunting6_offer,quests,Quest,,,"Kill 500 zombies."
+quest_progressionZombieHunting7_name,quests,Quest,,,Zombie Hunting (7)
+quest_progressionZombieHunting7_subtitle,quests,Quest,,,Zombie Hunting Pt. 7
+quest_progressionZombieHunting7_desc,quests,Quest,,,"Kill 1000 zombies."
+quest_progressionZombieHunting7_offer,quests,Quest,,,"Kill 1000 zombies."
+quest_progressionZombieHunting8_name,quests,Quest,,,Zombie Hunting (8)
+quest_progressionZombieHunting8_subtitle,quests,Quest,,,Zombie Hunting Pt. 8
+quest_progressionZombieHunting8_desc,quests,Quest,,,"Kill 1500 zombies."
+quest_progressionZombieHunting8_offer,quests,Quest,,,"Kill 1500 zombies."
+quest_progressionZombieHunting9_name,quests,Quest,,,Zombie Hunting (9)
+quest_progressionZombieHunting9_subtitle,quests,Quest,,,Zombie Hunting Pt. 9
+quest_progressionZombieHunting9_desc,quests,Quest,,,"Kill 1750 zombies."
+quest_progressionZombieHunting9_offer,quests,Quest,,,"Kill 1750 zombies."
+quest_progressionZombieHunting10_name,quests,Quest,,,Zombie Hunting (10)
+quest_progressionZombieHunting10_subtitle,quests,Quest,,,Zombie Hunting Pt. 10
+quest_progressionZombieHunting10_desc,quests,Quest,,,"Kill 2000 zombies."
+quest_progressionZombieHunting10_offer,quests,Quest,,,"Kill 2000 zombies."
+
+quest_progressionAnimalHunting1_name,quests,Quest,,,Animal Hunting (1)
+quest_progressionAnimalHunting1_subtitle,quests,Quest,,,Animal Hunting Pt. 1
+quest_progressionAnimalHunting1_desc,quests,Quest,,,"Kill 5 animals."
+quest_progressionAnimalHunting1_offer,quests,Quest,,,"Kill 5 animals."
+quest_progressionAnimalHunting2_name,quests,Quest,,,Animal Hunting (2)
+quest_progressionAnimalHunting2_subtitle,quests,Quest,,,Animal Hunting Pt. 2
+quest_progressionAnimalHunting2_desc,quests,Quest,,,"Kill 10 animals."
+quest_progressionAnimalHunting2_offer,quests,Quest,,,"Kill 10 animals."
+quest_progressionAnimalHunting3_name,quests,Quest,,,Animal Hunting (3)
+quest_progressionAnimalHunting3_subtitle,quests,Quest,,,Animal Hunting Pt. 3
+quest_progressionAnimalHunting3_desc,quests,Quest,,,"Kill 50 animals."
+quest_progressionAnimalHunting3_offer,quests,Quest,,,"Kill 50 animals."
+quest_progressionAnimalHunting4_name,quests,Quest,,,Animal Hunting (4)
+quest_progressionAnimalHunting4_subtitle,quests,Quest,,,Animal Hunting Pt. 4
+quest_progressionAnimalHunting4_desc,quests,Quest,,,"Kill 75 animals."
+quest_progressionAnimalHunting4_offer,quests,Quest,,,"Kill 75 animals."
+quest_progressionAnimalHunting5_name,quests,Quest,,,Animal Hunting (5)
+quest_progressionAnimalHunting5_subtitle,quests,Quest,,,Animal Hunting Pt. 5
+quest_progressionAnimalHunting5_desc,quests,Quest,,,"Kill 125 animals."
+quest_progressionAnimalHunting5_offer,quests,Quest,,,"Kill 125 animals."
+quest_progressionAnimalHunting6_name,quests,Quest,,,Animal Hunting (6)
+quest_progressionAnimalHunting6_subtitle,quests,Quest,,,Animal Hunting Pt. 6
+quest_progressionAnimalHunting6_desc,quests,Quest,,,"Kill 200 animals."
+quest_progressionAnimalHunting6_offer,quests,Quest,,,"Kill 200 animals."
+quest_progressionAnimalHunting7_name,quests,Quest,,,Animal Hunting (7)
+quest_progressionAnimalHunting7_subtitle,quests,Quest,,,Animal Hunting Pt. 7
+quest_progressionAnimalHunting7_desc,quests,Quest,,,"Kill 400 animals."
+quest_progressionAnimalHunting7_offer,quests,Quest,,,"Kill 400 animals."
+
+tooltipJammed,UI,Menu,,,{0} Use {1} ([cfcb02]Jammed[-]),,
+tooltipLocked,UI,Menu,,,{0} Use {1} ([fc0808]Locked[-]),,
+tooltipUnlocked,UI,Menu,,,{0} Use {1} ([24e602]Unlocked[-]),,
+lootTooltipNew,UI,Use Prompt,,,{0} Search {1} ([0328fc]Untouched[-]),,
