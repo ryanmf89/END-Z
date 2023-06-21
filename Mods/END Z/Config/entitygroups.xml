@@ -399,8 +399,6 @@
 
 <!--pine forest-->
 <entitygroup name="BossPineForest">
-	<entity name="BossDireWolf" prob="0.05"/>
-	<entity name="BossZombieBear" prob="0.05"/>
 	<entity name="AwakenMarlene" prob="0.05"/>
 	<entity name="AwakenDarlene" prob="0.05"/>
 	<entity name="AwakenArlene" prob="0.05"/>
