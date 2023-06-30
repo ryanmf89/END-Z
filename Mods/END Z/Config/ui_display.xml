@@ -28,5 +28,13 @@
 	<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>
 </item_display_info>
 </append>
-	
+
+<!--STEEL AMMO-->
+<append xpath="/ui_display_info/item_display">
+<item_display_info display_type="ammoBulletSteel" display_group="groupAmmo">
+	<display_entry name="EntityDamage" title_key="statEntityDamageRanged"/>
+	<display_entry name="BlockDamage" title_key="statBlockDamage"/>
+</item_display_info>
+</append>
+
 </configs>

@@ -6,6 +6,8 @@ resourceHotCoalsLLDesc,Items,Resource,,,"crafted in the campfire"
 
 resourceMoonRocksLL,Items,Resource,,,"Moon Rocks"
 resourceMoonRocksLLDesc,Items,Resource,,,"From the temp of those hot coals made this stronger material known as moon rocks use this to craft tiered weapons and tools stronger then stone"
+resourcemoonmixLL,Items,Resource,,,"Moon Rock Mortar"
+resourcemoonmixLLDesc,Items,Resource,,,"This strong resource is made in the mixer to upgrade to moonrock blocks"
 moonrockshovelLL,Items,melee,,,"Moon Rock Shovel"
 moonrockshovelLLDesc,Items,melee,,,"Shovel crafted from moonrocks and is lightweight for you to harvest more without getting tired!"
 moonrockaxeLL,Items,melee,,,"Moon Rock Axe"
@@ -96,6 +98,15 @@ ammo44slugLL,Items,ammo,,,"44 Magnum Slugs"
 ammo44slugLLDesc,Items,ammo,,,"used in the golden vulture"
 generatorbankLL,Blocks,Block,,,"Improved Generator Bank"
 generatorbankLLDesc,Blocks,Block,,,"will suck the gas from your pocket but will produce high volts to power more items with one genny"
+
+ammo44MagnumBulletSteel,Items,ammo,,,".44 Magnum Round, Steel (Ammo)"
+ammo9mmBulletSteel,Items,ammo,,,"9mm Round, Steel (Ammo)"
+ammo762mmBulletFMJSteel,Items,ammo,,,"7.62mm Round, Steel (Ammo)"
+ammoSteelCasedGroupDesc,Items,ammo,,,Steel-cased ammunition is a more effective way to dispatch the zombie idiots.
+
+resourceBulletCasingSteel,Items,ammo,,,"Bullet Casing, Steel"
+resourceBulletCasingSteelDesc,Items,ammo,,,Steel bullet are much stronger then your normal bullet.
+
 
 impbulletLL,Items,ammo,,,"Improved Bullet"
 impbulletLLDesc,Items,ammo,,,"used in the improved guns aside from shotguns"
@@ -254,7 +265,7 @@ EZcurrencyLLDesc,items,item,,,used at the trader to buy goods
 resourceradiofiberLL,Items,Resource,,,"Radioactive Tree Fibers"
 resourceradiofiberLLDesc,Items,Resource,,,"after the apocolypse happend the zeds have caused an unknown radiation to affect the trees that provide us with air, chop down trees to collect this rare material to craft hazard fibers"
 resourceHazmatFiberLL,Items,Resource,,,"Hazmat Fiber"
-resourceHazmatFiberLLDesc,Items,Resource,,,"crafted in the chemstation using radioactive tree fibers that are obtained from dead trees in the wasteland"
+resourceHazmatFiberLLDesc,Items,Resource,,,"crafted in the chemstation using radioactive tree fibers that are obtained from trees in the world"
 modRadiationReadyhatLL,item_modifiers,mod,,,Rad Ready Helmet Mod
 modRadiationReadyhatLLDesc,item_modifiers,mod,,,equip this to a helmet to gain 20% radiation protection
 modRadiationReadychestLL,item_modifiers,mod,,,Rad Ready Chest Mod

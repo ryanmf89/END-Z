@@ -68,23 +68,13 @@
 	<item name="vibeknucksLL" loot_prob_template="veryLow"/>
 	<item name="vibebatLL" loot_prob_template="veryLow"/>
 	<item name="vibeaugerLL" loot_prob_template="veryLow"/>
-	<!--IMPROVED WEAPONS-->
-	<item name="gunpumpshotLL" loot_prob_template="veryLow"/>
-	<item name="gunsniperLL" loot_prob_template="veryLow"/>
-	<item name="gunak47LL" loot_prob_template="veryLow"/>
-	<item name="gunCompoundCrossbowLL" loot_prob_template="veryLow"/>
-	<item name="gunSMGLL" loot_prob_template="veryLow"/>
-	<!--JUNK TURRET-->
-	<item name="gunjunkturrLL" loot_prob_template="veryLow"/>
-	<!--GOLDEN VULTURE-->
-	<item name="gungoldenvultureLL" loot_prob_template="veryLow"/>
 </append>	
 			
 <!--NEW AMMO-->	
 <append xpath="//lootgroup[@name='groupAmmoSmall' or @name='groupAmmoMedium' or @name='groupAmmoSmallNoArrow' or @name='groupAmmoMediumNoArrow' or @name='groupAmmoLarge']">
-    <item name="ammo44slugLL" loot_prob_template="low" count="30,50"/>
-    <item name="impbulletLL" loot_prob_template="med" count="30,50"/>
-    <item name="impshotshellLL" loot_prob_template="med" count="30,50"/>
+    <item name="ammo9mmBulletSteel" loot_prob_template="low" count="30,50"/>
+    <item name="ammo44MagnumBulletSteel" loot_prob_template="med" count="30,50"/>
+    <item name="ammo762mmBulletFMJSteel" loot_prob_template="med" count="30,50"/>
 </append>
 	
 <!--SOLAR POWER-->

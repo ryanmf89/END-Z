@@ -272,7 +272,7 @@ MvibeLL</set>
 <append xpath="//block[@name='steelShapes']">
 	<property class="UpgradeBlock">
 	<property name="ToBlock" value="moonrockMasterLL"/>
-	<property name="Item" value="resourceMoonRocksLL"/>
+	<property name="Item" value="resourcemoonmixLL"/>
 	<property name="ItemCount" value="10"/>
 	<property name="UpgradeHitCount" value="5"/>
 </property>
@@ -291,10 +291,10 @@ MvibeLL</set>
 	<property name="Shape" value="New"/>
 	<property name="Texture" value="537"/>
 	<property class="RepairItems">
-	<property name="resourceMoonRocksLL" value="8"/>
+	<property name="resourcemoonmixLL" value="8"/>
 	</property>
 	<property name="CustomUpgradeSound" value="place_block_metal"/>
-	<drop event="Harvest" name="resourceMoonRocksLL" count="3" tag="allHarvest"/>
+	<drop event="Harvest" name="resourcemoonmixLL" count="3" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="EconomicValue" value="320"/>
@@ -431,319 +431,319 @@ MvibeLL</set>
 	<property name="SellableToTrader" value="false"/>
 </block>
 		
-		<block name="cntCharcoalGrillWorking">
-			<property name="Class" value="Campfire"/>
-			<property name="CustomIcon" value="cntCharcoalGrillClosed"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Model" value="#Entities/LootContainers?Grill_Simple_ClosedPrefab.prefab"/>
-			<property name="Place" value="TowardsPlacerInverted"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
-			<property name="ImposterExchange" value="imposterBlock" param1="144"/>
-			<property name="HeatMapStrength" value="4"/>
-			<property name="HeatMapTime" value="5000"/>
-			<property name="HeatMapFrequency" value="1000"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="ActiveRadiusEffects" value="buffCampfireAOE(2)"/>
-			<property class="Workstation">
-				<property name="Modules" value="tools,output,fuel,input"/>
-				<property name="CraftingAreaRecipes" value="campfire" />
-				<property name="Collide" value="melee,bullet,arrow,rocket"/>
-			</property>
-			<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
-			<property name="CraftActionName" value="lblContextActionCook"/>
-			<property name="CraftIcon" value="ui_game_symbol_spatula"/>
-			<property name="OpenSound" value="campfire_open"/>
-			<property name="CloseSound" value="campfire_close"/>
-			<property name="ParticleName" value="fire_small"/>
-			<property name="ParticleOffset" value="0.5,0.7,0.5"/>
-			<property name="CraftSound" value="campfire_cook_click"/>
-			<property name="CraftCompleteSound" value="campfire_complete_item"/>
-			<property name="WorkstationJournalTip" value="heatMapTip"/>
-			<property class="RepairItems">
-				<property name="resourceScrapIron" value="10"/>
-			</property>
-			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-			<drop event="Harvest" name="resourceMechanicalParts" count="0,1" tag="salvageHarvest"/>
-			<drop event="Harvest" name="toolCookingGrill" count="0,1" tag="salvageHarvest"/>
-			<drop event="Destroy" name="resourceScrapIron" count="5,10" prob="1"/>
-			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
-			<property name="DescriptionKey" value="campfireDesc"/>
-			<property name="SellableToTrader" value="false"/>
-			<property name="StabilitySupport" value="false"/>
-		</block>
+<block name="cntCharcoalGrillWorking">
+	<property name="Class" value="Campfire"/>
+	<property name="CustomIcon" value="cntCharcoalGrillClosed"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Model" value="#Entities/LootContainers?Grill_Simple_ClosedPrefab.prefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="144"/>
+	<property name="HeatMapStrength" value="4"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE(2)"/>
+	<property class="Workstation">
+	<property name="Modules" value="tools,output,fuel,input"/>
+	<property name="CraftingAreaRecipes" value="campfire" />
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+</property>
+	<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+	<property name="CraftActionName" value="lblContextActionCook"/>
+	<property name="CraftIcon" value="ui_game_symbol_spatula"/>
+	<property name="OpenSound" value="campfire_open"/>
+	<property name="CloseSound" value="campfire_close"/>
+	<property name="ParticleName" value="fire_small"/>
+	<property name="ParticleOffset" value="0.5,0.7,0.5"/>
+	<property name="CraftSound" value="campfire_cook_click"/>
+	<property name="CraftCompleteSound" value="campfire_complete_item"/>
+	<property name="WorkstationJournalTip" value="heatMapTip"/>
+	<property class="RepairItems">
+	<property name="resourceScrapIron" value="10"/>
+</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="toolCookingGrill" count="0,1" tag="salvageHarvest"/>
+	<drop event="Destroy" name="resourceScrapIron" count="5,10" prob="1"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+	<property name="DescriptionKey" value="campfireDesc"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="StabilitySupport" value="false"/>
+</block>
 		
-		<block name="cntGasGrillWorking">
-			<property name="Class" value="Workstation"/>
-			<property name="CustomIcon" value="cntGasGrillClosed"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Model" value="#Entities/LootContainers?GasGrill_FullPrefab.prefab"/>
-			<property name="Place" value="TowardsPlacerInverted"/>
-			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="HeatMapStrength" value="4"/>
-			<property name="HeatMapTime" value="5000"/>
-			<property name="HeatMapFrequency" value="1000"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="ActiveRadiusEffects" value="buffCampfireAOE(2)"/>
-			<property class="Workstation">
-				<property name="Modules" value="tools,output,fuel,input"/>
-				<property name="CraftingAreaRecipes" value="campfire" />
-				<property name="Collide" value="melee,bullet,arrow,rocket"/>
-			</property>
-			<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
-			<property name="CraftActionName" value="lblContextActionCook"/>
-			<property name="CraftIcon" value="ui_game_symbol_spatula"/>
-			<property name="OpenSound" value="campfire_open"/>
-			<property name="CloseSound" value="campfire_close"/>
-			<property name="ParticleName" value="fire_small"/>
-			<property name="ParticleOffset" value="0.5,0.6,0.5"/>
-			<property name="CraftSound" value="campfire_cook_click"/>
-			<property name="CraftCompleteSound" value="campfire_complete_item"/>
-			<property name="WorkstationJournalTip" value="heatMapTip"/>
-			<property class="RepairItems">
-				<property name="resourceScrapIron" value="10"/>
-			</property>
-			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-			<drop event="Harvest" name="resourceMechanicalParts" count="0,1" tag="salvageHarvest"/>
-			<drop event="Harvest" name="toolCookingGrill" count="0,1" tag="salvageHarvest"/>
-			<drop event="Destroy" name="resourceScrapIron" count="5,10" prob="1"/>
-			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
-			<property name="DescriptionKey" value="campfireDesc"/>
-			<property name="SellableToTrader" value="false"/>
-			<property name="StabilitySupport" value="false"/>
-		</block>
+<block name="cntGasGrillWorking">
+	<property name="Class" value="Workstation"/>
+	<property name="CustomIcon" value="cntGasGrillClosed"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Model" value="#Entities/LootContainers?GasGrill_FullPrefab.prefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="HeatMapStrength" value="4"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE(2)"/>
+	<property class="Workstation">
+	<property name="Modules" value="tools,output,fuel,input"/>
+	<property name="CraftingAreaRecipes" value="campfire" />
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+</property>
+	<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+	<property name="CraftActionName" value="lblContextActionCook"/>
+	<property name="CraftIcon" value="ui_game_symbol_spatula"/>
+	<property name="OpenSound" value="campfire_open"/>
+	<property name="CloseSound" value="campfire_close"/>
+	<property name="ParticleName" value="fire_small"/>
+	<property name="ParticleOffset" value="0.5,0.6,0.5"/>
+	<property name="CraftSound" value="campfire_cook_click"/>
+	<property name="CraftCompleteSound" value="campfire_complete_item"/>
+	<property name="WorkstationJournalTip" value="heatMapTip"/>
+	<property class="RepairItems">
+	<property name="resourceScrapIron" value="10"/>
+</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="toolCookingGrill" count="0,1" tag="salvageHarvest"/>
+	<drop event="Destroy" name="resourceScrapIron" count="5,10" prob="1"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+	<property name="DescriptionKey" value="campfireDesc"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="StabilitySupport" value="false"/>
+</block>
 </append>
 	
-	<!--BETTER FARMING-->
-	<!--GROWTH SPEED IN MINUTES-->
-	<set xpath="//block[@name='cropsGrowingMaster']/property[@name='PlantGrowing.GrowthRate']/@value">
-	,30
-	</set>
-	<!--SEED STAYS AFTER HARVEST-->
-	<!--MUSHROOM-->
-	<append xpath="//block[@name='plantedMushroom3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedMushroom1"/>
-	</append>
-	<!--ALOE-->
-	<append xpath="//block[@name='plantedAloe3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedAloe1"/>
-	</append>
-	<!--BLUEBERRY-->
-	<append xpath="//block[@name='plantedBlueberry3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedBlueberry1"/>
-	</append>
-	<!--Chrysanthemum-->
-	<append xpath="//block[@name='plantedChrysanthemum3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedChrysanthemum1"/>
-	</append>
-	<!--COFFEE-->
-	<append xpath="//block[@name='plantedCoffee3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedCoffee1"/>
-	</append>
-	<!--CORN-->
-	<append xpath="//block[@name='plantedCorn3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedCorn1"/>
-	</append>
-	<!--COTTON-->
-	<append xpath="//block[@name='plantedCotton3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedCotton1"/>
-	</append>
-	<!--GOLDENROD-->
-	<append xpath="//block[@name='plantedGoldenrod3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedGoldenrod1"/>
-	</append>
-	<!--HOPS-->
-	<append xpath="//block[@name='plantedHop3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedHop1"/>
-	</append>
-	<!--POTATO-->
-	<append xpath="//block[@name='plantedPotato3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedPotato1"/>
-	</append>
-	<!--PUMPKIN-->
-	<append xpath="//block[@name='plantedPumpkin3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedPumpkin1"/>
-	</append>
-	<!--SUPER CORN-->
-	<append xpath="//block[@name='plantedGraceCorn3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedGraceCorn1"/>
-	</append>
-	<!--YUCCA-->
-	<append xpath="//block[@name='plantedYucca3HarvestPlayer']">
-		<property name="DowngradeBlock" value="plantedYucca1"/>
-	</append>
-	<!--NEW FOOD FROM PLANT FIBER-->
-	<insertAfter xpath="/blocks/block[@name='treeGrassMaster']/drop[@event='Destroy']">
-		<drop event="Destroy" name="survivalBerriesLL" count="4,8" prob="0.5"/>
-		<drop event="Destroy" name="survivalNutsLL" count="4,8" prob="0.5"/>
-	</insertAfter>
+<!--BETTER FARMING-->
+<!--GROWTH SPEED IN MINUTES-->
+<set xpath="//block[@name='cropsGrowingMaster']/property[@name='PlantGrowing.GrowthRate']/@value">
+,30
+</set>
+
+<!--SEED STAYS AFTER HARVEST-->
+<!--MUSHROOM-->
+<append xpath="//block[@name='plantedMushroom3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedMushroom1"/>
+</append>
+<!--ALOE-->
+<append xpath="//block[@name='plantedAloe3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedAloe1"/>
+</append>
+<!--BLUEBERRY-->
+<append xpath="//block[@name='plantedBlueberry3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedBlueberry1"/>
+</append>
+<!--Chrysanthemum-->
+<append xpath="//block[@name='plantedChrysanthemum3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedChrysanthemum1"/>
+</append>
+<!--COFFEE-->
+<append xpath="//block[@name='plantedCoffee3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedCoffee1"/>
+</append>
+<!--CORN-->
+<append xpath="//block[@name='plantedCorn3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedCorn1"/>
+</append>
+<!--COTTON-->
+<append xpath="//block[@name='plantedCotton3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedCotton1"/>
+</append>
+<!--GOLDENROD-->
+<append xpath="//block[@name='plantedGoldenrod3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedGoldenrod1"/>
+</append>
+<!--HOPS-->
+<append xpath="//block[@name='plantedHop3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedHop1"/>
+</append>
+<!--POTATO-->
+<append xpath="//block[@name='plantedPotato3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedPotato1"/>
+</append>
+<!--PUMPKIN-->
+<append xpath="//block[@name='plantedPumpkin3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedPumpkin1"/>
+</append>
+<!--SUPER CORN-->
+<append xpath="//block[@name='plantedGraceCorn3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedGraceCorn1"/>
+</append>
+<!--YUCCA-->
+<append xpath="//block[@name='plantedYucca3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedYucca1"/>
+</append>
+<!--NEW FOOD FROM PLANT FIBER-->
+<insertAfter xpath="/blocks/block[@name='treeGrassMaster']/drop[@event='Destroy']">
+	<drop event="Destroy" name="survivalBerriesLL" count="4,8" prob="0.5"/>
+	<drop event="Destroy" name="survivalNutsLL" count="4,8" prob="0.5"/>
+</insertAfter>
 	
-	<!--HARVEST FARM PLOT FROM RANDOMS-->
-	<remove xpath="/blocks/block[@name='farmPlotBlock']/drop[@event='Harvest'][@name='resourceClayLump']"/>
-	<remove xpath="/blocks/block[@name='farmPlotBlock']/drop[@event='Harvest'][@name='resourcePotassiumNitratePowder']"/>
-	<append xpath="/blocks/block[@name='farmPlotBlock']">
-		<drop event="Destroy" name="farmPlotBlockPlayer" prob="1" count="1"/>
-	</append>
+<!--HARVEST FARM PLOT FROM RANDOMS-->
+<remove xpath="/blocks/block[@name='farmPlotBlock']/drop[@event='Harvest'][@name='resourceClayLump']"/>
+<remove xpath="/blocks/block[@name='farmPlotBlock']/drop[@event='Harvest'][@name='resourcePotassiumNitratePowder']"/>
+<append xpath="/blocks/block[@name='farmPlotBlock']">
+	<drop event="Destroy" name="farmPlotBlockPlayer" prob="1" count="1"/>
+</append>
 	
+<!--new radio fiber drop wasteland trees-->
+<insertAfter xpath="/blocks/block[@name='treeMaster']/drop[@event='Destroy']">
+	<drop event="Destroy" name="resourceradiofiberLL" count="2,6" prob=".5"/>
+</insertAfter>
 	
-	<!--new radio fiber drop wasteland trees-->
-	<insertAfter xpath="/blocks/block[@name='treeMaster']/drop[@event='Destroy']">
-		<drop event="Destroy" name="resourceradiofiberLL" count="2,6" prob=".5"/>
-	</insertAfter>
-	
-	<!-- TIER1 LOG SPIKE -->
-	<append xpath="/blocks">
-	<block name="woodLogSpike1"> 
-		<property name="CreativeMode" value="None"/> 
-		<property name="Class" value="TrunkTip"/> 
-		<property name="BlockTag" value="Spike"/> 
-		<property name="Damage" value="3"/> 
-		<property name="Damage_received" value="7"/> 
-		<property name="Material" value="Mwood_regular"/> 
-		<property name="Shape" value="New"/> 
-		<property name="LightOpacity" value="6"/> 
-		<property name="Path" value="solid"/> 
-		<property name="Model" value="cone1m"/> 
-		<property name="Texture" value="21,21,22,22,22,22"/> 
-		<property name="UseGlobalUV" value="Local"/> 
-		<property name="ImposterExchange" value="imposterPyramid" param1="10"/> 
-		<property name="ImposterDontBlock" value="true"/> 
-		<property name="FuelValue" value="300"/> 
-		<property class="RepairItems"> 
-		<property name="resourceWood" value="10"/> 
-	</property> 
-		<property class="UpgradeBlock"> 
-		<property name="ToBlock" value="rWoodLogSpike2"/> 
-		<property name="Item" value="resourceWood"/> 
-		<property name="ItemCount" value="10"/> 
-		<property name="UpgradeHitCount" value="4"/> 
-	</property> 
-		<property name="CustomUpgradeSound" value="place_block_wood"/> 
-		<drop event="Destroy" name="resourceWood" count="2,6"/> 
-		<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/> 
-		<property name="Group" value="Tools/Traps"/> 
-		<property name="DescriptionKey" value="woodLogSpike1Desc"/> 
-		<property name="EconomicValue" value="30"/> 
-		<property name="EconomicBundleSize" value="20"/> 
-		<property name="FilterTags" value="MC_building,SC_traps"/> 
-		<property name="SortOrder1" value="70g0"/> 
-	</block> 
-
-	<!-- TIER2 LOG SPIKE -->
-	<block name="rWoodLogSpike2"> 
-		<property name="Extends" value="woodLogSpike1"/> 
-		<property name="CreativeMode" value="None"/> 
-		<property name="Damage" value="4"/> 
-		<property name="Damage_received" value="7"/> 
-		<property name="Texture" value="379"/> 
-		<property name="ImposterExchange" value="imposterPyramid" param1="119"/> 
-		<property class="UpgradeBlock"> 
-		<property name="ToBlock" value="rWoodMetalLogSpike3"/> 
-		<property name="Item" value="resourceScrapIron"/> 
-		<property name="ItemCount" value="20"/> 
-	</property> 
-		<property name="CustomUpgradeSound" value="place_block_metal"/> 
-		<property name="DowngradeBlock" value="woodLogSpike1"/> 
-		<property name="EconomicValue" value="0"/> 
-	</block> 
-
-	<!-- TIER3 LOG SPIKE -->
-	 <block name="rWoodMetalLogSpike3"> 
-		<property name="Extends" value="rWoodLogSpike2" param1="RepairItems"/> 
-		<property name="CreativeMode" value="None"/> 
-		<property name="Damage" value="5"/> 
-		<property name="Damage_received" value="10"/> 
-		<property name="Material" value="Mmetal"/> 
-		<property name="Texture" value="380"/> 
-		<property name="ImposterExchange" value="imposterPyramid" param1="120"/> 
-		<property class="RepairItems"> 
-		<property name="resourceScrapIron" value="20"/> 
-	</property> 
-		<property class="UpgradeBlock"> 
-		<property name="ToBlock" value="scrapIronLogSpike4"/> 
-		<property name="ItemCount" value="40"/> 
-		</property> 
-		<property name="DowngradeBlock" value="rWoodLogSpike2"/> 
-		<drop event="Destroy" name="resourceWood" count="0"/> 
-		<drop event="Destroy" name="resourceScrapIron" count="8"/> 
-	 </block>
-
-	<!-- TIER4 LOG SPIKE -->
-	<block name="scrapIronLogSpike4"> 
-		<property name="Extends" value="rWoodLogSpike2" param1="DowngradeBlock,RepairItems"/> 
-		<property name="CreativeMode" value="None"/> 
-		<property name="Damage" value="6"/> 
-		<property name="Damage_received" value="9"/> 
-		<property name="DisplayType" value="blockHardened"/> 
-		<property name="Material" value="MmoonrockLL"/> 
-		<property name="Texture" value="307"/> 
-		<property name="ImposterExchange" value="imposterPyramid" param1="87"/> 
-		<property class="RepairItems"> 
-		<property name="resourceScrapIron" value="40"/> 
-		 </property> 
-		<property class="UpgradeBlock"> 
-		<property name="ToBlock" value="rScrapIronLogSpike5"/> 
-		<property name="ItemCount" value="40"/> 
-	</property> 
-		<drop event="Destroy" name="resourceWood" count="0"/> 
-		<drop event="Destroy" name="resourceScrapIron" count="15"/> 
-		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/> 
-	</block>
-
-	<!-- TIER5 LOG SPIKE -->
-	<block name="rScrapIronLogSpike5"> 
-		<property name="Extends" value="scrapIronLogSpike4"/> 
-		<property name="CreativeMode" value="None"/> 
-		<property name="Damage" value="7"/> 
-		<property name="Damage_received" value="10"/> 
-		<property name="Texture" value="352"/> 
-		<property name="ImposterExchange" value="imposterPyramid" param1="110"/> 
-		<property class="UpgradeBlock"> 
-		<property name="ToBlock" value="steelLogSpike6"/> 
-		<property name="Item" value="resourceForgedSteel"/> 
-		<property name="ItemCount" value="10"/> 
-		<property name="UpgradeHitCount" value="4"/> 
-	</property> 
-		<property name="DowngradeBlock" value="scrapIronLogSpike4"/> 
-	</block> 
-
-	<!-- TIER6 LOG SPIKE -->
-	<block name="steelLogSpike6">
+<!-- TIER1 LOG SPIKE -->
+<append xpath="/blocks">
+<block name="woodLogSpike1"> 
+	<property name="CreativeMode" value="None"/> 
 	<property name="Class" value="TrunkTip"/> 
-		<property name="BlockTag" value="Spike"/> 
-		<property name="CreativeMode" value="None"/> 
-		<property name="Damage" value="7"/> 
-		<property name="Damage_received" value="40"/> 
-		<property name="DisplayType" value="blockHardened"/> 
-		<property name="Material" value="MvibeLL"/> 
-		<property name="Shape" value="New"/> 
-		<property name="LightOpacity" value="6"/> 
-		<property name="Path" value="solid"/> 
-		<property name="Model" value="cone1m"/> 
-		<property name="Texture" value="356,355,356,356,356,356"/> 
-		<property name="ImposterExchange" value="imposterPyramid" param1="112"/> 
-		<property name="ImposterDontBlock" value="true"/> 
-		<property name="UseGlobalUV" value="Local"/> 
-		<property class="RepairItems"> 
-		<property name="resourceForgedSteel" value="10"/> 
+	<property name="BlockTag" value="Spike"/> 
+	<property name="Damage" value="3"/> 
+	<property name="Damage_received" value="7"/> 
+	<property name="Material" value="Mwood_regular"/> 
+	<property name="Shape" value="New"/> 
+	<property name="LightOpacity" value="6"/> 
+	<property name="Path" value="solid"/> 
+	<property name="Model" value="cone1m"/> 
+	<property name="Texture" value="21,21,22,22,22,22"/> 
+	<property name="UseGlobalUV" value="Local"/> 
+	<property name="ImposterExchange" value="imposterPyramid" param1="10"/> 
+	<property name="ImposterDontBlock" value="true"/> 
+	<property name="FuelValue" value="300"/> 
+	<property class="RepairItems"> 
+	<property name="resourceWood" value="10"/> 
+</property> 
+	<property class="UpgradeBlock"> 
+	<property name="ToBlock" value="rWoodLogSpike2"/> 
+	<property name="Item" value="resourceWood"/> 
+	<property name="ItemCount" value="10"/> 
+	<property name="UpgradeHitCount" value="4"/> 
+</property> 
+	<property name="CustomUpgradeSound" value="place_block_wood"/> 
+	<drop event="Destroy" name="resourceWood" count="2,6"/> 
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/> 
+	<property name="Group" value="Tools/Traps"/> 
+	<property name="DescriptionKey" value="woodLogSpike1Desc"/> 
+	<property name="EconomicValue" value="30"/> 
+	<property name="EconomicBundleSize" value="20"/> 
+	<property name="FilterTags" value="MC_building,SC_traps"/> 
+	<property name="SortOrder1" value="70g0"/> 
+</block> 
+
+<!-- TIER2 LOG SPIKE -->
+<block name="rWoodLogSpike2"> 
+	<property name="Extends" value="woodLogSpike1"/> 
+	<property name="CreativeMode" value="None"/> 
+	<property name="Damage" value="4"/> 
+	<property name="Damage_received" value="7"/> 
+	<property name="Texture" value="379"/> 
+	<property name="ImposterExchange" value="imposterPyramid" param1="119"/> 
+	<property class="UpgradeBlock"> 
+	<property name="ToBlock" value="rWoodMetalLogSpike3"/> 
+	<property name="Item" value="resourceScrapIron"/> 
+	<property name="ItemCount" value="20"/> 
+</property> 
+	<property name="CustomUpgradeSound" value="place_block_metal"/> 
+	<property name="DowngradeBlock" value="woodLogSpike1"/> 
+	<property name="EconomicValue" value="0"/> 
+</block> 
+
+<!-- TIER3 LOG SPIKE -->
+<block name="rWoodMetalLogSpike3"> 
+	<property name="Extends" value="rWoodLogSpike2" param1="RepairItems"/> 
+	<property name="CreativeMode" value="None"/> 
+	<property name="Damage" value="5"/> 
+	<property name="Damage_received" value="10"/> 
+	<property name="Material" value="Mmetal"/> 
+	<property name="Texture" value="380"/> 
+	<property name="ImposterExchange" value="imposterPyramid" param1="120"/> 
+	<property class="RepairItems"> 
+	<property name="resourceScrapIron" value="20"/> 
+</property> 
+	<property class="UpgradeBlock"> 
+	<property name="ToBlock" value="scrapIronLogSpike4"/> 
+	<property name="ItemCount" value="40"/> 
 	</property> 
-		<property name="CustomUpgradeSound" value="place_block_metal"/> 
-		<property name="DowngradeBlock" value="rScrapIronLogSpike5"/> 
-		<drop event="Destroy" name="resourceScrapIron" count="10,20"/> 
-		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/> 
-		<property name="EconomicValue" value="160"/> 
-		<property name="Group" value="Tools/Traps"/> 
-		<property name="DescriptionKey" value="woodLogSpike1Desc"/> 
-		<property name="FilterTags" value="MC_building,SC_traps"/> 
-		<property name="SortOrder1" value="70g0"/>
-	</block> 
-	</append>
+	<property name="DowngradeBlock" value="rWoodLogSpike2"/> 
+	<drop event="Destroy" name="resourceWood" count="0"/> 
+	<drop event="Destroy" name="resourceScrapIron" count="8"/> 
+</block>
 
+<!-- TIER4 LOG SPIKE -->
+<block name="scrapIronLogSpike4"> 
+	<property name="Extends" value="rWoodLogSpike2" param1="DowngradeBlock,RepairItems"/> 
+	<property name="CreativeMode" value="None"/> 
+	<property name="Damage" value="6"/> 
+	<property name="Damage_received" value="9"/> 
+	<property name="DisplayType" value="blockHardened"/> 
+	<property name="Material" value="MmoonrockLL"/> 
+	<property name="Texture" value="307"/> 
+	<property name="ImposterExchange" value="imposterPyramid" param1="87"/> 
+	<property class="RepairItems"> 
+	<property name="resourceScrapIron" value="40"/> 
+</property> 
+	<property class="UpgradeBlock"> 
+	<property name="ToBlock" value="rScrapIronLogSpike5"/> 
+	<property name="ItemCount" value="40"/> 
+</property> 
+	<drop event="Destroy" name="resourceWood" count="0"/> 
+	<drop event="Destroy" name="resourceScrapIron" count="15"/> 
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/> 
+</block>
 
+<!-- TIER5 LOG SPIKE -->
+<block name="rScrapIronLogSpike5"> 
+	<property name="Extends" value="scrapIronLogSpike4"/> 
+	<property name="CreativeMode" value="None"/> 
+	<property name="Damage" value="7"/> 
+	<property name="Damage_received" value="10"/> 
+	<property name="Texture" value="352"/> 
+	<property name="ImposterExchange" value="imposterPyramid" param1="110"/> 
+	<property class="UpgradeBlock"> 
+	<property name="ToBlock" value="steelLogSpike6"/> 
+	<property name="Item" value="resourceForgedSteel"/> 
+	<property name="ItemCount" value="10"/> 
+	<property name="UpgradeHitCount" value="4"/> 
+</property> 
+	<property name="DowngradeBlock" value="scrapIronLogSpike4"/> 
+</block> 
 
+<!-- TIER6 LOG SPIKE -->
+<block name="steelLogSpike6">
+<property name="Class" value="TrunkTip"/> 
+	<property name="BlockTag" value="Spike"/> 
+	<property name="CreativeMode" value="None"/> 
+	<property name="Damage" value="7"/> 
+	<property name="Damage_received" value="40"/> 
+	<property name="DisplayType" value="blockHardened"/> 
+	<property name="Material" value="MvibeLL"/> 
+	<property name="Shape" value="New"/> 
+	<property name="LightOpacity" value="6"/> 
+	<property name="Path" value="solid"/> 
+	<property name="Model" value="cone1m"/> 
+	<property name="Texture" value="356,355,356,356,356,356"/> 
+	<property name="ImposterExchange" value="imposterPyramid" param1="112"/> 
+	<property name="ImposterDontBlock" value="true"/> 
+	<property name="UseGlobalUV" value="Local"/> 
+	<property class="RepairItems"> 
+	<property name="resourceForgedSteel" value="10"/> 
+	</property> 
+	<property name="CustomUpgradeSound" value="place_block_metal"/> 
+	<property name="DowngradeBlock" value="rScrapIronLogSpike5"/> 
+	<drop event="Destroy" name="resourceScrapIron" count="10,20"/> 
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/> 
+	<property name="EconomicValue" value="160"/> 
+	<property name="Group" value="Tools/Traps"/> 
+	<property name="DescriptionKey" value="woodLogSpike1Desc"/> 
+	<property name="FilterTags" value="MC_building,SC_traps"/> 
+	<property name="SortOrder1" value="70g0"/>
+</block> 
+</append>
+	
+<!--REMOVES THE INPUT MATERIAL FOR THE FORGE-->
+<set xpath="/blocks/block[@name='forge']/property[@class='Workstation']/property[@name='Modules']/@value">tools,output,fuel</set>
 </configs>
 
 

@@ -7,37 +7,34 @@ EZcurrencyLL
 
 <!--STARTER QUESTS-->
 <append xpath="/quests/quest[@id='quest_BasicSurvival1']">
-	<reward type="Item" id="EZcurrencyLL" value="200"/>
+	<reward type="Item" id="EZcurrencyLL" value="500"/>
+	<reward type="Quest" id="quest_progressionZombieHunting1"/>
 </append>
 <append xpath="/quests/quest[@id='quest_BasicSurvival2']">
-	<reward type="Item" id="EZcurrencyLL" value="300"/>
+	<reward type="Item" id="EZcurrencyLL" value="500"/>
 </append>
 <append xpath="/quests/quest[@id='quest_BasicSurvival3']">
-	<reward type="Item" id="EZcurrencyLL" value="400"/>
+	<reward type="Item" id="EZcurrencyLL" value="500"/>
 </append>
 <append xpath="/quests/quest[@id='quest_BasicSurvival4']">
 	<reward type="Item" id="EZcurrencyLL" value="500"/>
 </append>
 <append xpath="/quests/quest[@id='quest_BasicSurvival5']">
-	<reward type="Item" id="EZcurrencyLL" value="600"/>
+	<reward type="Item" id="EZcurrencyLL" value="500"/>
 </append>
 <append xpath="/quests/quest[@id='quest_BasicSurvival6']">
-	<reward type="Item" id="EZcurrencyLL" value="700"/>
+	<reward type="Item" id="EZcurrencyLL" value="500"/>
 </append>
 <append xpath="/quests/quest[@id='quest_BasicSurvival7']">
-	<reward type="Item" id="EZcurrencyLL" value="800"/>
+	<reward type="Item" id="EZcurrencyLL" value="500"/>
 </append>
 <append xpath="/quests/quest[@id='quest_BasicSurvival8']">
-	<reward type="Item" id="EZcurrencyLL" value="1000"/>
+	<reward type="Item" id="EZcurrencyLL" value="500"/>
 </append>
-
-<!--TRADER COMPLETION-->
 <append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
-	<reward type="Item" id="EZcurrencyLL" value="1500"/>
-	<reward type="Quest" id="quest_progressionZombieHunting1"/>
-	<reward type="Quest" id="quest_progressionAnimalHunting1"/>
+	<reward type="Item" id="EZcurrencyLL" value="500"/>
 </append>
-<!--6000 COINS WHEN COMPLETE-->
+<!--4500 COINS WHEN COMPLETE-->
 	
 <!-- Zombie Killing Progression -->
 <!-- Zombie Hunting 1 -->

@@ -1,9 +1,5 @@
 <configs>
-
-
-
 <!-- badassOnlyHordeStages -->
-
 <append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS79']">  <entity name="InfectedCop" prob="0.002"/><entity name="InfectedHawai" prob="0.002"/><entity name="InfectedSkater" prob="0.002"/><entity name="InfectedSoldier" prob="0.002"/><entity name="InfectedBoomer" prob="0.002"/><entity name="InfectedFeral" prob="0.002"/></append>
 <append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS95']">  <entity name="InfectedCop" prob="0.006"/><entity name="InfectedHawai" prob="0.006"/><entity name="InfectedSkater" prob="0.006"/><entity name="InfectedSoldier" prob="0.006"/><entity name="InfectedBoomer" prob="0.006"/><entity name="InfectedFeral" prob="0.006"/></append>
 <append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS112']"> <entity name="InfectedCop" prob="0.010"/><entity name="InfectedHawai" prob="0.010"/><entity name="InfectedSkater" prob="0.010"/><entity name="InfectedSoldier" prob="0.010"/><entity name="InfectedBoomer" prob="0.010"/><entity name="InfectedFeral" prob="0.010"/></append>
@@ -34,10 +30,7 @@
 <append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS954']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="1.000"/><entity name="InfectedSkater" prob="1.000"/><entity name="InfectedSoldier" prob="1.000"/><entity name="InfectedBoomer" prob="1.000"/><entity name="InfectedFeral" prob="1.000"/></append>
 <append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS1003']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="1.000"/><entity name="InfectedSkater" prob="1.000"/><entity name="InfectedSoldier" prob="1.000"/><entity name="InfectedBoomer" prob="1.000"/><entity name="InfectedFeral" prob="1.000"/></append>
 
-
-
 <!-- badasshordeStages -->	
-
 <append xpath="/entitygroups/entitygroup[@name='badassHordeStageGS79']"> <entity name="InfectedCop" prob="0.002"/><entity name="InfectedHawai" prob="0.002"/><entity name="InfectedSkater" prob="0.002"/><entity name="InfectedSoldier" prob="0.002"/><entity name="InfectedBoomer" prob="0.002"/><entity name="InfectedFeral" prob="0.002"/></append>
 <append xpath="/entitygroups/entitygroup[@name='badassHordeStageGS95']"> <entity name="InfectedCop" prob="0.006"/><entity name="InfectedHawai" prob="0.006"/><entity name="InfectedSkater" prob="0.006"/><entity name="InfectedSoldier" prob="0.006"/><entity name="InfectedBoomer" prob="0.006"/><entity name="InfectedFeral" prob="0.006"/></append>
 <append xpath="/entitygroups/entitygroup[@name='badassHordeStageGS112']"><entity name="InfectedCop" prob="0.010"/><entity name="InfectedHawai" prob="0.010"/><entity name="InfectedSkater" prob="0.010"/><entity name="InfectedSoldier" prob="0.010"/><entity name="InfectedBoomer" prob="0.010"/><entity name="InfectedFeral" prob="0.010"/></append>
@@ -68,10 +61,7 @@
 <append xpath="/entitygroups/entitygroup[@name='badassHordeStageGS954']"><entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="1.000"/><entity name="InfectedSkater" prob="1.000"/><entity name="InfectedSoldier" prob="1.000"/><entity name="InfectedBoomer" prob="1.000"/><entity name="InfectedFeral" prob="1.000"/></append>
 <append xpath="/entitygroups/entitygroup[@name='badassHordeStageGS1003']"><entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="1.000"/><entity name="InfectedSkater" prob="1.000"/><entity name="InfectedSoldier" prob="1.000"/><entity name="InfectedBoomer" prob="1.000"/><entity name="InfectedFeral" prob="1.000"/></append>
 
-
-
 <!-- feralHordeStage bloodmoon -->
-
 <append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.010"/><entity name="InfectedFeral" prob="0.020"/></append>
 <append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS147']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.010"/><entity name="InfectedFeral" prob="0.020"/></append>
 <append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.010"/><entity name="InfectedFeral" prob="0.020"/></append>
@@ -237,10 +227,7 @@
 <append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1969']"><entity name="InfectedCop" prob="0.800"/><entity name="InfectedHawai" prob="0.800"/><entity name="InfectedSkater" prob="0.800"/><entity name="InfectedSoldier" prob="0.800"/><entity name="InfectedBoomer" prob="0.600"/><entity name="InfectedFeral" prob="0.800"/></append>
 <append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1984']"><entity name="InfectedCop" prob="0.800"/><entity name="InfectedHawai" prob="0.800"/><entity name="InfectedSkater" prob="0.800"/><entity name="InfectedSoldier" prob="0.800"/><entity name="InfectedBoomer" prob="0.600"/><entity name="InfectedFeral" prob="0.800"/></append>
 
-
-
 <!-- Scout horde stage screamer spawn -->
-
 <append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS140']"><entity name="InfectedCop" prob="0.010"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
 <append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS148']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
 <append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS156']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>

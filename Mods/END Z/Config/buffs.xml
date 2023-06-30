@@ -175,8 +175,6 @@
 <!--ZOMBIE SMELL MEAT AND FAT-->
 <append xpath="/buffs/buff[@name='buffStatusCheck01']">
 	<effect_group name="Get Stalked">
-<!-- vanilla stinky animal products -->
-<!-- the values on the random roll are intentionally low because the check will be made frequently so the odds of having it not hit when carrying the offending item for more than 10 seconds are quite low. More likely a hunt for meat will result in being chased by wolves or worse all the way home. -->
 	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
 	<requirement name="PlayerItemCount" item_name="foodRawMeat" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="8"/></triggered_effect>
 	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
@@ -206,7 +204,7 @@
 </effect_group>
 <effect_group name="Get Spawns">
 	<requirement name="ProgressionLevel" progression_name="perkFromTheShadows" operation="LTE" value="4"/>
-	<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="mj_predators_horde1">
+	<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="prey_horde">
 	<requirement name="RandomRoll" seed_type="Random" min_max="0,200" operation="LTE" value="3"/>
 </triggered_effect>				
 </effect_group>
@@ -241,8 +239,8 @@
 	<display_value value="$buffStatusRadiation"/><display_value_key value="{0:0.0}%"/>
 	<update_rate value="3"/>
 <effect_group name="Radiation">
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="@$buffStatusRadiationPerc"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="subtract" value="10"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="15"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="subtract" value="15"/>
 	<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="player#vomit" play_in_head="true">
 	<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="2.5"/>
 </triggered_effect>
@@ -519,9 +517,7 @@
 </effect_group>
 </buff>
 </append>
-	
-	
-	
+		
 <!--ULTIMATE SCREAMER-->
 <append xpath="/buffs">
 <buff name="buffBansheeQueen01" hidden="true">

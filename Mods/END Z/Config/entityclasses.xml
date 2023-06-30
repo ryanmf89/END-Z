@@ -49,9 +49,9 @@
 </append>
 	
 <!--STARTER CRATE-->
-<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">,endzStarterCrate,meleeToolRepairT1ClawHammer</append>
-<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">,endzStarterCrate,meleeToolRepairT1ClawHammer</append>
-<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">,endzStarterCrate,meleeToolRepairT1ClawHammer</append>
+<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">,endzStarterCrate,meleeToolRepairT1ClawHammer,modGunMeleeRadRemover</append>
+<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">,endzStarterCrate,meleeToolRepairT1ClawHammer,modGunMeleeRadRemover</append>
+<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">,endzStarterCrate,meleeToolRepairT1ClawHammer,modGunMeleeRadRemover</append>
 
 <!-- Changes loot TimeStayAfterDeath -->
 <set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='TimeStayAfterDeath']/@value">1800</set>
@@ -449,14 +449,14 @@
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="1000"/>
 	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/> 
 </effect_group>
 </entity_class>
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="541"/>
 	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
-	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="8"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 	</effect_group>
 	
@@ -488,14 +488,14 @@
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="1000"/>
 	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/> 
 </effect_group>
 </entity_class>
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="541"/>
 	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
-	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="8"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
 
@@ -527,14 +527,14 @@
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="1000"/>
 	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/> 
 </effect_group>
 </entity_class>
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="541"/>
 	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
-	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="8"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
 </append>
@@ -707,7 +707,7 @@
 	<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalescoutpain"/>
 	<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemalescoutdeath"/>
 	<property name="SoundSense" value=""/>
-	<property name="ExperienceGain" value="5000"/>
+	<property name="ExperienceGain" value="1000"/>
 	<property name="Mass" value="1000"/>
 	<property name="Weight" value="850"/>
 	<property name="HasRagdoll" value="false"/>
@@ -717,10 +717,10 @@
 	<property name="LootDropEntityClass" value="Knap Sack"/>
 	<property name="LootDropProb" value="1"/>
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="10000"/>
+	<passive_effect name="HealthMax" operation="base_set" value="500"/>
 	<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBansheeQueen01"/>
-	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="100"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
 </entity_class>
