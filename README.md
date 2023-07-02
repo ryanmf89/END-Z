@@ -1,17 +1,13 @@
 ------!!!!!END Z!!!!!-------
-------NEW WITH UPDATE A21 STABLE-------
--forge smelting is gone, resources will be used from your inventory
--rad remover mod added to the starter items
--Ghastly Screamer fixed health and regen amount
--concrete shapes are only craftable in mixer
--steel shapes are only craftable in the workbench
--new mortar for upgrading to moon rock blocks
--gunpowder recipe ingredients increased by 1 but you get 5 gunpowder per 1 crafted
--bullet tips and casings now give 5 per 1 crafted
--removed improved weapons(firearms)due to issues when interacting
--steel ammo added in for more alternate ammo types also adjusted damage to be higher then basic ammo
--fixed error issue when talking to trader for the first time
--zombie killing quest is now offered after placing your first bedroll
+NEEDS TO BE INSTALLED CLIENT AND SERVER SIDE
+------A21 MOD VERSION 1.2-------
+-added marauder and md-500 as vehicles for in game
+-vehicle speeds adjusted to be better then vanilla
+-fixed scrapping issue
+-adjust loot drop for vibranium items to higher tier red bags, and t4&t5 chest spawns. can be rare to find so search dangerous places
+-made boiled water and mega crush craftable in the campfire with a required workstation tool
+-added a harvesting multi tool that acts as a pick,axe,shovel and knife all in one
+-chickens now drop eggs when harvesting
 
 ------ALREADY IN GAME-------
 -hazmat fibers and radioactive tree fibers
@@ -55,4 +51,15 @@
 -higher tier zombies spawn in the snow
 -higher tier zombies spawn in the desert
 -higher tier zombies and animals spawn in the pine forest
- 
+ -forge smelting is gone, resources will be used from your inventory
+-rad remover mod added to the starter items
+-Ghastly Screamer fixed health and regen amount
+-concrete shapes are only craftable in mixer
+-steel shapes are only craftable in the workbench
+-new mortar for upgrading to moon rock blocks
+-gunpowder recipe ingredients increased by 1 but you get 5 gunpowder per 1 crafted
+-bullet tips and casings now give 5 per 1 crafted
+-removed improved weapons(firearms)due to issues when interacting
+-steel ammo added in for more alternate ammo types also adjusted damage to be higher then basic ammo
+-fixed error issue when talking to trader for the first time
+-zombie killing quest is now offered after placing your first bedroll
