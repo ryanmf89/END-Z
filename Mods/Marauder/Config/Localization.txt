@@ -1,0 +1,11 @@
+Key,English
+vehicleMarauder,Marauder
+vehicleMarauderplaceable,Marauder
+vehicleMarauderplaceableDesc,Those zombies will be jealous of this ride!
+vehicleMarauderblack,Marauder
+vehicleMarauderblackplaceable,Marauder
+vehicleMarauderblackplaceableDesc,Those zombies will be jealous of this ride!
+vehicleMarauderchassis,Marauder Chassis
+vehicleMarauderchassisDesc,Parts needed to craft the Marauder.
+vehicleMarauderaccessories,Marauder Accessories
+vehicleMarauderaccessoriesDesc,Parts needed to craft the Marauder.

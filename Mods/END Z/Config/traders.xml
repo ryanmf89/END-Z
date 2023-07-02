@@ -1,6 +1,4 @@
 <configs>
-
-
 <!--TRADER ALWAYS OPEN-->
 <set xpath="//trader_info/@open_time">02:00</set>
 <set xpath="//trader_info/@close_time">02:00</set>

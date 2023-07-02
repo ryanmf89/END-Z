@@ -739,6 +739,47 @@
 </entity_class>	
 </append>
 
+<!--ADDS EGGS TO DROP HARVEST OF CHICKENS-->
+<remove xpath="/entity_classes/entity_class[@name='animalChicken']"></remove>
+<append xpath="/entity_classes">
+<entity_class name="animalChicken" extends="animalTemplateTimid">
+	<property name="Class" value="EntityAnimalRabbit"/>
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,animal,chicken,perkAT01,perkAT02,perkAT03"/>
+	<property name="MapIcon" value="ui_game_symbol_tracking_chicken"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_chicken"/>
+	<property name="Prefab" value="/Entities/Animals/CHICKEN/chickenPrefab"/>
+	<property name="Parent" value="Animals"/>
+	<property name="Faction" value="animals"/>
+	<property name="PhysicsBody" value="chicken"/>
+	<property name="Mass" value="15"/>
+	<property name="Weight" value="10"/>
+	<property name="SoundHurt" value="Animals/Chicken/chickenpain"/>
+	<property name="SoundDeath" value="Animals/Chicken/chickendeath"/>
+	<property name="SwimOffset" value="2"/>
+	<property name="HasRagdoll" value="false"/>
+	<property name="HasDeathAnim" value="false"/>
+	<property name="CanBigHead" value="false" />
 
+	<!-- Gameplay  -->
+	<property name="MoveSpeedPanic" value="1.3"/>
+	<property name="ExperienceGain" value="130"/>
+	<property name="DeadBodyHitPoints" value="175"/>
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalChicken -->
+	<drop event="Harvest" name="foodEgg" count="3,10" tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="23"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="5"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+	<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="10"/>
+	</effect_group>
+
+	<property name="NavObject" value="animaltracking_chicken" />
+</entity_class>
+</append>
 
 </configs>

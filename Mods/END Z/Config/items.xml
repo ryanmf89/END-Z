@@ -2163,6 +2163,70 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 <append xpath="/items/item[@name='gunMGT1AK47']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
 <append xpath="/items/item[@name='gunMGT2TacticalAR']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>	
 <append xpath="/items/item[@name='gunMGT3M60']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>	
-	
-	
+
+<!--A NEW MULTITOOL FOR THE GAME-->
+<!--multi tool, pick,axe,shovel,and knife in one-->
+<append xpath="/items">
+<item name="multiharvesttoolLL">
+	<property name="CustomIcon" value="meleeWpnBladeT3Machete"/>
+	<property name="CustomIconTint" value="760fd6"/>
+	<property name="Extends" value="meleeToolPickT1IronPickaxe"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="HoldType" value="4"/>
+	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Knives/machetePrefab.prefab"/>
+	<property name="RepairTools" value="resourcevibeRepairKitLL"/>
+	<property name="EconomicValue" value="700"/>
+	<property name="DescriptionKey" value="multiharvesttoolLLDesc"/>
+	<property name="TraderStageTemplate" value="baseTier2"/>
+	<property name="Material" value="MmeleeToolAllSteel"/>
+	<property name="Weight" value="2"/>
+	<property name="UnlockedBy" value="craftingHarvestingTools"/><!-- meleeToolSteelSetSchematic, -->
+	<property name="Group" value="Tools/Traps"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+<property class="Action0">
+	<property name="GrazeStart" value=".5"/>
+	<property name="GrazeEnd" value=".6"/>
+	<property name="SwingDegrees" value="65"/>
+	<property name="SwingAngle" value="180"/>
+	<property name="UseGrazingHits" value="true"/>
+</property>
+<property class="Action1">
+	<property name="UsePowerAttackAnimation" value="true"/>
+	<property name="UseGrazingHits" value="true"/>
+	<property name="GrazeStart" value=".4"/>
+	<property name="GrazeEnd" value=".48"/>
+	<property name="SwingDegrees" value="110"/>
+	<property name="SwingAngle" value="90"/>
+</property>
+<effect_group name="meleeToolPickT2SteelPickaxe">
+	<passive_effect name="AttacksPerMinute" operation="base_set" value="85" tags="perkMiner69r"/>
+	<passive_effect name="StaminaLoss" operation="base_set" value="10" tags="primary"/>
+	<passive_effect name="DegradationMax" operation="base_set" value="500,2000" tier="1,6" tags="perkMiner69r"/>
+	<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+	<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkMiner69r"/>
+	<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkMiner69r"/>
+	<passive_effect name="ModSlots" operation="base_set" value="6,6,6,6,6,6" tier="1,2,3,4,5,6"/>
+	<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+	<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+	<passive_effect name="EntityDamage" operation="base_set" value="40" tags="perkMiner69r"/>
+	<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random EntityDmg -->
+	<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+	<passive_effect name="BlockDamage" operation="base_set" value="75" tags="perkMiner69r,miningTool"/>
+	<passive_effect name="BlockDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random BlockDmg -->
+	<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+	<passive_effect name="PlayerExpGain" operation="perc_add" value="-.1" tags="Harvesting"/>
+	<passive_effect name="DegradationMax" operation="perc_add" value="-.08,.08" tags="perkMiner69r"/> <!-- random DegMax -->
+	<passive_effect name="HarvestCount" operation="base_set" value="1" tags="butcherHarvest"/>
+<!--<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.05,.05" tags="perkMiner69r"/> --> <!-- random APM -->
+<!--<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,.05"/> --> <!-- random StamLoss -->
+</effect_group>
+<effect_group name="Power Attack">
+	<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+	<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+<!--<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/> -->
+	<passive_effect name="StaminaLoss" operation="base_set" value="52.7" tags="secondary"/>
+</effect_group>
+</item>
+</append>
 </configs>

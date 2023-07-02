@@ -2,10 +2,16 @@
 <!-- Make player dropped bags bigger to accomodate new size-->
 <!--set xpath="/lootcontainers/lootcontainer[@id='2']/@size">11,11</set-->
 		
-<!-- Increase the amount of feathers and eggs you find in nests -->
+<!-- Increase the amount of feathers you find in nests -->
 <set xpath="/lootcontainers/lootgroup[@name='groupBirdNest01']/item[@name='resourceFeather']/@count">5,10</set>
-<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='resourceFeather']/@count">5,10</set>
-<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='foodEgg']/@loot_prob_template">high</set>
+<!--set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='resourceFeather']/@count">5,10</set-->
+<!--remove xpath="/loot/lootgroup[@name='groupBirdNest02']"></remove>
+<insertAfter xpath="/loot/lootgroup[@name='groupBirdNest01']">
+<lootgroup name="groupBirdNest02" count="1,2">
+	<item name="foodEgg" count="3,6" loot_prob_template="high"/>
+	<item name="resourceFeather" count="1,5" loot_prob_template="high"/>
+</lootgroup>
+</insertAfter-->
 
 <!-- Add acid to cupboards -->
 <append xpath="/lootcontainers/lootgroup[@name='groupCupboard02']">
@@ -47,27 +53,28 @@
 
 <!--BRASS weapons WITH PROB OF 5%-->
 <append xpath="//lootgroup[@name='groupWorkingStiffs01' or @name='groupWorkingStiffs02' or @name='groupConstructionCrate01' or @name='groupConstructionCrate02']">
-	<item name="brassshovelLL" loot_prob_template="veryLow"/>
-	<item name="brassaxeLL" loot_prob_template="veryLow"/>
-	<item name="brasspickaxeLL" loot_prob_template="veryLow"/>
-	<item name="brasssledgeLL" loot_prob_template="veryLow"/>
-	<item name="brassknifeLL" loot_prob_template="veryLow"/>
-	<item name="brassclubLL" loot_prob_template="veryLow"/>
-	<item name="brassknucksLL" loot_prob_template="veryLow"/>
-	<item name="brassspearLL" loot_prob_template="veryLow"/>
+	<item name="brassshovelLL" loot_prob_template="low"/>
+	<item name="brassaxeLL" loot_prob_template="low"/>
+	<item name="brasspickaxeLL" loot_prob_template="low"/>
+	<item name="brasssledgeLL" loot_prob_template="low"/>
+	<item name="brassknifeLL" loot_prob_template="low"/>
+	<item name="brassclubLL" loot_prob_template="low"/>
+	<item name="brassknucksLL" loot_prob_template="low"/>
+	<item name="brassspearLL" loot_prob_template="low"/>
 	<item name="moonrockshovelLL" loot_prob_template="med"/>
 	<item name="moonrockaxeLL" loot_prob_template="med"/>
 	<item name="moonrockspearLL" loot_prob_template="med"/>
 	<item name="moonrocksledgeLL" loot_prob_template="med"/>
 </append>
 <!--VIBRANIUM WEAPONS PREMADE IN THE WORLD LOOT WITH A PROB OF 5%-->
-<append xpath="//lootgroup[@name='groupHardenedChestT5_02' or @name='groupHardenedChestT5_06' or @name='groupZpackStrong01' or @name='groupZpackStrong02' or @name='groupZpackStrong03' or @name='groupHardenedChestT4_04' or @name='groupHardenedChestT4_08']">
-	<item name="t3vibespearLL" loot_prob_template="veryLow"/>
-	<item name="vibesledgeLL" loot_prob_template="veryLow"/>
-	<item name="vibemacheteLL" loot_prob_template="veryLow"/>
-	<item name="vibeknucksLL" loot_prob_template="veryLow"/>
-	<item name="vibebatLL" loot_prob_template="veryLow"/>
-	<item name="vibeaugerLL" loot_prob_template="veryLow"/>
+<append xpath="//lootgroup[@name='groupHardenedChestT5_02' or @name='groupHardenedChestT5_06' or @name='groupZpackStrong03' or @name='groupHardenedChestT4_04' or @name='groupHardenedChestT4_08']">
+	<item name="t3vibespearLL" loot_prob_template="low"/>
+	<item name="vibesledgeLL" loot_prob_template="low"/>
+	<item name="vibemacheteLL" loot_prob_template="low"/>
+	<item name="vibeknucksLL" loot_prob_template="low"/>
+	<item name="vibebatLL" loot_prob_template="low"/>
+	<item name="vibeaugerLL" loot_prob_template="low"/>
+	<item name="multiharvesttoolLL" loot_prob_template="low"/>
 </append>	
 			
 <!--NEW AMMO-->	
@@ -128,6 +135,7 @@
 <!-- Knap Sack -->
 <lootcontainer id="998" name="KnapSack" count="4" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 	<item name="EZcurrencyLL" count="500,1000" prob="0.2"/>
+	<item name="multiharvesttoolLL" loot_prob_template="low"/>
 </lootcontainer>
 </append>
 </configs>

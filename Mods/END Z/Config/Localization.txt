@@ -53,10 +53,13 @@ vibemacheteLL,Items,melee,,,"Vibranium Machete"
 vibemacheteLLDesc,Items,melee,,,"Crafted from vibranium and this knife will kill anything in its path"
 vibeknucksLL,Items,melee,,,"Vibranium Knuckles"
 vibeknucksLLDesc,Items,melee,,,"Crafted from vibranium and these knuckles have power like THOR!"
-vibebatLL,Items,melee,,,"Vibranium Electric Bat"
-vibebatLLDesc,Items,melee,,,"Crafted from vibranium and this bat will electrify the heck outta zombies"
+vibebatLL,Items,melee,,,"Vibranium Bat"
+vibebatLLDesc,Items,melee,,,"Crafted from vibranium and this bat will send zombies flying"
 t3vibespearLL,Items,melee,,,"Vibranium Spear"
 t3vibespearLLDesc,Items,melee,,,"VIBRANIUM SPEAR IS THE STRONGEST SPEAR IN THE GAME, read the vibranium spear schematic to unlock!"
+
+multiharvesttoolLL,Items,melee,,,"All In 1 Harvest Tool"
+multiharvesttoolLLDesc,Items,melee,,,"this tool acts as a pickaxe, axe, shovel and knife! you can only craft a tier 1 but in high end loot you have a rare chance to find a higher tier. BETTER GET TO LOOTIN!!"
 
 endzStarterCrate,blocks,Container,,,EndZ Starter Crate
 endzStarterCrateDesc,blocks,Container,,,"Your Starting gear. Place on the ground and break to open. Its not much but it helps"

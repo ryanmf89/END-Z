@@ -7,67 +7,67 @@
 </recipe>
 
 <!-- CANNED FOOD RECIPES -->
-<recipe name="foodCanMiso" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanMiso" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 </recipe>
 
-<recipe name="foodCanPasta" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanPasta" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="resourceYuccaFibers" count="10"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="5"/>
 </recipe>
 
-<recipe name="foodCanPeas" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanPeas" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="resourceYuccaFibers" count="10"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="resourceClayLump" count="5"/>
 </recipe>
 
-<recipe name="foodCanCatfood" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanCatfood" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="resourceYuccaFibers" count="5"/>
 </recipe>
 
-<recipe name="foodCanDogfood" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanDogfood" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="resourceYuccaFibers" count="5"/>
 </recipe>
 
-<recipe name="foodCanChili" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanChili" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="resourceYuccaFibers" count="5"/>
 	<ingredient name="foodCanMiso" count="1"/>
 </recipe>
 
-<recipe name="foodCanSalmon" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanSalmon" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 </recipe>
 
-<recipe name="foodCanSham" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanSham" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="10"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 </recipe>
 
-<recipe name="foodCanBeef" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanBeef" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 </recipe>
 
-<recipe name="foodCanStock" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanStock" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="foodCanBeef" count="1"/>
 </recipe>
 
-<recipe name="foodCanTuna" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanTuna" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="foodRawMeat" count="5"/>
 </recipe>
 
-<recipe name="foodCanChicken" count="2" craft_area="campfire" craft_time="15">
+<recipe name="foodCanChicken" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="foodRawMeat" count="5"/>
 </recipe>
@@ -224,6 +224,22 @@
 <remove xpath="/recipes/recipe[@name='resourceScrapBrass']"></remove>
 <remove xpath="/recipes/recipe[@name='resourceScrapIron']"></remove>
 <remove xpath="/recipes/recipe[@name='resourceScrapLead']"></remove>
+
+<!--ADDS SCRAP RESOURCE RECIPES BACK IN FOR SCRAPPING-->
+<append xpath="/recipes">
+<recipe name="resourceClayLump" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+<recipe name="resourceRockSmall" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+<recipe name="resourceScrapBrass" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+<recipe name="resourceScrapIron" count="1" tooltip="ttScrapMetalIron" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+<recipe name="resourceScrapLead" count="1" tooltip="ttScrapMetalLead" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+</append>
+
+<!--ADDS SAND BACK TO CEMENT MIXER TO BE CRAFTABLE-->
+<append xpath="/recipes">
+<recipe name="resourceCrushedSand" count="1" craft_area="cementMixer" tags="cementMixerCrafting">
+	<ingredient name="resourceRockSmall" count="1"/>
+</recipe>
+</append>
 
 <!--REMOVES FORGE RECIPES BECAUSE UNITS ARE USED-->
 <remove xpath="/recipes/recipe[@name='glassBulletproofBlockVariantHelper']"></remove>
@@ -493,9 +509,9 @@
 <!--STEEL AMMO-->
 <append xpath="/recipes">
 <recipe name="resourceBulletCasingSteel" count="5" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
-	<ingredient name="resourceScrapIron" count="5"/>
-	<ingredient name="resourceScrapBrass" count="5"/>
-	<ingredient name="resourceClayLump" count="5"/>
+	<ingredient name="resourceScrapIron" count="10"/>
+	<ingredient name="resourceScrapBrass" count="10"/>
+	<ingredient name="resourceClayLump" count="10"/>
 <effect_group>
 	<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.177,.12" tags="resourceScrapIron"/>
 </effect_group>
@@ -520,5 +536,33 @@
 </recipe>
 </append>
 
+<!--MAKE WATER CRAFTABLE FROM SNOWBALLS-->
+<append xpath="/recipes">
+<recipe name="drinkJarBoiledWater" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="30">
+	<ingredient name="resourceSnowBall" count="250"/>
+</recipe>
+</append>
+
+<!--MAKES MEGACRUSH CRAFTABLE-->
+<append xpath="/recipes">
+<recipe name="drinkCanMegaCrush" count="1" craft_area="campfire" craft_tool="toolBeaker" craft_time="240">
+	<ingredient name="drinkJarCoffee" count="1"/>
+	<ingredient name="drinkJarBeer" count="1"/>
+	<ingredient name="drugSteroids" count="2"/>
+</recipe>
+</append>
+
+<!--multi tool, pick,axe,shovel,and knife in one-->
+<append xpath="/recipes">
+<recipe name="multiharvesttoolLL" count="1" craft_area="workbench" craft_time="1200">
+	<ingredient name="meleeToolPickT2SteelPickaxe" count="1"/>
+	<ingredient name="meleeToolAxeT2SteelAxe" count="1"/>
+	<ingredient name="meleeToolShovelT2SteelShovel" count="1"/>
+	<ingredient name="meleeWpnBladeT3Machete" count="1"/>
+</recipe>
+</append>
+
+
 
 </configs>
+
