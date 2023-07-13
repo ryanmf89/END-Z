@@ -1,0 +1,235 @@
+<configs>
+<append xpath="/blocks">
+
+		<block name="guppysFireExtinguisherBlock">
+			<property name="Material" value="Mmetal"/>
+			<property name="IsTerrainDecoration" value="true"/>	
+			<property name="Shape" value="ModelEntity"/>	
+			<property name="Model" value="#@modfolder:Resources/guppyFireExtinguisher.unity3d?GupMumFireExtinguisherBlock.prefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>			
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	
+			<property name="CustomIcon" value="guppyFireExtinguisher" />
+			<property name="Stabilitysupport" value="true"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="DescriptionKey" value="guppysFireExtinguisherBlockDesc"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+			<property name="CanPickup" value="true" param1="guppyFireExtinguisherItem"/>
+		</block>
+		
+		<block name="guppyOilSlickGoesInDitch">
+			<property name="Material" value="Mguppyoil"/>
+			<property name="IsTerrainDecoration" value="true"/>	
+			<property name="Shape" value="ModelEntity"/>	
+			<property name="Model" value="#@modfolder:Resources/guppyOilSlick.unity3d?guppyOilSlickGoesInDitch.prefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>			
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	
+			<property name="CustomIcon" value="guppyOilSlickDitch" />
+			<property name="Stabilitysupport" value="false"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="DescriptionKey" value="guppyOilSlickGoesInDitchDesc"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+			<property name="FireDamage" value="1" />
+		</block>
+
+		<block name="gupOilSlickGoesOnBlock">
+			<property name="Material" value="Mguppyoil"/>
+			<property name="IsTerrainDecoration" value="true"/>	
+			<property name="Shape" value="ModelEntity"/>	
+			<property name="Model" value="#@modfolder:Resources/guppyOilSlick.unity3d?gupOilSlickGoesOnBlock.prefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>			
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	
+			<property name="CustomIcon" value="guppyOilSlickBlock" />
+			<property name="Stabilitysupport" value="false"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="DescriptionKey" value="gupOilSlickGoesOnBlockDesc"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+			<property name="FireDamage" value="1" />
+		</block>	
+
+		<block name="guppyCampfireRocks">
+			<property name="Material" value="MstoneNoGlue"/>
+			<property name="IsTerrainDecoration" value="true"/>	
+			<property name="Shape" value="ModelEntity"/>	
+			<property name="Model" value="#@modfolder:Resources/gupCampfire.unity3d?guppyCampfireRocks.prefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>			
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	
+			<property name="CustomIcon" value="guppyOilSlickBlock" />
+			<property name="Stabilitysupport" value="false"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="DescriptionKey" value="gupOilSlickGoesOnBlockDesc"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="guppyCampfireLogsOff"/>
+				<property name="Item" value="resourceGuppyFirewood"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>	
+			<drop event="Destroy" name="resourceRockSmall" count="8"/>			
+		</block>	
+
+		<block name="guppyCampfireLogsOff">
+			<property name="Material" value="MguppyCampfire"/>
+			<property name="IsTerrainDecoration" value="false"/>	
+			<property name="Shape" value="ModelEntity"/>	
+			<property name="Model" value="#@modfolder:Resources/gupCampfire.unity3d?guppyCampfireLogsOff.prefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>			
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	
+			<property name="CustomIcon" value="guppyOilSlickBlock" />
+			<property name="Stabilitysupport" value="false"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="DescriptionKey" value="gupOilSlickGoesOnBlockDesc"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+			<property name="FireDamage" value="1500" />
+			<property name="FireDowngradeBlock" value="guppyCampfireLogsOn" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="guppyCampfireLogsOffPot"/>
+				<property name="Item" value="resourceGuppyCookingPot"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>	
+			<property name="FireParticle" value="#@modfolder:Resources/gupCampfire.unity3d?guppyCampfireParticle" /> 
+		</block>	
+
+		<block name="guppyCampfireLogsOn">
+			<property name="Material" value="MguppyCampfireLit"/>
+			<property name="IsTerrainDecoration" value="false"/>	
+			<property name="Shape" value="ModelEntity"/>	
+			<property name="Model" value="#@modfolder:Resources/gupCampfire.unity3d?guppyCampfireLogsOn.prefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>			
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	
+			<property name="CustomIcon" value="guppyOilSlickBlock" />
+			<property name="Stabilitysupport" value="false"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="DescriptionKey" value="gupOilSlickGoesOnBlockDesc"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+			<property name="FireDamage" value="1" />
+<!-- 			<property class="UpgradeBlock">
+				<property name="ToBlock" value="guppyCampfireLogsOffPot"/>
+				<property name="Item" value="resourceGuppyCookingPot"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>	
+			<property class="RepairItems">
+				<property name="resourceGuppyCookingPot" value="0"/>
+			</property>	 -->		
+			<property name="FireParticle" value="#@modfolder:Resources/gupCampfire.unity3d?guppyCampfireParticle" /> 
+			<property name="DowngradeBlock" value="guppyCampfireRocks"/>
+		</block>
+		
+		<block name="guppyCampfireLogsOffPot">
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="MguppyCampfireLit"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Weight" value="0"/>
+			<property name="Shape" value="ModelEntity"/>	
+			<property name="Model" value="#@modfolder:Resources/gupCampfire.unity3d?guppyCampfireLogsOffPot.prefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="2"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="player,workbench"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+			<property name="CraftIcon" value="ui_game_symbol_spatula"/>
+			<property name="OpenSound" value="campfire_open"/>
+			<property name="CloseSound" value="campfire_close"/>
+			<property name="CraftSound" value="campfire_cook_click"/>
+			<property name="CraftCompleteSound" value="campfire_complete_item"/>
+			<property class="RepairItems">
+				<property name="resourceRockSmall" value="8"/>
+			</property>
+			<drop event="Harvest" name="resourceRockSmall" count="3" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="workbenchDesc"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="FireParticle" value="#@modfolder:Resources/gupCampfire.unity3d?guppyCampfireParticle" /> 
+		</block>
+		
+		<block name="guppyCampfireLogsOnPot">
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="MguppyCampfireLit"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Weight" value="0"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/gupCampfire.unity3d?guppyCampfireLogsOnPot.prefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="2"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="player,workbench"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+			<property name="CraftIcon" value="ui_game_symbol_spatula"/>
+			<property name="OpenSound" value="campfire_open"/>
+			<property name="CloseSound" value="campfire_close"/>
+			<property name="CraftSound" value="campfire_cook_click"/>
+			<property name="CraftCompleteSound" value="campfire_complete_item"/>
+			<property class="RepairItems">
+				<property name="resourceRockSmall" value="8"/>
+			</property>
+			<drop event="Harvest" name="resourceRockSmall" count="3" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="workbenchDesc"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="FireParticle" value="#@modfolder:Resources/gupCampfire.unity3d?guppyCampfireParticle" /> 
+		</block>		
+		
+</append>
+		
+		<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='FireEnable']/@value">true</set>
+		<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='CheckInterval']/@value">20</set>
+		<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='SmokeTime']/@value">30</set>
+		<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='FireDamage']/@value">50</set>		
+		<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='SmokeParticle']/@value">#@modfolder:Resources/guppySmokeSmolder.unity3d?gupSmokeSmolder.prefab</set>
+		<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='MaterialDamage']/@value">wood, cloth, corn, grass, plastic, leaves, cactus, mushroom, hay, paper, trash, backpack, organic</set>
+		<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='MaterialSurface']/@value">wood, cloth, corn, grass, plastic, leaves, cactus, mushroom, hay, paper, trash, backpack, organic</set>
+		
+		<set xpath="/blocks/block[@name='cntFetchQuestSatchel']/property[@name='StabilityIgnore']/@value">false</set>
+		
+<!--
+        <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='CaveConfiguration']/property[@name='CaveEnabled']/@value">true</set>
+        <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='CaveConfiguration']/property[@name='GenerationType']/@value">HeightMap</set>
+        <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='CaveConfiguration']/property[@name='CavePath']/@value">@modfolder:/Caves/Stamps/cave1.png</set>
+        <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='CaveConfiguration']/property[@name='CavePrefab']/@value">Large</set>	
+		<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='CaveConfiguration']/property[@name='Logging']/@value">false</set>
+		-->
+
+</configs>

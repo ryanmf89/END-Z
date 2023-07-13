@@ -1,0 +1,19 @@
+<configs>
+
+	<insertAfter xpath="/blockplaceholders/placeholder[@name='cntMicrowaveRandomLootHelper']/block[@name='cntMicrowaveOvenVer2Closed']">
+		<block name="guppysFireExtinguisherBlock" prob=".33"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blockplaceholders/placeholder[@name='cntCashRegisterRandomLootHelper']/block[@name='cntCashRegister']">
+		<block name="guppysFireExtinguisherBlock" prob=".33"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blockplaceholders/placeholder[@name='cntClothesRackRoundRandomLootHelper']/block[@name='cntClothesRackRoundShirts']">
+		<block name="guppysFireExtinguisherBlock" prob=".33"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blockplaceholders/placeholder[@name='cntFileCabinetShortRandomLootHelper']/block[@name='cntFileCabinetShortClosed']">
+		<block name="guppysFireExtinguisherBlock" prob=".33"/>
+	</insertAfter>
+
+</configs>

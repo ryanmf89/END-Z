@@ -33,9 +33,11 @@
 <set xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@event='Harvest' and @name='resourceBone' and @tag='allToolsHarvest']/@count">10</set>
 <set xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@event='Harvest' and @tag='butcherHarvest' and @name='foodRawMeat']/@count">20</set>
 <set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/drop[@event='Harvest' and @tag='butcherHarvest' and @name='resourceFeather']/@count">30</set>
-<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='WalkSpeed']/@value">2.5</set>
-<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='RunSpeed']/@value">1.8</set>
-<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='WalkSpeed'][@tags='swimming']/@value">4.0</set>
+
+<!--player health,stamina,runspeed and walkspeed-->
+<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='WalkSpeed']/@value">2.0</set>
+<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='RunSpeed']/@value">1.6</set>
+<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='WalkSpeed'][@tags='swimming']/@value">3.0</set>
 <set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='HealthMax']/@value">150</set>	
 <set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='StaminaMax']/@value">150</set>
 	
@@ -43,15 +45,15 @@
 <!--ZOMBIE TRACKING-->	
 <append xpath="/entity_classes/entity_class[@name='playerMale']">
 	<effect_group>
-	<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffZAlert"/>
-	<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffZAlert"/>
+	<triggered_effect trigger="onSelfCrouch" action="AddBuff" target="self" buff="buffZAlert"/>
+	<triggered_effect trigger="onSelfStand" action="RemoveBuff" target="self" buff="buffZAlert"/>
 </effect_group>
 </append>
 	
 <!--STARTER CRATE-->
-<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">,endzStarterCrate,meleeToolRepairT1ClawHammer,modGunMeleeRadRemover</append>
-<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">,endzStarterCrate,meleeToolRepairT1ClawHammer,modGunMeleeRadRemover</append>
-<append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">,endzStarterCrate,meleeToolRepairT1ClawHammer,modGunMeleeRadRemover</append>
+<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">endzStarterCrate</set>
+<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">endzStarterCrate</set>
+<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">endzStarterCrate</set>
 
 <!-- Changes loot TimeStayAfterDeath -->
 <set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='TimeStayAfterDeath']/@value">1800</set>
@@ -65,8 +67,6 @@
 <append xpath="/entity_classes">  
 <entity_class name="InfectedCop" extends="zombieFatCop">
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
-	<!--property name="ReplaceMaterial0" value="#Entities/Zombies?Zombies/Materials/feral_radiated.mat"/-->
-	<!--property name="ReplaceMaterial1" value="particleeffects/materials/p_spark_electricity"/-->
 	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZCop.prefab"/>
 	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/>
@@ -86,10 +86,10 @@
 	<property name="SizeScale" value="1.18"/>
 	<property name="ExperienceGain" value="3000"/>
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/>
+	<property name="LootDropProb" value=".1"/>
 	<property name="MoveSpeedAggro" value="1, 1.5"/>	
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="2500"/>
+	<passive_effect name="HealthMax" operation="base_set" value="1500,2500"/>
 	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
@@ -106,8 +106,8 @@
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
 	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZSoldier.prefab"/>
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -120,18 +120,15 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>	
-	<!-- Gameplay -->
-	<!-- <property name="Buffs" value="zombieRadiatedBuff80"/> -->
+
 	<property name="SizeScale" value="1.18"/>
-	<property name="ExperienceGain" value="3000"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="3000"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/>
 	<propertyname name="MoveSpeedAggro" value="1, 1.5"/>		
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="2500"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
-	<!-- <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff=""/> --> <!-- Ratbert removed -->
+	<passive_effect name="HealthMax" operation="base_set" value="1500,2500"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
@@ -142,8 +139,8 @@
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
 	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZHawaiian.prefab"/>
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -156,18 +153,15 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>
-	<!-- Gameplay -->
-	<!-- <property name="Buffs" value="zombieRadiatedBuff80"/> -->
+
 	<property name="SizeScale" value="1.18"/>
-	<property name="ExperienceGain" value="3000"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="3000"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/> 
 	<property name="MoveSpeedAggro" value="1, 1.5"/>		
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="2500"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
-	<!-- <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff=""/> --> <!-- Ratbert Removed -->
+	<passive_effect name="HealthMax" operation="base_set" value="1500,2500"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
@@ -178,8 +172,8 @@
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
 	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZThug.prefab"/>
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -192,18 +186,15 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>
-	<!-- Gameplay -->
-	<!-- <property name="Buffs" value="zombieRadiatedBuff80"/> -->
+
 	<property name="SizeScale" value="1.18"/>
-	<property name="ExperienceGain" value="3000"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="3000"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/> 
 	<property name="MoveSpeedAggro" value="1, 1.4"/>		
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="2500"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
-	<!-- <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff=""/> --> <!-- Ratbert Removed -->
+	<passive_effect name="HealthMax" operation="base_set" value="1500,2500"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
@@ -214,8 +205,8 @@
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
 	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZWightFeral.prefab"/>
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -228,21 +219,17 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>
-	<!-- Gameplay -->
-	<!-- <property name="Buffs" value="zombieRadiatedBuff80"/> -->
+
 	<property name="SizeScale" value="1.18"/>
-	<property name="ExperienceGain" value="3000"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="3000"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/> 
 	<property name="MoveSpeedAggro" value="1, 1.2"/>		
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="2500"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
-	<!-- <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff=""/> --> <!-- Ratbert Removed -->
+	<passive_effect name="HealthMax" operation="base_set" value="1500,2500"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
-	<!-- <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/> --> <!-- Ratbert Removed -->
 </effect_group>
 </entity_class>
 
@@ -259,7 +246,7 @@
 	<property name="AITask-4" value="ApproachSpot"/>
 	<property name="AITask-5" value="Look"/>
 	<property name="AITask-6" value="Wander"/>
-	<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->
+	<property name="AITask-7" value=""/>
 	<property name="SoundRandom" value="demolitionzroam"/>
 	<property name="SoundAlert" value="demolitionzalert"/>
 	<property name="SoundAttack" value="demolitionzattack"/>
@@ -267,7 +254,7 @@
 	<property name="SoundDeath" value="demolitionzdeath"/>
 	<property name="SoundSense" value="demolitionzsense"/>
 	<property name="SoundFootstepModifier" value="bear_footstep"/>
-	<!-- Gameplay -->
+
 	<property name="SizeScale" value="1.18"/>
 	<property name="HandItem" value="meleeHandZombieDemolition"/>
 	<property name="JumpMaxDistance" value="1, 2"/>
@@ -280,20 +267,19 @@
 	<property name="Explosion.DamageBonus.earth" value=".1"/>
 	<property name="StompsSpikes" value="true"/>
 	<property name="ExplodeDelay" value="2"/>
-	<property name="ExplodeHealthThreshold" value="0"/> <!-- Disable Health explosion -->
+	<property name="ExplodeHealthThreshold" value="0"/> 
 	<property name="SoundExplodeWarn" value="demolitionzexplodewarning"/>
 	<property name="SoundTick" value="demolitionz_beep,.5,.9"/>
 	<property name="ExperienceGain" value="3000"/>
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/>
+	<property name="LootDropProb" value=".1"/>
 	<property name="MoveSpeedAggro" value=".8, .9"/>		
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+	<passive_effect name="HealthMax" operation="base_set" value="1500,2000"/>
 	<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 	<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head"/>
 	<passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
 	<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
-	<!-- <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/> --> <!-- Ratbert Removed -->
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
@@ -341,9 +327,9 @@
 <entity_class name="BossDireWolf" extends="animalWolf">
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
 	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
-
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/>
+	<property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -356,25 +342,22 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>
-	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
-	<!-- Gameplay -->
+
 	<property name="Buffs" value="zombieRadiatedBuff80"/>
 	<property name="SizeScale" value="1.65"/>
-	<property name="ExperienceGain" value="1500"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="1500"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/> 
 	<property name="MoveSpeedAggro" value="1, 1.5"/>	
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="1000"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	<passive_effect name="HealthMax" operation="base_set" value="500,1000"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/> 
 </effect_group>
 </entity_class>
-
 <effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="541"/>
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="8"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
@@ -383,9 +366,9 @@
 <entity_class name="BossZombieBear" extends="animalBear">
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
 	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
-
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/>
+	<property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -398,35 +381,34 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>	
-	<!-- Gameplay -->
+
 	<property name="Buffs" value="zombieRadiatedBuff80"/>
 	<property name="SizeScale" value="1.65"/>
-	<property name="ExperienceGain" value="1500"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="1500"/>
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/> 
 	<property name="MoveSpeedAggro" value="1, 1.5"/>
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="1000"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
-	<!-- <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff=""/> --> <!-- Ratbert removed -->
+	<passive_effect name="HealthMax" operation="base_set" value="500,1000"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
 </entity_class>
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="541"/>
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="8"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
 	
 <entity_class name="AwakenMarlene" extends="zombieMarlene">
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
-	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_glass"/>
+	<property name="ReplaceMaterial2" value="entities/resources/materials/oreshaleboulder"/>
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZMarlene.prefab"/>
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/>
+	<property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -439,33 +421,34 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>
-	<!-- Gameplay -->
+
 	<property name="Buffs" value="zombieRadiatedBuff80"/>
 	<property name="SizeScale" value="1.65"/>
-	<property name="ExperienceGain" value="1500"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="1500"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/>
 	<property name="MoveSpeedAggro" value="1, 1.5"/>	
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="1000"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	<passive_effect name="HealthMax" operation="base_set" value="500,1000"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/> 
 </effect_group>
 </entity_class>
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="541"/>
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 	</effect_group>
 	
 <entity_class name="AwakenDarlene" extends="zombieDarlene">
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
-	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_glass"/>
+	<property name="ReplaceMaterial2" value="entities/resources/materials/oreshaleboulder"/>
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZDarlene.prefab"/>
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/>
+	<property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -478,33 +461,34 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>
-	<!-- Gameplay -->
+
 	<property name="Buffs" value="zombieRadiatedBuff80"/>
 	<property name="SizeScale" value="1.65"/>
-	<property name="ExperienceGain" value="1500"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="1500"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/> 
 	<property name="MoveSpeedAggro" value="1, 1.5"/>	
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="1000"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	<passive_effect name="HealthMax" operation="base_set" value="500,1000"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/> 
 </effect_group>
 </entity_class>
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="541"/>
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
 
 <entity_class name="AwakenArlene" extends="zombieArlene">
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
-	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_glass"/>
+	<property name="ReplaceMaterial2" value="entities/resources/materials/oreshaleboulder"/>
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZArlene.prefab"/>
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/>
+	<property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -517,23 +501,22 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>
-	<!-- Gameplay -->
+
 	<property name="Buffs" value="zombieRadiatedBuff80"/>
 	<property name="SizeScale" value="1.65"/>
-	<property name="ExperienceGain" value="1500"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="1500"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/>
 	<property name="MoveSpeedAggro" value="1, 1.5"/>	
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="1000"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	<passive_effect name="HealthMax" operation="base_set" value="500,1000"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/> 
 </effect_group>
 </entity_class>
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="541"/>
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
@@ -543,10 +526,11 @@
 <append xpath="/entity_classes"> 
 <entity_class name="FrozenYo" extends="zombieYo">
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
-	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZYo.prefab"/>
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_snow"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/>
+	<property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -559,16 +543,16 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>
-	<!-- Gameplay -->
+
 	<property name="Buffs" value="zombieRadiatedBuff80"/>
 	<property name="SizeScale" value="1.50"/>
-	<property name="ExperienceGain" value="2500"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="2500"/>
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/>
 	<property name="MoveSpeedAggro" value="1, 1.5"/>	
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="2000"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	<passive_effect name="HealthMax" operation="base_set" value="1500,2000"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/> 
 </effect_group>
@@ -576,11 +560,11 @@
 	
 <entity_class name="FrozenBoe" extends="zombieBoe">
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
-	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZBoe.prefab"/>
+	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_snow"/>
 	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/>
-	<property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -593,23 +577,22 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>
-	<!-- Gameplay -->
+
 	<property name="Buffs" value="zombieRadiatedBuff80"/>
 	<property name="SizeScale" value="1.50"/>
-	<property name="ExperienceGain" value="2500"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="2500"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/> 
 	<property name="MoveSpeedAggro" value="1, 1.5"/>	
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="2000"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	<passive_effect name="HealthMax" operation="base_set" value="1500,2000"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/> 
 </effect_group>
 </entity_class>
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="541"/>
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="8"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
@@ -618,11 +601,11 @@
 <append xpath="/entity_classes"> 
 <entity_class name="DesertBiker" extends="zombieBiker">
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
-	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZBiker.prefab"/>
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/>
-	<property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierHead" value=".4"/>
+	<property name="DismemberMultiplierArms" value=".4"/>
+	<property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -635,28 +618,31 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>
-	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
-	<!-- Gameplay -->
+	
 	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="Buffs" value="buffBurningZombie"/>
 	<property name="SizeScale" value="1.50"/>
-	<property name="ExperienceGain" value="2000"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="2000"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
+	<property name="LootDropProb" value=".1"/>
 	<property name="MoveSpeedAggro" value="1, 1.5"/>	
-	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="1500"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+<effect_group name="Base Effects">
+	<passive_effect name="HealthMax" operation="base_set" value="1000,1500"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
-	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/> 
+	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>	
+	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffBurningZombie"/>
 </effect_group>
 </entity_class>
 	
 <entity_class name="DesertSoldier" extends="zombieSoldier">
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
-	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<!--property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/--> <!--RADIATED EFFECT ON ZOMBIE BODY-->
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZSoldier.prefab"/>
-	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
-	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="DismemberMultiplierHead" value=".4"/>
+	<property name="DismemberMultiplierArms" value=".4"/>
+	<property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0.01"/>
 	<property name="KnockdownProneDamageThreshold" value="0.45"/>
@@ -669,23 +655,26 @@
 	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
 	<property name="HeadExplosionDamageMultiplier" value=".85"/>
 	<property name="ChestExplosionDamageMultiplier" value=".85"/>
-	<!-- Gameplay -->
+	<property name="SoundSpawn" value="Ambient_Loops/a_fire_embersmoke_sm_lp"/>
+
 	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="Buffs" value="buffBurningZombie"/>
 	<property name="SizeScale" value="1.50"/>
-	<property name="ExperienceGain" value="2000"/> <!-- XP strong radiated -->
+	<property name="ExperienceGain" value="2000"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/> <!-- Radiated -->
-	<property name="MoveSpeedAggro" value="1, 1.5"/>	
+	<property name="LootDropProb" value=".1"/>
+	<property name="MoveSpeedAggro" value="1, 1.5"/>
+	<property name="HandItem" value="meleeHandZombieBurningFeral"/>	
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="1500"/>
-	<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	<passive_effect name="HealthMax" operation="base_set" value="1000,1500"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
-	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/> 
+	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffBurningZombie"/>	
 </effect_group>
 </entity_class>
 	<effect_group name="Base Effects">
 	<passive_effect name="HealthMax" operation="base_set" value="541"/>
-	<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="8"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 </effect_group>
@@ -696,7 +685,6 @@
 <entity_class name="zombiebitchQueen" extends="zombieBoeFeral">
 	<property name="SizeScale" value="2.1"/>
 	<property name="Tags" value="entity,zombie,walker,boss,bansheequeen,screamertrack" />
-	<!--property name="Mesh" value="Zombies/zombieStandardScreamerRagdoll"/-->
 	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZScreamer.prefab"/>
 	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_glass"/>
 	<property name="ReplaceMaterial2" value="entities/resources/materials/oreshaleboulder"/>
@@ -711,13 +699,13 @@
 	<property name="Mass" value="1000"/>
 	<property name="Weight" value="850"/>
 	<property name="HasRagdoll" value="false"/>
-	<!-- XP strong -->
+
 	<property name="WalkType" value="3"/>
 	<property name="HandItem" value="meleeHandBansheeQueen"/>
 	<property name="LootDropEntityClass" value="Knap Sack"/>
-	<property name="LootDropProb" value="1"/>
+	<property name="LootDropProb" value=".1"/>
 	<effect_group name="Base Effects">
-	<passive_effect name="HealthMax" operation="base_set" value="500"/>
+	<passive_effect name="HealthMax" operation="base_set" value="400,500"/>
 	<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBansheeQueen01"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
@@ -725,7 +713,7 @@
 </effect_group>
 </entity_class>
 
-<entity_class name="Knap Sack"> <!-- 71.72 -->
+<entity_class name="Knap Sack">
 	<property name="HideInSpawnMenu" value="true"/>
 	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
 	<property name="ModelType" value="Custom"/>
@@ -761,12 +749,11 @@
 	<property name="HasDeathAnim" value="false"/>
 	<property name="CanBigHead" value="false" />
 
-	<!-- Gameplay  -->
 	<property name="MoveSpeedPanic" value="1.3"/>
 	<property name="ExperienceGain" value="130"/>
 	<property name="DeadBodyHitPoints" value="175"/>
 	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalChicken -->
+	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="15"/>
 	<drop event="Harvest" name="foodEgg" count="3,10" tag="butcherHarvest"/>
 	<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="23"/>
 	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="5"/>
@@ -779,6 +766,44 @@
 	</effect_group>
 
 	<property name="NavObject" value="animaltracking_chicken" />
+</entity_class>
+
+<!--*********ANACONDA******************-->
+<entity_class name="Anaconda" extends="animalSnake">
+	<property name="Tags" value="entity,zombie,walker,feral,radiated,elitetrack"/>
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/>
+	<property name="DismemberMultiplierLegs" value=".4"/>
+	<property name="PainResistPerHit" value=".9"/>
+	<property name="LegCrawlerThreshold" value="0"/>
+	<property name="LegCrippleThreshold" value="0.01"/>
+	<property name="KnockdownProneDamageThreshold" value="0.45"/>
+	<property name="KnockdownProneStunDuration" value="0.5,1.8"/>
+	<property name="KnockdownProneRefillRate" value="0.045,0.045"/>
+	<property name="KnockdownKneelDamageThreshold" value="0.38"/>
+	<property name="KnockdownKneelStunDuration" value="0.5,1.8"/>
+	<property name="KnockdownKneelRefillRate" value="0.045,0.045"/>
+	<property name="LegsExplosionDamageMultiplier" value=".85"/>
+	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
+	<property name="HeadExplosionDamageMultiplier" value=".85"/>
+	<property name="ChestExplosionDamageMultiplier" value=".85"/>
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="150"/> 
+	<drop event="Harvest" name="foodEgg" count="1,3" tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+	<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>	
+
+	<property name="SizeScale" value="6"/>
+	<property name="ExperienceGain" value="500"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="LootDropProb" value=".1"/> 
+	<property name="MoveSpeedAggro" value="1, 1.5"/>
+	<effect_group name="Base Effects">
+	<passive_effect name="HealthMax" operation="base_set" value="800,1000"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+</effect_group>
 </entity_class>
 </append>
 

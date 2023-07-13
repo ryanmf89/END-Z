@@ -1,0 +1,40 @@
+<configs>
+	<append xpath="/recipes">
+		
+		<recipe name="ammoNapalm" count="5" craft_area="chemistryStation">
+			<ingredient name="resourceAnimalFat" count="1"/>
+			<ingredient name="resourceBone" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="ammoGasCan" count="1"/>
+		</recipe>		
+		
+		<recipe name="guppyOilSlickGoesInDitch" count="5" tags="">
+			<ingredient name="resourceOil" count="5"/>
+		</recipe>	
+
+		<recipe name="gupOilSlickGoesOnBlock" count="5" tags="">
+			<ingredient name="resourceOil" count="5"/>
+		</recipe>		
+
+		<recipe name="guppyOilSlickGoesInDitch" count="1" tags="">
+			<ingredient name="gupOilSlickGoesOnBlock" count="1"/>
+		</recipe>	
+
+		<recipe name="gupOilSlickGoesOnBlock" count="1" tags="">
+			<ingredient name="guppyOilSlickGoesInDitch" count="1"/>
+		</recipe>			
+			
+        <recipe name="guppyFlamethrower" craft_area="workbench" count="1" tags="learnable,perkCraftGuns">
+            <ingredient name="resourceForgedSteel" count="10"/>
+            <ingredient name="resourceMechanicalParts" count="15"/>
+            <ingredient name="resourceElectricParts" count="5"/>
+            <ingredient name="resourceSpring" count="2"/>
+			<ingredient name="resourceMetalPipe" count="1" />
+        </recipe>	
+		
+		<recipe name="resourceGuppyFirewood" count="1" tags="">
+			<ingredient name="resourceWood" count="15"/>
+		</recipe>					
+		
+	</append>
+</configs>

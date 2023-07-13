@@ -1,0 +1,26 @@
+<mjedit>
+	<append xpath="/xui/ruleset/window_group[@name='ingameMenu']" >
+			<window name="btnNPC" />
+	</append>
+	
+	<append xpath="/xui/ruleset[@name='default']" >
+			<window_group name="workstation_guppyCampfireLogsOnPot" controller="XUiC_WorkstationWindowGroup">
+				<window name="windowCraftingList" />
+				<window name="craftingInfoPanel" />
+				<window name="windowCraftingQueue" />
+				<window name="windowOutput" />
+				<window name="windowNonPagingHeader" />
+			</window_group>
+	</append>	
+	
+	<append xpath="/xui/ruleset[@name='default']" >
+			<window_group name="workstation_guppyCampfireLogsOn" controller="XUiC_WorkstationWindowGroup">
+				<window name="windowCraftingList" />
+				<window name="craftingInfoPanel" />
+				<window name="windowCraftingQueue" />
+				<window name="windowOutput" />
+				<window name="windowNonPagingHeader" />
+			</window_group>
+	</append>		
+
+</mjedit>

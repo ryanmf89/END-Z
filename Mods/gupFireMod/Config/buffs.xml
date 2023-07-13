@@ -1,0 +1,357 @@
+<configs>
+
+<append xpath="/buffs">
+
+	<buff name="buffDiein30Fire" name_key="buffInternalBleedingName" description_key="buffInternalBleedingDesc" tooltip_key="buffInternalBleedingTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true">
+		<damage_type value="bloodloss"/>
+		<stack_type value="ignore"/>
+		<duration value="60"/>
+		<update_rate value="1"/>
+
+		<effect_group name="BurnShitdown">
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddFireDamage, SCore" target="positionAOE" range="4"/>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" value="1"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffDiein30Fire"/>
+		</effect_group>
+		<effect_group name="BurnPlayersDown">
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="positionAOE" range="4" buff="guppyBurning"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="guppyBurning" hidden="true">
+		<damage_type value="heat"/>
+		<stack_type value="replace"/><duration value="0"/>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="guppyBurningDuration" operation="LT" value="16"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="guppyBurningDuration" operation="set" value="16"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="guppyBurningDuration" operation="set" value="16"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="guppyIsOnFire"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="guppyBurningDuration" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="guppyBurningDuration" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="1,5,11,13">
+				<requirement name="EntityTagCompare" tags="player"/>
+			</passive_effect>
+			
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="1,5,11,13">
+				<requirement name="EntityTagCompare" tags="walker"/>
+			</passive_effect>
+
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="1,5,11,13">
+				<requirement name="EntityTagCompare" tags="animal"/>
+			</passive_effect>
+
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="1,5,11,13">
+				<requirement name="EntityTagCompare" tags="zombie"/>
+			</passive_effect>	
+
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="1,5,11,13">
+				<requirement name="EntityTagCompare" tags="npc"/>
+			</passive_effect>
+
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value="1.5"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="35"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="-15"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="guppyIsOnFire" name_key="guppyIsOnFireName" description_key="guppyIsOnFireDesc" tooltip_key="guppyIsOnFireTooltip" icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
+		<damage_type value="Heat"/>
+		<stack_type value="ignore"/>
+		<duration value="0"/><update_rate value="1"/>
+		<display_value value=".guppyIsOnFireDisplay"/><display_value_format value="time"/>
+
+		<effect_group>
+			<requirements compare_type="or">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,1" operation="LTE" value="@_wetness"/>
+				<requirement name="HasBuff" buff="buffExtinguishFire"/>
+			</requirements>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="guppyIsOnFire"/>			
+		</effect_group>
+
+		<effect_group>
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".guppyIsOnFireDisplay" operation="set" value="@guppyBurningDuration">
+				<requirement name="CVarCompare" cvar="guppyBurningDuration" operation="GT" value="@.guppyIsOnFireDisplay"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".guppyIsOnFireDisplay" operation="set" value="@$buffBurningFlamingArrowDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".guppyIsOnFireDisplay" operation="set" value="@guppyBurningDuration">
+				<requirement name="CVarCompare" cvar="guppyBurningDuration" operation="GT" value="@.guppyIsOnFireDisplay"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group>
+			<requirements>
+				<requirement name="!HasBuff" buff="guppyBurning"/>				
+			</requirements>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="guppyIsOnFire"/>
+		</effect_group>
+
+		<effect_group name="run particles, cleanup">
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".guppyIsOnFireDisplay" operation="set" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,0,0" parent_transform="LOD0" shape_mesh="true"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,0,0" parent_transform="LOD0" shape_mesh="true"/>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AddJournalEntry" journal="onFireTip"/>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_burn_lp"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_burn_lp"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buff_burn_extinguish"/>
+		</effect_group>
+	</buff>	
+	
+	<buff name="buffAttachLightningBolt" hidden="true">
+		<stack_type value="replace"/>
+		<duration value="0"/>
+		<effect_group name="guppy Effect">
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/guppyDevrixLightning.unity3d?lightningStrike_SorceryDevrix.prefab" parent_transform="Origin" local_offset="0,0,0" local_rotation="90,0,0"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="lightningStrike_SorceryDevrix" />    
+			<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="lightningStrike_SorceryDevrix" />
+		</effect_group>			
+	</buff>		
+	
+	<buff name="buffWaterSpray" name_key="a" description_key="d" tooltip_key="f">
+		<stack_type value="ignore"/>
+		<duration value="3.5"/>
+		<effect_group>
+             <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/guppyBucketSpray.unity3d?gupBucketSpray.prefab" parent_transform="CameraNode" local_offset="-.30,-.20,-.5" local_rotation="25,-10,0">
+				<requirement name="IsFPV"/>
+				<!--<requirement name="!HoldingItemBroken"/> -->
+			 </triggered_effect>
+			 <triggered_effect trigger="onSelfBuffStart" action="RemoveFire, SCore" target="positionAOE" range="5">
+				<requirement name="IsFPV"/>
+				<requirement name="!HoldingItemBroken"/>
+			 </triggered_effect>			 
+			 <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="gupUseWater" operation="set" value="20"/>
+             <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupBucketSpray" />    
+             <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupBucketSpray" />			 
+		</effect_group>
+	</buff>  
+
+	<buff name="buffWaterSplash" name_key="a" description_key="d" tooltip_key="f">
+		<stack_type value="ignore"/>
+		<duration value="3.5"/>
+		<effect_group>
+             <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/guppyBucketSpray.unity3d?gupBucketSpray.prefab" parent_transform="CameraNode" local_offset="-.30,-.20,-.5" local_rotation="25,-10,0">
+				<requirement name="IsFPV"/>
+				<!--<requirement name="!HoldingItemBroken"/> -->
+			 </triggered_effect>
+			 <triggered_effect trigger="onSelfBuffStart" action="RemoveFire, SCore" target="positionAOE" range="1">
+				<requirement name="IsFPV"/>
+				<requirement name="!HoldingItemBroken"/>
+			 </triggered_effect>			 
+			 <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="gupUseWater" operation="set" value="20"/>
+             <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupBucketSpray" />    
+             <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupBucketSpray" />			 
+		</effect_group>
+	</buff> 	
+	
+	<buff name="buffGupQuickFireEffectOnly" name_key="guppyIsOnFireName" description_key="guppyIsOnFireDesc" tooltip_key="guppyIsOnFireTooltip" icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
+		<damage_type value="Heat"/>
+		<stack_type value="ignore"/>
+		<duration value="2"/><update_rate value="1"/>
+		<display_value value=".guppyIsOnFireDisplay"/><display_value_format value="time"/>
+
+		<effect_group>
+			<requirements compare_type="or">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,1" operation="LTE" value="@_wetness"/>
+				<requirement name="HasBuff" buff="buffExtinguishFire"/>
+			</requirements>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="guppyIsOnFire"/>			
+		</effect_group>
+
+		<effect_group name="run particles, cleanup">
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".guppyIsOnFireDisplay" operation="set" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,0,0" parent_transform="LOD0" shape_mesh="true"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,0,0" parent_transform="LOD0" shape_mesh="true"/>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AddJournalEntry" journal="onFireTip"/>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_burn_lp"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_burn_lp"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buff_burn_extinguish"/>
+		</effect_group>
+	</buff>	
+
+	<buff name="buffStartWaterTimer" hidden="true">
+		<stack_type value="replace"/>
+		<duration value="16"/>
+		<effect_group name="guppy Effect">
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffWaterPlaneSpray" />    
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffWaterPlaneSpray" />
+		</effect_group>			
+	</buff>		
+	
+	<buff name="buffWaterPlaneSpray" name_key="a" description_key="d" tooltip_key="f">
+		<stack_type value="ignore"/>
+		<duration value="3.5"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveFire, SCore" target="positionAOE" range="25"/>
+		</effect_group>
+	</buff>  
+
+ 	<buff name="guppybuffFlareProjectile" name_key="a" description_key="d" tooltip_key="f">
+		<stack_type value="ignore"/>
+		<duration value="3.5"/>
+		<effect_group>
+             <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupAmmoFlareforWater.unity3d?guppyAmmoFlareforWaterProjectile.prefab" parent_transform="Gunjoint" local_offset="0,0,0" local_rotation="0,0,0">
+
+			 </triggered_effect>
+			 <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="gupUseWater" operation="set" value="20"/>
+             <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyAmmoFlareforWaterProjectile" />    
+             <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="guppyAmmoFlareforWaterProjectile" />			 
+		</effect_group>
+	</buff> 
+
+	<buff name="buffSetWaterPlaneCVar" name_key="a" description_key="d" tooltip_key="f">
+		<stack_type value="ignore"/>
+		<duration value="1.5"/>
+		<effect_group>
+			<triggered_effect trugger="onSelfBuffStart" action="ModifyCVar" cvar="canCallDaPlane" operation="set" value="1"/>
+		</effect_group>
+	</buff> 	
+
+</append>
+
+<append xpath="/buffs/buff[@name='zombieBuffStatusCheck01']/effect_group/triggered_effect[@action='RemoveParticleEffectFromEntity']">
+        <requirement name="!HasBuff" buff="guppyIsOnFire"/>		
+</append>
+<append xpath="/buffs/buff[@name='zombieBuffStatusCheck01']/effect_group/triggered_effect[@action='AttachParticleEffectToEntity']">
+        <requirement name="HasBuff" buff="guppyIsOnFire"/>		
+</append>
+
+<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@action='RemoveParticleEffectFromEntity']">
+        <requirement name="!HasBuff" buff="guppyIsOnFire"/>		
+</append>
+<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@action='AttachParticleEffectToEntity']">
+        <requirement name="HasBuff" buff="guppyIsOnFire"/>		
+</append>
+
+<append xpath="/buffs/buff[@name='buffIsOnFire']">
+		<effect_group>
+				<requirement name="!CVarCompare" cvar="alreadyBurned" operation="Equals" value="1"/>
+				<requirement name="!EntityTagCompare" tags="vulture"/>				
+				<requirement name="!EntityTagCompare" tags="wolf"/>			
+				<requirement name="!EntityTagCompare" tags="rabbit"/>			
+				<requirement name="!EntityTagCompare" tags="chicken"/>			
+				<requirement name="!EntityTagCompare" tags="board"/>	
+				<requirement name="!EntityTagCompare" tags="dog"/>			
+				<requirement name="!EntityTagCompare" tags="bear"/>	
+				<requirement name="!EntityTagCompare" tags="snake"/>
+				<requirement name="!EntityTagCompare" tags="deer"/>	
+				<requirement name="!EntityTagCompare" tags="coyote"/>
+				<requirement name="!EntityTagCompare" tags="mountainlion"/>					
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridezombieBurnt" operation="set" value="1">
+				<requirement name="!CVarCompare" cvar="alreadyBurned" operation="Equals" value="1"/>
+			</triggered_effect>
+		</effect_group>
+</append>
+
+<append xpath="/buffs/buff[@name='zombieBuffStatusCheck01']">
+	<effect_group>
+		<requirement name="!CVarCompare" cvar="alreadyBurned" operation="Equals" value="1"/>
+		<requirement name="!EntityTagCompare" tags="vulture"/>				
+		<requirement name="!EntityTagCompare" tags="wolf"/>			
+		<requirement name="!EntityTagCompare" tags="rabbit"/>			
+		<requirement name="!EntityTagCompare" tags="chicken"/>			
+		<requirement name="!EntityTagCompare" tags="board"/>	
+		<requirement name="!EntityTagCompare" tags="dog"/>			
+		<requirement name="!EntityTagCompare" tags="bear"/>	
+		<requirement name="!EntityTagCompare" tags="snake"/>
+		<requirement name="!EntityTagCompare" tags="deer"/>		
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOnDeath" operation="set" value="1">
+			<requirement name="!HasBuff" buff="guppyIsOnFire"/>	
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOnDeath" operation="set" value="1">
+			<requirement name="!HasBuff" buff="buffIsOnFire"/>	
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOnDeath" operation="set" value="0">
+			<requirement name="HasBuff" buff="guppyIsOnFire"/>	
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOnDeath" operation="set" value="0">
+			<requirement name="HasBuff" buff="buffIsOnFire"/>
+		</triggered_effect>	
+	
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridezombieBurnt" operation="set" value="0">
+			<requirement name="!HasBuff" buff="guppyIsOnFire"/>	
+			<requirement name="!HasBuff" buff="buffIsOnFire"/>
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridezombieBurnt" operation="set" value="1">
+			<requirement name="HasBuff" buff="guppyIsOnFire"/>	
+			<requirement name="HasBuff" buff="buffIsOnFire"/>
+		</triggered_effect>
+		
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverrideguppyVultureBurnt" operation="set" value="0">
+			<requirement name="!HasBuff" buff="guppyIsOnFire"/>	
+			<requirement name="!HasBuff" buff="buffIsOnFire"/>
+			<property name="Tags" value="vulture"/>			
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverrideguppyVultureBurnt" operation="set" value="1">
+			<requirement name="HasBuff" buff="guppyIsOnFire"/>	
+			<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<property name="Tags" value="vulture"/>			
+		</triggered_effect>	
+<!--
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridezombieDog" operation="set" value="0">
+			<requirement name="!HasBuff" buff="guppyIsOnFire"/>	
+			<requirement name="!HasBuff" buff="buffIsOnFire"/>
+			<property name="Tags" value="dog"/>			
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridezombieDog" operation="set" value="1">
+			<requirement name="HasBuff" buff="guppyIsOnFire"/>	
+			<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<property name="Tags" value="dog"/>			
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridezombieDog" operation="set" value="0">
+			<requirement name="!HasBuff" buff="guppyIsOnFire"/>	
+			<requirement name="!HasBuff" buff="buffIsOnFire"/>
+			<property name="Tags" value="wolf"/>			
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridezombieDog" operation="set" value="1">
+			<requirement name="HasBuff" buff="guppyIsOnFire"/>	
+			<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<property name="Tags" value="wolf"/>			
+		</triggered_effect>	
+-->		
+	</effect_group>
+</append>
+
+<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOnDeath" operation="set" value="1">
+			<requirement name="!HasBuff" buff="guppyIsOnFire"/>	
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOnDeath" operation="set" value="1">
+			<requirement name="!HasBuff" buff="buffIsOnFire"/>	
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOnDeath" operation="set" value="0">
+			<requirement name="HasBuff" buff="guppyIsOnFire"/>	
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOnDeath" operation="set" value="0">
+			<requirement name="HasBuff" buff="buffIsOnFire"/>
+		</triggered_effect>	
+	
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridezombieBurnt" operation="set" value="0">
+			<requirement name="!HasBuff" buff="guppyIsOnFire"/>	
+			<requirement name="!HasBuff" buff="buffIsOnFire"/>	
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridezombieBurnt" operation="set" value="1">
+			<requirement name="HasBuff" buff="guppyIsOnFire"/>	
+			<requirement name="HasBuff" buff="buffIsOnFire"/>	
+		</triggered_effect>
+	</effect_group>
+</append>
+
+</configs>

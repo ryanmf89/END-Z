@@ -1,0 +1,240 @@
+<configs>
+	<append xpath="/entity_classes">
+
+		<entity_class name="guppyLightning" extends="zombieSoldier">
+			<property name="Tags" value="entity,zombie,walker,boss"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyLightningEntity.unity3d?guppyLightningNew.prefab"/>
+			<!--<property name="Mesh" value="#@modfolder:Resources/guppyDevrixLightning.unity3d?lightningStrike_SorceryDevrix.prefab"/>-->
+			<property name="Class" value="EntityZombieCop"/>
+			<property name="Mass" value="300"/>
+			<property name="AITask-1" value="Look"/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundFootstepModifier" value=""/>
+			<passive_effect name="WalkSpeed" operation="base_set" value="0"/>
+			<passive_effect name="RunSpeed" operation="base_set" value="0"/>
+			<passive_effect name="CrouchSpeed" operation="base_set" value="0"/>
+			<passive_effect name="WalkSpeed" operation="base_set" value="0" tags="swimming"/>
+			<passive_effect name="RunSpeed" operation="base_set" value="0" tags="swimming"/>			
+			<property name="HandItem" value="meleeHandZombieDemolition"/>
+			<property name="JumpMaxDistance" value="0,0"/>
+			<property name="PainResistPerHit" value=".5"/>
+			<property name="Explosion.ParticleIndex" value="0"/>
+			<property name="Explosion.RadiusBlocks" value="2"/>
+			<property name="Explosion.BlockDamage" value="1"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="ExplodeDelay" value="3"/>
+			<property name="ExplodeHealthThreshold" value="500"/>
+			<property name="SoundExplodeWarn" value=""/>
+			<property name="SoundTick" value=""/>
+			<property name="LootDropProb" value="0"/>
+			<property name="ParticleOnDeath" value=""/>
+			<property name="Buffs" value="buffAttachLightningBolt"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class>	
+				
+		<entity_class name="guppyFireNado" extends="zombieTemplateMale">
+			<property name="Tags" value="firenado"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyFirenadoEntity.unity3d?guppyFireNadoNew.prefab"/>
+			<property name="Class" value="EntityZombie"/>
+			<property name="Mass" value="300"/>
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-4" value="BreakBlock"/>
+			<property name="AITask-5" value="RunawayWhenHurt"/>
+			<property name="AITask-6" value="Look"/>
+			<property name="AITask-7" value=""/>
+			<property name="AITask-8" value=""/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundFootstepModifier" value=""/>
+			<property name="HandItem" value="meleeHandZombie01"/>
+			<property name="JumpMaxDistance" value="0, 0"/>
+			<property name="PainResistPerHit" value=".5"/>
+			<property name="LootDropProb" value="0"/>
+			<property name="ParticleOnDeath" value=""/>
+			<property name="Buffs" value="buffDiein30Fire"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="33"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>		
+
+		<entity_class name="guppyVultureBurnt" extends="zombieTemplateMale">
+            <property name="HideInSpawnMenu" value="false"/>    
+            <property name="SizeScale" value=".5"/> 
+			<property name="Tags" value="entity,animal,zombie,hostile,vulture,UMA2"/>
+            <property name="HasRagdoll" value="true"/>
+            <property name="HasDeathAnim" value="true"/>
+            <property name="RootMotion" value="true"/>
+            <property name="IsEnemyEntity" value="true"/>             
+            <property name="AvatarController" value="AvatarAnimalController"/> 
+            <property name="Mesh" value="#@modfolder:Resources/a20burntvulture.unity3d?gupBurnedVultureHumanoid"/>
+            <property name="ExperienceGain" value="300"/>
+            <property name="DeadBodyHitPoints" value="200"/>
+			<property name="PhysicsBody" value="gupVultureStandard"/>
+            <property name="Mass" value="35"/>
+            <property name="Weight" value="80"/>            
+            <property name="HandItem" value="meleeHandgupBurntVulture"/>
+			<property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
+			<property name="SoundAlert" value="Animals/Vulture/vulturealert"/>
+			<property name="SoundHurt" value="Animals/Vulture/vulturepain"/>
+			<property name="SoundDeath" value="Animals/Vulture/vulturedeath"/>
+			<property name="SoundAttack" value="Animals/Vulture/vultureattack"/>
+			<property name="SoundSense" value="Animals/Vulture/vulturesense"/>
+			<property name="SoundGiveUp" value="Animals/Vulture/vulturegiveup"/>	
+			<property name="AIFeralSense" value=".1"/> 
+			<property name="WalkType" value="7"/>			
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityNPC,20"/>
+			<property name="AITask-2" value="ApproachSpot"/>
+			<property name="AITask-3" value="Look"/>
+			<property name="AITask-4" value="Wander"/>
+			<property name="AITask-5" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
+			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,22,20,EntityNPC,0,0"/>
+			<property name="AITarget-5" value=""/>			
+            <property name="MaxViewAngle" value="360"/>
+			<property name="LookAtAngle" value="0"/>
+            <property name="MoveSpeed" value=".28"/>
+            <property name="MoveSpeedAggro" value="1.25, 1.25"/> 
+            <property name="MoveSpeedPanic" value="1.5"/>
+			<property name="ParticleOnDeath" value="blood_death"/>
+			<property name="RotateToGround" value="true"/>
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="6"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="130"/>
+			</effect_group>  
+        </entity_class> 	
+		
+		<entity_class name="guppyWaterPlane" extends="zombieSoldier">
+			<property name="AvatarController" value="AvatarAnimalController"/>
+			<property name="Tags" value="entity,zombie,walker,boss"/>
+			<property name="Mesh" value="#@modfolder:Resources/gupWaterPlane.unity3d?guppyWaterPlane.prefab"/>
+			<property name="Class" value="EntityZombieCop"/>
+			<property name="Mass" value="300"/>
+			<property name="AITask-1" value="Look"/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundFootstepModifier" value=""/>
+			<passive_effect name="WalkSpeed" operation="base_set" value="0"/>
+			<passive_effect name="RunSpeed" operation="base_set" value="0"/>
+			<passive_effect name="CrouchSpeed" operation="base_set" value="0"/>
+			<passive_effect name="WalkSpeed" operation="base_set" value="0" tags="swimming"/>
+			<passive_effect name="RunSpeed" operation="base_set" value="0" tags="swimming"/>			
+			<property name="HandItem" value="meleeHandZombieDemolition"/>
+			<property name="JumpMaxDistance" value="0,0"/>
+			<property name="PainResistPerHit" value=".5"/>
+			<property name="Explosion.ParticleIndex" value="0"/>
+			<property name="Explosion.RadiusBlocks" value="0"/>
+			<property name="Explosion.BlockDamage" value="0"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="ExplodeDelay" value="15"/>
+			<property name="ExplodeHealthThreshold" value="500"/>
+			<property name="SoundExplodeWarn" value=""/>
+			<property name="SoundTick" value=""/>
+			<property name="LootDropProb" value="0"/>
+			<property name="ParticleOnDeath" value=""/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="MoveSpeedAggro" value="0, 0"/>
+			<property name="AITask" value=""/>
+			<property name="AITarget" value=""/>
+			<property name="AIFeralSense" value="0"/>
+			<property name="AINoiseSeekDist" value="0"/>
+			<property name="AIPathCostScale" value=".15, .4"/>
+			<property name="MaxViewAngle" value="0"/>
+			<property name="SightRange" value="0"/>
+			<property name="MaxTurnSpeed" value="0"/>
+			<property name="MoveSpeed" value="0"/>
+			<property name="MoveSpeedAggro" value="0,0"/> 
+			<property name="MoveSpeedRand" value="0,0"/> 
+			<property name="MoveSpeedPanic" value="0"/>
+			<property name="SwimSpeed" value="0"/>
+			<property name="SwimStrokeRate" value="0,0"/> 
+			<property name="CanClimbLadders" value="false"/>
+			<property name="JumpMaxDistance" value="0,0"/> 
+			<property name="Buffs" value="buffStartWaterTimer"/>		
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class>			
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[@name='zombieBurnt']">
+		<property name="Buffs" value="buffGupQuickFireEffectOnly"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="alreadyBurned" operation="set" value="1"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[@name='guppyVultureBurnt']">
+		<property name="Buffs" value="buffGupQuickFireEffectOnly"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="alreadyBurned" operation="set" value="1"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[@name='animalZombieVulture']">
+		<effect_group>
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="spawnOverrideguppyVultureBurnt" operation="set" value="1"/>
+		</effect_group>
+	</append>	
+	
+	<!--
+	<append xpath="/entity_classes/entity_class[not(contains(@name, 'zombieBurnt')) 
+					and not(contains(@name, 'twitch')) 
+					and not (contains(@name, 'radiated')) 
+					and not(contains(@name, 'animal')) 
+					and not(contains(@name, 'vehicle')) 
+					and not(contains(@name, 'loot')) 
+					and not(contains(@name, 'junk')) 
+					and not(contains(@name, 'fat'))
+					and not(contains(@name, 'mutated'))]">
+		<property name="SpawnOnDeath" value="SpawnNothing" />
+	</append>
+	-->
+	
+	<!-- Turns on SpawnOnDeath property while having the default value spawn nothing.  This allows for the CVar spawn on death to work.  -->
+	<append xpath="/entity_classes/entity_class">
+		<property name="SpawnOnDeath" value="SpawnNothing" />
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='playerMale']">
+
+		<effect_group name="Guppy Kill Count">
+			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffSetWaterPlaneCVar"/>
+			<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffSetWaterPlaneCVar"/>		
+		</effect_group>
+
+    </append>	
+	
+	<remove xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='SpawnOnDeath']"/>
+	<remove xpath="/entity_classes/entity_class[@name='playerNewMale']/property[@name='SpawnOnDeath']"/>	
+	<remove xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='SpawnOnDeath']"/>	
+	<remove xpath="/entity_classes/entity_class[@name='supplyPlane']/property[@name='SpawnOnDeath']"/>	
+	<remove xpath="/entity_classes/entity_class[@name='sc_General']/property[@name='SpawnOnDeath']"/>
+	<remove xpath="/entity_classes/entity_class[@name='Backpack']/property[@name='SpawnOnDeath']"/>
+
+	
+</configs>

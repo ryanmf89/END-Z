@@ -1,0 +1,49 @@
+<configs>
+
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add" >
+		guppyLightning, 0.05
+    </csv>
+	
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntownNight']/text()" delim="\n" op="add" >
+		guppyLightning, 0.05
+    </csv>
+
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/text()" delim="\n" op="add" >
+		guppyLightning, 0.05
+    </csv>
+	
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNightNoBears']/text()" delim="\n" op="add" >
+		guppyLightning, 0.05
+    </csv>
+	
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight2']/text()" delim="\n" op="add" >
+		guppyLightning, 0.05
+    </csv>
+	
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight2NoBears']/text()" delim="\n" op="add" >
+		guppyLightning, 0.05
+    </csv>
+	
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesHoard']/text()" delim="\n" op="add" >
+		guppyLightning, 0.05
+    </csv>
+	
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesBurntForest']/text()" delim="\n" op="add" >
+		guppyLightning, 0.1
+    </csv>
+	
+    <csv xpath="/entitygroups/entitygroup[@name='ZombiesBurntForest']/text()" delim="\n" op="add" >
+		guppyFireNado, 0.05
+    </csv>	
+	
+	<append xpath="/entitygroups">
+		<entitygroup name="SpawnNothing">
+			none
+		</entitygroup>
+		
+		<entitygroup name="guppyVultureBurnt">
+			guppyVultureBurnt
+		</entitygroup>
+	</append>
+
+</configs>

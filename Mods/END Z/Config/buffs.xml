@@ -10,21 +10,21 @@
 	<update_rate value=".45"/>
 <effect_group>
 	<passive_effect name="Tracking" operation="base_set" value="1" tags="zombie,mutant,alien,bandit,animal"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="mutant,alien,bandit" buff="buffBanditZEffect"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="bear" buff="buffBearZEffect"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="chicken" buff="buffChickenZEffect"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="deer" buff="buffDeerZEffect"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="rabbit" buff="buffRabbitZEffect"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="wolf,coyote,dog" buff="buffWolfZEffect"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="mountainlion" buff="buffMountainLionZEffect"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="vulture" buff="buffVultureZEffect"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="snake" buff="buffSnakeZEffect"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="boar" buff="buffBoarZEffect"/>				
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="normaltrack" buff="buffZombieZEffect1"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="feraltrack" buff="buffZombieZEffect2"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="radiatedtrack" buff="buffZombieZEffect3"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="elitetrack" buff="buffZombieZEffect4"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="screamertrack" buff="buffZombieZEffect5"/>				
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="mutant,alien,bandit" buff="buffBanditZEffect"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="bear" buff="buffBearZEffect"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="chicken" buff="buffChickenZEffect"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="deer" buff="buffDeerZEffect"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="rabbit" buff="buffRabbitZEffect"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="wolf,coyote,dog" buff="buffWolfZEffect"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="mountainlion" buff="buffMountainLionZEffect"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="vulture" buff="buffVultureZEffect"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="snake" buff="buffSnakeZEffect"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="boar" buff="buffBoarZEffect"/>				
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="normaltrack" buff="buffZombieZEffect1"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="feraltrack" buff="buffZombieZEffect2"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="radiatedtrack" buff="buffZombieZEffect3"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="elitetrack" buff="buffZombieZEffect4"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="screamertrack" buff="buffZombieZEffect5"/>				
 </effect_group>
 </buff>
 				
@@ -34,7 +34,7 @@
 <effect_group>
 <!--normal zombie-->
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAnormalzombie" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAnormalzombie" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAnormalzombie" add="false"/>
 </effect_group>
 </buff>
 		
@@ -45,7 +45,7 @@
 <effect_group>
 <!--feral zombie-->
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAferalzombie" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAferalzombie" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAferalzombie" add="false"/>
 </effect_group>
 </buff>
 		
@@ -55,7 +55,7 @@
 <effect_group>
 <!--radiated zombie-->
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAradiatedzombie" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAradiatedzombie" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAradiatedzombie" add="false"/>
 </effect_group>
 </buff>
 		
@@ -65,7 +65,7 @@
 	<effect_group>
 <!--elite zombie-->
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAelitezombie" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAelitezombie" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAelitezombie" add="false"/>
 </effect_group>
 </buff>
 		
@@ -75,7 +75,7 @@
 	<effect_group>
 <!--screamer zombie-->
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAscreamerzombie" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAscreamerzombie" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAscreamerzombie" add="false"/>
 </effect_group>
 </buff>
 	
@@ -84,7 +84,7 @@
 	<duration value="1"/>
 <effect_group>
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAbandit" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAbandit" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAbandit" add="false"/>
 </effect_group>
 </buff>
 
@@ -93,7 +93,7 @@
 	<duration value="1"/>
 	<effect_group>
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAbear" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAbear" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAbear" add="false"/>
 </effect_group>
 </buff>
 
@@ -102,7 +102,7 @@
 	<duration value="1"/>
 <effect_group>
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAchicken" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAchicken" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAchicken" add="false"/>
 </effect_group>
 </buff>
 
@@ -111,7 +111,7 @@
 	<duration value="1"/>
 <effect_group>
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAdeer" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAdeer" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAdeer" add="false"/>
 </effect_group>
 </buff>
 
@@ -120,7 +120,7 @@
 	<duration value="1"/>
 <effect_group>
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZArabbit" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZArabbit" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZArabbit" add="false"/>
 </effect_group>
 </buff>
 
@@ -129,7 +129,7 @@
 	<duration value="1"/>
 <effect_group>
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAwolf" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAwolf" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAwolf" add="false"/>
 </effect_group>
 </buff>
 
@@ -138,7 +138,7 @@
 	<duration value="1"/>
 <effect_group>
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAmountainlion" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAmountainlion" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAmountainlion" add="false"/>
 </effect_group>
 </buff>
 
@@ -147,7 +147,7 @@
 	<duration value="1"/>
 <effect_group>
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAvulture" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAvulture" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAvulture" add="false"/>
 </effect_group>
 </buff>
 
@@ -156,7 +156,7 @@
 	<duration value="1"/>
 <effect_group>
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAsnake" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAsnake" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAsnake" add="false"/>
 </effect_group>
 </buff>
 
@@ -165,7 +165,7 @@
 	<duration value="1"/>
 <effect_group>
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAboar" add="true"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="ZAboar" add="false"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAboar" add="false"/>
 </effect_group>
 </buff>
 </append>
@@ -541,7 +541,7 @@
 </effect_group>
 </buff>
 
-<buff name="buffBansheeQueen" name_key="Icy Veins" tooltip_key="Your blood feels frosty, your weiner tingles, and your hands shake" icon="ui_game_symbol_cold" icon_color="0,0,128" icon_blink="true">
+<buff name="buffBansheeQueen" name_key="Icy Veins" tooltip_key="Its not a family reunion, Rekt tell your mom to go home!" icon="ui_game_symbol_cold" icon_color="0,0,128" icon_blink="true">
 	<stack_type value="replace"/>
 	<duration value="2"/>
 	<update_rate value="1"/>
@@ -556,18 +556,25 @@
 </effect_group>
 </buff>
 
-<buff name="buffBansheeQueendegrade" name_key="Don't Break It!" tooltip_key="Terrified - You rashly damage your weapons in your haste" icon="ui_game_symbol_block_repair" icon_color="235,3,0" icon_blink="true">
+<buff name="buffBansheeQueendegrade" name_key="Don't Break It!" tooltip_key="Why are my weapons breaking so quick?" icon="ui_game_symbol_block_repair" icon_color="0,0,128" icon_blink="true">
 	<stack_type value="replace"/>
 	<duration value="15"/>
 	<effect_group>
-	<passive_effect name="DegradationPerUse" operation="base_set" value="25">
+	<passive_effect name="DegradationPerUse" operation="base_set" value="10">
 </passive_effect>
 </effect_group>
 </buff>
 
 </append>
-	
 
-	
+<append xpath="/buffs">	
+<buff name="desertbodyfire" hidden="true" remove_on_death="true" >
+    <stack_type value="ignore"/>
+    <duration value="2000000000"/>            
+<effect_group name="Base Effects">        
+    <triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" shape_mesh="true"/> 
+</effect_group>
+</buff>
+</append>
 	
 </configs>

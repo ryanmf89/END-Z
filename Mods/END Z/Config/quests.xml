@@ -5,36 +5,50 @@
 EZcurrencyLL
 </set>
 
-<!--STARTER QUESTS-->
-<append xpath="/quests/quest[@id='quest_BasicSurvival1']">
-	<reward type="Item" id="EZcurrencyLL" value="500"/>
-	<reward type="Quest" id="quest_progressionZombieHunting1"/>
-</append>
-<append xpath="/quests/quest[@id='quest_BasicSurvival2']">
-	<reward type="Item" id="EZcurrencyLL" value="500"/>
-</append>
-<append xpath="/quests/quest[@id='quest_BasicSurvival3']">
-	<reward type="Item" id="EZcurrencyLL" value="500"/>
-</append>
-<append xpath="/quests/quest[@id='quest_BasicSurvival4']">
-	<reward type="Item" id="EZcurrencyLL" value="500"/>
-</append>
-<append xpath="/quests/quest[@id='quest_BasicSurvival5']">
-	<reward type="Item" id="EZcurrencyLL" value="500"/>
-</append>
-<append xpath="/quests/quest[@id='quest_BasicSurvival6']">
-	<reward type="Item" id="EZcurrencyLL" value="500"/>
-</append>
-<append xpath="/quests/quest[@id='quest_BasicSurvival7']">
-	<reward type="Item" id="EZcurrencyLL" value="500"/>
-</append>
-<append xpath="/quests/quest[@id='quest_BasicSurvival8']">
-	<reward type="Item" id="EZcurrencyLL" value="500"/>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival1']"></remove>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival2']"></remove>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival3']"></remove>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival4']"></remove>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival5']"></remove>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival6']"></remove>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival7']"></remove>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival8']"></remove>
+
+<append xpath="/quests">
+	<quest id="quest_BasicSurvival1">
+		<property name="group_name_key" value="quest_BasicSurvival"/>
+		<property name="name_key" value="quest_BasicSurvival1"/>
+		<property name="subtitle_key" value="quest_BasicSurvival1_subtitle"/>
+		<property name="description_key" value="quest_BasicSurvival1_description"/>
+		<property name="icon" value="ui_game_symbol_map_bed"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="veryeasy"/>
+		<property name="offer_key" value="quest_BasicSurvival_offer"/>
+		<property name="shareable" value="false"/>
+		<property name="quest_hints" value="quest_BasicSurvival1_hint1,quest_BasicSurvival1_hint2,quest_BasicSurvival1_hint3" />
+
+		<action type="ShowTip" value="tutorialTipQuest02"/>
+		<action type="TrackQuest"/>
+
+		<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+		<objective type="Craft">
+			<property name="phase" value="2"/>
+			<property name="item" value="bedrollBlockVariantHelper"/>
+			<property name="count" value="1"/>
+		</objective>
+
+		<objective type="BlockPlace" id="bedrollBlockVariantHelper" value="1" phase="3"/>
+
+		<reward type="Exp" value="50"/>
+		<reward type="Quest" id="quest_whiteRiverCitizen1"/>
+		<reward type="Quest" id="quest_progressionZombieHunting1"/>
+		<reward type="Item"  id="EZcurrencyLL" value="500"/>
+	</quest>
 </append>
 <append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
-	<reward type="Item" id="EZcurrencyLL" value="500"/>
+	<reward type="Item"  id="EZcurrencyLL" value="500"/>
 </append>
-<!--4500 COINS WHEN COMPLETE-->
+<!--1000 COINS WHEN COMPLETE-->
 	
 <!-- Zombie Killing Progression -->
 <!-- Zombie Hunting 1 -->
@@ -208,7 +222,8 @@ EZcurrencyLL
 	<reward type="Item" id="EZcurrencyLL" value="5000"/>
 	<reward type="Quest" id="quest_progressionZombieHunting10"/>
 </quest>
-	
+
+<!-- Zombie Hunting 10 -->
 <quest id="quest_progressionZombieHunting10">
 	<property name="name_key" value="quest_progressionZombieHunting10_name"/>
 	<property name="subtitle_key" value="quest_progressionZombieHunting10_subtitle"/>

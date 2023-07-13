@@ -19,11 +19,11 @@
 	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
 	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
 	<effect_group>
-	<passive_effect name="Gamestage" operation="base_add" level="1" value="50"/>
-	<passive_effect name="Gamestage" operation="base_add" level="2" value="50"/>
-	<passive_effect name="Gamestage" operation="base_add" level="3" value="50"/>
-	<passive_effect name="Gamestage" operation="base_add" level="4" value="50"/>
-	<passive_effect name="Gamestage" operation="base_add" level="5" value="240"/>
+	<passive_effect name="Gamestage" operation="base_add" level="1" value="100"/>
+	<passive_effect name="Gamestage" operation="base_add" level="2" value="100"/>
+	<passive_effect name="Gamestage" operation="base_add" level="3" value="100"/>
+	<passive_effect name="Gamestage" operation="base_add" level="4" value="100"/>
+	<passive_effect name="Gamestage" operation="base_add" level="5" value="400"/>
 	<effect_description level="1" desc_key="perkimagod1Desc" long_desc_key="perkimagod1LongDesc"/>
 	<effect_description level="2" desc_key="perkimagod2Desc" long_desc_key="perkimagod2LongDesc"/>
 	<effect_description level="3" desc_key="perkimagod3Desc" long_desc_key="perkimagod3LongDesc"/>
@@ -32,5 +32,186 @@
 	</effect_group>
 </perk>
 </append>
+
+<!--you have to read a proper book to unlock this godly ammo-->
+<append xpath="/progression/perks/book[@name='perkPistolPeteHPAmmo']/effect_group/passive_effect[@level='1']/@tags">,ammo9mmBulletSteel</append>
+<append xpath="/progression/perks/book[@name='perkEnforcerHPAmmo']/effect_group/passive_effect[@level='1']/@tags">,ammo44MagnumBulletSteel</append>
+<append xpath="/progression/perks/book[@name='perkSniperHPAmmo']/effect_group/passive_effect[@level='1']/@tags">,ammo762mmBulletFMJSteel</append>
+
+<!--HARVESTING TOOLS CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingHarvestingTools']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']">
+	<crafting_skill name="craftingHarvestingTools" max_level="100" parent="attCrafting" name_key="craftingHarvestingToolsName" desc_key="craftingHarvestingToolsDesc" long_desc_key="craftingHarvestingToolsLongDesc" icon="ui_game_symbol_tool">
+
+	<display_entry icon="meleeToolRepairT0StoneAxe" name_key="harvestToolsStone" has_quality="true" unlock_level="1,3,5,7,10" >
+		<unlock_entry item="moonrockaxeLL,moonrockshovelLL" unlock_tier="1" />
+	</display_entry>
+	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="harvestToolsIron" has_quality="true" unlock_level="11,14,18,22,26" >
+		<unlock_entry item="brasspickaxeLL,brassshovelLL,brassaxeLL" unlock_tier="1" />
+	</display_entry>
+	<display_entry icon="meleeToolPickT2SteelPickaxe" name_key="harvestToolsSteel" has_quality="true" unlock_level="27,35,43,51,59" >
+		<unlock_entry item="vibepickaxeLL,vibeshovelLL,vibeaxeLL" unlock_tier="1" />
+	</display_entry>
+	<display_entry icon="meleeToolPickT3Auger" name_key="harvestToolsMechanical" has_quality="true" unlock_level="60,70,80,90,100" >
+		<unlock_entry item="vibeaugerLL,vibeChainsawLL,multiharvesttoolLL" unlock_tier="1" />
+	</display_entry>
+
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="moonrockaxeLL,moonrockshovelLL"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="brasspickaxeLL,brassshovelLL,brassaxeLL"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="vibepickaxeLL,vibeshovelLL,vibeaxeLL"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,100" value="1" tags="vibeaugerLL,vibeChainsawLL,multiharvesttoolLL"/>
+
+		<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,100" value="1,2,3,4,4" tags="moonrockaxeLL,moonrockshovelLL"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="14,18,22,26,100" value="1,2,3,4,4" tags="brasspickaxeLL,brassshovelLL,brassaxeLL"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="35,43,51,59,100" value="1,2,3,4,4" tags="vibepickaxeLL,vibeshovelLL,vibeaxeLL"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="70,80,90,100" value="1,2,3,4" tags="vibeaugerLL,vibeChainsawLL,multiharvesttoolLL"/>
+</effect_group>
+</crafting_skill>
+</insertBefore>
+
+<!--BATONS CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingRobotics']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']">
+	<crafting_skill name="craftingRobotics" max_level="100" parent="attCrafting" name_key="craftingRoboticsName" desc_key="craftingRoboticsDesc" long_desc_key="craftingRoboticsLongDesc" icon="ui_game_symbol_junk_turret">
+
+	<display_entry item="moonrockbatonLL" unlock_level="1,3,5,7,10" />
+	<display_entry item="gunBotT1JunkSledge" unlock_level="11,13,16,19,22" />
+	<display_entry item="brassstunbatonLL" unlock_level="23,26,30,34,38" />
+	<display_entry item="gunBotT2JunkTurret" unlock_level="39,46,53,60,67" />
+	<display_entry item="gunBotT3JunkDrone" unlock_level="68,76,84,92,100" />
+
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="moonrockbatonLL"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="gunBotT1JunkSledge"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="23,100" value="1" tags="brassstunbatonLL"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,100" value="1" tags="gunBotT2JunkTurret"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="68,100" value="1" tags="gunBotT3JunkDrone"/>
+
+		<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,100" value="1,2,3,4,4" tags="moonrockbatonLL"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,100" value="1,2,3,4,4" tags="gunBotT1JunkSledge"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="26,30,34,38,100" value="1,2,3,4,4" tags="brassstunbatonLL"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="46,53,60,67,100" value="1,2,3,4,4" tags="gunBotT2JunkTurret"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="76,84,92,100" value="1,2,3,4" tags="gunBotT3JunkDrone"/>
+</effect_group>
+</crafting_skill>
+</insertBefore>
+
+<!--SPEARS CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingSpears']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']">
+	<crafting_skill name="craftingSpears" max_level="75" parent="attCrafting" name_key="craftingSpearsName" desc_key="craftingSpearsDesc" long_desc_key="craftingSpearsLongDesc" icon="ui_game_symbol_spear">
+
+	<display_entry item="moonrockspearLL" unlock_level="1,3,5,7,10" />
+	<display_entry item="brassspearLL" unlock_level="11,17,24,31,38" />
+	<display_entry item="t3vibespearLL" unlock_level="39,48,57,66,75" />
+
+	<effect_group>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="moonrockspearLL"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="brassspearLL"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,75" value="1" tags="t3vibespearLL"/>
+
+	<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,75" value="1,2,3,4,4" tags="moonrockspearLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75" value="1,2,3,4,4" tags="brassspearLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75" value="1,2,3,4" tags="t3vibespearLL"/>
+</effect_group>
+</crafting_skill>
+</insertBefore>
+
+<!--CLUBS CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingClubs']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']">
+	<crafting_skill name="craftingClubs" max_level="75" parent="attCrafting" name_key="craftingClubsName" desc_key="craftingClubsDesc" long_desc_key="craftingClubsLongDesc" icon="ui_game_symbol_club">
+
+		<display_entry item="moonrockclubLL" unlock_level="1,3,5,7,10" />
+		<display_entry item="brassclubLL" unlock_level="11,17,24,31,38" />
+		<display_entry item="vibebatLL" unlock_level="39,48,57,66,75" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="moonrockclubLL"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="brassclubLL"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,75" value="1" tags="vibebatLL"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,75" value="1,2,3,4,4" tags="moonrockclubLL"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75" value="1,2,3,4,4" tags="brassclubLL"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75" value="1,2,3,4" tags="vibebatLL"/>
+		</effect_group>
+	</crafting_skill>
+</insertBefore>
+
+<!--knifes CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingBlades']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']">
+	<crafting_skill name="craftingBlades" max_level="75" parent="attCrafting" name_key="craftingBladesName" desc_key="craftingBladesDesc" long_desc_key="craftingBladesLongDesc" icon="ui_game_symbol_knife">
+
+		<display_entry item="meleeWpnBladeT0BoneKnife" unlock_level="1,3,5,7,10" />
+		<display_entry item="brassknifeLL" unlock_level="11,17,24,31,38" />
+		<display_entry item="vibemacheteLL" unlock_level="39,48,57,66,75" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnBladeT0BoneKnife"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="brassknifeLL"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,75" value="1" tags="vibemacheteLL"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,75" value="1,2,3,4,4" tags="meleeWpnBladeT0BoneKnife"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75" value="1,2,3,4,4" tags="brassknifeLL"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75" value="1,2,3,4" tags="vibemacheteLL"/>
+		</effect_group>
+	</crafting_skill>
+</insertBefore>
+
+<!--knuckles CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingKnuckles']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']">
+	<crafting_skill name="craftingKnuckles" max_level="75" parent="attCrafting" name_key="craftingKnucklesName" desc_key="craftingKnucklesDesc" long_desc_key="craftingKnucklesLongDesc" icon="ui_game_symbol_boxer">
+
+	<display_entry item="meleeWpnKnucklesT0LeatherKnuckles" unlock_level="1,3,5,7,10" />
+	<display_entry item="brassknucksLL" unlock_level="11,17,24,31,38" />
+	<display_entry item="vibeknucksLL" unlock_level="39,48,57,66,75" />
+
+	<effect_group>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnKnucklesT0LeatherKnuckles"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="brassknucksLL"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,75" value="1" tags="vibeknucksLL"/>
+
+	<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,75" value="1,2,3,4,4" tags="meleeWpnKnucklesT0LeatherKnuckles"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75" value="1,2,3,4,4" tags="brassknucksLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75" value="1,2,3,4" tags="vibeknucksLL"/>
+</effect_group>
+</crafting_skill>
+</insertBefore>
+
+<!--knuckles CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingSledgehammers']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']">
+	<crafting_skill name="craftingSledgehammers" max_level="75" parent="attCrafting" name_key="craftingSledgehammersName" desc_key="craftingSledgehammersDesc" long_desc_key="craftingSledgehammersLongDesc" icon="ui_game_symbol_sledge">
+
+	<display_entry item="moonrocksledgeLL" unlock_level="1,3,5,7,10" />
+	<display_entry item="brasssledgeLL" unlock_level="11,17,24,31,38" />
+	<display_entry item="vibesledgeLL" unlock_level="39,48,57,66,75" />
+
+	<effect_group>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="moonrocksledgeLL"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="brasssledgeLL"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,75" value="1" tags="vibesledgeLL"/>
+
+	<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,75" value="1,2,3,4,4" tags="moonrocksledgeLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75" value="1,2,3,4,4" tags="brasssledgeLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75" value="1,2,3,4" tags="vibesledgeLL"/>
+</effect_group>
+</crafting_skill>
+</insertBefore>
+
+
+
+
+
 
 </configs>

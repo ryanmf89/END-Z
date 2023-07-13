@@ -1,0 +1,41 @@
+<configs>
+
+<append xpath="/materials">
+
+<material id="Mguppyoil">
+	<property name="damage_category" value="organic"/>
+	<property name="surface_category" value="organic"/>
+	<property name="Experience" value="1"/>
+	<property name="MaxDamage" value="150"/>
+	<property name="stepsound" value="organic"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+</material>
+
+<material id="MguppyCampfire">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="wood"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="MaxDamage" value="5"/>
+	<property name="Experience" value="0"/>
+</material>
+
+<material id="MguppyCampfireLit">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="wood"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="MaxDamage" value="150"/>
+	<property name="Experience" value="0"/>
+</material>
+
+</append>
+
+</configs>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <Name value="Clouds_No_Trader_Protection" />
+  <DisplayName value="Cloud's No Trader Protection" />
+  <Description value="remove trader protection / must be installed before world generation" />
+  <Author value="Nocloud4u" />
+  <Version value="1.0" />
+</xml>

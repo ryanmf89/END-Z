@@ -1,0 +1,5 @@
+<mjedit>
+	<append xpath="/xui/ruleset/window_group[@name='mainMenu']" >
+			<window name="btnNPCMmenu" />
+	</append>
+</mjedit>

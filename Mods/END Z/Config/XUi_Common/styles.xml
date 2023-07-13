@@ -1,7 +1,7 @@
 <configs>
 <!-- Make the icon select area a bit smaller so there's no overlap -->
 <append xpath="/styles">	
-<style name="kh60_itemStack">
+<style name="itemStack">
 	<style_entry name="select_color" value="[beige]"/>
 	<style_entry name="press_color" value="[limeGreen]"/>
 	<style_entry name="final_pressed_color" value="[lightGrey]"/>

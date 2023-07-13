@@ -1,0 +1,17 @@
+<configs>
+
+		<!-- ++= This part of the modlet is totally stolen from MageJosh.  Shamelessly so. =) =++ -->
+
+<append xpath="/windows" >
+
+	<window name="btnNPC" controller="ServerInfo" anchor="LeftBottom" pos="60,89">
+		<panel name="header" pos="0,0" height="66" depth="3" backgroundspritename="ui_game_panel_header" bordercolor="[black]" borderthickness="0" >
+			<texture name="ItemBackground" depth="2" size="500, 66" texture="@https://imgur.com/1AWAhlF.png" material="Materials/Transparent Colored" pos="0,0" />
+			<label name="ServerDescription" />
+			<label depth="1" pos="0,-20" height="66" width="500" name="ServerWebsiteURL" text="https://github.com/SphereII/SphereII.Mods" justify="center" style="press, hover" font_size="40" upper_case="false" />
+		</panel>
+	</window>
+
+</append>
+
+</configs>

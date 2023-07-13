@@ -1,17 +1,9 @@
 <configs>
 <!-- Make player dropped bags bigger to accomodate new size-->
-<!--set xpath="/lootcontainers/lootcontainer[@id='2']/@size">11,11</set-->
+<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">11,11</set>
 		
 <!-- Increase the amount of feathers you find in nests -->
 <set xpath="/lootcontainers/lootgroup[@name='groupBirdNest01']/item[@name='resourceFeather']/@count">5,10</set>
-<!--set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='resourceFeather']/@count">5,10</set-->
-<!--remove xpath="/loot/lootgroup[@name='groupBirdNest02']"></remove>
-<insertAfter xpath="/loot/lootgroup[@name='groupBirdNest01']">
-<lootgroup name="groupBirdNest02" count="1,2">
-	<item name="foodEgg" count="3,6" loot_prob_template="high"/>
-	<item name="resourceFeather" count="1,5" loot_prob_template="high"/>
-</lootgroup>
-</insertAfter-->
 
 <!-- Add acid to cupboards -->
 <append xpath="/lootcontainers/lootgroup[@name='groupCupboard02']">
@@ -29,13 +21,16 @@
 
 <!--STARTER CRATE-->
 <append xpath="/lootcontainers">
-<lootgroup name="endzStarterCrateContents" count="5" loot_quality_template="QLTemplateT0">
-	<item group="groupApparelHats" count="1" />
-	<item group="groupWeaponsMeleeScaled" count="1"/>
-	<item group="groupToolsT1" count="1"/> 
-	<item group="groupArmorScaled" count="2" />
-	<item group="airdropMedicine" count="1" loot_prob_template="med" /> 
-	<item group="airdropfood" count="2"/> 
+<lootgroup name="endzStarterCrateContents" count="all">
+	<item name="meleeToolRepairT1ClawHammer" count="1"/>
+	<item name="modGunMeleeRadRemover" count="1"/>
+	<item name="drinkJarBoiledWater" count="2"/>
+	<item name="foodCanChili" count="2"/>
+	<item name="medicalFirstAidBandage" count="2"/>
+	<item name="meleeToolTorch" count="2"/>
+	<item name="keystoneBlock" count="1"/>
+	<item name="startershovelLL" count="1"/>
+	<item name="starteraxeLL" count="1"/>
 </lootgroup>
 <lootcontainer id="798" name="endzStarterCrateLoot" count="1" size="8,9" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
 	<item group="endzStarterCrateContents"/>
@@ -43,47 +38,14 @@
 </append>
 	
 <!--find a bicycle in the dumpster-->
-<append xpath="/lootcontainers/lootcontainer[@name='dumpster']"><item name="vehicleBicyclePlaceable" loot_prob_template="low"/></append>
+<append xpath="/lootcontainers/lootcontainer[@name='dumpster']"><item name="vehicleBicyclePlaceable" loot_prob_template="veryLow"/></append>
 
-<!--FORGED BRASS IN THE WORKING STIFF CRATES WITH PROB OF 20%-->
+<!--FORGED BRASS AND VIBE IN TRASH-->
 <append xpath="//lootgroup[@name='groupJunk02']">
 	<item name="resourceForgedBrassLL" loot_prob_template="medLow"/>
 	<item name="resourceforgedvibeLL" loot_prob_template="low"/>
 </append>
-
-<!--BRASS weapons WITH PROB OF 5%-->
-<append xpath="//lootgroup[@name='groupWorkingStiffs01' or @name='groupWorkingStiffs02' or @name='groupConstructionCrate01' or @name='groupConstructionCrate02']">
-	<item name="brassshovelLL" loot_prob_template="low"/>
-	<item name="brassaxeLL" loot_prob_template="low"/>
-	<item name="brasspickaxeLL" loot_prob_template="low"/>
-	<item name="brasssledgeLL" loot_prob_template="low"/>
-	<item name="brassknifeLL" loot_prob_template="low"/>
-	<item name="brassclubLL" loot_prob_template="low"/>
-	<item name="brassknucksLL" loot_prob_template="low"/>
-	<item name="brassspearLL" loot_prob_template="low"/>
-	<item name="moonrockshovelLL" loot_prob_template="med"/>
-	<item name="moonrockaxeLL" loot_prob_template="med"/>
-	<item name="moonrockspearLL" loot_prob_template="med"/>
-	<item name="moonrocksledgeLL" loot_prob_template="med"/>
-</append>
-<!--VIBRANIUM WEAPONS PREMADE IN THE WORLD LOOT WITH A PROB OF 5%-->
-<append xpath="//lootgroup[@name='groupHardenedChestT5_02' or @name='groupHardenedChestT5_06' or @name='groupZpackStrong03' or @name='groupHardenedChestT4_04' or @name='groupHardenedChestT4_08']">
-	<item name="t3vibespearLL" loot_prob_template="low"/>
-	<item name="vibesledgeLL" loot_prob_template="low"/>
-	<item name="vibemacheteLL" loot_prob_template="low"/>
-	<item name="vibeknucksLL" loot_prob_template="low"/>
-	<item name="vibebatLL" loot_prob_template="low"/>
-	<item name="vibeaugerLL" loot_prob_template="low"/>
-	<item name="multiharvesttoolLL" loot_prob_template="low"/>
-</append>	
-			
-<!--NEW AMMO-->	
-<append xpath="//lootgroup[@name='groupAmmoSmall' or @name='groupAmmoMedium' or @name='groupAmmoSmallNoArrow' or @name='groupAmmoMediumNoArrow' or @name='groupAmmoLarge']">
-    <item name="ammo9mmBulletSteel" loot_prob_template="low" count="30,50"/>
-    <item name="ammo44MagnumBulletSteel" loot_prob_template="med" count="30,50"/>
-    <item name="ammo762mmBulletFMJSteel" loot_prob_template="med" count="30,50"/>
-</append>
-	
+				
 <!--SOLAR POWER-->
 <append xpath="//lootgroup[@name='groupElectricalDevices']">
 	<item name="questRewardSolarBankBundle" loot_prob_template="Low"/>
@@ -133,11 +95,53 @@
 <!--ULTIMATE SCREAMER-->
 <append xpath="/lootcontainers">
 <!-- Knap Sack -->
-<lootcontainer id="998" name="KnapSack" count="4" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+<lootcontainer id="998" name="KnapSack" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 	<item name="EZcurrencyLL" count="500,1000" prob="0.2"/>
-	<item name="multiharvesttoolLL" loot_prob_template="low"/>
 </lootcontainer>
 </append>
+
+<!--removes items from loot and uses MOONROCK ITEMS-->
+<set xpath="//item[@name='meleeToolRepairT0StoneAxe']/@name">moonrockaxeLL</set>
+<set xpath="//item[@name='meleeToolShovelT0StoneShovel']/@name">moonrockshovelLL</set>
+<set xpath="//item[@name='meleeWpnBatonT0PipeBaton']/@name">moonrockbatonLL</set>
+<set xpath="//item[@name='meleeWpnSpearT0StoneSpear']/@name">moonrockspearLL</set>
+<set xpath="//item[@name='meleeWpnClubT0WoodenClub']/@name">moonrockclubLL</set>
+<set xpath="//item[@name='meleeWpnSledgeT0StoneSledgehammer']/@name">moonrocksledgeLL</set>
+
+<!--removes items from loot and uses BRASS ITEMS-->
+<set xpath="//item[@name='meleeToolShovelT1IronShovel']/@name">brassshovelLL</set>
+<set xpath="//item[@name='meleeToolAxeT1IronFireaxe']/@name">brassaxeLL</set>
+<set xpath="//item[@name='meleeToolPickT1IronPickaxe']/@name">brasspickaxeLL</set>
+<set xpath="//item[@name='meleeWpnBatonT2StunBaton']/@name">brassstunbatonLL</set>
+<set xpath="//item[@name='meleeWpnSpearT1IronSpear']/@name">brassspearLL</set>
+<set xpath="//item[@name='meleeWpnClubT1BaseballBat']/@name">brassclubLL</set>
+<set xpath="//item[@name='meleeWpnBladeT1HuntingKnife']/@name">brassknifeLL</set>
+<set xpath="//item[@name='meleeWpnKnucklesT1IronKnuckles']/@name">brassknucksLL</set>
+<set xpath="//item[@name='meleeWpnSledgeT1IronSledgehammer']/@name">brasssledgeLL</set>
+
+<!--removes items from loot and uses VIBRANIUM ITEMS-->
+<set xpath="//item[@name='meleeToolPickT2SteelPickaxe']/@name">vibepickaxeLL</set>
+<set xpath="//item[@name='meleeToolAxeT2SteelAxe']/@name">vibeaxeLL</set>
+<set xpath="//item[@name='meleeToolShovelT2SteelShovel']/@name">vibeshovelLL</set>
+<set xpath="//item[@name='meleeToolPickT3Auger']/@name">vibeaugerLL</set>
+<set xpath="//item[@name='meleeToolAxeT3Chainsaw']/@name">vibeChainsawLL</set>
+<set xpath="//item[@name='meleeWpnSpearT3SteelSpear']/@name">t3vibespearLL</set>
+<set xpath="//item[@name='meleeWpnClubT3SteelClub']/@name">vibebatLL</set>
+<set xpath="//item[@name='meleeWpnBladeT3Machete']/@name">vibemacheteLL</set>
+<set xpath="//item[@name='meleeWpnKnucklesT3SteelKnuckles']/@name">vibeknucksLL</set>
+<set xpath="//item[@name='meleeWpnSledgeT3SteelSledgehammer']/@name">vibesledgeLL</set>
+
+<!--changes in game dyes to custom ones-->
+<set xpath="//item[@name='modDyeRed']/@name">modDyeredLL</set>
+<set xpath="//item[@name='modDyeGreen']/@name">modDyelimegreenLL</set>
+<set xpath="//item[@name='modDyeBlue']/@name">modDyeblueLL</set>
+<set xpath="//item[@name='modDyeBrown']/@name">modDyeorangeLL</set>
+<set xpath="//item[@name='modDyeBlack']/@name">modDyeblackLL</set>
+<set xpath="//item[@name='modDyePink']/@name">modDyepinkLL</set>
+<set xpath="//item[@name='modDyePurple']/@name">modDyepurpleLL</set>
+<set xpath="//item[@name='modDyeYellow']/@name">modDyeyellowLL</set>
+
+
 </configs>
 
 

@@ -1,0 +1,13 @@
+Key,English
+guppyFlamethrower,Flamethrower
+guppyFlamethrowerDesc,weapons,Burn your enemies.  Burn them all.  Alive, dead, who cares.
+ammoNapalm,Napalm is fuel for the flamethrower
+ammoNapalmDesc,Whip up a batch of this geneva convention banned stuff to fuel your Flame Thrower,,,,,
+guppyFireExtinguisherItem,Fire Extinguisher
+guppyFireExtinguisherItemDesc,Put out a fire.
+guppysFireExtinguisherBlock,Fire Extinguisher
+guppysFireExtinguisherBlockDesc,Pick up and keep this as you may need it later
+guppyOilSlickGoesInDitch,Ditch Oil Slick
+guppyOilSlickGoesInDitchDesc,Place in a terrain ditch - This will float up a bit to show in a ditch, so do not use if placing on a flat surface for best visual effect.  Light this on fire.
+gupOilSlickGoesOnBlock,Block Oil Slick
+gupOilSlickGoesOnBlockDesc,Place on a block - This is level with the ground so do not use in a terrain ditch for best visual effect.  Light this on fire.

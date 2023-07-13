@@ -2,25 +2,25 @@
 <!-- badassOnlyHordeStages -->
 <append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS79']">  <entity name="InfectedCop" prob="0.002"/><entity name="InfectedHawai" prob="0.002"/><entity name="InfectedSkater" prob="0.002"/><entity name="InfectedSoldier" prob="0.002"/><entity name="InfectedBoomer" prob="0.002"/><entity name="InfectedFeral" prob="0.002"/></append>
 <append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS95']">  <entity name="InfectedCop" prob="0.006"/><entity name="InfectedHawai" prob="0.006"/><entity name="InfectedSkater" prob="0.006"/><entity name="InfectedSoldier" prob="0.006"/><entity name="InfectedBoomer" prob="0.006"/><entity name="InfectedFeral" prob="0.006"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS112']"> <entity name="InfectedCop" prob="0.010"/><entity name="InfectedHawai" prob="0.010"/><entity name="InfectedSkater" prob="0.010"/><entity name="InfectedSoldier" prob="0.010"/><entity name="InfectedBoomer" prob="0.010"/><entity name="InfectedFeral" prob="0.010"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS130']"> <entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS150']"> <entity name="InfectedCop" prob="0.050"/><entity name="InfectedHawai" prob="0.050"/><entity name="InfectedSkater" prob="0.050"/><entity name="InfectedSoldier" prob="0.050"/><entity name="InfectedBoomer" prob="0.050"/><entity name="InfectedFeral" prob="0.050"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS171']"> <entity name="InfectedCop" prob="0.055"/><entity name="InfectedHawai" prob="0.055"/><entity name="InfectedSkater" prob="0.055"/><entity name="InfectedSoldier" prob="0.055"/><entity name="InfectedBoomer" prob="0.055"/><entity name="InfectedFeral" prob="0.055"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS194']"> <entity name="InfectedCop" prob="0.060"/><entity name="InfectedHawai" prob="0.060"/><entity name="InfectedSkater" prob="0.060"/><entity name="InfectedSoldier" prob="0.060"/><entity name="InfectedBoomer" prob="0.060"/><entity name="InfectedFeral" prob="0.060"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS217']"> <entity name="InfectedCop" prob="0.070"/><entity name="InfectedHawai" prob="0.070"/><entity name="InfectedSkater" prob="0.070"/><entity name="InfectedSoldier" prob="0.070"/><entity name="InfectedBoomer" prob="0.070"/><entity name="InfectedFeral" prob="0.070"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS242']"> <entity name="InfectedCop" prob="0.080"/><entity name="InfectedHawai" prob="0.080"/><entity name="InfectedSkater" prob="0.080"/><entity name="InfectedSoldier" prob="0.080"/><entity name="InfectedBoomer" prob="0.080"/><entity name="InfectedFeral" prob="0.080"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS268']"> <entity name="InfectedCop" prob="0.090"/><entity name="InfectedHawai" prob="0.090"/><entity name="InfectedSkater" prob="0.090"/><entity name="InfectedSoldier" prob="0.090"/><entity name="InfectedBoomer" prob="0.090"/><entity name="InfectedFeral" prob="0.090"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS296']"> <entity name="InfectedCop" prob="0.120"/><entity name="InfectedHawai" prob="0.120"/><entity name="InfectedSkater" prob="0.120"/><entity name="InfectedSoldier" prob="0.120"/><entity name="InfectedBoomer" prob="0.120"/><entity name="InfectedFeral" prob="0.120"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS325']"> <entity name="InfectedCop" prob="0.160"/><entity name="InfectedHawai" prob="0.160"/><entity name="InfectedSkater" prob="0.160"/><entity name="InfectedSoldier" prob="0.160"/><entity name="InfectedBoomer" prob="0.160"/><entity name="InfectedFeral" prob="0.160"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS355']"> <entity name="InfectedCop" prob="0.200"/><entity name="InfectedHawai" prob="0.200"/><entity name="InfectedSkater" prob="0.200"/><entity name="InfectedSoldier" prob="0.200"/><entity name="InfectedBoomer" prob="0.200"/><entity name="InfectedFeral" prob="0.200"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS386']"> <entity name="InfectedCop" prob="0.250"/><entity name="InfectedHawai" prob="0.250"/><entity name="InfectedSkater" prob="0.250"/><entity name="InfectedSoldier" prob="0.250"/><entity name="InfectedBoomer" prob="0.250"/><entity name="InfectedFeral" prob="0.250"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS419']"> <entity name="InfectedCop" prob="0.300"/><entity name="InfectedHawai" prob="0.300"/><entity name="InfectedSkater" prob="0.300"/><entity name="InfectedSoldier" prob="0.300"/><entity name="InfectedBoomer" prob="0.300"/><entity name="InfectedFeral" prob="0.300"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS452']"> <entity name="InfectedCop" prob="0.350"/><entity name="InfectedHawai" prob="0.350"/><entity name="InfectedSkater" prob="0.350"/><entity name="InfectedSoldier" prob="0.350"/><entity name="InfectedBoomer" prob="0.350"/><entity name="InfectedFeral" prob="0.350"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS488']"> <entity name="InfectedCop" prob="0.400"/><entity name="InfectedHawai" prob="0.400"/><entity name="InfectedSkater" prob="0.400"/><entity name="InfectedSoldier" prob="0.400"/><entity name="InfectedBoomer" prob="0.400"/><entity name="InfectedFeral" prob="0.400"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS524']"> <entity name="InfectedCop" prob="0.450"/><entity name="InfectedHawai" prob="0.450"/><entity name="InfectedSkater" prob="0.450"/><entity name="InfectedSoldier" prob="0.450"/><entity name="InfectedBoomer" prob="0.450"/><entity name="InfectedFeral" prob="0.450"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS561']"> <entity name="InfectedCop" prob="0.500"/><entity name="InfectedHawai" prob="0.500"/><entity name="InfectedSkater" prob="0.500"/><entity name="InfectedSoldier" prob="0.500"/><entity name="InfectedBoomer" prob="0.500"/><entity name="InfectedFeral" prob="0.500"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS600']"> <entity name="InfectedCop" prob="0.550"/><entity name="InfectedHawai" prob="0.550"/><entity name="InfectedSkater" prob="0.550"/><entity name="InfectedSoldier" prob="0.550"/><entity name="InfectedBoomer" prob="0.550"/><entity name="InfectedFeral" prob="0.550"/></append>
-<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS640']"> <entity name="InfectedCop" prob="0.600"/><entity name="InfectedHawai" prob="0.600"/><entity name="InfectedSkater" prob="0.600"/><entity name="InfectedSoldier" prob="0.600"/><entity name="InfectedBoomer" prob="0.600"/><entity name="InfectedFeral" prob="0.600"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS112']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.010"/><entity name="InfectedSkater" prob="0.010"/><entity name="InfectedSoldier" prob="0.010"/><entity name="InfectedBoomer" prob="0.010"/><entity name="InfectedFeral" prob="0.010"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS130']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS150']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.050"/><entity name="InfectedSkater" prob="0.050"/><entity name="InfectedSoldier" prob="0.050"/><entity name="InfectedBoomer" prob="0.050"/><entity name="InfectedFeral" prob="0.050"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS171']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.055"/><entity name="InfectedSkater" prob="0.055"/><entity name="InfectedSoldier" prob="0.055"/><entity name="InfectedBoomer" prob="0.055"/><entity name="InfectedFeral" prob="0.055"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS194']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.060"/><entity name="InfectedSkater" prob="0.060"/><entity name="InfectedSoldier" prob="0.060"/><entity name="InfectedBoomer" prob="0.060"/><entity name="InfectedFeral" prob="0.060"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS217']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.070"/><entity name="InfectedSkater" prob="0.070"/><entity name="InfectedSoldier" prob="0.070"/><entity name="InfectedBoomer" prob="0.070"/><entity name="InfectedFeral" prob="0.070"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS242']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.080"/><entity name="InfectedSkater" prob="0.080"/><entity name="InfectedSoldier" prob="0.080"/><entity name="InfectedBoomer" prob="0.080"/><entity name="InfectedFeral" prob="0.080"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS268']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.090"/><entity name="InfectedSkater" prob="0.090"/><entity name="InfectedSoldier" prob="0.090"/><entity name="InfectedBoomer" prob="0.090"/><entity name="InfectedFeral" prob="0.090"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS296']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.120"/><entity name="InfectedSkater" prob="0.120"/><entity name="InfectedSoldier" prob="0.120"/><entity name="InfectedBoomer" prob="0.120"/><entity name="InfectedFeral" prob="0.120"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS325']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.160"/><entity name="InfectedSkater" prob="0.160"/><entity name="InfectedSoldier" prob="0.160"/><entity name="InfectedBoomer" prob="0.160"/><entity name="InfectedFeral" prob="0.160"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS355']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.200"/><entity name="InfectedSkater" prob="0.200"/><entity name="InfectedSoldier" prob="0.200"/><entity name="InfectedBoomer" prob="0.200"/><entity name="InfectedFeral" prob="0.200"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS386']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.250"/><entity name="InfectedSkater" prob="0.250"/><entity name="InfectedSoldier" prob="0.250"/><entity name="InfectedBoomer" prob="0.250"/><entity name="InfectedFeral" prob="0.250"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS419']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.300"/><entity name="InfectedSkater" prob="0.300"/><entity name="InfectedSoldier" prob="0.300"/><entity name="InfectedBoomer" prob="0.300"/><entity name="InfectedFeral" prob="0.300"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS452']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.350"/><entity name="InfectedSkater" prob="0.350"/><entity name="InfectedSoldier" prob="0.350"/><entity name="InfectedBoomer" prob="0.350"/><entity name="InfectedFeral" prob="0.350"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS488']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.400"/><entity name="InfectedSkater" prob="0.400"/><entity name="InfectedSoldier" prob="0.400"/><entity name="InfectedBoomer" prob="0.400"/><entity name="InfectedFeral" prob="0.400"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS524']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.450"/><entity name="InfectedSkater" prob="0.450"/><entity name="InfectedSoldier" prob="0.450"/><entity name="InfectedBoomer" prob="0.450"/><entity name="InfectedFeral" prob="0.450"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS561']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.500"/><entity name="InfectedSkater" prob="0.500"/><entity name="InfectedSoldier" prob="0.500"/><entity name="InfectedBoomer" prob="0.500"/><entity name="InfectedFeral" prob="0.500"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS600']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.550"/><entity name="InfectedSkater" prob="0.550"/><entity name="InfectedSoldier" prob="0.550"/><entity name="InfectedBoomer" prob="0.550"/><entity name="InfectedFeral" prob="0.550"/></append>
+<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS640']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="0.600"/><entity name="InfectedSkater" prob="0.600"/><entity name="InfectedSoldier" prob="0.600"/><entity name="InfectedBoomer" prob="0.600"/><entity name="InfectedFeral" prob="0.600"/></append>
 <append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS681']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="1.000"/><entity name="InfectedSkater" prob="1.000"/><entity name="InfectedSoldier" prob="1.000"/><entity name="InfectedBoomer" prob="1.000"/><entity name="InfectedFeral" prob="1.000"/></append>
 <append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS724']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="1.000"/><entity name="InfectedSkater" prob="1.000"/><entity name="InfectedSoldier" prob="1.000"/><entity name="InfectedBoomer" prob="1.000"/><entity name="InfectedFeral" prob="1.000"/></append>
 <append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS767']"> <entity name="InfectedCop" prob="1.000"/><entity name="InfectedHawai" prob="1.000"/><entity name="InfectedSkater" prob="1.000"/><entity name="InfectedSoldier" prob="1.000"/><entity name="InfectedBoomer" prob="1.000"/><entity name="InfectedFeral" prob="1.000"/></append>
@@ -228,34 +228,34 @@
 <append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1984']"><entity name="InfectedCop" prob="0.800"/><entity name="InfectedHawai" prob="0.800"/><entity name="InfectedSkater" prob="0.800"/><entity name="InfectedSoldier" prob="0.800"/><entity name="InfectedBoomer" prob="0.600"/><entity name="InfectedFeral" prob="0.800"/></append>
 
 <!-- Scout horde stage screamer spawn -->
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS140']"><entity name="InfectedCop" prob="0.010"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS148']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS156']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS164']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS172']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS181']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS189']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS198']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS207']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS216']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS225']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS234']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS243']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS252']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS262']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS272']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS281']"><entity name="InfectedCop" prob="0.020"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS291']"><entity name="InfectedCop" prob="0.030"/><entity name="InfectedHawai" prob="0.030"/><entity name="InfectedSkater" prob="0.030"/><entity name="InfectedSoldier" prob="0.030"/><entity name="InfectedBoomer" prob="0.030"/><entity name="InfectedFeral" prob="0.030"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS301']"><entity name="InfectedCop" prob="0.030"/><entity name="InfectedHawai" prob="0.030"/><entity name="InfectedSkater" prob="0.030"/><entity name="InfectedSoldier" prob="0.030"/><entity name="InfectedBoomer" prob="0.030"/><entity name="InfectedFeral" prob="0.030"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS311']"><entity name="InfectedCop" prob="0.030"/><entity name="InfectedHawai" prob="0.030"/><entity name="InfectedSkater" prob="0.030"/><entity name="InfectedSoldier" prob="0.030"/><entity name="InfectedBoomer" prob="0.030"/><entity name="InfectedFeral" prob="0.030"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS322']"><entity name="InfectedCop" prob="0.040"/><entity name="InfectedHawai" prob="0.040"/><entity name="InfectedSkater" prob="0.040"/><entity name="InfectedSoldier" prob="0.040"/><entity name="InfectedBoomer" prob="0.040"/><entity name="InfectedFeral" prob="0.040"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS332']"><entity name="InfectedCop" prob="0.040"/><entity name="InfectedHawai" prob="0.040"/><entity name="InfectedSkater" prob="0.040"/><entity name="InfectedSoldier" prob="0.040"/><entity name="InfectedBoomer" prob="0.040"/><entity name="InfectedFeral" prob="0.040"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS343']"><entity name="InfectedCop" prob="0.040"/><entity name="InfectedHawai" prob="0.040"/><entity name="InfectedSkater" prob="0.040"/><entity name="InfectedSoldier" prob="0.040"/><entity name="InfectedBoomer" prob="0.040"/><entity name="InfectedFeral" prob="0.040"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS353']"><entity name="InfectedCop" prob="0.050"/><entity name="InfectedHawai" prob="0.050"/><entity name="InfectedSkater" prob="0.050"/><entity name="InfectedSoldier" prob="0.050"/><entity name="InfectedBoomer" prob="0.050"/><entity name="InfectedFeral" prob="0.050"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS364']"><entity name="InfectedCop" prob="0.060"/><entity name="InfectedHawai" prob="0.060"/><entity name="InfectedSkater" prob="0.060"/><entity name="InfectedSoldier" prob="0.060"/><entity name="InfectedBoomer" prob="0.060"/><entity name="InfectedFeral" prob="0.060"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS374']"><entity name="InfectedCop" prob="0.070"/><entity name="InfectedHawai" prob="0.070"/><entity name="InfectedSkater" prob="0.070"/><entity name="InfectedSoldier" prob="0.070"/><entity name="InfectedBoomer" prob="0.070"/><entity name="InfectedFeral" prob="0.070"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS385']"><entity name="InfectedCop" prob="0.080"/><entity name="InfectedHawai" prob="0.080"/><entity name="InfectedSkater" prob="0.080"/><entity name="InfectedSoldier" prob="0.080"/><entity name="InfectedBoomer" prob="0.080"/><entity name="InfectedFeral" prob="0.080"/></append>
-<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS396']"><entity name="InfectedCop" prob="0.090"/><entity name="InfectedHawai" prob="0.090"/><entity name="InfectedSkater" prob="0.090"/><entity name="InfectedSoldier" prob="0.090"/><entity name="InfectedBoomer" prob="0.090"/><entity name="InfectedFeral" prob="0.090"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS140']"><entity name="InfectedCop" prob="0.10"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS148']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS156']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS164']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS172']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS181']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS189']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS198']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS207']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS216']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS225']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS234']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS243']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS252']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS262']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS272']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS281']"><entity name="InfectedCop" prob="0.20"/><entity name="InfectedHawai" prob="0.020"/><entity name="InfectedSkater" prob="0.020"/><entity name="InfectedSoldier" prob="0.020"/><entity name="InfectedBoomer" prob="0.020"/><entity name="InfectedFeral" prob="0.020"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS291']"><entity name="InfectedCop" prob="0.30"/><entity name="InfectedHawai" prob="0.030"/><entity name="InfectedSkater" prob="0.030"/><entity name="InfectedSoldier" prob="0.030"/><entity name="InfectedBoomer" prob="0.030"/><entity name="InfectedFeral" prob="0.030"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS301']"><entity name="InfectedCop" prob="0.30"/><entity name="InfectedHawai" prob="0.030"/><entity name="InfectedSkater" prob="0.030"/><entity name="InfectedSoldier" prob="0.030"/><entity name="InfectedBoomer" prob="0.030"/><entity name="InfectedFeral" prob="0.030"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS311']"><entity name="InfectedCop" prob="0.30"/><entity name="InfectedHawai" prob="0.030"/><entity name="InfectedSkater" prob="0.030"/><entity name="InfectedSoldier" prob="0.030"/><entity name="InfectedBoomer" prob="0.030"/><entity name="InfectedFeral" prob="0.030"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS322']"><entity name="InfectedCop" prob="0.40"/><entity name="InfectedHawai" prob="0.040"/><entity name="InfectedSkater" prob="0.040"/><entity name="InfectedSoldier" prob="0.040"/><entity name="InfectedBoomer" prob="0.040"/><entity name="InfectedFeral" prob="0.040"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS332']"><entity name="InfectedCop" prob="0.40"/><entity name="InfectedHawai" prob="0.040"/><entity name="InfectedSkater" prob="0.040"/><entity name="InfectedSoldier" prob="0.040"/><entity name="InfectedBoomer" prob="0.040"/><entity name="InfectedFeral" prob="0.040"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS343']"><entity name="InfectedCop" prob="0.40"/><entity name="InfectedHawai" prob="0.040"/><entity name="InfectedSkater" prob="0.040"/><entity name="InfectedSoldier" prob="0.040"/><entity name="InfectedBoomer" prob="0.040"/><entity name="InfectedFeral" prob="0.040"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS353']"><entity name="InfectedCop" prob="0.50"/><entity name="InfectedHawai" prob="0.050"/><entity name="InfectedSkater" prob="0.050"/><entity name="InfectedSoldier" prob="0.050"/><entity name="InfectedBoomer" prob="0.050"/><entity name="InfectedFeral" prob="0.050"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS364']"><entity name="InfectedCop" prob="0.60"/><entity name="InfectedHawai" prob="0.060"/><entity name="InfectedSkater" prob="0.060"/><entity name="InfectedSoldier" prob="0.060"/><entity name="InfectedBoomer" prob="0.060"/><entity name="InfectedFeral" prob="0.060"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS374']"><entity name="InfectedCop" prob="0.70"/><entity name="InfectedHawai" prob="0.070"/><entity name="InfectedSkater" prob="0.070"/><entity name="InfectedSoldier" prob="0.070"/><entity name="InfectedBoomer" prob="0.070"/><entity name="InfectedFeral" prob="0.070"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS385']"><entity name="InfectedCop" prob="0.80"/><entity name="InfectedHawai" prob="0.080"/><entity name="InfectedSkater" prob="0.080"/><entity name="InfectedSoldier" prob="0.080"/><entity name="InfectedBoomer" prob="0.080"/><entity name="InfectedFeral" prob="0.080"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS396']"><entity name="InfectedCop" prob="0.90"/><entity name="InfectedHawai" prob="0.090"/><entity name="InfectedSkater" prob="0.090"/><entity name="InfectedSoldier" prob="0.090"/><entity name="InfectedBoomer" prob="0.090"/><entity name="InfectedFeral" prob="0.090"/></append>
 <append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS407']"><entity name="InfectedCop" prob="0.120"/><entity name="InfectedHawai" prob="0.120"/><entity name="InfectedSkater" prob="0.120"/><entity name="InfectedSoldier" prob="0.120"/><entity name="InfectedBoomer" prob="0.120"/><entity name="InfectedFeral" prob="0.120"/></append>
 <append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS419']"><entity name="InfectedCop" prob="0.160"/><entity name="InfectedHawai" prob="0.160"/><entity name="InfectedSkater" prob="0.160"/><entity name="InfectedSoldier" prob="0.160"/><entity name="InfectedBoomer" prob="0.160"/><entity name="InfectedFeral" prob="0.160"/></append>
 <append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS430']"><entity name="InfectedCop" prob="0.200"/><entity name="InfectedHawai" prob="0.200"/><entity name="InfectedSkater" prob="0.200"/><entity name="InfectedSoldier" prob="0.200"/><entity name="InfectedBoomer" prob="0.200"/><entity name="InfectedFeral" prob="0.200"/></append>
@@ -374,21 +374,26 @@
 
 <!--snow zombies-->
 <entitygroup name="BossSnowzombies">
-	<entity name="FrozenYo" prob="0.05"/>
-	<entity name="FrozenBoe" prob="0.05"/>
+	<entity name="FrozenYo" prob="0.01"/>
+	<entity name="FrozenBoe" prob="0.01"/>
 </entitygroup>
 
 <!--desert zombies-->
 <entitygroup name="BossDesertzombies">
-	<entity name="DesertSoldier" prob="0.05"/>
-	<entity name="DesertBiker" prob="0.05"/>
+	<entity name="DesertSoldier" prob="0.01"/>
+	<entity name="DesertBiker" prob="0.01"/>
+</entitygroup>
+
+<!--anaconda-->
+<entitygroup name="anacondaspawn">
+	<entity name="Anaconda" prob="0.01"/>
 </entitygroup>
 
 <!--pine forest-->
 <entitygroup name="BossPineForest">
-	<entity name="AwakenMarlene" prob="0.05"/>
-	<entity name="AwakenDarlene" prob="0.05"/>
-	<entity name="AwakenArlene" prob="0.05"/>
+	<entity name="AwakenMarlene" prob="0.01"/>
+	<entity name="AwakenDarlene" prob="0.01"/>
+	<entity name="AwakenArlene" prob="0.01"/>
 </entitygroup>	
 </append>
 
@@ -467,7 +472,6 @@
 <append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS970']"><entity name="zombiebitchQueen" prob="0.4"/></append>
 <append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS985']"><entity name="zombiebitchQueen" prob="0.4"/></append>
 <append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS1000']"><entity name="zombiebitchQueen" prob="0.5"/></append>
-
 <!--FERAL HORDE STAGE-->
 <append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']"><entity name="zombiebitchQueen" prob="0.1"/></append>
 <append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS109']"><entity name="zombiebitchQueen" prob="0.1"/></append>
@@ -567,6 +571,1072 @@
 <append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS986']"><entity name="zombiebitchQueen" prob="0.4"/></append>
 <append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS998']"><entity name="zombiebitchQueen" prob="0.5"/></append>
 
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS103']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS110']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS117']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS125']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS132']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS140']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS148']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS156']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS164']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS172']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS181']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS189']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS198']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS207']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS216']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS225']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS234']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS243']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS252']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS364']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS374']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS385']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS396']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS407']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS419']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS430']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS441']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS453']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS464']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS476']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS488']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS500']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS512']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS524']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS536']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS548']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS560']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS573']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS585']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS598']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS610']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS623']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS636']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS649']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS662']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS675']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS688']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS702']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS715']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS729']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS742']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS756']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS769']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS783']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS797']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS811']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS825']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS839']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS853']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS868']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS882']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS896']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS911']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS925']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS940']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS955']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS970']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS985']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS1000']"><entity name="Anaconda" prob="0.5"/></append>
+<!--FERAL HORDE STAGE-->
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS109']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS115']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS127']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS133']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS147']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS160']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS167']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS174']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS181']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS188']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS195']"><entity name="Anaconda" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS202']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS210']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS217']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS225']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS232']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS240']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS247']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS255']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS263']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS271']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS279']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS287']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS295']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS304']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS312']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS320']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS329']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS337']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS346']"><entity name="Anaconda" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS354']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS363']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS372']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS381']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS389']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS398']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS407']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS417']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS426']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS435']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS444']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS453']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS463']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS472']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS482']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS491']"><entity name="Anaconda" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS501']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS510']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS520']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS530']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS540']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS550']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS560']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS570']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS580']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS590']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS600']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS610']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS620']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS631']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS641']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS662']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS672']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS683']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS693']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS704']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS715']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS726']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS736']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS747']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS758']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS769']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS780']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS791']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS802']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS813']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS824']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS836']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS847']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS858']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS870']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS881']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS893']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS904']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS916']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS927']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS939']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS951']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS962']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS974']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS986']"><entity name="Anaconda" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS998']"><entity name="Anaconda" prob="0.5"/></append>
 
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS103']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS110']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS117']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS125']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS132']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS140']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS148']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS156']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS164']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS172']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS181']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS189']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS198']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS207']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS216']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS225']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS234']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS243']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS252']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS364']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS374']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS385']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS396']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS407']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS419']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS430']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS441']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS453']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS464']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS476']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS488']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS500']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS512']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS524']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS536']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS548']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS560']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS573']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS585']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS598']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS610']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS623']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS636']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS649']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS662']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS675']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS688']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS702']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS715']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS729']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS742']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS756']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS769']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS783']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS797']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS811']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS825']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS839']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS853']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS868']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS882']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS896']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS911']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS925']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS940']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS955']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS970']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS985']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS1000']"><entity name="AwakenArlene" prob="0.5"/></append>
+<!--FERAL HORDE STAGE-->
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS109']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS115']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS127']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS133']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS147']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS160']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS167']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS174']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS181']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS188']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS195']"><entity name="AwakenArlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS202']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS210']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS217']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS225']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS232']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS240']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS247']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS255']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS263']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS271']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS279']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS287']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS295']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS304']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS312']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS320']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS329']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS337']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS346']"><entity name="AwakenArlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS354']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS363']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS372']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS381']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS389']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS398']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS407']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS417']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS426']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS435']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS444']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS453']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS463']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS472']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS482']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS491']"><entity name="AwakenArlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS501']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS510']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS520']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS530']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS540']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS550']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS560']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS570']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS580']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS590']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS600']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS610']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS620']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS631']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS641']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS662']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS672']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS683']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS693']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS704']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS715']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS726']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS736']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS747']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS758']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS769']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS780']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS791']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS802']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS813']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS824']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS836']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS847']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS858']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS870']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS881']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS893']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS904']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS916']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS927']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS939']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS951']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS962']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS974']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS986']"><entity name="AwakenArlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS998']"><entity name="AwakenArlene" prob="0.5"/></append>
+
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS103']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS110']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS117']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS125']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS132']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS140']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS148']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS156']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS164']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS172']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS181']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS189']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS198']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS207']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS216']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS225']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS234']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS243']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS252']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS364']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS374']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS385']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS396']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS407']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS419']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS430']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS441']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS453']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS464']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS476']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS488']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS500']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS512']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS524']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS536']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS548']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS560']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS573']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS585']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS598']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS610']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS623']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS636']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS649']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS662']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS675']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS688']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS702']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS715']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS729']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS742']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS756']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS769']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS783']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS797']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS811']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS825']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS839']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS853']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS868']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS882']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS896']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS911']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS925']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS940']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS955']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS970']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS985']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS1000']"><entity name="AwakenDarlene" prob="0.5"/></append>
+<!--FERAL HORDE STAGE-->
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS109']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS115']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS127']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS133']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS147']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS160']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS167']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS174']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS181']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS188']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS195']"><entity name="AwakenDarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS202']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS210']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS217']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS225']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS232']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS240']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS247']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS255']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS263']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS271']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS279']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS287']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS295']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS304']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS312']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS320']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS329']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS337']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS346']"><entity name="AwakenDarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS354']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS363']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS372']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS381']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS389']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS398']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS407']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS417']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS426']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS435']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS444']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS453']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS463']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS472']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS482']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS491']"><entity name="AwakenDarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS501']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS510']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS520']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS530']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS540']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS550']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS560']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS570']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS580']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS590']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS600']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS610']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS620']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS631']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS641']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS662']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS672']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS683']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS693']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS704']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS715']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS726']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS736']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS747']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS758']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS769']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS780']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS791']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS802']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS813']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS824']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS836']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS847']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS858']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS870']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS881']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS893']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS904']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS916']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS927']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS939']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS951']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS962']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS974']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS986']"><entity name="AwakenDarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS998']"><entity name="AwakenDarlene" prob="0.5"/></append>
+
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS103']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS110']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS117']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS125']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS132']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS140']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS148']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS156']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS164']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS172']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS181']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS189']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS198']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS207']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS216']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS225']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS234']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS243']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS252']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS364']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS374']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS385']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS396']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS407']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS419']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS430']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS441']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS453']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS464']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS476']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS488']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS500']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS512']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS524']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS536']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS548']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS560']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS573']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS585']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS598']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS610']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS623']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS636']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS649']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS662']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS675']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS688']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS702']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS715']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS729']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS742']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS756']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS769']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS783']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS797']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS811']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS825']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS839']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS853']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS868']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS882']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS896']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS911']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS925']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS940']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS955']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS970']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS985']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS1000']"><entity name="AwakenMarlene" prob="0.5"/></append>
+<!--FERAL HORDE STAGE-->
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS109']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS115']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS127']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS133']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS147']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS160']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS167']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS174']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS181']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS188']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS195']"><entity name="AwakenMarlene" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS202']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS210']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS217']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS225']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS232']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS240']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS247']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS255']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS263']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS271']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS279']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS287']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS295']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS304']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS312']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS320']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS329']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS337']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS346']"><entity name="AwakenMarlene" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS354']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS363']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS372']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS381']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS389']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS398']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS407']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS417']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS426']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS435']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS444']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS453']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS463']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS472']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS482']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS491']"><entity name="AwakenMarlene" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS501']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS510']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS520']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS530']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS540']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS550']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS560']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS570']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS580']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS590']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS600']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS610']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS620']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS631']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS641']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS662']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS672']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS683']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS693']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS704']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS715']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS726']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS736']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS747']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS758']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS769']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS780']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS791']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS802']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS813']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS824']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS836']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS847']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS858']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS870']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS881']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS893']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS904']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS916']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS927']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS939']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS951']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS962']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS974']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS986']"><entity name="AwakenMarlene" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS998']"><entity name="AwakenMarlene" prob="0.5"/></append>
+
+<!--FERAL HORDE STAGE-->
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS109']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS115']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS127']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS133']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS147']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS160']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS167']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS174']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS181']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS188']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS195']"><entity name="FrozenYo" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS202']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS210']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS217']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS225']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS232']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS240']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS247']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS255']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS263']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS271']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS279']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS287']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS295']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS304']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS312']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS320']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS329']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS337']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS346']"><entity name="FrozenYo" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS354']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS363']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS372']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS381']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS389']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS398']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS407']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS417']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS426']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS435']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS444']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS453']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS463']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS472']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS482']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS491']"><entity name="FrozenYo" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS501']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS510']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS520']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS530']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS540']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS550']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS560']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS570']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS580']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS590']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS600']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS610']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS620']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS631']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS641']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS662']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS672']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS683']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS693']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS704']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS715']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS726']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS736']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS747']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS758']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS769']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS780']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS791']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS802']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS813']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS824']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS836']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS847']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS858']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS870']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS881']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS893']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS904']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS916']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS927']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS939']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS951']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS962']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS974']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS986']"><entity name="FrozenYo" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS998']"><entity name="FrozenYo" prob="0.5"/></append>
+
+<!--FERAL HORDE STAGE-->
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS109']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS115']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS127']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS133']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS147']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS160']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS167']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS174']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS181']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS188']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS195']"><entity name="FrozenBoe" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS202']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS210']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS217']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS225']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS232']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS240']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS247']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS255']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS263']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS271']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS279']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS287']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS295']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS304']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS312']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS320']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS329']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS337']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS346']"><entity name="FrozenBoe" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS354']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS363']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS372']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS381']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS389']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS398']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS407']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS417']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS426']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS435']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS444']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS453']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS463']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS472']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS482']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS491']"><entity name="FrozenBoe" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS501']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS510']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS520']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS530']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS540']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS550']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS560']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS570']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS580']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS590']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS600']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS610']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS620']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS631']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS641']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS662']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS672']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS683']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS693']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS704']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS715']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS726']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS736']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS747']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS758']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS769']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS780']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS791']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS802']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS813']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS824']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS836']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS847']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS858']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS870']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS881']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS893']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS904']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS916']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS927']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS939']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS951']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS962']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS974']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS986']"><entity name="FrozenBoe" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS998']"><entity name="FrozenBoe" prob="0.5"/></append>
+
+<!--FERAL HORDE STAGE-->
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS109']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS115']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS127']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS133']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS147']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS160']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS167']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS174']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS181']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS188']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS195']"><entity name="DesertBiker" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS202']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS210']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS217']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS225']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS232']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS240']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS247']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS255']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS263']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS271']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS279']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS287']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS295']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS304']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS312']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS320']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS329']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS337']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS346']"><entity name="DesertBiker" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS354']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS363']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS372']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS381']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS389']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS398']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS407']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS417']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS426']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS435']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS444']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS453']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS463']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS472']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS482']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS491']"><entity name="DesertBiker" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS501']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS510']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS520']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS530']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS540']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS550']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS560']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS570']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS580']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS590']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS600']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS610']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS620']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS631']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS641']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS662']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS672']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS683']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS693']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS704']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS715']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS726']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS736']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS747']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS758']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS769']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS780']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS791']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS802']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS813']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS824']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS836']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS847']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS858']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS870']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS881']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS893']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS904']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS916']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS927']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS939']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS951']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS962']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS974']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS986']"><entity name="DesertBiker" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS998']"><entity name="DesertBiker" prob="0.5"/></append>
+
+<!--FERAL HORDE STAGE-->
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS109']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS115']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS127']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS133']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS147']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS160']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS167']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS174']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS181']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS188']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS195']"><entity name="DesertSoldier" prob="0.1"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS202']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS210']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS217']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS225']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS232']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS240']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS247']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS255']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS263']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS271']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS279']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS287']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS295']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS304']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS312']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS320']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS329']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS337']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS346']"><entity name="DesertSoldier" prob="0.2"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS354']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS363']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS372']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS381']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS389']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS398']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS407']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS417']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS426']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS435']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS444']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS453']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS463']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS472']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS482']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS491']"><entity name="DesertSoldier" prob="0.3"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS501']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS510']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS520']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS530']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS540']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS550']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS560']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS570']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS580']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS590']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS600']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS610']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS620']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS631']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS641']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS662']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS672']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS683']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS693']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS704']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS715']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS726']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS736']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS747']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS758']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS769']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS780']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS791']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS802']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS813']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS824']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS836']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS847']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS858']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS870']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS881']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS893']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS904']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS916']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS927']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS939']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS951']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS962']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS974']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS986']"><entity name="DesertSoldier" prob="0.4"/></append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS998']"><entity name="DesertSoldier" prob="0.5"/></append>
 
 </configs>
