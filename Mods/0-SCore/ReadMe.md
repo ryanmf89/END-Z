@@ -17,9 +17,162 @@ Direct Download to the 0-SCore.zip available on gitlab mirror:
 [ 0 - SCore (Alpha 20 ) ]: https://gitlab.com/sphereii/SphereII-Mods/-/archive/master/SphereII-Mods-master.zip?path=0-SCore
 [ 0 - SCore ( Alpha 21) ]: https://gitlab.com/sphereii/SphereII-Mods/-/archive/alpha21-experimental/SphereII-Mods-alpha21-experimental.zip?path=0-SCore
 
+### TODO
+	- Fix random sounds from NPC, like stamina exhaustion
+	- Fix an issue with remote crafting where all ingredients are not in the same storage box
+
 ### Change Logs
 
 [ Change Log ]
+Version: 21.1.10.1805  ( For A21.1 stable )
+	[ NPCS ]
+		- Quite a few failed attempts at making inventory persists reliably / weeapon select on respawn
+
+	[ Locks ]
+		- Fixed an issue where players could not lock their own doors.
+
+Version: 21.1.3.950
+	[ NPCs ]
+		- Fixed an issue where the NPCs were not preserving their inventory (for realisies?)
+
+Version: 21.1.1.830
+	[ NPCs ]
+		- Dialog Fixed for the PickMe Up functionality.
+			- Now works on dedicated and single player.
+		- Dialog fixed for weapon swap.
+		- Fixed an issue where NPCs were not preserving their inventory
+		- Fixed an issue where the NPCs were not respawning with the right weapon.
+
+	[ Trader Protection ]
+		- Re-implemented a Remove Trader Protection Patch
+			- Allows compound to be destructive
+			- Traders never close
+			- Zombies can wander into compound, but do not spawn in the compound.
+			- Quests work.
+
+	[ MinEvent ]
+		- Added AnimatorFireTriggerSDX
+		- It will recursively look for all animators on each target, firing the trigger one each animator.
+
+		Example:
+			<triggered_effect trigger="onSelfBuffStart" action="AnimatorFireTriggerSDX, SCore" trigger="triggerName"/>
+
+	[ One Block Crouch ]
+		- Adjusted the crouch adjustment from -0.40 to -.31f. Camera will be slightly higher, but still avoid clipping
+		- Added a safety check to not run if player is in a vehicle.
+
+	[ Power Block ]
+			It allows to use the wire tool anywhere on a MultiDim Block - from ocbMaurice
+			<property name="MultiDimPowerBlock" value="true"/>
+
+Version: 21.0.51.708
+	[ Portals ]
+		- Added all portals to be chunk observers.
+		- Updated the teleport position to be one block above the portal itself.
+
+Version: 21.0.49.1542
+	[ Portals ]
+		- Fixed an issue where portals would error out on game reload, without exiting the game completely.
+
+	[ Documentation ]
+		- Removed documentation to save on space.
+
+Version: 21.0.49.958
+	[ HoldingItemDurability ]
+		- Commented out debug statement
+
+	[ Locks ]
+		- Fixed an issue where cop cars would triggers errors when lock picking, resulting in no loot.
+			- Added a check for LockpickDowngradeBlock property. If it's a non-air block, it will use that downgrade option instead.
+
+	[ Remote Crafting ]
+		- Fixed an issue when a recipe required multiple ingredients, not all ingredients would be consumed.
+
+	[ Caves ]
+		- Flipped the conditional check for the MinThreshold; it does opposite of what it did before.
+
+	[ UAI ]
+		- Merged in changes for the UAI tasks to trigger alert, sense, and give up sounds.
+
+Version: 21.0.46.2014
+	[ EAI ]
+ 		- Remove debug statement
+
+Version: 21.0.46.1832
+
+	[ Remote Crafting ]
+		- Added null checks to items before trying to use their upgrade sound.
+		- Fixed an issue where item dupes were possible.
+			- Items are now removed properly from the backpack, toolbelt, then from Tile entities correctly.
+
+	[ Bugs ]
+		- Fixed an null ref on the animator when playing a game, exiting to main menu, then re-loading.
+		- Fixed a null ref when exiting the game when a drone and hired NPC are available.
+			- This was due to the fact that NPCs were being added as an OwnedByPlayer, and the DroneManager
+				did not consider it would have been a non-vehicle entity.
+	[ Fire Manager ]
+		- Disabled fire manager in prefab editor / play testing worlds.
+
+	[ Better Life ]
+		- Some fixes for the fish swimming are in the SCore, with some modification to the entityclasses.xml
+			- EAI isn't used by fish, so they do not need to be defined.
+
+	[ UAI ]
+		- Updated the IsInFront check to make sure the NPC is facing a target correctl, replacing the old, buggy one.
+
+Version: 21.0.45.1205
+	
+	[ UAI ]
+		- Adjusted the EntityUtilities.Stop() to have an optional parameter: full, default is false.
+			- When a full stop is requred, it will zero out the animator's speed / strafe
+			- Full is triggered when Dialog is open, and when the Idle Task is triggered
+
+	[ Animator ]
+		- Added a postfix to adjust the animator's speed / strafe when dealing with very small numbers.
+
+	[ Better Life ]
+		- Changed MecanimSDX to AvatarAnimalController to fix the animator bug.
+		- Could still be issues
+
+Version: 21.0.42.1007
+	[ Dialog ]
+		- Added new Dialog Requirement For Tag. This will check the listed tags in the value against the NPC you are talking to.
+			<requirement type="HasTag, SCore" requirementtype="Hide" value="zombie" />
+			<requirement type="HasTag, SCore" requirementtype="Hide" value="zombie,human" />
+
+Version: 21.0.41.1943
+
+	[ Remote Crafting ] 
+		- Fixed an issue where items weren't being properly consumed from the backpack / toolbelt.
+
+Version: 21.0.39.859
+
+	[ UAI ]
+		- Fixed an issue where the NPCs would shuffle in place
+		- Fixed an issue where non-hired NPCs wouldn't face you.
+	
+Version: 21.0.38.1508
+
+	[ Caves ]
+		- Added new property to determine when a deep cave threshold would be considered
+				<!-- Spawning and cave decorations would be considered _Deep when at this level or below -->
+				<!-- This setting is used for spawning as well -->
+				<property name="DeepCaveThreshold" vallue="30" />
+		- Added new property to determine how deep the first cave level is from the top
+				<!-- Determines how far below the surface to begin spawning caves. -->
+				<property name="StartCaveThreshold" value="15" />
+		- Added new property to determine minimum terrain height to start generating caves
+				<!-- Default value is -1, no consideration of terrain height -->
+				<property name="MinStartCaveThreshold" value="-1" />
+
+				<!-- If the terrain height is 40, but the threshold is 41, do not generate a cave -->
+				<property name="MinStartCaveThreshold" value="41" />
+
+		- Fixed an issue where the max levels wasn't being respected.
+		
+	[ UAI ]
+		- Cleaned up IdleSDX
+
 Version: 21.0.37.1546
 	[ Caves ]
 		- Fixed an issue where caveAir was used instead of regular air, so decorations weren't being placed.

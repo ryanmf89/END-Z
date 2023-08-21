@@ -8,31 +8,6 @@
 <set xpath="/progression/perks/perk[@name='perkMotherLode']/effect_group/passive_effect[@name='HarvestCount']/@value">.5,2</set>
 <set xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='CraftingTime']/@value">-0.5</set>
 
-
-
-<!--new perk under strength tree-->
-<append xpath="//perks">
-	<perk name="perkimagod" parent="skillStrengthGeneral" name_key="perkimagod" desc_key="perkimagod" icon="ui_game_symbol_bull">
-	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
-	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="2" desc_key="reqStrengthLevel02"/></level_requirements>
-	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
-	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
-	<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
-	<effect_group>
-	<passive_effect name="Gamestage" operation="base_add" level="1" value="100"/>
-	<passive_effect name="Gamestage" operation="base_add" level="2" value="100"/>
-	<passive_effect name="Gamestage" operation="base_add" level="3" value="100"/>
-	<passive_effect name="Gamestage" operation="base_add" level="4" value="100"/>
-	<passive_effect name="Gamestage" operation="base_add" level="5" value="400"/>
-	<effect_description level="1" desc_key="perkimagod1Desc" long_desc_key="perkimagod1LongDesc"/>
-	<effect_description level="2" desc_key="perkimagod2Desc" long_desc_key="perkimagod2LongDesc"/>
-	<effect_description level="3" desc_key="perkimagod3Desc" long_desc_key="perkimagod3LongDesc"/>
-	<effect_description level="4" desc_key="perkimagod4Desc" long_desc_key="perkimagod4LongDesc"/>
-	<effect_description level="5" desc_key="perkimagod5Desc" long_desc_key="perkimagod5LongDesc"/>
-	</effect_group>
-</perk>
-</append>
-
 <!--you have to read a proper book to unlock this godly ammo-->
 <append xpath="/progression/perks/book[@name='perkPistolPeteHPAmmo']/effect_group/passive_effect[@level='1']/@tags">,ammo9mmBulletSteel</append>
 <append xpath="/progression/perks/book[@name='perkEnforcerHPAmmo']/effect_group/passive_effect[@level='1']/@tags">,ammo44MagnumBulletSteel</append>
@@ -209,9 +184,91 @@
 </crafting_skill>
 </insertBefore>
 
+<remove xpath="//perk[@name='perkDaringAdventurer']"></remove>
+<insertBefore xpath="//perk[@name='perkCharismaticNature']">
+<perk name="perkDaringAdventurer" max_level="4" parent="skillIntellectInfluence" name_key="perkDaringAdventurerName" desc_key="perkDaringAdventurerDesc" icon="ui_game_symbol_adventure">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqIntellectLevel01"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="4" desc_key="reqIntellectLevel04"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="7" desc_key="reqIntellectLevel07"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
 
+	<effect_group>
+		<passive_effect name="TraderStage" operation="base_add" level="1,4" value="10,40"/>
+		<passive_effect name="QuestBonusItemReward" operation="perc_add" level="1,4" value=".05,.20"/> <!-- Bonus Dukes -->
+		<passive_effect name="QuestRewardChoiceCount" operation="base_add" level="1" value="1"/>
+		<passive_effect name="QuestRewardChoiceCount" operation="base_add" level="2" value="2"/>
+		<passive_effect name="QuestRewardChoiceCount" operation="base_add" level="3" value="3"/>
+		<passive_effect name="QuestRewardChoiceCount" operation="base_add" level="4" value="4"/>
 
+		<effect_description level="1" desc_key="perkDaringAdventurerRank1Desc" long_desc_key="perkDaringAdventurerRank1LongDesc"/>
+		<effect_description level="2" desc_key="perkDaringAdventurerRank2Desc" long_desc_key="perkDaringAdventurerRank2LongDesc"/>
+		<effect_description level="3" desc_key="perkDaringAdventurerRank3Desc" long_desc_key="perkDaringAdventurerRank3LongDesc"/>
+		<effect_description level="4" desc_key="perkDaringAdventurerRank4Desc" long_desc_key="perkDaringAdventurerRank4LongDesc"/>
+</effect_group>
+</perk>
+</insertBefore>
 
+<!--ENDZ PERK TREE-->
+<insertAfter xpath="//attribute[@name='attIntellect']">
+	<attribute name="attendztree" name_key="attendztreeName" desc_key="attendztreeDesc" icon="ui_game_symbol_trex" icon_color="106, 0, 163">
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="6"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="7"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="8"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="9"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 
+		<effect_group>
+			<requirement name="ItemHasTags" tags="attendztree"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="2,8" value="0.1,.7" tags="head"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="9,10" value=".85,1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="2,10" value=".05,.45"/>
+
+			<effect_description level="1"  desc_key="attendztreeRank01Desc" long_desc_key="attendztreeRank01LongDesc"/>
+			<effect_description level="2"  desc_key="attendztreeRank02Desc" long_desc_key="attendztreeRank02LongDesc"/>
+			<effect_description level="3"  desc_key="attendztreeRank03Desc" long_desc_key="attendztreeRank03LongDesc"/>
+			<effect_description level="4"  desc_key="attendztreeRank04Desc" long_desc_key="attendztreeRank04LongDesc"/>
+			<effect_description level="5"  desc_key="attendztreeRank05Desc" long_desc_key="attendztreeRank05LongDesc"/>
+			<effect_description level="6"  desc_key="attendztreeRank06Desc" long_desc_key="attendztreeRank06LongDesc"/>
+			<effect_description level="7"  desc_key="attendztreeRank07Desc" long_desc_key="attendztreeRank07LongDesc"/>
+			<effect_description level="8"  desc_key="attendztreeRank08Desc" long_desc_key="attendztreeRank08LongDesc"/>
+			<effect_description level="9"  desc_key="attendztreeRank09Desc" long_desc_key="attendztreeRank09LongDesc"/>
+			<effect_description level="10" desc_key="attendztreeRank10Desc" long_desc_key="attendztreeRank10LongDesc"/>
+		</effect_group>
+	</attribute>
+</insertAfter>
+
+<append xpath="/progression/skills">
+	<skill name="skillendzCombat" parent="attendztree" name_key="skillendzCombatName" desc_key="skillendzCombatDesc" icon="ui_game_symbol_trex"><effect_group/></skill>
+</append>
+<!--END OF ENDZ PERK TREE-->
+
+<append xpath="//perks">
+<perk name="perkimagod" parent="skillendzCombat" name_key="perkimagod" desc_key="perkimagodDesc" icon="ui_game_symbol_bull">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="2" desc_key="reqattendztreeLevel02"/></level_requirements>
+<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="4" desc_key="reqattendztreeLevel04"/></level_requirements>
+<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="6" desc_key="reqattendztreeLevel06"/></level_requirements>
+<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="8" desc_key="reqattendztreeLevel08"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+
+<effect_group>
+<passive_effect name="Gamestage" operation="base_add" level="1" value="10"/>
+<passive_effect name="Gamestage" operation="base_add" level="2" value="25"/>
+<passive_effect name="Gamestage" operation="base_add" level="3" value="50"/>
+<passive_effect name="Gamestage" operation="base_add" level="4" value="75"/>
+<passive_effect name="Gamestage" operation="base_add" level="5" value="100"/>
+
+<effect_description level="1" desc_key="perkimagodRank1Desc" long_desc_key="perkimagodRank1LongDesc"/>
+<effect_description level="2" desc_key="perkimagodRank2Desc" long_desc_key="perkimagodRank2LongDesc"/>
+<effect_description level="3" desc_key="perkimagodRank3Desc" long_desc_key="perkimagodRank3LongDesc"/>
+<effect_description level="4" desc_key="perkimagodRank4Desc" long_desc_key="perkimagodRank4LongDesc"/>
+<effect_description level="5" desc_key="perkimagodRank5Desc" long_desc_key="perkimagodRank5LongDesc"/>
+</effect_group>
+</perk>
+</append>
 
 </configs>

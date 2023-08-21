@@ -1,4 +1,8 @@
 <configs>
+
+<!-- Set group for new craftable foods in items.xml -->
+<set xpath="/items/item[@name='foodShamSandwich']/property[@name='Group']/@value">Food/Cooking,CFFood/Cooking,Medical</set>
+
 <!-- * * * * * * * * * * ammunition / arrows / bolts / fuel * * * * * * * * * * -->
 
 <set xpath="/items/item[@name='ammo9mmBulletBall']          /property[@name='Stacknumber']/@value">2500</set>   <!-- Default 300 -->
@@ -6,7 +10,7 @@
 <set xpath="/items/item[@name='ammoShotgunShell']           /property[@name='Stacknumber']/@value">2500</set>   <!-- 150 -->
 <set xpath="/items/item[@name='ammoShotgunSlug']            /property[@name='Stacknumber']/@value">2500</set>   <!-- 150 -->
 <set xpath="/items/item[@name='ammoShotgunBreachingSlug']   /property[@name='Stacknumber']/@value">2500</set>   <!-- 150 -->
-<set xpath="/items/item[@name='ammoJunkTurretRegular']      /property[@name='Stacknumber']/@value">10000</set>   <!--1000-->
+<set xpath="/items/item[@name='ammoJunkTurretRegular']      /property[@name='Stacknumber']/@value">2500</set>   <!--1000-->
 <set xpath="/items/item[@name='ammoRocketHE']               /property[@name='Stacknumber']/@value">2500</set>	    <!--20-->
 <set xpath="/items/item[@name='ammoGasCan']                 /property[@name='Stacknumber']/@value">10000</set>  <!-- 10000 -->
 <set xpath="/items/item[@name='ammoArrowStone']             /property[@name='Stacknumber']/@value">2500</set>    <!--150 -->
@@ -23,7 +27,7 @@
 <set xpath="/items/item[@name='thrownDynamite']             /property[@name='Stacknumber']/@value">500</set>     <!--10-->
 <set xpath="/items/item[@name='thrownAmmoMolotovCocktail']  /property[@name='Stacknumber']/@value">500</set>     <!--20-->
 <set xpath="/items/item[@name='thrownAmmoFlare']            /property[@name='Stacknumber']/@value">500</set>    <!--40-->
-<set xpath="/items/item[@name='ammoDartIron']               /property[@name='Stacknumber']/@value">10000</set>   <!--500-->
+<set xpath="/items/item[@name='ammoDartIron']               /property[@name='Stacknumber']/@value">2500</set>   <!--500-->
 
 
 <!-- * * * * * * * * * * parts for assembled weapons, tools, and vehicles * * * * * * * * * * -->
@@ -183,7 +187,7 @@
 <set xpath="/items/item[@name='toolCookingPot']                 /property[@name='Stacknumber']/@value">10000</set>    <!--250-->
 <set xpath="/items/item[@name='toolBeaker']                     /property[@name='Stacknumber']/@value">10000</set>     <!--10-->
 <set xpath="/items/item[@name='unit_iron']                      /property[@name='Stacknumber']/@value">10000</set>  <!--30000-->
-<set xpath="/items/item[@name='resourceLockPick']               /property[@name='Stacknumber']/@value">100</set>    <!--50-->
+<set xpath="/items/item[@name='resourceLockPick']               /property[@name='Stacknumber']/@value">500</set>    <!--50-->
 <set xpath="/items/item[@name='bookFiremansAlmanacHeat']        /property[@name='Stacknumber']/@value">400</set>     <!--20-->
 
 <!--MORE MOD SLOTS FOR GUNS AND ARMOR-->
@@ -195,6 +199,9 @@
 <append xpath="//item[@name='meleeToolRepairT0StoneAxe' or @name='meleeToolRepairT1ClawHammer' or @name='meleeToolRepairT3Nailgun']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">
 ,resourceMoonRocksLL,resourceforgedvibeLL,resourcemoonmixLL
 </append>
+
+<set xpath="/items/item[@name='solarCell']/property[@name='SellableToTrader']/@value">true</set>
+<set xpath="/items/item[@name='solarCell']/property[@name='EconomicValue']/@value">250</set>
 
 <!--STARTER ITEMS TO GET YOU GOING-->
 <append xpath="/items">
@@ -335,9 +342,9 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceCoal"/>
-	<property name="Stacknumber" value="25000"/> 
-	<property name="EconomicValue" value="10"/>
-	<property name="Group" value="Resources"/>
+	<property name="Stacknumber" value="10000"/> 
+	<property name="EconomicValue" value="1"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 	<property name="CraftingIngredientTime" value="15"/>
 	<property name="RepairTime" value="1"/>
 	<property name="RepairAmount" value="400"/>
@@ -345,14 +352,16 @@
 	
 <!--MOONROCKS AND WEAPONS AND SHAPE-->
 <item name="resourceMoonRocksLL">
+	<property name="Tags" value="salvageScrap,resourceMoonRocksLL"/>
 	<property name="CustomIcon" value="resourceCobblestones" />
 	<property name="CustomIconTint" value="7ec2c0" />
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="MresourceCobblestones"/>
-	<property name="Stacknumber" value="25000"/> 
-	<property name="EconomicValue" value="100"/>
+	<property name="Material" value="MmoonrockLL"/>
+	<property name="Weight" value="1"/>
+	<property name="Stacknumber" value="10000"/> 
+	<property name="EconomicValue" value="1"/>
 	<property name="Group" value="Resources"/>
 	<property name="CraftingIngredientTime" value="15"/>
 	<property name="RepairTime" value="1"/>
@@ -367,27 +376,27 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceConcreteMix"/>
 	<property name="Weight" value="20"/>
-	<property name="Stacknumber" value="25000"/> <!-- STK resource -->
-	<property name="EconomicValue" value="125"/>
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="1"/>
 	<property name="EconomicBundleSize" value="50"/>
 	<property name="TraderStageTemplate" value="midTier1"/>
 	<property name="Group" value="Resources"/>
 </item>
 
 <item name="moonrockshovelLL">
-	<property name="CustomIcon" value="meleeToolShovelT0StoneShovel" />
-	<property name="CustomIconTint" value="7ec2c0" />
 	<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,moonrockshovelLL"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="18"/>
-	<property name="Meshfile" value="@:Other/Items/Tools/shovel_stonePrefab.prefab"/>
-	<property name="Material" value="Mstone"/>
+	<property name="Meshfile" value="#@modfolder:Resources/moonrockshovel2.unity3d?moonrockshovel"/>
+	<property name="TintColor" value="00FFF7"/>
+	<property name="Material" value="MmoonrockLL"/>
 	<property name="RepairTools" value="resourceMoonRocksLL"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
 	<property name="SellableToTrader" value="false"/>
-	<property name="EconomicValue" value="200"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="TraderStageTemplate" value="baseTier0"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
@@ -433,15 +442,15 @@
 </item>
 
 <item name="moonrockaxeLL">
-	<property name="CustomIcon" value="meleeToolRepairT0StoneAxe" />
-	<property name="CustomIconTint" value="7ec2c0" />
 	<property name="Tags" value="axe,melee,light,tool,longShaft,repairTool,miningTool,attStrength,perkMiner69r,perkMotherLode,perkTheHuntsman,canHaveCosmetic,moonrockaxeLL"/>
 	<property name="DisplayType" value="meleeRepairTool"/>
 	<property name="HoldType" value="32"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Axe/stone_axePrefab.prefab"/>
-	<property name="Material" value="Mstone"/>
+	<property name="Meshfile" value="#@modfolder:Resources/moonrockaxe2.unity3d?moonrockaxe"/>
+	<property name="TintColor" value="00FFF7"/>
+	<property name="Material" value="MmoonrockLL"/>
 	<property name="RepairTools" value="resourceMoonRocksLL"/>
-	<property name="EconomicValue" value="200"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="TraderStageTemplate" value="baseTier0"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="DegradationBreaksAfter" value="false"/>
@@ -502,20 +511,19 @@
 </item>
 
 <item name="moonrockclubLL">
-	<property name="CustomIcon" value="meleeWpnClubT0WoodenClub" />
-	<property name="CustomIconTint" value="7ec2c0" />
 	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfStrength,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic,clubSkill"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="Group" value="Ammo/Weapons,Basics,Melee Weapons"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/ClubWood/clubWoodPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/moonrockclub2.unity3d?moonrockclub"/>
+	<property name="TintColor" value="00FFF7"/>
 	<property name="HoldType" value="2"/>
-	<property name="Material" value="Mstone"/>
-	<property name="TintColor" value="102, 0, 0"/>
+	<property name="Material" value="MmoonrockLL"/>
 	<property name="RepairTools" value="resourceMoonRocksLL"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 	<property name="SellableToTrader" value="false"/>
-	<property name="EconomicBundleSize" value="1"/>
+	<property name="EconomicBundleSize" value="500"/>
+	<property name="TraderStageTemplate" value="baseTier0"/>
 	<property name="EconomicValue" value="200"/>
 	<property name="TraderStageTemplate" value="baseTier0"/>
 	<property name="ShowQuality" value="true"/>
@@ -595,14 +603,15 @@
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/PipeBaton/pipeBatonPrefab.prefab"/>
 	<property name="HoldType" value="80"/>
-	<property name="Material" value="Mstone"/>
+	<property name="Material" value="MmoonrockLL"/>
 	<property name="TintColor" value="20, 20, 20"/>
 	<property name="RepairTools" value="resourceMoonRocksLL"/>
 	<property name="SoundDestroy" value="metaldestroy1"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
-	<property name="EconomicValue" value="200"/>
+	<property name="TraderStageTemplate" value="baseTier0"/>
+	<property name="EconomicValue" value="500"/>
 	<property name="TraderStageTemplate" value="baseTier0"/>
 	<property name="ShowQuality" value="true"/>
 	<property name="SoundUnholster" value="weapon_unholster"/>
@@ -674,21 +683,22 @@
 </item>
 
 <item name="moonrockspearLL">
-	<property name="CustomIcon" value="meleeWpnSpearT0StoneSpear" />
-	<property name="CustomIconTint" value="7ec2c0" />
 	<property name="Tags" value="melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,canHaveCosmetic,thrownWeapon"/>
 	<property name="DisplayType" value="meleeSpear"/>
 	<property name="HoldType" value="18"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Spear/spear_stone_Prefab.prefab"/>
-	<property name="Material" value="Mstone"/>
+	<property name="Meshfile" value="#@modfolder:Resources/moonrockspear2.unity3d?moonrockspear"/>
+	<property name="TintColor" value="00FFF7"/>
+	<property name="Material" value="MmoonrockLL"/>
+	<property name="Weight" value="5"/>
 	<property name="StickyMaterial" value="#Other/Items?Weapons/Melee/Spear/Materials/spear_sticky.mat"/>
 	<property name="RepairTools" value="resourceMoonRocksLL"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
-	<property name="EconomicValue" value="200"/>
+	<property name="EconomicValue" value="500"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
+	<property name="TraderStageTemplate" value="baseTier0"/>
 	<property name="IsSticky" value="true"/>
 	<property name="StickyOffset" value=".7"/>
 	<property name="StickyColliderUp" value="1"/>
@@ -792,19 +802,20 @@
 </item>
 	
 <item name="moonrocksledgeLL">
-	<property name="CustomIcon" value="meleeWpnSledgeT0StoneSledgehammer" />
-	<property name="CustomIconTint" value="7ec2c0" />
 	<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
 	<property name="DisplayType" value="meleeHeavy"/>
 	<property name="HoldType" value="33"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/SledgeHammer/stoneSledgeHammerPrefab.prefab"/>
-	<property name="Material" value="Mstone"/>
+	<property name="Meshfile" value="#@modfolder:Resources/moonrocksledge2.unity3d?moonrocksledge"/>
+	<property name="TintColor" value="00FFF7"/>
+	<property name="Material" value="MmoonrockLL"/>
+	<property name="Weight" value="5"/>
 	<property name="RepairTools" value="resourceMoonRocksLL"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
-	<property name="EconomicValue" value="200"/>
+	<property name="EconomicValue" value="500"/>
 	<property name="SellableToTrader" value="false"/>
+	<property name="TraderStageTemplate" value="baseTier0"/>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
@@ -881,7 +892,7 @@
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Msteel"/>
 	<property name="Stacknumber" value="500"/> <!-- STK resourceRepairKit -->
-	<property name="EconomicValue" value="186"/>
+	<property name="EconomicValue" value="1"/>
 	<property name="RepairTime" value="3"/>
 	<property name="RepairAmount" value="32000"/>
 	<property name="Group" value="Resources"/>
@@ -895,8 +906,8 @@
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceForgedSteel"/>
-	<property name="Stacknumber" value="25000"/> 
-	<property name="EconomicValue" value="100"/>
+	<property name="Stacknumber" value="10000"/> 
+	<property name="EconomicValue" value="1"/>
 	<property name="Group" value="Resources"/>
 	<property name="CraftingIngredientTime" value="15"/>
 	<property name="RepairTime" value="1"/>
@@ -916,8 +927,8 @@
 	<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SellableToTrader" value="true"/>
-	<property name="EconomicValue" value="1000"/>
-	<property name="TraderStageTemplate" value="baseTier2"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
@@ -1127,16 +1138,17 @@
 	</effect_group>
 </item>
 
+<remove xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/property[@name='TintColor']"></remove>
 <item name="brassshovelLL">
-	<property name="CustomIcon" value="meleeToolShovelT1IronShovel" />
-	<property name="CustomIconTint" value="8f6f17" />
 	<property name="Extends" value="meleeToolShovelT0StoneShovel"/>
 	<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic"/>
-	<property name="Meshfile" value="@:Other/Items/Tools/shovel_ironPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/brassshovelLL2.unity3d?brassshovelLL"/>
+	<property name="TintColor" value="143,111,23,255"/>
 	<property name="Material" value="Mbrass"/>
 	<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 	<property name="SellableToTrader" value="true"/>
-	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="EconomicValue" value="1500"/>
 	<property name="UnlockedBy" value="craftingHarvestingTools"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -1176,14 +1188,15 @@
 <property name="Group" value="Tools/Traps"/>
 </item>
 
+<remove xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='TintColor']/@value">102, 0, 0</remove>
 <item name="brassaxeLL">
-	<property name="CustomIcon" value="meleeToolAxeT2SteelAxe" />
-	<property name="CustomIconTint" value="8f6f17" />
 	<property name="Extends" value="meleeToolAxeT1IronFireaxe"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Axe/steelAxePrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/brassaxeLL2.unity3d?brassaxeLL"/>
+	<property name="TintColor" value="143,111,23,255"/>
 	<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 	<property name="SellableToTrader" value="true"/>
-	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="EconomicValue" value="1500"/>
 	<property name="UnlockedBy" value="craftingHarvestingTools"/>
 	<property name="Material" value="Mbrass"/> 
 	<property name="Weight" value="750"/>
@@ -1226,16 +1239,17 @@
 </effect_group>
 </item>
 
+<remove xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='TintColor']"></remove>
 <item name="brasspickaxeLL">
-	<property name="CustomIcon" value="meleeToolPickT2SteelPickaxe" />
-	<property name="CustomIconTint" value="8f6f17" />
 	<property name="Extends" value="meleeToolPickT1IronPickaxe"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="4"/>
-	<property name="Meshfile" value="@:Other/Items/Tools/pickaxe_steelPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/brasspickaxeLL2.unity3d?brasspickaxeLL"/>
+	<property name="TintColor" value="143,111,23"/>
 	<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 	<property name="SellableToTrader" value="true"/>
-	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="EconomicValue" value="1500"/>
 	<property name="Material" value="Mbrass"/> 
 	<property name="Weight" value="750"/>
 	<property name="UnlockedBy" value="craftingHarvestingTools"/>
@@ -1287,20 +1301,21 @@
 </effect_group>
 </item>
 
+<remove xpath="/items/item[@name='meleeWpnSledgeT1IronSledgehammer']/property[@name='TintColor']"></remove>
 <item name="brasssledgeLL">
-	<property name="CustomIcon" value="meleeWpnSledgeT1IronSledgehammer" />
-	<property name="CustomIconTint" value="8f6f17" />
 	<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
 	<property name="DisplayType" value="meleeHeavy"/>
 	<property name="HoldType" value="33"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/SledgeHammer/ironSledgehammerPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/brasssledgeLL2.unity3d?brasssledgeLL"/>
+	<property name="TintColor" value="143,111,23,255"/>
 	<property name="Material" value="Mbrass"/>
 	<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="metaldestroy1"/>
 	<property name="SellableToTrader" value="true"/>
-	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="EconomicValue" value="1500"/>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="UnlockedBy" value="craftingSledgehammers"/>
 	<property name="ShowQuality" value="true"/>
@@ -1369,18 +1384,19 @@
 </effect_group>
 </item>
 
+<!--remove xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/property[@name='TintColor']"></remove-->
 <item name="brassknifeLL">
-	<property name="CustomIcon" value="meleeWpnBladeT1HuntingKnife" />
-	<property name="CustomIconTint" value="8f6f17" />
 	<property name="Tags" value="knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
 	<property name="DisplayType" value="meleeKnife"/>
 	<property name="HoldType" value="36"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Knives/hunting_knifePrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/brassknifeLL2.unity3d?brassknifeLL"/>
+	<property name="TintColor" value="143,111,23,255"/>
 	<property name="Material" value="Mbrass"/>
 	<property name="RepairTools" value="resourcebrassRepairKitLL"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SellableToTrader" value="true"/>
-	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="EconomicValue" value="1500"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
 	<property name="UnlockedBy" value="craftingBlades"/>
@@ -1466,14 +1482,14 @@
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
-	
+
+<remove xpath="/items/item[@name='meleeWpnClubT3SteelClub']/property[@name='TintColor']"></remove>
 <item name="brassclubLL"> 
-	<property name="CustomIcon" value="meleeWpnClubT3SteelClub" />
-	<property name="CustomIconTint" value="8f6f17" />
 	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/ClubIron/clubIronPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/brassclubLL2.unity3d?brassclubLL"/>
+	<property name="TintColor" value="143,111,23,255"/>
 	<property name="HoldType" value="2"/>
 	<property name="Material" value="Mbrass"/> 
 	<property name="Weight" value="750"/>
@@ -1482,7 +1498,8 @@
 	<property name="RepairExpMultiplier" value="5.5"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="true"/>
-	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="EconomicValue" value="1500"/>
 	<property name="UnlockedBy" value="craftingClubs"/>
 	<property name="ShowQuality" value="true"/>
 <property class="Action0">
@@ -1566,7 +1583,8 @@
 	<property name="Canhold" value="true"/>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="SellableToTrader" value="true"/>
-	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="EconomicValue" value="1500"/>
 	<property name="UnlockedBy" value="craftingKnuckles"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
@@ -1644,16 +1662,16 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 	
 <item name="brassspearLL">
-	<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear" />
-	<property name="CustomIconTint" value="8f6f17" />
 	<property name="Extends" value="meleeWpnSpearT0StoneSpear"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Spear/spear_steel_Prefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/brassspearLL2.unity3d?brassspearLL"/>
+	<!--property name="TintColor" value="8f6f17"/-->
 	<property name="HoldType" value="18"/>
 	<property name="Material" value="Mbrass"/>
 	<property name="StickyMaterial" value="#Other/Items?Weapons/Melee/Spear/Materials/spearIron_sticky.mat"/>
 	<property name="RepairTools" value="resourcebrassRepairKitLL"/>
-	<property name="EconomicValue" value="1000"/>
+	<property name="EconomicValue" value="1500"/>
 	<property name="SellableToTrader" value="true"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
 	<property name="UnlockedBy" value="craftingSpears"/>
 	<property name="Weight" value="750"/>
 <property class="Action0">
@@ -1732,7 +1750,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Msteel"/>
 		<property name="Stacknumber" value="500"/> <!-- STK resourceRepairKit -->
-		<property name="EconomicValue" value="186"/>
+		<property name="EconomicValue" value="1"/>
 		<property name="RepairTime" value="3"/>
 		<property name="RepairAmount" value="32000"/>
 		<property name="Group" value="Resources"/>
@@ -1746,23 +1764,24 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceForgedSteel"/>
-	<property name="Stacknumber" value="25000"/> 
-	<property name="EconomicValue" value="100"/>
+	<property name="Stacknumber" value="10000"/> 
+	<property name="EconomicValue" value="1"/>
 	<property name="Group" value="Resources"/>
 	<property name="CraftingIngredientTime" value="15"/>
 	<property name="RepairTime" value="1"/>
 	<property name="RepairAmount" value="400"/>
 </item>
 
+<remove xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/property[@name='TintColor']"></remove>
 <item name="vibepickaxeLL">
-	<property name="CustomIcon" value="meleeToolPickT2SteelPickaxe" />
-	<property name="CustomIconTint" value="b804af" />
-	<property name="Extends" value="meleeToolPickT1IronPickaxe"/>
+	<property name="Extends" value="meleeToolPickT2SteelPickaxe"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="4"/>
-	<property name="Meshfile" value="@:Other/Items/Tools/pickaxe_steelPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/vibepickLL2.unity3d?vibepickLL"/>
+	<property name="TintColor" value="184,4,175"/> 	
 	<property name="RepairTools" value="resourcevibeRepairKitLL"/>
 	<property name="SellableToTrader" value="true"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
 	<property name="EconomicValue" value="2000"/>
 	<property name="Material" value="Mbrass"/> 
 	<property name="Weight" value="750"/>
@@ -1783,7 +1802,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="SwingAngle" value="90"/>
 </property>
 <property name="Group" value="Tools/Traps"/>
-<effect_group name="meleeToolPickT2SteelPickaxe">
+<effect_group name="vibepickaxeLL">
 	<passive_effect name="EntityDamage" operation="base_set" value="4" tags="perkMiner69r"/>
 	<passive_effect name="BlockDamage" operation="base_set" value="100" tags="perkMiner69r,miningTool"/>
 	<passive_effect name="AttacksPerMinute" operation="base_set" value="95" tags="perkMiner69r"/>
@@ -1816,12 +1835,12 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 
 <item name="vibeaxeLL">
-	<property name="CustomIcon" value="meleeToolAxeT2SteelAxe" />
-	<property name="CustomIconTint" value="b804af" />
 	<property name="Extends" value="meleeToolAxeT1IronFireaxe"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Axe/steelAxePrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/vibeaxeLL2.unity3d?vibeaxeLL"/>
+	<!--property name="TintColor" value="fcfcfc"/-->
 	<property name="RepairTools" value="resourcevibeRepairKitLL"/>
 	<property name="SellableToTrader" value="true"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
 	<property name="EconomicValue" value="2000"/>
 	<property name="UnlockedBy" value="craftingHarvestingTools"/>
 	<property name="Material" value="Mbrass"/> 
@@ -1832,7 +1851,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property class="Action1">
 	<property name="Sound_start" value="axe_swingheavy"/>
 </property>
-<effect_group name="meleeToolAxeT2SteelAxe">
+<effect_group name="vibeaxeLL">
 	<passive_effect name="EntityDamage" operation="base_set" value="4" tags="perkMiner69r"/>
 	<passive_effect name="BlockDamage" operation="base_set" value="100" tags="perkMiner69r"/>
 	<passive_effect name="AttacksPerMinute" operation="base_set" value="95" tags="perkMiner69r,axe"/>
@@ -1866,15 +1885,14 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 
 <item name="vibeshovelLL">
-	<property name="CustomIcon" value="meleeToolShovelT1IronShovel" />
-	<property name="CustomIconTint" value="b804af" />
 	<property name="Extends" value="meleeToolShovelT0StoneShovel"/>
 	<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic"/>
-	<property name="Meshfile" value="@:Other/Items/Tools/shovel_ironPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/vibeshovelLL2.unity3d?vibeshovelLL"/>
 	<property name="Material" value="Mbrass"/>
 	<property name="RepairTools" value="resourcevibeRepairKitLL"/>
 	<property name="EconomicValue" value="2000"/>
 	<property name="SellableToTrader" value="true"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
 	<property name="UnlockedBy" value="craftingHarvestingTools"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -1915,14 +1933,14 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 
 <item name="t3vibespearLL">
-	<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear" />
-	<property name="CustomIconTint" value="b804af" />
 	<property name="Extends" value="meleeWpnSpearT1IronSpear"/>
 	<property name="HoldType" value="18"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Spear/spear_steel_Prefab.prefab"/>
-	<property name="Material" value="MmeleeWpnSpearParts"/><property name="Weight" value="6"/>
+	<property name="Meshfile" value="#@modfolder:Resources/vibespearLL2.unity3d?vibespearLL"/>
+	<property name="Material" value="MmeleeWpnSpearParts"/>
+	<property name="Weight" value="6"/>
 	<property name="StickyMaterial" value="#Other/Items?Weapons/Melee/Spear/Materials/spearIron_sticky.mat"/>
 	<property name="SellableToTrader" value="true"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
 	<property name="EconomicValue" value="2000"/>
 	<property name="RepairTools" value="resourcevibeRepairKitLL"/>
 	<property name="UnlockedBy" value="craftingSpears"/>
@@ -2005,6 +2023,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="Group" value="Tools/Traps"/>
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="SellableToTrader" value="true"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
 	<property name="EconomicValue" value="2000"/>
 	<property name="UnlockedBy" value="craftingHarvestingTools"/>
 	<property name="ShowQuality" value="true"/>
@@ -2166,22 +2185,23 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 
 <item name="vibesledgeLL">
-	<property name="CustomIcon" value="meleeWpnSledgeT3SteelSledgehammer" />
-	<property name="CustomIconTint" value="b804af" />
 	<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
 	<property name="DisplayType" value="meleeHeavy"/>
 	<property name="HoldType" value="33"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/SledgeHammer/steelSledgehammerPrefab.prefab"/>
-	<property name="Material" value="MmeleeWpnSledgeParts"/> <property name="Weight" value="6"/>
+	<property name="Meshfile" value="#@modfolder:Resources/vibesledgeLL2.unity3d?vibesledgeLL"/>
+	<property name="Material" value="MmeleeWpnSledgeParts"/> 
+	<property name="Weight" value="6"/>
 	<property name="RepairTools" value="resourcevibeRepairKitLL"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="metaldestroy1"/>
 	<property name="SellableToTrader" value="true"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
 	<property name="EconomicValue" value="2000"/>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="UnlockedBy" value="craftingSledgehammers"/>
 	<property name="ShowQuality" value="true"/>
+	
 	<property class="Action0">
 	<property name="Class" value="DynamicMelee"/>
 	<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
@@ -2247,17 +2267,16 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 
 <item name="vibemacheteLL">
-	<property name="CustomIcon" value="meleeWpnBladeT3Machete" />
-	<property name="CustomIconTint" value="b804af" />
 	<property name="Tags" value="machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
 	<property name="DisplayType" value="meleeKnife"/>
 	<property name="HoldType" value="47"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Knives/machetePrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/vibeswordLL2.unity3d?vibeswordLL"/>
 	<property name="Material" value="MmeleeWpnBladeParts"/> <property name="Weight" value="6"/>
 	<property name="RepairTools" value="resourcevibeRepairKitLL"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SellableToTrader" value="true"/>
 	<property name="EconomicValue" value="2000"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
@@ -2356,6 +2375,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="SellableToTrader" value="true"/>
 	<property name="EconomicValue" value="2000"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
 	<property name="UnlockedBy" value="craftingKnuckles"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
@@ -2428,12 +2448,10 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 
 <item name="vibebatLL">
-	<property name="CustomIcon" value="meleeWpnClubT1BaseballBat" />
-	<property name="CustomIconTint" value="b804af" />
 	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
-	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Bat/bat_Prefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/vibemaceLL2.unity3d?vibemaceLL"/>
 	<property name="HoldType" value="65"/>
 	<property name="Material" value="Mwood"/>
 	<property name="RepairTools" value="resourcevibeRepairKitLL"/>
@@ -2441,10 +2459,12 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="RepairExpMultiplier" value="5.5"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="true"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
 	<property name="EconomicValue" value="2000"/>
 	<property name="UnlockedBy" value="craftingClubs"/>
 	<property name="ShowQuality" value="true"/>
 	<property name="Mass" value="450"/>
+
 	<property class="Action0">
 	<property name="Class" value="DynamicMelee"/>
 	<property name="Sound_start" value="club_swinglight"/>
@@ -2540,7 +2560,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Weight" value="5"/>
-	<property name="EconomicValue" value="4"/>
+	<property name="EconomicValue" value="1"/>
 	<property name="Stacknumber" value="5000"/>
 	<!-- STK food -->
 	<property class="Action0">
@@ -2565,7 +2585,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Weight" value="5"/>
-	<property name="EconomicValue" value="4"/>
+	<property name="EconomicValue" value="1"/>
 	<property name="Stacknumber" value="5000"/>
 	<!-- STK food -->
 <property class="Action0">
@@ -2589,7 +2609,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Weight" value="5"/>
-	<property name="EconomicValue" value="60"/>
+	<property name="EconomicValue" value="1"/>
 	<property name="Stacknumber" value="5000"/>
 	<!-- STK food -->
 	<property class="Action0">
@@ -2615,7 +2635,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Weight" value="5"/>
-	<property name="EconomicValue" value="60"/>
+	<property name="EconomicValue" value="1"/>
 	<property name="Stacknumber" value="5000"/>
 	<!-- STK food -->
 <property class="Action0">
@@ -2769,7 +2789,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="DisplayType" value="medicalallLL"/>
 	<property name="Extends" value="medicalBandage"/>
 	<property name="Group" value="Science,Medical"/>
-	<property name="EconomicValue" value="25"/>
+	<property name="EconomicValue" value="1"/>
 	<property name="DescriptionKey" value="medicalhoneyBandageLLDesc"/>
 	<property name="Stacknumber" value="500"/>
 	<property name="UnlockedBy" value="perkPhysician"/>
@@ -2784,7 +2804,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<requirement name="HasBuff" buff="buffInjuryAbrasion"/></triggered_effect>
 	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="add" value="50"/> <!-- X -->
 	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="@medicRegHealthIncreaseSpeed"/>
-	<display_value name="foodHealthAmount" value="30"/>
+	<display_value name="foodHealthAmount" value="50"/>
 	<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/><display_value name="dStopsBleeding" value="1"/>
 	<!-- used on other -->
@@ -2856,7 +2876,46 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="SellableToTrader" value="false"/>
 </item>
 </append>
-	
+
+<!-- FOR THE DESERT/DROPS IN PINE FOREST GROUND-->	
+<append xpath="/items">	
+<item name="resourcedesertLL"> <!-- scrap material -->
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceWood"/>
+	<property name="Weight" value="5"/>
+	<property name="Stacknumber" value="25000"/> <!-- STK resource -->
+	<property name="FuelValue" value="50"/>
+	<property name="EconomicValue" value="1"/>
+	<property name="EconomicBundleSize" value="50"/>
+	<property name="Group" value="Resources"/>
+	<property name="RepairAmount" value="100"/>
+	<property name="LootExpValue" value="1"/>
+	<property name="CraftingIngredientTime" value=".2"/>
+</item>
+</append>
+
+<!-- FOR THE SNOW/ DROPS IN DESERT GROUND-->	
+<append xpath="/items">	
+<item name="resourcesnowLL"> <!-- scrap material -->
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceWood"/>
+	<property name="Weight" value="5"/>
+	<property name="Stacknumber" value="25000"/> <!-- STK resource -->
+	<property name="FuelValue" value="50"/>
+	<property name="EconomicValue" value="1"/>
+	<property name="EconomicBundleSize" value="50"/>
+	<property name="Group" value="Resources"/>
+	<property name="RepairAmount" value="100"/>
+	<property name="LootExpValue" value="1"/>
+	<property name="CraftingIngredientTime" value=".2"/>
+</item>
+</append>
+
+<!--WASTELAND FIBERS MADE INTO THIS MATERIAL AT CHEM STATION-->	
 <append xpath="/items">
 <item name="resourceHazmatFiberLL">	<!-- scrap material -->
 	<property name="CustomIcon" value="resourceMilitaryFiber"/>
@@ -2871,11 +2930,11 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="RepairTime" value=".6"/>
 	<property name="RepairAmount" value="400"/>
 	<property name="Weight" value="1"/>
-	<property name="EconomicValue" value="50"/>
+	<property name="EconomicValue" value="1"/>
 	<property name="Group" value="Resources,Chemicals"/>
 	<property name="CraftingIngredientTime" value=".2"/>
 </item>
-	
+<!--WASTELAND FIBERS DROPPED FROM SNOWY GROUND-->	
 <item name="resourceradiofiberLL"> <!-- scrap material -->
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -2884,12 +2943,53 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="Weight" value="5"/>
 	<property name="Stacknumber" value="25000"/> <!-- STK resource -->
 	<property name="FuelValue" value="50"/>
-	<property name="EconomicValue" value="25"/>
+	<property name="EconomicValue" value="1"/>
 	<property name="EconomicBundleSize" value="50"/>
 	<property name="Group" value="Resources"/>
 	<property name="RepairAmount" value="100"/>
 	<property name="LootExpValue" value="1"/>
 	<property name="CraftingIngredientTime" value=".2"/>
+</item>
+</append>
+
+<!--BIOME NOTES-->
+<append xpath="/items">
+<item name="desertnoteLL">
+	<property name="CustomIconTint" value="c97b1c" /><!--orangish color-->
+	<property name="Extends" value="noteDuke01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="desertnoteLLDesc"/>
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+</item>
+</append>
+
+<append xpath="/items">
+<item name="snownoteLL">
+	<property name="CustomIconTint" value="08a4ff" /><!--blue color-->
+	<property name="Extends" value="noteDuke01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="snownoteLLDesc"/>
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+</item>
+</append>
+
+<append xpath="/items">
+<item name="wastelandnoteLL">
+	<property name="CustomIconTint" value="1cc922" /><!--green color-->
+	<property name="Extends" value="noteDuke01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="wastelandnoteLLDesc"/>
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+</item>
+</append>
+
+<append xpath="/items">
+<item name="progressnoteLL">
+	<property name="CustomIconTint" value="106, 0, 163" /><!--purple color-->
+	<property name="Extends" value="noteDuke01"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="progressnoteLLDesc"/>
+	<property name="CustomIcon" value="challengeQuestMaster"/>
 </item>
 </append>
 	
@@ -2916,7 +3016,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="CustomIcon" value="resourceBulletCasing"/><property name="CustomIconTint" value="a0a0ff"/>
 	<property name="DescriptionKey" value="resourceBulletCasingSteelDesc"/>
 	<property name="Material" value="MresourceScrapIron"/>
-	<property name="Stacknumber" value="2500"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="10"/>
 	<property name="EconomicBundleSize" value="10"/>
 	<property name="Group" value="Resources,Ammo/Weapons"/>
@@ -2973,6 +3073,10 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 </append>
 
+<!--CHANGES LEVER ACTION TO USE THE 44 MAGNUM BULLETS-->
+<set xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammo44MagnumBulletSteel</set>
+
+<!--ADDS STEEL BULLETS TO EXSISTING GUNS-->
 <append xpath="/items/item[@name='gunHandgunT0PipePistol']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo9mmBulletSteel</append>
 <append xpath="/items/item[@name='gunHandgunT1Pistol']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo9mmBulletSteel</append>
 <append xpath="/items/item[@name='gunHandgunT2Magnum44']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo44MagnumBulletSteel</append>
@@ -2980,7 +3084,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 <append xpath="/items/item[@name='gunHandgunT3SMG5']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo9mmBulletSteel</append>
 <append xpath="/items/item[@name='gunRifleT0PipeRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
 <append xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
-<append xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
+<!--append xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append-->
 <append xpath="/items/item[@name='gunRifleT3SniperRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
 <append xpath="/items/item[@name='gunMGT0PipeMachineGun']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
 <append xpath="/items/item[@name='gunMGT1AK47']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
@@ -3052,4 +3156,462 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </effect_group>
 </item>
 </append>
+
+<!--FOOD ITEMS-->
+<append xpath="/items">
+<item name="foodgroundbeefLL">
+	<property name="Tags" value="food"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="foodRaw"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MfoodRawMeat"/>
+	<property name="Stacknumber" value="5000"/> <!-- STK food -->
+	<property name="DescriptionKey" value="foodgroundbeefLLDesc"/>
+	<!-- <property name="EconomicBundleSize" value="5"/> -->
+	<property name="EconomicValue" value="20"/>
+	<property name="CraftingIngredientTime" value="3"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Smell" value="ExLargeSmell"/>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 0">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/><display_value name="foodHealthAmount" value="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/><display_value name="dDysenteryRisk" value=".12"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
+</item>
+
+<item name="drinkJarmilkLL">
+	<property name="Tags" value="drinks"/>
+	<property name="HoldType" value="3"/>
+	<property name="DisplayType" value="waterDysentery"/>
+	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="5000"/> <!-- STK drink -->
+	<property name="DescriptionKey" value="drinkJarmilkLLDesc"/>
+	<!-- <property name="Weight" value="10"/> -->
+	<property name="EconomicValue" value="10"/>
+	<property name="CraftingIngredientTime" value="15"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1"/>
+		<property name="Sound_start" value="player_drinking"/>
+		<!-- <property name="Create_item" value="drinkJarEmpty"/> -->
+	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+
+	<effect_group tiered="false" name="Drink Tier 0/1">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+		<display_value name="dStaminaRegen" value=".15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
+
+<item name="foodcookedgroundbeefLL">
+	<property name="Tags" value="food"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="5000"/> <!-- STK food -->
+	<property name="DescriptionKey" value="foodcookedgroundbeefLLDesc"/>
+	<property name="EconomicValue" value="10"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 1">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+
+<item name="foodcheeseLL">
+	<property name="Tags" value="food"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="5000"/> <!-- STK food -->
+	<property name="DescriptionKey" value="foodcheeseLLDesc"/>
+	<property name="EconomicValue" value="10"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2.1"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false" name="Food Tier 1">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="0"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+</item>
+</append>
+
+<append xpath="/items">
+<item name="WarthogVehiclePlaceable">
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkGreaseMonkey"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+    <property name="Meshfile" value="#@modfolder:/Resources/EndZwarthogLL1.unity3d?EndZwarthogLL.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+<property class="Action1">
+    <property name="Vehicle" value="WarthogVehicle"/>
+    <property name="VehicleSize" value="2, 2, 2"/>
+</property>
+<effect_group name="WarthogVehiclePlaceable" tiered="false">
+    <passive_effect name="ModSlots" operation="base_set" value="4"/>
+    <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+    <passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+</effect_group>
+</item>
+
+<item name="EndZbuggyPlaceable">
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkGreaseMonkey"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZbuggy1.unity3d?EndZbuggy.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+<property class="Action1">
+    <property name="Vehicle" value="EndZbuggy"/>
+    <property name="VehicleSize" value="2, 2, 2"/>
+</property>
+<effect_group name="EndZbuggyPlaceable" tiered="false">
+    <passive_effect name="ModSlots" operation="base_set" value="4"/>
+    <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+    <passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+</effect_group>
+</item>
+
+<item name="EndZdevillePlaceable">
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkGreaseMonkey"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZdeville1.unity3d?EndZdeville.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+<property class="Action1">
+    <property name="Vehicle" value="EndZdeville"/>
+    <property name="VehicleSize" value="2, 2, 2"/>
+</property>
+<effect_group name="EndZdevillePlaceable" tiered="false">
+    <passive_effect name="ModSlots" operation="base_set" value="4"/>
+    <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+    <passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+</effect_group>
+</item>
+</append>
+
+<!--INFECTED ZOMBIE PROJECTILES-->
+<append xpath="/items">
+<item name="meleeHandinfectedzombieLL">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="Degradation" value="99999" param1="true"/>
+	<property class="Action0">
+		<property name="Range" value="1.75"/>
+		<property name="DamageEntity" value="20"/>
+		<property name="DamageBlock" value="100"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Vomit"/>
+		<property name="Hitmask_override" value="Arrow"/>
+		<property name="Delay" value=".3"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Range" value="200"/>
+		<property name="Infinite_ammo" value="true"/>
+		<property name="Magazine_items" value="ammoinfectedzombierocketLL"/>
+		<property name="Sound_warning" value="hulkvomitwarning"/>
+		<property name="Sound_start" value="hulkvomitattack"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value=""/>
+		<property name="Sound_reload" value=""/>
+	</property>
+	<effect_group name="meleeHandZombieCop" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+		<passive_effect name="MaxRange" operation="base_set" value="100"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
+		<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+			weights=".11,.07,.07,.05,.29,.36,.11"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
+			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->
+	</effect_group>
+</item>
+
+<item name="ammoinfectedzombierocketLL">
+	<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/RocketLauncher/rocketPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="missingIcon"/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="DamageEntity" value="20"/>
+		<property name="DamageBlock" value="120"/>
+		<property name="Explosion.ParticleIndex" value="5"/>
+		<property name="Velocity" value="18"/>
+		<property name="FlyTime" value="2"/>
+		<property name="LifeTime" value="4"/>
+		<property name="CollisionRadius" value=".5"/>
+		<property name="DamageBonus.earth" value="0"/>
+		<property name="Buff" value="buffInfectionCatch"/>
+	</property>
+	<effect_group name="ammoProjectileZombieVomit" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".30" tags="buffInfectionCatch"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
+			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->
+	</effect_group>
+</item>
+</append>
+
+<!--DESERT ZOMBIE HAND ITEM-->
+<append xpath="/items">
+<item name="meleeHanddesertzombieLL">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="Range" value="1.7"/>
+		<property name="DamageEntity" value="30"/>
+		<property name="DamageBlock" value="180"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Vomit"/>
+		<property name="Hitmask_override" value="Arrow"/>
+		<property name="AnimType" value="1"/>
+		<property name="Delay" value=".1"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Range" value="200"/>
+		<property name="SpreadVerticalOffset" value="-50"/>
+		<property name="WarningDelay" value=".6"/>
+		<property name="WarningMax" value="1"/>
+		<property name="Infinite_ammo" value="true"/>
+		<property name="Magazine_items" value="ammodesertzombiemolotovLL"/>
+		<property name="Sound_warning" value="hulkvomitwarning"/>
+		<property name="Sound_start" value="hulkvomitattack"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value=""/>
+		<property name="Sound_reload" value=""/>
+	</property>
+	<effect_group name="melee" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+		<passive_effect name="MaxRange" operation="base_set" value="10"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="5"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="90"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="30"/>
+		<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+			weights=".11,.07,.07,.05,.29,.36,.11"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
+			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->
+	</effect_group>
+</item>
+
+<item name="ammodesertzombiemolotovLL">
+	<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Vomit/vomitRadPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="missingIcon"/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="DamageEntity" value="30"/>
+		<property name="DamageBlock" value="150"/>
+		<property name="Explosion.ParticleIndex" value="10"/>
+		<property name="Explosion.Buff" value="buffBurningMolotov"/> <!-- index 7 has ExplosionDamageArea script -->
+		<property name="Gravity" value="-7.5"/>
+		<property name="Velocity" value="4.5"/>
+		<property name="FlyTime" value="0"/>
+		<property name="LifeTime" value="4"/>
+		<property name="CollisionRadius" value=".3"/>
+		<property name="DamageBonus.earth" value="0"/>
+		<property name="Buff" value="buffInfectionCatch"/>
+	</property>
+	<effect_group name="ammo" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".30" tags="buffInfectionCatch"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
+			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->
+	</effect_group>
+</item>
+</append>
+
+<append xpath="/items">
+<item name="endzfireextLLitem">
+	<property name="Tags" value="weapon,ranged"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="37"/>
+	<property name="Meshfile" value="#@modfolder:Resources/EndZfireextLL2.unity3d?EndZfireextLL.Prefab"/>
+	<property name="DropMeshfile" value="#@modfolder:Resources/EndZfireextLL2.unity3d?EndZfireextLL.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/> 
+	<property name="Weight" value="6"/>
+	<property name="CrosshairOnAim" value="true"/>
+	<property name="CrosshairUpAfterShot" value="true"/>
+	<property name="RepairTools" value="RepairKitAutomaticRifles"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="65"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="DescriptionKey" value="endzfireextLLitemDesc"/>				
+<property class="Action0">
+	<property name="Class" value="Ranged"/>
+	<property name="Delay" value=".150"/>
+	<property name="AutoReload" value="false"/>
+	<property name="Magazine_items" value="ammoCO2"/>
+	<property name="Sound_start" value="fire_extinguisher"/>
+	<property name="Sound_loop" value=""/>
+	<property name="Sound_empty" value="dryfire"/>
+	<property name="Sound_reload" value="pistol_reload"/>
+	<property name="Sound_repeat" value=""/>
+	<property name="Sound_end" value=""/>
+	<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
+	<property name="Particles_muzzle_smoke" value="gunfire_pistol"/>
+	<property name="Particles_muzzle_fire_fpv" value="gunfire_pistol"/>
+	<property name="Particles_muzzle_smoke_fpv" value="gunfire_pistol"/>
+<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	<property name="Infinite_ammo" value="true"/>
+</property>
+<effect_group name="Extinguisher">
+	<passive_effect name="MaxRange" operation="base_set" value="6"/>
+	<passive_effect name="DamageFalloffRange" operation="base_set" value="1"/>
+	<passive_effect name="DamageFalloffRange" operation="perc_add" value="1"/>
+	<passive_effect name="EntityDamage" operation="base_add" value="0"/>
+	<passive_effect name="BlockDamage" operation="base_add" value="0"/>
+	<passive_effect name="RoundsPerMinute" operation="base_set" value="1"/>
+	<passive_effect name="MagazineSize" operation="perc_add" value="15"/>
+	<passive_effect name="WeaponHandling" operation="perc_add" value=".08,.08"/>
+	<passive_effect name="RoundsPerMinute" operation="base_set" value="500"/>
+	<passive_effect name="MagazineSize" operation="base_set" value="60"/>
+	<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/>
+	<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0"/>
+	<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0"/>
+	<passive_effect name="SpreadMultiplierAiming" operation="base_set" value="0"/>
+	<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value="0"/>
+	<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="0"/>
+	<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="0"/>
+	<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="0"/>
+	<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="0"/>
+	<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="0"/>
+	<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="0"/>
+	<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.5"/>
+	<passive_effect name="WeaponHandling" operation="base_set" value=".83"/>
+	<passive_effect name="ModSlots" operation="base_set" value="0" tier="0"/>
+	<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" target="self" property="Fire" value="true"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" target="self" property="WeaponFire" value="false"/>
+	<triggered_effect trigger="onSelfItemActivate" action="AnimatorSetBool" target="self" property="WeaponFire" value="false"/>
+	<triggered_effect trigger="onSelfItemDeactivate" action="AnimatorSetBool" target="self" property="WeaponFire" value="false"/>		
+	<triggered_effect trigger="onSelfHoldingItemCreated" action="AnimatorSetBool" target="self" property="WeaponFire" value="false"/>
+	<passive_effect name="DegradationMax" operation="base_set" value="200,500" tier="1,6"/>
+	<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>				
+</effect_group>
+<effect_group name="CO2 Proc" tiered="false">
+	<triggered_effect trigger="onSelfAttackedOther" action="RemoveBuff" target="other" buff="buffIsOnFire"/>
+	<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+	<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="head"/>
+	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="earth"/>
+	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="wood"/>
+	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="metal"/>
+	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="stone"/>	
+	<triggered_effect trigger="onSelfPrimaryActionRayHit" action="RemoveFire, SCore" target="positionAOE" range="5"/>				
+</effect_group>
+</item>
+
+<!--item name="ammoCO2">
+	<property name="Tags" value="fireretardent"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mcloth"/>
+	<property name="Stacknumber" value="50"/>
+	<property name="FuelValue" value="0"/>
+	<property name="EconomicValue" value="1"/>
+	<property name="EconomicBundleSize" value="100"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+	<property name="DescriptionKey" value="ammoNapalmDesc"/>
+	<property name="CustomIcon" value="ammoNapalm"/>		
+	<property name="UnlockedBy" value="perkYeahScience,ammoGasCanSchematic"/>
+	<property name="CraftingIngredientTime" value=".05"/>
+<effect_group name="CO2 Proc" tiered="false">
+	<triggered_effect trigger="onSelfAttackedOther" action="RemoveBuff" target="other" buff="buffIsOnFire"/>
+	<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+	<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="head"/>
+	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="earth"/>
+	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="wood"/>
+	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="metal"/>
+	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="stone"/>	
+	<triggered_effect trigger="onSelfPrimaryActionRayHit" action="RemoveFire, SCore" target="positionAOE" range="5"/>				
+</effect_group> 		
+</item-->
+</append>
+
+<!--XP ITEM GIVES 1000XP AND 1 SKILL POINT-->
+<append xpath="/items">
+<item name="endzxpcardLL">
+	<property name="Extends" value="schematicMaster" param1="ItemTypeIcon,AltItemTypeIcon"/>
+	<property name="DescriptionKey" value="endzxpcardLLDesc"/>
+	<property name="CustomIcon" value="XP"/>
+	<property name="CustomIconTint" value="106, 0, 163"/>
+	<property name="Stacknumber" value="500"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="5000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffendzxpcardLL"/>
+	</effect_group>
+</item>
+</append>
+
 </configs>

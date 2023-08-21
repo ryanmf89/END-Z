@@ -123,7 +123,7 @@
     <sprite depth="9" color="[black]" sprite="menu_empty2px" globalopacity="false" type="sliced" fillcenter="false" />
     <filledsprite depth="5" pos="1,0" width="82" name="BarContent" color="0,0,128,128" type="filled" fill="0" globalopacity="false" />
     <sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="16,16" pos="3,-6" foregroundlayer="true" />
-    <label depth="7" name="TextContent" pos="3,-6" font_size="22" color="[white]" justify="center" pivot="topleft" text="{statcurrent}%" height="35" />
+    <label depth="7" name="TextContent" pos="3,-6" font_size="22" color="[white]" justify="center" pivot="topleft" text="{statcurrentwithmax}" height="35" />
 </rect>
 
 <rect width="84" height="30" pos="87,0" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
@@ -132,7 +132,7 @@
     <sprite depth="9" color="[black]" sprite="menu_empty2px" globalopacity="false" type="sliced" fillcenter="false" />
 	<filledsprite depth="5" pos="1,0" width="82" name="BarContent" color="0,128,0,128" type="filled" fill="0" globalopacity="false" />
     <sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="16,16" pos="3,-6" foregroundlayer="true" />
-    <label depth="7" name="TextContent" pos="3,-6" font_size="22" color="[white]" justify="center" pivot="topleft" text="{statcurrent}%" height="35" />
+    <label depth="7" name="TextContent" pos="3,-6" font_size="22" color="[white]" justify="center" pivot="topleft" text="{statcurrentwithmax}" height="35" />
 </rect>
 </rect>
 </append>
@@ -159,5 +159,6 @@
 
 <!--REMOVES THE INPUT WINDOW FOR THE FORGE-->
 <remove xpath="/windows/window[@name='windowForgeInput']"></remove>
+
 
 </configs>

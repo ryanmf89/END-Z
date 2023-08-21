@@ -30,82 +30,84 @@ GreenteamPositiveFactionSchematicDesc,"Read this to spread the message of the Gr
 GreenteamNegativeFactionSchematic,"The Greenteam: Unreliable! Untrustworthy!","","緑チーム: 頼りにならない！信用できない！"
 GreenteamNegativeFactionSchematicDesc,"Read this to spread lies and fake news about the Greenteam! Decrease your standings with the Greenteam!","","緑チームのデマや悪い噂を拡散します。\n\n緑チームの信頼を失います。"
 
-npcNurseEmptyHand,"Nurse","L’infirmière",
-npcNurseClub,"Nurse","L’infirmière",
-npcNurseKnife,"Nurse","L’infirmière",
-npcNurseAxe,"Nurse","L’infirmière",
-npcNurseSpear,"Nurse","L’infirmière",
-npcNurseBat,"Nurse","L’infirmière",
-npcNurseMachete,"Nurse","L’infirmière",
-npcNurseSMG,"Nurse","L’infirmière",
-npcNurseM60,"Nurse","L’infirmière",
-npcNursePipePistol,"Nurse","L’infirmière",
-npcNursePistol,"Nurse","L’infirmière",
-npcNurseDPistol,"Nurse","L’infirmière",
-npcNursePipeMG,"Nurse","L’infirmière",
-npcNurseAK47,"Nurse","L’infirmière",
-npcNurseTRifle,"Nurse","L’infirmière",
-npcNursePipeRifle,"Nurse","L’infirmière",
-npcNurseHRifle,"Nurse","L’infirmière",
-npcNurseSRifle,"Nurse","L’infirmière",
-npcNursePipeShotgun,"Nurse","L’infirmière",
-npcNursePShotgun,"Nurse","L’infirmière",
-npcNurseAShotgun,"Nurse","L’infirmière",
-npcNurseXBow,"Nurse","L’infirmière",
-npcNurseLBow,"Nurse","L’infirmière",
-npcNurseRocketL,"Nurse","L’infirmière",
-npcHarleyEmptyHand,"Harley","Harley",
-npcHarleyBMEmptyHand,"Harley","Harley",
-npcHarleyClub,"Harley","Harley",
-npcHarleyKnife,"Harley","Harley",
-npcHarleyAxe,"Harley","Harley",
-npcHarleySpear,"Harley","Harley",
-npcHarleyBat,"Harley","Harley",
-npcHarleyMachete,"Harley","Harley",
-npcHarleySMG,"Harley","Harley",
-npcHarleyM60,"Harley","Harley",
-npcHarleyPipePistol,"Harley","Harley",
-npcHarleyPistol,"Harley","Harley",
-npcHarleyDPistol,"Harley","Harley",
-npcHarleyPipeMG,"Harley","Harley",
-npcHarleyAK47,"Harley","Harley",
-npcHarleyTRifle,"Harley","Harley",
-npcHarleyPipeRifle,"Harley","Harley",
-npcHarleyHRifle,"Harley","Harley",
-npcHarleyPipeShotgun,"Harley","Harley",
-npcHarleyPShotgun,"Harley","Harley",
-npcHarleyAShotgun,"Harley","Harley",
-npcHarleyXBow,"Harley","Harley",
-npcHarleyLBow,"Harley","Harley",
-npcHarleyRocketL,"Harley","Harley",
-npcBakerEmptyHand,"Baker","Le boulanger",
-npcBakerClub,"Baker","Le boulanger",
-npcBakerKnife,"Baker","Le boulanger",
-npcBakerAxe,"Baker","Le boulanger",
-npcBakerSpear,"Baker","Le boulanger",
-npcBakerBat,"Baker","Le boulanger",
-npcBakerMachete,"Baker","Le boulanger",
-npcBakerSMG,"Baker","Le boulanger",
-npcBakerM60,"Baker","Le boulanger",
-npcBakerPipePistol,"Baker","Le boulanger",
-npcBakerPistol,"Baker","Le boulanger",
-npcBakerDPistol,"Baker","Le boulanger",
-npcBakerPipeMG,"Baker","Le boulanger",
-npcBakerAK47,"Baker","Le boulanger",
-npcBakerTRifle,"Baker","Le boulanger",
-npcBakerPipeRifle,"Baker","Le boulanger",
-npcBakerHRifle,"Baker","Le boulanger",
-npcBakerSRifle,"Baker","Le boulanger",
-npcBakerPipeShotgun,"Baker","Le boulanger",
-npcBakerPShotgun,"Baker","Le boulanger",
-npcBakerAShotgun,"Baker","Le boulanger",
-npcBakerXBow,"Baker","Le boulanger",
-npcBakerLBow,"Baker","Le boulanger",
-npcBakerRocketL,"Baker","Le boulanger",
-npcAnimalFox,"Fox","Renard",
-animalFox,"Fox","Renard",
-zombieFemaleTutorial,"DeadGirl","Fille morte",
-zombieFemaleTutorialFeral,"DeadGirl","Fille morte",
+
+
+npcNurseEmptyHand,"Nurse","L’infirmière","ナース"
+npcNurseClub,"Nurse","L’infirmière","ナース"
+npcNurseKnife,"Nurse","L’infirmière","ナース"
+npcNurseAxe,"Nurse","L’infirmière","ナース"
+npcNurseSpear,"Nurse","L’infirmière","ナース"
+npcNurseBat,"Nurse","L’infirmière","ナース"
+npcNurseMachete,"Nurse","L’infirmière","ナース"
+npcNurseSMG,"Nurse","L’infirmière","ナース"
+npcNurseM60,"Nurse","L’infirmière","ナース"
+npcNursePipePistol,"Nurse","L’infirmière","ナース"
+npcNursePistol,"Nurse","L’infirmière","ナース"
+npcNurseDPistol,"Nurse","L’infirmière","ナース"
+npcNursePipeMG,"Nurse","L’infirmière","ナース"
+npcNurseAK47,"Nurse","L’infirmière","ナース"
+npcNurseTRifle,"Nurse","L’infirmière","ナース"
+npcNursePipeRifle,"Nurse","L’infirmière","ナース"
+npcNurseHRifle,"Nurse","L’infirmière","ナース"
+npcNurseSRifle,"Nurse","L’infirmière","ナース"
+npcNursePipeShotgun,"Nurse","L’infirmière","ナース"
+npcNursePShotgun,"Nurse","L’infirmière","ナース"
+npcNurseAShotgun,"Nurse","L’infirmière","ナース"
+npcNurseXBow,"Nurse","L’infirmière","ナース"
+npcNurseLBow,"Nurse","L’infirmière","ナース"
+npcNurseRocketL,"Nurse","L’infirmière","ナース"
+npcHarleyEmptyHand,"Harley","Harley","ハーレー"
+npcHarleyBMEmptyHand,"Harley","Harley","ハーレー"
+npcHarleyClub,"Harley","Harley","ハーレー"
+npcHarleyKnife,"Harley","Harley","ハーレー"
+npcHarleyAxe,"Harley","Harley","ハーレー"
+npcHarleySpear,"Harley","Harley","ハーレー"
+npcHarleyBat,"Harley","Harley","ハーレー"
+npcHarleyMachete,"Harley","Harley","ハーレー"
+npcHarleySMG,"Harley","Harley","ハーレー"
+npcHarleyM60,"Harley","Harley","ハーレー"
+npcHarleyPipePistol,"Harley","Harley","ハーレー"
+npcHarleyPistol,"Harley","Harley","ハーレー"
+npcHarleyDPistol,"Harley","Harley","ハーレー"
+npcHarleyPipeMG,"Harley","Harley","ハーレー"
+npcHarleyAK47,"Harley","Harley","ハーレー"
+npcHarleyTRifle,"Harley","Harley","ハーレー"
+npcHarleyPipeRifle,"Harley","Harley","ハーレー"
+npcHarleyHRifle,"Harley","Harley","ハーレー"
+npcHarleyPipeShotgun,"Harley","Harley","ハーレー"
+npcHarleyPShotgun,"Harley","Harley","ハーレー"
+npcHarleyAShotgun,"Harley","Harley","ハーレー"
+npcHarleyXBow,"Harley","Harley","ハーレー"
+npcHarleyLBow,"Harley","Harley","ハーレー"
+npcHarleyRocketL,"Harley","Harley","ハーレー"
+npcBakerEmptyHand,"Baker","Le boulanger","ベーカー"
+npcBakerClub,"Baker","Le boulanger","ベーカー"
+npcBakerKnife,"Baker","Le boulanger","ベーカー"
+npcBakerAxe,"Baker","Le boulanger","ベーカー"
+npcBakerSpear,"Baker","Le boulanger","ベーカー"
+npcBakerBat,"Baker","Le boulanger","ベーカー"
+npcBakerMachete,"Baker","Le boulanger","ベーカー"
+npcBakerSMG,"Baker","Le boulanger","ベーカー"
+npcBakerM60,"Baker","Le boulanger","ベーカー"
+npcBakerPipePistol,"Baker","Le boulanger","ベーカー"
+npcBakerPistol,"Baker","Le boulanger","ベーカー"
+npcBakerDPistol,"Baker","Le boulanger","ベーカー"
+npcBakerPipeMG,"Baker","Le boulanger","ベーカー"
+npcBakerAK47,"Baker","Le boulanger","ベーカー"
+npcBakerTRifle,"Baker","Le boulanger","ベーカー"
+npcBakerPipeRifle,"Baker","Le boulanger","ベーカー"
+npcBakerHRifle,"Baker","Le boulanger","ベーカー"
+npcBakerSRifle,"Baker","Le boulanger","ベーカー"
+npcBakerPipeShotgun,"Baker","Le boulanger","ベーカー"
+npcBakerPShotgun,"Baker","Le boulanger","ベーカー"
+npcBakerAShotgun,"Baker","Le boulanger","ベーカー"
+npcBakerXBow,"Baker","Le boulanger","ベーカー"
+npcBakerLBow,"Baker","Le boulanger","ベーカー"
+npcBakerRocketL,"Baker","Le boulanger","ベーカー"
+npcAnimalFox,"Fox","Renard","キツネ"
+animalFox,"Fox","Renard","キツネ"
+zombieFemaleTutorial,"DeadGirl","Fille morte","死んだ女の子"
+zombieFemaleTutorialFeral,"DeadGirl","Fille morte","死んだ女の子"
 
 "start","Are you the undead?",,"あなたはアンデッドですか？"
 "statement_-1684104497","Maybe not but a bar of soap wouldn't kill ya none either.",
@@ -134,3 +136,56 @@ buffNPCModThreatControlModeDisplayName,Threat Control Mode,Mode de contrôle des
 buffNPCModThreatControlModeDisplayDesc,"While in this mode, your hired NPCs will not engage with hostile animals (including zombies animals), unless:\n • You attack\n • You get attacked and took damage","Dans ce mode, vos your PNJs embauchés n'initieront pas le combat avec des animaux hostiles (incluant les animaux zombies), à moins que:\n • Vous attaquiez\n • Vous vous fassiez attaquer et prenez du dommage",
 buffNPCModFullControlModeDisplayName,Full Control Mode,Mode de contrôle complet,
 buffNPCModFullControlModeDisplayDesc,"While in this mode, your hired NPCs will not engage, unless:\n • You attack\n • You get attacked and took damage","Dans ce mode, vos your PNJs embauchés n'initieront pas le combat, à moins que:\n • Vous attaquiez\n • Vous vous fassiez attaquer et prenez du dommage",
+
+GenericNPC_start, "Hello friend, how can I help you?", "Bonjour ami, comment puis-je vous aider?", "こんにちは友達、どのようにあなたを助けることができますか？"
+GenericNPC_Command Menu, "Command Menu", "Menu de commandes", "コマンドメニュー"
+GenericNPC_Weapon Classes, "Weapon Classes", "Classes d'armes", "武器クラス"
+GenericNPC_Melee Menu, "Melee Weapons", "Armes de mêlée", "近接武器"
+GenericNPC_Pistol Menu, "Pistols", "Pistolets", "ピストル"
+GenericNPC_Rifle Menu, "Rifles", "Fusils", "ライフル"
+GenericNPC_ShotGun Menu, "Shotguns", "Fusils à pompe", "ショットガン"
+GenericNPC_Other Menu, "Other Weapons", "Autres armes", "その他の武器"
+GenericNPC_Hire, "I am interested in hiring you.", "Je suis intéressé à vous embaucher.", "あなたを雇うことに興味があります。"
+GenericNPC_FollowMe, "Follow me", "Suivez-moi", "私に従ってください"
+GenericNPC_Dump2Log, "Dump Values to Log", "Vider les valeurs dans le journal", "ログに値をダンプする"
+GenericNPC_ShowMe, "Show Me your inventory", "Montrez-moi votre inventaire", "あなたの在庫を見せてください"
+GenericNPC_StayHere, "Stay where you are standing", "Restez où vous êtes debout", "立っている場所にとどまってください"
+GenericNPC_Wander, "Patrol around here", "Patrouillez autour d'ici", "ここを巡回してください"
+GenericNPC_Patrol, "Patrol your coded route", "Patrouillez votre itinéraire codé", "コード化されたルートを巡回してください"
+GenericNPC_GuardHere, "Stay where I am standing", "Restez où je suis debout", "私が立っている場所にとどまってください"
+GenericNPC_GuardReturnHere, "Guard and return to where I am standing", "Gardez et revenez où je suis debout", "私が立っている場所に戻って警備してください"
+GenericNPC_SetCode, "Here is your Patrol Code", "Voici votre code de patrouille", "こちらがあなたの巡回コードです"
+GenericNPC_Loot, "Loot around here", "Pillez autour d'ici", "ここで略奪してください"
+GenericNPC_Dismiss, "Dismiss", "Congédier", "解雇する"
+GenericNPC_Pickup, "Pick Me up!", "Ramassez-moi!", "私を拾ってください！"
+GenericNPC_Weapon Menu, "Weapon Menu", "Menu des armes", "武器メニュー"
+GenericNPC_Melee, "Melee Menu", "Menu de mêlée", "近接メニュー"
+GenericNPC_Pistols, "Pistol Menu", "Menu des pistolets", "ピストルメニュー"
+GenericNPC_Rifles, "Rifle Menu", "Menu des fusils", "ライフルメニュー"
+GenericNPC_ShotGuns, "ShotGun Menu", "Menu des fusils à pompe", "ショットガンメニュー"
+GenericNPC_Others, "Other Menu", "Autre menu", "その他のメニュー"
+GenericNPC_BareHands, "Use BareHands", "Utilisez les mains nues", "素手を使う"
+GenericNPC_Club, "Use Club", "Utilisez un gourdin", "クラブを使う"
+GenericNPC_Knife, "Use Knife", "Utilisez un couteau", "ナイフを使う"
+GenericNPC_Bat, "Use Bat", "Utilisez une batte", "バットを使う"
+GenericNPC_Spear, "Use Spear", "Utilisez une lance", "スピアを使う"
+GenericNPC_Machete, "Use Machete", "Utilisez une machette", "マチェットを使う"
+GenericNPC_Axe, "Use Axe", "Utilisez une hache", "斧を使う"
+GenericNPC_SMG, "Use SMG", "Utilisez un pistolet-mitrailleur", "SMGを使う"
+GenericNPC_PipePistol, "Use PipePistol", "Utilisez un pistolet à tuyau", "パイプピストルを使う"
+GenericNPC_PipeShotgun, "Use PipeShotgun", "Utilisez un fusil à pompe à tuyau", "パイプショットガンを使う"
+GenericNPC_PipeRifle, "Use PipeRifle", "Utilisez un fusil à tuyau", "パイプライフルを使う"
+GenericNPC_PipeMG, "Use PipeMachinegun", "Utilisez une mitrailleuse à tuyau", "パイプマシンガンを使う"
+GenericNPC_M60, "Use M60", "Utilisez un M60", "M60を使う"
+GenericNPC_Pistol, "Use Pistol", "Utilisez un pistolet", "ピストルを使う"
+GenericNPC_DPistol, "Use DesertEagle", "Utilisez un DesertEagle", "デザートイーグルを使う"
+GenericNPC_AK47, "Use AK47", "Utilisez un AK47", "AK47を使う"
+GenericNPC_TRifle, "Use AssaultRifle", "Utilisez un fusil d'assaut", "アサルトライフルを使う"
+GenericNPC_HRifle, "Use HuntingR", "Utilisez un fusil de chasse", "ハンティングライフルを使う"
+GenericNPC_SRifle, "Use SniperRifle", "Utilisez un fusil de sniper", "スナイパーライフルを使う"
+GenericNPC_LBow, "Use Longbow", "Utilisez un arc long", "ロングボウを使う"
+GenericNPC_XBow, "Use Crossbow", "Utilisez une arbalète", "クロスボウを使う"
+GenericNPC_PShotgun, "Use Shotgun", "Utilisez un fusil à pompe", "ショットガンを使う"
+GenericNPC_AShotgun, "Use AutoShotgun", "Utilisez un fusil à pompe automatique", "オートショットガンを使う"
+GenericNPC_RLauncher, "Use RLauncher", "Utilisez un lance-roquettes", "ロケットランチャーを使う"
+GenericNPC_done, "Nevermind.", "Peu importe.", "気にしないでください。"

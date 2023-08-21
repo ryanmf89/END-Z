@@ -170,12 +170,20 @@
 			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffNPCModSlowStatusCheck"/>
 			<!--<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="PlayerAttacks"/>-->
 		</effect_group>	
+		
 		<!--  This effect group sets a cvar on the player called "DamageRelationship" which is the faction relationship at which the player can damage NPCs. 1001 means "everyone." 400 is the default, and what is in effect when this effect group is commented out.  This is only for faction targeting - it doesn't affect allies (hired NPCs), and other players and their NPCs are governed by the server's "Player Killing" setting. If you want to adjust the value: 800+ is "Love", 600+ is "Like", 400+ is "Neutral", 200+ is "Dislike", and 0+ is "Hate". -->
 			<!--<effect_group name="Damage All NPCs">
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="DamageRelationship" operation="set" value="1001" />
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="DamageRelationship" operation="set" value="1001" />
 				<triggered_effect trigger="onSelfRespawn" action="ModifyCVar" cvar="DamageRelationship" operation="set" value="1001" />
 			</effect_group>-->
+			
+			<!-- Custom boundary box so they don't go into blocks, however, can mess with pathing down 1 block paths -->
+				<!--<property class="Boundary" >
+				<property name="BoundaryBox" value="2.0,1.8,0.4" />
+				<property name="Center" value="0.0,0.9,0.0"/>
+				</property> -->
+			
 	</append>
 
 
@@ -294,7 +302,7 @@
 			<property name="SleeperSmellWakeThreshold" value="40,100"/>
 			<property name="NoiseAlertThreshold" value="30"/> 
 			<property name="SmellAlertThreshold" value="40"/> 
-			<property name="MaxTurnSpeed" value="360"/>
+			<property name="MaxTurnSpeed" value="359"/>
 			<property name="SwimSpeed" value="1"/>
 			<property name="SwimStrokeRate" value="1,1.5"/>
 			<property name="CanClimbLadders" value="true"/>
@@ -311,7 +319,7 @@
 			<property name="Beds" value="mattressFlat" />
 			 <!-- This is the block it'll call home -->
 			<property name="HomeBlocks" value="cntNPCHomeBlock"/>
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="TimeStayAfterDeath" value="5"/>
 			<property name="DeadBodyHitPoints" value="1000"/>
@@ -334,6 +342,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCStatusCheck"/> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="NPCHit"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="WeaponUser"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffEntitySpawnHeal"/>
 			</effect_group>	
 			<property name="RotateToGround" value="false"/>	
 			<property name="PushFactor" value="1"/>	
@@ -497,27 +506,28 @@
 			<property name="IsQuestGiver" value="false" /> <!--  If you want quest giving, add this property set to true to that specific character  -->
 			<property name="IsEnemyEntity" value="false"/> 
 			<property name="Faction" value="whiteriver"/>
-			
+	</entity_class>			
 
-			<!-- UAI overrides EAI if both exist -->
-			<!--EAI for NPC Humans (Requires SCore) * A21 version doesnt work, use this A20 style  -->
-<!--			<property name="AITask-1" value="ApproachAndAttackSDX, SCore" data="class=EntityAlive,0"/>
-				<property name="AITask-2" value="ApproachAndFollowTargetSDX, SCore" data="incentives=Leader"/>
-				<property name="AITask-3" value="Look"/>
-				<property name="AITask-4" value="ApproachDistraction"/>
-				<property name="AITask-5" value="ApproachSpot"/> 
-				<property name="AITask-6" value="WanderSDX, SCore"/>
-				<property name="AITask-7" value="BreakBlock"/>
-				<property name="AITask-8" value="Territorial"/>
-				<property name="AITask-9" value="" />
-				<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityAlive,80"/>
-				<property name="AITarget-2" value="SetAsTargetIfLeaderAttackedSDX, SCore" data="class=EntityAlive"/>
-				<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,80"/>
-				<property name="AITarget-4" value="SetAsTargetIfHurtSDX, SCore" data="class=EntityAlive"/>
-				<property name="AITarget-5" value=""/>  -->	
-		<!--		<property name="AITask-1" value="RangedAttackTargetSDX, SCore" data="itemType=1;attackPeriod=10"/> For ranged -->
+
+		<!--  Zed reference  -->
+		<!--	<property name="AITask" value="
+			BreakBlock|
+			DestroyArea|
+			Territorial|
+			ApproachDistraction|
+			ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+			ApproachSpot|
+			Look|
+			Wander|
+			"/>
+			<property name="AITarget" value="
+			SetAsTargetIfHurt class=EntityPlayer,EntityBandit,EntityEnemyAnimal|
+			BlockingTargetTask|
+			SetNearestCorpseAsTarget flags=edible|
+			SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityBandit,0,-10|
+			"/> -->
 				
-		</entity_class>	
+	
 		
 		<!--  Template converting the above melee template to Bloodmoon spawnable , change faction on character -->
 		
@@ -528,6 +538,79 @@
 			<property name="Faction" value="whiteriver"/>
 		</entity_class>	
 		
+		<!--  Template converting the above melee template to EAI  -->
+		
+		<entity_class name="npcMeleeBanditTemplate" extends="npcMeleeTemplate" ignore="AIPackages"> <!--  Works very well  -->
+			<property name="UserSpawnType" value="None"/>
+			<property name="Class" value="EntityBandit" /> 
+			<property name="Tags" value="entity,male,npc,walker,melee,bandit,DRMid"/> 
+			<property name="Faction" value="bandits"/>
+			<property name="HandItem" value="meleeNPCClubWood"/>
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="RunawayWhenHurt" data="runChance=0.3;healthPer=0.3;healthPerMax=0.7"/>
+			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityPlayer,0,EntityZombie,0,EntityEnemyAnimal,0,EntityAnimal,0" />
+			<property name="AITask-7" value="ApproachSpot"/> 
+			<property name="AITask-8" value="Look"/>
+			<property name="AITask-9" value="Wander"/>
+			<property name="AITask-10" value="" />	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal"/>
+			<!-- <property name="AITarget-1" value="SetAsTargetIfHurtSDX, SCore" data="class=EntityAlive"/>	-->	
+			<property name="AITarget-2" value="BlockingTargetTask"	/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0,EntityAnimal,0,0" />				
+			<property name="AITarget-4" value=""/> 
+		</entity_class>		
+		
+		<entity_class name="npcRangedBanditTemplate" extends="npcMeleeBanditTemplate" ignore="AIPackages"> <!-- kinda works  -->
+			<property name="UserSpawnType" value="None"/>
+			<property name="Class" value="EntityBandit" />  
+			<property name="Tags" value="entity,male,npc,walker,ranged,bandit,DRMid"/> 
+			<property name="Faction" value="bandits"/>
+			<property name="HandItem" value="gunNPCPipePistol"/>
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="RunawayWhenHurt" data="runChance=0.9;healthPer=0.3;healthPerMax=0.6"/>
+			<property name="AITask-3" value="Look"/>
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=6"/>
+			<property name="AITask-6" value="ApproachAndAttackTarget" class="EntityPlayer,0,EntityZombie,0,EntityEnemyAnimal,0" />	
+			<property name="AITask-7" value="Territorial"/>
+			<property name="AITask-8" value="ApproachSpot"/> 
+			<property name="AITask-9" value="Wander"/>
+			<property name="AITask-10" value=""/>
+			
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal"/>	
+			<property name="AITarget-2" value="BlockingTargetTask"	/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0,EntityAnimal,0,0" />				
+			<property name="AITarget-4" value=""/> 
+		</entity_class>		
+
+		<entity_class name="npcRanged2BanditTemplate" extends="npcRangedBanditTemplate" ignore="AIPackages"> <!-- needs a lot of work  -->
+			<property name="UserSpawnType" value="None"/>
+			<property name="Class" value="EntityBandit" />  
+			<property name="Tags" value="entity,male,npc,walker,ranged,bandit,DRMid"/> 
+			<property name="Faction" value="bandits"/>
+			<property name="HandItem" value="gunNPCPipePistol"/>
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="RunawayWhenHurt" data="runChance=0.33;healthPer=0.3;healthPerMax=0.6"/>
+			<property name="AITask-3" value="Look"/>
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="RangedAttackTargetSDX, SCore" data="itemType=1;attackPeriod=10"/> 
+			<!-- <property name="AITask-5" value="RangedAttackTarget" data="itemType=1;attackPeriod=10"/> -->
+			<property name="AITask-6" value="ApproachAndAttackTarget" class="EntityPlayer,0,EntityZombie,0,EntityEnemyAnimal,0" />	
+			<property name="AITask-7" value="ApproachSpot"/> 
+			<property name="AITask-8" value="Territorial"/>
+			<property name="AITask-9" value="Wander"/>
+			<property name="AITask-10" value=""/>
+			
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal"/>	
+			<property name="AITarget-2" value="BlockingTargetTask"	/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0,EntityAnimal,0,0" />				
+			<property name="AITarget-4" value=""/> 
+		</entity_class>	
+
+			
 		<!--  Ranged Template , change faction on character -->
 		
 		<entity_class name="npcRangedTemplate" extends="npcMeleeTemplate"> 	
@@ -537,11 +620,6 @@
 			<property name="RightHandJointName" value="Gunjoint" /> 
 			<property name="AttackTimeoutDay" value="0.05"/>  <!-- 0.05 * 20f = 1 seconds between attack -->
             <property name="AttackTimeoutNight" value="0.05"/>
-				<!-- Custom boundary box so they don't go into blocks, however, can mess with pathing down 1 block paths -->
-				<!--<property class="Boundary" >
-				<property name="BoundaryBox" value="2.0,1.8,0.4" />
-				<property name="Center" value="0.0,0.9,0.0"/>
-				</property> -->
 		</entity_class>	
 		
 		<!--  Template converting the above ranged template to bloodmoon enabled   -->
@@ -600,7 +678,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand"/> 
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="750" />
 			<property name="ExperienceGain" value="600"/> 
 		</entity_class>	
@@ -615,7 +693,19 @@
 			<property name="IsEnemyEntity" value="true"/> 
 			<property name="Class" value="EntityEnemySDX, SCore" /> 
 		</entity_class>	
-
+		
+		<!-- EmptyHand "weapon" template for bandits -->
+		
+		<entity_class name="npcBanditEmptyHandTemplate" extends="npcMeleeBanditTemplate" >
+			<property name="UserSpawnType" value="None"/>
+			<property name="Tags" value="entity,male,npc,walker,melee,bandit"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="Class" value="EntityBandit" /> 
+			<property name="HandItem" value="meleeNPCEmptyHand"/>
+		</entity_class>			
+		
 		<!-- EmptyHand "weapon" template for advanced, hireable characters , change faction on character --> 
 
 		<entity_class name="npcAdvancedEmptyHandTemplate" extends="npcEmptyHandTemplate"> 
@@ -642,15 +732,13 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCClubWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCClubWood"/> 
 			<property name="BagItems" value="meleeWpnClubT0WoodenClub" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="600"/> 
 		</entity_class>
 		
-		
 		<!-- Weapon template for bloodmoon  -->
 		
-
 		<entity_class name="npcBMClubTemplate" extends="npcClubTemplate">
 			<property name="UserSpawnType" value="None"/>
 			<property name="Tags" value="entity,male,npc,walker,melee"/>
@@ -658,6 +746,19 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="Class" value="EntityEnemySDX, SCore" /> 
 		</entity_class>	
+		
+		
+		<entity_class name="npcBanditClubTemplate" extends="npcMeleeBanditTemplate" >
+			<property name="UserSpawnType" value="None"/>
+			<property name="Tags" value="entity,male,npc,walker,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="Class" value="EntityBandit" /> 
+			<property name="HandItem" value="meleeNPCClubWood"/>
+			<property name="RightHandJointName" value="Club" />
+		</entity_class>	
+		
 
 		<!-- Weapon template for advanced, hireable characters  -->
 
@@ -684,7 +785,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCKnife"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCKnife"/> 
 			<property name="BagItems" value="meleeWpnBladeT1HuntingKnife" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="750" />
 			<property name="ExperienceGain" value="600"/> 
 		</entity_class>	
@@ -696,7 +797,18 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="Class" value="EntityEnemySDX, SCore" /> 
 		</entity_class>	
-
+		
+		<entity_class name="npcBanditKnifeTemplate" extends="npcMeleeBanditTemplate">
+			<property name="UserSpawnType" value="None"/>
+			<property name="Tags" value="entity,male,npc,walker,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="Class" value="EntityBandit" /> 
+			<property name="HandItem" value="meleeNPCKnife"/>
+			<property name="RightHandJointName" value="Knife" />
+		</entity_class>	
+		
 		<!-- Weapon template for advanced, hireable characters  -->
 
 		<entity_class name="npcAdvancedKnifeTemplate" extends="npcKnifeTemplate"> 
@@ -720,7 +832,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCBatWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCBatWood"/>
 			<property name="BagItems" value="meleeWpnClubT1BaseballBat" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="600"/>
 		</entity_class>	
@@ -732,6 +844,20 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="Class" value="EntityEnemySDX, SCore" /> 
 		</entity_class>	
+		
+		
+		<entity_class name="npcBanditBatTemplate" extends="npcMeleeBanditTemplate">
+			<property name="UserSpawnType" value="None"/>
+			<property name="Tags" value="entity,male,npc,walker,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="Class" value="EntityBandit" /> 
+			<property name="HandItem" value="meleeNPCBatWood"/>
+			<property name="RightHandJointName" value="Bat" />
+		</entity_class>	
+		
+		
 
 		<!-- Weapon template for advanced, hireable characters  -->
 
@@ -758,7 +884,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCAxe"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCAxe"/>
 			<property name="BagItems" value="meleeToolAxeT1IronFireaxe" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="600"/>
 		</entity_class>		
@@ -769,6 +895,18 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
 			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+		
+		
+		<entity_class name="npcBanditAxeTemplate" extends="npcMeleeBanditTemplate">
+			<property name="UserSpawnType" value="None"/>
+			<property name="Tags" value="entity,male,npc,walker,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="Class" value="EntityBandit" /> 
+			<property name="HandItem" value="meleeNPCAxe"/>
+			<property name="RightHandJointName" value="Axe" />
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -794,7 +932,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCSpear"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCSpear"/> 
 			<property name="BagItems" value="meleeWpnSpearT1IronSpear" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="600"/>
 		</entity_class>		
@@ -805,6 +943,17 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
 			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+		
+		<entity_class name="npcBanditSpearTemplate" extends="npcMeleeBanditTemplate">
+			<property name="UserSpawnType" value="None"/>
+			<property name="Tags" value="entity,male,npc,walker,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="Class" value="EntityBandit" /> 
+			<property name="HandItem" value="meleeNPCSpear"/>
+			<property name="RightHandJointName" value="Spear" />
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -818,7 +967,8 @@
 			<property name="Hirable" value="true" />
 		</entity_class>
 		
-		<entity_class name="npcMacheteTemplate" extends="npcMeleeTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcMacheteTemplate" extends="npcMeleeTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
@@ -829,7 +979,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCMachete"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCMachete"/> 
 			<property name="BagItems" value="meleeWpnBladeT3Machete" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="600"/>
 		</entity_class>	
@@ -840,6 +990,17 @@
 			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
 			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+		
+		<entity_class name="npcBanditMacheteTemplate" extends="npcMeleeBanditTemplate">
+			<property name="UserSpawnType" value="None"/>
+			<property name="Tags" value="entity,male,npc,walker,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="Class" value="EntityBandit" /> 
+			<property name="HandItem" value="meleeNPCMachete"/>
+			<property name="RightHandJointName" value="Machete" />
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -865,7 +1026,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipePistol,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipePistol,ammoNPC9mmBulletBall"/>
 			<property name="BagItems" value="gunHandgunT0PipePistol" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1250" />
 			<property name="ExperienceGain" value="1000"/>
 		</entity_class>	
@@ -877,6 +1038,30 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="Class" value="EntityEnemySDX, SCore" /> 
 		</entity_class>	
+		
+		<entity_class name="npcBanditPipePistolTemplate" extends="npcRangedBanditTemplate"> <!--  EAI testing on PipePistol  -->
+			<property name="UserSpawnType" value="None"/>
+			<property name="Tags" value="entity,male,npc,walker,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="Class" value="EntityBandit" /> 
+			<property name="HandItem" value="gunNPCPipePistol"/>
+			<property name="RightHandJointName" value="PipePistol" />
+			<property name="AITask-5" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=6;minRange=2;maxRange=15;unreachableRange=40"/>  <!-- set duration == rounds?  -->
+		</entity_class>	
+		
+		<entity_class name="npcBanditPipePistolTemplate2" extends="npcRanged2BanditTemplate"> <!--  EAI testing on PipePistol  -->
+			<property name="UserSpawnType" value="None"/>
+			<property name="Tags" value="entity,male,npc,walker,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="Class" value="EntityBandit" /> 
+			<property name="HandItem" value="gunNPCPipePistol"/>
+			<property name="RightHandJointName" value="PipePistol" />
+		</entity_class>	
+		
 
 		<!-- Weapon template for advanced, hireable characters  -->
 
@@ -889,7 +1074,8 @@
 			<property name="Hirable" value="true" />
 		</entity_class>
 		
-		<entity_class name="npcPistolTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcPistolTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/> <!-- 2 is old Walktype for Pistols  -->
@@ -900,7 +1086,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPistol,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPistol,ammoNPC9mmBulletBall"/>
 			<property name="BagItems" value="gunHandgunT1Pistol" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2250" />
 			<property name="ExperienceGain" value="1200"/>
 		</entity_class>		
@@ -925,7 +1111,8 @@
 		</entity_class>
 		
 	
-		<entity_class name="npcDPistolTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcDPistolTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/> <!-- 2 is old Walktype for Pistols  -->
@@ -936,7 +1123,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCDPistol,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCDPistol,ammoNPC9mmBulletBall"/>
 			<property name="BagItems" value="gunHandgunT3DesertVulture" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2750" />
 			<property name="ExperienceGain" value="1400"/>
 		</entity_class>	
@@ -962,7 +1149,8 @@
 
 		
 		
-		<entity_class name="npcSMGTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcSMGTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/> <!-- 6 is old Walktype for rifles  -->
@@ -973,7 +1161,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCSMG5,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCSMG5,ammoNPC9mmBulletBall"/> 
 			<property name="BagItems" value="gunHandgunT3SMG5" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3250" />
 			<property name="ExperienceGain" value="1400"/>
 		</entity_class>	
@@ -999,7 +1187,8 @@
 		
 		
 		
-		<entity_class name="npcM60Template" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcM60Template" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/> 
@@ -1010,7 +1199,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCM60,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCM60,ammoNPC762mmBulletBall"/> 
 			<property name="BagItems" value="gunMGT3M60" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3500" />
 			<property name="ExperienceGain" value="1400"/>
 		</entity_class>	
@@ -1046,7 +1235,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCAk47,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCAk47,ammoNPC762mmBulletBall"/> 
 			<property name="BagItems" value="gunMGT1AK47" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3250" />
 			<property name="ExperienceGain" value="1200"/>
 		</entity_class>
@@ -1070,7 +1259,8 @@
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
-		<entity_class name="npcPipeMGTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcPipeMGTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
@@ -1081,7 +1271,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeMG,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeMG,ammoNPC762mmBulletBall"/> 
 			<property name="BagItems" value="gunMGT0PipeMachineGun" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1750" />
 			<property name="ExperienceGain" value="1000"/>
 		</entity_class>	
@@ -1106,7 +1296,8 @@
 		</entity_class>		
 		
 		
-		<entity_class name="npcTRifleTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcTRifleTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
@@ -1117,7 +1308,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCTRifle,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCTRifle,ammoNPC762mmBulletBall"/> 
 			<property name="BagItems" value="gunMGT2TacticalAR" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3500" />
 			<property name="ExperienceGain" value="1200"/>
 		</entity_class>	
@@ -1142,7 +1333,8 @@
 		</entity_class>		
 		
 
-		<entity_class name="npcPipeRifleTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcPipeRifleTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
             <property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
             <property name="WalkType" value="7"/>
@@ -1153,7 +1345,7 @@
             <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeRifle,ammoNPC762mmBulletBall"/>
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeRifle,ammoNPC762mmBulletBall"/> 
 			<property name="BagItems" value="gunRifleT0PipeRifle" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="800"/>
         </entity_class>    
@@ -1177,7 +1369,8 @@
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
-		<entity_class name="npcHRifleTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcHRifleTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
             <property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
             <property name="WalkType" value="7"/>
@@ -1188,7 +1381,7 @@
             <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCHRifle,ammoNPC762mmBulletBall"/>
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCHRifle,ammoNPC762mmBulletBall"/> 
 			<property name="BagItems" value="gunRifleT1HuntingRifle" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1250" />
 			<property name="ExperienceGain" value="1000"/>
         </entity_class> 
@@ -1212,7 +1405,8 @@
 			<property name="Hirable" value="true" />
 		</entity_class>  		
 		
-		<entity_class name="npcSRifleTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcSRifleTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
             <property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
             <property name="WalkType" value="7"/>
@@ -1223,7 +1417,7 @@
             <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCSRifle,ammoNPC762mmBulletBall"/>
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCSRifle,ammoNPC762mmBulletBall"/> 
 			<property name="BagItems" value="gunRifleT3SniperRifle" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3250" />
 			<property name="ExperienceGain" value="1400"/>
         </entity_class>  
@@ -1247,7 +1441,8 @@
 			<property name="Hirable" value="true" />
 		</entity_class>		
 
-		<entity_class name="npcPipeShotgunTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcPipeShotgunTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
@@ -1258,7 +1453,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeShotgun,ammoNPCShotgunShell"/> 
 			<property name="BagItems" value="gunShotgunT0PipeShotgun" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1250" />
 			<property name="ExperienceGain" value="800"/>
 		</entity_class> 
@@ -1282,7 +1477,8 @@
 			<property name="Hirable" value="true" />
 		</entity_class> 		
 	
-		<entity_class name="npcPShotgunTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcPShotgunTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
@@ -1293,7 +1489,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPShotgun,ammoNPCShotgunShell"/> 
 			<property name="BagItems" value="gunShotgunT2PumpShotgun" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2250" />
 			<property name="ExperienceGain" value="1200"/>
 		</entity_class> 
@@ -1317,7 +1513,8 @@
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
-		<entity_class name="npcAShotgunTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcAShotgunTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
@@ -1328,7 +1525,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCAShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCAShotgun,ammoNPCShotgunShell"/> 
 			<property name="BagItems" value="gunShotgunT3AutoShotgun" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3500" />
 			<property name="ExperienceGain" value="1400"/>
 		</entity_class>
@@ -1352,7 +1549,8 @@
 			<property name="Hirable" value="true" />
 		</entity_class>		
 
-		<entity_class name="npcLBowTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcLBowTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
@@ -1363,7 +1561,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCLBow,ammoNPCArrowIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCLBow,ammoNPCArrowIron"/> 
 			<property name="BagItems" value="gunBowT1WoodenBow" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2000" />
 			<property name="ExperienceGain" value="800"/>
 		</entity_class> 
@@ -1387,7 +1585,8 @@
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
-		<entity_class name="npcXBowTemplate" extends="npcRangedTemplate"><property name="UserSpawnType" value="None"/> 
+		<entity_class name="npcXBowTemplate" extends="npcRangedTemplate"> 
+ 			<property name="UserSpawnType" value="None"/> 
 			<property name="Tags" value="entity,male,npc,walker,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
@@ -1398,7 +1597,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCXBow,ammoNPCCrossbowBoltIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCXBow,ammoNPCCrossbowBoltIron"/> 
 			<property name="BagItems" value="gunBowT1IronCrossbow" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2500" />
 			<property name="ExperienceGain" value="1000"/>
 			<!-- For testing launcher version  -->
@@ -1440,7 +1639,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCRocketLauncher,ammoNPCRocketHE"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCRocketLauncher,ammoNPCRocketHE"/> 
 			<property name="BagItems" value="gunExplosivesT3RocketLauncher" />
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3000" />
 			<property name="ExperienceGain" value="1400"/>
 		</entity_class>	
@@ -1471,6 +1670,7 @@
             <property name="UserSpawnType" value="None"/>    
             <property name="SizeScale" value="1"/> 
             <property name="Tags" value="entity,animal,npc,DRMid,perkAT03"/>
+			<property name="EntityFlags" value="animal,edible"/>
             <property name="Faction" value="companionanimals"/>
             <property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
             <property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
@@ -1554,6 +1754,7 @@
 		<entity_class name="animalTemplateHostileWalking" >
 			<property name="UserSpawnType" value="None"/>
 			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="EntityFlags" value="animal,edible"/>
 			<property name="LookAtAngle" value="0"/> <!-- A19 , add if you dont want animals to head track  -->
 			<property name="ModelType" value="Standard"/>
 			<property name="Prefab" value="NPC"/>
@@ -1947,8 +2148,10 @@
 			<property name="SwimStrokeRate" value="1,1.5"/>
 			<property name="CanClimbLadders" value="true"/>
 			<property name="JumpMaxDistance" value="2.8, 3.9"/>
-			<property name="HandItem" value="meleeHandZombie001"/>
-			<property name="HandItemCrawler" value="meleeHandZombie002"/> 
+			<property name="HandItem" value="meleeHandZombie01"/>
+			<!-- <property name="HandItem" value="meleeHandZombie001"/> -->
+			<property name="HandItemCrawler" value="meleeHandZombie02"/> 
+			<!-- <property name="HandItemCrawler" value="meleeHandZombie002"/> -->
 			<property name="AttackTimeoutDay" value="1.5"/> <!-- 1.5 in s -->
 			<property name="AttackTimeoutNight" value="1.1"/>
 			<property name="Immunity" value="sickness;disease;wellness"/> <!-- bleeding; -->
@@ -2288,16 +2491,20 @@
 			<property name="Faction" value="mechs"/>
 			<property name="Names" value="KITT,HK-47,ED-209,Clank,Johnny5,Roboto,Marvin,Robbie,Rosie,HAL9000,GLaDOS,Bender" />		
 		</entity_class> 
-		
-		
-		
 
 	<!--  End Of Template Section  -->
-
+	
+	
+	<!--  Character section  -->
+	
+		<!-- cp tag means use the bonebased fire particle  -->
+		<!-- Each character needs tags for each weapon they may swap too.  EmptyHand is the default so doesnt need a tag. Add all or some of these weapon tags below according to which weapon swaps you want allowed  -->
+		<!-- Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL  -->
 		<!--  Nurse  -->
 		
 		<entity_class name="npcNurseEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/> 
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2325,7 +2532,8 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseClub" extends="npcAdvancedClubTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2350,7 +2558,8 @@
 		</entity_class>
 		
 		<entity_class name="npcNurseKnife" extends="npcAdvancedKnifeTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ <property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2375,7 +2584,8 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseAxe" extends="npcAdvancedAxeTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 	<property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2400,7 +2610,8 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseSpear" extends="npcAdvancedSpearTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2425,7 +2636,8 @@
 		</entity_class>			
 		
 		<entity_class name="npcNurseBat" extends="npcAdvancedBatTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2451,7 +2663,8 @@
 		</entity_class>			
 		
 		<entity_class name="npcNurseMachete" extends="npcAdvancedMacheteTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2476,7 +2689,8 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseSMG" extends="npcAdvancedSMGTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2502,7 +2716,8 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseM60" extends="npcAdvancedM60Template"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2527,7 +2742,8 @@
 		</entity_class>
 		
 		<entity_class name="npcNursePipePistol" extends="npcAdvancedPipePistolTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2552,7 +2768,8 @@
 		</entity_class>			
 		
 		<entity_class name="npcNursePistol" extends="npcAdvancedPistolTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2578,7 +2795,8 @@
 		
 		
 		<entity_class name="npcNurseDPistol" extends="npcAdvancedDPistolTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2603,7 +2821,8 @@
 		</entity_class>	
 
 		<entity_class name="npcNursePipeMG" extends="npcAdvancedPipeMGTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2628,7 +2847,8 @@
 		</entity_class>
 
 		<entity_class name="npcNurseAK47" extends="npcAdvancedAK47Template"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2653,7 +2873,8 @@
 		</entity_class>
 		
 		<entity_class name="npcNurseTRifle" extends="npcAdvancedTRifleTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2678,7 +2899,8 @@
 		</entity_class>	
 
 		<entity_class name="npcNursePipeRifle" extends="npcAdvancedPipeRifleTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2705,7 +2927,8 @@
 		
 		
 		<entity_class name="npcNurseHRifle" extends="npcAdvancedHRifleTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2731,7 +2954,8 @@
 		</entity_class>    		
 		
 		<entity_class name="npcNurseSRifle" extends="npcAdvancedSRifleTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2757,7 +2981,8 @@
 		</entity_class> 
 		
 		<entity_class name="npcNursePipeShotgun" extends="npcAdvancedPipeShotgunTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2782,7 +3007,8 @@
 		</entity_class> 		
 		
 		<entity_class name="npcNursePShotgun" extends="npcAdvancedPShotgunTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2807,7 +3033,8 @@
 		</entity_class> 
 		
 		<entity_class name="npcNurseAShotgun" extends="npcAdvancedAShotgunTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2832,7 +3059,8 @@
 		</entity_class> 		
 		
 		<entity_class name="npcNurseXBow" extends="npcAdvancedXBowTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2857,7 +3085,8 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseLBow" extends="npcAdvancedLBowTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2882,7 +3111,8 @@
 		</entity_class> 
 		
 		<entity_class name="npcNurseRocketL" extends="npcAdvancedRocketLTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,cp,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="NPCID" value="NPCGenericNurse"/> 
@@ -2908,8 +3138,9 @@
 		
 		<!--  w  -->	
 		
-		<entity_class name="npcHarleyEmptyHand" extends="npcEmptyHandTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid"/>
+		<entity_class name="npcHarleyEmptyHand" extends="npcBanditEmptyHandTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -2931,19 +3162,21 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<!-- <property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> -->
 		</entity_class>	
 		
 		<entity_class name="npcHarleyBMEmptyHand" extends="npcHarleyEmptyHand"> <!--  example of a bloodmoon version  -->
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Class" value="EntityEnemySDX, SCore" />
 			<property name="IsEnemyEntity" value="true"/> 
 		</entity_class>	
 
-		<entity_class name="npcHarleyClub" extends="npcClubTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit"/>
+		<entity_class name="npcHarleyClub" extends="npcBanditClubTemplate"  > 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -2965,11 +3198,11 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 		</entity_class>
 		
-		<entity_class name="npcHarleyKnife" extends="npcKnifeTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid"/>
+		<entity_class name="npcHarleyKnife" extends="npcBanditKnifeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -2991,11 +3224,11 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 		</entity_class>	
 		
-		<entity_class name="npcHarleyBat" extends="npcBatTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid"/>
+		<entity_class name="npcHarleyBat" extends="npcBanditBatTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3017,11 +3250,11 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 		</entity_class>			
 	
-		<entity_class name="npcHarleyMachete" extends="npcMacheteTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid"/>
+		<entity_class name="npcHarleyMachete" extends="npcBanditMacheteTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3043,16 +3276,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
-			<!--<effect_group name="Blocktest"> 
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Blocking"/> 
-			</effect_group>	-->
-			
 		</entity_class>		
 
 
-		<entity_class name="npcHarleyAxe" extends="npcAxeTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid"/>
+		<entity_class name="npcHarleyAxe" extends="npcBanditAxeTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3074,11 +3303,11 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 		</entity_class>	
 		
-		<entity_class name="npcHarleySpear" extends="npcSpearTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid"/>
+		<entity_class name="npcHarleySpear" extends="npcBanditSpearTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3100,11 +3329,13 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPipePistol" extends="npcPipePistolTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+		<!-- <entity_class name="npcHarleyPipePistol" extends="npcBanditPipePistolTemplate"> -->
+		<!-- <entity_class name="npcHarleyPipePistol" extends="npcBanditPipePistolTemplate2"> -->
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3126,11 +3357,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		
 		<entity_class name="npcHarleyPipeRifle" extends="npcPipeRifleTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3152,11 +3384,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		
 		<entity_class name="npcHarleyPipeMG" extends="npcPipeMGTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3178,11 +3411,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>				
 		
 		<entity_class name="npcHarleyPipeShotgun" extends="npcPipeShotgunTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3204,11 +3438,13 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
+			<property name="MaxViewAngle" value="270"/> 
 		</entity_class>	
 
 		<entity_class name="npcHarleySMG" extends="npcSMGTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3230,11 +3466,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		
 		<entity_class name="npcHarleyM60" extends="npcM60Template"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3256,11 +3493,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPistol" extends="npcPistolTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3282,11 +3520,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>				
 		
 		<entity_class name="npcHarleyDPistol" extends="npcDPistolTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3308,11 +3547,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>				
 
 		<entity_class name="npcHarleyAK47" extends="npcAK47Template"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3334,11 +3574,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>
 		
 		<entity_class name="npcHarleyTRifle" extends="npcTRifleTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3360,11 +3601,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>		
 		
 		<entity_class name="npcHarleyHRifle" extends="npcHRifleTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3386,11 +3628,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>
 
 		<entity_class name="npcHarleySRifle" extends="npcSRifleTemplate">
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid" />
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL" />
 			<property name="Faction" value="bandits" />
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X" />
@@ -3412,11 +3655,12 @@
 			<property name="SoundSense" value="HarleySense" />
 			<property name="LootDropProb" value="0.2" />
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular" />
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>
 
 		<entity_class name="npcHarleyPShotgun" extends="npcPShotgunTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3438,11 +3682,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
         </entity_class>   
 
 		<entity_class name="npcHarleyAShotgun" extends="npcAShotgunTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3464,11 +3709,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
         </entity_class>   	
 		
 		<entity_class name="npcHarleyLBow" extends="npcLBowTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3490,11 +3736,12 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class> 
 
 		<entity_class name="npcHarleyXBow" extends="npcXBowTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3516,10 +3763,11 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		<entity_class name="npcHarleyRocketL" extends="npcRocketLTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3541,10 +3789,11 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/>
+			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		<entity_class name="npcHarleyVomitHand" extends="npcMeleeTemplate"> <!-- testing -->
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,ranged,voiceharley,bandit,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="bandits"/>
 			<!--<property name="Class" value="EntityBandit" /> -->
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
@@ -3571,7 +3820,7 @@
 <!--			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeHandVomit,ammoProjectileZombieVomit"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeHandVomit,ammoProjectileZombieVomit"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeHandVomit,ammoProjectileZombieVomit"/> -->
-			<property name="HireCurrency" value="EZcurrencyLL" />
+			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="750" />
 			<property name="ExperienceGain" value="600"/> 
 			<property name="RightHandJointName" value="Head" />
@@ -3596,8 +3845,9 @@
 		
 		<!--  Baker  -->
 
-		<entity_class name="npcBakerEmptyHand" extends="npcEmptyHandTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,DRMid"/>
+		<entity_class name="npcBakerEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
@@ -3610,161 +3860,184 @@
 		</entity_class>	
 
 		<entity_class name="npcBakerClub" extends="npcAdvancedClubTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/> 
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/>
 		</entity_class>
 		
 		<entity_class name="npcBakerKnife" extends="npcAdvancedKnifeTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 		
 		<entity_class name="npcBakerBat" extends="npcAdvancedBatTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>				
 		
 		<entity_class name="npcBakerMachete" extends="npcAdvancedMacheteTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 
 		<entity_class name="npcBakerAxe" extends="npcAdvancedAxeTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>				
 		
 		<entity_class name="npcBakerSpear" extends="npcAdvancedSpearTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,melee,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 		
 		<entity_class name="npcBakerPipePistol" extends="npcAdvancedPipePistolTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>		
 		
 		<entity_class name="npcBakerPipeRifle" extends="npcAdvancedPipeRifleTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>			
 		
 		<entity_class name="npcBakerPipeMG" extends="npcAdvancedPipeMGTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>			
 		
 		<entity_class name="npcBakerPipeShotgun" extends="npcAdvancedPipeShotgunTemplate"> 		
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>			
 	
 		<entity_class name="npcBakerSMG" extends="npcAdvancedSMGTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 		
 		<entity_class name="npcBakerM60" extends="npcAdvancedM60Template"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 
 		<entity_class name="npcBakerPistol" extends="npcAdvancedPistolTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/> 
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>				
 		
 		<entity_class name="npcBakerDPistol" extends="npcAdvancedDPistolTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 		
 		<entity_class name="npcBakerAK47" extends="npcAdvancedAK47Template"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>
 		
 		<entity_class name="npcBakerTRifle" extends="npcAdvancedTRifleTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>		
 		
 		<entity_class name="npcBakerHRifle" extends="npcAdvancedHRifleTemplate"> 
-            <property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+            <property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
         </entity_class>    		
 		
 		<entity_class name="npcBakerSRifle" extends="npcAdvancedSRifleTemplate"> 
-            <property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+            <property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
         </entity_class>  
 		
 		<entity_class name="npcBakerPShotgun" extends="npcAdvancedPShotgunTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>
  		
 		<entity_class name="npcBakerAShotgun" extends="npcAdvancedAShotgunTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class> 			
 
 		<entity_class name="npcBakerLBow" extends="npcAdvancedLBowTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class> 		
 		
 		<entity_class name="npcBakerXBow" extends="npcAdvancedXBowTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	 
 		
 		<entity_class name="npcBakerRocketL" extends="npcAdvancedRocketLTemplate"> 
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,male,npc,walker,ranged,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,male,npc,walker,ranged,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />	
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
@@ -3788,7 +4061,7 @@
 		
 		<entity_class name="BackpackNPC">
 			<property name="UserSpawnType" value="Console"/>
-			<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+			<property name="Mesh" value="@:Entities/LootContainers/backpack_droppedPrefab.prefab"/>
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
 			<property name="Class" value="EntityBackpackNPC, SCore"/>
@@ -3800,19 +4073,19 @@
 			<property name="Faction" value="none"/>
 			<property name="NavObject" value="backpack" />
 		</entity_class>
-
 		
 		<!--  NPC and Dumb animals  -->	
 		<entity_class name="npcAnimalFox" extends="npcAnimalMeleeTemplate">
 			<property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot "/>
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,animal,npc,npcAnimalFox,perkAT03,DRMid"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,animal,npc,npcAnimalFox,perkAT03,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="LookAtAngle" value="0"/> 
 			<property name="HasRagdoll" value="true"/>
 			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="false"/>
+			<property name="RootMotion" value="true"/>
 			<property name="Faction" value="companionanimals"/>	
 			<property name="PhysicsBody" value="ArcticFox"/>
 			<property name="IsEntityAnimal" value="true"/> 
@@ -3859,7 +4132,8 @@
 		</entity_class>	
 		
 		<entity_class name="animalFox" extends="animalTemplateHostileWalking">
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,animal,perkAT02,perkAT03,animalFox"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,animal,perkAT02,perkAT03,animalFox"/>
 			<property name="Faction" value="aggressiveanimalssmall"/> 
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
@@ -3901,7 +4175,8 @@
 		</entity_class>
 		
 		<entity_class name="animalJeerkoa" extends="animalTemplateHostileWalking">
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,animal,perkAT02,perkAT03"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,animal,perkAT02,perkAT03"/>
 			<property name="Faction" value="aggressiveanimalssmall"/> 
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
@@ -3942,41 +4217,14 @@
 		</entity_class>
 		
 		
-		<!-- <entity_class name="npcJenEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
-			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,female,npc,walker,UMA2,melee,DRMid"/> 
-			<property name="Faction" value="whiteriver"/>
-			<property name="PhysicsBody" value="traderStandard"/>
-			<property name="Names" value="Jen" />	
-			<property name="DanceType" value="2" />
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?TraderJen_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
-			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>	
-			<effect_group name="CanTalk"> 
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="NPCCanTalk"/>	
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="NPCCanBlink"/>	
-			</effect_group>	
-		</entity_class>		-->
+
 		
 		<!--  Zombies  -->
 		<!-- Tutorial Zombie -->
 		
 		<entity_class name="zombieFemaleTutorial" extends="zombieRegularTemplate">
-			<property name="UserSpawnType" value="Menu"/><property name="Tags" value="entity,female,zombie,walker,mixamo,normal"/>
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,zombie,walker,mixamo,normal"/>
 			<property name="Faction" value="undead"/>				
 			<property name="AvatarController" value="AvatarZombieController"/>
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?zombieTestFemale_X"/> 
@@ -4179,11 +4427,11 @@
 		</effect_group>
 	</append>	-->
 
-	<!-- BASIC TEMPLATE -->
+	<!-- BASIC TEMPLATE -->    
 	<append xpath="/entity_classes/entity_class[@name='npcEmptyHandTemplate' or
 												@name='npcBatTemplate' or
 												@name='npcAxeTemplate' or
-												@name='npcClubTemplate' or
+												@name='npcClubTemplate' or 
 												@name='npcKnifeTemplate' or
 												@name='npcSpearTemplate' or
 												@name='npcMacheteTemplate' or
@@ -4206,7 +4454,7 @@
 												@name='npcRocketLTemplate'
 												]">
 		<property name="AIPackages" value="NPCModCoreNoChat, NPCModNPCMeleeBasic, NPCModNPCRangedBasic"/>
-	</append>
+	</append> 
 	
 	<!-- ADVANCED TEMPLATE -->
 	<append xpath="/entity_classes/entity_class[@name='npcAdvancedEmptyHandTemplate' or

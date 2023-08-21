@@ -1,0 +1,7 @@
+<configs>
+
+<append xpath="//biome[@name='pine_forest']/decorations">
+    <decoration type="block" blockname="BeehiveEmptyLL" prob="0.0002"/>
+</append>
+    
+</configs>

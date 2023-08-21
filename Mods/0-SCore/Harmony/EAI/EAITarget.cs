@@ -1,6 +1,8 @@
 ﻿using System;
 using HarmonyLib;
 using UAI;
+using UnityEngine;
+
 namespace Harmony.EAI
 {
     [HarmonyPatch(typeof(EAITarget))]

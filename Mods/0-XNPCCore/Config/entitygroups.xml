@@ -4,7 +4,7 @@
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesAll']/text()" delim="\n" op="add" >
 		npcBakerEmptyHand, 0.025
 		npcBakerClub, 0.025 
-		npcBakerKnife, 0.0125 
+		npcBakerKnife, 0.025 
 		npcBakerBat, 0.0125 
 		npcBakerMachete, 0.0125 
 		npcBakerSMG, 0.0125 
@@ -12,9 +12,9 @@
 		npcBakerHRifle, 0.0125 
 		npcBakerPistol, 0.0125 
 		npcBakerLBow, 0.0125 
-		npcNurseEmptyHand, 0.0125 
-		npcNurseClub, 0.0125 
-		npcNurseKnife, 0.0125 
+		npcNurseEmptyHand, 0.025 
+		npcNurseClub, 0.025 
+		npcNurseKnife, 0.025 
 		npcNursePistol, 0.0125 
 		npcNurseLBow, 0.0125 
 		npcAnimalFox, 0.025 
@@ -24,14 +24,22 @@
 		npcHarleyMachete, 0.0125 
 		npcHarleySpear, 0.0125 	
 		npcHarleyAxe, 0.0125 		
-		npcHarleyPipePistol, 0.0125 
-		npcHarleyPipeRifle, 0.0125 		
-		npcHarleyPipeShotgun, 0.0125 
+		npcHarleyPipePistol, 0.005 
+		npcHarleyPipeRifle, 0.005 		
+		npcHarleyPipeShotgun, 0.005 
+		zombieFemaleTutorialT1, 0.0125
+		zombieFemaleTutorialT2, 0.0125
+		zombieFemaleTutorialT3, 0.0125
+		zombieFemaleTutorialT21, 0.0125
+		zombieFemaleTutorialT5, 0.0125
+		zombieFemaleTutorialT6, 0.0125
+		zombieFemaleTutorialT7, 0.0125
+		zombieFemaleTutorialT22, 0.0125
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add" >
-		npcBakerEmptyHand, 0.0125 
-		npcBakerClub, 0.0125 
+		npcBakerEmptyHand, 0.01 
+		npcBakerClub, 0.01 
 		npcBakerKnife, 0.0125 
 		npcBakerBat, 0.0125 
 		npcBakerMachete, 0.0125 
@@ -40,8 +48,8 @@
 		npcBakerHRifle, 0.0125 
 		npcBakerPistol, 0.0125 
 		npcBakerLBow, 0.0125 
-		npcNurseEmptyHand, 0.0125 
-		npcNurseClub, 0.0125 
+		npcNurseEmptyHand, 0.01 
+		npcNurseClub, 0.01 
 		npcNurseKnife, 0.0125 
 		npcNursePistol, 0.0125 
 		npcNurseLBow, 0.0125 

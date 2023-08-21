@@ -31,6 +31,10 @@
 	<item name="keystoneBlock" count="1"/>
 	<item name="startershovelLL" count="1"/>
 	<item name="starteraxeLL" count="1"/>
+	<item name="progressnoteLL" count="1"/>
+	<item name="desertnoteLL" count="1"/>
+	<item name="snownoteLL" count="1"/>
+	<item name="wastelandnoteLL" count="1"/>
 </lootgroup>
 <lootcontainer id="798" name="endzStarterCrateLoot" count="1" size="8,9" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
 	<item group="endzStarterCrateContents"/>
@@ -44,6 +48,7 @@
 <append xpath="//lootgroup[@name='groupJunk02']">
 	<item name="resourceForgedBrassLL" loot_prob_template="medLow"/>
 	<item name="resourceforgedvibeLL" loot_prob_template="low"/>
+	<item name="endzxpcardLL" count="1,2" loot_prob_template="low"/>
 </append>
 				
 <!--SOLAR POWER-->
@@ -97,6 +102,7 @@
 <!-- Knap Sack -->
 <lootcontainer id="998" name="KnapSack" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 	<item name="EZcurrencyLL" count="500,1000" prob="0.2"/>
+	<item name="endzxpcardLL" count="1" prob="0.2"/>
 </lootcontainer>
 </append>
 
@@ -141,8 +147,31 @@
 <set xpath="//item[@name='modDyePurple']/@name">modDyepurpleLL</set>
 <set xpath="//item[@name='modDyeYellow']/@name">modDyeyellowLL</set>
 
+<!--ADDS ENDZ GAINS CARD TO BOOK GROUPS-->
+<insertAfter xpath="//lootgroup[@name='perkBooks']/item[@name='bookTechJunkie7Hydraulics']">
+	<item name="endzxpcardLL" count="2,3"/>
+</insertAfter>
+
+<insertAfter xpath="//lootgroup[@name='skillMagazines']/item[@name='trapsSkillMagazine']">
+	<item name="endzxpcardLL" count="2,3"/>
+</insertAfter>
+
+<insertAfter xpath="//lootgroup[@name='schematicsModsAndGeneralT0']/item[@name='modShotgunSawedOffBarrelSchematic']">
+	<item name="endzxpcardLL" count="2,3"/>
+</insertAfter>
+
+<insertAfter xpath="//lootgroup[@name='schematicsModsAndGeneralT1']/item[@name='modMeleeSerratedBladeSchematic']">
+	<item name="endzxpcardLL" count="2,3"/>
+</insertAfter>
+
+<insertAfter xpath="//lootgroup[@name='schematicsModsAndGeneralT2']/item[@name='modRoboticDroneMoraleBoosterModSchematic']">
+	<item name="endzxpcardLL" count="2,3"/>
+</insertAfter>
+
+<append xpath="/lootcontainers" >
+	<lootcontainer name="BeehiveLoot" size="5,2" count="10" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" destroy_on_close="true" loot_quality_template="qualBaseTemplate">
+		<item name="foodHoney"/>
+	</lootcontainer>
+</append>
 
 </configs>
-
-
-

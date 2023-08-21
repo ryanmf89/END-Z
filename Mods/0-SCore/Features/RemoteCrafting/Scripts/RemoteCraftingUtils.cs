@@ -261,7 +261,7 @@ namespace SCore.Features.RemoteCrafting.Scripts
             foreach (var tileEntity in tileEntities)
             {
                 if (tileEntity is not TileEntityLootContainer lootTileEntity) continue;
-                
+
                 // If the container is open, don't include it.
                 if (lootTileEntity.IsUserAccessing()) continue;
 
@@ -280,51 +280,55 @@ namespace SCore.Features.RemoteCrafting.Scripts
             return items;
         }
 
+
         public static void ConsumeItem(IEnumerable<ItemStack> itemStacks, EntityPlayerLocal localPlayer, int multiplier)
         {
             var tileEntities = GetTileEntities(localPlayer);
-            foreach (var itemStack in itemStacks)
+            var enumerable = itemStacks as ItemStack[] ?? itemStacks.ToArray();
+            for (var i = 0; i < enumerable.Count(); i++)
             {
-                // counter quantity needed from item
-                var q = itemStack.count * multiplier;
-                //check player inventory for materials and reduce counter
-                var slots = localPlayer.bag.GetSlots();
-                q -= slots
-                    .Where(x => x.itemValue.ItemClass == itemStack.itemValue.ItemClass)
-                    .Sum(y => y.count);
-
+                // Grab from the backpack first.
+                 var num = enumerable[i].count * multiplier;
+                num -= localPlayer.bag.DecItem(enumerable[i].itemValue, num, true);
+                if (num > 0)
+                {
+                    // Check tool belt
+                    num -= localPlayer.inventory.DecItem(enumerable[i].itemValue, num, true);
+                }
+                
+                if (num <= 0) continue;
 
                 // check storage boxes
                 foreach (var tileEntity in tileEntities)
                 {
-                    if (q <= 0) break;
+                    if (num <= 0) break;
                     if (tileEntity is not TileEntityLootContainer lootTileEntity) continue;
 
                     // If someone is using the tool account, skip it.
                     if (lootTileEntity.IsUserAccessing()) continue;
 
                     // If there's no items in this container, skip.
-                    if (!lootTileEntity.HasItem(itemStack.itemValue)) continue;
+                    if (!lootTileEntity.HasItem(enumerable[i].itemValue)) continue;
 
                     for (var y = 0; y < lootTileEntity.items.Length; y++)
                     {
                         var item = lootTileEntity.items[y];
                         if (item.IsEmpty()) continue;
-                        if (item.itemValue.ItemClass != itemStack.itemValue.ItemClass) continue;
-                        
+                        if (item.itemValue.ItemClass != enumerable[i].itemValue.ItemClass) continue;
+
                         // If we can completely satisfy the result, let's do that.
-                        if (item.count >= q)
+                        if (item.count >= num)
                         {
-                            item.count -= q;
-                            q = 0;
+                            item.count -= num;
+                            num = 0;
                         }
                         else
                         {
                             // Otherwise, let's just count down until we meet the requirement.
-                            while (q >= 0)
+                            while (num >= 0)
                             {
                                 item.count--;
-                                q--;
+                                num--;
                                 if (item.count <= 0)
                                     break;
                             }
@@ -334,13 +338,18 @@ namespace SCore.Features.RemoteCrafting.Scripts
                         if (item.count < 1)
                             lootTileEntity.UpdateSlot(y, ItemStack.Empty.Clone());
                         else
+                        {
                             lootTileEntity.UpdateSlot(y, item);
-                        lootTileEntity.SetModified();
+                        }
                     }
+                    lootTileEntity.SetModified();
+    
                 }
+                
             }
         }
-        
+
+
         public static bool IsEnemyNearby(EntityAlive self, float distance = 20f)
         {
             var nearbyEntities = new List<Entity>();
@@ -361,6 +370,7 @@ namespace SCore.Features.RemoteCrafting.Scripts
                 // Otherwise they are an enemy.
                 return true;
             }
+
             Debug.LogWarning("no enemy");
             return false;
         }

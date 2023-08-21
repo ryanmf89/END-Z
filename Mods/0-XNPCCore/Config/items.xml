@@ -408,7 +408,7 @@
 			<property name="Extends" value="meleeHandNPCMaster"/>
 			<property name="RightHandJointName" value="Machete" />
 			<property name="Canhold" value="true"/> 
-			<property name="HoldType" value="47"/>
+			<property name="HoldType" value="32"/> <!-- 47 is default with.1 delay, but 32 has a .2 delay and looks better -->
 			<property name="Tags" value="machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Knives/machetePrefab.prefab"/>
@@ -501,7 +501,7 @@
 		</item>		
 
 		<item name="meleeNPCClubWood"> 
-			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="Extends" value="meleeHandNPCMaster" />
 			<property name="RightHandJointName" value="Club" />
 			<property name="Canhold" value="true"/> 
 			<property name="HoldType" value="36"/>
@@ -551,7 +551,7 @@
 			</property> 
 				<effect_group name="meleeWpnClubT0WoodenClub">
 					<passive_effect name="EntityDamage" operation="base_add" value="10" tags="perkPummelPete"/> <!-- base_add adds to the indexX damage property, base_set replaces it  -->
-					<passive_effect name="BlockDamage" operation="base_add" value="10.6" tags="perkPummelPete"/>
+					<passive_effect name="BlockDamage" operation="base_add" value="50" tags="perkPummelPete"/>
 					<passive_effect name="AttacksPerMinute" operation="base_set" value="55" tags="perkPummelPete,perkFlurryOfBlows"/>
 					<passive_effect name="StaminaLoss" operation="base_set" value="17.4" tags="primary"/>
 					<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" tags="perkPummelPete"/>
@@ -725,7 +725,7 @@
 				<property name="Sound_start" value="swoosh"/>
 				<property name="Block_range" value="1.65"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="50"/>
+				<property name="DamageBlock" value="100"/>
 				<property class="HitSounds">
 					<property name="Override0" value="organic" param1="metalstaborganic"/>
 				</property>
@@ -738,7 +738,7 @@
 				<property name="Sound_start" value="swoosh"/>
 				<property name="Block_range" value="1.65"/>
 				<property name="DamageEntity" value="25"/>
-				<property name="DamageBlock" value="50"/>
+				<property name="DamageBlock" value="100"/>
 				<property class="HitSounds">
 					<property name="Override0" value="organic" param1="metalstaborganic"/>
 				</property>
@@ -924,7 +924,7 @@
 				<property name="Sound_start" value="swoosh"/>
 				<property name="Block_range" value="1.65"/>
 				<property name="DamageEntity" value="15"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="15"/>
 				<property class="HitSounds">
 					<property name="Override0" value="organic" param1="woodhitorganic"/>
 				</property>
@@ -947,7 +947,7 @@
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 				<property name="DamageEntity" value="10"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="3"/> 
+				<property name="DamageBlock" value="10"/> 
 				<!--<requirement name="CVarCompare" cvar="_underwater" operation="LTE" value="0"/> -->
 			</property>
 			<effect_group name="gunHandgunT3SMG5">
@@ -1039,7 +1039,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="15"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -1063,7 +1063,7 @@
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 				<property name="DamageEntity" value="12"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="3"/> 
+				<property name="DamageBlock" value="12"/> 
 			</property>
 			<effect_group name="gunHandgunT0PipePistol">
 				<passive_effect name="MaxRange" operation="base_set" value="15" tags="perkGunslinger,9mmGun"/>
@@ -1121,6 +1121,124 @@
 			</effect_group>
 		</item>				
 		
+		<item name="gunNPCPipePistol2">
+			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="RightHandJointName" value="PipePistol" />
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty4,gun,shortRange,revolver,barrelAttachments,sideAttachments,smallTopAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="2"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Candrop" value="false"/>	
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeRevolver/pipeRevolverPrefab.prefab"/>
+			<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="TintColor" value="255,255,255"/>
+			<property name="CrosshairOnAim" value="false"/> 
+			<property name="CrosshairUpAfterShot" value="false"/> 
+			<property name="Sound_Sight_In" value="smg_sight_in"/>
+			<property name="Sound_Sight_Out" value="smg_sight_out"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="EconomicValue" value="0"/>
+			<property name="ShowQuality" value="false"/>
+			<property name="AutoReload" value="true"/>
+			<property name="CustomIcon" value="gunPistol"/>
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>
+			<property class="Action0">
+				<property name="Class" value="Ranged" />
+				<property name="Range" value="15" />
+				<property name="Magazine_items" value="ammoNPC9mmBulletBall" />
+				<property name="Delay" value="0" />
+				<property name="Auto_fire" value="true" />
+				<property name="Reload_time" value="10" />
+				<property name="Infinite_ammo" value="true" />
+				<property name="Sound_start" value="pipe_pistol_fire"/>
+				<property name="Sound_loop" value="pipe_pistol_fire"/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value="pistol_reload"/>
+				<property name="AutoReload" value="true"/>
+				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
+				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<property name="DamageEntity" value="12"/> <!--  This is base damage per ray that hits) -->
+				<property name="DamageBlock" value="12"/> 
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Ranged" />
+				<property name="Range" value="15" />
+				<property name="Magazine_items" value="ammoNPC9mmBulletBall" />
+				<property name="Delay" value="0" />
+				<property name="Auto_fire" value="true" />
+				<property name="Reload_time" value="10" />
+				<property name="Infinite_ammo" value="true" />
+				<property name="Sound_start" value="pipe_pistol_fire"/>
+				<property name="Sound_loop" value="pipe_pistol_fire"/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value="pistol_reload"/>
+				<property name="AutoReload" value="true"/>
+				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
+				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<property name="DamageEntity" value="12"/> <!--  This is base damage per ray that hits) -->
+				<property name="DamageBlock" value="12"/> 
+			</property>
+			<effect_group name="gunHandgunT0PipePistol">
+				<passive_effect name="MaxRange" operation="base_set" value="15" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="10" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkGunslinger,9mmGun"/> <!-- random effective rng -->
+
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="126" tags="perkGunslinger"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkGunslinger"/>
+
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+				<passive_effect name="BlockDamage" operation="base_add" value="-2.1" tags="perkGunslinger"/>  
+
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> <!-- tier bonus -->
+
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkGunslinger"/>
+
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".8" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".9" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.3" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".3" tags="perkGunslinger"/>
+
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.0" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value=".95" tags="perkGunslinger"/> <!-- crosshair reset speed -->
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
+				<passive_effect name="DegradationMax" operation="base_set" value="175,315" tier="1,6" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkGunslinger,9mmGun"/>
+			</effect_group>
+			<effect_group name="WeaponType">
+                <triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="WeaponType" operation="set" value="83"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="WeaponTypeNeedsUpdate" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$Magsize" operation="set" value="6"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$roundsinmag" operation="set" value="6"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$Burstsize" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$burstrate" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffBurst"/>
+			</effect_group>	
+			<effect_group name="Don't Show Arrow and Quiver">
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" parent_transform="Hips" transform_path="Quiver"/>	
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" parent_transform="Hips" transform_path="Arrow"/>	
+			</effect_group>	
+			<effect_group name="Launcher Fix">
+				<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="RocketLUser" /> 
+				<requirement name="HasBuff" target="self" buff="RocketLUser"/>
+			</effect_group>
+		</item>				
+			
 		<item name="gunNPCPipeShotgun">
 			<property name="Extends" value="gunNPCSMG5"/> 
 			<property name="RightHandJointName" value="PipeSG" />
@@ -1148,7 +1266,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -1174,7 +1292,7 @@
 				<property name="Particles_muzzle_smoke_fpv" value="gunfire_smoke_fpv"/>
 				<property name="Buff" value="buffInjuryBleedingZombie"/>
 				<property name="DamageEntity" value="10"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="3"/> 				
+				<property name="DamageBlock" value="10"/> 				
 			</property>
 			<effect_group name="gunShotgunT0PipeShotgun">
 				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
@@ -1266,7 +1384,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -1289,7 +1407,7 @@
 				<property name="Sound_reload" value="hunting_rifle_reload"/>
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
 				<property name="DamageEntity" value="32"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="3"/> 				
+				<property name="DamageBlock" value="32"/> 				
 			</property>
 			<effect_group name="gunRifleT0PipeRifle">
 				<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkDeadEye"/>
@@ -1360,7 +1478,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -1384,7 +1502,7 @@
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 				<property name="DamageEntity" value="6"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="3"/> 				
+				<property name="DamageBlock" value="6"/> 				
 			</property>
 			
 			<effect_group name="gunMGT0PipeMachineGun">
@@ -1476,7 +1594,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -1501,7 +1619,7 @@
 				<property name="Particles_muzzle_smoke" value="gunfire_smoke"/>
 				<property name="Buff" value="buffInjuryBleedingZombie"/>
 				<property name="DamageEntity" value="12"/> <!-- Per round that hits-->
-				<property name="DamageBlock" value="1"/>
+				<property name="DamageBlock" value="12"/>
 			</property>
 			<effect_group name="gunMGT3M60">
 				<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkMachineGunner"/>
@@ -1592,7 +1710,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="15"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -1618,7 +1736,7 @@
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 				<property name="DamageEntity" value="12"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="5"/> 				
+				<property name="DamageBlock" value="12"/> 				
 			</property>
 				
 			<effect_group name="gunHandgunT1Pistol">
@@ -1853,7 +1971,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="15"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -1876,7 +1994,7 @@
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 				<property name="DamageEntity" value="30"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="3"/> 				
+				<property name="DamageBlock" value="30"/> 				
 			</property>
 			<effect_group name="gunHandgunT3DesertVulture">
 				<passive_effect name="MaxRange" operation="base_set" value="15" tags="perkGunslinger"/>
@@ -1953,7 +2071,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -1977,7 +2095,7 @@
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 				<property name="DamageEntity" value="13"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="3"/> 				
+				<property name="DamageBlock" value="13"/> 				
 			</property>
 			<effect_group name="gunMGT1AK47">
 				<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkMachineGunner"/>
@@ -2056,7 +2174,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -2078,7 +2196,7 @@
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 				<property name="DamageEntity" value="13"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="3"/> 				
+				<property name="DamageBlock" value="13"/> 				
 			</property>
 			<effect_group name="gunMGT2TacticalAR">
 				<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkMachineGunner"/>
@@ -2169,7 +2287,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -2192,7 +2310,7 @@
 				<property name="Sound_reload" value="hunting_rifle_reload"/>
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
 				<property name="DamageEntity" value="35"/> 
-				<property name="DamageBlock" value="3"/> 				
+				<property name="DamageBlock" value="35"/> 				
 			</property>
 			<effect_group name="gunRifleT1HuntingRifle">
 				<passive_effect name="MaxRange" operation="base_set" value="35" tags="perkDeadEye"/>
@@ -2281,7 +2399,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -2304,7 +2422,7 @@
 				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
 				<property name="Particles_muzzle_fire_fpv" value="gunfire_magnum_fpv"/>
 				<property name="DamageEntity" value="35"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="3"/> 				
+				<property name="DamageBlock" value="35"/> 				
 			</property>
 			<effect_group name="gunRifleT3SniperRifle">
 				<passive_effect name="MaxRange" operation="base_set" value="35" tags="perkDeadEye"/>
@@ -2387,7 +2505,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="15"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -2412,7 +2530,7 @@
 				<property name="Sound_cancel" value="bow_fire_cancel"/>
 				<property name="SoundDestroy" value="wooddestroy1"/>
 				<property name="DamageEntity" value="30"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="3"/> 				
+				<property name="DamageBlock" value="30"/> 				
 			</property>
 			<effect_group name="gunBowT3CompoundBow">
 				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
@@ -2502,7 +2620,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="15"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -2527,7 +2645,7 @@
 				<property name="Sound_cancel" value="bow_fire_cancel"/>	
 				<property name="SoundDestroy" value="wooddestroy1"/>
 				<property name="DamageEntity" value="35"/> 
-				<property name="DamageBlock" value="3"/> 				
+				<property name="DamageBlock" value="35"/> 				
 			</property> 
 			<!-- Testing launcher class  -->
 			<!--<property class="Action1"> 
@@ -2639,7 +2757,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -2665,7 +2783,7 @@
 				<property name="Particles_muzzle_smoke_fpv" value="gunfire_smoke_fpv"/>
 				<property name="Buff" value="buffInjuryBleedingZombie"/>
 				<property name="DamageEntity" value="10"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="6"/> 				
+				<property name="DamageBlock" value="10"/> 				
 			</property>
 			<effect_group name="gunShotgunT2PumpShotgun">
 
@@ -2758,7 +2876,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="20"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 
@@ -2783,7 +2901,7 @@
 				<property name="Particles_muzzle_smoke" value="gunfire_smoke"/>
 				<property name="Buff" value="buffInjuryBleedingZombie"/> 
 				<property name="DamageEntity" value="10"/> <!--  This is base damage per ray that hits) -->
-				<property name="DamageBlock" value="5"/> 				
+				<property name="DamageBlock" value="10"/> 				
 			</property>
 			<effect_group name="gunShotgunT3AutoShotgun">
 				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
@@ -2875,7 +2993,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="25"/>
-				<property name="DamageBlock" value="10"/>
+				<property name="DamageBlock" value="25"/>
 				<property name="Range" value="1.65"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Delay" value=".8" /> 

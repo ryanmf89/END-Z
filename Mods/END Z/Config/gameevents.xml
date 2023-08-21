@@ -204,4 +204,17 @@
 				
 </action_sequence>
 </append>
+
+<!--GAMEEVENT TO GIVE SKILL POINTS FOR THE CARD-->
+<append xpath="/gameevents">
+<action_sequence name="endzxpcardgivepointsLL">
+
+<action class="AddSkillPoints">
+	<property name="skill_points" value="1" />
+</action>
+</action_sequence>
+</append>
+
+
+
 </configs>

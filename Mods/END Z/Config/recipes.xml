@@ -1,5 +1,9 @@
 <configs>
-	
+
+<!--removes dukes and old cash from the loot and inputs new currency-->
+<set xpath="//ingredient[@name='casinoCoin']/@name">EZcurrencyLL</set>
+
+
 <append xpath="/recipes">
 <!-- NEW ACID RECIPE -->
 <recipe name="resourceAcid" count="2" craft_area="chemistryStation" craft_time="120">
@@ -71,6 +75,14 @@
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="foodRawMeat" count="5"/>
 </recipe>
+
+<recipe name="foodcookedgroundbeefLL" count="1" craft_time="30" craft_area="campfire" craft_tool="toolCookingGrill">
+	<ingredient name="foodgroundbeefLL" count="5"/>
+</recipe>
+
+<recipe name="foodcheeseLL" count="1" craft_time="10" craft_area="campfire" craft_tool="toolCookingPot">
+	<ingredient name="drinkJarmilkLL" count="5"/>
+</recipe>
 	
 <!--BETTER COOKING-->
 <set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']/@count">1</set>
@@ -85,14 +97,14 @@
 <set xpath="/recipes/recipe[@name='trapSpikesIronDmg0']/ingredient[@name='resourceScrapIron']/@count">40</set>
 
 <!--NEW HOT COALS RECIPE-->
-<recipe name="resourceHotCoalsLL" count="10" material_based="true" craft_area="campfire" craft_time="2">
-	<ingredient name="resourceWood" count="5"/>
+<recipe name="resourceHotCoalsLL" count="1" material_based="true" craft_area="campfire" craft_time="1">
+	<ingredient name="resourceWood" count="1"/>
 </recipe>
 
 <!--NEW MOONROCK INGREDIENTS AND RECIPES-->
-<recipe name="resourceMoonRocksLL" count="10" craft_time="5">
-	<ingredient name="resourceCobblestones" count="5"/>
-	<ingredient name="resourceHotCoalsLL" count="5"/>
+<recipe name="resourceMoonRocksLL" count="1" craft_time="1">
+	<ingredient name="resourceCobblestones" count="1"/>
+	<ingredient name="resourceHotCoalsLL" count="1"/>
 </recipe>
 
 <recipe name="resourcemoonmixLL" count="1" craft_area="cementMixer" craft_time="2" tags="cementMixerCrafting">
@@ -101,7 +113,7 @@
 </recipe>
 
 <!--NEW BRASS INGREDIENTS AND RECIPES-->
-<recipe name="resourceForgedBrassLL" count="2" material_based="true" craft_area="forge" craft_tool="toolAnvil" craft_time="08">
+<recipe name="resourceForgedBrassLL" count="1" material_based="true" craft_area="forge" craft_tool="toolAnvil" craft_time="08">
 	<ingredient name="resourceScrapBrass" count="5"/>
 	<ingredient name="resourceClayLump" count="2"/>
 </recipe>
@@ -112,7 +124,7 @@
 </recipe>
 	
 <!--NEW VIBRANIUM INGREDIENTS RECIPES -->
-<recipe name="resourceforgedvibeLL" count="2" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" craft_time="20">
+<recipe name="resourceforgedvibeLL" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" craft_time="20">
 	<ingredient name="resourceScrapIron" count="45"/>
 	<ingredient name="resourceClayLump" count="20"/>
 </recipe>
@@ -164,55 +176,44 @@
 	<ingredient name="survivalBerriesLL" count="5"/>
 </recipe>
 
-<recipe name="trailmixLL" count="2" craft_time="4">
+<recipe name="trailmixLL" count="1" craft_time="4">
 	<ingredient name="handfulOfNutsLL" count="4"/>
-	<ingredient name="survivalBerriesLL" count="4"/>
+	<ingredient name="handfulOfBerriesLL" count="4"/>
 </recipe>
 </append>
 
 <append xpath="/recipes">
-<recipe name="medicalhoneyBandageLL" count="2" tags="medical">
+<recipe name="medicalhoneyBandageLL" count="1" tags="medical">
 	<ingredient name="medicalAloeCream" count="1"/>
 	<ingredient name="foodHoney" count="1"/>
 	<ingredient name="medicalBandage" count="1"/>
 </recipe>
 	
-<!--RAD GEAR-->
-<recipe name="modRadiationReadyhatLL" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting">
-	<ingredient name="resourceHazmatFiberLL" count="8"/>
-	<ingredient name="resourceLeather" count="15"/>
-	<ingredient name="resourceAcid" count="3"/>
+<!--DESERT BIOME SAFETY MOD-->
+<recipe name="modbuffdesertheatLL" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourcedesertLL" count="150"/>
+	<ingredient name="resourceLeather" count="25"/>
+	<ingredient name="resourceAcid" count="4"/>
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
-	
-<recipe name="modRadiationReadychestLL" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting">
-	<ingredient name="resourceHazmatFiberLL" count="13"/>
-	<ingredient name="resourceLeather" count="15"/>
-	<ingredient name="resourceAcid" count="3"/>
-	<ingredient name="resourceSewingKit" count="2"/>
+
+<!--SNOW BIOME SAFETY MOD-->
+<recipe name="modbufffrozensnowLL" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourcesnowLL" count="100"/>
+	<ingredient name="resourceLeather" count="25"/>
+	<ingredient name="resourceAcid" count="8"/>
+	<ingredient name="resourceSewingKit" count="4"/>
 </recipe>
-	
-<recipe name="modRadiationReadyglovesLL" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting">
-	<ingredient name="resourceHazmatFiberLL" count="9"/>
-	<ingredient name="resourceLeather" count="15"/>
-	<ingredient name="resourceAcid" count="3"/>
-	<ingredient name="resourceSewingKit" count="2"/>
+
+<!--WASTELAND BIOME SAFETY MOD-->
+<recipe name="modbuffradiationwasteLL" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceHazmatFiberLL" count="50"/>
+	<ingredient name="resourceLeather" count="25"/>
+	<ingredient name="resourceAcid" count="12"/>
+	<ingredient name="resourceSewingKit" count="6"/>
 </recipe>
-	
-<recipe name="modRadiationReadylegsLL" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting">
-	<ingredient name="resourceHazmatFiberLL" count="13"/>
-	<ingredient name="resourceLeather" count="15"/>
-	<ingredient name="resourceAcid" count="3"/>
-	<ingredient name="resourceSewingKit" count="2"/>
-</recipe>
-	
-<recipe name="modRadiationReadybootsLL" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting">
-	<ingredient name="resourceHazmatFiberLL" count="11"/>
-	<ingredient name="resourceLeather" count="15"/>
-	<ingredient name="resourceAcid" count="3"/>
-	<ingredient name="resourceSewingKit" count="2"/>
-</recipe>
-	
+
+<!--RESOURCE TO CRAFT FOR THE WASTELAND MOD-->	
 <recipe name="resourceHazmatFiberLL" count="1" craft_time="15" craft_area="chemistryStation" tags="wasteland,fiberResource">
 	<ingredient name="resourceradiofiberLL" count="5"/>
 </recipe>
@@ -237,6 +238,10 @@
 <recipe name="resourceScrapBrass" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="resourceScrapIron" count="1" tooltip="ttScrapMetalIron" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="resourceScrapLead" count="1" tooltip="ttScrapMetalLead" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+</append>
+
+<append xpath="/recipes">
+<recipe name="resourceMoonRocksLL" count="1" tooltip="ttresourceMoonRocksLL" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 </append>
 
 <!--ADDS SAND BACK TO CEMENT MIXER TO BE CRAFTABLE-->
@@ -371,7 +376,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceBuckshot" count="5" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+<recipe name="resourceBuckshot" count="2" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapLead" count="3"/>
 	<ingredient name="resourceClayLump" count="2"/>
 	<effect_group>
@@ -379,7 +384,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceBulletCasing" count="5" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+<recipe name="resourceBulletCasing" count="2" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapBrass" count="5"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -387,7 +392,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceBulletTip" count="5" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+<recipe name="resourceBulletTip" count="2" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapLead" count="2"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -395,7 +400,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceArrowHeadIron" count="5" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+<recipe name="resourceArrowHeadIron" count="2" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapIron" count="2"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -403,7 +408,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceArrowHeadSteelAP" count="5" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" tags="perkAdvancedEngineering">
+<recipe name="resourceArrowHeadSteelAP" count="2" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapIron" count="10"/>
 	<ingredient name="resourceClayLump" count="10"/>
 	<effect_group>
@@ -506,14 +511,14 @@
 </recipe>
 
 <recipe name="resourceGunPowder" count="5" tags="chemStationCrafting">
-	<ingredient name="resourceCoal" count="2"/>
-	<ingredient name="resourcePotassiumNitratePowder" count="2"/>
+	<ingredient name="resourceCoal" count="4"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="4"/>
 </recipe>
 </append>
 
 <!--STEEL AMMO-->
 <append xpath="/recipes">
-<recipe name="resourceBulletCasingSteel" count="5" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+<recipe name="resourceBulletCasingSteel" count="2" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapIron" count="10"/>
 	<ingredient name="resourceScrapBrass" count="10"/>
 	<ingredient name="resourceClayLump" count="10"/>
@@ -522,19 +527,19 @@
 </effect_group>
 </recipe> 
 		
-<recipe name="ammo9mmBulletSteel" count="2" craft_area="workbench" tags="learnable,ammo9mmBulletSteel,workbenchCrafting">
+<recipe name="ammo9mmBulletSteel" count="1" craft_area="workbench" tags="learnable,ammo9mmBulletSteel,workbenchCrafting">
 	<ingredient name="resourceBulletTip" count="2"/>
 	<ingredient name="resourceGunPowder" count="6"/>
 	<ingredient name="resourceBulletCasingSteel" count="1"/>
 </recipe>
 
-<recipe name="ammo44MagnumBulletSteel" count="2" craft_area="workbench" tags="learnable,ammo44MagnumBulletSteel,workbenchCrafting">
+<recipe name="ammo44MagnumBulletSteel" count="1" craft_area="workbench" tags="learnable,ammo44MagnumBulletSteel,workbenchCrafting">
 	<ingredient name="resourceBulletTip" count="2"/>
 	<ingredient name="resourceGunPowder" count="6"/>
 	<ingredient name="resourceBulletCasingSteel" count="1"/>
 </recipe>
 		
-<recipe name="ammo762mmBulletFMJSteel" count="2" craft_area="workbench" tags="learnable,ammo762mmBulletFMJSteel,workbenchCrafting">
+<recipe name="ammo762mmBulletFMJSteel" count="1" craft_area="workbench" tags="learnable,ammo762mmBulletFMJSteel,workbenchCrafting">
 	<ingredient name="resourceBulletTip" count="2"/>
 	<ingredient name="resourceGunPowder" count="6"/>
 	<ingredient name="resourceBulletCasingSteel" count="1"/>
@@ -925,52 +930,204 @@
 
 <!--make paint craftable in the chemstation-->
 <append xpath="/recipes">
-<recipe name="modDyeredLL" count="1" craft_area="chemistryStation" craft_time="30">
+<recipe name="modDyeredLL" count="1" craft_area="chemistryStation" craft_time="30" tags="chemStationCrafting">
 	<ingredient name="resourceCropChrysanthemumPlant" count="10"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="8"/>
 </recipe>
 
-<recipe name="modDyelimegreenLL" count="1" craft_area="chemistryStation" craft_time="30">
+<recipe name="modDyelimegreenLL" count="1" craft_area="chemistryStation" craft_time="30" tags="chemStationCrafting">
 	<ingredient name="foodCropYuccaFruit" count="10"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="8"/>
 </recipe>
 
-<recipe name="modDyeblueLL" count="1" craft_area="chemistryStation" craft_time="30">
+<recipe name="modDyeblueLL" count="1" craft_area="chemistryStation" craft_time="30" tags="chemStationCrafting">
 	<ingredient name="foodCropBlueberries" count="5"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="8"/>
 </recipe>
 
-<recipe name="modDyeorangeLL" count="1" craft_area="chemistryStation"  craft_time="30">
+<recipe name="modDyeorangeLL" count="1" craft_area="chemistryStation"  craft_time="30" tags="chemStationCrafting">
 	<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
 	<ingredient name="resourceCropGoldenrodPlant" count="5"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="8"/>
 </recipe>
 
-<recipe name="modDyeblackLL" count="1" craft_area="chemistryStation" craft_time="30">
+<recipe name="modDyeblackLL" count="1" craft_area="chemistryStation" craft_time="30" tags="chemStationCrafting">
 	<ingredient name="resourceCoal" count="10"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="8"/>
 </recipe>
 
-<recipe name="modDyepinkLL" count="1" craft_area="chemistryStation" craft_time="30">
+<recipe name="modDyepinkLL" count="1" craft_area="chemistryStation" craft_time="30" tags="chemStationCrafting">
 	<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
 	<ingredient name="resourceSnowBall" count="5"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="8"/>
 </recipe>
 
-<recipe name="modDyepurpleLL" count="1" craft_area="chemistryStation" craft_time="30">
+<recipe name="modDyepurpleLL" count="1" craft_area="chemistryStation" craft_time="30" tags="chemStationCrafting">
 	<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
 	<ingredient name="foodCropBlueberries" count="5"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="8"/>
 </recipe>
 
-<recipe name="modDyeyellowLL" count="1" craft_area="chemistryStation" craft_time="30">
+<recipe name="modDyeyellowLL" count="1" craft_area="chemistryStation" craft_time="30" tags="chemStationCrafting">
 	<ingredient name="resourceCropGoldenrodPlant" count="10"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="8"/>
 </recipe>
 </append>
 
+<append xpath="/recipes">
+<recipe name="WarthogVehiclePlaceable" count="1" craft_time="210" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="resourceforgedvibeLL" count="100"/>
+	<ingredient name="resourceForgedSteel" count="250"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
 
+<append xpath="/recipes">
+<recipe name="EndZbuggyPlaceable" count="1" craft_time="210" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="resourceforgedvibeLL" count="75"/>
+	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
 
+<append xpath="/recipes">
+<recipe name="EndZdevillePlaceable" count="1" craft_time="210" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="resourceForgedSteel" count="50"/>
+	<ingredient name="resourceForgedIron" count="200"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="2"/>
+</recipe>
+</append>
+
+<append xpath="/recipes">
+<recipe name="flagBlockVariantHelper" count="1">
+	<ingredient name="resourceCloth" count="44"/>
+</recipe>	
+		
+<recipe name="JailVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceForgedSteel" count="20"/>
+	<ingredient name="resourceMechanicalParts" count="10"/>
+</recipe>
+		
+<recipe name="barbedWireSpindleVariantHelper" count="1">
+	<ingredient name="resourceScrapIron" count="25"/>
+</recipe>
+		
+<recipe name="HoistVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceForgedIron" count="1"/>
+</recipe>
+		
+<recipe name="barrierMilitary" count="1"  craft_time="15" craft_area="cementMixer" tags="cementMixerCrafting">
+	<ingredient name="resourceScrapIron" count="4"/>
+	<ingredient name="resourceCloth" count="2"/>
+	<ingredient name="resourceClayLump" count="15"/>			
+</recipe>	
+
+<recipe name="barrierMilitary" count="1"  craft_time="15" craft_area="cementMixer" tags="cementMixerCrafting">
+	<ingredient name="resourceScrapIron" count="4"/>
+	<ingredient name="resourceCloth" count="2"/>
+	<ingredient name="resourceCrushedSand" count="15"/>			
+</recipe>
+</append>
+
+<append xpath="/recipes">	
+	<recipe name="BeehiveEmptyLL">
+		<ingredient name="resourceWood" count="250"/>
+		<ingredient name="resourceNail" count="25"/>
+		<ingredient name="resourceCropGoldenrodPlant" count="40"/>
+	</recipe>
+</append>
+
+<!--CALL SCREAMER BLOCK-->
+<append xpath="/recipes">	
+<recipe name="callscreamerblockLL" count="1" craft_time="300" craft_area="workbench">
+	<ingredient name="resourceScrapPolymers" count="100"/>
+	<ingredient name="foodRottingFlesh" count="100"/>
+	<ingredient name="resourceElectricParts" count="10"/>
+	<ingredient name="medicalBloodBag" count="10"/>
+</recipe>	
+</append>
+
+<!--MAKE CANDY CRAFTABLE-->
+<append xpath="/recipes">
+<recipe name="drugAtomJunkies" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="resourceAnimalFat" count="4"/>
+	<ingredient name="foodCropPumpkin" count="5"/>
+	<ingredient name="resourceBone" count="5"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+</recipe>
+<recipe name="drugCovertCats" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="foodCropMushrooms" count="1"/>
+	<ingredient name="foodCropPotato" count="5"/>
+	<ingredient name="foodRawMeat" count="5"/>
+	<ingredient name="foodCropBlueberries" count="5"/>
+</recipe>
+<recipe name="drugEyeKandy" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="foodPumpkinCheesecake" count="1"/>
+	<ingredient name="foodCanSham" count="1"/>
+	<ingredient name="foodCropMushrooms" count="5"/>
+	<ingredient name="resourceCropHopsFlower" count="5"/>
+</recipe>
+<recipe name="drugHackers" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="foodCanTuna" count="1"/>
+	<ingredient name="resourceCropHopsFlower" count="5"/>
+	<ingredient name="foodRottingFlesh" count="5"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+</recipe>
+<recipe name="drugHealthBar" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="drinkJarPureMineralWater" count="1"/>
+	<ingredient name="foodCropBlueberries" count="5"/>
+	<ingredient name="foodCropYuccaFruit" count="5"/>
+	<ingredient name="drinkJarRedTea" count="1"/>
+</recipe>
+<recipe name="drugJailBreakers" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="foodShamSandwich" count="1"/>
+	<ingredient name="drinkJarBeer" count="1"/>
+	<ingredient name="foodRottingFlesh" count="5"/>
+	<ingredient name="foodCropMushrooms" count="5"/>
+</recipe>
+<recipe name="drugNerdTats" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="foodCropPotato" count="5"/>
+	<ingredient name="foodCornMeal" count="5"/>
+	<ingredient name="resourceAnimalFat" count="1"/>
+	<ingredient name="resourceCropHopsFlower" count="5"/>
+</recipe>
+<recipe name="drugOhShitzDrops" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="foodCropBlueberries" count="5"/>
+	<ingredient name="foodCropPumpkin" count="5"/>
+	<ingredient name="foodRawMeat" count="5"/>
+	<ingredient name="drinkJarBeer" count="1"/>
+</recipe>
+<recipe name="drugRockBusters" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="drinkJarCoffee" count="1"/>
+	<ingredient name="drinkJarBlackStrapCoffee" count="1"/>
+	<ingredient name="resourceCropCoffeeBeans" count="5"/>
+	<ingredient name="drinkJarBeer" count="1"/>
+</recipe>
+<recipe name="drugSkullCrushers" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="drinkCanMegaCrush" count="1"/>
+	<ingredient name="foodCropBlueberries" count="5"/>
+	<ingredient name="drinkJarBeer" count="1"/>
+	<ingredient name="resourceCropHopsFlower" count="5"/>
+</recipe>
+<recipe name="drugSugarButts" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="foodCropBlueberries" count="5"/>
+	<ingredient name="foodHoney" count="1"/>
+	<ingredient name="foodCropMushrooms" count="5"/>
+	<ingredient name="drinkJarBeer" count="1"/>
+</recipe>
+<recipe name="foodShamSandwich" count="1" craft_time="3" craft_area="chemistryStation" tags="chemStationCrafting">
+	<ingredient name="foodCornMeal" count="5"/>
+	<ingredient name="resourceAnimalFat" count="1"/>
+	<ingredient name="foodRottingFlesh" count="5"/>
+	<ingredient name="foodCanChili" count="1"/>
+</recipe>
+</append>
 
 </configs>
 

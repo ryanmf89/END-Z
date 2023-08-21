@@ -35,6 +35,18 @@
 <!--normal zombie-->
 	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAnormalzombie" add="true"/>
 	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAnormalzombie" add="false"/>
+	
+<!-- Remove buff and start tracking timer -->
+	<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="ZAnormalzombie"/>
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20"/>
+<!-- If crouching, update timer, else reduce timer -->
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="add" value="-1"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20">
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+</triggered_effect>
+<!-- Reset counters -->
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0"/>
 </effect_group>
 </buff>
 		
@@ -210,314 +222,7 @@
 </effect_group>
 </buff>
 </append>
-
-<!--wasteland radiation-->
-<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiation01">
-	<requirement name="NotHasBuff" buff="god"/>
-	<requirement name="NotHasBuff" buff="buffRadSuit"/>
-	<requirement name="InBiome" biome="8"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiation01">
-	<requirement name="!HasBuff" buff="god"/>
-	<requirement name="CVarCompare" cvar="_biomeradiation" operation="GT" value="2.5"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffRadSuit">
-	<requirement name="HasBuff" buff="buffRadSuitMask"/>
-	<requirement name="HasBuff" buff="buffRadSuitChest"/>
-	<requirement name="HasBuff" buff="buffRadSuitGloves"/>
-	<requirement name="HasBuff" buff="buffRadSuitLegs"/>
-	<requirement name="HasBuff" buff="buffRadSuitBoots"/>
-</triggered_effect>
-</append>
-
-<append xpath="/buffs">
-<buff name="buffRadiation01" name_key="buffRadiation01Name" description_key="buffRadiation01Desc" tooltip_key="buffRadiation01Tooltip" icon="ui_game_symbol_radiation" icon_color="255,255,0" icon_blink="true">
-	<damage_type value="radiation"/>
-	<stack_type value="ignore"/>
-	<duration value="0"/>
-	<display_value value="$buffStatusRadiation"/><display_value_key value="{0:0.0}%"/>
-	<update_rate value="3"/>
-<effect_group name="Radiation">
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="15"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="subtract" value="15"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="player#vomit" play_in_head="true">
-	<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="2.5"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffDysenteryMain">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GTE" value="20"/>
-	<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="99.5"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffFatigued">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GTE" value="50"/>
-	<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="0.1"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="buff_bleeding" play_in_head="true">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GTE" value="90"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="StopSound" sound="buff_bleeding" play_in_head="true">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="90"/>
-	<requirement name="NotHasBuff" buff="buffInjuryBleeding"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_bleeding" play_in_head="true"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffInternalBleeding">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GTE" value="100"/>
-</triggered_effect>
-</effect_group>
-<effect_group>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="add" value="1"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0">
-	<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="2"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade=".2" effect_name="Hot">
-	<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="1"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0" fade=".2" effect_name="Hot">
-	<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="0"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
-	<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".01" fade="2"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffStatusRadiation" operation="set" value="0"/>
-	<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
-	<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Blur" intensity="0" fade="0"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRadiation01">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LTE" value="0"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffStatusRadiation" operation="set" value="0.15"/>
-	<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.05" fade="2"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="2"/>
-	<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Blur" intensity="0" fade="2"/>
-	<passive_effect name="HealthMaxBlockage" operation="base_add" value="@$buffStatusRadiation"/>
-	<passive_effect name="StaminaMaxBlockage" operation="base_add" value="@$buffStatusRadiation"/>
-	<passive_effect name="FoodMaxBlockage" operation="base_add" value="@$buffStatusRadiation"/>
-	<passive_effect name="WaterMaxBlockage" operation="base_add" value="@$buffStatusRadiation"/>
-	<passive_effect name="BuffResistance" operation="perc_subtract" value="@$buffStatusRadiationPerc" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
-	<passive_effect name="HealthChangeOT" operation="base_subtract" value="@$buffStatusRadiationPerc">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GTE" value="80"/>
-</passive_effect>
-</effect_group>
-<effect_group>
-<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="subtract" value="randomfloat(.015,.05)">
-	<requirement name="!InBiome" biome="8"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="0"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="add" value="randomfloat(.1,.15)">
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="NotHasBuff" buff="buffRadSuit"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="add" value="@_wetness">
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="NotHasBuff" buff="buffRadSuit"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="add" value="randomfloat(2,7)">
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="CVarCompare" cvar="_underwater" operation="Equals" value="1"/>
-	<requirement name="NotHasBuff" buff="buffRadSuit"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="subtract" value="@$shelteredPerc">
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="0"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="subtract" value="@$shadedPerc">
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="0"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="subtract" value="@_underwater">
-	<requirement name="!InBiome" biome="8"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="0"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="subtract" value="@_wetness">
-	<requirement name="!InBiome" biome="8"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="0"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="add" value=".1">
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="HasBuff" buff="buffLaceration"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="add" value=".05">
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="HasBuff" buff="buffInjuryAbrasion"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="add" value="@_biomeradiation">
-	<requirement name="CVarCompare" cvar="_biomeradiation" operation="GT" value="2.5"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="set" value="0">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="0"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="set" value="100">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="100"/>
-</triggered_effect>
-</effect_group>
-<effect_group>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiationPerc" operation="set" value="@$buffStatusRadiation"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiationPerc" operation="divide" value="100"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$shelteredPerc" operation="set" value="@_sheltered"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$shelteredPerc" operation="divide" value="18"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$shadedPerc" operation="set" value="@_shaded"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$shadedPerc" operation="divide" value="18"/>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$dysenteryCounter" operation="add" value="@$buffStatusRadiationPerc">
-	<requirement name="HasBuff" buff="buffDysenteryMain"/>
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="60"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$lacerationCounter" operation="add" value="@$buffStatusRadiation">
-	<requirement name="HasBuff" buff="buffLaceration"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$bleedCounter" operation="add" value="@$buffStatusRadiation">
-	<requirement name="HasBuff" buff="buffInjuryBleeding"/>
-</triggered_effect>
-</effect_group>
-	<effect_group name="ScreenRadiation">
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.025" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="5"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="10"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.055" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="10"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="20"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Blur" intensity="0.1" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="15"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="25"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.11" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="20"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="30"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.15" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="30"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="40"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Blur" intensity="0.15" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="25"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="45"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.2" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="40"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="50"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.26" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="50"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="60"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Blur" intensity="0.2" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="45"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="60"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.33" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="60"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="80"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Blur" intensity="0.25" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="45"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="75"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.4" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="80"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="90"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.55" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="90"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="99"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Blur" intensity="0.5" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="90"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="99"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.75" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="95"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Blur" intensity="1" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="99"/>
-</triggered_effect>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Radiation" intensity="1" fade="2">
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="99"/>
-</triggered_effect>
-</effect_group>	
-</buff>
-
-<!--RADIATION MODS-->		
-<buff name="buffRadSuitMask" hidden="true">
-	<update_rate value="3"/>
-	<effect_group>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="subtract" value=".03">
-	<requirement name="HasBuff" buff="buffRadiation01"/>
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="0"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-</effect_group>
-</buff>
-
-<buff name="buffRadSuitChest" hidden="true">
-	<update_rate value="3"/>
-	<stack_type value="ignore"/>
-	<effect_group>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="subtract" value=".025">
-	<requirement name="HasBuff" buff="buffRadiation01"/>
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="0"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-</effect_group>
-</buff>
-
-<buff name="buffRadSuitGloves" hidden="true">
-	<update_rate value="3"/>
-	<stack_type value="ignore"/>
-	<effect_group>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="subtract" value=".01">
-	<requirement name="HasBuff" buff="buffRadiation01"/>
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="0"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-</effect_group>
-</buff>
-
-<buff name="buffRadSuitLegs" hidden="true">
-	<update_rate value="3"/>
-	<stack_type value="ignore"/>
-	<effect_group>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="subtract" value=".01">
-	<requirement name="HasBuff" buff="buffRadiation01"/>
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="0"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-</effect_group>
-</buff>
-
-<buff name="buffRadSuitBoots" hidden="true">
-	<update_rate value="3"/>
-	<stack_type value="ignore"/>
-	<effect_group>
-	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStatusRadiation" operation="subtract" value=".01">
-	<requirement name="HasBuff" buff="buffRadiation01"/>
-	<requirement name="InBiome" biome="8"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="GT" value="0"/>
-	<requirement name="CVarCompare" cvar="$buffStatusRadiation" operation="LT" value="100"/>
-</triggered_effect>
-</effect_group>
-</buff>
-		
-<buff name="buffRadSuit" name_key="buffRadSuitName" description_key="buffRadSuitDesc" tooltip_key="buffRadSuitTooltip" icon="ui_game_symbol_radiation" icon_color="255,0,255">
-	<stack_type value="ignore"/>
-	<effect_group>
-	<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffRadiation01"/>
-</effect_group>
-</buff>
-</append>
-		
+	
 <!--ULTIMATE SCREAMER-->
 <append xpath="/buffs">
 <buff name="buffBansheeQueen01" hidden="true">
@@ -567,14 +272,149 @@
 
 </append>
 
-<append xpath="/buffs">	
-<buff name="desertbodyfire" hidden="true" remove_on_death="true" >
-    <stack_type value="ignore"/>
-    <duration value="2000000000"/>            
-<effect_group name="Base Effects">        
-    <triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" shape_mesh="true"/> 
+<set xpath="//buff[@name='buffHealHealth']">
+  <stack_type value="ignore"/>
+  <update_rate value="1"/>
+
+  <effect_group name="Food Health">
+    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="@foodHealthAmount">
+      <requirement name="CVarCompare" cvar=".NoHealingManager" operation="Equals" value="0"/>
+    </triggered_effect>
+    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value="@foodHealthAmount"/>
+    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="set" value="0">
+      <requirement name="CVarCompare" cvar="foodHealthAmount" operation="LTE" value="0"/>
+    </triggered_effect>
+  </effect_group>
+  
+  <effect_group name="Medical Health">
+    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="@medicalRegHealthAmount">
+      <requirement name="CVarCompare" cvar=".NoHealingManager" operation="Equals" value="0"/>
+    </triggered_effect>
+    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="subtract" value="@medicalRegHealthAmount"/>
+    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="add" value="0">
+      <requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="LTE" value="0"/>
+    </triggered_effect>
+  </effect_group>
+
+  <effect_group name="Cleanup">
+    <requirements compare_type="and">
+      <requirement name="CVarCompare" cvar="foodHealthAmount" operation="LTE" value="0"/>
+      <requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="LTE" value="0"/>
+    </requirements>
+<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealHealth"/>
+  </effect_group>
+</set>
+
+<!--PARTICLE EFFECTS-->
+<!--FIRE PARTICLE-->
+<append xpath="/buffs">
+<buff name="buffp_fireeffect"> 
+	<stack_type value="replace"/>
+	<duration value="0"/>
+			
+<effect_group name="fireeffect">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/p_fireeffect1.unity3d?p_fireeffect" parent_transform="Spine1" local_offset="-.094,0,.055" local_rotation="0,0,90"></triggered_effect>
+			  
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2"></triggered_effect>	
+
+	<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="p_fireeffect" />    
+    <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="p_fireeffect" /> 
 </effect_group>
 </buff>
 </append>
-	
+
+<!--SNOW PARTICLE-->
+<append xpath="/buffs">
+<buff name="buffp_snoweffect"> 
+	<stack_type value="replace"/>
+	<duration value="0"/>
+			
+<effect_group name="snoweffect">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/p_snoweffect1.unity3d?p_snoweffect" parent_transform="Spine1" local_offset="-.094,0,.055" local_rotation="0,0,90"></triggered_effect>
+			  
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2"></triggered_effect>	
+
+	<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="p_snoweffect" />    
+    <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="p_snoweffect" /> 
+</effect_group>
+</buff>
+</append>
+
+<!--GREEN EXPLOSION PARTICLE-->
+<append xpath="/buffs">
+<buff name="buffp_explo"> 
+	<stack_type value="replace"/>
+	<duration value="0"/>
+			
+<effect_group name="explosioneffect">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/p_explo1.unity3d?p_explo" parent_transform="Spine1" local_offset="-.094,0,.055" local_rotation="0,0,90"></triggered_effect>
+			  
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2"></triggered_effect>	
+
+	<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="p_explo" />    
+    <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="p_explo" /> 
+</effect_group>
+</buff>
+</append>
+
+<!--DESERT HEAT BIOME BUFF-->
+<append xpath="/buffs">
+<buff name="buffdesertheatLL" remove_on_death="false" name_key="buffdesertheatLLName" description_key="buffdesertheatLLDesc" tooltip_key="buffdesertheatLLTooltip" icon="ui_game_symbol_hot" icon_color="106, 0, 163" icon_blink="true" tags="buffdesertheatLL">
+	<stack_type value="ignore"/>
+
+<effect_group name="superheatLL">
+	<requirement name="InBiome" biome="05"/>
+	<requirement name="HasBuff" buff="buffdesertheatLL"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="2"/>
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="30" fade="3" effect_name="Hot"/>
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Hot"/>
+</effect_group>
+</buff>
+</append>
+
+<!--FROZEN NORTH BIOME BUFF-->
+<append xpath="/buffs">
+<buff name="bufffrozensnowLL" remove_on_death="false" name_key="bufffrozensnowLLName" description_key="bufffrozensnowLLDesc" tooltip_key="bufffrozensnowLLTooltip" icon="ui_game_symbol_cold" icon_color="106, 0, 163" icon_blink="true" tags="bufffrozensnowLL">
+	<stack_type value="ignore"/>
+
+<effect_group name="frozensnowLL">
+	<requirement name="InBiome" biome="01"/>
+	<requirement name="HasBuff" buff="bufffrozensnowLL"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="5"/>
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="30" fade="3" effect_name="Cold2"/>
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Cold2"/>
+</effect_group>
+</buff>
+</append>
+
+<!--WASTELAND RADIATION BIOME BUFF-->
+<append xpath="/buffs">
+<buff name="buffradiationwasteLL" remove_on_death="false" name_key="buffradiationwasteLLName" description_key="buffradiationwasteLLDesc" tooltip_key="buffradiationwasteLLTooltip" icon="ui_game_symbol_radiation" icon_color="106, 0, 163" icon_blink="true" tags="buffradiationwasteLL">
+	<stack_type value="ignore"/>
+
+<effect_group name="radiationwasteLL">
+	<requirement name="InBiome" biome="08"/>
+	<requirement name="HasBuff" buff="buffradiationwasteLL"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="10"/>
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="30" fade="3" effect_name="Radiation"/>
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Radiation"/>
+</effect_group>
+</buff>
+</append>
+
+<!--SKILL POINT CARD-->
+<append xpath="/buffs">
+<buff name="buffendzxpcardLL" description="Gives one skill point" icon="ui_game_symbol_lightbulb" icon_color="255,175,175" hidden="true">
+<stack_type value="ignore"/>
+<duration value="1"/>
+
+<effect_group>
+	<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="endzxpcardgivepointsLL" />
+</effect_group>
+</buff>
+</append>
+
+
+
 </configs>
+

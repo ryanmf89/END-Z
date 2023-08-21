@@ -1,79 +1,46 @@
 <configs>
 
-<!--HAZMAT MODS FOR ARMOR-->
+<!--DESERT HEAT MOD FOR ARMOR-->
 <append xpath="/item_modifiers">
-<item_modifier name="modRadiationReadyhatLL" installable_tags="head" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
-	<property name="CustomIcon" value="apparelHazmatMask" />
-	<property name="Material" value="MresourceHazmatFiberLL"/>
-	<property name="Extends" value="modGeneralMaster"/>
+<item_modifier name="modbuffdesertheatLL" installable_tags="armorChest,armorLegs" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+	<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
 	<effect_group tiered="false">
-	<passive_effect name="ElementalDamageResist" operation="perc_add" value=".2" tags="radiation"/>
+	<passive_effect name="ElementalDamageResist" operation="perc_add" value="1" tags="buffdesertheatLL"/>
 </effect_group>
 	<effect_group tiered="false">
-	<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffRadSuitMask"/>
-	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuitMask"/>
-	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuit"/>
+	<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" target="self" buff="buffdesertheatLL"/>
+	<triggered_effect trigger="onSelfEquipStop" action="AddBuff" target="self" buff="buffdesertheatLL"/>
 </effect_group>
 </item_modifier>
-	
-<item_modifier name="modRadiationReadychestLL" installable_tags="armorChest" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
-	<property name="CustomIcon" value="apparelHazmatJacket" />
-	<property name="Material" value="MresourceHazmatFiberLL"/>
-	<property name="Extends" value="modGeneralMaster"/>
+</append>
+
+<!--FROZEN NORTH MOD FOR ARMOR-->
+<append xpath="/item_modifiers">
+<item_modifier name="modbufffrozensnowLL" installable_tags="armorChest,armorLegs" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+	<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
 	<effect_group tiered="false">
-	<passive_effect name="ElementalDamageResist" operation="perc_add" value=".2" tags="radiation"/>
+	<passive_effect name="ElementalDamageResist" operation="perc_add" value="1" tags="bufffrozensnowLL"/>
 </effect_group>
 	<effect_group tiered="false">
-	<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffRadSuitChest"/>
-	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuitChest"/>
-	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuit"/>
+	<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" target="self" buff="bufffrozensnowLL"/>
+	<triggered_effect trigger="onSelfEquipStop" action="AddBuff" target="self" buff="bufffrozensnowLL"/>
 </effect_group>
 </item_modifier>
-	
-<item_modifier name="modRadiationReadyglovesLL" installable_tags="armor" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
-	<property name="CustomIcon" value="apparelHazmatGloves" />
-	<property name="Material" value="MresourceHazmatFiberLL"/>
-	<property name="Extends" value="modGeneralMaster"/>
+</append>
+
+<!--RADIATION MOD FOR ARMOR-->
+<append xpath="/item_modifiers">
+<item_modifier name="modbuffradiationwasteLL" installable_tags="head" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+	<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
 	<effect_group tiered="false">
-	<passive_effect name="ElementalDamageResist" operation="perc_add" value=".2" tags="radiation"/>
+	<passive_effect name="ElementalDamageResist" operation="perc_add" value="1" tags="buffradiationwasteLL"/>
 </effect_group>
 	<effect_group tiered="false">
-	<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffRadSuitGloves"/>
-	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuitGloves"/>
-	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuit"/>
-</effect_group>
-</item_modifier>
-	
-<item_modifier name="modRadiationReadylegsLL" installable_tags="armorLegs" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
-	<property name="CustomIcon" value="apparelHazmatPants" />
-	<property name="Material" value="MresourceHazmatFiberLL"/>
-	<property name="Extends" value="modGeneralMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<effect_group tiered="false">
-	<passive_effect name="ElementalDamageResist" operation="perc_add" value=".2" tags="radiation"/>
-</effect_group>
-	<effect_group tiered="false">
-	<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffRadSuitLegs"/>
-	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuitLegs"/>
-	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuit"/>
-</effect_group>
-</item_modifier>
-	
-<item_modifier name="modRadiationReadybootsLL" installable_tags="armor" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
-	<property name="CustomIcon" value="apparelHazmatBoots" />
-	<property name="Material" value="MresourceHazmatFiberLL"/>
-	<property name="Extends" value="modGeneralMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<effect_group tiered="false">
-	<passive_effect name="ElementalDamageResist" operation="perc_add" value=".2" tags="radiation"/>
-</effect_group>
-	<effect_group tiered="false">
-	<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffRadSuitBoots"/>
-	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuitBoots"/>
-	<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuit"/>
+	<triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" target="self" buff="buffradiationwasteLL"/>
+	<triggered_effect trigger="onSelfEquipStop" action="AddBuff" target="self" buff="buffradiationwasteLL"/>
 </effect_group>
 </item_modifier>
 </append>
@@ -87,6 +54,7 @@
 	<property name="CustomIconTint" value="5,250,9"/><!--custom color lime green-->
 	<property name="Material" value="Mpaint"/>
 	<property name="Weight" value="20"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 
 	<item_property_overrides name="*">
 		<property name="TintColor" value="5,250,9"/><!-- this if for guns and handheld items -->
@@ -149,6 +117,7 @@
 	<property name="CustomIconTint" value="250, 2, 2"/><!--custom color lime green-->
 	<property name="Material" value="Mpaint"/>
 	<property name="Weight" value="20"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 
 	<item_property_overrides name="*">
 		<property name="TintColor" value="250, 2, 2"/><!-- this if for guns and handheld items -->
@@ -211,6 +180,7 @@
 	<property name="CustomIconTint" value="255, 251, 28"/><!--custom color lime green-->
 	<property name="Material" value="Mpaint"/>
 	<property name="Weight" value="20"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 
 	<item_property_overrides name="*">
 		<property name="TintColor" value="255, 251, 28"/><!-- this if for guns and handheld items -->
@@ -273,6 +243,7 @@
 	<property name="CustomIconTint" value="240, 12, 160"/><!--custom color lime green-->
 	<property name="Material" value="Mpaint"/>
 	<property name="Weight" value="20"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 
 	<item_property_overrides name="*">
 		<property name="TintColor" value="240, 12, 160"/><!-- this if for guns and handheld items -->
@@ -335,6 +306,7 @@
 	<property name="CustomIconTint" value="106, 0, 163"/><!--custom color lime green-->
 	<property name="Material" value="Mpaint"/>
 	<property name="Weight" value="20"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 
 	<item_property_overrides name="*">
 		<property name="TintColor" value="106, 0, 163"/><!-- this if for guns and handheld items -->
@@ -397,6 +369,7 @@
 	<property name="CustomIconTint" value="7, 0, 214"/><!--custom color lime green-->
 	<property name="Material" value="Mpaint"/>
 	<property name="Weight" value="20"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 
 	<item_property_overrides name="*">
 		<property name="TintColor" value="7, 0, 214"/><!-- this if for guns and handheld items -->
@@ -459,6 +432,7 @@
 	<property name="CustomIconTint" value="0,0,0"/><!--custom color lime green-->
 	<property name="Material" value="Mpaint"/>
 	<property name="Weight" value="20"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 
 	<item_property_overrides name="*">
 		<property name="TintColor" value="0,0,0"/><!-- this if for guns and handheld items -->
@@ -521,6 +495,7 @@
 	<property name="CustomIconTint" value="255, 115, 0"/><!--custom color lime green-->
 	<property name="Material" value="Mpaint"/>
 	<property name="Weight" value="20"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 
 	<item_property_overrides name="*">
 		<property name="TintColor" value="255, 115, 0"/><!-- this if for guns and handheld items -->

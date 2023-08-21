@@ -40,15 +40,54 @@ EZcurrencyLL
 		<objective type="BlockPlace" id="bedrollBlockVariantHelper" value="1" phase="3"/>
 
 		<reward type="Exp" value="50"/>
-		<reward type="Quest" id="quest_whiteRiverCitizen1"/>
+		<reward type="Quest" id="quest_learnmoonrockLL"/>
 		<reward type="Quest" id="quest_progressionZombieHunting1"/>
-		<reward type="Item"  id="EZcurrencyLL" value="500"/>
 	</quest>
 </append>
+
+<append xpath="/quests">
+<quest id="quest_learnmoonrockLL">
+	<property name="group_name_key" value="quest_learnmoonrockLL"/>
+	<property name="name_key" value="quest_learnmoonrockLL_name"/>
+	<property name="subtitle_key" value="quest_learnmoonrockLL_subtitle"/>
+	<property name="description_key" value="quest_learnmoonrockLL_desc"/>
+	<property name="offer_key" value="quest_learnmoonrockLL_offer"/>	
+	<property name="icon" value="ui_game_symbol_hammer"/>
+	<property name="category_key" value="quest"/>
+	<property name="offer_key" value="quest_learnmoonrockLL_offer"/>
+	<property name="difficulty" value="veryeasy"/>
+	<property name="shareable" value="false"/>
+
+	<objective type="FetchKeep" id="resourceRockSmall" value="60" phase="1"/>
+	<objective type="FetchKeep" id="resourceWood" value="50" phase="1"/>
+	<objective type="FetchKeep" id="resourceClayLump" value="60" phase="1"/>
+	<objective type="FetchKeep" id="resourceYuccaFibers" value="30" phase="1">
+<modifier type="TrackBlocks">
+	<property name="block_index_name" value="quest_wood"/>
+	<property name="nav_object" value="quest_resource"/>
+	<property name="track_distance" value="20"/>
+</modifier>
+</objective>
+
+<objective type="Craft" id="campfire" value="1" phase="2"/>
+<objective type="BlockPlace" id="campfire" value="1" phase="3"/>
+<objective type="Craft" id="resourceHotCoalsLL" value="20" phase="4"/>
+<objective type="Craft" id="resourceCobblestones" value="20" phase="5"/>
+<objective type="Craft" id="resourceMoonRocksLL" value="20" phase="6"/>
+<objective type="Craft" id="moonrockaxeLL" value="1" phase="7"/>
+<objective type="Craft" id="moonrockshovelLL" value="1" phase="8"/>
+
+	<reward type="Exp" value="50"/>
+	<reward type="Item"  id="EZcurrencyLL" value="500"/>
+	<reward type="Quest" id="quest_whiteRiverCitizen1"/>
+</quest>
+</append>
+
 <append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
 	<reward type="Item"  id="EZcurrencyLL" value="500"/>
+	<reward type="SkillPoints" value="10" />
 </append>
-<!--1000 COINS WHEN COMPLETE-->
+
 	
 <!-- Zombie Killing Progression -->
 <!-- Zombie Hunting 1 -->

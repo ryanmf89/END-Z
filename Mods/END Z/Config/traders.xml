@@ -3,14 +3,14 @@
 <set xpath="//trader_info/@open_time">02:00</set>
 <set xpath="//trader_info/@close_time">02:00</set>
 	
-<!--TRADER REFRESH-->
+<!--TRADER REFRESH STOCK-->
 <set xpath="/traders/trader_info[@id='1']/@reset_interval">2</set>
 <set xpath="/traders/trader_info[@id='6']/@reset_interval">2</set>
 <set xpath="/traders/trader_info[@id='2']/@reset_interval">2</set>
 <set xpath="/traders/trader_info[@id='7']/@reset_interval">2</set>
 <set xpath="/traders/trader_info[@id='8']/@reset_interval">2</set>
 
-<!--TRADER CURRENCY DOES WORK NEEDS QUEST REWARDS TO BE ADJUSTED BEFORE USING-->
+<!--REPLACES TRADER CURRENCY-->
 <set xpath="/traders/@currency_item">EZcurrencyLL</set>
 
 <!--removes items from loot and uses MOONROCK ITEMS-->

@@ -279,23 +279,23 @@
                 <passive_effect name="DamageModifier" operation="perc_add" value="0.5"/>
             </effect_group> 
 			
+			<effect_group name="NPCModUpdateLeaderControl">
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="NPCModUpdateLeaderControl">
+					<requirement name="CVarCompare" cvar="NPCModPreviousOrder" operation="NotEquals" value="@CurrentOrder" />
+				</triggered_effect>		
+			</effect_group> 
+			
 			<effect_group name="NPCHealing">
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="IsHealing">
-				<requirement name="!HasBuff" buff="IsHealing"/>
-				<requirement name="!HasBuff" buff="buffInjuryStunned01"/> 
-				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LTE" value=".7"/>
-				<requirement name="CVarCompare" cvar="$NPCModHealingCooldown" operation="LTE" value="0"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$NPCModHealingCooldown" operation="add" value="-1">
-				<requirement name="CVarCompare" cvar="$NPCModHealingCooldown" operation="GT" value="0"/>
-			</triggered_effect>
-		</effect_group>
-		
-		<effect_group name="NPCModUpdateLeaderControl">
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="NPCModUpdateLeaderControl">
-				<requirement name="CVarCompare" cvar="NPCModPreviousOrder" operation="NotEquals" value="@CurrentOrder" />
-			</triggered_effect>		
-		</effect_group> 
+					<requirement name="!HasBuff" buff="IsHealing"/>
+					<requirement name="!HasBuff" buff="buffInjuryStunned01"/> 
+					<requirement name="StatComparePercCurrentToMax" stat="health" operation="LTE" value=".7"/>
+					<requirement name="CVarCompare" cvar="$NPCModHealingCooldown" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$NPCModHealingCooldown" operation="add" value="-1">
+					<requirement name="CVarCompare" cvar="$NPCModHealingCooldown" operation="GT" value="0"/>
+				</triggered_effect>
+			</effect_group>
 		</buff>
 		
 		<buff name="IsHealing"> 
@@ -336,7 +336,7 @@
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="2"/>
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NPCModHealingCooldown" operation="set" value="30"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NPCModHealingCooldown" operation="set" value="15"/> <!-- heal once per 30 sec  -->
             </effect_group>
         </buff>   	
 		
@@ -435,13 +435,13 @@
 		<buff name="WeaponUser">
 			<stack_type value="ignore"/>
 			<duration value="0"/>
-			<update_rate value=".5"/>
+			<update_rate value="1"/>
 			<effect_group name="WeaponUser"> 
 				<requirement name="CVarCompare" cvar="WeaponTypeNeedsUpdate" operation="Equals" value="1"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="WeaponUser2" /> 
 			</effect_group>	
 			<effect_group name="WeaponUserDied">	
-				<triggered_effect trigger="onSelfDied" action="AnimatorSetInt" property="HoldType" value="0" duration="1" /> <!-- disables the pistol anims -->
+				<triggered_effect trigger="onSelfDied" action="AnimatorSetInt" property="HoldType" value="0" duration="1" /> <!-- disables the weapon hold anims -->
 	<!--		<triggered_effect trigger="onSelfDied" action="Explode" blast_power="0" block_damage="0" block_radius="1" entity_damage="30" entity_radius="4" /> -->
                 <triggered_effect trigger="onSelfDied" action="SetTransformActive" active="false" parent_transform="Hips" transform_path="Gunjoint"/> 
 				<triggered_effect trigger="onSelfDied" action="SetTransformActive" active="false" parent_transform="Hips" transform_path="RightWeapon"/>  
@@ -468,7 +468,7 @@
 				<requirement name="HoldingItemHasTags" tags="longRange"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WeaponClass" value="1" duration="1" />
 			</effect_group> 
-	<!--		<effect_group name="Logging"> 
+			<!--<effect_group name="Logging"> 
 				<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=== Spawning Starting Weapon"/> 
 				<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="WeaponType"/>
 				<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="WeaponTypeNeedsUpdate"/>
@@ -481,12 +481,16 @@
 			
 		<buff name="WeaponUser2">
 			<stack_type value="replace"/>
-			<duration value="1"/>
-			<effect_group>
+			<duration value="2"/>
 			<!-- This sets the HoldType value used to path to animations  -->
+			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetIntSDX, SCore" property="HoldType" value="@WeaponType" duration="1" /> 
+				<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetIntSDX, SCore" property="HoldType" value="@WeaponType" duration="1" /> 
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="WeaponTypeNeedsUpdate" operation="set" value="0"/>
 			</effect_group>	
+			
+			
+			<!-- This sets the WeaponClass value used by UAI to control ranged weapon moveto and backup distances  -->
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="CurrentWeaponClass" operation="set" value="0"/>
 				<requirement name="HoldingItemHasTags" tags="melee"/>
@@ -507,7 +511,7 @@
 				<requirement name="HoldingItemHasTags" tags="longRange"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="WeaponClass" value="1" duration="1" />
 			</effect_group>
-	<!--		<effect_group name="Logging">
+			<!-- <effect_group name="Logging">
 				<triggered_effect trigger="onSelfBuffFinish" action="LogMessage" message="===WeaponBuff2 ran"/> 
 				<triggered_effect trigger="onSelfBuffFinish" action="CVarLogValue" cvar="WeaponTypeNeedsUpdate"/>
 				<triggered_effect trigger="onSelfBuffFinish" action="CVarLogValue" cvar="WeaponType"/>
@@ -571,7 +575,7 @@
 				</effect_group>	
 		</buff>
 		<buff name="buffReloadDelay" hidden="true">
-			<stack_type value="ignore"/><duration value=".5"/> <!-- provides a delay for the firing to end before setting the AnimatorSetBool   -->
+			<stack_type value="ignore"/><duration value="1"/> <!-- provides a 1 sec delay for the firing to end before setting the AnimatorSetBool   -->
 				<effect_group> 
 					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReload2" /> 
 					<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="Reload" value="true" duration="1" /> <!-- start animating the reloading  -->
@@ -589,31 +593,31 @@
 				</effect_group>	
 				<effect_group name="Delay 0">
 					<requirement name="!HoldingItemHasTags" tags="reloadPenalty1,reloadPenalty2,reloadPenalty3,reloadPenalty4,reloadPenalty5,reloadPenalty6"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="2"/>
 				</effect_group>
 				<effect_group name="Delay 1">
 					<requirement name="HoldingItemHasTags" tags="reloadPenalty1"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="3"/>
 				</effect_group>
 				<effect_group name="Delay 2">
 					<requirement name="HoldingItemHasTags" tags="reloadPenalty2"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="4"/>
 				</effect_group>
 				<effect_group name="Delay 3">
 					<requirement name="HoldingItemHasTags" tags="reloadPenalty3"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="5"/>
 				</effect_group>
 				<effect_group name="Delay 4">
 					<requirement name="HoldingItemHasTags" tags="reloadPenalty4"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="6"/>
 				</effect_group>	
 				<effect_group name="Delay 5">
 					<requirement name="HoldingItemHasTags" tags="reloadPenalty5"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="6"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="7"/>
 				</effect_group>
 				<effect_group name="Delay 6">
 					<requirement name="HoldingItemHasTags" tags="reloadPenalty6"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="7"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ReloadDelay" operation="set" value="8"/>
 				</effect_group>			
 		</buff>
 		<buff name="buffReload3" hidden="true">
@@ -1515,7 +1519,7 @@
 			<duration value="0"/>
 			<update_rate value="5"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="CanTalk" value="true"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetBool" property="CanTalk" value="true"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="Smile" />
 				<triggered_effect trigger="onSelfDied" action="AnimatorSetBool" property="CanTalk" value="false"/>
 			</effect_group>
@@ -1525,7 +1529,7 @@
 			<duration value="0"/>
 			<update_rate value="2"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="CanBlink" value="true"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetBool" property="CanBlink" value="true"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="Blink" />
 				<triggered_effect trigger="onSelfDied" action="AnimatorSetBool" property="CanBlink" value="false"/>
 			</effect_group>

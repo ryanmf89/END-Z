@@ -1,18 +1,5 @@
 <configs>
 
-<append xpath="//biome[@name='wasteland']">
-	<spawn maxcount="1" respawndelay="0.3" time="Day"	entitygroup="BossWastelandZombies" notags="commercial,industrial,downtown" />
-	<spawn maxcount="2" respawndelay="0.001" time="Night" entitygroup="BossWastelandZombies" notags="commercial,industrial,downtown" />
-
-	<spawn maxcount="4" respawndelay="0.033" time="Day" entitygroup="BossWastelandZombies" tags="commercial,industrial" notags="downtown" />
-	<spawn maxcount="4" respawndelay="0.002" time="Night" entitygroup="BossWastelandZombies" tags="commercial,industrial" notags="downtown" />
-
-	<spawn maxcount="4" respawndelay="0.0167" time="Day" entitygroup="BossWastelandZombies" tags="downtown" />
-	<spawn maxcount="4" respawndelay="0.002" time="Night" entitygroup="BossWastelandZombies" tags="downtown" />
-
-	<!--spawn maxcount="1" respawndelay="0.3" time="Any" entitygroup="BossWastelandZombies" spawnDeadChance="0" /-->
-</append>
-
 <append xpath="//biome[@name='snow']">
 	<!--spawn maxcount="1" respawndelay="0.3" time="Day"	entitygroup="BossSnowzombies" notags="commercial,industrial,downtown" /-->
 	<spawn maxcount="1" respawndelay="1.7" time="Night" entitygroup="BossSnowzombies" notags="commercial,industrial,downtown" />
@@ -37,19 +24,6 @@
 	<spawn maxcount="4" respawndelay="0.09" time="Night" entitygroup="BossDesertzombies" tags="downtown" />
 
 	<!--spawn maxcount="1" respawndelay="0.3" time="Any" entitygroup="BossDesertzombies" spawnDeadChance="0" /-->
-</append>
-
-<append xpath="//biome[@name='desert']">
-	<spawn maxcount="1" respawndelay="2.7" time="Day"	entitygroup="anacondaspawn" notags="commercial,industrial,downtown" />
-	<spawn maxcount="1" respawndelay="2.1" time="Night" entitygroup="anacondaspawn" notags="commercial,industrial,downtown" />
-
-	<spawn maxcount="1" respawndelay="0.2" time="Day" entitygroup="anacondaspawn" tags="commercial,industrial" notags="downtown" />
-	<spawn maxcount="1" respawndelay="0.1" time="Night" entitygroup="anacondaspawn" tags="commercial,industrial" notags="downtown" />
-
-	<spawn maxcount="1" respawndelay="0.2" time="Day" entitygroup="anacondaspawn" tags="downtown" />
-	<spawn maxcount="1" respawndelay="0.09" time="Night" entitygroup="anacondaspawn" tags="downtown" />
-
-	<!--spawn maxcount="1" respawndelay="0.3" time="Any" entitygroup="anacondaspawn" spawnDeadChance="0" /-->
 </append>
 
 <append xpath="//biome[@name='pine_forest']">

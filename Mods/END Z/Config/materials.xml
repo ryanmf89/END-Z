@@ -4,7 +4,7 @@
 <material id="MmoonrockLL">
 	<property name="damage_category" value="metal"/>
 	<property name="surface_category" value="metal"/>
-	<property name="forge_category" value="iron"/>
+	<property name="forge_category" value="resourceMoonRocksLL"/>
 	<property name="Hardness" type="float" value="1"/>
 	<property name="stepsound" value="metal"/>
 	<property name="stability_glue" value="300"/>
