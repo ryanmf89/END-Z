@@ -1540,8 +1540,6 @@
 		zombieBusinessMan, .1
 		zombieBusinessManFeral, 0
 		zombieMaleHazmat, 1.7
-		zombiesnowguardianLL
-		FrozenBoe
 		</entitygroup>
 	<entitygroup name="zombieLabWorkerGroupGS50">
 		zombieLab, .85
@@ -2116,8 +2114,6 @@
 		zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="wanderingHordeStageGS46">
 		zombieMarlene
@@ -2133,8 +2129,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="wanderingHordeStageGS52">
 		zombieBusinessMan, .081
@@ -2248,10 +2242,6 @@
 		zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS2">
 		zombieNurse
@@ -2269,10 +2259,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS4">
 		zombieMarlene
@@ -2290,10 +2276,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS7">
 		zombieSkateboarder
@@ -2311,10 +2293,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS10">
 		zombieDarlene
@@ -2332,10 +2310,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS13">
 		zombieBoe
@@ -2353,10 +2327,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS16">
 		zombieNurse
@@ -2374,10 +2344,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS19">
 		zombieFemaleFat
@@ -2395,10 +2361,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS23">
 		zombieJoe
@@ -2416,10 +2378,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS27">
 		zombieBusinessMan
@@ -2437,10 +2395,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS31">
 		zombieDarlene, .055
@@ -2458,10 +2412,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS35">
 		zombieArlene, .062
@@ -2480,8 +2430,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS40">
 		animalZombieDog, .05
@@ -2501,8 +2449,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS44">
 		zombieMoe
@@ -2521,8 +2467,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS49">
 		zombieSkateboarder, .086
@@ -2542,8 +2486,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS54">
 		zombieMoe
@@ -2563,8 +2505,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS59">
 		zombieJoe
@@ -2582,8 +2522,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="FwanderingHordeStageGS64">
 		zombieJoe, .112
@@ -2603,8 +2541,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 
 <!-- *** SLEEPER_HORDE_STAGES -->
@@ -2911,10 +2847,6 @@
 		zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS89">
 		zombieMaleHazmat, .81
@@ -2931,10 +2863,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS96">
 		zombieMoeFeral, .51
@@ -2951,10 +2879,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS103">
 		zombieBiker, .93
@@ -2973,8 +2897,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS110">
 		zombieMaleHazmat
@@ -2993,8 +2915,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS117">
 		zombieSkateboarder, .97
@@ -3013,8 +2933,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS125">
 		zombieBikerFeral, .55
@@ -3033,8 +2951,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS132">
 		zombieMarleneRadiated, .34
@@ -3053,8 +2969,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS140">
 		zombieBusinessManFeral
@@ -3073,8 +2987,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS148">
 		zombieLumberjack
@@ -3093,8 +3005,6 @@
 		zombiegrimlinLL
 		zombieimpLL
 		zombiedesertmonsterorcLL
-		zombiesnowguardianLL
-		FrozenBoe
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS156">
 		zombieLumberjack
@@ -3135,13 +3045,6 @@
 		zombiedesertmonsterorcLL
 		zombiesnowguardianLL
 		FrozenBoe
-		zombiesmallbitchLL
-		zombienecroLL
-		zombiemutantLL
-		zombiespikeLL
-		zombieWguardianLL
-		zombiesupermutantLL
-		zombiebitchQueen
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS172">
 		zombieBiker
@@ -3162,13 +3065,6 @@
 		zombiedesertmonsterorcLL
 		zombiesnowguardianLL
 		FrozenBoe
-		zombiesmallbitchLL
-		zombienecroLL
-		zombiemutantLL
-		zombiespikeLL
-		zombieWguardianLL
-		zombiesupermutantLL
-		zombiebitchQueen
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS181">
 		zombieFemaleFatRadiated, .53
@@ -3189,13 +3085,6 @@
 		zombiedesertmonsterorcLL
 		zombiesnowguardianLL
 		FrozenBoe
-		zombiesmallbitchLL
-		zombienecroLL
-		zombiemutantLL
-		zombiespikeLL
-		zombieWguardianLL
-		zombiesupermutantLL
-		zombiebitchQueen
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS189">
 		zombieTomClark
@@ -3216,13 +3105,6 @@
 		zombiedesertmonsterorcLL
 		zombiesnowguardianLL
 		FrozenBoe
-		zombiesmallbitchLL
-		zombienecroLL
-		zombiemutantLL
-		zombiespikeLL
-		zombieWguardianLL
-		zombiesupermutantLL
-		zombiebitchQueen
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS198">
 		zombiePartyGirl
@@ -3243,13 +3125,6 @@
 		zombiedesertmonsterorcLL
 		zombiesnowguardianLL
 		FrozenBoe
-		zombiesmallbitchLL
-		zombienecroLL
-		zombiemutantLL
-		zombiespikeLL
-		zombieWguardianLL
-		zombiesupermutantLL
-		zombiebitchQueen
 	</entitygroup>
 	<entitygroup name="sleeperHordeStageGS207">
 		zombieYoFeral
@@ -12622,9 +12497,6 @@
 		zombieJanitor
 		zombieYo
 		zombieBusinessMan
-		zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS2">
 		EndZgrootLL
@@ -12638,9 +12510,6 @@
 		zombieJoe
 		zombieMarlene
 		zombieNurse
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS5">
 		zombieMoe
@@ -12654,9 +12523,6 @@
 		zombieYo
 		zombieUtilityWorker
 		zombieTomClark
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS8">
 		zombieJanitor
@@ -12670,9 +12536,6 @@
 		zombieBoe
 		zombieNurse
 		zombieJoe
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS11">
 		zombieNurse
@@ -12686,9 +12549,6 @@
 		EndZgrootLL
 		zombieArlene
 		zombiePartyGirl
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS14">
 		zombieJanitor
@@ -12702,9 +12562,6 @@
 		zombieDarlene
 		zombieBoe
 		EndZgrootLL
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS18">
 		zombieTomClark
@@ -12718,9 +12575,6 @@
 		zombieYo
 		EndZgrootLL
 		zombieJoe
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS22">
 		zombieJanitor
@@ -12734,9 +12588,6 @@
 		zombiePartyGirl
 		zombieJoe
 		zombieYo
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS27">
 		zombieNurse
@@ -12881,8 +12732,6 @@
 		zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS76">
 		zombieFemaleFat, .45
@@ -12899,8 +12748,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS82">
 		zombieFatCop, .53
@@ -12917,8 +12764,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS89">
 		zombieJoeFeral, .41
@@ -12935,8 +12780,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS96">
 		zombieBusinessMan
@@ -12953,8 +12796,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="scoutHordeStageGS103">
 		zombieSkateboarderFeral, .34
@@ -21035,9 +20876,7 @@
 		EndZgrootLL
 		zombieDarlene
 		zombiePartyGirl
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL</entitygroup>
+	</entitygroup>
 	<entitygroup name="feralHordeStageGS2">
 		zombieTomClark
 		zombieBoe
@@ -21051,9 +20890,7 @@
 		zombieMoe
 		zombiePartyGirl
 		zombieJoe
-		zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL</entitygroup>
+	</entitygroup>
 	<entitygroup name="feralHordeStageGS4">
 		zombieJanitor
 		zombieBusinessMan
@@ -21067,9 +20904,7 @@
 		zombieUtilityWorker
 		zombieJoe
 		EndZgrootLL
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL</entitygroup>
+	</entitygroup>
 	<entitygroup name="feralHordeStageGS7">
 		zombieArlene
 		EndZgrootLL
@@ -21083,9 +20918,7 @@
 		zombieMarlene
 		zombieMoe
 		zombieDarlene
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL</entitygroup>
+	</entitygroup>
 	<entitygroup name="feralHordeStageGS10">
 		zombieTomClark
 		EndZgrootLL
@@ -21099,9 +20932,7 @@
 		zombieArlene
 		zombieUtilityWorker
 		zombieJanitor
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL</entitygroup>
+	</entitygroup>
 	<entitygroup name="feralHordeStageGS13">
 		zombieTomClark
 		zombieJoe
@@ -21115,9 +20946,7 @@
 		zombiePartyGirl
 		zombieNurse
 		zombieMoe
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL</entitygroup>
+	</entitygroup>
 	<entitygroup name="feralHordeStageGS16">
 		zombieJanitor
 		zombieArlene
@@ -21131,9 +20960,7 @@
 		zombieNurse
 		zombieUtilityWorker
 		EndZgrootLL
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL</entitygroup>
+	</entitygroup>
 	<entitygroup name="feralHordeStageGS19">
 		zombieNurse
 		zombieMoe
@@ -21147,9 +20974,7 @@
 		zombieBusinessMan
 		zombieTomClark
 		zombieArlene
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL</entitygroup>
+	</entitygroup>
 	<entitygroup name="feralHordeStageGS23">
 		zombieDarlene
 		zombieTomClark
@@ -21165,7 +20990,8 @@
 		zombieUtilityWorker
 				zombieporcLL
 		zombiegrimlintwinLL
-		zombiegrimlinLL</entitygroup>
+		zombiegrimlinLL
+	</entitygroup>
 	<entitygroup name="feralHordeStageGS27">
 		zombieMarlene
 		zombieUtilityWorker
@@ -21181,7 +21007,8 @@
 		zombieTomClark
 				zombieporcLL
 		zombiegrimlintwinLL
-		zombiegrimlinLL</entitygroup>
+		zombiegrimlinLL
+	</entitygroup>
 	<entitygroup name="feralHordeStageGS31">
 		zombieJanitor
 		zombieMoe
@@ -31033,11 +30860,6 @@
 		zombieTomClark
 		zombieYo
 		EndZgrootLL
-		zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="defenseHordeStageGS2">
 		zombieBoe
@@ -31051,11 +30873,6 @@
 		EndZgrootLL
 		zombieMarlene
 		zombieArlene
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="defenseHordeStageGS5">
 		zombieYo
@@ -31068,11 +30885,6 @@
 		zombieNurse
 		zombieMarlene
 		zombieBoe
-				zombieporcLL
-		zombiegrimlintwinLL
-		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="defenseHordeStageGS8">
 		zombieBusinessMan
@@ -31089,8 +30901,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="defenseHordeStageGS11">
 		zombieDarlene
@@ -31107,8 +30917,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="defenseHordeStageGS14">
 		zombieJoe
@@ -31124,8 +30932,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="defenseHordeStageGS18">
 		EndZgrootLL
@@ -31141,8 +30947,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="defenseHordeStageGS22">
 		zombieDarlene
@@ -31158,8 +30962,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="defenseHordeStageGS27">
 		zombieJoe
@@ -31176,8 +30978,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="defenseHordeStageGS31">
 		zombiePartyGirl
@@ -31193,8 +30993,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="defenseHordeStageGS36">
 		zombieBusinessMan
@@ -31210,8 +31008,6 @@
 				zombieporcLL
 		zombiegrimlintwinLL
 		zombiegrimlinLL
-		zombieimpLL
-		zombiedesertmonsterorcLL
 	</entitygroup>
 	<entitygroup name="defenseHordeStageGS41">
 		zombieJoe

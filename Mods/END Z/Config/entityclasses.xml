@@ -338,7 +338,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/zombiesmallbitch1.unity3d?zombiesmallbitch"/>
+	<property name="Mesh" value="#@modfolder:Resources/wastesmallbitch.unity3d?zombiesmallbitch"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -383,7 +383,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/endzspikez1.unity3d?endzspikez"/>
+	<property name="Mesh" value="#@modfolder:Resources/wastespike.unity3d?endzspikez"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -428,7 +428,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/EndZNecromanser1.unity3d?EndZNecromanser"/>
+	<property name="Mesh" value="#@modfolder:Resources/wastenecro.unity3d?EndZNecromanser"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -473,7 +473,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/EndZmutant1.unity3d?EndZmutant"/>
+	<property name="Mesh" value="#@modfolder:Resources/wastemutantregular.unity3d?EndZmutant"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -518,7 +518,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/Endzsupermutant1.unity3d?Endzsupermutant"/>
+	<property name="Mesh" value="#@modfolder:Resources/wastemutantsuper.unity3d?Endzsupermutant"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -563,7 +563,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/EndZwastelandguardian1.unity3d?EndZwastelandguardian"/>
+	<property name="Mesh" value="#@modfolder:Resources/wasteguardian.unity3d?EndZwastelandguardian"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -609,7 +609,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/EndZgizmo1.unity3d?EndZgizmo"/>
+	<property name="Mesh" value="#@modfolder:Resources/EndZpineforest.unity3d?EndZgizmo"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -642,7 +642,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/EndZgonzo1.unity3d?EndZgonzo"/>
+	<property name="Mesh" value="#@modfolder:Resources/EndZpineforest.unity3d?EndZgonzo"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -675,7 +675,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/EndZpineforestarmororc1.unity3d?EndZpineforestarmororc"/>
+	<property name="Mesh" value="#@modfolder:Resources/EndZpineforest.unity3d?EndZpineforestarmororc"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -711,7 +711,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/EndZsnowguardian1.unity3d?EndZsnowguardian"/>
+	<property name="Mesh" value="#@modfolder:Resources/EndZsnowbundle.unity3d?EndZsnowguardian"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -786,7 +786,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/EndZimp1.unity3d?EndZimp"/>
+	<property name="Mesh" value="#@modfolder:Resources/EndZdesertbundle.unity3d?EndZimp"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -832,7 +832,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,elitetrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/EndZdesertmonsterorc1.unity3d?EndZdesertmonsterorc"/>
+	<property name="Mesh" value="#@modfolder:Resources/EndZdesertbundle.unity3d?EndZdesertmonsterorc"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
@@ -1013,7 +1013,7 @@
     <property name="HasRagdoll" value="true"/>
     <property name="PhysicsBody" value="boar"/>
     <property name="Mass" value="200"/>
-    <property name="Mesh" value="#@modfolder:Resources/EndZbuffalo1.unity3d?EndZbuffalo"/>
+    <property name="Mesh" value="#@modfolder:Resources/EndZanimals.unity3d?EndZbuffalo"/>
     <property name="LookAtAngle" value="0"/>
     <property name="HasDeathAnim" value="true"/>
     <property name="RootMotion" value="false"/>
@@ -1047,7 +1047,7 @@
     <drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 
     <effect_group name="Base Effects">
-        <passive_effect name="HealthMax" operation="base_set" value="250,500"/>
+        <passive_effect name="HealthMax" operation="base_set" value="75,150"/>
     </effect_group>
 
     <property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_stag,clear_sleeper" />
@@ -1064,7 +1064,7 @@
     <property name="HasRagdoll" value="true"/>
     <property name="PhysicsBody" value="boar"/>
     <property name="Mass" value="200"/>
-    <property name="Mesh" value="#@modfolder:Resources/EndZsheep1.unity3d?EndZsheep"/>
+    <property name="Mesh" value="#@modfolder:Resources/EndZanimals.unity3d?EndZsheep"/>
     <property name="LookAtAngle" value="0"/>
     <property name="HasDeathAnim" value="true"/>
     <property name="RootMotion" value="false"/>
@@ -1098,7 +1098,7 @@
     <drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 
     <effect_group name="Base Effects">
-        <passive_effect name="HealthMax" operation="base_set" value="250"/>
+        <passive_effect name="HealthMax" operation="base_set" value="50,100"/>
     </effect_group>
 
     <property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_doe" />
@@ -1115,7 +1115,7 @@
     <property name="HasRagdoll" value="true"/>
     <property name="PhysicsBody" value="boar"/>
     <property name="Mass" value="200"/>
-    <property name="Mesh" value="#@modfolder:Resources/EndZRat1.unity3d?EndZRat"/>
+    <property name="Mesh" value="#@modfolder:Resources/EndZanimals.unity3d?EndZRat"/>
     <property name="LookAtAngle" value="0"/>
     <property name="HasDeathAnim" value="true"/>
     <property name="RootMotion" value="false"/>
@@ -1148,7 +1148,7 @@
     <drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 
     <effect_group name="Base Effects">
-        <passive_effect name="HealthMax" operation="base_set" value="250,500"/>
+        <passive_effect name="HealthMax" operation="base_set" value="75,100"/>
     </effect_group>
 
     <property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_hostile,clear_sleeper" />
@@ -1165,7 +1165,7 @@
     <property name="HasRagdoll" value="true"/>
     <property name="PhysicsBody" value="boar"/>
     <property name="Mass" value="200"/>
-    <property name="Mesh" value="#@modfolder:Resources/EndZgiantsnake1.unity3d?EndZgiantsnake"/>
+    <property name="Mesh" value="#@modfolder:Resources/EndZanimals.unity3d?EndZgiantsnake"/>
     <property name="LookAtAngle" value="0"/>
     <property name="HasDeathAnim" value="true"/>
     <property name="RootMotion" value="false"/>
@@ -1215,7 +1215,7 @@
     <property name="HasRagdoll" value="true"/>
     <property name="PhysicsBody" value="boar"/>
     <property name="Mass" value="200"/>
-    <property name="Mesh" value="#@modfolder:Resources/EndZbloodydog1.unity3d?EndZbloodydog"/>
+    <property name="Mesh" value="#@modfolder:Resources/EndZanimals.unity3d?EndZbloodydog"/>
     <property name="LookAtAngle" value="0"/>
     <property name="HasDeathAnim" value="true"/>
     <property name="RootMotion" value="false"/>
@@ -1260,7 +1260,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,normaltrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/Endzgroot1.unity3d?Endzgroot"/>
+	<property name="Mesh" value="#@modfolder:Resources/grootnormal.unity3d?Endzgroot"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="6"/>
@@ -1291,7 +1291,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,feraltrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/Endzgrootferal1.unity3d?Endzgrootferal"/>
+	<property name="Mesh" value="#@modfolder:Resources/grootferal.unity3d?Endzgrootferal"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="6"/>
@@ -1323,7 +1323,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,radiatedtrack"/>
 	<property name="Prefab" value="NPC"/>
-	<property name="Mesh" value="#@modfolder:Resources/Endzgrootradiated1.unity3d?Endzgrootradiated"/>
+	<property name="Mesh" value="#@modfolder:Resources/grootradiated.unity3d?Endzgrootradiated"/>
 	<property name="AvatarController" value="AvatarZombieController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="6"/>
@@ -1360,7 +1360,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="EntityFlags" value="animal,zombie"/>
 	<property name="Tags" value="entity,animal,zombie,hostile,dog"/>
-	<property name="Mesh" value="#@modfolder:Resources/EndZbloodydog1.unity3d?EndZbloodydog"/>
+	<property name="Mesh" value="#@modfolder:Resources/EndZanimals.unity3d?EndZbloodydog"/>
 	<!--property name="Prefab" value="/Entities/Animals/Wolf/animalStandardDogZombieRagdoll"/-->
 	<property name="PhysicsBody" value="zombieDog"/>
 
@@ -1433,7 +1433,7 @@
 	<property name="ModelType" value="Standard"/>
 	<property name="SurfaceCategory" value="metal"/>
 	<property name="IgnoreTrigger" value="true"/>
-	<property name="LootListAlive" value="vehicleMinibike"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
 	<property name="IsEnemyEntity" value="false"/>
 	<property name="Explosion.ParticleIndex" value="6"/>
 	<property name="Explosion.RadiusBlocks" value="3"/>
@@ -1442,8 +1442,8 @@
 	<property name="Explosion.EntityDamage" value="30"/>
 	<property name="RotateToGround" value="true"/>
 	<property name="Faction" value="none"/>
-	<property name="MapIcon" value="ui_game_symbol_minibike"/>
-	<property name="NavObject" value="minibike" />
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4" />
 </entity_class>
 
 <entity_class name="EndZbuggy">
@@ -1455,7 +1455,7 @@
 	<property name="ModelType" value="Standard"/>
 	<property name="SurfaceCategory" value="metal"/>
 	<property name="IgnoreTrigger" value="true"/>
-	<property name="LootListAlive" value="vehicleMinibike"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
 	<property name="IsEnemyEntity" value="false"/>
 	<property name="Explosion.ParticleIndex" value="6"/>
 	<property name="Explosion.RadiusBlocks" value="3"/>
@@ -1464,8 +1464,8 @@
 	<property name="Explosion.EntityDamage" value="30"/>
 	<property name="RotateToGround" value="true"/>
 	<property name="Faction" value="none"/>
-	<property name="MapIcon" value="ui_game_symbol_minibike"/>
-	<property name="NavObject" value="minibike" />
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4" />
 </entity_class>
 
 <entity_class name="EndZdeville">
@@ -1477,7 +1477,7 @@
 	<property name="ModelType" value="Standard"/>
 	<property name="SurfaceCategory" value="metal"/>
 	<property name="IgnoreTrigger" value="true"/>
-	<property name="LootListAlive" value="vehicleMinibike"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
 	<property name="IsEnemyEntity" value="false"/>
 	<property name="Explosion.ParticleIndex" value="6"/>
 	<property name="Explosion.RadiusBlocks" value="3"/>
@@ -1486,9 +1486,164 @@
 	<property name="Explosion.EntityDamage" value="30"/>
 	<property name="RotateToGround" value="true"/>
 	<property name="Faction" value="none"/>
-	<property name="MapIcon" value="ui_game_symbol_minibike"/>
-	<property name="NavObject" value="minibike" />
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4" />
+</entity_class>
+
+<entity_class name="EndZblueracecarLL">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityVJeep"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZracecars.unity3d?EndZblueracecarLL.prefab"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="30"/>
+	<property name="Explosion.EntityDamage" value="30"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4" />
+</entity_class>
+
+<entity_class name="EndZyellowracecarLL">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityVJeep"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZracecars.unity3d?EndZyellowracecarLL.prefab"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="30"/>
+	<property name="Explosion.EntityDamage" value="30"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4" />
+</entity_class>
+
+<entity_class name="EndZredracecarLL">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityVJeep"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZracecars.unity3d?EndZredracecarLL.prefab"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="30"/>
+	<property name="Explosion.EntityDamage" value="30"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4" />
+</entity_class>
+
+<entity_class name="EndZblackracecarLL">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityVJeep"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZracecars.unity3d?EndZblackracecarLL.prefab"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="30"/>
+	<property name="Explosion.EntityDamage" value="30"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4" />
+</entity_class>
+
+<entity_class name="EndZcamaroLL">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityVJeep"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZ1970camaro1.unity3d?EndZ1970camaro.prefab"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="30"/>
+	<property name="Explosion.EntityDamage" value="30"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4" />
+</entity_class>
+
+<entity_class name="EndZdodgetruckLL">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityVJeep"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZdodgetruck1.unity3d?EndZdodgetruck.prefab"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="30"/>
+	<property name="Explosion.EntityDamage" value="30"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4" />
+</entity_class>
+
+<entity_class name="EndZmilitarytruckLL">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityVJeep"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZmilitarytruck1.unity3d?EndZmilitarytruck.prefab"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="30"/>
+	<property name="Explosion.EntityDamage" value="30"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4" />
 </entity_class>
 </append>
+
 <!--END OF VEHICLES-->
 </configs>

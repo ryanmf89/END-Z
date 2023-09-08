@@ -37,4 +37,24 @@
 </item_display_info>
 </append>
 
+<append xpath="//item_display">
+<item_display_info display_type="medicallavenderpatchLL" display_group="groupConsumables">
+	<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+	<display_entry name="dhealAbrasionMult" title_key="statHealAbrasionMult" display_type="Percent"/>
+	<display_entry name="dStopsBleeding" title_key="statStopsBleeding" display_type="Percent"/>
+</item_display_info>
+</append>
+
+<append xpath="//item_display">
+<item_display_info display_type="allinonegogglesLL">
+	<display_entry name="AttributeLevel" tags="attPerception" title_key="statShowPerception" display_leading_plus="true"/>
+	<display_entry name="AttributeLevel" tags="attFortitude" title_key="statShowFortitude" display_leading_plus="true"/>
+	<display_entry name="AttributeLevel" tags="attAgility" title_key="statShowAgility" display_leading_plus="true"/>
+	<display_entry name="AttributeLevel" tags="attStrength" title_key="statShowStrength" display_leading_plus="true"/>
+	<display_entry name="AttributeLevel" tags="attIntellect" title_key="statShowIntellect" display_leading_plus="true"/>
+	<display_entry name="AttributeLevel" tags="attendztree" title_key="statShowattendztree" display_leading_plus="true"/>
+</item_display_info>
+</append>
+
+
 </configs>

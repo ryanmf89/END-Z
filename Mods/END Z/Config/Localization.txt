@@ -1,5 +1,8 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english
 
+EndZallinoneglassesLL,items,Clothes,,,"EndZ Glasses"
+EndZallinoneglassesLLDesc,items,Clothes,,,"These glasses add 1 point to the skill trees like other glasses. Has some hidden benefits as well! Credits to the DrunkPenguin."
+statShowattendztree,ui_display,Item stat,,,EndZ
 
 startershovelLL,Items,melee,,,"Starter Shovel"
 startershovelLLDesc,Items,melee,,,"cant be crafted, but can be repaired with stone."
@@ -54,6 +57,8 @@ resourcevibeRepairKitLLDesc,Items,Resource,,,"use this repair kit to repair vibr
 
 resourceforgedvibeLL,Items,Resource,,,"Forged Vibranium"
 resourceforgedvibeLLDesc,Items,Resource,,,"The strongest metal on the planet! search and craft at the workbench with other forged items"
+resourcescrapvibeLL,Items,Resource,,,"Scrap Vibranium"
+resourcescrapvibeLLDesc,Items,Resource,,,"In the Forge use an anvil to craft Forged Vibranium with this resource"
 vibepickaxeLL,Items,melee,,,"Vibranium Pickaxe"
 vibepickaxeLLDesc,Items,melee,,,"such a good strong harvest tool, repair with a vibranium repair kit!"
 vibeaxeLL,Items,melee,,,"Vibranium Axe"
@@ -85,13 +90,13 @@ endzStarterCrateOpen,blocks,Container,,,"Starting Gear: Open This"
 generatorbankLL,Blocks,Block,,,"Improved Generator Bank"
 generatorbankLLDesc,Blocks,Block,,,"will suck the gas from your pocket but will produce high volts to power more items with one genny"
 
-ammo44MagnumBulletSteel,Items,ammo,,,".44 Magnum Round, Steel (Ammo)"
-ammo9mmBulletSteel,Items,ammo,,,"9mm Round, Steel (Ammo)"
-ammo762mmBulletFMJSteel,Items,ammo,,,"7.62mm Round, Steel (Ammo)"
-ammoSteelCasedGroupDesc,Items,ammo,,,Steel-cased ammunition is a more effective way to dispatch the zombie idiots.
+ammo44MagnumBulletvibe,Items,ammo,,,".44 Rounds, Vibranium (Ammo)"
+ammo9mmBulletvibe,Items,ammo,,,"9mm, Vibranium (Ammo)"
+ammo762mmBulletvibe,Items,ammo,,,"7.62mm, Vibranium (Ammo)"
+ammovibeCasedGroupDesc,Items,ammo,,,Vibranium ammunition is a more effective way to dispatch the zombie idiots.
 
-resourceBulletCasingSteel,Items,ammo,,,"Bullet Casing, Steel"
-resourceBulletCasingSteelDesc,Items,ammo,,,Steel bullet are much stronger then your normal bullet.
+resourceBulletCasingvibe,Items,ammo,,,"Vibranium Bullet Casing"
+resourceBulletCasingvibelDesc,Items,ammo,,,Vibranium bullets are much stronger then your normal bullet.
 
 cntWallOvenWorking,blocks,Container,,,Working Wall Oven
 cntWallOvenPowered,blocks,Container,,,Powered Wall Oven
@@ -345,13 +350,6 @@ modDyeblueLL,item_modifiers,mod,,,Dye: EndZ Blue
 modDyeblackLL,item_modifiers,mod,,,Dye: EndZ Black
 modDyeorangeLL,item_modifiers,mod,,,Dye: EndZ Orange
 
-WarthogVehicle,vehicles,vehicle,,,The Angel McCarthy Series(Warthog)
-WarthogVehiclePlaceable,vehicles,item,,,The Angel McCarthy Series(Warthog)
-EndZbuggy,vehicles,vehicle,,,EndZ Racing Bug
-EndZbuggyPlaceable,vehicles,item,,,EndZ Racing Bug
-EndZdeville,vehicles,vehicle,,,EndZ Cruella
-EndZdevillePlaceable,vehicles,item,,,EndZ Cruella
-
 endzfireextLLitem,,,,,Fire Extinguisher
 endzfireextLLitemDesc,,,,,Put out a fire.
 endzfireextLLBlock,,,,,Fire Extinguisher
@@ -367,19 +365,6 @@ perkDaringAdventurerRank3Desc,progression,perk,,,Mercenary
 perkDaringAdventurerRank3LongDesc,progression,perk,,,"You've made a name for yourself as a mercenary for hire.\nGain access to better trader items and get 15% more dukes, also choose 4 rewards."
 perkDaringAdventurerRank4Desc,progression,perk,,,Daring Adventurer
 perkDaringAdventurerRank4LongDesc,progression,perk,,,"You are the daring adventurer!\nGain access to better trader items and get 20% more dukes.\nPick 5 rewards for your hard effort."
-
-perkimagod,,,,,"Im A Fearless Warrior"
-perkimagodDesc,,,,,"Someone with your strength seeks a real challenge. Only real men buy this perk!"
-perkimagodRank1Desc,,,,,"Wussy"
-perkimagodRank1LongDesc,,,,,"You still need to grow in strength in order to attract the real challenges. Raise gamestage by 10."
-perkimagodRank2Desc,,,,,"Wannabee"
-perkimagodRank2LongDesc,,,,,"Do you have what it takes or are you just a Wannabee? Raise gamestage by 25."
-perkimagodRank3Desc,,,,,"Contender"
-perkimagodRank3LongDesc,,,,,"Now we are talking, you are contending with the real fighters. Raise gamestage by 50."
-perkimagodRank4Desc,,,,,"Challenger"
-perkimagodRank4LongDesc,,,,,"You are a real challenger, only drawing in the hardiest of enemies. Raise gamestage by 75."
-perkimagodRank5Desc,,,,,"Show-Off"
-perkimagodRank5LongDesc,,,,,"Now you are just showing off. Raise gamestage by 100."
 
 attendztree,progression,Attribute,,,EndZ Skills
 attendztreeName,progression,Attribute,,,EndZ
@@ -417,8 +402,58 @@ reqattendztreeLevel08,progression,Attribute,,,EndZ Level 8
 reqattendztreeLevel09,progression,Attribute,,,EndZ Level 9
 reqattendztreeLevel10,progression,Attribute,,,EndZ Level 10
 
+perkimagod,,,,,"EndZ Fearless Warrior"
+perkimagodDesc,,,,,"Someone with your strength seeks a real challenge. Only real men buy this perk!"
+perkimagodRank1Desc,,,,,"Wussy"
+perkimagodRank1LongDesc,,,,,"You still need to grow in strength in order to attract the real challenges. Raise gamestage by 10."
+perkimagodRank2Desc,,,,,"Wannabee"
+perkimagodRank2LongDesc,,,,,"Do you have what it takes or are you just a Wannabee? Raise gamestage by 25."
+perkimagodRank3Desc,,,,,"Contender"
+perkimagodRank3LongDesc,,,,,"Now we are talking, you are contending with the real fighters. Raise gamestage by 50."
+perkimagodRank4Desc,,,,,"Challenger"
+perkimagodRank4LongDesc,,,,,"You are a real challenger, only drawing in the hardiest of enemies. Raise gamestage by 75."
+perkimagodRank5Desc,,,,,"Show-Off"
+perkimagodRank5LongDesc,,,,,"Now you are just showing off. Raise gamestage by 100."
+
+perkvehicles,,,,,"EndZ Vehicles"
+perkvehiclesDesc,,,,,"This tree is where you unlock the EndZ specific Vehicles. Tier1=2000hp Tier2=4000hp Tier3=6000hp Tier4=8000hp Tier5=10Khp. All Vehicles are pretty fast, so their worth having and screw vanilla vehicles."
+perkvehiclesRank1Desc,,,,,"Classic Cars"
+perkvehiclesRank1LongDesc,,,,,"Unlocks- Deville"
+perkvehiclesRank2Desc,,,,,"Muscle Cars"
+perkvehiclesRank2LongDesc,,,,,"Unlocks- 1970Camaro"
+perkvehiclesRank3Desc,,,,,"Race Cars"
+perkvehiclesRank3LongDesc,,,,,"Unlocks- Buggy, Blue Racer, Yellow Racer, Red Racer, Black Racer"
+perkvehiclesRank4Desc,,,,,"Trucks"
+perkvehiclesRank4LongDesc,,,,,"Unlocks- 1950Dodge Truck"
+perkvehiclesRank5Desc,,,,,"Military Vehicles"
+perkvehiclesRank5LongDesc,,,,,"Unlocks- Warthog, Military Truck"
+
+WarthogVehicle,vehicles,vehicle,,,EndZ Angel McCarthy Series(Warthog)
+WarthogVehiclePlaceable,vehicles,item,,,EndZ Angel McCarthy Series(Warthog)
+EndZbuggy,vehicles,vehicle,,,EndZ Racing Bug
+EndZbuggyPlaceable,vehicles,item,,,EndZ Racing Bug
+EndZdeville,vehicles,vehicle,,,EndZ Cruella
+EndZdevillePlaceable,vehicles,item,,,EndZ Cruella
+EndZblueracecarLLPlaceable,vehicles,item,,,EndZ Blue Racecar
+EndZyellowracecarLLPlaceable,vehicles,item,,,EndZ Yellow Racecar
+EndZredracecarLLPlaceable,vehicles,item,,,EndZ Red Racecar
+EndZblackracecarLLPlaceable,vehicles,item,,,EndZ Black Racecar
+EndZblueracecarLL,vehicles,vehicle,,,EndZ Blue Racecar
+EndZyellowracecarLL,vehicles,vehicle,,,EndZ Yellow Racecar
+EndZredracecarLL,vehicles,vehicle,,,EndZ Red Racecar
+EndZblackracecarLL,vehicles,vehicle,,,EndZ Black Racecar
+EndZcamaroLLPlaceable,vehicles,item,,,EndZ 1970 Camaro
+EndZcamaroLL,vehicles,vehicle,,,EndZ 1970 Camaro
+EndZdodgetruckLLPlaceable,vehicles,item,,,EndZ 1950 Dodge Truck
+EndZdodgetruckLL,vehicles,vehicle,,,EndZ 1950 Dodge Truck
+EndZmilitarytruckLLPlaceable,vehicles,item,,,EndZ Military Truck
+EndZmilitarytruckLL,vehicles,vehicle,,,EndZ Military Truck
+
 endzxpcardLL,items,Admin,,,EndZ Gains Card
 endzxpcardLLDesc,items,Admin,,,You gain 1 skill point and 5000xp for reading this card, cannot craft you have to find it in the world loot.
+
+bedrollteleportcardLL,items,Admin,,,EndZ Backpack Teleport
+bedrollteleportcardLLDesc,items,Admin,,,Read this and instantly teleport to your dropped backpack.
 
 BeehiveEmptyLL,blocks,Block,,,Beehive
 BeehiveEmptyLLDesc,blocks,Block,,,"A beehive that produces honey, it matches crop growth time of 30 minutes and will produce 10 honey."
@@ -431,3 +466,14 @@ callscreamerblockLLDesc,blocks,Block,,,"Place this block to call non stop scream
 EndZgrootLL,entityclasses,Entity,,,Grute
 EndZgrootferalLL,entityclasses,Entity,,,Feral Grute
 EndZgrootradiatedLL,entityclasses,Entity,,,Radiated Grute
+
+resourcelavenderLL,items,Item,,,Lavender
+resourcelavenderLLDesc,items,Item,,,Very useful early on to craft bandages to keep alive. Can only harvest in the wild. Cannot be grown.
+medicallavenderpatchLL,items,Medical,,,"Lavender Patch"
+medicallavenderpatchLLDesc,items,Medical,,,"this patch will help will small amounts of health and easy to make."
+
+materialMmoonrock_shapes,blocks,Block,,,Moonrock
+moonrockShapes:VariantHelper,blocks,Block,,,Moonrock Shapes
+
+materialMvibe_shapes,blocks,Block,,,Vibranium
+vibeShapes:VariantHelper,blocks,Block,,,Vibranium Shapes

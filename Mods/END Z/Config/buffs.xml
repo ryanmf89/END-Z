@@ -414,6 +414,16 @@
 </buff>
 </append>
 
+<append xpath="/buffs">
+<buff name="buffbackpackteleLL" description="Gives one skill point" icon="ui_game_symbol_lightbulb" icon_color="255,175,175" hidden="true">
+<stack_type value="ignore"/>
+<duration value="1"/>
+
+<effect_group>
+	<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="actionbackpackteleLL" />
+</effect_group>
+</buff>
+</append>
 
 
 </configs>

@@ -2,7 +2,7 @@
 
 <!-- Set group for new craftable foods in items.xml -->
 <set xpath="/items/item[@name='foodShamSandwich']/property[@name='Group']/@value">Food/Cooking,CFFood/Cooking,Medical</set>
-
+<set xpath="//item[@name='ammoArrowStone' or @name='ammoArrowIron' or @name='ammoArrowSteelAP' or @name='ammoCrossbowBoltStone' or @name='ammoCrossbowBoltIron' or @name='ammoCrossbowBoltSteelAP']/property[@name='IsSticky']/@value">false</set>
 <!-- * * * * * * * * * * ammunition / arrows / bolts / fuel * * * * * * * * * * -->
 
 <set xpath="/items/item[@name='ammo9mmBulletBall']          /property[@name='Stacknumber']/@value">2500</set>   <!-- Default 300 -->
@@ -381,10 +381,11 @@
 	<property name="EconomicBundleSize" value="50"/>
 	<property name="TraderStageTemplate" value="midTier1"/>
 	<property name="Group" value="Resources"/>
+	<property name="UnlockedBy" value="craftingWorkstations"/>
 </item>
 
 <item name="moonrockshovelLL">
-	<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,moonrockshovelLL"/>
+	<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,harvestingSkill,moonrockshovelLL"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="18"/>
 	<property name="Meshfile" value="#@modfolder:Resources/moonrockshovel2.unity3d?moonrockshovel"/>
@@ -442,7 +443,7 @@
 </item>
 
 <item name="moonrockaxeLL">
-	<property name="Tags" value="axe,melee,light,tool,longShaft,repairTool,miningTool,attStrength,perkMiner69r,perkMotherLode,perkTheHuntsman,canHaveCosmetic,moonrockaxeLL"/>
+	<property name="Tags" value="axe,melee,light,tool,longShaft,repairTool,miningTool,attStrength,perkMiner69r,perkMotherLode,perkTheHuntsman,canHaveCosmetic,harvestingSkill,corpseRemoval,moonrockaxeLL"/>
 	<property name="DisplayType" value="meleeRepairTool"/>
 	<property name="HoldType" value="32"/>
 	<property name="Meshfile" value="#@modfolder:Resources/moonrockaxe2.unity3d?moonrockaxe"/>
@@ -511,7 +512,7 @@
 </item>
 
 <item name="moonrockclubLL">
-	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfStrength,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic,clubSkill"/>
+	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfStrength,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic,clubSkill,moonrockclubLL"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="Group" value="Ammo/Weapons,Basics,Melee Weapons"/>
 	<property name="Meshfile" value="#@modfolder:Resources/moonrockclub2.unity3d?moonrockclub"/>
@@ -598,7 +599,7 @@
 <item name="moonrockbatonLL">
 	<property name="CustomIcon" value="meleeWpnBatonT0PipeBaton" />
 	<property name="CustomIconTint" value="7ec2c0" />
-	<property name="Tags" value="melee,grunting,light,perkFlurryOfIntellect,weapon,meleeWeapon,noStunEffect,attIntellect,perkElectrocutioner,canHaveCosmetic,roboticsSkill"/>
+	<property name="Tags" value="melee,grunting,light,perkFlurryOfIntellect,weapon,meleeWeapon,noStunEffect,attIntellect,perkElectrocutioner,canHaveCosmetic,roboticsSkill,moonrockbatonLL"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/PipeBaton/pipeBatonPrefab.prefab"/>
@@ -683,7 +684,7 @@
 </item>
 
 <item name="moonrockspearLL">
-	<property name="Tags" value="melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,canHaveCosmetic,thrownWeapon"/>
+	<property name="Tags" value="melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,perkFlurryOfPerception,canHaveCosmetic,spearSkill,moonrockspearLL"/>
 	<property name="DisplayType" value="meleeSpear"/>
 	<property name="HoldType" value="18"/>
 	<property name="Meshfile" value="#@modfolder:Resources/moonrockspear2.unity3d?moonrockspear"/>
@@ -752,14 +753,14 @@
 	<passive_effect name="EntityDamage" operation="base_set" value="14"/> 
 	<passive_effect name="BlockDamage" operation="base_set" value="10"/>
 	<passive_effect name="AttacksPerMinute" operation="base_set" value="65"/>
-	<passive_effect name="StaminaLoss" operation="base_set" value="13" tier="1,80" tags="primary"/>
-	<passive_effect name="DegradationMax" operation="base_set" value="250,350" tier="1,80" />
+	<passive_effect name="StaminaLoss" operation="base_set" value="13" tier="1,6" tags="primary"/>
+	<passive_effect name="DegradationMax" operation="base_set" value="250,350" tier="2,6" />
 	<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeepCuts"/>			
 	<passive_effect name="ModSlots" operation="base_set" value="2,2,3,4,5,6" tier="1,2,3,4,5,6"/>
 	<passive_effect name="ModPowerBonus" operation="perc_add" value=".05" tags="EntityDamage"/>
 	<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>	
-	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.55" tier="1,80"/>
-	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.55" tier="1,80"/>			
+	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.55" tier="1,6"/>
+	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.55" tier="1,6"/>			
 	<passive_effect name="TargetArmor" operation="perc_add" value="-.25"/>
 	<display_value name="dTargetArmor" value="-.25"/>
 </effect_group>
@@ -768,8 +769,8 @@
 	<passive_effect name="BlockDamage" operation="perc_add" value="2" tags="secondary"/>
 	<passive_effect name="AttacksPerMinute" operation="perc_add" value="0.35" tags="secondary"/>
 	<passive_effect name="StaminaLoss" operation="base_add" value="20" tags="secondary"/>
-	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.3" tags="secondary" tier="1,80"/>
-	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.3" tags="secondary" tier="1,80"/>
+	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.3" tags="secondary" tier="1,6"/>
+	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.3" tags="secondary" tier="1,6"/>
 </effect_group>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 <effect_group name="meleeWpnSpearT0StoneSpear">
@@ -778,7 +779,7 @@
 	<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkJavelinMaster"/>
 	<passive_effect name="AttacksPerMinute" operation="base_set" value="65" tags="perkJavelinMaster"/>
 	<passive_effect name="StaminaLoss" operation="base_set" value="15" tags="primary"/>
-	<passive_effect name="DegradationMax" operation="base_set" value="150,88" tier="1,6" tags="perkJavelinMaster"/>
+	<passive_effect name="DegradationMax" operation="base_set" value="250,350" tier="1,6" tags="perkJavelinMaster"/>
 	<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkJavelinMaster"/>
 	<passive_effect name="MaxRange" operation="base_set" value="3.2" tags="perkJavelinMaster"/>
 	<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkJavelinMaster"/>
@@ -802,7 +803,7 @@
 </item>
 	
 <item name="moonrocksledgeLL">
-	<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
+	<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,perkFlurryOfStrength,canHaveCosmetic,sledgeSkill,moonrocksledgeLL"/>
 	<property name="DisplayType" value="meleeHeavy"/>
 	<property name="HoldType" value="33"/>
 	<property name="Meshfile" value="#@modfolder:Resources/moonrocksledge2.unity3d?moonrocksledge"/>
@@ -917,7 +918,7 @@
 <item name="brassstunbatonLL">
 	<property name="CustomIcon" value="meleeWpnBatonT2StunBaton" />
 	<property name="CustomIconTint" value="8f6f17" />
-	<property name="Tags" value="melee,grunting,light,perkFlurryOfIntellect,weapon,meleeWeapon,attIntellect,perkElectrocutioner,canHaveCosmetic,roboticsSkill,stunBaton"/>
+	<property name="Tags" value="melee,grunting,light,perkFlurryOfIntellect,weapon,meleeWeapon,attIntellect,perkElectrocutioner,canHaveCosmetic,roboticsSkill,stunBaton,brassstunbatonLL"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="58"/>
 	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/TaserBaton/TaserBatonPrefab.prefab"/>
@@ -1141,7 +1142,7 @@
 <remove xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/property[@name='TintColor']"></remove>
 <item name="brassshovelLL">
 	<property name="Extends" value="meleeToolShovelT0StoneShovel"/>
-	<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic"/>
+	<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,harvestingSkill,brassshovelLL"/>
 	<property name="Meshfile" value="#@modfolder:Resources/brassshovelLL2.unity3d?brassshovelLL"/>
 	<property name="TintColor" value="143,111,23,255"/>
 	<property name="Material" value="Mbrass"/>
@@ -1190,6 +1191,7 @@
 
 <remove xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='TintColor']/@value">102, 0, 0</remove>
 <item name="brassaxeLL">
+	<property name="Tags" value="axe,melee,grunting,medium,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,harvestingSkill,corpseRemoval,brassaxeLL"/>
 	<property name="Extends" value="meleeToolAxeT1IronFireaxe"/>
 	<property name="Meshfile" value="#@modfolder:Resources/brassaxeLL2.unity3d?brassaxeLL"/>
 	<property name="TintColor" value="143,111,23,255"/>
@@ -1241,6 +1243,7 @@
 
 <remove xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='TintColor']"></remove>
 <item name="brasspickaxeLL">
+	<property name="Tags" value="melee,grunting,medium,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill,brasspickaxeLL"/>
 	<property name="Extends" value="meleeToolPickT1IronPickaxe"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="4"/>
@@ -1303,7 +1306,7 @@
 
 <remove xpath="/items/item[@name='meleeWpnSledgeT1IronSledgehammer']/property[@name='TintColor']"></remove>
 <item name="brasssledgeLL">
-	<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
+	<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,perkFlurryOfStrength,canHaveCosmetic,sledgeSkill,brasssledgeLL"/>
 	<property name="DisplayType" value="meleeHeavy"/>
 	<property name="HoldType" value="33"/>
 	<property name="Meshfile" value="#@modfolder:Resources/brasssledgeLL2.unity3d?brasssledgeLL"/>
@@ -1386,7 +1389,7 @@
 
 <!--remove xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/property[@name='TintColor']"></remove-->
 <item name="brassknifeLL">
-	<property name="Tags" value="knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
+	<property name="Tags" value="knife,melee,grunting,light,perkFlurryOfAgility,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic,bladeSkill,corpseRemoval,brassknifeLL"/>
 	<property name="DisplayType" value="meleeKnife"/>
 	<property name="HoldType" value="36"/>
 	<property name="Meshfile" value="#@modfolder:Resources/brassknifeLL2.unity3d?brassknifeLL"/>
@@ -1485,7 +1488,7 @@
 
 <remove xpath="/items/item[@name='meleeWpnClubT3SteelClub']/property[@name='TintColor']"></remove>
 <item name="brassclubLL"> 
-	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic"/>
+	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfStrength,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic,clubSkill,brassclubLL"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="Meshfile" value="#@modfolder:Resources/brassclubLL2.unity3d?brassclubLL"/>
@@ -1571,7 +1574,7 @@
 <item name="brassknucksLL">
 	<property name="CustomIcon" value="meleeWpnKnucklesT1IronKnuckles" />
 	<property name="CustomIconTint" value="8f6f17" />
-	<property name="Tags" value="blunt,melee,grunting,light,perkFlurryOfBlows,weapon,attFortitude,perkBrawler,noBlades,canHaveCosmetic"/>
+	<property name="Tags" value="blunt,melee,grunting,light,perkFlurryOfFortitude,weapon,attFortitude,perkBrawler,noBlades,canHaveCosmetic,knuckleSkill,brassknucksLL"/>
 	<property name="Material" value="Mbrass"/>
 	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Knuckles/knucklesRight_Prefab.prefab"/>
 	<property name="HoldType" value="61"/>
@@ -1662,6 +1665,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 	
 <item name="brassspearLL">
+	<property name="Tags" value="melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,perkFlurryOfPerception,canHaveCosmetic,spearSkill,brassspearLL"/>
 	<property name="Extends" value="meleeWpnSpearT0StoneSpear"/>
 	<property name="Meshfile" value="#@modfolder:Resources/brassspearLL2.unity3d?brassspearLL"/>
 	<!--property name="TintColor" value="8f6f17"/-->
@@ -1717,14 +1721,14 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<passive_effect name="EntityDamage" operation="base_set" value="28"/> 
 	<passive_effect name="BlockDamage" operation="base_set" value="10"/>
 	<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>
-	<passive_effect name="StaminaLoss" operation="base_set" value="16" tier="1,80" tags="primary"/>
-	<passive_effect name="DegradationMax" operation="base_set" value="450,650" tier="1,80" />
+	<passive_effect name="StaminaLoss" operation="base_set" value="16" tier="1,6" tags="primary"/>
+	<passive_effect name="DegradationMax" operation="base_set" value="450,650" tier="1,6" />
 	<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeepCuts"/>	
 	<passive_effect name="ModSlots" operation="base_set" value="2,2,3,4,5,6" tier="1,2,3,4,5,6"/>
 	<passive_effect name="ModPowerBonus" operation="perc_add" value=".05" tags="EntityDamage"/>
 	<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>			
-	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.55" tier="1,80"/>
-	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.55" tier="1,80"/>
+	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.55" tier="1,6"/>
+	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.55" tier="1,6"/>
 	<passive_effect name="TargetArmor" operation="perc_add" value="-.25"/>
 	<display_value name="dTargetArmor" value="-.25"/>
 </effect_group>
@@ -1733,8 +1737,8 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<passive_effect name="BlockDamage" operation="perc_add" value="2" tags="secondary"/>
 	<passive_effect name="AttacksPerMinute" operation="perc_add" value="0.35" tags="secondary"/>
 	<passive_effect name="StaminaLoss" operation="base_add" value="20" tags="secondary"/>
-	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.3" tags="secondary" tier="1,80"/>
-	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.3" tags="secondary" tier="1,80"/>
+	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.3" tags="secondary" tier="1,6"/>
+	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.3" tags="secondary" tier="1,6"/>
 </effect_group>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 </item>
@@ -1770,10 +1774,12 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="CraftingIngredientTime" value="15"/>
 	<property name="RepairTime" value="1"/>
 	<property name="RepairAmount" value="400"/>
+	<property name="UnlockedBy" value="craftingWorkstations"/>
 </item>
 
 <remove xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/property[@name='TintColor']"></remove>
 <item name="vibepickaxeLL">
+	<property name="Tags" value="melee,grunting,medium,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill,vibepickaxeLL"/>
 	<property name="Extends" value="meleeToolPickT2SteelPickaxe"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="4"/>
@@ -1835,6 +1841,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 
 <item name="vibeaxeLL">
+	<property name="Tags" value="axe,melee,grunting,medium,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,harvestingSkill,corpseRemoval,vibeaxeLL"/>
 	<property name="Extends" value="meleeToolAxeT1IronFireaxe"/>
 	<property name="Meshfile" value="#@modfolder:Resources/vibeaxeLL2.unity3d?vibeaxeLL"/>
 	<!--property name="TintColor" value="fcfcfc"/-->
@@ -1886,7 +1893,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 
 <item name="vibeshovelLL">
 	<property name="Extends" value="meleeToolShovelT0StoneShovel"/>
-	<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic"/>
+	<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,harvestingSkill,vibeshovelLL"/>
 	<property name="Meshfile" value="#@modfolder:Resources/vibeshovelLL2.unity3d?vibeshovelLL"/>
 	<property name="Material" value="Mbrass"/>
 	<property name="RepairTools" value="resourcevibeRepairKitLL"/>
@@ -1933,6 +1940,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 
 <item name="t3vibespearLL">
+	<property name="Tags" value="melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,perkFlurryOfPerception,canHaveCosmetic,spearSkill,t3vibespearLL"/>
 	<property name="Extends" value="meleeWpnSpearT1IronSpear"/>
 	<property name="HoldType" value="18"/>
 	<property name="Meshfile" value="#@modfolder:Resources/vibespearLL2.unity3d?vibespearLL"/>
@@ -1987,14 +1995,14 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<passive_effect name="EntityDamage" operation="base_set" value="38"/> 
 	<passive_effect name="BlockDamage" operation="base_set" value="10"/>
 	<passive_effect name="AttacksPerMinute" operation="base_set" value="95"/>
-	<passive_effect name="StaminaLoss" operation="base_set" value="21" tier="1,80" tags="primary"/>
-	<passive_effect name="DegradationMax" operation="base_set" value="800" tier="1,80" />
+	<passive_effect name="StaminaLoss" operation="base_set" value="21" tier="1,6" tags="primary"/>
+	<passive_effect name="DegradationMax" operation="base_set" value="800" tier="1,6" />
 	<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeepCuts"/>
 	<passive_effect name="ModSlots" operation="base_set" value="2,2,3,4,5,6" tier="1,2,3,4,5,6"/>
 	<passive_effect name="ModPowerBonus" operation="perc_add" value=".05" tags="EntityDamage"/>
 	<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
-	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.55" tier="1,80"/>
-	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.55" tier="1,80"/>
+	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.55" tier="1,6"/>
+	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.55" tier="1,6"/>
 	<passive_effect name="TargetArmor" operation="perc_add" value="-.25"/>
 	<display_value name="dTargetArmor" value="-.25"/>
 </effect_group>
@@ -2003,8 +2011,8 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<passive_effect name="BlockDamage" operation="perc_add" value="2" tags="secondary"/>
 	<passive_effect name="AttacksPerMinute" operation="perc_add" value="0.35" tags="secondary"/>
 	<passive_effect name="StaminaLoss" operation="base_add" value="20" tags="secondary"/>
-	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.3" tags="secondary" tier="1,80"/>
-	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.3" tags="secondary" tier="1,80"/>
+	<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05,.3" tags="secondary" tier="1,6"/>
+	<passive_effect name="EntityDamage" operation="perc_add" value=".05,.3" tags="secondary" tier="1,6"/>
 </effect_group>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 </item>
@@ -2012,7 +2020,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 <item name="vibeaugerLL">
 	<property name="CustomIcon" value="meleeToolPickT3Auger" />
 	<property name="CustomIconTint" value="b804af" />
-	<property name="Tags" value="melee,heavy,tool,motorTool,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic"/>
+	<property name="Tags" value="melee,heavy,tool,motorTool,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,harvestingSkill,vibeaugerLL"/>
 	<property name="DisplayType" value="motorTool"/>
 	<property name="HoldType" value="20"/>
 	<property name="Meshfile" value="@:Other/Items/Tools/Auger/augerPrefab.prefab"/>
@@ -2088,7 +2096,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 <item name="vibeChainsawLL">
 	<property name="CustomIcon" value="meleeToolAxeT3Chainsaw" />
 	<property name="CustomIconTint" value="b804af" />
-	<property name="Tags" value="melee,heavy,tool,motorTool,attStrength,perkMiner69r,perkMotherLode,chainsaw,canHaveCosmetic,harvestingSkill"/>
+	<property name="Tags" value="melee,heavy,tool,motorTool,attStrength,perkMiner69r,perkMotherLode,chainsaw,canHaveCosmetic,harvestingSkill,corpseRemoval,vibeChainsawLL"/>
 	<property name="DisplayType" value="motorTool"/>
 	<property name="HoldType" value="19"/>
 	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Chainsaw/chainsawPrefab.prefab"/>
@@ -2185,7 +2193,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 
 <item name="vibesledgeLL">
-	<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
+	<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,perkFlurryOfStrength,canHaveCosmetic,sledgeSkill,vibesledgeLL"/>
 	<property name="DisplayType" value="meleeHeavy"/>
 	<property name="HoldType" value="33"/>
 	<property name="Meshfile" value="#@modfolder:Resources/vibesledgeLL2.unity3d?vibesledgeLL"/>
@@ -2267,7 +2275,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 
 <item name="vibemacheteLL">
-	<property name="Tags" value="machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
+	<property name="Tags" value="machete,melee,grunting,light,longShaft,perkFlurryOfAgility,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic,bladeSkill,corpseRemoval,vibemacheteLL"/>
 	<property name="DisplayType" value="meleeKnife"/>
 	<property name="HoldType" value="47"/>
 	<property name="Meshfile" value="#@modfolder:Resources/vibeswordLL2.unity3d?vibeswordLL"/>
@@ -2362,7 +2370,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 <item name="vibeknucksLL">
 	<property name="CustomIcon" value="meleeWpnKnucklesT3SteelKnuckles" />
 	<property name="CustomIconTint" value="b804af" />
-	<property name="Tags" value="blunt,melee,grunting,light,perkFlurryOfBlows,weapon,attFortitude,perkBrawler,noBlades,canHaveCosmetic"/>
+	<property name="Tags" value="blunt,melee,grunting,light,perkFlurryOfFortitude,weapon,attFortitude,perkBrawler,noBlades,canHaveCosmetic,knuckleSkill,vibeknucksLL"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Knuckles/knucklesSpikedRight_Prefab.prefab"/>
 	<property name="HoldType" value="61"/>
@@ -2448,7 +2456,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </item>
 
 <item name="vibebatLL">
-	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic"/>
+	<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfStrength,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic,clubSkill,vibebatLL"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
 	<property name="Meshfile" value="#@modfolder:Resources/vibemaceLL2.unity3d?vibemaceLL"/>
@@ -2505,10 +2513,10 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<passive_effect name="EntityDamage" operation="base_set" value="40" tags="perkPummelPete,primary,melee"/> 
 	<passive_effect name="BlockDamage" operation="base_set" value="10" tags="perkPummelPete,primary,melee"/>
 	<passive_effect name="AttacksPerMinute" operation="base_set" value="95" tags="perkFlurryOfBlows,perkPummelPete,primary,melee"/>
-	<passive_effect name="StaminaLoss" operation="base_set" value="21" tier="1,80" tags="melee,primary"/>
+	<passive_effect name="StaminaLoss" operation="base_set" value="21" tier="1,6" tags="melee,primary"/>
 	<passive_effect name="MaxRange" operation="base_set" value="2.4" tags="perkFlurryOfBlows"/>
 	<passive_effect name="BlockRange" operation="base_set" value="3" tags="perkFlurryOfBlows"/>
-	<passive_effect name="DegradationMax" operation="base_set" value="800" tier="1,80"/>	
+	<passive_effect name="DegradationMax" operation="base_set" value="800" tier="1,6"/>	
 	<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
 	<passive_effect name="ModSlots" operation="base_set" value="2,2,3,4,5,6" tier="1,2,3,4,5,6"/>
 	<passive_effect name="ModPowerBonus" operation="perc_add" value=".05" tags="EntityDamage"/>
@@ -2523,14 +2531,14 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="vibebatLL">
 	<requirement name="EntityTagCompare" target="other" tags="demon"/>
 </triggered_effect>	
-<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.6" tier="1,80"/>
-	<passive_effect name="EntityDamage" operation="perc_add" value="0,.6" tier="1,80"/>
+<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.6" tier="1,6"/>
+	<passive_effect name="EntityDamage" operation="perc_add" value="0,.6" tier="1,6"/>
 </effect_group>
 <effect_group name="Power Attack">
 	<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
 	<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
 	<passive_effect name="StaminaLoss" operation="base_set" value="22" tags="secondary"/>
-	<passive_effect name="EntityDamage" operation="perc_add" value="0,.35" tags="secondary" tier="1,80"/>
+	<passive_effect name="EntityDamage" operation="perc_add" value="0,.35" tags="secondary" tier="1,6"/>
 </effect_group>
 </item>
 <!--END OF VIBRANIUM ITEMS-->
@@ -3011,10 +3019,11 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 
 <!--STEEL AMMO-->
 <append xpath="/items">
-<item name="resourceBulletCasingSteel">
+<item name="resourceBulletCasingvibe">
 	<property name="Extends" value="resourceBulletCasing"/>
-	<property name="CustomIcon" value="resourceBulletCasing"/><property name="CustomIconTint" value="a0a0ff"/>
-	<property name="DescriptionKey" value="resourceBulletCasingSteelDesc"/>
+	<property name="CustomIcon" value="resourceBulletCasing"/>
+	<property name="CustomIconTint" value="106, 0, 163"/>
+	<property name="DescriptionKey" value="resourceBulletCasingvibelDesc"/>
 	<property name="Material" value="MresourceScrapIron"/>
 	<property name="Stacknumber" value="10000"/> <!-- STK resource -->
 	<property name="EconomicValue" value="10"/>
@@ -3023,14 +3032,14 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<property name="CraftingSkillGroup" value="craftSkillGuns"/>
 </item>
 		
-<item name="ammo9mmBulletSteel">
+<item name="ammo9mmBulletvibe">
 	<property name="Extends" value="ammo9mmBulletBall"/>
 	<property name="CustomIcon" value="ammo9mmBulletBall"/>
-	<property name="CustomIconTint" value="a0a0ff"/>
+	<property name="CustomIconTint" value="106, 0, 163"/>
 	<property name="DisplayType" value="ammoBulletSteel"/>
 	<property name="Material" value="Msteel"/>
 	<property name="EconomicValue" value="8"/>
-	<property name="DescriptionKey" value="ammoSteelCasedGroupDesc"/>
+	<property name="DescriptionKey" value="ammovibeCasedGroupDesc"/>
 	<property name="UnlockedBy" value="perkPistolPeteHPAmmo"/>
 <effect_group name="Base Effects" tiered="false">
 	<passive_effect name="EntityDamage" operation="base_set" value="50"/>
@@ -3040,29 +3049,29 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </effect_group>
 </item>
 
-<item name="ammo44MagnumBulletSteel">
+<item name="ammo44MagnumBulletvibe">
 	<property name="Extends" value="ammo44MagnumBulletBall"/>
 	<property name="CustomIcon" value="ammo44MagnumBulletBall"/>
-	<property name="CustomIconTint" value="a0a0ff"/>
+	<property name="CustomIconTint" value="106, 0, 163"/>
 	<property name="DisplayType" value="ammoBulletSteel"/>
 	<property name="Material" value="Msteel"/>
 	<property name="EconomicValue" value="9"/>
-	<property name="DescriptionKey" value="ammoSteelCasedGroupDesc"/>
+	<property name="DescriptionKey" value="ammovibeCasedGroupDesc"/>
 	<property name="UnlockedBy" value="perkEnforcerHPAmmo"/>
 <effect_group name="Base Effects" tiered="false">
-	<passive_effect name="EntityDamage" operation="base_set" value="80"/>
+	<passive_effect name="EntityDamage" operation="base_set" value="90"/>
 	<passive_effect name="BlockDamage" operation="base_set" value="10"/>
 </effect_group>
 </item>
 
-<item name="ammo762mmBulletFMJSteel">
+<item name="ammo762mmBulletvibe">
 	<property name="Extends" value="ammo762mmBulletBall"/>
 	<property name="CustomIcon" value="ammo762mmBulletBall"/>
-	<property name="CustomIconTint" value="a0a0ff"/>
+	<property name="CustomIconTint" value="106, 0, 163"/>
 	<property name="DisplayType" value="ammoBulletSteel"/>
 	<property name="Material" value="Msteel"/>
 	<property name="EconomicValue" value="10"/>
-	<property name="DescriptionKey" value="ammoSteelCasedGroupDesc"/>
+	<property name="DescriptionKey" value="ammovibeCasedGroupDesc"/>
 	<property name="UnlockedBy" value="perkSniperHPAmmo"/>
 <effect_group name="Base Effects" tiered="false">
 	<passive_effect name="EntityDamage" operation="base_set" value="75"/>
@@ -3074,22 +3083,22 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 </append>
 
 <!--CHANGES LEVER ACTION TO USE THE 44 MAGNUM BULLETS-->
-<set xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammo44MagnumBulletSteel</set>
+<set xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammo44MagnumBulletvibe</set>
 
 <!--ADDS STEEL BULLETS TO EXSISTING GUNS-->
-<append xpath="/items/item[@name='gunHandgunT0PipePistol']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo9mmBulletSteel</append>
-<append xpath="/items/item[@name='gunHandgunT1Pistol']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo9mmBulletSteel</append>
-<append xpath="/items/item[@name='gunHandgunT2Magnum44']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo44MagnumBulletSteel</append>
-<append xpath="/items/item[@name='gunHandgunT3DesertVulture']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo44MagnumBulletSteel</append>
-<append xpath="/items/item[@name='gunHandgunT3SMG5']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo9mmBulletSteel</append>
-<append xpath="/items/item[@name='gunRifleT0PipeRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
-<append xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
-<!--append xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append-->
-<append xpath="/items/item[@name='gunRifleT3SniperRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
-<append xpath="/items/item[@name='gunMGT0PipeMachineGun']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
-<append xpath="/items/item[@name='gunMGT1AK47']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>
-<append xpath="/items/item[@name='gunMGT2TacticalAR']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>	
-<append xpath="/items/item[@name='gunMGT3M60']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJSteel</append>	
+<append xpath="/items/item[@name='gunHandgunT0PipePistol']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo9mmBulletvibe</append>
+<append xpath="/items/item[@name='gunHandgunT1Pistol']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo9mmBulletvibe</append>
+<append xpath="/items/item[@name='gunHandgunT2Magnum44']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo44MagnumBulletvibe</append>
+<append xpath="/items/item[@name='gunHandgunT3DesertVulture']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo44MagnumBulletvibe</append>
+<append xpath="/items/item[@name='gunHandgunT3SMG5']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo9mmBulletvibe</append>
+<append xpath="/items/item[@name='gunRifleT0PipeRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletvibe</append>
+<append xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletvibe</append>
+<!--append xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletvibe</append-->
+<append xpath="/items/item[@name='gunRifleT3SniperRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletvibe</append>
+<append xpath="/items/item[@name='gunMGT0PipeMachineGun']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletvibe</append>
+<append xpath="/items/item[@name='gunMGT1AK47']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletvibe</append>
+<append xpath="/items/item[@name='gunMGT2TacticalAR']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletvibe</append>	
+<append xpath="/items/item[@name='gunMGT3M60']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammo762mmBulletvibe</append>	
 
 <!--A NEW MULTITOOL FOR THE GAME-->
 <!--multi tool, pick,axe,shovel,and knife in one-->
@@ -3280,7 +3289,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 <append xpath="/items">
 <item name="WarthogVehiclePlaceable">
     <property name="Extends" value="vehicleMinibikePlaceable"/>
-    <property name="UnlockedBy" value="perkGreaseMonkey"/>    
+    <property name="UnlockedBy" value="perkvehicles"/>    
     <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
     <property name="Meshfile" value="#@modfolder:/Resources/EndZwarthogLL1.unity3d?EndZwarthogLL.prefab"/>
     <property name="Material" value="Mmetal"/>
@@ -3298,7 +3307,7 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 
 <item name="EndZbuggyPlaceable">
     <property name="Extends" value="vehicleMinibikePlaceable"/>
-    <property name="UnlockedBy" value="perkGreaseMonkey"/>    
+    <property name="UnlockedBy" value="perkvehicles"/>    
     <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
 	<property name="Prefab" value="#@modfolder:/Resources/EndZbuggy1.unity3d?EndZbuggy.prefab"/>
     <property name="Material" value="Mmetal"/>
@@ -3310,19 +3319,145 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 <effect_group name="EndZbuggyPlaceable" tiered="false">
     <passive_effect name="ModSlots" operation="base_set" value="4"/>
     <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-    <passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+    <passive_effect name="DegradationMax" operation="base_set" value="6000"/>
 </effect_group>
 </item>
 
 <item name="EndZdevillePlaceable">
     <property name="Extends" value="vehicleMinibikePlaceable"/>
-    <property name="UnlockedBy" value="perkGreaseMonkey"/>    
+    <property name="UnlockedBy" value="perkvehicles"/>    
     <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
 	<property name="Prefab" value="#@modfolder:/Resources/EndZdeville1.unity3d?EndZdeville.prefab"/>
     <property name="Material" value="Mmetal"/>
     <property name="EconomicValue" value="70000"/>
 <property class="Action1">
     <property name="Vehicle" value="EndZdeville"/>
+    <property name="VehicleSize" value="2, 2, 2"/>
+</property>
+<effect_group name="EndZdevillePlaceable" tiered="false">
+    <passive_effect name="ModSlots" operation="base_set" value="4"/>
+    <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+    <passive_effect name="DegradationMax" operation="base_set" value="2000"/>
+</effect_group>
+</item>
+
+<item name="EndZblueracecarLLPlaceable">
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkvehicles"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZracecars.unity3d?EndZblueracecarLL.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+<property class="Action1">
+    <property name="Vehicle" value="EndZblueracecarLL"/>
+    <property name="VehicleSize" value="2, 2, 2"/>
+</property>
+<effect_group name="EndZdevillePlaceable" tiered="false">
+    <passive_effect name="ModSlots" operation="base_set" value="4"/>
+    <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+    <passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+</effect_group>
+</item>
+
+<item name="EndZyellowracecarLLPlaceable">
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkvehicles"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZracecars.unity3d?EndZyellowracecarLL.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+<property class="Action1">
+    <property name="Vehicle" value="EndZyellowracecarLL"/>
+    <property name="VehicleSize" value="2, 2, 2"/>
+</property>
+<effect_group name="EndZdevillePlaceable" tiered="false">
+    <passive_effect name="ModSlots" operation="base_set" value="4"/>
+    <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+    <passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+</effect_group>
+</item>
+
+<item name="EndZredracecarLLPlaceable">
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkvehicles"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZracecars.unity3d?EndZredracecarLL.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+<property class="Action1">
+    <property name="Vehicle" value="EndZredracecarLL"/>
+    <property name="VehicleSize" value="2, 2, 2"/>
+</property>
+<effect_group name="EndZdevillePlaceable" tiered="false">
+    <passive_effect name="ModSlots" operation="base_set" value="4"/>
+    <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+    <passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+</effect_group>
+</item>
+
+<item name="EndZblackracecarLLPlaceable">
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkvehicles"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZracecars.unity3d?EndZblackracecarLL.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+<property class="Action1">
+    <property name="Vehicle" value="EndZblackracecarLL"/>
+    <property name="VehicleSize" value="2, 2, 2"/>
+</property>
+<effect_group name="EndZdevillePlaceable" tiered="false">
+    <passive_effect name="ModSlots" operation="base_set" value="4"/>
+    <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+    <passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+</effect_group>
+</item>
+
+<item name="EndZcamaroLLPlaceable">
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkvehicles"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZ1970camaro1.unity3d?EndZ1970camaro.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+<property class="Action1">
+    <property name="Vehicle" value="EndZcamaroLL"/>
+    <property name="VehicleSize" value="2, 2, 2"/>
+</property>
+<effect_group name="EndZdevillePlaceable" tiered="false">
+    <passive_effect name="ModSlots" operation="base_set" value="4"/>
+    <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+    <passive_effect name="DegradationMax" operation="base_set" value="4000"/>
+</effect_group>
+</item>
+
+<item name="EndZdodgetruckLLPlaceable">
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkvehicles"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZdodgetruck1.unity3d?EndZdodgetruck.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+<property class="Action1">
+    <property name="Vehicle" value="EndZdodgetruckLL"/>
+    <property name="VehicleSize" value="2, 2, 2"/>
+</property>
+<effect_group name="EndZdevillePlaceable" tiered="false">
+    <passive_effect name="ModSlots" operation="base_set" value="4"/>
+    <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+    <passive_effect name="DegradationMax" operation="base_set" value="8000"/>
+</effect_group>
+</item>
+
+<item name="EndZmilitarytruckLLPlaceable">
+    <property name="Extends" value="vehicleMinibikePlaceable"/>
+    <property name="UnlockedBy" value="perkvehicles"/>    
+    <property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="Prefab" value="#@modfolder:/Resources/EndZmilitarytruck1.unity3d?EndZmilitarytruck.prefab"/>
+    <property name="Material" value="Mmetal"/>
+    <property name="EconomicValue" value="70000"/>
+<property class="Action1">
+    <property name="Vehicle" value="EndZmilitarytruckLL"/>
     <property name="VehicleSize" value="2, 2, 2"/>
 </property>
 <effect_group name="EndZdevillePlaceable" tiered="false">
@@ -3569,37 +3704,9 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<triggered_effect trigger="onSelfPrimaryActionRayHit" action="RemoveFire, SCore" target="positionAOE" range="5"/>				
 </effect_group>
 </item>
-
-<!--item name="ammoCO2">
-	<property name="Tags" value="fireretardent"/>
-	<property name="HoldType" value="45"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mcloth"/>
-	<property name="Stacknumber" value="50"/>
-	<property name="FuelValue" value="0"/>
-	<property name="EconomicValue" value="1"/>
-	<property name="EconomicBundleSize" value="100"/>
-	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
-	<property name="DescriptionKey" value="ammoNapalmDesc"/>
-	<property name="CustomIcon" value="ammoNapalm"/>		
-	<property name="UnlockedBy" value="perkYeahScience,ammoGasCanSchematic"/>
-	<property name="CraftingIngredientTime" value=".05"/>
-<effect_group name="CO2 Proc" tiered="false">
-	<triggered_effect trigger="onSelfAttackedOther" action="RemoveBuff" target="other" buff="buffIsOnFire"/>
-	<passive_effect name="EntityDamage" operation="base_set" value="0"/>
-	<passive_effect name="BlockDamage" operation="base_set" value="0"/>
-	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="head"/>
-	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="earth"/>
-	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="wood"/>
-	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="metal"/>
-	<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="stone"/>	
-	<triggered_effect trigger="onSelfPrimaryActionRayHit" action="RemoveFire, SCore" target="positionAOE" range="5"/>				
-</effect_group> 		
-</item-->
 </append>
 
-<!--XP ITEM GIVES 1000XP AND 1 SKILL POINT-->
+<!--XP ITEM GIVES 5000XP AND 1 SKILL POINT-->
 <append xpath="/items">
 <item name="endzxpcardLL">
 	<property name="Extends" value="schematicMaster" param1="ItemTypeIcon,AltItemTypeIcon"/>
@@ -3610,6 +3717,158 @@ Also, param1  is the damage multiplier for corpse harvesting. -->
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="5000"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffendzxpcardLL"/>
+	</effect_group>
+</item>
+</append>
+
+<append xpath="/items">
+<item name="bedrollteleportcardLL">
+	<property name="Extends" value="schematicMaster" param1="ItemTypeIcon,AltItemTypeIcon"/>
+	<property name="DescriptionKey" value="bedrollteleportcardLLDesc"/>
+	<property name="CustomIconTint" value="106, 0, 163"/>
+	<property name="Stacknumber" value="10"/>
+	<property name="Group" value="Science,Medical"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffbackpackteleLL"/>
+	</effect_group>
+</item>
+</append>
+
+<append xpath="/items">
+<item name="resourcelavenderLL"> <!-- scrap material -->
+	<property name="HoldType" value="16"/>
+	<property name="Meshfile" value="#@modfolder:Resources/EndZlavender1.unity3d?EndZlavender"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Weight" value="1"/>
+	<property name="Material" value="MresourcelavenderLL"/>
+	<property name="RepairTime" value="1"/>
+	<property name="RepairAmount" value="30"/>
+	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="FuelValue" value="1"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="EconomicBundleSize" value="50"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="Group" value="Resources"/>
+	<property name="CraftingIngredientTime" value=".2"/>
+	<property name="DescriptionKey" value="resourcelavenderLLDesc"/>
+</item>
+
+<item name="resourcescrapvibeLL">
+	<property name="DescriptionKey" value="resourcescrapvibeLLDesc"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MvibeblockLL"/>
+	<property name="HoldType" value="45" />
+	<property name="Stacknumber" value="10000"/>
+	<property name="Weight" value="1"/>
+	<property name="EconomicValue" value="10"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="CraftingIngredientExp" value="2"/>
+	<property name="CraftingIngredientTime" value="20"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="Group" value="Resources"/>
+</item>
+</append>
+
+<append xpath="/items">
+	<item name="medicallavenderpatchLL">
+	<property name="Tags" value="medical"/>
+	<property name="CustomIcon" value="medicalFirstAidBandage"/>
+	<property name="CustomIconTint" value="221, 135, 250" />
+	<property name="DisplayType" value="medicallavenderpatchLL"/>
+	<property name="Extends" value="medicalBandage"/>
+	<property name="Group" value="Science,Medical"/>
+	<property name="EconomicValue" value="1"/>
+	<property name="DescriptionKey" value="medicalhoneyBandageLLDesc"/>
+	<property name="Stacknumber" value="500"/>
+<effect_group tiered="false">
+<!-- used on self -->
+
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="healAbrasionMult" operation="set" value="3"/> <!-- X -->
+	<display_value name="dhealAbrasionMult" value="3"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryAbrasionTreated">
+	<requirement name="HasBuff" buff="buffInjuryAbrasion"/></triggered_effect>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="add" value="10"/> <!-- X -->
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="@medicRegHealthIncreaseSpeed"/>
+	
+	<display_value name="foodHealthAmount" value="10"/>
+	
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/><display_value name="dStopsBleeding" value="1"/>
+	<!-- used on other -->
+	<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healAbrasionMult" operation="set" value="3"/> <!-- X -->
+	<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medicalRegHealthAmount" operation="add" value="10"/> <!-- X -->
+	<!-- used on other, regular health per tick based on perkPhysician -->
+<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2">
+	<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="0"/></triggered_effect>
+<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2.5">
+	<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/></triggered_effect>
+<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2.8">
+	<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/></triggered_effect>
+<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="3.1">
+	<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/></triggered_effect>
+<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="3.5">
+	<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/></triggered_effect>
+	<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffProcessConsumables"/>
+	<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffInjuryAbrasionTreated">
+	<requirement name="HasBuff" buff="buffInjuryAbrasion"/></triggered_effect>
+</effect_group>
+</item>
+</append>
+
+
+<append xpath="/items">
+
+<item name="EndZallinoneglassesLL">
+	<property name="Extends" value="apparelShades"/>
+	<property name="DisplayType" value="allinonegogglesLL"/>
+	<property name="CustomIcon" value="apparelShades"/>
+	<property name="CustomIconTint" value="f08080"/>
+	<property name="DescriptionKey" value="EndZallinoneglassesLLDesc"/>
+	<property name="Tags" value="head,clothing,canHaveCosmetic,noMods"/>
+	<!--property name="UnlockedBy" value="craftingArmor"/-->
+	<property class="UMA">
+		<property name="Overlay0Tint" value="30,30,30"/>
+	</property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="1"/>
+		
+		<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>
+		<passive_effect name="LootStage" operation="base_add" value="3,5.2"/>
+		
+		<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>
+		<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-1"/>
+		
+		<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>
+		<passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
+		<passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
+		
+		<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/>
+		<passive_effect name="CraftingTime" operation="perc_add" value="-.5"/>
+		<passive_effect name="PlayerExpGain" operation="perc_add" value=".5"/>
+		
+		<passive_effect name="AttributeLevel" tags="attendztree" operation="base_add" value="1"/>
+		
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="LootStage" operation="base_add" value="3,5.2"/>
+		<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-1"/>
+		
+		
+	<property name="ActivateObject" value="NightVision"/>
+	<property name="ImageEffectOnActive" value="NightVision"/>
+	<property name="PlaySoundOnActive" value="nightvision_toggle"/>
+	<property name="Mesh" value="gear_nightvision_goggles"/>
+		<property name="Overlay0" value="gear_nightvision_goggles"/>
+		<property name="Layer" value="1"/>
+		<property name="UISlot" value="Eyewear"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="HypothermalResist" operation="base_add" value="0"/>
+		<passive_effect name="HyperthermalResist" operation="base_add" value="0"/>
 	</effect_group>
 </item>
 </append>

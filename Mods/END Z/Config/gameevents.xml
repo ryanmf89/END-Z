@@ -215,6 +215,39 @@
 </action_sequence>
 </append>
 
+<append xpath="/gameevents">
+<action_sequence name="actionbackpackteleLL">
+	<property name="category" value="admin" />
+	<property name="single_instance" value="true" />
+		
+<action class="SetScreenEffect">
+	<property name="phase" value="0" />
+	<property name="screen_effect" value="FadeToBlack" />
+	<property name="intensity" value="1" />
+	<property name="fade_time" value="0.05" />
+</action>
+
+<action class="Delay">
+	<property name="time" value=".5" />
+	<property name="phase" value="2" />
+</action>
+
+<action class="TeleportToSpecial">
+	<property name="special_type" value="Backpack" param1="special_type" />
+</action>
+
+<action class="SetScreenEffect">
+	<property name="phase" value="3" />
+	<property name="screen_effect" value="FadeToBlack" />
+	<property name="intensity" value="0" />
+	<property name="fade_time" value="0.1" />
+</action>
+
+<action class="PlaySound">
+	<property name="sound" value="twitch_pull" />
+</action>
+</action_sequence>
+</append>
 
 
 </configs>

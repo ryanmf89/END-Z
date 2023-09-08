@@ -10,68 +10,73 @@
 	<ingredient name="carBattery" count="1"/>
 </recipe>
 
+<!-- BACKPACK TELEPORT CARD -->
+<recipe name="bedrollteleportcardLL" count="1" craft_time="1">
+	<ingredient name="resourceYuccaFibers" count="10"/>
+</recipe>
+
 <!-- CANNED FOOD RECIPES -->
-<recipe name="foodCanMiso" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanMiso" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 </recipe>
 
-<recipe name="foodCanPasta" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanPasta" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="resourceYuccaFibers" count="10"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="5"/>
 </recipe>
 
-<recipe name="foodCanPeas" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanPeas" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="resourceYuccaFibers" count="10"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="resourceClayLump" count="5"/>
 </recipe>
 
-<recipe name="foodCanCatfood" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanCatfood" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="resourceYuccaFibers" count="5"/>
 </recipe>
 
-<recipe name="foodCanDogfood" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanDogfood" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="resourceYuccaFibers" count="5"/>
 </recipe>
 
-<recipe name="foodCanChili" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanChili" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="resourceYuccaFibers" count="5"/>
 	<ingredient name="foodCanMiso" count="1"/>
 </recipe>
 
-<recipe name="foodCanSalmon" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanSalmon" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 </recipe>
 
-<recipe name="foodCanSham" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanSham" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="10"/>
 	<ingredient name="drinkJarRiverWater" count="1"/>
 </recipe>
 
-<recipe name="foodCanBeef" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanBeef" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="foodRawMeat" count="5"/>
 </recipe>
 
-<recipe name="foodCanStock" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanStock" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="foodCanBeef" count="1"/>
 </recipe>
 
-<recipe name="foodCanTuna" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanTuna" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="foodRawMeat" count="5"/>
 </recipe>
 
-<recipe name="foodCanChicken" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
+<recipe name="foodCanChicken" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15">
 	<ingredient name="drinkJarRiverWater" count="1"/>
 	<ingredient name="foodRawMeat" count="5"/>
 </recipe>
@@ -107,7 +112,7 @@
 	<ingredient name="resourceHotCoalsLL" count="1"/>
 </recipe>
 
-<recipe name="resourcemoonmixLL" count="1" craft_area="cementMixer" craft_time="2" tags="cementMixerCrafting">
+<recipe name="resourcemoonmixLL" count="1" craft_area="cementMixer" craft_time="2" tags="learnable,cementMixerCrafting,resourcemoonmixLL">
 	<ingredient name="resourceMoonRocksLL" count="2"/>
 	<ingredient name="resourceConcreteMix" count="2"/>
 </recipe>
@@ -124,8 +129,8 @@
 </recipe>
 	
 <!--NEW VIBRANIUM INGREDIENTS RECIPES -->
-<recipe name="resourceforgedvibeLL" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" craft_time="20">
-	<ingredient name="resourceScrapIron" count="45"/>
+<recipe name="resourceforgedvibeLL" count="1" craft_area="forge" craft_tool="toolAnvil" craft_time="20" tags="resourceforgedvibeLL,learnable,workbenchCrafting">
+	<ingredient name="resourcescrapvibeLL" count="20"/>
 	<ingredient name="resourceClayLump" count="20"/>
 </recipe>
 
@@ -168,17 +173,17 @@
 
 <!--NEW BERRIES FROM BUSHES-->
 <append xpath="/recipes">
-<recipe name="handfulOfNutsLL" count="2" craft_time="2">
+<recipe name="handfulOfNutsLL" count="1" craft_time="2">
 	<ingredient name="survivalNutsLL" count="5"/>
 </recipe>
 
-<recipe name="handfulOfBerriesLL" count="2" craft_time="2">
+<recipe name="handfulOfBerriesLL" count="1" craft_time="2">
 	<ingredient name="survivalBerriesLL" count="5"/>
 </recipe>
 
 <recipe name="trailmixLL" count="1" craft_time="4">
-	<ingredient name="handfulOfNutsLL" count="4"/>
-	<ingredient name="handfulOfBerriesLL" count="4"/>
+	<ingredient name="handfulOfNutsLL" count="2"/>
+	<ingredient name="handfulOfBerriesLL" count="2"/>
 </recipe>
 </append>
 
@@ -187,6 +192,11 @@
 	<ingredient name="medicalAloeCream" count="1"/>
 	<ingredient name="foodHoney" count="1"/>
 	<ingredient name="medicalBandage" count="1"/>
+</recipe>
+
+<recipe name="medicallavenderpatchLL" count="1" tags="medical">
+	<ingredient name="resourcelavenderLL" count="2"/>
+	<ingredient name="resourceYuccaFibers" count="2"/>
 </recipe>
 	
 <!--DESERT BIOME SAFETY MOD-->
@@ -233,6 +243,7 @@
 
 <!--ADDS SCRAP RESOURCE RECIPES BACK IN FOR SCRAPPING-->
 <append xpath="/recipes">
+<recipe name="resourcescrapvibeLL" count="1" tooltip="ttScrapMetalLead" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="resourceClayLump" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="resourceRockSmall" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="resourceScrapBrass" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
@@ -331,12 +342,12 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceNail" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+<recipe name="resourceNail" count="5" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapIron" count="1"/>
 	<ingredient name="resourceClayLump" count="1"/>
 </recipe>
 
-<recipe name="resourceMetalPipe" count="2" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+<recipe name="resourceMetalPipe" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapIron" count="10"/>
 	<ingredient name="resourceClayLump" count="5"/>
 	<effect_group>
@@ -376,7 +387,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceBuckshot" count="2" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+<recipe name="resourceBuckshot" count="5" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapLead" count="3"/>
 	<ingredient name="resourceClayLump" count="2"/>
 	<effect_group>
@@ -384,7 +395,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceBulletCasing" count="2" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+<recipe name="resourceBulletCasing" count="5" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapBrass" count="5"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -392,7 +403,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceBulletTip" count="2" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+<recipe name="resourceBulletTip" count="5" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapLead" count="2"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -400,7 +411,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceArrowHeadIron" count="2" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+<recipe name="resourceArrowHeadIron" count="5" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapIron" count="2"/>
 	<ingredient name="resourceClayLump" count="1"/>
 	<effect_group>
@@ -408,7 +419,7 @@
 	</effect_group>
 </recipe>
 
-<recipe name="resourceArrowHeadSteelAP" count="2" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" tags="perkAdvancedEngineering">
+<recipe name="resourceArrowHeadSteelAP" count="5" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" tags="perkAdvancedEngineering">
 	<ingredient name="resourceScrapIron" count="10"/>
 	<ingredient name="resourceClayLump" count="10"/>
 	<effect_group>
@@ -506,43 +517,42 @@
 
 <append xpath="/recipes">
 <recipe name="resourceGunPowder" count="5" craft_area="chemistryStation" tags="chemStationCrafting">
-	<ingredient name="resourceCoal" count="2"/>
-	<ingredient name="resourcePotassiumNitratePowder" count="2"/>
+	<ingredient name="resourceCoal" count="1"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="1"/>
 </recipe>
 
 <recipe name="resourceGunPowder" count="5" tags="chemStationCrafting">
-	<ingredient name="resourceCoal" count="4"/>
-	<ingredient name="resourcePotassiumNitratePowder" count="4"/>
+	<ingredient name="resourceCoal" count="2"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="2"/>
 </recipe>
 </append>
 
 <!--STEEL AMMO-->
 <append xpath="/recipes">
-<recipe name="resourceBulletCasingSteel" count="2" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
-	<ingredient name="resourceScrapIron" count="10"/>
-	<ingredient name="resourceScrapBrass" count="10"/>
-	<ingredient name="resourceClayLump" count="10"/>
+<recipe name="resourceBulletCasingvibe" count="5" craft_time="1" craft_area="forge" tags="perkAdvancedEngineering">
+	<ingredient name="resourcescrapvibeLL" count="5"/>
+	<ingredient name="resourceClayLump" count="5"/>
 <effect_group>
-	<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.177,.12" tags="resourceScrapIron"/>
+	<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.177,.12" tags="resourcescrapvibeLL"/>
 </effect_group>
 </recipe> 
 		
-<recipe name="ammo9mmBulletSteel" count="1" craft_area="workbench" tags="learnable,ammo9mmBulletSteel,workbenchCrafting">
-	<ingredient name="resourceBulletTip" count="2"/>
-	<ingredient name="resourceGunPowder" count="6"/>
-	<ingredient name="resourceBulletCasingSteel" count="1"/>
+<recipe name="ammo9mmBulletvibe" count="5" craft_time="2" craft_area="workbench" tags="learnable,ammo9mmBulletvibe,workbenchCrafting">
+	<ingredient name="resourceBulletTip" count="1"/>
+	<ingredient name="resourceGunPowder" count="5"/>
+	<ingredient name="resourceBulletCasingvibe" count="1"/>
 </recipe>
 
-<recipe name="ammo44MagnumBulletSteel" count="1" craft_area="workbench" tags="learnable,ammo44MagnumBulletSteel,workbenchCrafting">
-	<ingredient name="resourceBulletTip" count="2"/>
-	<ingredient name="resourceGunPowder" count="6"/>
-	<ingredient name="resourceBulletCasingSteel" count="1"/>
+<recipe name="ammo44MagnumBulletvibe" count="5" craft_time="2" craft_area="workbench" tags="learnable,ammo44MagnumBulletvibe,workbenchCrafting">
+	<ingredient name="resourceBulletTip" count="1"/>
+	<ingredient name="resourceGunPowder" count="5"/>
+	<ingredient name="resourceBulletCasingvibe" count="1"/>
 </recipe>
 		
-<recipe name="ammo762mmBulletFMJSteel" count="1" craft_area="workbench" tags="learnable,ammo762mmBulletFMJSteel,workbenchCrafting">
-	<ingredient name="resourceBulletTip" count="2"/>
-	<ingredient name="resourceGunPowder" count="6"/>
-	<ingredient name="resourceBulletCasingSteel" count="1"/>
+<recipe name="ammo762mmBulletvibe" count="5" craft_time="2" craft_area="workbench" tags="learnable,ammo762mmBulletvibe,workbenchCrafting">
+	<ingredient name="resourceBulletTip" count="1"/>
+	<ingredient name="resourceGunPowder" count="5"/>
+	<ingredient name="resourceBulletCasingvibe" count="1"/>
 </recipe>
 </append>
 
@@ -975,32 +985,92 @@
 </append>
 
 <append xpath="/recipes">
-<recipe name="WarthogVehiclePlaceable" count="1" craft_time="210" craft_area="workbench" tags="workbenchCrafting">
-	<ingredient name="vehicleWheels" count="4"/>
-	<ingredient name="resourceforgedvibeLL" count="100"/>
-	<ingredient name="resourceForgedSteel" count="250"/>
-	<ingredient name="smallEngine" count="1"/>
-	<ingredient name="carBattery" count="1"/>
-</recipe>
-</append>
-
-<append xpath="/recipes">
-<recipe name="EndZbuggyPlaceable" count="1" craft_time="210" craft_area="workbench" tags="workbenchCrafting">
-	<ingredient name="vehicleWheels" count="4"/>
-	<ingredient name="resourceforgedvibeLL" count="75"/>
+<recipe name="WarthogVehiclePlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,WarthogVehiclePlaceable">
 	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="vehicleWheels" count="4"/>
 	<ingredient name="smallEngine" count="1"/>
 	<ingredient name="carBattery" count="1"/>
 </recipe>
 </append>
 
 <append xpath="/recipes">
-<recipe name="EndZdevillePlaceable" count="1" craft_time="210" craft_area="workbench" tags="workbenchCrafting">
+<recipe name="EndZbuggyPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZbuggyPlaceable">
+	<ingredient name="resourceForgedSteel" count="200"/>
 	<ingredient name="vehicleWheels" count="4"/>
-	<ingredient name="resourceForgedSteel" count="50"/>
-	<ingredient name="resourceForgedIron" count="200"/>
 	<ingredient name="smallEngine" count="1"/>
-	<ingredient name="carBattery" count="2"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
+
+<append xpath="/recipes">
+<recipe name="EndZblueracecarLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZblueracecarLLPlaceable">
+	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
+
+<append xpath="/recipes">
+<recipe name="EndZyellowracecarLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZyellowracecarLLPlaceable">
+	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
+
+<append xpath="/recipes">
+<recipe name="EndZredracecarLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZredracecarLLPlaceable">
+	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
+
+<append xpath="/recipes">
+<recipe name="EndZblackracecarLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZblackracecarLLPlaceable">
+	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
+
+<append xpath="/recipes">
+<recipe name="EndZcamaroLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZcamaroLLPlaceable">
+	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
+
+<append xpath="/recipes">
+<recipe name="EndZdevillePlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZdevillePlaceable">
+	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
+
+<append xpath="/recipes">
+<recipe name="EndZdodgetruckLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZdodgetruckLLPlaceable">
+	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
+
+<append xpath="/recipes">
+<recipe name="EndZmilitarytruckLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZmilitarytruckLLPlaceable">
+	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
 </recipe>
 </append>
 
@@ -1128,6 +1198,77 @@
 	<ingredient name="foodCanChili" count="1"/>
 </recipe>
 </append>
+
+<append xpath="/recipes">
+<recipe name="moonrockShapes:VariantHelper" craft_time="5" craft_area="cementMixer" count="1" tags="cementMixerCrafting">
+	<ingredient name="resourcemoonmixLL" count="10"/>
+</recipe>
+
+<recipe name="vibeShapes:VariantHelper" craft_time="5" craft_area="workbench" count="1" tags="workbenchCrafting">
+	<ingredient name="resourceforgedvibeLL" count="10"/>
+</recipe>
+
+<recipe name="EndZallinoneglassesLL" craft_time="300" craft_area="workbench" count="1" tags="learnable,workbenchCrafting,EndZallinoneglassesLL">
+	<ingredient name="resourceForgedBrassLL" count="45"/>
+	<ingredient name="resourceLeather" count="25"/>
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceYuccaFibers" count="100"/>
+</recipe>
+</append>
+
+<set xpath="//recipe[@name='ammo9mmBulletBall' 
+or @name='ammo9mmBulletHP' 
+or @name='ammo9mmBulletAP' 
+or @name='ammo44MagnumBulletBall' 
+or @name='ammo44MagnumBulletHP' 
+or @name='ammo44MagnumBulletAP' 
+or @name='ammo762mmBulletBall' 
+or @name='ammo762mmBulletHP' 
+or @name='ammo762mmBulletAP' 
+or @name='ammoShotgunShell'
+or @name='ammoShotgunSlug'
+or @name='ammoShotgunBreachingSlug'
+or @name='ammoJunkTurretRegular'
+or @name='ammoJunkTurretShell'
+or @name='ammoJunkTurretAP'
+or @name='ammoArrowFlaming'
+or @name='ammoArrowExploding'
+or @name='ammoArrowIron'
+or @name='ammoArrowSteelAP'
+or @name='ammoArrowStone'
+or @name='ammoCrossbowBoltFlaming'
+or @name='ammoCrossbowBoltExploding'
+or @name='ammoCrossbowBoltIron'
+or @name='ammoCrossbowBoltSteelAP'
+or @name='ammoCrossbowBoltStone'
+or @name='ammoGasCan']/@count">5</set>
+
+<set xpath="//recipe[@name='ammoBundle9mmBulletBall' 
+or @name='ammoBundle9mmBulletHP' 
+or @name='ammoBundle9mmBulletAP' 
+or @name='ammoBundle44MagnumBulletBall' 
+or @name='ammoBundle44MagnumBulletHP' 
+or @name='ammoBundle44MagnumBulletAP' 
+or @name='ammoBundle762mmBulletBall' 
+or @name='ammoBundle762mmBulletHP' 
+or @name='ammoBundle762mmBulletAP' 
+or @name='ammoBundleShotgunShell'
+or @name='ammoBundleShotgunSlug'
+or @name='ammoBundleShotgunBreachingSlug'
+or @name='ammoBundleJunkTurretRegular'
+or @name='ammoBundleJunkTurretShell'
+or @name='ammoBundleJunkTurretAP'
+or @name='ammoBundleArrowFlaming'
+or @name='ammoBundleArrowExploding'
+or @name='ammoBundleArrowIron'
+or @name='ammoBundleArrowSteelAP'
+or @name='ammoBundleArrowStone'
+or @name='ammoBundleCrossbowBoltFlaming'
+or @name='ammoBundleCrossbowBoltExploding'
+or @name='ammoBundleCrossbowBoltIron'
+or @name='ammoBundleCrossbowBoltSteelAP'
+or @name='ammoBundleCrossbowBoltStone'
+or @name='ammoGasCanBundle']/@count">2</set>
 
 </configs>
 
