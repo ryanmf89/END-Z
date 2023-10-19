@@ -81,12 +81,101 @@
 	<ingredient name="foodRawMeat" count="5"/>
 </recipe>
 
-<recipe name="foodcookedgroundbeefLL" count="1" craft_time="30" craft_area="campfire" craft_tool="toolCookingGrill">
+<recipe name="foodcookedgroundbeefLL" count="1" craft_time="30" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable,foodcookedgroundbeefLL">
 	<ingredient name="foodgroundbeefLL" count="5"/>
 </recipe>
 
-<recipe name="foodcheeseLL" count="1" craft_time="10" craft_area="campfire" craft_tool="toolCookingPot">
+<recipe name="foodcookedlambmeatLL" count="1" craft_time="30" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable,foodcookedlambmeatLL">
+	<ingredient name="foodlambmeatLL" count="5"/>
+</recipe>
+
+<recipe name="foodcheeseLL" count="1" craft_time="10" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable,foodcheeseLL">
 	<ingredient name="drinkJarmilkLL" count="5"/>
+</recipe>
+
+<recipe name="foodCheesyMeaties" count="1" craft_time="12" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable,foodCheesyMeaties">
+	<ingredient name="foodcookedgroundbeefLL" count="5"/>
+	<ingredient name="foodcheeseLL" count="2"/>
+	<ingredient name="foodCropPotato" count="1"/>
+	<ingredient name="foodCornMeal" count="1"/>
+	<ingredient name="foodCropMushrooms" count="1"/>
+</recipe>
+
+<recipe name="foodlambandpotatoesLL" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="perkMasterChef,learnable,foodlambandpotatoesLL">
+	<ingredient name="foodlambmeatLL" count="5"/>
+	<ingredient name="foodCropPotato" count="2"/>
+	<ingredient name="foodCropMushrooms" count="2"/>
+	<ingredient name="resourceAnimalFat" count="1"/>
+</recipe>
+
+<recipe name="foodlambrackLL" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="perkMasterChef,learnable,foodlambrackLL">
+	<ingredient name="foodlambmeatLL" count="6"/>
+	<ingredient name="resourceAnimalFat" count="4"/>
+</recipe>
+
+<recipe name="foodlimeyogurtLL" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable,foodlimeyogurtLL">
+	<ingredient name="foodCroplime" count="3"/>
+	<ingredient name="drinkJarmilkLL" count="2"/>
+</recipe>
+
+<recipe name="foodgrilledlambwsauceLL" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="perkMasterChef,learnable,foodgrilledlambwsauceLL">
+	<ingredient name="foodlambmeatLL" count="5"/>
+	<ingredient name="foodlimeyogurtLL" count="2"/>
+</recipe>
+
+<recipe name="foodlambStewLL" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable,foodlambStewLL">
+	<ingredient name="foodlambmeatLL" count="10"/>
+	<ingredient name="foodCropPotato" count="2"/>
+	<ingredient name="foodCropCorn" count="2"/>
+	<ingredient name="foodlimeyogurtLL" count="2"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="foodlimepieLL" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable,foodlimepieLL">
+	<ingredient name="foodCroplime" count="5"/>
+	<ingredient name="foodEgg" count="1"/>
+	<ingredient name="foodCornMeal" count="1"/>
+	<ingredient name="resourceAnimalFat" count="1"/>
+	<ingredient name="drinkJarmilkLL" count="3"/>
+</recipe>
+
+<recipe name="foodfruitsaladLL" count="1" craft_area="campfire" tags="perkMasterChef,learnable,foodfruitsaladLL">
+	<ingredient name="foodCroplime" count="3"/>
+	<ingredient name="foodCropBlueberries" count="3"/>
+	<ingredient name="foodCropYuccaFruit" count="3"/>
+	<ingredient name="resourceYuccaFibers" count="20"/>
+</recipe>
+
+<recipe name="foodtatortotcassLL" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="perkMasterChef,learnable,foodtatortotcassLL">
+	<ingredient name="foodcookedgroundbeefLL" count="10"/>
+	<ingredient name="foodCropPotato" count="2"/>
+	<ingredient name="foodCropMushrooms" count="2"/>
+	<ingredient name="foodcheeseLL" count="1"/>
+	<ingredient name="resourceAnimalFat" count="1"/>
+</recipe>
+
+<recipe name="food5courseLL" count="2" craft_area="campfire" tags="perkMasterChef,learnable,food5courseLL">
+	<ingredient name="foodtatortotcassLL" count="1"/>
+	<ingredient name="foodgrilledlambwsauceLL" count="1"/>
+	<ingredient name="foodfruitsaladLL" count="1"/>
+	<ingredient name="foodlimepieLL" count="1"/>
+	<ingredient name="foodlimeyogurtLL" count="1"/>
+</recipe>
+
+<recipe name="fooddoublecheese2f3LL" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="perkMasterChef,learnable,fooddoublecheese2f3LL">
+	<ingredient name="foodcookedgroundbeefLL" count="10"/>
+	<ingredient name="foodCropMushrooms" count="5"/>
+	<ingredient name="foodcheeseLL" count="2"/>
+	<ingredient name="resourceAnimalFat" count="2"/>
+</recipe>
+
+<!--all in one glasses-->
+<recipe name="EndZallinoneglassesLL" count="1" craft_time="1800" craft_area="workbench"  tags="learnable,EndZallinoneglassesLL">
+	<ingredient name="apparelToughGuySunglasses" count="1"/>
+	<ingredient name="apparelAviatorGoggles" count="1"/>
+	<ingredient name="apparelSkiGoggles" count="1"/>
+	<ingredient name="apparelNerdGlasses" count="1"/>
+	<ingredient name="apparelCigar" count="1"/>
 </recipe>
 	
 <!--BETTER COOKING-->
@@ -188,13 +277,13 @@
 </append>
 
 <append xpath="/recipes">
-<recipe name="medicalhoneyBandageLL" count="1" tags="medical">
+<recipe name="medicalhoneyBandageLL" count="1" tags="medical,learnable,medicalhoneyBandageLL">
 	<ingredient name="medicalAloeCream" count="1"/>
 	<ingredient name="foodHoney" count="1"/>
 	<ingredient name="medicalBandage" count="1"/>
 </recipe>
 
-<recipe name="medicallavenderpatchLL" count="1" tags="medical">
+<recipe name="medicallavenderpatchLL" count="1" tags="medical,learnable,medicallavenderpatchLL">
 	<ingredient name="resourcelavenderLL" count="2"/>
 	<ingredient name="resourceYuccaFibers" count="2"/>
 </recipe>
@@ -203,15 +292,15 @@
 <recipe name="modbuffdesertheatLL" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting">
 	<ingredient name="resourcedesertLL" count="150"/>
 	<ingredient name="resourceLeather" count="25"/>
-	<ingredient name="resourceAcid" count="4"/>
+	<ingredient name="resourceAcid" count="2"/>
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
 <!--SNOW BIOME SAFETY MOD-->
 <recipe name="modbufffrozensnowLL" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting">
-	<ingredient name="resourcesnowLL" count="100"/>
+	<ingredient name="resourcesnowLL" count="150"/>
 	<ingredient name="resourceLeather" count="25"/>
-	<ingredient name="resourceAcid" count="8"/>
+	<ingredient name="resourceAcid" count="2"/>
 	<ingredient name="resourceSewingKit" count="4"/>
 </recipe>
 
@@ -219,7 +308,7 @@
 <recipe name="modbuffradiationwasteLL" count="1" craft_time="240" craft_area="workbench" tags="workbenchCrafting">
 	<ingredient name="resourceHazmatFiberLL" count="50"/>
 	<ingredient name="resourceLeather" count="25"/>
-	<ingredient name="resourceAcid" count="12"/>
+	<ingredient name="resourceAcid" count="2"/>
 	<ingredient name="resourceSewingKit" count="6"/>
 </recipe>
 
@@ -499,6 +588,9 @@
 </append>
 
 <!--REMOVES CONCRETE SHAPES AND STEEL SHAPES AND MAKES THEM CRAFTABLE IN MIXER AND WORKBENCH-->
+<!--remove xpath="/recipes/recipe[@name='frameShapes:VariantHelper']"></remove>
+<remove xpath="/recipes/recipe[@name='woodShapes:VariantHelper']"></remove>
+<remove xpath="/recipes/recipe[@name='cobblestoneShapes:VariantHelper']"></remove-->
 <remove xpath="/recipes/recipe[@name='concreteShapes:VariantHelper']"></remove>
 <remove xpath="/recipes/recipe[@name='steelShapes:VariantHelper']"></remove>
 
@@ -509,6 +601,36 @@
 
 <recipe name="steelShapes:VariantHelper" craft_area="workbench" count="1">
 	<ingredient name="resourceForgedSteel" count="10"/>
+</recipe>
+</append>
+
+<append xpath="/recipes">
+<!--recipe name="frameShapesLL:VariantHelper" craft_time="1" count="1">
+	<ingredient name="resourceWood" count="2"/>
+</recipe>
+
+<recipe name="woodShapesLL:VariantHelper" craft_time="1" count="1">
+	<ingredient name="resourceWood" count="10"/>
+</recipe>
+
+<recipe name="cobblestoneShapesLL:VariantHelper" craft_time="2" count="1">
+	<ingredient name="resourceCobblestones" count="10"/>
+</recipe>
+
+<recipe name="concreteShapesLL:VariantHelper" craft_time="3" craft_area="cementMixer" count="1" tags="cementMixerCrafting">
+	<ingredient name="resourceConcreteMix" count="10"/>
+</recipe>
+
+<recipe name="steelShapesLL:VariantHelper" craft_time="4" craft_area="workbench" count="1" tags="workbenchCrafting">
+	<ingredient name="resourceForgedSteel" count="10"/>
+</recipe-->
+
+<recipe name="moonrockShapes:VariantHelper" craft_time="5" craft_area="cementMixer" count="1" tags="cementMixerCrafting">
+	<ingredient name="resourcemoonmixLL" count="10"/>
+</recipe>
+
+<recipe name="vibeShapes:VariantHelper" craft_time="6" craft_area="workbench" count="1" tags="workbenchCrafting">
+	<ingredient name="resourceforgedvibeLL" count="10"/>
 </recipe>
 </append>
 
@@ -984,18 +1106,35 @@
 </recipe>
 </append>
 
+<!--******START OF ENDZ VEHICLES*****-->
+<!--TIER1 VEHICLES-->
 <append xpath="/recipes">
-<recipe name="WarthogVehiclePlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,WarthogVehiclePlaceable">
-	<ingredient name="resourceForgedSteel" count="200"/>
+<recipe name="EndZdevillePlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZdevillePlaceable">
+	<ingredient name="resourceForgedIron" count="200"/>
 	<ingredient name="vehicleWheels" count="4"/>
 	<ingredient name="smallEngine" count="1"/>
 	<ingredient name="carBattery" count="1"/>
 </recipe>
 </append>
+<!--END OF TIER1 VEHICLES-->
 
+<!--TIER2 VEHICLES-->
+<append xpath="/recipes">
+<recipe name="EndZcamaroLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZcamaroLLPlaceable">
+	<ingredient name="resourceForgedIron" count="150"/>
+	<ingredient name="resourceForgedSteel" count="50"/>
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
+<!--END OF TIER2 VEHICLES-->
+
+<!--TIER3 VEHICLES-->
 <append xpath="/recipes">
 <recipe name="EndZbuggyPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZbuggyPlaceable">
-	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="resourceForgedSteel" count="100"/>
+	<ingredient name="resourceForgedIron" count="100"/>
 	<ingredient name="vehicleWheels" count="4"/>
 	<ingredient name="smallEngine" count="1"/>
 	<ingredient name="carBattery" count="1"/>
@@ -1004,7 +1143,8 @@
 
 <append xpath="/recipes">
 <recipe name="EndZblueracecarLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZblueracecarLLPlaceable">
-	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="resourceForgedSteel" count="100"/>
+	<ingredient name="resourceForgedIron" count="100"/>
 	<ingredient name="vehicleWheels" count="4"/>
 	<ingredient name="smallEngine" count="1"/>
 	<ingredient name="carBattery" count="1"/>
@@ -1013,7 +1153,8 @@
 
 <append xpath="/recipes">
 <recipe name="EndZyellowracecarLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZyellowracecarLLPlaceable">
-	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="resourceForgedSteel" count="100"/>
+	<ingredient name="resourceForgedIron" count="100"/>
 	<ingredient name="vehicleWheels" count="4"/>
 	<ingredient name="smallEngine" count="1"/>
 	<ingredient name="carBattery" count="1"/>
@@ -1022,7 +1163,8 @@
 
 <append xpath="/recipes">
 <recipe name="EndZredracecarLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZredracecarLLPlaceable">
-	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="resourceForgedSteel" count="100"/>
+	<ingredient name="resourceForgedIron" count="100"/>
 	<ingredient name="vehicleWheels" count="4"/>
 	<ingredient name="smallEngine" count="1"/>
 	<ingredient name="carBattery" count="1"/>
@@ -1031,34 +1173,32 @@
 
 <append xpath="/recipes">
 <recipe name="EndZblackracecarLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZblackracecarLLPlaceable">
-	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="resourceForgedSteel" count="100"/>
+	<ingredient name="resourceForgedIron" count="100"/>
 	<ingredient name="vehicleWheels" count="4"/>
 	<ingredient name="smallEngine" count="1"/>
 	<ingredient name="carBattery" count="1"/>
 </recipe>
 </append>
+<!--END OF TIER3 VEHICLES-->
 
-<append xpath="/recipes">
-<recipe name="EndZcamaroLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZcamaroLLPlaceable">
-	<ingredient name="resourceForgedSteel" count="200"/>
-	<ingredient name="vehicleWheels" count="4"/>
-	<ingredient name="smallEngine" count="1"/>
-	<ingredient name="carBattery" count="1"/>
-</recipe>
-</append>
-
-<append xpath="/recipes">
-<recipe name="EndZdevillePlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZdevillePlaceable">
-	<ingredient name="resourceForgedSteel" count="200"/>
-	<ingredient name="vehicleWheels" count="4"/>
-	<ingredient name="smallEngine" count="1"/>
-	<ingredient name="carBattery" count="1"/>
-</recipe>
-</append>
-
+<!--TIER4 VEHICLES-->
 <append xpath="/recipes">
 <recipe name="EndZdodgetruckLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZdodgetruckLLPlaceable">
-	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="resourceForgedSteel" count="150"/>
+	<ingredient name="resourceForgedIron" count="50"/>
+	<ingredient name="vehicleWheels" count="4"/>
+	<ingredient name="smallEngine" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+</append>
+<!--END OF TIER4 VEHICLES-->
+
+<!--TIER5 VEHICLES-->
+<append xpath="/recipes">
+<recipe name="WarthogVehiclePlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,WarthogVehiclePlaceable">
+	<ingredient name="resourceforgedvibeLL" count="50"/>
+	<ingredient name="resourceForgedSteel" count="150"/>
 	<ingredient name="vehicleWheels" count="4"/>
 	<ingredient name="smallEngine" count="1"/>
 	<ingredient name="carBattery" count="1"/>
@@ -1067,12 +1207,33 @@
 
 <append xpath="/recipes">
 <recipe name="EndZmilitarytruckLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZmilitarytruckLLPlaceable">
-	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="resourceforgedvibeLL" count="50"/>
+	<ingredient name="resourceForgedSteel" count="150"/>
 	<ingredient name="vehicleWheels" count="4"/>
 	<ingredient name="smallEngine" count="1"/>
 	<ingredient name="carBattery" count="1"/>
 </recipe>
 </append>
+
+<append xpath="/recipes">
+<recipe name="vehicleEndZmilihelicopterLLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,vehicleEndZmilihelicopterLLPlaceable">
+	<ingredient name="resourceforgedvibeLL" count="50"/>
+	<ingredient name="resourceForgedSteel" count="150"/>
+	<ingredient name="smallEngine" count="2"/>
+	<ingredient name="carBattery" count="2"/>
+</recipe>
+</append>
+
+<append xpath="/recipes">
+<recipe name="EndZmilihelicopter2LLPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting,perkvehicles,EndZmilihelicopter2LLPlaceable">
+	<ingredient name="resourceforgedvibeLL" count="50"/>
+	<ingredient name="resourceForgedSteel" count="150"/>
+	<ingredient name="smallEngine" count="2"/>
+	<ingredient name="carBattery" count="2"/>
+</recipe>
+</append>
+<!--END OF TIER5 VEHICLES-->
+<!--******END OF ENDZ VEHICLES*****-->
 
 <append xpath="/recipes">
 <recipe name="flagBlockVariantHelper" count="1">
@@ -1199,7 +1360,7 @@
 </recipe>
 </append>
 
-<append xpath="/recipes">
+<!--append xpath="/recipes">
 <recipe name="moonrockShapes:VariantHelper" craft_time="5" craft_area="cementMixer" count="1" tags="cementMixerCrafting">
 	<ingredient name="resourcemoonmixLL" count="10"/>
 </recipe>
@@ -1207,14 +1368,7 @@
 <recipe name="vibeShapes:VariantHelper" craft_time="5" craft_area="workbench" count="1" tags="workbenchCrafting">
 	<ingredient name="resourceforgedvibeLL" count="10"/>
 </recipe>
-
-<recipe name="EndZallinoneglassesLL" craft_time="300" craft_area="workbench" count="1" tags="learnable,workbenchCrafting,EndZallinoneglassesLL">
-	<ingredient name="resourceForgedBrassLL" count="45"/>
-	<ingredient name="resourceLeather" count="25"/>
-	<ingredient name="resourceCloth" count="25"/>
-	<ingredient name="resourceYuccaFibers" count="100"/>
-</recipe>
-</append>
+</append-->
 
 <set xpath="//recipe[@name='ammo9mmBulletBall' 
 or @name='ammo9mmBulletHP' 
@@ -1241,7 +1395,7 @@ or @name='ammoCrossbowBoltExploding'
 or @name='ammoCrossbowBoltIron'
 or @name='ammoCrossbowBoltSteelAP'
 or @name='ammoCrossbowBoltStone'
-or @name='ammoGasCan']/@count">5</set>
+or @name='ammoGasCan']/@count">2</set>
 
 <set xpath="//recipe[@name='ammoBundle9mmBulletBall' 
 or @name='ammoBundle9mmBulletHP' 

@@ -5,13 +5,32 @@
 30000</set>
 <set xpath="/blocks/block[@name='bladeTrap']/property[@name='Material']/@value">
 MmoonrockLL</set>
+		
+<!-- Forge -->
+<append xpath="/blocks/block[@name='cntForgeWorkstationBroken']" >
+	<drop event="Destroy" name="forge" prob=".20" count="1" tag="salvageHarvest" tool_category="Disassemble"/>
+	<drop event="Destroy" name="toolBellows" prob=".20" count="1" tag="salvageHarvest" tool_category="Disassemble"/>
+	<drop event="Destroy" name="toolForgeCrucible" prob=".20" count="1" tag="salvageHarvest" tool_category="Disassemble"/>
+	<drop event="Destroy" name="toolAnvil" prob=".20" count="1" tag="salvageHarvest" tool_category="Disassemble"/>
+</append>
+<!-- Workbench -->
+<append xpath="/blocks/block[@name='cntCollapsedWorkbench']" >
+	<drop event="Destroy" name="workbench" prob=".20" count="1" tag="salvageHarvest" tool_category="Disassemble"/>
+</append>
+<!-- Cememt Mixer -->
+<append xpath="/blocks/block[@name='cntCollapsedCementMixer']" >
+	<drop event="Destroy" name="cementMixer" prob=".20" count="1" tag="salvageHarvest" tool_category="Disassemble"/>
+</append>
+<!-- Chem Station -->
+<append xpath="/blocks/block[@name='cntCollapsedChemistryStation']" >
+	<drop event="Destroy" name="chemistryStation" prob=".20" count="1" tag="salvageHarvest" tool_category="Disassemble"/>
+</append>
 
+<append xpath="/blocks/block[@name='frameShapes']">						<property name="Stacknumber" value="2500"/></append><!--changes shape stack size-->
 <append xpath="/blocks/block[@name='woodShapes']">						<property name="Stacknumber" value="2500"/></append><!--changes shape stack size-->
-<append xpath="/blocks/block[@name='cobblestoneShapes']">						<property name="Stacknumber" value="2500"/></append><!--changes shape stack size-->
-<append xpath="/blocks/block[@name='concreteShapes']">						<property name="Stacknumber" value="2500"/></append><!--changes shape stack size-->
+<append xpath="/blocks/block[@name='cobblestoneShapes']">				<property name="Stacknumber" value="2500"/></append><!--changes shape stack size-->
+<append xpath="/blocks/block[@name='concreteShapes']">					<property name="Stacknumber" value="2500"/></append><!--changes shape stack size-->
 <append xpath="/blocks/block[@name='steelShapes']">						<property name="Stacknumber" value="2500"/></append><!--changes shape stack size-->
-
-
 <set xpath="/blocks/block[@name='bedroll']          					/property[@name='Stacknumber']/@value">20</set>		<!--10-->
 <set xpath="/blocks/block[@name='bedrollPOI']          					/property[@name='Stacknumber']/@value">20</set>		<!--10-->
 <set xpath="/blocks/block[@name='cntVendingMachine']          			/property[@name='Stacknumber']/@value">20</set>		<!--10-->
@@ -278,7 +297,6 @@ MmoonrockLL</set>
 </append>
 
 <!--NEW BLOCK UPGRADES-->	
-<!--WHAT THE BLOCK UPGRADES TO FROM STEEL TO MOONROCK-->
 <append xpath="//block[@name='steelShapes']">
 	<property class="UpgradeBlock">
 	<property name="ToBlock" value="moonrockShapes"/>
@@ -289,8 +307,8 @@ MmoonrockLL</set>
 	<property name="CustomUpgradeSound" value="place_block_concrete"/>
 </append>
 
-<!--BLOCK ITSELF-->
-<insertBefore xpath="/blocks/block[@name='awningShapes']">
+<!--NEW BLOCK SYSTEM FOR ENDZ-->
+<append xpath="/blocks">
 <block name="moonrockShapes" shapes="All">
 	<property name="DescriptionKey" value="moonrockMasterLLDesc"/>
 	<property name="DisplayType" value="blockHardened"/>
@@ -320,7 +338,6 @@ MmoonrockLL</set>
 	<property name="FilterTags" value="MC_Shapes"/>
 </block>
 			
-<!--vibeshape-->
 <block name="vibeShapes" shapes="All">
 	<property name="DescriptionKey" value="moonrockMasterLLDesc"/>
 	<property name="DisplayType" value="blockHardened"/>
@@ -342,9 +359,62 @@ MmoonrockLL</set>
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="FilterTags" value="MC_Shapes"/>
 </block>
-</insertBefore>
+</append>
 
-<insertBefore xpath="/blocks/block[@name='stoneNoUpgradeMaster']">
+<!--insertBefore xpath="/blocks/block[@name='awningShapes']">
+<block name="moonrockShapes" shapes="All">
+	<property name="DescriptionKey" value="moonrockMasterLLDesc"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="Mmoonrock_shapes"/>
+	<property name="MaxDamage" value="15000"/>
+	<property name="Shape" value="New"/>
+	<property name="Texture" value="537"/>
+	<property name="UiBackgroundTexture" value="537"/>
+	<property name="EconomicValue" value="320"/>
+	<property name="EconomicBundleSize" value="20"/>
+	<property name="Stacknumber" value="2500"/>
+	<property class="RepairItems">
+		<property name="resourcemoonmixLL" value="8"/>
+	</property>
+	<drop event="Harvest" name="resourcemoonmixLL" count="3" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="vibeShapes"/>
+		<property name="Item" value="resourceforgedvibeLL"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="UpgradeSound" value="place_block_concrete"/>
+	<property name="SortOrder1" value="S040"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="FilterTags" value="MC_Shapes"/>
+</block>
+			
+<block name="vibeShapes" shapes="All">
+	<property name="DescriptionKey" value="moonrockMasterLLDesc"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="Mvibe_shapes"/>
+	<property name="MaxDamage" value="30000"/>
+	<property name="Shape" value="New"/>
+	<property name="Texture" value="543"/>
+	<property name="UiBackgroundTexture" value="543"/>
+	<property name="EconomicValue" value="320"/>
+	<property name="EconomicBundleSize" value="20"/>
+	<property name="Stacknumber" value="2500"/>
+	<property class="RepairItems">
+		<property name="resourceforgedvibeLL" value="8"/>
+	</property>
+	<drop event="Harvest" name="resourceforgedvibeLL" count="3" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+	<property name="SortOrder1" value="S040"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="FilterTags" value="MC_Shapes"/>
+</block>
+</insertBefore-->
+
+<!--insertBefore xpath="/blocks/block[@name='stoneNoUpgradeMaster']">
 <block name="moonrockLLNoUpgradeMaster">
 	<property name="CreativeMode" value="None"/>
 	<property name="DescriptionKey" value="concreteNoUpgradeGroupDesc"/>
@@ -400,7 +470,7 @@ MmoonrockLL</set>
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="FilterTags" value="MC_building"/>
 </block>
-</insertBefore>
+</insertBefore-->
 
 <!--IMPROVED GENERATOR BANK-->
 <append xpath="/blocks">
@@ -1397,18 +1467,20 @@ MmoonrockLL</set>
 
 <!--NO TRADER PROTECTION THROUGH SCORE-->
 <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedPrefabFeatures']/property[@name='DisableTraderProtection']/@value">true</set>
+<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedPrefabFeatures']/property[@name='AllowBuildingInTraderArea']/@value">true</set>
 
 <!--CRAFT FROM CONTAINERS 20 BLOCKS AWAY INCLUDING THE STORAGE CONTAINER. GOES BASED OFF PLAYER LOCATION NOT BLOCK LOCATION, NOT REPAIR, THROUGH SCORE-->
 <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='ReadFromContainers']/@value">true</set>
 <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='Distance']/@value">20</set>
 
 <!--FIRE SPREAD MOD FOR ENDZ, THROUGH SCORE FILES-->
-<!--set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='FireEnable']/@value">true</set>
-<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='CheckInterval']/@value">20</set>
-<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='SmokeTime']/@value">45</set>
-<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='FireDamage']/@value">50</set>		
+<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='FireEnable']/@value">true</set>
+<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='CheckInterval']/@value">25</set>
+<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='SmokeTime']/@value">1</set>
+<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='FireDamage']/@value">25</set>		
 <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='MaterialDamage']/@value">wood, cloth, corn, grass, plastic, leaves, cactus, mushroom, hay, paper, trash, backpack, organic</set>
-<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='MaterialSurface']/@value">wood, cloth, corn, grass, plastic, leaves, cactus, mushroom, hay, paper, trash, backpack, organic</set-->
+<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='MaterialSurface']/@value">wood, cloth, corn, grass, plastic, leaves, cactus, mushroom, hay, paper, trash, backpack, organic</set>
+<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='ChanceToExtinguish']/@value">.5</set>
 
 <!--DISABLES DOUBLE CROUCH, THROUGH SCORE FILES-->
 <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedPlayerFeatures']/property[@name='OneBlockCrouch']/@value">false</set>
@@ -3191,6 +3263,64 @@ MmoonrockLL</set>
 	<property name="PlantGrowing.GrowthRate" value="120" /><!-- amount of days for respawn 60 equals 1 day (Assumes default day length. This is really in real minutes.) -->
 	<property name="PlantGrowing.FertileLevel" value="0" />
 	<property name="PlantGrowing.IsRandom" value="false" />
+</block>
+</append>
+
+<append xpath="/blocks">
+<block name="limetreeemptyLL">
+    <property name="CreativeMode" value="Player"/>
+    <property name="DescriptionKey" value="limetreeemptyLLDesc"/>
+	<property name="Collide" value="movement,melee"/>
+    <property name="UnlockedBy" value="perkLivingOffTheLand"/>
+    <property name="Material" value="Mwood"/>
+    <property name="Shape" value="ModelEntity"/>
+    <property name="Model" value="#@modfolder:Resources/deadtree1.unity3d?deadtree.prefab" />
+    <!--property name="ModelOffset" value="0,-0.5,0"/-->
+    <property name="OnlySimpleRotations" value="true"/>
+    <property name="CanMobsSpawnOn" value="false"/>
+    <property name="Class" value="PlantGrowing"/> 	
+    <property name="PlantGrowing.Next" value="limetreefullLL"/> 
+    <property name="PlantGrowing.GrowthRate" value="30"/>
+    <property name="PlantGrowing.FertileLevel" value="0"/>
+    <property name="PlantGrowing.IsRandom" value="false"/>
+    <property name="PlantGrowing.LightLevelGrow" value="0"/>
+    <property name="PlantGrowing.LightLevelStay" value="0"/>
+    <property name="PlantGrowing.GrowIfAnythinOnTop" value="false"/>
+    <property name="PlantGrowing.IsGrowOnTopEnabled" value="false"/>
+    <property class="RepairItems">
+        <property name="resourceWood" value="10" />    
+</property>    
+    <drop event="Harvest" count="0" tag="allHarvest"/>
+    <drop event="Destroy" name="limetreeemptyLL" count="1" tag="allHarvest"/>
+    <property name="EconomicValue" value="50"/>
+    <property name="Group" value="Food/Cooking,Building,advBuilding"/>
+    <property name="FilterTags" value="MC_outdoor,SC_crops,fdecor,fother,ffurniture"/>
+    <property name="SortOrder1" value="a090"/>
+    <property name="SortOrder2" value="0002"/>
+</block>
+        
+<block name="limetreefullLL">
+    <property name="CreativeMode" value="Player"/>
+    <property name="DescriptionKey" value="limetreefullLLDesc"/>
+	<property name="Collide" value="movement,melee"/>
+    <property name="UnlockedBy" value="perkLivingOffTheLand"/>
+    <property name="Material" value="Mwood"/>
+    <property name="Shape" value="ModelEntity"/>
+    <property name="Model" value="#@modfolder:Resources/limetree1.unity3d?limetree.prefab" />
+    <!--property name="ModelOffset" value="0,-0.5,0"/-->
+    <property name="OnlySimpleRotations" value="true"/>
+    <property name="CanMobsSpawnOn" value="false"/>
+    <property class="RepairItems">
+        <property name="resourceWood" value="10" />    
+</property>    
+    <drop event="Harvest" name="foodCroplime" count="4,6" tag="allHarvest"/>
+    <drop event="Destroy" count="0"/>
+    <property name="EconomicValue" value="50"/>
+    <property name="Group" value="Food/Cooking,Building,advBuilding"/>
+    <property name="FilterTags" value="MC_outdoor,SC_crops,fdecor,fother,ffurniture"/>
+    <property name="SortOrder1" value="a090"/>
+    <property name="SortOrder2" value="0002"/>
+    <property name="DowngradeBlock" value="limetreeemptyLL"/>
 </block>
 </append>
 </configs>

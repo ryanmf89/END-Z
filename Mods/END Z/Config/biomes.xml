@@ -4,6 +4,10 @@
     <decoration type="block" blockname="BeehiveEmptyLL" prob="0.0002"/>
 </append>
 
+<append xpath="//biome[@name='pine_forest']/decorations">
+    <decoration type="block" blockname="limetreefullLL" prob="0.002"/>
+	<decoration type="block" blockname="limetreefullLL" prob="0.002"/>
+</append>
 	
 <append xpath="//biome[@name='pine_forest']/decorations">
     <decoration type="block" blockname="lavenderplantLL" prob=".1"/>

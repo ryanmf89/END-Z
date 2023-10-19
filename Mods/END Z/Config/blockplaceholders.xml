@@ -1,6 +1,6 @@
 <configs>
 <!--FIRE EXTINGUISHER-->
-	<!--insertAfter xpath="/blockplaceholders/placeholder[@name='cntMicrowaveRandomLootHelper']/block[@name='cntMicrowaveOvenVer2Closed']">
+	<insertAfter xpath="/blockplaceholders/placeholder[@name='cntMicrowaveRandomLootHelper']/block[@name='cntMicrowaveOvenVer2Closed']">
 		<block name="endzfireextLLBlock" prob=".33"/>
 	</insertAfter>
 
@@ -14,66 +14,8 @@
 
 	<insertAfter xpath="/blockplaceholders/placeholder[@name='cntFileCabinetShortRandomLootHelper']/block[@name='cntFileCabinetShortClosed']">
 		<block name="endzfireextLLBlock" prob=".33"/>
-	</insertAfter-->
+	</insertAfter>
 <!--END FIRE EXTINGUISHER-->
 
-<!--LAVENDER PLANT-->
-	<!--insertAfter xpath="/blockplaceholders/placeholder[@name='plantedtreeGrassSeedRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedtreeGrassAirRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedCornHarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedYucca3HarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-	
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedCottonHarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedCoffeeHarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedGoldenrodHarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-	
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedAloeHarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-	
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedBlueberryHarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-	
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedPotatoHarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-	
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedChrysanthemumHarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-	
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedGraceCornHarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-	
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedHopHarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter>
-	
-	<insertAfter xpath="/blockplaceholders/placeholder[@name='plantedPumpkin3HarvestRandomHelper']/block[@name='treeTallGrassDiagonal']">
-		<block name="lavenderplantLL" prob=".33"/>
-	</insertAfter-->
-<!--END LAVENDER PLANT-->
-	
 
 </configs>

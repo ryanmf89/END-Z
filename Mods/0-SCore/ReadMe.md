@@ -14,8 +14,7 @@ Note: An auto-mirror is available on gitlab that allows you to download individu
 ### Direct Downloads
 Direct Download to the 0-SCore.zip available on gitlab mirror:
 
-[ 0 - SCore (Alpha 20 ) ]: https://gitlab.com/sphereii/SphereII-Mods/-/archive/master/SphereII-Mods-master.zip?path=0-SCore
-[ 0 - SCore ( Alpha 21) ]: https://gitlab.com/sphereii/SphereII-Mods/-/archive/alpha21-experimental/SphereII-Mods-alpha21-experimental.zip?path=0-SCore
+[ 0 - SCore ( Latest ) ]: https://gitlab.com/sphereii/SphereII-Mods/-/archive/master/SphereII-Mods-master.zip?path=0-SCore
 
 ### TODO
 	- Fix random sounds from NPC, like stamina exhaustion
@@ -24,6 +23,211 @@ Direct Download to the 0-SCore.zip available on gitlab mirror:
 ### Change Logs
 
 [ Change Log ]
+Version: 21.1.53.1324
+	[ Trader Protection ]
+		- Added a new option to allow placing blocks within a Trader Area, under the AdvancedPrefabFeatures ConfigBlock
+			<property name="AllowBuildingInTraderArea" value="false" />
+		- Disable Trader Protection must be set to true, in addition to this setting, to allowing placing of blocks.
+		- Land Claims are still denied from being claimed, to prevent hijacking of a trader by a player.
+
+
+Version: 21.1.52.1544
+	[ Enhanced Signs ]
+		- Fixed hard crash when an invalid URL was used.
+
+Version: 21.1.52.1357
+	[ Food Spoilage ]
+		- Added support for SpoiledItem's value being "None" to skip downgrading the item into something else.
+			<property name="SpoiledItem" value="None" />
+
+Version: 21.1.51.1344
+	[ EntityAliveSDX ]
+		- Re-Added Exp Sharing.
+			- If the Hired NPC has a Player, but the Player does not have a Party, the NPC will share exp directly with that player.
+			- If the Player has a party, the exp will share with the entire party.
+		- Fixed an issue with weapon swapping. 
+
+	[ Broadcast Storage ]
+		- Drop Box(tm) Support
+			- Added the ability to set up a container to be considered a drop box to distribute items to other storage boxes.
+
+			- Any container with the Property "DropBox" with a value of true is handled specially.
+	  			<property name="DropBox" value="true" />
+
+			- Optionally, there is a new block class that can be used.
+				<block name="cntSphereDropBoxTest">
+					<!-- Doesn't need to be signed container, but might make the most sense -->
+					<property name="Extends" value="cntStorageGenericSigned"/>
+					<property name="Class" value="DropBoxContainer, SCore"/>
+					<!-- Default is 100 ticks -->
+					<property name="UpdateTick" value="200" />
+					<!-- Optionally trigger the distribution when the user closes the box -->
+					<property name="DropBox" value="true" />
+					<!-- Optional Distance this box can scan to redistribute. -->
+					<!-- If not defined, the value from AdvancedRecipes's distance is used. -->
+					<property name="Distance" value="30" />
+				</block>
+
+				- Blocks that use the DropBoxContainer class will trigger redistribution at regular intervals, 
+					in case the player makes changes to surrounding boxes.
+
+
+			- When this type of container is closed, it will scan the local TileEntities using the same rules as the Items From Containers for crafting.
+				- Rules include broadcasting is enabled, player is allowed to access, if the container is not opened, and within the distance.
+				- Other containers with the property "DropBox" are ignored as potential targets.
+
+			- It will try to fill any partial stacks.
+			- If existing stacks are full, it will add a new stack to the container.
+			- Any items that cannot be added, either partially or fully, will be left in the DropBox.
+			- If you are adjust your storage containers to add items, the DropBox must be opened, and closed for it to distribute to the new containers.
+
+Version: 21.1.50.839
+	[ Broadcast Storage ]
+		- Removed pre-check cuz I'm dumb, and introduced a free-crafting mechanic.
+
+Version: 21.1.48.1604
+	[ Broadcast Storage ]
+		- Added a few null checks for when player backpack or tool belt may not be available.
+		- Added a pre-check if the player has the required items in their backpack / tool belt, that it'll use those first
+			- Should provide better performance, and protect against the above mentioned null ref.
+
+Version: 21.1.48.955
+	[ Broadcast Storage ]
+		- Fixed another issue where toolbelt items were not being consumed when riding in a vehicle and crafting.
+			- The original code would read the localPlayer's bag and toolbelt slots for items. These were empty.
+			- The fix was to pass the bag and toolbelt from the XUiM_PlayerInventory
+
+Version: 21.1.47.1805
+
+	[ Broadcast Storage ]
+		- Fixed another issue where materials would not be returned upon cancellation when pulled from container
+		- Fixed another issue where crafting would be approved without all the ingredients.
+
+Version: 21.1.39.1623
+
+	[ Water System ]
+		- Fixed an issue where the block's custom description wouldn't show up depending on DisplayInfo
+		- Fixed an issue where water range wasn't being properly used for crops.
+
+Version: 21.1.39.1422
+
+	[ Broadcast Storage ]
+		- Fixed an issue when a cancelling a recipe that had an ingredient with a quality value would result in no returned items.
+
+Version: 21.1.34.952
+
+	[ EntityAlive SDX ( NPCs )]
+		- Fixed an issue where inventory was not being preserved or distributed to clients.
+		- Code clean up on class
+		- Fixed an issue where the NPC could continue to use a weapon that no longer exists in thein loot container.
+
+	[ SCore Integrity Check ]
+		- Added a new feature to SCore's ModEvents.Init() to provide a quick look integrity check.
+
+		Intention:
+			- This checks all the modlets installed locally.
+			- It's intended to be a Quick Look to see if an overhaul is installed correctly.
+			- Each release of an overhaul would have a unique, and repeatable Hash Code.
+			- A Hash Code is a 10 digit numeric code.
+			- If a modlet is added, removed, or is a different version, the Hash Code will be different.
+			- This will not stop a game from loading ( You do you, boo ).
+
+		What It Checks:
+			- This will add new entry's to the game load, printing after the "Loaded Mod:" step.
+			- This will check, and print the path, if there's a Mods folder in the UserDataFolder or local folder.
+			- If there's a mods folder in both, it will display a warning in the log file:
+				WARNING: Loaded Mods From two Folders!
+			- This isn't a fatal warning, but rather helps you at a glance to see if they are potentially loading mods from two different places.
+				- Loading Mods from two locations is not an error, or bug.
+				- Some people install a mod to UserDataFolder / Local Mods folder and forget about it.
+
+			- It will loop around all Loaded Mods, do a GetHashCode() on the Modlet Name and Version number.
+			- GetHashCode() returns an 10 digit numeric code.
+			- All the HashCode for the Loaded Mods are added to a string.
+			- At the end, it will print a GetHashCode() from the combined string, giving a summary.
+		
+		Example:
+			2023-09-02T07:49:59 4.454 INF SCore:: Checking Installed Modlets...
+			2023-09-02T07:49:59 4.454 INF Loaded Mods From C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/../Mods
+			2023-09-02T07:49:59 4.455 INF Modlet List Hash: 1788120558
+			2023-09-02T07:49:59 4.455 INF SCore:: Done Checking Installed Modlets
+		
+	[ UAI ]
+		- Aded the consideration / Task to the VC Proj of SCore
+
+	[ Build Tooling ]
+		- Added a new obj Clean Target to be triggered after "AfterBuild".
+		- This will remove the contents of the obj file after the building / linking.
+		- Any project that loads the Directory.Build.targets file as a reference.
+
+
+Version: 21.1.24.928
+
+	[ EntityEnemySDX ]
+		- Integrated khzmusik's changes
+			- Added a EntityEnemySDX check for an AvatarController Patch
+			- Rebased EntityEnemySDX against EntityHuman
+	
+	[ UAI ]
+		- Integrated khzmusik's changes
+			- Added new Consideration: HasinvestigatePosition
+			- Added UAI Task: ApproachSpotSDX
+			- Cleaned up UAI Task AttackTargetEntity
+	
+Version: 21.1.22.727
+	[ Transmogrifier ]
+		- Moved the crawler gate up a bit, as it was getting random walk types when it really shouldn't have.
+
+Version: 21.1.21.1021
+
+	[ UAI ]
+		- Removed Debug statement for UAIAttackTargetEntity
+
+	[ DecoAoE ]
+		- Added additional code in an attempt to make them quest resets work.
+			- Further updates may be needed
+
+Version: 21.1.20.1053
+	Note: When reference an asset bundle from another modlet, you must use the Name value from the ModInfo.xml
+	For example:
+		<xml>
+		  <Name value="0-SCore_sphereii" />
+		  <Author value="sphereii" />
+		  <Description value="SCore Mod" />
+		  <DisplayName value="0-SCore" />
+		  <Website value="" />
+		  <Version value="21.1.20.945" />
+		</xml>
+
+		<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FireManagement']/property[@name='FireParticle']/@value">#@modfolder(0-SCore_sphereii):Resources/gupFireParticles.unity3d?gupBeavis06-HeavyLight</set>
+	
+	[ Water System ]
+		- Fixed a possible null ref when reading from a quest-reset
+		- Added a OnBlockLoaded for the sprinkler.
+
+	[ NPCs ]
+		- Disabled a call that created a player party if they hired an NPC, potentially causing other party invites to fail.
+
+	[ UAI ]
+		- Added a + 1 to the y value when doing the IsInside consideration to give it a chance to get out a block or entity to do the check.
+
+	[ Deco Block ]
+		- Added a ischild check for multi-dim blocks
+		- Added a IsTileEntitySavedInPrefab() call to persist in resets
+
+Version: 21.1.16.1542
+
+	[ NPCS ]
+		- Fixed an issue where the NPC wasn't facing at its target
+		- Fixed an issue where a bag drop may throw null ref.
+		- Fixed an issue where the NPC wouldn't turn around to face the target, when backing up.
+
+Version: 21.1.12.1115
+
+	[ NPCs ]
+		- Fixed an issue with a null ref on the read/write for loot containers
+		- Fixed an issue where NPC backpacks weren't preserving on dedi.
+
 Version: 21.1.10.1805  ( For A21.1 stable )
 	[ NPCS ]
 		- Quite a few failed attempts at making inventory persists reliably / weeapon select on respawn

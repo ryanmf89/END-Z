@@ -1,87 +1,95 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english
 
+endz_stonecave_01_arramus,POI,POIName,,,"END Z Toy Store"
+1EndZ_BookFair,POI,POIName,,,"END Z Book Fair"
+2EndZ_Headquarters,POI,POIName,,,"END Z Headquarters"
+
 EndZallinoneglassesLL,items,Clothes,,,"EndZ Glasses"
 EndZallinoneglassesLLDesc,items,Clothes,,,"These glasses add 1 point to the skill trees like other glasses. Has some hidden benefits as well! Credits to the DrunkPenguin."
 statShowattendztree,ui_display,Item stat,,,EndZ
 
-startershovelLL,Items,melee,,,"Starter Shovel"
+startershovelLL,Items,melee,,,"[787777]Starter Shovel"
 startershovelLLDesc,Items,melee,,,"cant be crafted, but can be repaired with stone."
-starteraxeLL,Items,melee,,,"Starter Axe"
+starteraxeLL,Items,melee,,,"[787777]Starter Axe"
 starteraxeLLDesc,Items,melee,,,"cant be crafted, but can be repaired with stone."
 
-resourceHotCoalsLL,Items,Resource,,,"Hot Coals"
+resourceHotCoalsLL,Items,Resource,,,"[850101]Hot Coals"
 resourceHotCoalsLLDesc,Items,Resource,,,"crafted in the campfire"
 
-resourceMoonRocksLL,Items,Resource,,,"Moon Rocks"
+resourceMoonRocksLL,Items,Resource,,,"[7ec2c0]Moon Rocks"
 resourceMoonRocksLLDesc,Items,Resource,,,"From the temp of those hot coals made this stronger material known as moon rocks use this to craft tiered weapons and tools stronger then stone"
-resourcemoonmixLL,Items,Resource,,,"Moon Rock Mortar"
+resourcemoonmixLL,Items,Resource,,,"[7ec2c0]Moon Rock Mortar"
 resourcemoonmixLLDesc,Items,Resource,,,"This strong resource is made in the mixer to upgrade to moonrock blocks"
-moonrockshovelLL,Items,melee,,,"Moon Rock Shovel"
+moonrockshovelLL,Items,melee,,,"[7ec2c0]Moon Rock Shovel"
 moonrockshovelLLDesc,Items,melee,,,"Shovel crafted from moonrocks and is lightweight for you to harvest more without getting tired, repair with moonrocks!"
-moonrockaxeLL,Items,melee,,,"Moon Rock Axe"
+moonrockaxeLL,Items,melee,,,"[7ec2c0]Moon Rock Axe"
 moonrockaxeLLDesc,Items,melee,,,"Axe crafted from moonrocks and is lightweight for you to harvest more without getting tired, repair with moonrocks!"
-moonrockbatonLL,Items,melee,,,"Moon Rock Baton"
+moonrockbatonLL,Items,melee,,,"[7ec2c0]Moon Rock Baton"
 moonrockbatonLLDesc,Items,melee,,,"Should be a happy Duckie, repair with moonrocks!"
-moonrockspearLL,Items,melee,,,"Moon Rock Spear"
+moonrockspearLL,Items,melee,,,"[7ec2c0]Moon Rock Spear"
 moonrockspearLLDesc,Items,melee,,,"A spear crafted from moon rocks and is slightly better then the stone spear, repair with moonrocks"
-moonrocksledgeLL,Items,melee,,,"Moon Rock SledgeHammer"
+moonrocksledgeLL,Items,melee,,,"[7ec2c0]Moon Rock SledgeHammer"
 moonrocksledgeLLDesc,Items,melee,,,"A sledge crafted from moon rocks and early in your life this will be a lifesaver against the zombie jerks, repair with moonrocks!"
-moonrockclubLL,Items,melee,,,"Moon Rock Club"
+moonrockclubLL,Items,melee,,,"[7ec2c0]Moon Rock Club"
 moonrockclubLLDesc,Items,melee,,,"this should be handy, repair with moonrocks"
 
-resourceForgedBrassLL,Items,Resource,,,"Forged Brass"
+resourcebrassRepairKitLL,Items,Resource,,,"[8f6f17]Brass Repair Kit"
+resourcebrassRepairKitLLDesc,Items,Resource,,,"use this repair kit to repair brass weapons and tools"
+resourceForgedBrassLL,Items,Resource,,,"[8f6f17]Forged Brass"
 resourceForgedBrassLLDesc,Items,Resource,,,"Brass smelted into bars and used to make weapons and tools stronger then forged iron"
-brassshovelLL,Items,melee,,,"Brass Shovel"
+brassshovelLL,Items,melee,,,"[8f6f17]Brass Shovel"
 brassshovelLLDesc,Items,melee,,,"A shovel crafted from forged brass, repair with a brass repair kit!"
-brassaxeLL,Items,melee,,,"Brass Axe"
+brassaxeLL,Items,melee,,,"[8f6f17]Brass Axe"
 brassaxeLLDesc,Items,melee,,,"A axe crafted from forged brass, repair with a brass repair kit!"
-brasspickaxeLL,Items,melee,,,"Brass PickAxe"
+brasspickaxeLL,Items,melee,,,"[8f6f17]Brass PickAxe"
 brasspickaxeLLDesc,Items,melee,,,"A pickaxe crafted from forged brass, repair with a brass repair kit!"
-brasssledgeLL,Items,melee,,,"Brass Sledgehammer"
+brasssledgeLL,Items,melee,,,"[8f6f17]Brass Sledgehammer"
 brasssledgeLLDesc,Items,melee,,,"A gigantic hammer crafted from forged brass, repair with a brass repair kit!"
-brassknifeLL,Items,melee,,,"Brass Dagger"
+brassknifeLL,Items,melee,,,"[8f6f17]Brass Dagger"
 brassknifeLLDesc,Items,melee,,,"A sharp blade crafted from forged brass, repair with a brass repair kit!"
-brassclubLL,Items,melee,,,"Brass Club"
+brassclubLL,Items,melee,,,"[8f6f17]Brass Club"
 brassclubLLDesc,Items,melee,,,"A sturdy club crafted from forged brass, repair with a brass repair kit!"
-brassknucksLL,Items,melee,,,"Brass Knuckles"
+brassknucksLL,Items,melee,,,"[8f6f17]Brass Knuckles"
 brassknucksLLDesc,Items,melee,,,"Everyone loves a set of deadly brass knucks now its time to go punch some undead pricks, repair with a brass repair kit!"
-brassspearLL,Items,melee,,,"Brass Long Spear"
+brassspearLL,Items,melee,,,"[8f6f17]Brass Long Spear"
 brassspearLLDesc,Items,melee,,,"Crafted from forged brass and super sharp, repair with a brass repair kit!"
-brassstunbatonLL,Items,melee,,,"Brass Stun Baton"
+brassstunbatonLL,Items,melee,,,"[8f6f17]Brass Stun Baton"
 brassstunbatonLLDesc,Items,melee,,,"A even happier Duckie, repair with a brass repair kit!"
 
-resourcebrassRepairKitLL,Items,Resource,,,"Brass Repair Kit"
-resourcebrassRepairKitLLDesc,Items,Resource,,,"use this repair kit to repair brass weapons and tools"
-resourcevibeRepairKitLL,Items,Resource,,,"Vibranium Repair Kit"
+resourcevibeRepairKitLL,Items,Resource,,,"[6a00a3]Vibranium Repair Kit"
 resourcevibeRepairKitLLDesc,Items,Resource,,,"use this repair kit to repair vibranium weapons and tools"
-
-resourceforgedvibeLL,Items,Resource,,,"Forged Vibranium"
+resourceforgedvibeLL,Items,Resource,,,"[6a00a3]Forged Vibranium"
 resourceforgedvibeLLDesc,Items,Resource,,,"The strongest metal on the planet! search and craft at the workbench with other forged items"
-resourcescrapvibeLL,Items,Resource,,,"Scrap Vibranium"
+resourcescrapvibeLL,Items,Resource,,,"[6a00a3]Scrap Vibranium"
 resourcescrapvibeLLDesc,Items,Resource,,,"In the Forge use an anvil to craft Forged Vibranium with this resource"
-vibepickaxeLL,Items,melee,,,"Vibranium Pickaxe"
+vibepickaxeLL,Items,melee,,,"[6a00a3]Vibranium Pickaxe"
 vibepickaxeLLDesc,Items,melee,,,"such a good strong harvest tool, repair with a vibranium repair kit!"
-vibeaxeLL,Items,melee,,,"Vibranium Axe"
+vibeaxeLL,Items,melee,,,"[6a00a3]Vibranium Axe"
 vibeaxeLLDesc,Items,melee,,,"such a good strong harvest tool, repair with a vibranium repair kit!"
-vibeshovelLL,Items,melee,,,"Vibranium Shovel"
+vibeshovelLL,Items,melee,,,"[6a00a3]Vibranium Shovel"
 vibeshovelLLDesc,Items,melee,,,"such a good strong harvest tool, repair with a vibranium repair kit!"
-vibeChainsawLL,Items,melee,,,"Vibranium Chainsaw"
+vibeChainsawLL,Items,melee,,,"[6a00a3]Vibranium Chainsaw"
 vibeChainsawLLDesc,Items,melee,,,"Crafted from vibranium and is the best chainsaw you can find, repair with a vibranium repair kit!"
-vibeaugerLL,Items,melee,,,"Vibranium Auger"
+vibeaugerLL,Items,melee,,,"[6a00a3]Vibranium Auger"
 vibeaugerLLDesc,Items,melee,,,"Crafted from vibranium and is the best auger you can find, repair with a vibranium repair kit!"
-vibesledgeLL,Items,melee,,,"Vibranium Sledgehammer"
+vibesledgeLL,Items,melee,,,"[6a00a3]Vibranium Sledgehammer"
 vibesledgeLLDesc,Items,melee,,,"Crafted from vibranium and is good to smash skulls of zombie infidels, repair with a vibranium repair kit!"
-vibemacheteLL,Items,melee,,,"Vibranium Sword"
+vibemacheteLL,Items,melee,,,"[6a00a3]Vibranium Sword"
 vibemacheteLLDesc,Items,melee,,,"Crafted from vibranium and this sword will kill anything in its path, repair with a vibranium repair kit!"
-vibeknucksLL,Items,melee,,,"Vibranium Knuckles"
+vibeknucksLL,Items,melee,,,"[6a00a3]Vibranium Knuckles"
 vibeknucksLLDesc,Items,melee,,,"Crafted from vibranium and these knuckles have power like THOR, repair with a vibranium repair kit!"
-vibebatLL,Items,melee,,,"Vibranium Mace"
+vibebatLL,Items,melee,,,"[6a00a3]Vibranium Mace"
 vibebatLLDesc,Items,melee,,,"Crafted from vibranium and this mace will send zombies flying, repair with a vibranium repair kit!"
-t3vibespearLL,Items,melee,,,"Vibranium HellFire Spear"
+t3vibespearLL,Items,melee,,,"[6a00a3]Vibranium HellFire Spear"
 t3vibespearLLDesc,Items,melee,,,"Vibranium Spear is the strongest spear in the world, repair with a vibranium repair kit!!"
-
-multiharvesttoolLL,Items,melee,,,"Vibranium Multi Tool"
+multiharvesttoolLL,Items,melee,,,"[6a00a3]Vibranium Multi Tool"
 multiharvesttoolLLDesc,Items,melee,,,"this tool acts as a pickaxe, axe, shovel and knife, repair with a vibranium repair kit!"
+ammo44MagnumBulletvibe,Items,ammo,,,"[6a00a3].44 Rounds, Vibranium (Ammo)"
+ammo9mmBulletvibe,Items,ammo,,,"[6a00a3]9mm, Vibranium (Ammo)"
+ammo762mmBulletvibe,Items,ammo,,,"[6a00a3]7.62mm, Vibranium (Ammo)"
+ammovibeCasedGroupDesc,Items,ammo,,,Vibranium ammunition is a more effective way to dispatch the zombie idiots.
+resourceBulletCasingvibe,Items,ammo,,,"[6a00a3]Vibranium Bullet Casing"
+resourceBulletCasingvibelDesc,Items,ammo,,,Vibranium bullets are much stronger then your normal bullet.
 
 endzStarterCrate,blocks,Container,,,EndZ Starter Crate
 endzStarterCrateDesc,blocks,Container,,,"Your Starting gear. Place on the ground and break to open. Its not much but it helps"
@@ -89,14 +97,6 @@ endzStarterCrateOpen,blocks,Container,,,"Starting Gear: Open This"
 
 generatorbankLL,Blocks,Block,,,"Improved Generator Bank"
 generatorbankLLDesc,Blocks,Block,,,"will suck the gas from your pocket but will produce high volts to power more items with one genny"
-
-ammo44MagnumBulletvibe,Items,ammo,,,".44 Rounds, Vibranium (Ammo)"
-ammo9mmBulletvibe,Items,ammo,,,"9mm, Vibranium (Ammo)"
-ammo762mmBulletvibe,Items,ammo,,,"7.62mm, Vibranium (Ammo)"
-ammovibeCasedGroupDesc,Items,ammo,,,Vibranium ammunition is a more effective way to dispatch the zombie idiots.
-
-resourceBulletCasingvibe,Items,ammo,,,"Vibranium Bullet Casing"
-resourceBulletCasingvibelDesc,Items,ammo,,,Vibranium bullets are much stronger then your normal bullet.
 
 cntWallOvenWorking,blocks,Container,,,Working Wall Oven
 cntWallOvenPowered,blocks,Container,,,Powered Wall Oven
@@ -140,7 +140,6 @@ woodLogSpike1Desc,blocks,Block,,,this is one sharp spike, can be upgraded furthe
 
 buffScentofPreyDesc,buffs,Buff,,,"You are carrying [db7c1d]Something Smelly[ffffff], predators will come far and wide to find you because of it. Better stash it somewhere safe, like a vehicle to protect yourself."
 buffScentofPreyName,buffs,Buff,,,"[db7c1d]Scent of Prey"
-
 tutorialTipSmelly01,Journal Tip,,,,"You are carrying [db7c1d]Something Smelly[ffffff], predators will come far and wide to find you because of it. Better stash it somewhere safe, like a vehicle to protect yourself."
 tutorialTipSmelly01_title,Journal Tip,,,,"[db7c1d]Scent of Prey"
 
@@ -155,45 +154,42 @@ handfulOfBerriesLLDesc,items,Food,,,"This handful of berries will provide the bo
 trailmixLL,items,Food,,,"Trail Mix"
 trailmixLLDesc,items,Food,,,"Crafted with handful of nut and berries to make this delicious early life snack to keep you going."
 
-medicalhoneyBandageLL,items,Medical,,,"Honey Bandage"
-medicalhoneyBandageLLDesc,items,Medical,,,"this bandage will cure bleeding, abrasions, and infections."
-
-desertnoteLL,items,Quest - Note,,,Desert Notes
+desertnoteLL,items,Quest - Note,,,"[c97b1c]Desert Notes"
 desertnoteLLDesc,items,Quest - Note,,,"A rapid heat wave hit the dry lands of the desert and caused a significant rise in temperatures. Gather Chuncks of Frozen Dirt from the pine forest, craft the Super Heat Mod, and equip it to your armor to survive the sweltering heat of the dry lands."
 resourcedesertLL,Items,Resource,,,"Chunk of Frozen Dirt"
 resourcedesertLLDesc,Items,Resource,,,"Could use this to craft a mod to keep the desert heat off yourself, found in the pine forest ground"
 buffdesertheatLL,buffs,Buff,New,,"Super Heat"
 buffdesertheatLLName,buffs,Buff,New,,"Super Heat"
 buffdesertheatLLDesc,buffs,Buff,New,,"The sun in the desert is super hot. Find the material to craft the Super Heat Mod"
-buffdesertheatLLTooltip,buffs,Buff,New,,"The sun in the desert is creating a super heat! Make sure you protect yourself before venturing that way"
+buffdesertheatLLTooltip,buffs,Buff,New,,"[ff0000]The sun in the desert is creating a super heat! Make sure you protect yourself before venturing that way"
 modbuffdesertheatLL,item_modifiers,mod,,,Super Heat Mod
 modbuffdesertheatLLDesc,item_modifiers,mod,,,Equip this to leg armor to gain protection from the super heat in the desert
 
-snownoteLL,items,Quest - Note,,,Snow Notes
+snownoteLL,items,Quest - Note,,,"[08a4ff]Snow Notes"
 snownoteLLDesc,items,Quest - Note,,,"The frozen lands we call the snow biome have had something weird happen. A cold, blustery wind has made those lands uninhabitable by living people. Dig up small piles of Hot Sand in the desert, craft a Frozen North Mod and equip it to your armor to survive the freezing temperatures."
 resourcesnowLL,Items,Resource,,,"Small Pile of Hot Sand"
 resourcesnowLLDesc,Items,Resource,,,"Could use this to craft a mod to keep the frozen snow off body, found in the desert ground"
 bufffrozensnowLL,buffs,Buff,New,,"Frozen North"
 bufffrozensnowLLName,buffs,Buff,New,,"Frozen North"
 bufffrozensnowLLDesc,buffs,Buff,New,,"The snow biome is a dangerous place, you will need to craft the Frozen North mod to protect from the freezing cold"
-bufffrozensnowLLTooltip,buffs,Buff,New,,"Dont venture into the snow unless your properly protected"
+bufffrozensnowLLTooltip,buffs,Buff,New,,"[0073ff]Dont venture into the snow unless your properly protected"
 modbufffrozensnowLL,item_modifiers,mod,,,Frozen North Mod
 modbufffrozensnowLLDesc,item_modifiers,mod,,,Equip this to chest armor to gain protection from the freezing temps of the snow region
 
-wastelandnoteLL,items,Quest - Note,,,Wasteland Notes
+wastelandnoteLL,items,Quest - Note,,,"[1cc922]Wasteland Notes"
 wastelandnoteLLDesc,items,Quest - Note,,,"To cure the zombie infection, the scientist created a radioactive vaccine ready for zombie trials. Unfortunately, the trials did not go as planned, and Experiments 1-5 were born and infesting the wastelands, causing severe radiation. To survive the wasteland, you need to gather Radioactive Snow Fibers in the snow biome to craft a Radiation Ready Mod and equip to your armor."
 resourceradiofiberLL,Items,Resource,,,"Radioactive Snow Fibers"
 resourceradiofiberLLDesc,Items,Resource,,,"obtained from snowy ground, use at the chem bench to craft a material to keep you protected from radiation"
 resourceHazmatFiberLL,Items,Resource,,,"Hazmat Fiber"
-resourceHazmatFiberLLDesc,Items,Resource,,,"crafted in the chemstation using radioactive tree fibers"
+resourceHazmatFiberLLDesc,Items,Resource,,,"crafted in the chemstation using radioactive snow fibers"
 buffradiationwasteLL,buffs,Buff,New,,"Radiation"
 buffradiationwasteLLName,buffs,Buff,New,,"Radiation"
 buffradiationwasteLLDesc,buffs,Buff,New,,"The wasteland is super dangerous and full of radiation, equip the Radiation Ready Mod to protect yourself."
-buffradiationwasteLLTooltip,buffs,Buff,New,,"Wasteland is RADIATED. watchout"
+buffradiationwasteLLTooltip,buffs,Buff,New,,"[06de02]Wasteland is RADIATED. watchout"
 modbuffradiationwasteLL,item_modifiers,mod,,,Radiation Ready Mod
 modbuffradiationwasteLLDesc,item_modifiers,mod,,,Equip this to head armor to gain protection from the radiation in the wasteland
 
-progressnoteLL,items,Quest - Note,,,Progression Intro
+progressnoteLL,items,Quest - Note,,,"[6a00a3]Progression Intro"
 progressnoteLLDesc,items,Quest - Note,,,"EndZ is introducing biome progression. Starting in the pine forest and progressing through the desert, snow, then the wasteland. Read the notes in the following order: Orange, Blue, then Green. Thank you all! We hope this brings a whole new challenge."
 
 EZcurrencyLL,items,item,,,EndZ Coin
@@ -271,18 +267,15 @@ endzratLL,entityclasses,Entity,,,Decaying Rat
 endzgiantsnakeLL,entityclasses,Entity,,,King Snake
 endzbloodydogLL,entityclasses,Entity,,,Cujo Jr
 animalZombieDog,entityclasses,Entity,,,Cujo Jr
-
-endzbuffalo,entityclasses,Entity,,,Holstein Cow
-foodgroundbeefLL,items,Food,,,"Ground Beef"
-foodgroundbeefLLDesc,items,Food,,,"Good fresh ground beef. will make some tasty food at the campfire"
-drinkJarmilkLL,items,Food,,,"Whole Milk"
-drinkJarmilkLLDesc,items,Food,,,"Straight from the teet"
-foodcookedgroundbeefLL,items,Food,,,"Cooked Ground Beef"
-foodcookedgroundbeefLLDesc,items,Food,,,"yummy ground beef will fill you up or you can combine with other items to make better meals"
-foodcheeseLL,items,Food,,,"Cheese"
-foodcheeseLLDesc,items,Food,,,"cheese made from that delicious milk"
-
 EndZsheepLL,entityclasses,Entity,,,LambChop
+endzbuffalo,entityclasses,Entity,,,Holstein Cow
+
+npcEndZsurvivorLL,entityclasses,Entity,,,EndZ Survivor Ted
+npcEndZsurvivorTransformationLL,entityclasses,Entity,,,EndZ Zombie Ted
+npcEndZsurvivor2LL,entityclasses,Entity,,,EndZ Survivor Bill
+npcEndZsurvivorTransformation2LL,entityclasses,Entity,,,EndZ Zombie Bill
+npcEndZsurvivor3LL,entityclasses,Entity,,,EndZ Survivor Ernest
+npcEndZsurvivorTransformation3LL,entityclasses,Entity,,,EndZ Zombie Ernest
 
 quest_progressionZombieHunting1_name,quests,Quest,,,Zombie Hunting (1)
 quest_progressionZombieHunting1_subtitle,quests,Quest,,,Zombie Hunting Pt. 1
@@ -366,10 +359,10 @@ perkDaringAdventurerRank3LongDesc,progression,perk,,,"You've made a name for you
 perkDaringAdventurerRank4Desc,progression,perk,,,Daring Adventurer
 perkDaringAdventurerRank4LongDesc,progression,perk,,,"You are the daring adventurer!\nGain access to better trader items and get 20% more dukes.\nPick 5 rewards for your hard effort."
 
-attendztree,progression,Attribute,,,EndZ Skills
-attendztreeName,progression,Attribute,,,EndZ
+attendztree,progression,Attribute,,,"[6a00a3]EndZ Skills"
+attendztreeName,progression,Attribute,,,"[6a00a3]EndZ"
 attendztreeDesc,progression,Attribute,,,"Various perks to enhance gameplay."
-skillendzCombatName,progression,Skill,,,EndZ Perks
+skillendzCombatName,progression,Skill,,,"[6a00a3]EndZ Perks"
 skillendzCombatDesc,progression,Skill,,,"A small variety of EndZ perks."
 attendztreeRank01Desc,progression,Attribute,,,Start of the End
 attendztreeRank01LongDesc,progression,Attribute,,,"This is the start of what could be a glorious journey"
@@ -402,7 +395,7 @@ reqattendztreeLevel08,progression,Attribute,,,EndZ Level 8
 reqattendztreeLevel09,progression,Attribute,,,EndZ Level 9
 reqattendztreeLevel10,progression,Attribute,,,EndZ Level 10
 
-perkimagod,,,,,"EndZ Fearless Warrior"
+perkimagod,,,,,"[f5021b]EndZ Fearless Warrior"
 perkimagodDesc,,,,,"Someone with your strength seeks a real challenge. Only real men buy this perk!"
 perkimagodRank1Desc,,,,,"Wussy"
 perkimagodRank1LongDesc,,,,,"You still need to grow in strength in order to attract the real challenges. Raise gamestage by 10."
@@ -415,8 +408,96 @@ perkimagodRank4LongDesc,,,,,"You are a real challenger, only drawing in the hard
 perkimagodRank5Desc,,,,,"Show-Off"
 perkimagodRank5LongDesc,,,,,"Now you are just showing off. Raise gamestage by 100."
 
-perkvehicles,,,,,"EndZ Vehicles"
-perkvehiclesDesc,,,,,"This tree is where you unlock the EndZ specific Vehicles. Tier1=2000hp Tier2=4000hp Tier3=6000hp Tier4=8000hp Tier5=10Khp. All Vehicles are pretty fast, so their worth having and screw vanilla vehicles."
+perkendzclothes,,,,,"[6b2e18]EndZ Apparel"
+perkendzclothesDesc,,,,,"Some badass clothing items brought to you by EndZ!(more to come in the future)"
+perkendzclothesRank1Desc,,,,,"Tier 1"
+perkendzclothesRank1LongDesc,,,,,"Unlocks- All In 1 Glasses"
+perkendzclothesRank2Desc,,,,,"Tier 2"
+perkendzclothesRank2LongDesc,,,,,"Unlocks-"
+perkendzclothesRank3Desc,,,,,"Tier 3"
+perkendzclothesRank3LongDesc,,,,,"Unlocks-"
+perkendzclothesRank4Desc,,,,,"Tier 4"
+perkendzclothesRank4LongDesc,,,,,"Unlocks-"
+perkendzclothesRank5Desc,,,,,"Tier 5"
+perkendzclothesRank5LongDesc,,,,,"Unlocks-"
+
+perkendzmedical,,,,,"[005cfa]EndZ Medical"
+perkendzmedicalDesc,,,,,"This tree is where you unlock the EndZ Medical Items. Read the descriptions of each tier to see what it unlocks. (more to come in the future)"
+perkendzmedicalRank1Desc,,,,,"Tier 1 Medical"
+perkendzmedicalRank1LongDesc,,,,,"Unlocks- Lavender Patch"
+perkendzmedicalRank2Desc,,,,,"Tier 2 Medical"
+perkendzmedicalRank2LongDesc,,,,,"Unlocks- Honey Bandage"
+perkendzmedicalRank3Desc,,,,,"Tier 3 Medical"
+perkendzmedicalRank3LongDesc,,,,,"Unlocks-"
+perkendzmedicalRank4Desc,,,,,"Tier 4 Medical"
+perkendzmedicalRank4LongDesc,,,,,"Unlocks- "
+perkendzmedicalRank5Desc,,,,,"Tier 5 Medical"
+perkendzmedicalRank5LongDesc,,,,,"Unlocks-"
+
+medicalhoneyBandageLL,items,Medical,,,"Honey Bandage"
+medicalhoneyBandageLLDesc,items,Medical,,,"this bandage will cure bleeding, abrasions, and infections."
+medicallavenderpatchLL,items,Medical,,,"Lavender Patch"
+medicallavenderpatchLLDesc,items,Medical,,,"this patch will help will small amounts of health and easy to make."
+
+perkendzfood,,,,,"[ced134]EndZ Food"
+perkendzfoodDesc,,,,,"This tree is where you unlock the EndZ Food Items. Read the descriptions of each tier to see what it unlocks. (more to come in the future)"
+perkendzfoodRank1Desc,,,,,"Tier 1 Food"
+perkendzfoodRank1LongDesc,,,,,"Unlocks- Cheese, Cooked Ground Beef, Cooked Mutton, Lime Yogurt, Fruit Salad"
+perkendzfoodRank2Desc,,,,,"Tier 2 Food"
+perkendzfoodRank2LongDesc,,,,,"Unlocks- Rack of Lamb, Grilled Lamb with Lime Yogurt Sauce, Lime Pie, 2 For 3 Double Cheese"
+perkendzfoodRank3Desc,,,,,"Tier 3 Food"
+perkendzfoodRank3LongDesc,,,,,"Unlocks- Lamb & Potato Platter, Lamb and Veggie Stew, Cheesy Meaties, Tater Tot Casserole, 5 Course Meal"
+perkendzfoodRank4Desc,,,,,"Tier 4 Food"
+perkendzfoodRank4LongDesc,,,,,"Unlocks- "
+perkendzfoodRank5Desc,,,,,"Tier 5 Food"
+perkendzfoodRank5LongDesc,,,,,"Unlocks-"
+
+foodCroplime,items,Food,,,"Lime (Fruit)"
+foodCroplimeDesc,items,Food,,,"Fresh picked fruit, i wonder what i could use this for?"
+limetreeemptyLL,blocks,Block,,,Empty Lime Tree
+limetreeemptyLLDesc,blocks,Block,,,"produces delicious limes."
+limetreefullLL,blocks,Block,,,Lime Tree
+limetreefullLLDesc,blocks,Block,,,"produces delicious limes."
+foodgroundbeefLL,items,Food,,,"Ground Beef"
+foodgroundbeefLLDesc,items,Food,,,"Good fresh ground beef. will make some tasty food at the campfire"
+foodlambmeatLL,items,Food,,,"Mutton"
+foodlambmeatLLDesc,items,Food,,,"Aquired from Lambs, go to the campfire to explore recipes for this item."
+drinkJarmilkLL,items,Food,,,"Whole Milk"
+drinkJarmilkLLDesc,items,Food,,,"Straight from the teet"
+foodcookedgroundbeefLL,items,Food,,,"Cooked Ground Beef"
+foodcookedgroundbeefLLDesc,items,Food,,,"yummy ground beef will fill you up or you can combine with other items to make better meals"
+foodcookedlambmeatLL,items,Food,,,"Cooked Mutton"
+foodcookedlambmeatLLDesc,items,Food,,,"A cooked delicacy."
+foodcheeseLL,items,Food,,,"Cheese"
+foodcheeseLLDesc,items,Food,,,"cheese made from that delicious milk"
+foodCheesyMeaties,items,Food,,,"Cheesy Meaties"
+foodCheesyMeatiesDesc,items,Food,,,"Bring together your cheese, mince, and a few other simple ingredients for an END Z delicacy of the highest order.(Thanks Arramus!)"
+foodlambandpotatoesLL,items,Food,,,"Lamb & Potato Platter"
+foodlambandpotatoesLLDesc,items,Food,,,"Such a fine platter, this will fill you up."
+foodlambrackLL,items,Food,,,"Rack of Lamb"
+foodlambrackLLDesc,items,Food,,,"Such a fine platter, this will fill you up."
+foodlimeyogurtLL,items,Food,,,"Lime Yogurt"
+foodlimeyogurtLLDesc,items,Food,,,"Delicious little snack."
+foodgrilledlambwsauceLL,items,Food,,,"Grilled Lamb with Lime Yogurt Sauce"
+foodgrilledlambwsauceLLDesc,items,Food,,,"Delicious hearty meal."
+foodlambStewLL,items,Food,,,"Lamb and Veggie Stew"
+foodlambStewLLDesc,items,Food,,,"Delicious hearty meal."
+foodlimepieLL,items,Food,,,"Lime Pie"
+foodlimepieLLDesc,items,Food,,,"Such a yummy snack"
+foodfruitsaladLL,items,Food,,,"Fruit Salad"
+foodfruitsaladLLDesc,items,Food,,,"Such a yummy snack"
+foodtatortotcassLL,items,Food,,,"Tater Tot Casserole"
+foodtatortotcassLLDesc,items,Food,,,"oh my god this is gonna over fill me."
+food5courseLL,items,Food,,,"5 Course Meal"
+food5courseLLDesc,items,Food,,,"This is good to fill way up, while being fat you can barter with the penny pinching trader alot better.(25% Barter for 10 Minutes)"
+fooddoublecheese2f3LL,items,Food,,,"2 For 3 Double Cheese"
+fooddoublecheese2f3LLDesc,items,Food,,,"Eat these for a good meal but you also gain 50% more experience. Burgers down Xp up!)"
+bufffooddoublecheese2f3LLName,buffs,Buff,,,"Experienced Eater"
+bufffooddoublecheese2f3LLDesc,buffs,Buff,,,"Gain 50% experience when you eat these burgers."
+bufffooddoublecheese2f3LLTooltip,buffs,Buff,New,,"[03fc9d]Burgers down, Xp up!"
+
+perkvehicles,,,,,"[21f505]EndZ Vehicles"
+perkvehiclesDesc,,,,,"This tree is where you unlock the EndZ specific Vehicles. Tier1=2000hp Tier2=4000hp Tier3=6000hp Tier4=8000hp Tier5=10Khp. All Vehicles are pretty fast, so their worth having and screw vanilla vehicles. (more to come in the future)"
 perkvehiclesRank1Desc,,,,,"Classic Cars"
 perkvehiclesRank1LongDesc,,,,,"Unlocks- Deville"
 perkvehiclesRank2Desc,,,,,"Muscle Cars"
@@ -426,7 +507,7 @@ perkvehiclesRank3LongDesc,,,,,"Unlocks- Buggy, Blue Racer, Yellow Racer, Red Rac
 perkvehiclesRank4Desc,,,,,"Trucks"
 perkvehiclesRank4LongDesc,,,,,"Unlocks- 1950Dodge Truck"
 perkvehiclesRank5Desc,,,,,"Military Vehicles"
-perkvehiclesRank5LongDesc,,,,,"Unlocks- Warthog, Military Truck"
+perkvehiclesRank5LongDesc,,,,,"Unlocks- Warthog, Military Truck, Transport Helicopter, Military Helicopter"
 
 WarthogVehicle,vehicles,vehicle,,,EndZ Angel McCarthy Series(Warthog)
 WarthogVehiclePlaceable,vehicles,item,,,EndZ Angel McCarthy Series(Warthog)
@@ -448,9 +529,13 @@ EndZdodgetruckLLPlaceable,vehicles,item,,,EndZ 1950 Dodge Truck
 EndZdodgetruckLL,vehicles,vehicle,,,EndZ 1950 Dodge Truck
 EndZmilitarytruckLLPlaceable,vehicles,item,,,EndZ Military Truck
 EndZmilitarytruckLL,vehicles,vehicle,,,EndZ Military Truck
+vehicleEndZmilihelicopterLLPlaceable,vehicles,item,,,EndZ Transport Helicopter
+vehicleEndZmilihelicopterLL,vehicles,vehicle,,,EndZ Transport Helicopter
+EndZmilihelicopter2LLPlaceable,vehicles,item,,,EndZ Military Helicopter
+EndZmilihelicopter2LL,vehicles,vehicle,,,EndZ Military Helicopter
 
 endzxpcardLL,items,Admin,,,EndZ Gains Card
-endzxpcardLLDesc,items,Admin,,,You gain 1 skill point and 5000xp for reading this card, cannot craft you have to find it in the world loot.
+endzxpcardLLDesc,items,Admin,,,You gain 5000xp for reading this card, cannot craft you have to find it in the world loot.
 
 bedrollteleportcardLL,items,Admin,,,EndZ Backpack Teleport
 bedrollteleportcardLLDesc,items,Admin,,,Read this and instantly teleport to your dropped backpack.
@@ -469,11 +554,25 @@ EndZgrootradiatedLL,entityclasses,Entity,,,Radiated Grute
 
 resourcelavenderLL,items,Item,,,Lavender
 resourcelavenderLLDesc,items,Item,,,Very useful early on to craft bandages to keep alive. Can only harvest in the wild. Cannot be grown.
-medicallavenderpatchLL,items,Medical,,,"Lavender Patch"
-medicallavenderpatchLLDesc,items,Medical,,,"this patch will help will small amounts of health and easy to make."
+
+
+materialMframeLL_shapes,blocks,Block,,,Frame
+frameShapesLL:VariantHelper,blocks,Block,,,"Frame Shapes(Player)"
+
+materialMwoodLL_shapes,blocks,Block,,,Wood
+woodShapesLL:VariantHelper,blocks,Block,,,"Wood Shapes(Player)"
+
+materialMcobblestoneLL_shapes,blocks,Block,,,Cobblestone
+cobblestoneShapesLL:VariantHelper,blocks,Block,,,"Cobblestone Shapes(Player)"
+
+materialMconcreteLL_shapes,blocks,Block,,,Concrete
+concreteShapesLL:VariantHelper,blocks,Block,,,"Concrete Shapes(Player)"
+
+materialMsteelLL_shapes,blocks,Block,,,Steel
+steelShapesLL:VariantHelper,blocks,Block,,,"Steel Shapes(Player)"
 
 materialMmoonrock_shapes,blocks,Block,,,Moonrock
-moonrockShapes:VariantHelper,blocks,Block,,,Moonrock Shapes
+moonrockShapes:VariantHelper,blocks,Block,,,"[7ec2c0]Moonrock Shapes(Player)"
 
 materialMvibe_shapes,blocks,Block,,,Vibranium
-vibeShapes:VariantHelper,blocks,Block,,,Vibranium Shapes
+vibeShapes:VariantHelper,blocks,Block,,,"[6a00a3]Vibranium Shapes(Player)"

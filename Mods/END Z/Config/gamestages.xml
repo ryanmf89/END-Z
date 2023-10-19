@@ -46,5 +46,188 @@
 <set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='48']/spawn[@group='FwanderingHordeStageGS59' 	and @num='10']/@num">35</set>
 <set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='49']/spawn[@group='FwanderingHordeStageGS64' 	and @num='08']/@num">35</set>
 <set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='50']/spawn[@group='ZombieBearsGroup' 			and @num='02']/@num">10</set>
-	
+
+<!--POI EDITOR SLEEPER SPAWNS-->
+<append xpath="/gamestages">	
+<group name="1EndZzombiegrimlinLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombiegrimlinLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombiegrimlinLL">
+	<gamestage stage="1">
+		<spawn group="1EndZzombiegrimlinLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="2EndZzombiegrimlintwinLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombiegrimlintwinLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombiegrimlintwinLL">
+	<gamestage stage="1">
+		<spawn group="2EndZzombiegrimlintwinLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="3EndZzombieporcLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombieporcLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombieporcLL">
+	<gamestage stage="1">
+		<spawn group="3EndZzombieporcLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="4EndZzombiedesertmonsterorcLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombiedesertmonsterorcLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombiedesertmonsterorcLL">
+	<gamestage stage="1">
+		<spawn group="4EndZzombiedesertmonsterorcLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="5EndZzombieimpLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombieimpLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombieimpLL">
+	<gamestage stage="1">
+		<spawn group="5EndZzombieimpLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="6EndZzombiesnowguardianLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombiesnowguardianLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombiesnowguardianLL">
+	<gamestage stage="1">
+		<spawn group="6EndZzombiesnowguardianLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="7EndZFrozenBoe" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="FrozenBoe" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="FrozenBoe">
+	<gamestage stage="1">
+		<spawn group="7EndZFrozenBoe" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="8EndZzombiesmallbitchLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombiesmallbitchLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombiesmallbitchLL">
+	<gamestage stage="1">
+		<spawn group="8EndZzombiesmallbitchLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="9EndZzombiespikeLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombiespikeLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombiespikeLL">
+	<gamestage stage="1">
+		<spawn group="9EndZzombiespikeLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="10EndZzombienecroLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombienecroLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombienecroLL">
+	<gamestage stage="1">
+		<spawn group="10EndZzombienecroLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="11EndZzombiemutantLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombiemutantLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombiemutantLL">
+	<gamestage stage="1">
+		<spawn group="11EndZzombiemutantLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="12EndZzombiesupermutantLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombiesupermutantLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombiesupermutantLL">
+	<gamestage stage="1">
+		<spawn group="12EndZzombiesupermutantLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+
+<append xpath="/gamestages">	
+<group name="13EndZzombieWguardianLL" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+	<spawner name="zombieWguardianLL" count="1"/>
+</group>	
+</append>
+
+<append xpath="/gamestages">
+<spawner name="zombieWguardianLL">
+	<gamestage stage="1">
+		<spawn group="13EndZzombieWguardianLL" num="1" maxAlive="1" duration="10"/>
+</gamestage>
+</spawner>
+</append>
+<!--END OF POI EDITOR SLEEPER SPAWNS-->
 </configs>

@@ -1,6 +1,8 @@
-﻿using HarmonyLib;
+﻿using System;
+using HarmonyLib;
 using System.Collections.Generic;
 using SCore.Features.RemoteCrafting.Scripts;
+using UnityEngine;
 
 namespace Features.RemoteCrafting
 {
@@ -163,10 +165,18 @@ namespace Features.RemoteCrafting
                         if (entry.IsEmpty()) continue;
                         if (itemStack.itemValue.GetItemOrBlockId() != entry.itemValue.GetItemOrBlockId()) continue;
                         totalCount += entry.count;
-                        if (totalCount < num) continue;
-                        // We have enough to satisfy this item, so move to the next oen.
+                        // We have enough.
+                        if (totalCount >= num)
+                        {
+                            break;
+                        }
+
+                    }
+                    // We have enough.
+                    if (totalCount >= num)
+                    {
                         itemsWeHave++;
-                        break;
+                        continue;
                     }
 
                     // Check the toolbelt now.
@@ -176,10 +186,17 @@ namespace Features.RemoteCrafting
                         if (entry.IsEmpty()) continue;
                         if (itemStack.itemValue.GetItemOrBlockId() != entry.itemValue.GetItemOrBlockId()) continue;
                         totalCount += entry.count;
-                        if (totalCount < num) continue;
-                        // We have enough to satisfy this item, so move to the next oen.
+                        // We have enough.
+                        if (totalCount >= num)
+                            break;
+                    }
+
+                    // We have enough.
+                    if (totalCount >= num)
+                    {
                         itemsWeHave++;
-                        break;
+                    continue;
+                    
                     }
 
                     // check container
@@ -189,10 +206,19 @@ namespace Features.RemoteCrafting
                         if (stack.IsEmpty()) continue;
                         if (itemStack.itemValue.GetItemOrBlockId() != stack.itemValue.GetItemOrBlockId()) continue;
                         totalCount += stack.count;
-                        if (totalCount < num) continue;
-                        // We have enough to satisfy this item, so move to the next oen.
+                        // We have enough.
+                        if (totalCount >= num)
+                            break;
+                    }
+
+                    // We don't have enough for this.
+                    if (totalCount < num)
+                    {
+                        return false;
+                    }
+                    if (totalCount >= num)
+                    {
                         itemsWeHave++;
-                        break;
                     }
                 }
 
@@ -207,13 +233,14 @@ namespace Features.RemoteCrafting
         [HarmonyPatch("RemoveItems")]
         public class RemoveItems
         {
-            public static bool Prefix(XUiM_PlayerInventory __instance, IList<ItemStack> _itemStacks, EntityPlayerLocal ___localPlayer, int _multiplier)
+            public static bool Prefix(XUiM_PlayerInventory __instance, IList<ItemStack> _itemStacks, EntityPlayerLocal ___localPlayer, int _multiplier,  IList<ItemStack> _removedItems
+            ,	Bag ___backpack, Inventory ___toolbelt)
             {
                 // Check if this feature is enabled.
                 if (!Configuration.CheckFeatureStatus(AdvFeatureClass, Feature))
                     return true;
-                
-                RemoteCraftingUtils.ConsumeItem(_itemStacks, ___localPlayer, _multiplier);
+         
+                RemoteCraftingUtils.ConsumeItem(_itemStacks, ___localPlayer, _multiplier,  _removedItems, ___backpack, ___toolbelt);
                 return false;
             }
         }

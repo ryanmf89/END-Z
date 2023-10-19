@@ -459,6 +459,7 @@ namespace UAI
 
         }
 
+      
 
         public static bool IsEnemyNearby(Context _context, float distance = 20f)
         {
@@ -581,6 +582,13 @@ namespace UAI
         public static float SetSpeed(Context _context, bool panic = false)
         {
             var speed = _context.Self.GetMoveSpeed();
+            
+            // Entities spawned into hordes move at aggro speed, not normal move speed
+            if (_context.Self is EntityEnemy enemy && enemy.IsHordeZombie)
+            {
+                speed = enemy.GetMoveSpeedAggro();
+            }
+
             if (panic)
                 speed = _context.Self.GetMoveSpeedPanic();
 
@@ -1052,6 +1060,7 @@ namespace UAI
         }
 
 
+      
         /// <summary>
         /// These hit mask values are taken verbatim from Voxel.raycastNew.
         /// The names represent whether a raycast should <em>collide with</em> the block.

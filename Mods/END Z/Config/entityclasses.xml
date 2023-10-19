@@ -1085,15 +1085,13 @@
 	
 	<property name="ExperienceGain" value="1000"/>
 
-    <drop event="Harvest" name="foodgroundbeefLL" count="0" tool_category="Butcher"/>
-    <drop event="Harvest" name="drinkJarmilkLL" count="0" tool_category="Butcher"/>
-    <drop event="Harvest" name="foodgroundbeefLL" tag="butcherHarvest" count="50"/>	
-    <drop event="Harvest" name="drinkJarmilkLL" tag="butcherHarvest" count="10"/>
+    <drop event="Harvest" name="foodlambmeatLL" count="0" tool_category="Butcher"/>
+    <drop event="Harvest" name="foodlambmeatLL" tag="butcherHarvest" count="50"/>	
     <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="7"/>
     <drop event="Harvest" name="resourceAnimalFat" count="4" tag="butcherHarvest"/>
     <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
     <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
-    <drop event="Harvest" name="foodgroundbeefLL" count="1" tag="WasteTreasuresCompleteHarvest"/>
+    <drop event="Harvest" name="foodlambmeatLL" count="1" tag="WasteTreasuresCompleteHarvest"/>
     <drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
     <drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 
@@ -1643,7 +1641,259 @@
 	<property name="MapIcon" value="ui_game_symbol_4x4"/>
 	<property name="NavObject" value="4x4" />
 </entity_class>
+
+<entity_class name="vehicleEndZmilihelicopterLL">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Class" value="EntityVGyroCopter"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:Resources/EndZchopper1.unity3d?EndZchopper.prefab"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="30"/>
+	<property name="Explosion.EntityDamage" value="30"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4"/>
+</entity_class>
+
+<entity_class name="EndZmilihelicopter2LL">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Class" value="EntityVGyroCopter"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:Resources/EndZmilichopper1.unity3d?EndZmilichopper.prefab"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicle4x4Truck"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="30"/>
+	<property name="Explosion.EntityDamage" value="30"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_4x4"/>
+	<property name="NavObject" value="4x4"/>
+</entity_class>
+</append>
+<!--END OF VEHICLES-->
+
+<!--NPC SECTION-->
+<append xpath="/entity_classes/entity_class">
+	<property name="SpawnOnDeath" value="SpawnNothing" />
 </append>
 
-<!--END OF VEHICLES-->
+<remove xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='SpawnOnDeath']"/>
+<remove xpath="/entity_classes/entity_class[@name='playerNewMale']/property[@name='SpawnOnDeath']"/>	
+<remove xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='SpawnOnDeath']"/>	
+<remove xpath="/entity_classes/entity_class[@name='supplyPlane']/property[@name='SpawnOnDeath']"/>	
+<remove xpath="/entity_classes/entity_class[@name='sc_General']/property[@name='SpawnOnDeath']"/>
+<remove xpath="/entity_classes/entity_class[@name='Backpack']/property[@name='SpawnOnDeath']"/>
+
+<append xpath="/entity_classes">
+<!--SURVIVOR 1 NPC AND ZOMBIE VARIANT-->
+<entity_class name="npcEndZsurvivorLL" extends="npcAdvancedEmptyHandTemplate"> 
+	<property name="UserSpawnType" value="Menu"/> 
+ 	<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+	<property name="Faction" value="whiteriver"/>
+	<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
+	<property name="Mesh" value="#@modfolder:Resources/EndZsurvivor1.unity3d?EndZsurvivor"/>
+	<property name="LookAtAngle" value="0"/>
+	<property name="MaxHealth" value="75,150"/>
+	<property name="Buffs" value="npcEndZsurvivorTransformLL"/>
+<!-- This activates the backpack -->
+<effect_group name="HasBackpack">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+</effect_group>
+<!-- This activates the Timid behavior -->	
+<!--effect_group name="IsTimid">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>
+</effect_group-->	
+<effect_group name="Base Effects">
+	<passive_effect name="HealthMax" operation="base_set" value="75,150"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+</effect_group>
+</entity_class>
+
+<entity_class name="npcEndZsurvivorTransformationLL" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker,normaltrack"/>
+	<property name="Prefab" value="NPC"/>
+	<property name="Mesh" value="#@modfolder:Resources/EndZsurvivortransform1.unity3d?EndZsurvivortransform"/>
+	<property name="AvatarController" value="AvatarZombieController"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="6"/>
+	<property name="Mass" value="500"/>
+	<property name="ExperienceGain" value="1000"/>
+	<property name="MaxHealth" value="250,300"/>
+	<property name="DeadBodyHitPoints" value="700"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="HasRagdoll" value="true"/>
+	<property name="LookAtAngle" value="0"/>
+			
+	<property name="PainResistPerHit" value="100"/>
+	<property name="Dismemberment" value="true"/>
+				
+	<property name="MoveSpeed" value="0.06"/>
+	<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+	<property name="SizeScale" value="1"/>
+
+<effect_group name="Base Effects">
+	<passive_effect name="HealthMax" operation="base_set" value="250,300"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+</effect_group>
+</entity_class>
+<!--END OF SURVIVOR 1 NPC AND ZOMBIE VARIANT-->
+
+<!--SURVIVOR 2 NPC AND ZOMBIE VARIANT-->
+<entity_class name="npcEndZsurvivor2LL" extends="npcAdvancedEmptyHandTemplate"> 
+	<property name="UserSpawnType" value="Menu"/> 
+ 	<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+	<property name="Faction" value="whiteriver"/>
+	<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
+	<property name="Mesh" value="#@modfolder:Resources/EndZsurvivor21.unity3d?EndZsurvivor2"/>
+	<property name="LookAtAngle" value="0"/>
+	<!--property name="MaxHealth" value="75,150"/-->
+	<property name="Buffs" value="npcEndZsurvivorTransform2LL"/>
+<!-- This activates the backpack -->
+<effect_group name="HasBackpack">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+</effect_group>
+<!-- This activates the Timid behavior -->	
+<!--effect_group name="IsTimid">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>
+</effect_group-->	
+<effect_group name="Base Effects">
+	<passive_effect name="HealthMax" operation="base_set" value="75,100"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+</effect_group>
+</entity_class>
+
+<entity_class name="npcEndZsurvivorTransformation2LL" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker,normaltrack"/>
+	<property name="Prefab" value="NPC"/>
+	<property name="Mesh" value="#@modfolder:Resources/EndZsurvivortransform21.unity3d?EndZsurvivortransform2"/>
+	<property name="AvatarController" value="AvatarZombieController"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="6"/>
+	<property name="Mass" value="500"/>
+	<property name="ExperienceGain" value="1000"/>
+	<property name="MaxHealth" value="250,300"/>
+	<property name="DeadBodyHitPoints" value="700"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="HasRagdoll" value="true"/>
+	<property name="LookAtAngle" value="0"/>
+			
+	<property name="PainResistPerHit" value="100"/>
+	<property name="Dismemberment" value="true"/>
+				
+	<property name="MoveSpeed" value="0.06"/>
+	<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+	<property name="SizeScale" value="1"/>
+
+<effect_group name="Base Effects">
+	<passive_effect name="HealthMax" operation="base_set" value="250,300"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+</effect_group>
+</entity_class>
+<!--END OF SURVIVOR 2 NPC AND ZOMBIE VARIANT-->
+
+<!--WARRIOR NPC AND ZOMBIE VARIANT-->
+<entity_class name="npcEndZsurvivor3LL" extends="npcAdvancedEmptyHandTemplate"> 
+	<property name="UserSpawnType" value="Menu"/> 
+ 	<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+	<property name="Faction" value="whiteriver"/>
+	<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
+	<property name="Mesh" value="#@modfolder:Resources/warriorendz1.unity3d?warriorendz"/>
+	<property name="LookAtAngle" value="0"/>
+	<!--property name="MaxHealth" value="75,150"/-->
+	<property name="Buffs" value="npcEndZsurvivorTransform3LL"/>
+<!-- This activates the backpack -->
+<effect_group name="HasBackpack">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+</effect_group>
+<!-- This activates the Timid behavior -->	
+<!--effect_group name="IsTimid">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>
+</effect_group-->	
+<effect_group name="Base Effects">
+	<passive_effect name="HealthMax" operation="base_set" value="75,100"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+</effect_group>
+</entity_class>
+
+<entity_class name="npcEndZsurvivorTransformation3LL" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker,normaltrack"/>
+	<property name="Prefab" value="NPC"/>
+	<property name="Mesh" value="#@modfolder:Resources/warriorendztransform1.unity3d?warriorendztransform"/>
+	<property name="AvatarController" value="AvatarZombieController"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="6"/>
+	<property name="Mass" value="500"/>
+	<property name="ExperienceGain" value="1000"/>
+	<property name="MaxHealth" value="250,300"/>
+	<property name="DeadBodyHitPoints" value="700"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="HasRagdoll" value="true"/>
+	<property name="LookAtAngle" value="0"/>
+			
+	<property name="PainResistPerHit" value="100"/>
+	<property name="Dismemberment" value="true"/>
+				
+	<property name="MoveSpeed" value="0.06"/>
+	<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			
+	<property name="SizeScale" value="1"/>
+
+<effect_group name="Base Effects">
+	<passive_effect name="HealthMax" operation="base_set" value="250,300"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+</effect_group>
+</entity_class>
+<!--END OF WARRIOR NPC AND ZOMBIE VARIANT-->
+
+<!--BANSHEE NPC AND ZOMBIE VARIANT-->
+<entity_class name="npcEndZsurvivor4LL" extends="npcAdvancedEmptyHandTemplate"> 
+	<property name="UserSpawnType" value="Menu"/> 
+ 	<property name="Tags" value="entity,male,npc,walker,melee,DRMid,Knife,Machete,ClubWood,BatWood,Axe,Spear,SMG,PipePistol,PipeShotgun,PipeRifle,PipeMG,M60,Pistol,DPistol,Ak47,TRifle,HRifle,SRifle,LBow,XBow,PShotgun,AShotgun,RocketL"/>
+	<property name="Faction" value="whiteriver"/>
+	<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
+	<property name="Mesh" value="#@modfolder:Resources/banshee21.unity3d?banshee2"/>
+	<property name="LookAtAngle" value="0"/>
+	<!--property name="MaxHealth" value="75,150"/-->
+	<property name="Buffs" value="npcEndZsurvivorTransform3LL"/>
+<!-- This activates the backpack -->
+<effect_group name="HasBackpack">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+</effect_group>
+<!-- This activates the Timid behavior -->	
+<!--effect_group name="IsTimid">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>
+</effect_group-->	
+<effect_group name="Base Effects">
+	<passive_effect name="HealthMax" operation="base_set" value="10"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+</effect_group>
+</entity_class>
+<!--END OF BANSHEE NPC AND ZOMBIE VARIANT-->
+
+</append>
+
 </configs>

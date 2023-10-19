@@ -86,8 +86,10 @@
     <Compile Include="Features\LockPicking\Scripts\LocksetAudio.cs" />
     <Compile Include="Features\LockPicking\Scripts\SphereII_Locks.cs" />
     <Compile Include="Features\LockPicking\XUiC\XUiC_PickLocking.cs" />
+    <Compile Include="Features\RemoteCrafting\Harmony\DropBoxToContainers.cs" />
     <Compile Include="Features\RemoteCrafting\Harmony\IngredientsFromContainers.cs" />
     <Compile Include="Features\RemoteCrafting\Harmony\ItemActionRepairPatches.cs" />
+    <Compile Include="Features\RemoteCrafting\Scripts\BlockDropBoxContainer.cs" />
     <Compile Include="Features\RemoteCrafting\Scripts\RemoteCraftingUtils.cs" />
     <Compile Include="Features\RemoteCrafting\Scripts\XUiC\XUiC_BroadcastButton.cs" />
     <Compile Include="Harmony\AIDirectorBloodMoon\AiDirectorBloodMoonParty.cs" />
@@ -165,6 +167,7 @@
     <Compile Include="Harmony\TileEntities\PoweredWorkstations.cs" />
     <Compile Include="Harmony\TileEntities\TileEntity.cs" />
     <Compile Include="Harmony\TileEntities\TileEntityAlwaysActive.cs" />
+    <Compile Include="Harmony\TileEntities\TileEntityLootContainer.cs" />
     <Compile Include="Harmony\TileEntities\TileEntityPreserveOwnership.cs" />
     <Compile Include="Harmony\TileEntities\TileEntitySignGif.cs" />
     <Compile Include="Harmony\UI\FilterGameWorld.cs" />
@@ -364,7 +367,6 @@
     <Compile Include="Scripts\NetPackage\NetPackageQuestGotoPointSDX.cs" />
     <Compile Include="Scripts\NetPackage\NetPackageQuestTreasurePointSDX.cs" />
     <Compile Include="Scripts\NetPackage\NetPackageRandomTaggedPOIGotoSDX.cs" />
-    <Compile Include="Scripts\NetPackage\NetPackageWeaponSwap.cs" />
     <Compile Include="Scripts\ProgrammableLogic\PathingCubeParser.cs" />
     <Compile Include="Scripts\Quests\ObjectiveBlockDestroySDX.cs" />
     <Compile Include="Scripts\Quests\ObjectiveBuffSDX.cs" />
@@ -401,6 +403,7 @@
     <Compile Include="Scripts\UtilityAI\Filters\UAIFilterIsLeader.cs" />
     <Compile Include="Scripts\UtilityAI\Filters\UAIFilterIsPlayer.cs" />
     <Compile Include="Scripts\UtilityAI\Filters\UAIFilterIsSelf.cs" />
+    <Compile Include="Scripts\UtilityAI\UAIConsiderationHasInvestigatePosition.cs" />
     <Compile Include="Scripts\UtilityAI\UAIConsiderationHasPathingCode.cs" />
     <Compile Include="Scripts\UtilityAI\UAIConsiderationIsNearPlant.cs" />
     <Compile Include="Scripts\UtilityAI\UAIConsiderationIsNearFarm.cs" />
@@ -440,6 +443,7 @@
     <Compile Include="Scripts\UtilityAI\UAIConsiderationTargetSameClass.cs" />
     <Compile Include="Scripts\UtilityAI\UAIConsiderationTargetTileEntity.cs" />
     <Compile Include="Scripts\UtilityAI\UAISCoreUtils.cs" />
+    <Compile Include="Scripts\UtilityAI\UAITaskApproachSpotSDX.cs" />
     <Compile Include="Scripts\UtilityAI\UAITaskAttackTargetEntitySDX.cs" />
     <Compile Include="Scripts\UtilityAI\UAITaskBreakBlocks.cs" />
     <Compile Include="Scripts\UtilityAI\UAITaskFarming.cs" />

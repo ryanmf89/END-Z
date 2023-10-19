@@ -2,7 +2,7 @@
 
 <!--DESERT HEAT MOD FOR ARMOR-->
 <append xpath="/item_modifiers">
-<item_modifier name="modbuffdesertheatLL" installable_tags="armorChest,armorLegs" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+<item_modifier name="modbuffdesertheatLL" installable_tags="armorLegs" modifier_tags="endzbiomes" blocked_tags="noMods" type="attachment">
 	<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
 	<effect_group tiered="false">
@@ -17,7 +17,7 @@
 
 <!--FROZEN NORTH MOD FOR ARMOR-->
 <append xpath="/item_modifiers">
-<item_modifier name="modbufffrozensnowLL" installable_tags="armorChest,armorLegs" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+<item_modifier name="modbufffrozensnowLL" installable_tags="armorChest" modifier_tags="endzbiomes" blocked_tags="noMods" type="attachment">
 	<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
 	<effect_group tiered="false">
@@ -32,7 +32,7 @@
 
 <!--RADIATION MOD FOR ARMOR-->
 <append xpath="/item_modifiers">
-<item_modifier name="modbuffradiationwasteLL" installable_tags="head" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+<item_modifier name="modbuffradiationwasteLL" installable_tags="head" modifier_tags="endzbiomes" blocked_tags="noMods" type="attachment">
 	<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
 	<effect_group tiered="false">
