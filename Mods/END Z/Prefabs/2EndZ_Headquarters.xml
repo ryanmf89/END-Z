@@ -20,9 +20,9 @@
   <property name="TriggerVolumeTriggers" value="1#2" />
   <property name="QuestTags" value="clear, fetch, restore_power, infested" />
   <property name="ThemeTags" value="fire" />
-  <property name="ThemeRepeatDistance" value="500" />
-  <property name="POIMarkerSize" value="4, 1, 3" />
-  <property name="POIMarkerStart" value="32, 0, 0" />
+  <property name="ThemeRepeatDistance" value="1000" />
+  <property name="POIMarkerSize" value="5, 1, 6" />
+  <property name="POIMarkerStart" value="26, 3, -4" />
   <property name="POIMarkerGroup" value="new" />
   <property name="POIMarkerTags" value="" />
   <property name="POIMarkerType" value="RoadExit" />
@@ -38,8 +38,8 @@
   <property name="SleeperVolumeFlags" value="0,0,0,0,2,0,2,3" />
   <property name="SleeperVolumeTriggeredBy" value=" # # # # # # #1" />
   <property class="Stats">
-    <property name="TotalVertices" value="430524" />
-    <property name="TotalTriangles" value="177083" />
+    <property name="TotalVertices" value="430512" />
+    <property name="TotalTriangles" value="177067" />
     <property class="BlockEntities">
       <property name="Vertices" value="343710" />
       <property name="Triangles" value="125475" />
@@ -69,8 +69,8 @@
       <property name="Triangles" value="0" />
     </property>
     <property class="ChunkMeshes6">
-      <property name="Vertices" value="6728" />
-      <property name="Triangles" value="10944" />
+      <property name="Vertices" value="6716" />
+      <property name="Triangles" value="10928" />
     </property>
   </property>
   <property class="IndexedBlockOffsets">

@@ -1,8 +1,9 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english
 
-endz_stonecave_01_arramus,POI,POIName,,,"END Z Toy Store"
+01EndZ_stonecave_01_arramus,POI,POIName,,,"END Z Toy Store"
 1EndZ_BookFair,POI,POIName,,,"END Z Book Fair"
 2EndZ_Headquarters,POI,POIName,,,"END Z Headquarters"
+3EndZ_Headquarters,POI,POIName,,,"END Z OutPost 1"
 
 EndZallinoneglassesLL,items,Clothes,,,"EndZ Glasses"
 EndZallinoneglassesLLDesc,items,Clothes,,,"These glasses add 1 point to the skill trees like other glasses. Has some hidden benefits as well! Credits to the DrunkPenguin."

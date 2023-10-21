@@ -23,6 +23,55 @@ Direct Download to the 0-SCore.zip available on gitlab mirror:
 ### Change Logs
 
 [ Change Log ]
+Version: 21.1.73.1834
+
+	[ MinEvent ]
+		Added new MinEventActionConverItem ( Completely Untested. Should be okay. Probably. )
+			The intended usage for this is to allow a limited use item that is not connected to the durability,
+			and allows it to change into another item.
+			I didn't even test this one.
+			This MinEvent will add a "MaxUsage" meta data entry using MaxUsage as a starting value.
+			Each time the event is fired on the item, it will count the usage down.
+			Not even joking.
+			When the item is down to 0, it will turn the item into the specified downgradeItem.
+
+		Example:
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ConvertItem, SCore" downgradeItem="meleeClub" maxUsage="10" />
+
+	[ UAI ]
+		- Fixed an issue where the UAI considerations were a bit off. Thanks khzmusik
+
+	[ Tools ]
+		- Added Unity Debugging DLLs for Alpha 21.x. Thanks to Yakov.
+
+Version: 21.1.56.1705
+
+	[ Requirements ]
+		Added invert support for RequirementIsBloodMoon.
+			<requirement name="RequirementIsBloodMoonDMT, SCore" invert="true" />
+
+	[ Farming ]
+		- Added an additional check to see if a farm plot is empty.
+		- Updated the UAI Farming Task
+			- Consumes seed items in the inventory now
+			- Resets farm plots after they are all visited, so that the farmer will revisit them
+			- Fixed an issue where Farmers won't tend to a farm plot that you have harvested.
+			- Fixed an issue where the farmer wasn't looking at the plant correctly enough
+			- Fixed an issue where the farmer was too far away from a farm plot to visually have an effect on it.
+		- To help with testing, the farmer will place the smoke particle on the farm plot its currently working on.
+			- This will be removed after some tests are complete.
+
+	[ Bloom's Family Farming ]
+		- Updated the MyFarmer's test entity properties with notrample tag, more UAI, and allow spawns from menu.
+Version: 21.1.55.858
+
+	[ Drop Box Storage ]
+		- Fixed a bug where items were not removed from drop box in multiplayer
+
+	[ Spawn On Death ]
+		Added new Property to allow leaving of the body when spawning a new entity.
+			<property name="SpawnOnDeathLeaveBody" value="true" />
+
 Version: 21.1.53.1324
 	[ Trader Protection ]
 		- Added a new option to allow placing blocks within a Trader Area, under the AdvancedPrefabFeatures ConfigBlock
