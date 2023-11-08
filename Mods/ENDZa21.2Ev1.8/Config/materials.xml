@@ -1,0 +1,167 @@
+<configs>
+
+<append xpath="/materials">		
+<material id="MmoonrockLL">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="resourceMoonRocksLL"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="1.5"/>
+	<property name="MaxDamage" value="15000"/>
+	<property name="Experience" value="25"/>
+</material>
+	
+<material id="MvibeLL">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="1.5"/>
+	<property name="MaxDamage" value="30000"/>
+	<property name="Experience" value="100"/>
+</material>
+	
+<material id="MresourceHazmatFiberLL">
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="MmilitaryFiber"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="cloth"/>
+	<property name="lightopacity" value="4"/>
+	<property name="stability_glue" value="2"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="5"/>
+	<property name="Experience" value="40"/>
+</material>
+
+<material id="MresourcelavenderLL">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Experience" value="1.0"/>
+	<property name="MaxDamage" value="1"/>
+</material>
+
+<material id="MvibeblockLL">
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="stepsound" value="stone"/>
+	<property name="forge_category" value="resourcescrapvibeLL"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="MaxDamage" value="20000"/>
+	<property name="Experience" value="10"/>
+</material>
+
+<material id="MbrassblockLL">
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="stepsound" value="stone"/>
+	<property name="forge_category" value="resourcescrapvibeLL"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="MaxDamage" value="10000"/>
+	<property name="Experience" value="10"/>
+</material>
+</append>
+
+<append xpath="/materials">
+<material id="MframeLL_shapes">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="wood"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="MaxDamage" value="100"/>
+	<property name="Experience" value="2"/>
+</material>
+
+<material id="MwoodLL_shapes">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="wood"/>
+	<property name="stability_glue" value="40"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="MaxDamage" value="500"/>
+	<property name="Experience" value="2"/>
+</material>
+
+<material id="McobblestoneLL_shapes">
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="stone"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="stone"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="MaxDamage" value="1500"/>
+	<property name="Experience" value="2"/>
+</material>
+
+<material id="MconcreteLL_shapes">
+	<property name="damage_category" value="stone"/>
+	<property name="surface_category" value="stone"/>
+	<property name="forge_category" value="stone"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="stone"/>
+	<property name="stability_glue" value="120"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="explosionresistance" value="1.2"/>
+	<property name="MaxDamage" value="5000"/>
+	<property name="Experience" value="4"/>
+</material>
+
+<material id="MsteelLL_shapes">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="1.75"/>
+	<property name="MaxDamage" value="10000"/>
+	<property name="Experience" value="6"/>
+</material>
+
+<material id="Mmoonrock_shapes">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="1.75"/>
+	<property name="MaxDamage" value="15000"/>
+	<property name="Experience" value="6"/>
+</material>
+
+<material id="Mvibe_shapes">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="iron"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="metal"/>
+	<property name="stability_glue" value="300"/>
+	<property name="Mass" type="int" value="20"/>
+	<property name="explosionresistance" value="1.75"/>
+	<property name="MaxDamage" value="30000"/>
+	<property name="Experience" value="6"/>
+</material>
+</append>
+</configs>

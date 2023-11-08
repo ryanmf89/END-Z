@@ -1,0 +1,570 @@
+<configs>
+
+<!--sets player level higher-->
+<set xpath="/progression/level/@max_level">500</set>
+
+<!-- Change Pack Mule Perk to unlock all slots -->
+<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@value='3,6,10,14,18']/@value">7,14,21,28,35</set>
+
+<set xpath="/progression/perks/perk[@name='perkMotherLode']/effect_group/passive_effect[@name='HarvestCount']/@value">.5,2</set>
+<set xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='CraftingTime']/@value">-0.5</set>
+
+<!--you have to read a proper book to unlock this godly ammo-->
+<!--append xpath="/progression/perks/book[@name='perkPistolPeteHPAmmo']/effect_group/passive_effect[@level='1']/@tags">,ammo9mmBulletvibe</append>
+<append xpath="/progression/perks/book[@name='perkEnforcerHPAmmo']/effect_group/passive_effect[@level='1']/@tags">,ammo44MagnumBulletvibe</append>
+<append xpath="/progression/perks/book[@name='perkSniperHPAmmo']/effect_group/passive_effect[@level='1']/@tags">,ammo762mmBulletvibe</append-->
+
+<!--HARVESTING TOOLS CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingHarvestingTools']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']">
+	<crafting_skill name="craftingHarvestingTools" max_level="100" parent="attCrafting" name_key="craftingHarvestingToolsName" desc_key="craftingHarvestingToolsDesc" long_desc_key="craftingHarvestingToolsLongDesc" icon="ui_game_symbol_tool">
+
+	<display_entry icon="meleeToolRepairT0StoneAxe" name_key="harvestToolsStone" has_quality="true" unlock_level="1,3,5,7,10" >
+		<unlock_entry item="moonrockaxeLL,moonrockshovelLL" unlock_tier="1" />
+	</display_entry>
+	<display_entry icon="meleeToolPickT1IronPickaxe" name_key="harvestToolsIron" has_quality="true" unlock_level="11,14,18,22,26" >
+		<unlock_entry item="brasspickaxeLL,brassshovelLL,brassaxeLL" unlock_tier="1" />
+	</display_entry>
+	<display_entry icon="meleeToolPickT2SteelPickaxe" name_key="harvestToolsSteel" has_quality="true" unlock_level="27,35,43,51,59" >
+		<unlock_entry item="vibepickaxeLL,vibeshovelLL,vibeaxeLL" unlock_tier="1" />
+	</display_entry>
+	<display_entry icon="meleeToolPickT3Auger" name_key="harvestToolsMechanical" has_quality="true" unlock_level="60,70,80,90,100" >
+		<unlock_entry item="vibeaugerLL,vibeChainsawLL,multiharvesttoolLL" unlock_tier="1" />
+	</display_entry>
+
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="moonrockaxeLL,moonrockshovelLL"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="brasspickaxeLL,brassshovelLL,brassaxeLL"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="vibepickaxeLL,vibeshovelLL,vibeaxeLL"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,100" value="1" tags="vibeaugerLL,vibeChainsawLL,multiharvesttoolLL"/>
+
+		<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,100" value="1,2,3,4,4" tags="moonrockaxeLL,moonrockshovelLL"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="14,18,22,26,100" value="1,2,3,4,4" tags="brasspickaxeLL,brassshovelLL,brassaxeLL"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="35,43,51,59,100" value="1,2,3,4,4" tags="vibepickaxeLL,vibeshovelLL,vibeaxeLL"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="70,80,90,100" value="1,2,3,4" tags="vibeaugerLL,vibeChainsawLL,multiharvesttoolLL"/>
+</effect_group>
+</crafting_skill>
+</insertBefore>
+
+<!--BATONS CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingRobotics']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']">
+	<crafting_skill name="craftingRobotics" max_level="100" parent="attCrafting" name_key="craftingRoboticsName" desc_key="craftingRoboticsDesc" long_desc_key="craftingRoboticsLongDesc" icon="ui_game_symbol_junk_turret">
+
+	<display_entry item="moonrockbatonLL" unlock_level="1,3,5,7,10" />
+	<display_entry item="gunBotT1JunkSledge" unlock_level="11,13,16,19,22" />
+	<display_entry item="brassstunbatonLL" unlock_level="23,26,30,34,38" />
+	<display_entry item="gunBotT2JunkTurret" unlock_level="39,46,53,60,67" />
+	<display_entry item="gunBotT3JunkDrone" unlock_level="68,76,84,92,100" />
+
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="moonrockbatonLL"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="gunBotT1JunkSledge"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="23,100" value="1" tags="brassstunbatonLL"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,100" value="1" tags="gunBotT2JunkTurret"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="68,100" value="1" tags="gunBotT3JunkDrone"/>
+
+		<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,100" value="1,2,3,4,4" tags="moonrockbatonLL"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,100" value="1,2,3,4,4" tags="gunBotT1JunkSledge"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="26,30,34,38,100" value="1,2,3,4,4" tags="brassstunbatonLL"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="46,53,60,67,100" value="1,2,3,4,4" tags="gunBotT2JunkTurret"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="76,84,92,100" value="1,2,3,4" tags="gunBotT3JunkDrone"/>
+</effect_group>
+</crafting_skill>
+</insertBefore>
+
+<!--SPEARS CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingSpears']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']">
+	<crafting_skill name="craftingSpears" max_level="75" parent="attCrafting" name_key="craftingSpearsName" desc_key="craftingSpearsDesc" long_desc_key="craftingSpearsLongDesc" icon="ui_game_symbol_spear">
+
+	<display_entry item="moonrockspearLL" unlock_level="1,3,5,7,10" />
+	<display_entry item="brassspearLL" unlock_level="11,17,24,31,38" />
+	<display_entry item="t3vibespearLL" unlock_level="39,48,57,66,75" />
+
+	<effect_group>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="moonrockspearLL"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="brassspearLL"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,75" value="1" tags="t3vibespearLL"/>
+
+	<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,75" value="1,2,3,4,4" tags="moonrockspearLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75" value="1,2,3,4,4" tags="brassspearLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75" value="1,2,3,4" tags="t3vibespearLL"/>
+</effect_group>
+</crafting_skill>
+</insertBefore>
+
+<!--CLUBS CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingClubs']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']">
+	<crafting_skill name="craftingClubs" max_level="75" parent="attCrafting" name_key="craftingClubsName" desc_key="craftingClubsDesc" long_desc_key="craftingClubsLongDesc" icon="ui_game_symbol_club">
+
+		<display_entry item="moonrockclubLL" unlock_level="1,3,5,7,10" />
+		<display_entry item="brassclubLL" unlock_level="11,17,24,31,38" />
+		<display_entry item="vibebatLL" unlock_level="39,48,57,66,75" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="moonrockclubLL"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="brassclubLL"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,75" value="1" tags="vibebatLL"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,75" value="1,2,3,4,4" tags="moonrockclubLL"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75" value="1,2,3,4,4" tags="brassclubLL"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75" value="1,2,3,4" tags="vibebatLL"/>
+		</effect_group>
+	</crafting_skill>
+</insertBefore>
+
+<!--knifes CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingBlades']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']">
+	<crafting_skill name="craftingBlades" max_level="75" parent="attCrafting" name_key="craftingBladesName" desc_key="craftingBladesDesc" long_desc_key="craftingBladesLongDesc" icon="ui_game_symbol_knife">
+
+		<display_entry item="meleeWpnBladeT0BoneKnife" unlock_level="1,3,5,7,10" />
+		<display_entry item="brassknifeLL" unlock_level="11,17,24,31,38" />
+		<display_entry item="vibemacheteLL" unlock_level="39,48,57,66,75" />
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnBladeT0BoneKnife"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="brassknifeLL"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,75" value="1" tags="vibemacheteLL"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,75" value="1,2,3,4,4" tags="meleeWpnBladeT0BoneKnife"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75" value="1,2,3,4,4" tags="brassknifeLL"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75" value="1,2,3,4" tags="vibemacheteLL"/>
+		</effect_group>
+	</crafting_skill>
+</insertBefore>
+
+<!--knuckles CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingKnuckles']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']">
+	<crafting_skill name="craftingKnuckles" max_level="75" parent="attCrafting" name_key="craftingKnucklesName" desc_key="craftingKnucklesDesc" long_desc_key="craftingKnucklesLongDesc" icon="ui_game_symbol_boxer">
+
+	<display_entry item="meleeWpnKnucklesT0LeatherKnuckles" unlock_level="1,3,5,7,10" />
+	<display_entry item="brassknucksLL" unlock_level="11,17,24,31,38" />
+	<display_entry item="vibeknucksLL" unlock_level="39,48,57,66,75" />
+
+	<effect_group>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnKnucklesT0LeatherKnuckles"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="brassknucksLL"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,75" value="1" tags="vibeknucksLL"/>
+
+	<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,75" value="1,2,3,4,4" tags="meleeWpnKnucklesT0LeatherKnuckles"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75" value="1,2,3,4,4" tags="brassknucksLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75" value="1,2,3,4" tags="vibeknucksLL"/>
+</effect_group>
+</crafting_skill>
+</insertBefore>
+
+<!--knuckles CHANGE-->
+<remove xpath="//crafting_skill[@name='craftingSledgehammers']"></remove>
+
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']">
+	<crafting_skill name="craftingSledgehammers" max_level="75" parent="attCrafting" name_key="craftingSledgehammersName" desc_key="craftingSledgehammersDesc" long_desc_key="craftingSledgehammersLongDesc" icon="ui_game_symbol_sledge">
+
+	<display_entry item="moonrocksledgeLL" unlock_level="1,3,5,7,10" />
+	<display_entry item="brasssledgeLL" unlock_level="11,17,24,31,38" />
+	<display_entry item="vibesledgeLL" unlock_level="39,48,57,66,75" />
+
+	<effect_group>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="moonrocksledgeLL"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="brasssledgeLL"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,75" value="1" tags="vibesledgeLL"/>
+
+	<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,75" value="1,2,3,4,4" tags="moonrocksledgeLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75" value="1,2,3,4,4" tags="brasssledgeLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75" value="1,2,3,4" tags="vibesledgeLL"/>
+</effect_group>
+</crafting_skill>
+</insertBefore>
+
+<remove xpath="//perk[@name='perkDaringAdventurer']"></remove>
+<insertBefore xpath="//perk[@name='perkCharismaticNature']">
+<perk name="perkDaringAdventurer" max_level="4" parent="skillIntellectInfluence" name_key="perkDaringAdventurerName" desc_key="perkDaringAdventurerDesc" icon="ui_game_symbol_adventure">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqIntellectLevel01"/></level_requirements>
+	<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="4" desc_key="reqIntellectLevel04"/></level_requirements>
+	<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="7" desc_key="reqIntellectLevel07"/></level_requirements>
+	<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+
+	<effect_group>
+		<passive_effect name="TraderStage" operation="base_add" level="1,4" value="10,40"/>
+		<passive_effect name="QuestBonusItemReward" operation="perc_add" level="1,4" value=".05,.20"/> <!-- Bonus Dukes -->
+		<passive_effect name="QuestRewardChoiceCount" operation="base_add" level="1" value="1"/>
+		<passive_effect name="QuestRewardChoiceCount" operation="base_add" level="2" value="2"/>
+		<passive_effect name="QuestRewardChoiceCount" operation="base_add" level="3" value="3"/>
+		<passive_effect name="QuestRewardChoiceCount" operation="base_add" level="4" value="4"/>
+
+		<effect_description level="1" desc_key="perkDaringAdventurerRank1Desc" long_desc_key="perkDaringAdventurerRank1LongDesc"/>
+		<effect_description level="2" desc_key="perkDaringAdventurerRank2Desc" long_desc_key="perkDaringAdventurerRank2LongDesc"/>
+		<effect_description level="3" desc_key="perkDaringAdventurerRank3Desc" long_desc_key="perkDaringAdventurerRank3LongDesc"/>
+		<effect_description level="4" desc_key="perkDaringAdventurerRank4Desc" long_desc_key="perkDaringAdventurerRank4LongDesc"/>
+</effect_group>
+</perk>
+</insertBefore>
+
+<!--REWORKS WORKSTATION UNLOCKS-->
+<remove xpath="//crafting_skill[@name='craftingWorkstations']"></remove>
+<insertBefore xpath="/progression/crafting_skills/crafting_skill[@name='craftingVehicles']">
+		<!-- *** WORKSTATION_SKILLS -->
+<crafting_skill name="craftingWorkstations" max_level="50" parent="attCrafting" name_key="craftingWorkstationsName" desc_key="craftingWorkstationsDesc" long_desc_key="craftingWorkstationsLongDesc" icon="ui_game_symbol_workbench">
+
+	<display_entry icon="cntDewCollector,forge" name_key="workstationsT1-1,workstationsT1-2" has_quality="false" unlock_level="2,5" >
+		<unlock_entry item="cntDewCollector" unlock_tier="1" />
+		<unlock_entry item="forge" unlock_tier="2" />
+	</display_entry>
+
+	<display_entry icon="workbench,resourceLockPick,toolBellows,toolAnvil" name_key="workstationsT2-1,workstationsT2-2,workstationsT2-3,workstationsT2-4" has_quality="false" unlock_level="10,15,20,25" >
+		<unlock_entry item="workbench" unlock_tier="1" />
+		<unlock_entry item="resourceLockPick" unlock_tier="2" />
+		<unlock_entry item="toolBellows" unlock_tier="3" />
+		<unlock_entry item="toolAnvil" unlock_tier="4" />
+	</display_entry>
+
+	<display_entry icon="cementMixer" name_key="workstationsT3-1" has_quality="false" unlock_level="30" >
+		<unlock_entry item="cementMixer,resourcemoonmixLL" unlock_tier="1" />
+	</display_entry>
+
+	<display_entry icon="chemistryStation" name_key="workstationsT4" has_quality="false" unlock_level="50" >
+		<unlock_entry item="chemistryStation,toolForgeCrucible,resourceforgedvibeLL" unlock_tier="1" />
+	</display_entry>
+
+	<!--display_entry icon="toolForgeCrucible" name_key="workstationsT5" has_quality="false" unlock_level="75" >
+		<unlock_entry item="toolForgeCrucible" unlock_tier="1" />
+	</display_entry-->
+
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="cntDewCollector"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,100" value="1" tags="forge"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,100" value="1" tags="workbench"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,100" value="1" tags="resourceLockPick"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="toolBellows"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,100" value="1" tags="toolAnvil"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="cementMixer,resourcemoonmixLL"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="chemistryStation,toolForgeCrucible,resourceforgedvibeLL"/>
+		<!--passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,100" value="1" tags="toolForgeCrucible"/-->
+	</effect_group>
+</crafting_skill>
+</insertBefore>
+
+<!--ENDZ PERK TREE-->
+<insertAfter xpath="//attribute[@name='attIntellect']">
+	<attribute name="attendztree" name_key="attendztreeName" desc_key="attendztreeDesc" icon="ui_game_symbol_trex" icon_color="106, 0, 163">
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="6"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="7"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="8"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="9"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
+		<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="attendztree"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="2,8" value="0.1,.7" tags="head"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="9,10" value=".85,1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="2,10" value=".05,.45"/>
+
+			<effect_description level="1"  desc_key="attendztreeRank01Desc" long_desc_key="attendztreeRank01LongDesc"/>
+			<effect_description level="2"  desc_key="attendztreeRank02Desc" long_desc_key="attendztreeRank02LongDesc"/>
+			<effect_description level="3"  desc_key="attendztreeRank03Desc" long_desc_key="attendztreeRank03LongDesc"/>
+			<effect_description level="4"  desc_key="attendztreeRank04Desc" long_desc_key="attendztreeRank04LongDesc"/>
+			<effect_description level="5"  desc_key="attendztreeRank05Desc" long_desc_key="attendztreeRank05LongDesc"/>
+			<effect_description level="6"  desc_key="attendztreeRank06Desc" long_desc_key="attendztreeRank06LongDesc"/>
+			<effect_description level="7"  desc_key="attendztreeRank07Desc" long_desc_key="attendztreeRank07LongDesc"/>
+			<effect_description level="8"  desc_key="attendztreeRank08Desc" long_desc_key="attendztreeRank08LongDesc"/>
+			<effect_description level="9"  desc_key="attendztreeRank09Desc" long_desc_key="attendztreeRank09LongDesc"/>
+			<effect_description level="10" desc_key="attendztreeRank10Desc" long_desc_key="attendztreeRank10LongDesc"/>
+		</effect_group>
+	</attribute>
+</insertAfter>
+
+<append xpath="/progression/skills">
+	<skill name="skillendzCombat" parent="attendztree" name_key="skillendzCombatName" desc_key="skillendzCombatDesc" icon="ui_game_symbol_trex"><effect_group/></skill>
+</append>
+<!--END OF ENDZ PERK TREE-->
+
+<append xpath="//perks">
+<perk name="perkimagod" cost_multiplier_per_level="1.38" parent="skillendzCombat" name_key="perkimagod" desc_key="perkimagodDesc" icon="ui_game_symbol_bull">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="2" desc_key="reqattendztreeLevel02"/></level_requirements>
+<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="4" desc_key="reqattendztreeLevel04"/></level_requirements>
+<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="6" desc_key="reqattendztreeLevel06"/></level_requirements>
+<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="8" desc_key="reqattendztreeLevel08"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+
+<effect_group>
+<passive_effect name="Gamestage" operation="base_add" level="1" value="10"/>
+<passive_effect name="Gamestage" operation="base_add" level="2" value="25"/>
+<passive_effect name="Gamestage" operation="base_add" level="3" value="50"/>
+<passive_effect name="Gamestage" operation="base_add" level="4" value="75"/>
+<passive_effect name="Gamestage" operation="base_add" level="5" value="100"/>
+
+<effect_description level="1" desc_key="perkimagodRank1Desc" long_desc_key="perkimagodRank1LongDesc"/>
+<effect_description level="2" desc_key="perkimagodRank2Desc" long_desc_key="perkimagodRank2LongDesc"/>
+<effect_description level="3" desc_key="perkimagodRank3Desc" long_desc_key="perkimagodRank3LongDesc"/>
+<effect_description level="4" desc_key="perkimagodRank4Desc" long_desc_key="perkimagodRank4LongDesc"/>
+<effect_description level="5" desc_key="perkimagodRank5Desc" long_desc_key="perkimagodRank5LongDesc"/>
+</effect_group>
+</perk>
+</append>
+
+<append xpath="//perks">
+<perk name="perkvehicles" cost_multiplier_per_level="1.38" parent="skillendzCombat" name_key="perkvehicles" desc_key="perkvehiclesDesc" icon="ui_game_symbol_4x4">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="2" desc_key="reqattendztreeLevel02"/></level_requirements>
+<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="4" desc_key="reqattendztreeLevel04"/></level_requirements>
+<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="6" desc_key="reqattendztreeLevel06"/></level_requirements>
+<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="8" desc_key="reqattendztreeLevel08"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+
+<effect_group>
+
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="EndZdevillePlaceable"/>
+
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="EndZcamaroLLPlaceable"/>
+
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="EndZbuggyPlaceable"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="EndZblueracecarLLPlaceable"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="EndZyellowracecarLLPlaceable"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="EndZredracecarLLPlaceable"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="EndZblackracecarLLPlaceable"/>
+
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="EndZdodgetruckLLPlaceable"/>
+
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="WarthogVehiclePlaceable"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="EndZmilitarytruckLLPlaceable"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="vehicleEndZmilihelicopterLLPlaceable"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="EndZmilihelicopter2LLPlaceable"/>
+
+<effect_description level="1" desc_key="perkvehiclesRank1Desc" long_desc_key="perkvehiclesRank1LongDesc"/>
+<effect_description level="2" desc_key="perkvehiclesRank2Desc" long_desc_key="perkvehiclesRank2LongDesc"/>
+<effect_description level="3" desc_key="perkvehiclesRank3Desc" long_desc_key="perkvehiclesRank3LongDesc"/>
+<effect_description level="4" desc_key="perkvehiclesRank4Desc" long_desc_key="perkvehiclesRank4LongDesc"/>
+<effect_description level="5" desc_key="perkvehiclesRank5Desc" long_desc_key="perkvehiclesRank5LongDesc"/>
+</effect_group>
+</perk>
+</append>
+
+<append xpath="//perks">
+<perk name="perkendzmedical" max_level="2" parent="skillendzCombat" name_key="perkendzmedical" desc_key="perkendzmedicalDesc" icon="ui_game_symbol_medical">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="2" desc_key="reqattendztreeLevel02"/></level_requirements>
+<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="8" desc_key="reqattendztreeLevel08"/></level_requirements>
+<!--level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="6" desc_key="reqattendztreeLevel06"/></level_requirements>
+<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="8" desc_key="reqattendztreeLevel08"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements-->
+
+<effect_group>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2" value="1" tags="medicallavenderpatchLL"/>
+
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2" value="1" tags="medicalhoneyBandageLL"/>
+
+<effect_description level="1" desc_key="perkendzmedicalRank1Desc" long_desc_key="perkendzmedicalRank1LongDesc"/>
+<effect_description level="2" desc_key="perkendzmedicalRank2Desc" long_desc_key="perkendzmedicalRank2LongDesc"/>
+<!--effect_description level="3" desc_key="perkendzfoodRank3Desc" long_desc_key="perkendzfoodRank3LongDesc"/>
+<effect_description level="4" desc_key="perkendzfoodRank4Desc" long_desc_key="perkendzfoodRank4LongDesc"/>
+<effect_description level="5" desc_key="perkendzfoodRank5Desc" long_desc_key="perkendzfoodRank5LongDesc"/-->
+</effect_group>
+</perk>
+</append>
+
+<append xpath="//perks">
+<perk name="perkendzfood" cost_multiplier_per_level="1.38" max_level="3" parent="skillendzCombat" name_key="perkendzfood" desc_key="perkendzfoodDesc" icon="ui_game_symbol_fork">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="3" desc_key="reqattendztreeLevel03"/></level_requirements>
+<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="5" desc_key="reqattendztreeLevel05"/></level_requirements>
+<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="7" desc_key="reqattendztreeLevel07"/></level_requirements>
+<!--level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="8" desc_key="reqattendztreeLevel08"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements-->
+
+<effect_group>
+<!--LEVEL1 FOOD-->
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="foodcheeseLL"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="foodcookedgroundbeefLL"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="foodcookedlambmeatLL"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="foodlimeyogurtLL"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="foodfruitsaladLL"/>
+
+<!--LEVEL2 FOOD-->
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="foodlambrackLL"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="foodgrilledlambwsauceLL"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="foodlimepieLL"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="fooddoublecheese2f3LL"/>
+
+<!--LEVEL3 FOOD-->
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="food5courseLL"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="foodlambandpotatoesLL"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="foodlambStewLL"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="foodCheesyMeaties"/>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="foodtatortotcassLL"/>
+
+<effect_description level="1" desc_key="perkendzfoodRank1Desc" long_desc_key="perkendzfoodRank1LongDesc"/>
+<effect_description level="2" desc_key="perkendzfoodRank2Desc" long_desc_key="perkendzfoodRank2LongDesc"/>
+<effect_description level="3" desc_key="perkendzfoodRank3Desc" long_desc_key="perkendzfoodRank3LongDesc"/>
+<!--effect_description level="4" desc_key="perkendzfoodRank4Desc" long_desc_key="perkendzfoodRank4LongDesc"/>
+<effect_description level="5" desc_key="perkendzfoodRank5Desc" long_desc_key="perkendzfoodRank5LongDesc"/-->
+</effect_group>
+</perk>
+</append>
+
+<append xpath="//perks">
+<perk name="perkendzclothes" max_level="1" parent="skillendzCombat" name_key="perkendzclothes" desc_key="perkendzclothesDesc" icon="ui_game_symbol_armor_iron">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<!--level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="8" desc_key="reqattendztreeLevel08"/></level_requirements>
+<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="6" desc_key="reqattendztreeLevel06"/></level_requirements>
+<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="8" desc_key="reqattendztreeLevel08"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements-->
+
+<effect_group>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="EndZallinoneglassesLL"/>
+
+<effect_description level="1" desc_key="perkendzclothesRank1Desc" long_desc_key="perkendzclothesRank1LongDesc"/>
+<!--effect_description level="2" desc_key="perkendzmedicalRank2Desc" long_desc_key="perkendzmedicalRank2LongDesc"/>
+<effect_description level="3" desc_key="perkendzfoodRank3Desc" long_desc_key="perkendzfoodRank3LongDesc"/>
+<effect_description level="4" desc_key="perkendzfoodRank4Desc" long_desc_key="perkendzfoodRank4LongDesc"/>
+<effect_description level="5" desc_key="perkendzfoodRank5Desc" long_desc_key="perkendzfoodRank5LongDesc"/-->
+</effect_group>
+</perk>
+</append>
+
+<append xpath="//perks">
+<perk name="perkendzvibeammo" max_level="1" parent="skillendzCombat" name_key="perkendzvibeammo" desc_key="perkendzvibeammoDesc" icon="ui_game_symbol_electric_power">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<!--level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="8" desc_key="reqattendztreeLevel08"/></level_requirements>
+<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="6" desc_key="reqattendztreeLevel06"/></level_requirements>
+<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="8" desc_key="reqattendztreeLevel08"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements-->
+
+<effect_group>
+<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vibeammo"/>
+
+<effect_description level="1" desc_key="perkendzvibeammoRank1Desc" long_desc_key="perkendzvibeammoRank1LongDesc"/>
+<!--effect_description level="2" desc_key="perkendzmedicalRank2Desc" long_desc_key="perkendzmedicalRank2LongDesc"/>
+<effect_description level="3" desc_key="perkendzfoodRank3Desc" long_desc_key="perkendzfoodRank3LongDesc"/>
+<effect_description level="4" desc_key="perkendzfoodRank4Desc" long_desc_key="perkendzfoodRank4LongDesc"/>
+<effect_description level="5" desc_key="perkendzfoodRank5Desc" long_desc_key="perkendzfoodRank5LongDesc"/-->
+</effect_group>
+</perk>
+</append>
+
+<!--IMPROVED WEAPONS PERKS-->
+<append xpath="//perks">
+<perk name="perkbows" cost_multiplier_per_level="1.38" parent="skillendzCombat" name_key="perkbows" desc_key="perkbowsDesc" icon="ui_game_symbol_archery">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+
+<effect_group>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunwoodbowLL,guncompoundbowLL,gunCompoundCrossbowLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkbows"/>
+</effect_group>
+
+<effect_group>				
+	<effect_description level="1" desc_key="perkbowsRank1Desc" long_desc_key="perkbowsRank1LongDesc"/>
+	<effect_description level="2" desc_key="perkbowsRank2Desc" long_desc_key="perkbowsRank2LongDesc"/>
+	<effect_description level="3" desc_key="perkbowsRank3Desc" long_desc_key="perkbowsRank3LongDesc"/>
+	<effect_description level="4" desc_key="perkbowsRank4Desc" long_desc_key="perkbowsRank4LongDesc"/>
+	<effect_description level="5" desc_key="perkbowsRank5Desc" long_desc_key="perkbowsRank5LongDesc"/>
+</effect_group>
+</perk>
+</append>
+
+<append xpath="//perks">
+<perk name="perkpistols" cost_multiplier_per_level="1.38" parent="skillendzCombat" name_key="perkpistols" desc_key="perkpistolsDesc" icon="ui_game_symbol_pistol">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+
+<effect_group>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunpistolLL,gungoldenvultureLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkpistols"/>
+</effect_group>
+
+<effect_group>				
+	<effect_description level="1" desc_key="perkpistolsRank1Desc" long_desc_key="perkpistolsRank1LongDesc"/>
+	<effect_description level="2" desc_key="perkpistolsRank2Desc" long_desc_key="perkpistolsRank2LongDesc"/>
+	<effect_description level="3" desc_key="perkpistolsRank3Desc" long_desc_key="perkpistolsRank3LongDesc"/>
+	<effect_description level="4" desc_key="perkpistolsRank4Desc" long_desc_key="perkpistolsRank4LongDesc"/>
+	<effect_description level="5" desc_key="perkpistolsRank5Desc" long_desc_key="perkpistolsRank5LongDesc"/>
+</effect_group>
+</perk>
+</append>
+
+<append xpath="//perks">
+<perk name="perkshotguns" cost_multiplier_per_level="1.38" parent="skillendzCombat" name_key="perkshotguns" desc_key="perkshotgunsDesc" icon="ui_game_symbol_shotgun">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+
+<effect_group>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gundubzyLL,gunpumpshotLL,gunautoshotLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkshotguns"/>
+</effect_group>
+
+<effect_group>				
+	<effect_description level="1" desc_key="perkshotgunsRank1Desc" long_desc_key="perkshotgunsRank1LongDesc"/>
+	<effect_description level="2" desc_key="perkshotgunsRank2Desc" long_desc_key="perkshotgunsRank2LongDesc"/>
+	<effect_description level="3" desc_key="perkshotgunsRank3Desc" long_desc_key="perkshotgunsRank3LongDesc"/>
+	<effect_description level="4" desc_key="perkshotgunsRank4Desc" long_desc_key="perkshotgunsRank4LongDesc"/>
+	<effect_description level="5" desc_key="perkshotgunsRank5Desc" long_desc_key="perkshotgunsRank5LongDesc"/>
+</effect_group>
+</perk>
+</append>
+
+<append xpath="//perks">
+<perk name="perkrifles" cost_multiplier_per_level="1.38" parent="skillendzCombat" name_key="perkrifles" desc_key="perkriflesDesc" icon="ui_game_symbol_marksmanship">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+
+<effect_group>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunhuntrifleLL,gunleverrifleLL,gunsniperLL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkrifles"/>
+</effect_group>
+
+<effect_group>				
+	<effect_description level="1" desc_key="perkriflesRank1Desc" long_desc_key="perkriflesRank1LongDesc"/>
+	<effect_description level="2" desc_key="perkriflesRank2Desc" long_desc_key="perkriflesRank2LongDesc"/>
+	<effect_description level="3" desc_key="perkriflesRank3Desc" long_desc_key="perkriflesRank3LongDesc"/>
+	<effect_description level="4" desc_key="perkriflesRank4Desc" long_desc_key="perkriflesRank4LongDesc"/>
+	<effect_description level="5" desc_key="perkriflesRank5Desc" long_desc_key="perkriflesRank5LongDesc"/>
+</effect_group>
+</perk>
+</append>
+
+<append xpath="//perks">
+<perk name="perkfullauto" cost_multiplier_per_level="1.38" parent="skillendzCombat" name_key="perkfullauto" desc_key="perkfullautoDesc" icon="ui_game_symbol_rifle">
+<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attendztree" operation="GTE" value="10" desc_key="reqattendztreeLevel10"/></level_requirements>
+
+<effect_group>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunSMGLL,gunak47LL,guntacARLL,gunM60LL"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkfullauto"/>
+</effect_group>
+
+<effect_group>				
+	<effect_description level="1" desc_key="perkfullautoRank1Desc" long_desc_key="perkfullautoRank1LongDesc"/>
+	<effect_description level="2" desc_key="perkfullautoRank2Desc" long_desc_key="perkfullautoRank2LongDesc"/>
+	<effect_description level="3" desc_key="perkfullautoRank3Desc" long_desc_key="perkfullautoRank3LongDesc"/>
+	<effect_description level="4" desc_key="perkfullautoRank4Desc" long_desc_key="perkfullautoRank4LongDesc"/>
+	<effect_description level="5" desc_key="perkfullautoRank5Desc" long_desc_key="perkfullautoRank5LongDesc"/>
+</effect_group>
+</perk>
+</append>
+</configs>

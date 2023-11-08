@@ -1,0 +1,95 @@
+<configs>
+<append xpath="/ui_display_info/crafting_category_display">
+    <crafting_category_list display_type="cntWallOvenWorking">
+	<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+	<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+	<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+</crafting_category_list>
+
+<crafting_category_list display_type="cntCharcoalGrillWorking">
+	<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+	<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+	<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+</crafting_category_list>
+
+<crafting_category_list display_type="cntGasGrillWorking">
+	<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+	<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+	<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+</crafting_category_list>
+</append>
+	
+<!--honey bandage ui display-->
+<append xpath="//item_display">
+<item_display_info display_type="medicalallLL" display_group="groupConsumables">
+	<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+	<display_entry name="dhealAbrasionMult" title_key="statHealAbrasionMult" display_type="Percent"/>
+	<display_entry name="dStopsBleeding" title_key="statStopsBleeding" display_type="Percent"/>
+	<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>
+</item_display_info>
+</append>
+
+<!--VIBE AMMO-->
+<append xpath="/ui_display_info/item_display">
+<item_display_info display_type="ammoBulletvibe" display_group="groupAmmo">
+	<display_entry name="EntityDamage" title_key="statEntityDamageRanged"/>
+	<display_entry name="BlockDamage" title_key="statBlockDamage"/>
+</item_display_info>
+
+<item_display_info display_type="ammoArrowAPvibe" display_group="groupAmmo">
+	<display_entry name="EntityDamage" display_type="Decimal1" title_key="statEntityDamageRanged" tags="perkArchery,admin"/>
+	<display_entry name="dTargetArmor" title_key="statTargetArmor" display_type="Percent" display_leading_plus="true" negative_preferred="true" tags="perkArchery,admin"/>
+	<display_entry name="BlockDamage" display_type="Decimal1" title_key="statBlockDamage" tags="perkArchery,admin"/>
+	<display_entry name="ProjectileVelocity" title_key="statProjectileVelocity" tags="perkArchery,admin"/>
+</item_display_info>
+
+<item_display_info display_type="ammoShotgunvibe" display_group="groupAmmo">
+	<display_entry name="EntityDamage" display_type="Decimal1" title_key="statEntityDamageShotgun" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+	<display_entry name="RoundRayCount" title_key="statRoundRayCount" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+	<!--<display_entry name="dTargetArmor" title_key="statTargetArmor" display_type="Percent" display_leading_plus="true" negative_preferred="true" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>-->
+	<display_entry name="BlockDamage" display_type="Decimal1" title_key="statBlockDamage" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+	<display_entry name="DamageFalloffRange" title_key="statDamageFalloffRange" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+</item_display_info>
+</append>
+
+<append xpath="//item_display">
+<item_display_info display_type="medicallavenderpatchLL" display_group="groupConsumables">
+	<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+	<display_entry name="dhealAbrasionMult" title_key="statHealAbrasionMult" display_type="Percent"/>
+	<display_entry name="dStopsBleeding" title_key="statStopsBleeding" display_type="Percent"/>
+</item_display_info>
+</append>
+
+<append xpath="//item_display">
+<item_display_info display_type="allinonegogglesLL">
+	<display_entry name="AttributeLevel" tags="attPerception" title_key="statShowPerception" display_leading_plus="true"/>
+	<display_entry name="AttributeLevel" tags="attFortitude" title_key="statShowFortitude" display_leading_plus="true"/>
+	<display_entry name="AttributeLevel" tags="attAgility" title_key="statShowAgility" display_leading_plus="true"/>
+	<display_entry name="AttributeLevel" tags="attStrength" title_key="statShowStrength" display_leading_plus="true"/>
+	<display_entry name="AttributeLevel" tags="attIntellect" title_key="statShowIntellect" display_leading_plus="true"/>
+	<display_entry name="AttributeLevel" tags="attendztree" title_key="statShowattendztree" display_leading_plus="true"/>
+</item_display_info>
+</append>
+
+<append xpath="//item_display">
+<item_display_info display_type="food5coursemealLL" display_group="groupConsumables">
+	<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+	<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+	<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+	<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+	<display_entry name="dBartering" title_key="statBarteringBuy" display_type="Percent" display_leading_plus="true"/>
+	<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+</item_display_info>
+</append>
+
+<append xpath="//item_display">
+<item_display_info display_type="fooddoublecheese2f3LL" display_group="groupConsumables">
+	<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+	<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+	<display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
+	<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+</item_display_info>
+</append>
+
+
+</configs>

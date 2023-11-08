@@ -1,0 +1,25 @@
+<configs>
+
+<!--changes the menu logo-->
+
+<!--change for alpha20-->
+<!--set xpath="/windows/window[@name='mainMenuLogo']/texture/@texture">@modfolder(END Z)://Textures/endzlogo2.png</set-->
+
+<!--change for alpha21-->
+<!--set xpath="/windows/window[@name='mainMenuLogo']/texture/@texture">@modfolder:Textures/endzlogo2.png</set-->
+
+<!--changes the menu background-->
+
+<!--change for alpha20-->
+<!--set xpath="/windows/window[@name='menuBackground']/texture/@texture">@modfolder(END Z)://Textures/endzbackground3.png</set-->
+
+<!--change for alpha21-->
+<set xpath="/windows/window[@name='menuBackground']/texture/@texture">@modfolder:Textures/endzbackground3.png</set>
+
+<!--REMOVES MAIN MENU NEWS WINDOW-->
+<remove xpath="/windows/window[@name='newsWindow']"></remove>
+
+<!--REMOVES MAIN MENU LOGO-->
+<remove xpath="/windows/window[@name='mainMenuLogo']"></remove>
+
+</configs>

@@ -1,0 +1,21 @@
+<configs>
+<!--FIRE EXTINGUISHER-->
+	<!--insertAfter xpath="/blockplaceholders/placeholder[@name='cntMicrowaveRandomLootHelper']/block[@name='cntMicrowaveOvenVer2Closed']">
+		<block name="endzfireextLLBlock" prob=".33"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blockplaceholders/placeholder[@name='cntCashRegisterRandomLootHelper']/block[@name='cntCashRegister']">
+		<block name="endzfireextLLBlock" prob=".33"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blockplaceholders/placeholder[@name='cntClothesRackRoundRandomLootHelper']/block[@name='cntClothesRackRoundShirts']">
+		<block name="endzfireextLLBlock" prob=".33"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blockplaceholders/placeholder[@name='cntFileCabinetShortRandomLootHelper']/block[@name='cntFileCabinetShortClosed']">
+		<block name="endzfireextLLBlock" prob=".33"/>
+	</insertAfter-->
+<!--END FIRE EXTINGUISHER-->
+
+
+</configs>

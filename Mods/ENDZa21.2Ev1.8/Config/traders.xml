@@ -1,0 +1,47 @@
+<configs>
+<!--TRADER ALWAYS OPEN-->
+<set xpath="//trader_info/@open_time">02:00</set>
+<set xpath="//trader_info/@close_time">02:00</set>
+	
+<!--TRADER REFRESH STOCK-->
+<set xpath="/traders/trader_info[@id='1']/@reset_interval">2</set>
+<set xpath="/traders/trader_info[@id='6']/@reset_interval">2</set>
+<set xpath="/traders/trader_info[@id='2']/@reset_interval">2</set>
+<set xpath="/traders/trader_info[@id='7']/@reset_interval">2</set>
+<set xpath="/traders/trader_info[@id='8']/@reset_interval">2</set>
+
+<!--REPLACES TRADER CURRENCY-->
+<set xpath="/traders/@currency_item">EZcurrencyLL</set>
+
+<!--removes items from loot and uses MOONROCK ITEMS-->
+<set xpath="//item[@name='meleeToolRepairT0StoneAxe']/@name">moonrockaxeLL</set>
+<set xpath="//item[@name='meleeToolShovelT0StoneShovel']/@name">moonrockshovelLL</set>
+<!--set xpath="//item[@name='meleeWpnBatonT0PipeBaton']/@name">moonrockbatonLL</set>
+<set xpath="//item[@name='meleeWpnSpearT0StoneSpear']/@name">moonrockspearLL</set>
+<set xpath="//item[@name='meleeWpnClubT0WoodenClub']/@name">moonrockclubLL</set>
+<set xpath="//item[@name='meleeWpnSledgeT0StoneSledgehammer']/@name">moonrocksledgeLL</set-->
+
+<!--removes items from loot and uses BRASS ITEMS-->
+<set xpath="//item[@name='meleeToolShovelT1IronShovel']/@name">brassshovelLL</set>
+<set xpath="//item[@name='meleeToolAxeT1IronFireaxe']/@name">brassaxeLL</set>
+<set xpath="//item[@name='meleeToolPickT1IronPickaxe']/@name">brasspickaxeLL</set>
+<set xpath="//item[@name='meleeWpnBatonT2StunBaton']/@name">brassstunbatonLL</set>
+<set xpath="//item[@name='meleeWpnSpearT1IronSpear']/@name">brassspearLL</set>
+<set xpath="//item[@name='meleeWpnClubT1BaseballBat']/@name">brassclubLL</set>
+<set xpath="//item[@name='meleeWpnBladeT1HuntingKnife']/@name">brassknifeLL</set>
+<set xpath="//item[@name='meleeWpnKnucklesT1IronKnuckles']/@name">brassknucksLL</set>
+<set xpath="//item[@name='meleeWpnSledgeT1IronSledgehammer']/@name">brasssledgeLL</set>
+
+<!--removes items from loot and uses VIBRANIUM ITEMS-->
+<set xpath="//item[@name='meleeToolPickT2SteelPickaxe']/@name">vibepickaxeLL</set>
+<set xpath="//item[@name='meleeToolAxeT2SteelAxe']/@name">vibeaxeLL</set>
+<set xpath="//item[@name='meleeToolShovelT2SteelShovel']/@name">vibeshovelLL</set>
+<set xpath="//item[@name='meleeToolPickT3Auger']/@name">vibeaugerLL</set>
+<set xpath="//item[@name='meleeToolAxeT3Chainsaw']/@name">vibeChainsawLL</set>
+<set xpath="//item[@name='meleeWpnSpearT3SteelSpear']/@name">t3vibespearLL</set>
+<set xpath="//item[@name='meleeWpnClubT3SteelClub']/@name">vibebatLL</set>
+<set xpath="//item[@name='meleeWpnBladeT3Machete']/@name">vibemacheteLL</set>
+<set xpath="//item[@name='meleeWpnKnucklesT3SteelKnuckles']/@name">vibeknucksLL</set>
+<set xpath="//item[@name='meleeWpnSledgeT3SteelSledgehammer']/@name">vibesledgeLL</set>
+
+</configs>

@@ -1,0 +1,2881 @@
+<configs>
+<!--THIS FILE WAS CREATED BY THEE_LEGION AND ARRAMUS-->
+
+<!--****SEARCH DIRECTORY****-->
+<!--SEARCH "ENDZ ANIMAL & NPC SPAWNING"-->
+<!--SEARCH "SLEEPER HORDE STAGES"-->
+<!--SEARCH "WANDERING HORDE STAGES"-->
+<!--SEARCH "SCOUT HORDE STAGES"-->
+<!--SEARCH "FERAL HORDE STAGE(HORDE NIGHTS)"-->
+<!--SEARCH "SLEEPER HORDE STAGES"-->
+<!--SEARCH "BADASS HORDE STAGE"-->
+<!--SEARCH "BADASS ONLY HORDE STAGE"-->
+<!--SEARCH "POLICE CAR HORDE STAGES"-->
+<!--SEARCH "FERAL, RADIATED, AND BADASS GROUPS"-->
+<!--SEARCH "SOLDIER GROUP"-->
+<!--SEARCH "JANITOR GROUP"-->
+<!--SEARCH "ZOMBIE GHOST TOWN GROUP"-->
+<!--SEARCH "HOSPITAL GROUP"-->
+<!--SEARCH "LAB WORKER GROUP"-->
+<!--SEARCH "SPIDER GROUP"-->
+<!--SEARCH "BIKER GROUP"-->
+<!--SEARCH "NIGHT CLUB GROUP"-->
+<!--SEARCH "SPECIAL INFECTED GROUP"-->
+<!--SEARCH "ZOMBIES HOARD GROUP"-->
+<!--SEARCH "DEFENSE HORDE STAGES"-->
+
+<!--MODDED ANIMALS, NPC'S, AND ZOMBIES LIST
+	endzbuffalo
+	EndZsheepLL 
+	endzratLL
+	endzgiantsnakeLL
+	endzbloodydogLL
+	
+	npcEndZsurvivorLL no weapons
+	npcEndZsurvivor2LL no weapons
+	npcEndZsurvivor3LL no weapons
+	npcEndZsurvivor4LL no weapons
+	npcEndZsurvivor5LL no weapons
+	
+	npcEndZsurvivorpistolLL pistol
+	
+	zombiebitchQueen
+	
+	EndZgrootLL
+	EndZgrootferalLL 
+	EndZgrootradiatedLL
+	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL
+	
+	zombiedesertmonsterorcLL 
+	zombieimpLL
+	
+	zombiesnowguardianLL 
+	FrozenBoe
+	
+	zombiesmallbitchLL 
+	zombiespikeLL 
+	zombienecroLL 
+	zombiemutantLL
+	zombiesupermutantLL 
+	zombieWguardianLL
+-->
+
+<!--SPAWNING.XML GROUPS-->
+<append xpath="/entitygroups">
+<entitygroup name="BossPineForest">
+	<entity name="zombiegrimlinLL" prob="0.01"/>
+	<entity name="zombiegrimlintwinLL" prob="0.01"/>
+	<entity name="zombieporcLL" prob="0.01"/>
+</entitygroup>
+<entitygroup name="BossDesertzombies">
+	<entity name="zombiedesertmonsterorcLL" prob="0.01"/>
+	<entity name="zombieimpLL" prob="0.1"/>
+</entitygroup>
+<entitygroup name="BossSnowzombies">
+	<entity name="zombiesnowguardianLL" prob="0.02"/>
+	<entity name="FrozenBoe" prob="0.2"/>
+</entitygroup>
+</append>
+<!--END OF SPAWNING.XML GROUPS-->
+
+<!--POI EDITOR SLEEPER SPAWNS-->
+<append xpath="/entitygroups"><entitygroup name="1EndZzombiegrimlinLL">zombiegrimlinLL</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="2EndZzombiegrimlintwinLL">zombiegrimlintwinLL</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="3EndZzombieporcLL">zombieporcLL</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="4EndZzombiedesertmonsterorcLL">zombiedesertmonsterorcLL</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="5EndZzombieimpLL">zombieimpLL</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="6EndZzombiesnowguardianLL">zombiesnowguardianLL</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="7EndZFrozenBoe">FrozenBoe</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="8EndZzombiesmallbitchLL">zombiesmallbitchLL</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="9EndZzombiespikeLL">zombiespikeLL</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="10EndZzombienecroLL">zombienecroLL</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="11EndZzombiemutantLL">zombiemutantLL</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="12EndZzombiesupermutantLL">zombiesupermutantLL</entitygroup></append>
+<append xpath="/entitygroups"><entitygroup name="13EndZzombieWguardianLL">zombieWguardianLL</entitygroup></append>
+<!--END OF POI EDITOR SLEEPER SPAWNS-->
+
+<!--NPC TRANSFORM FOR ENDZ NPC'S-->
+<append xpath="/entitygroups">
+<entitygroup name="SpawnNothing">
+	none, 0.0
+</entitygroup>
+<entitygroup name="NpcSpawn">
+	npcEndZsurvivorLL
+	npcEndZsurvivor2LL
+	npcEndZsurvivor3LL
+	npcEndZsurvivor4LL
+	npcEndZsurvivor5LL
+</entitygroup>	
+<entitygroup name="npcEndZsurvivorTransformation">
+	npcEndZsurvivorTransformationLL
+</entitygroup>
+<entitygroup name="npcEndZsurvivorTransformation2">
+	npcEndZsurvivorTransformation2LL
+</entitygroup>
+<entitygroup name="npcEndZsurvivorTransformation3">
+	npcEndZsurvivorTransformation3LL
+</entitygroup>
+<entitygroup name="npcEndZsurvivorTransformation4">
+	npcEndZsurvivorTransformation4LL
+</entitygroup>
+<entitygroup name="npcEndZsurvivorTransformation5">
+	npcEndZsurvivorTransformation5LL
+</entitygroup>
+<entitygroup name="zombieminotaurbossTransformation1">
+	zombieminotaurboss
+</entitygroup>
+</append>
+<!--END OF NPC TRANSFORM FOR ENDZ NPC'S-->
+
+<!--ENDZ ANIMAL & NPC SPAWNING-->
+<csv xpath="/entitygroups/entitygroup[@name='ZombiesAll']/text()" delim="\n" op="add" >
+	npcEndZsurvivorLL, .25
+	npcEndZsurvivor2LL, .25
+	npcEndZsurvivor3LL, .25
+	npcEndZsurvivor4LL, .25
+	npcEndZsurvivor5LL, .25
+	npcEndZsurvivorpistolLL, .25
+	endzbuffalo
+	EndZsheepLL 
+	endzratLL, .5
+	endzgiantsnakeLL, .5
+	endzbloodydogLL, .5
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add" >
+	npcEndZsurvivorLL, .25
+	npcEndZsurvivor2LL, .25
+	npcEndZsurvivor3LL, .25
+	npcEndZsurvivor4LL, .25
+	npcEndZsurvivor5LL, .25
+	npcEndZsurvivorpistolLL, .25
+	endzbuffalo
+	EndZsheepLL 
+	endzratLL, .5
+	endzgiantsnakeLL, .5
+	endzbloodydogLL, .5
+	zombiebitchQueen, .015
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='SnowZombies']/text()" delim="\n" op="add" >
+	npcEndZsurvivorLL, .25
+	npcEndZsurvivor2LL, .25
+	npcEndZsurvivor3LL, .25
+	npcEndZsurvivor4LL, .25
+	npcEndZsurvivor5LL, .25
+	npcEndZsurvivorpistolLL, .25
+	endzbuffalo
+	EndZsheepLL 
+	endzratLL, .5
+	endzgiantsnakeLL, .5
+	endzbloodydogLL, .5
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/text()" delim="\n" op="add" >
+	npcEndZsurvivorLL, .25
+	npcEndZsurvivor2LL, .25
+	npcEndZsurvivor3LL, .25
+	npcEndZsurvivor4LL, .25
+	npcEndZsurvivor5LL, .25
+	npcEndZsurvivorpistolLL, .25
+	endzbuffalo
+	EndZsheepLL 
+	endzratLL, .5
+	endzgiantsnakeLL, .5
+	endzbloodydogLL, .5
+	zombieWguardianLL, .25
+	zombiesmallbitchLL, .25 
+	zombiespikeLL, .25 
+	zombienecroLL, .25 
+	zombiemutantLL, .25
+	zombiesupermutantLL, .25
+	zombiebitchQueen, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/text()" delim="\n" op="add" >
+	npcEndZsurvivorLL, .25
+	npcEndZsurvivor2LL, .25
+	npcEndZsurvivor3LL, .25
+	npcEndZsurvivor4LL, .25
+	npcEndZsurvivor5LL, .25
+	npcEndZsurvivorpistolLL, .25
+	endzbuffalo
+	EndZsheepLL 
+	endzratLL, .5
+	endzgiantsnakeLL, .5
+	endzbloodydogLL, .5
+	zombieWguardianLL, .25
+	zombiesmallbitchLL, .25 
+	zombiespikeLL, .25 
+	zombienecroLL, .25 
+	zombiemutantLL, .25
+	zombiesupermutantLL, .25
+	zombiebitchQueen, .025
+</csv>
+<!--END OF ENDZ ANIMAL & NPC SPAWNING-->
+
+<!--SLEEPER HORDE STAGES-->
+<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS1'
+or @name='sleeperHordeStageGS2'
+or @name='sleeperHordeStageGS5'
+or @name='sleeperHordeStageGS8'
+or @name='sleeperHordeStageGS11'
+or @name='sleeperHordeStageGS14'
+or @name='sleeperHordeStageGS18'
+or @name='sleeperHordeStageGS22'
+or @name='sleeperHordeStageGS27'
+or @name='sleeperHordeStageGS31'
+or @name='sleeperHordeStageGS36'
+or @name='sleeperHordeStageGS41'
+or @name='sleeperHordeStageGS46'
+or @name='sleeperHordeStageGS52'
+or @name='sleeperHordeStageGS58'
+or @name='sleeperHordeStageGS64'
+or @name='sleeperHordeStageGS70'
+or @name='sleeperHordeStageGS76'
+or @name='sleeperHordeStageGS82'
+or @name='sleeperHordeStageGS89'
+or @name='sleeperHordeStageGS96'
+or @name='sleeperHordeStageGS103'
+or @name='sleeperHordeStageGS110'
+or @name='sleeperHordeStageGS117'
+or @name='sleeperHordeStageGS125'
+or @name='sleeperHordeStageGS132'
+or @name='sleeperHordeStageGS140'
+or @name='sleeperHordeStageGS148'
+or @name='sleeperHordeStageGS156']/text()" delim="\n" op="add">
+	EndZgrootLL 	
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+	npcEndZsurvivorpistolLL, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS164'
+or @name='sleeperHordeStageGS172'
+or @name='sleeperHordeStageGS181'
+or @name='sleeperHordeStageGS189'
+or @name='sleeperHordeStageGS198'
+or @name='sleeperHordeStageGS207'
+or @name='sleeperHordeStageGS216'
+or @name='sleeperHordeStageGS225'
+or @name='sleeperHordeStageGS234'
+or @name='sleeperHordeStageGS243'
+or @name='sleeperHordeStageGS252'
+or @name='sleeperHordeStageGS262'
+or @name='sleeperHordeStageGS272'
+or @name='sleeperHordeStageGS281'
+or @name='sleeperHordeStageGS291'
+or @name='sleeperHordeStageGS301'
+or @name='sleeperHordeStageGS311'
+or @name='sleeperHordeStageGS322'
+or @name='sleeperHordeStageGS332'
+or @name='sleeperHordeStageGS343'
+or @name='sleeperHordeStageGS353'
+or @name='sleeperHordeStageGS364'
+or @name='sleeperHordeStageGS374'
+or @name='sleeperHordeStageGS385'
+or @name='sleeperHordeStageGS396'
+or @name='sleeperHordeStageGS407']/text()" delim="\n" op="add">
+	EndZgrootLL 	
+	zombiegrimlinLL, .4
+	zombiegrimlintwinLL, .4
+	zombieporcLL, .4
+	EndZgrootferalLL, .5
+	zombiedesertmonsterorcLL, .3
+	zombieimpLL, .4
+	zombiebitchQueen, .1
+	npcEndZsurvivorpistolLL, .25
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS419'
+or @name='sleeperHordeStageGS430'
+or @name='sleeperHordeStageGS441'
+or @name='sleeperHordeStageGS453'
+or @name='sleeperHordeStageGS464'
+or @name='sleeperHordeStageGS476'
+or @name='sleeperHordeStageGS488'
+or @name='sleeperHordeStageGS500'
+or @name='sleeperHordeStageGS512'
+or @name='sleeperHordeStageGS524'
+or @name='sleeperHordeStageGS536'
+or @name='sleeperHordeStageGS548'
+or @name='sleeperHordeStageGS560'
+or @name='sleeperHordeStageGS573'
+or @name='sleeperHordeStageGS585'
+or @name='sleeperHordeStageGS598'
+or @name='sleeperHordeStageGS610'
+or @name='sleeperHordeStageGS623']/text()" delim="\n" op="add">
+	EndZgrootLL 	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL
+	EndZgrootferalLL
+	zombiedesertmonsterorcLL, .4
+	zombieimpLL, .5	
+	zombiesnowguardianLL, .1 
+	FrozenBoe, .1	
+	zombiesmallbitchLL, .05 
+	zombiespikeLL, .05 
+	zombienecroLL, .05
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05
+	zombieWguardianLL, .05
+	EndZgrootradiatedLL, .05
+	zombiebitchQueen, .15
+	npcEndZsurvivorpistolLL, .25
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS636'
+or @name='sleeperHordeStageGS649'
+or @name='sleeperHordeStageGS662'
+or @name='sleeperHordeStageGS675'
+or @name='sleeperHordeStageGS688'
+or @name='sleeperHordeStageGS702'
+or @name='sleeperHordeStageGS715'
+or @name='sleeperHordeStageGS729'
+or @name='sleeperHordeStageGS742'
+or @name='sleeperHordeStageGS756'
+or @name='sleeperHordeStageGS769'
+or @name='sleeperHordeStageGS783'
+or @name='sleeperHordeStageGS797'
+or @name='sleeperHordeStageGS811'
+or @name='sleeperHordeStageGS825'
+or @name='sleeperHordeStageGS839'
+or @name='sleeperHordeStageGS853'
+or @name='sleeperHordeStageGS868'
+or @name='sleeperHordeStageGS882'
+or @name='sleeperHordeStageGS896'
+or @name='sleeperHordeStageGS911'
+or @name='sleeperHordeStageGS925'
+or @name='sleeperHordeStageGS940'
+or @name='sleeperHordeStageGS955'
+or @name='sleeperHordeStageGS970'
+or @name='sleeperHordeStageGS985'
+or @name='sleeperHordeStageGS1000'
+or @name='sleeperHordeStageGS1015'
+or @name='sleeperHordeStageGS1030'
+or @name='sleeperHordeStageGS1045'
+or @name='sleeperHordeStageGS1060'
+or @name='sleeperHordeStageGS1075'
+or @name='sleeperHordeStageGS1091'
+or @name='sleeperHordeStageGS1106'
+or @name='sleeperHordeStageGS1122'
+or @name='sleeperHordeStageGS1137'
+or @name='sleeperHordeStageGS1153'
+or @name='sleeperHordeStageGS1169'
+or @name='sleeperHordeStageGS1185'
+or @name='sleeperHordeStageGS1201'
+or @name='sleeperHordeStageGS1217'
+or @name='sleeperHordeStageGS1233'
+or @name='sleeperHordeStageGS1249'
+or @name='sleeperHordeStageGS1265'
+or @name='sleeperHordeStageGS1281'
+or @name='sleeperHordeStageGS1298'
+or @name='sleeperHordeStageGS1314'
+or @name='sleeperHordeStageGS1331'
+or @name='sleeperHordeStageGS1347'
+or @name='sleeperHordeStageGS1364'
+or @name='sleeperHordeStageGS1380'
+or @name='sleeperHordeStageGS1397'
+or @name='sleeperHordeStageGS1414'
+or @name='sleeperHordeStageGS1431'
+or @name='sleeperHordeStageGS1448'
+or @name='sleeperHordeStageGS1465'
+or @name='sleeperHordeStageGS1482'
+or @name='sleeperHordeStageGS1499'
+or @name='sleeperHordeStageGS1516'
+or @name='sleeperHordeStageGS1533'
+or @name='sleeperHordeStageGS1551'
+or @name='sleeperHordeStageGS1568'
+or @name='sleeperHordeStageGS1586'
+or @name='sleeperHordeStageGS1603'
+or @name='sleeperHordeStageGS1621'
+or @name='sleeperHordeStageGS1638'
+or @name='sleeperHordeStageGS1656'
+or @name='sleeperHordeStageGS1674'
+or @name='sleeperHordeStageGS1692'
+or @name='sleeperHordeStageGS1710'
+or @name='sleeperHordeStageGS1728'
+or @name='sleeperHordeStageGS1746'
+or @name='sleeperHordeStageGS1764'
+or @name='sleeperHordeStageGS1782'
+or @name='sleeperHordeStageGS1800'
+or @name='sleeperHordeStageGS1818'
+or @name='sleeperHordeStageGS1837'
+or @name='sleeperHordeStageGS1855'
+or @name='sleeperHordeStageGS1873'
+or @name='sleeperHordeStageGS1892'
+or @name='sleeperHordeStageGS1911'
+or @name='sleeperHordeStageGS1929'
+or @name='sleeperHordeStageGS1948'
+or @name='sleeperHordeStageGS1967'
+or @name='sleeperHordeStageGS1986'
+or @name='sleeperHordeStageGS2004'
+or @name='sleeperHordeStageGS2023'
+or @name='sleeperHordeStageGS2042'
+or @name='sleeperHordeStageGS2061'
+or @name='sleeperHordeStageGS2081'
+or @name='sleeperHordeStageGS2100'
+or @name='sleeperHordeStageGS2119'
+or @name='sleeperHordeStageGS2138'
+or @name='sleeperHordeStageGS2158'
+or @name='sleeperHordeStageGS2177'
+or @name='sleeperHordeStageGS2197'
+or @name='sleeperHordeStageGS2216'
+or @name='sleeperHordeStageGS2236'
+or @name='sleeperHordeStageGS2255'
+or @name='sleeperHordeStageGS2275'
+or @name='sleeperHordeStageGS2295'
+or @name='sleeperHordeStageGS2315'
+or @name='sleeperHordeStageGS2334'
+or @name='sleeperHordeStageGS2354'
+or @name='sleeperHordeStageGS2374'
+or @name='sleeperHordeStageGS2394'
+or @name='sleeperHordeStageGS2414'
+or @name='sleeperHordeStageGS2435'
+or @name='sleeperHordeStageGS2455'
+or @name='sleeperHordeStageGS2475'
+or @name='sleeperHordeStageGS2495'
+or @name='sleeperHordeStageGS2516'
+or @name='sleeperHordeStageGS2536'
+or @name='sleeperHordeStageGS2557'
+or @name='sleeperHordeStageGS2577'
+or @name='sleeperHordeStageGS2598'
+or @name='sleeperHordeStageGS2618'
+or @name='sleeperHordeStageGS2639'
+or @name='sleeperHordeStageGS2660'
+or @name='sleeperHordeStageGS2681'
+or @name='sleeperHordeStageGS2702'
+or @name='sleeperHordeStageGS2723'
+or @name='sleeperHordeStageGS2744'
+or @name='sleeperHordeStageGS2765'
+or @name='sleeperHordeStageGS2786'
+or @name='sleeperHordeStageGS2807'
+or @name='sleeperHordeStageGS2828'
+or @name='sleeperHordeStageGS2849'
+or @name='sleeperHordeStageGS2870'
+or @name='sleeperHordeStageGS2892'
+or @name='sleeperHordeStageGS2913'
+or @name='sleeperHordeStageGS2935'
+or @name='sleeperHordeStageGS2956'
+or @name='sleeperHordeStageGS2978'
+or @name='sleeperHordeStageGS2999'
+or @name='sleeperHordeStageGS3021'
+or @name='sleeperHordeStageGS3043'
+or @name='sleeperHordeStageGS3064'
+or @name='sleeperHordeStageGS3086'
+or @name='sleeperHordeStageGS3108'
+or @name='sleeperHordeStageGS3130'
+or @name='sleeperHordeStageGS3152'
+or @name='sleeperHordeStageGS3174'
+or @name='sleeperHordeStageGS3196'
+or @name='sleeperHordeStageGS3218'
+or @name='sleeperHordeStageGS3240'
+or @name='sleeperHordeStageGS3263'
+or @name='sleeperHordeStageGS3285'
+or @name='sleeperHordeStageGS3307'
+or @name='sleeperHordeStageGS3330'
+or @name='sleeperHordeStageGS3352'
+or @name='sleeperHordeStageGS3375'
+or @name='sleeperHordeStageGS3397'
+or @name='sleeperHordeStageGS3420'
+or @name='sleeperHordeStageGS3442'
+or @name='sleeperHordeStageGS3465'
+or @name='sleeperHordeStageGS3488'
+or @name='sleeperHordeStageGS3510'
+or @name='sleeperHordeStageGS3533'
+or @name='sleeperHordeStageGS3556'
+or @name='sleeperHordeStageGS3579'
+or @name='sleeperHordeStageGS3602'
+or @name='sleeperHordeStageGS3625'
+or @name='sleeperHordeStageGS3648'
+or @name='sleeperHordeStageGS3671'
+or @name='sleeperHordeStageGS3694'
+or @name='sleeperHordeStageGS3718'
+or @name='sleeperHordeStageGS3741'
+or @name='sleeperHordeStageGS3764'
+or @name='sleeperHordeStageGS3787'
+or @name='sleeperHordeStageGS3811'
+or @name='sleeperHordeStageGS3834'
+or @name='sleeperHordeStageGS3858'
+or @name='sleeperHordeStageGS3881'
+or @name='sleeperHordeStageGS3905'
+or @name='sleeperHordeStageGS3929'
+or @name='sleeperHordeStageGS3952'
+or @name='sleeperHordeStageGS3976'
+or @name='sleeperHordeStageGS4000'
+or @name='sleeperHordeStageGS4024'
+or @name='sleeperHordeStageGS4048'
+or @name='sleeperHordeStageGS4072'
+or @name='sleeperHordeStageGS4096'
+or @name='sleeperHordeStageGS4120'
+or @name='sleeperHordeStageGS4144'
+or @name='sleeperHordeStageGS4168'
+or @name='sleeperHordeStageGS4192'
+or @name='sleeperHordeStageGS4216'
+or @name='sleeperHordeStageGS4240'
+or @name='sleeperHordeStageGS4265'
+or @name='sleeperHordeStageGS4289'
+or @name='sleeperHordeStageGS4313'
+or @name='sleeperHordeStageGS4338'
+or @name='sleeperHordeStageGS4362'
+or @name='sleeperHordeStageGS4387'
+or @name='sleeperHordeStageGS4411'
+or @name='sleeperHordeStageGS4485'
+or @name='sleeperHordeStageGS4510'
+or @name='sleeperHordeStageGS4535'
+or @name='sleeperHordeStageGS4560'
+or @name='sleeperHordeStageGS4585'
+or @name='sleeperHordeStageGS4610'
+or @name='sleeperHordeStageGS4635'
+or @name='sleeperHordeStageGS4660'
+or @name='sleeperHordeStageGS4685'
+or @name='sleeperHordeStageGS4710'
+or @name='sleeperHordeStageGS4735'
+or @name='sleeperHordeStageGS4760'
+or @name='sleeperHordeStageGS4786'
+or @name='sleeperHordeStageGS4811'
+or @name='sleeperHordeStageGS4836'
+or @name='sleeperHordeStageGS4862'
+or @name='sleeperHordeStageGS4887'
+or @name='sleeperHordeStageGS4913'
+or @name='sleeperHordeStageGS4938'
+or @name='sleeperHordeStageGS4964'
+or @name='sleeperHordeStageGS4989'
+or @name='sleeperHordeStageGS5015'
+or @name='sleeperHordeStageGS5041'
+or @name='sleeperHordeStageGS5066'
+or @name='sleeperHordeStageGS5092'
+or @name='sleeperHordeStageGS5118'
+or @name='sleeperHordeStageGS5144'
+or @name='sleeperHordeStageGS5170'
+or @name='sleeperHordeStageGS5196'
+or @name='sleeperHordeStageGS5222'
+or @name='sleeperHordeStageGS5248'
+or @name='sleeperHordeStageGS5274'
+or @name='sleeperHordeStageGS5300'
+or @name='sleeperHordeStageGS5326'
+or @name='sleeperHordeStageGS5352'
+or @name='sleeperHordeStageGS5379'
+or @name='sleeperHordeStageGS5405'
+or @name='sleeperHordeStageGS5431'
+or @name='sleeperHordeStageGS5458'
+or @name='sleeperHordeStageGS5484'
+or @name='sleeperHordeStageGS5511'
+or @name='sleeperHordeStageGS5537'
+or @name='sleeperHordeStageGS5564'
+or @name='sleeperHordeStageGS5590'
+or @name='sleeperHordeStageGS5617'
+or @name='sleeperHordeStageGS5644'
+or @name='sleeperHordeStageGS5670'
+or @name='sleeperHordeStageGS5697'
+or @name='sleeperHordeStageGS5724'
+or @name='sleeperHordeStageGS5751'
+or @name='sleeperHordeStageGS5778'
+]/text()" delim="\n" op="add">
+	EndZgrootLL 	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL
+	EndZgrootferalLL
+	zombiedesertmonsterorcLL
+	zombieimpLL	
+	zombiesnowguardianLL
+	FrozenBoe
+	zombiesmallbitchLL, .25 
+	zombiespikeLL, .25 
+	zombienecroLL, .25
+	zombiemutantLL, .25
+	zombiesupermutantLL, .25
+	zombieWguardianLL, .25
+	EndZgrootradiatedLL, .25
+	zombiebitchQueen, .25
+	zombieminotaurboss, .05
+	npcEndZsurvivorpistolLL, .25
+</csv>
+<!--END OF SLEEPER HORDE STAGES-->
+	
+<!--WANDERING HORDE STAGES-->
+<csv xpath="/entitygroups/entitygroup[@name='wanderingHordeStageGS'
+or @name='wanderingHordeStageGS1'
+or @name='wanderingHordeStageGS2'
+or @name='wanderingHordeStageGS5'
+or @name='wanderingHordeStageGS8'
+or @name='wanderingHordeStageGS11'
+or @name='wanderingHordeStageGS14'
+or @name='wanderingHordeStageGS18'
+or @name='wanderingHordeStageGS22'
+or @name='wanderingHordeStageGS27'
+or @name='wanderingHordeStageGS31'
+or @name='wanderingHordeStageGS36'
+or @name='wanderingHordeStageGS41'
+or @name='wanderingHordeStageGS46'
+or @name='wanderingHordeStageGS52'
+or @name='wanderingHordeStageGS58'
+or @name='wanderingHordeStageGS64'
+or @name='wanderingHordeStageGS70'
+or @name='wanderingHordeStageGS76'
+or @name='wanderingHordeStageGS82']/text()" delim="\n" op="add">
+	EndZgrootLL
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+	zombieimpLL, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='FwanderingHordeStageGS1'
+or @name='FwanderingHordeStageGS2'
+or @name='FwanderingHordeStageGS4'
+or @name='FwanderingHordeStageGS7'
+or @name='FwanderingHordeStageGS10'
+or @name='FwanderingHordeStageGS13'
+or @name='FwanderingHordeStageGS16'
+or @name='FwanderingHordeStageGS19'
+or @name='FwanderingHordeStageGS23'
+or @name='FwanderingHordeStageGS27'
+or @name='FwanderingHordeStageGS31'
+or @name='FwanderingHordeStageGS35'
+or @name='FwanderingHordeStageGS40'
+or @name='FwanderingHordeStageGS44'
+or @name='FwanderingHordeStageGS49'
+or @name='FwanderingHordeStageGS54'
+or @name='FwanderingHordeStageGS59'
+or @name='FwanderingHordeStageGS64']/text()" delim="\n" op="add">
+	EndZgrootLL
+	EndZgrootferalLL, .1 	
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .05
+</csv>
+<!--END OF WANDERING HORDE STAGES-->
+
+<!--SCOUT HORDE STAGES-->
+<csv xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS1'
+or @name='scoutHordeStageGS2'
+or @name='scoutHordeStageGS5'
+or @name='scoutHordeStageGS8'
+or @name='scoutHordeStageGS11'
+or @name='scoutHordeStageGS14'
+or @name='scoutHordeStageGS18'
+or @name='scoutHordeStageGS22'
+or @name='scoutHordeStageGS27'
+or @name='scoutHordeStageGS31'
+or @name='scoutHordeStageGS36'
+or @name='scoutHordeStageGS41'
+or @name='scoutHordeStageGS46'
+or @name='scoutHordeStageGS52'
+or @name='scoutHordeStageGS58'
+or @name='scoutHordeStageGS64'
+or @name='scoutHordeStageGS70'
+or @name='scoutHordeStageGS76'
+or @name='scoutHordeStageGS82'
+or @name='scoutHordeStageGS89'
+or @name='scoutHordeStageGS96'
+or @name='scoutHordeStageGS103'
+or @name='scoutHordeStageGS110'
+or @name='scoutHordeStageGS117'
+or @name='scoutHordeStageGS125'
+or @name='scoutHordeStageGS132'
+or @name='scoutHordeStageGS140'
+or @name='scoutHordeStageGS148'
+or @name='scoutHordeStageGS156']/text()" delim="\n" op="add">
+	EndZgrootLL 	
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS164'
+or @name='scoutHordeStageGS172'
+or @name='scoutHordeStageGS181'
+or @name='scoutHordeStageGS189'
+or @name='scoutHordeStageGS198'
+or @name='scoutHordeStageGS207'
+or @name='scoutHordeStageGS216'
+or @name='scoutHordeStageGS225'
+or @name='scoutHordeStageGS234'
+or @name='scoutHordeStageGS243'
+or @name='scoutHordeStageGS252'
+or @name='scoutHordeStageGS262'
+or @name='scoutHordeStageGS272'
+or @name='scoutHordeStageGS281'
+or @name='scoutHordeStageGS291'
+or @name='scoutHordeStageGS301'
+or @name='scoutHordeStageGS311'
+or @name='scoutHordeStageGS322'
+or @name='scoutHordeStageGS332'
+or @name='scoutHordeStageGS343'
+or @name='scoutHordeStageGS353']/text()" delim="\n" op="add">
+	EndZgrootLL 	
+	zombiegrimlinLL, .2
+	zombiegrimlintwinLL, .2
+	zombieporcLL, .2
+	EndZgrootferalLL, .2
+	zombiedesertmonsterorcLL, .05
+	zombieimpLL, .1
+	zombiebitchQueen, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='scoutHordeStageGS364'
+or @name='scoutHordeStageGS374'
+or @name='scoutHordeStageGS385'
+or @name='scoutHordeStageGS396'
+or @name='scoutHordeStageGS407'
+or @name='scoutHordeStageGS419'
+or @name='scoutHordeStageGS430'
+or @name='scoutHordeStageGS441'
+or @name='scoutHordeStageGS453'
+or @name='scoutHordeStageGS464'
+or @name='scoutHordeStageGS476'
+or @name='scoutHordeStageGS488'
+or @name='scoutHordeStageGS500'
+or @name='scoutHordeStageGS512'
+or @name='scoutHordeStageGS524'
+or @name='scoutHordeStageGS536'
+or @name='scoutHordeStageGS548'
+or @name='scoutHordeStageGS560'
+or @name='scoutHordeStageGS573'
+or @name='scoutHordeStageGS585'
+or @name='scoutHordeStageGS598'
+or @name='scoutHordeStageGS610'
+or @name='scoutHordeStageGS623'
+or @name='scoutHordeStageGS636'
+or @name='scoutHordeStageGS649'
+or @name='scoutHordeStageGS662'
+or @name='scoutHordeStageGS675'
+or @name='scoutHordeStageGS688'
+or @name='scoutHordeStageGS702'
+or @name='scoutHordeStageGS715'
+or @name='scoutHordeStageGS729'
+or @name='scoutHordeStageGS742'
+or @name='scoutHordeStageGS756'
+or @name='scoutHordeStageGS769'
+or @name='scoutHordeStageGS783'
+or @name='scoutHordeStageGS797'
+or @name='scoutHordeStageGS811'
+or @name='scoutHordeStageGS825'
+or @name='scoutHordeStageGS839'
+or @name='scoutHordeStageGS853'
+or @name='scoutHordeStageGS868'
+or @name='scoutHordeStageGS882'
+or @name='scoutHordeStageGS896'
+or @name='scoutHordeStageGS911'
+or @name='scoutHordeStageGS925'
+or @name='scoutHordeStageGS940'
+or @name='scoutHordeStageGS955'
+or @name='scoutHordeStageGS970'
+or @name='scoutHordeStageGS985'
+or @name='scoutHordeStageGS1000'
+or @name='scoutHordeStageGS1015'
+or @name='scoutHordeStageGS1030'
+or @name='scoutHordeStageGS1045'
+or @name='scoutHordeStageGS1060'
+or @name='scoutHordeStageGS1075'
+or @name='scoutHordeStageGS1091'
+or @name='scoutHordeStageGS1106'
+or @name='scoutHordeStageGS1122'
+or @name='scoutHordeStageGS1137'
+or @name='scoutHordeStageGS1153'
+or @name='scoutHordeStageGS1169'
+or @name='scoutHordeStageGS1185'
+or @name='scoutHordeStageGS1201'
+or @name='scoutHordeStageGS1217'
+or @name='scoutHordeStageGS1233'
+or @name='scoutHordeStageGS1249'
+or @name='scoutHordeStageGS1265'
+or @name='scoutHordeStageGS1281'
+or @name='scoutHordeStageGS1298'
+or @name='scoutHordeStageGS1314'
+or @name='scoutHordeStageGS1331'
+or @name='scoutHordeStageGS1347'
+or @name='scoutHordeStageGS1364'
+or @name='scoutHordeStageGS1380'
+or @name='scoutHordeStageGS1397'
+or @name='scoutHordeStageGS1414'
+or @name='scoutHordeStageGS1431'
+or @name='scoutHordeStageGS1448'
+or @name='scoutHordeStageGS1465'
+or @name='scoutHordeStageGS1482'
+or @name='scoutHordeStageGS1499'
+or @name='scoutHordeStageGS1516'
+or @name='scoutHordeStageGS1533'
+or @name='scoutHordeStageGS1551'
+or @name='scoutHordeStageGS1568'
+or @name='scoutHordeStageGS1586'
+or @name='scoutHordeStageGS1603'
+or @name='scoutHordeStageGS1621'
+or @name='scoutHordeStageGS1638'
+or @name='scoutHordeStageGS1656'
+or @name='scoutHordeStageGS1674'
+or @name='scoutHordeStageGS1692'
+or @name='scoutHordeStageGS1710'
+or @name='scoutHordeStageGS1728'
+or @name='scoutHordeStageGS1746'
+or @name='scoutHordeStageGS1764'
+or @name='scoutHordeStageGS1782'
+or @name='scoutHordeStageGS1800'
+or @name='scoutHordeStageGS1818'
+or @name='scoutHordeStageGS1837'
+or @name='scoutHordeStageGS1855'
+or @name='scoutHordeStageGS1873'
+or @name='scoutHordeStageGS1892'
+or @name='scoutHordeStageGS1911'
+or @name='scoutHordeStageGS1929'
+or @name='scoutHordeStageGS1948'
+or @name='scoutHordeStageGS1967'
+or @name='scoutHordeStageGS1986'
+or @name='scoutHordeStageGS2004'
+or @name='scoutHordeStageGS2023'
+or @name='scoutHordeStageGS2042'
+or @name='scoutHordeStageGS2061'
+or @name='scoutHordeStageGS2081'
+or @name='scoutHordeStageGS2100'
+or @name='scoutHordeStageGS2119'
+or @name='scoutHordeStageGS2138'
+or @name='scoutHordeStageGS2158'
+or @name='scoutHordeStageGS2177'
+or @name='scoutHordeStageGS2197'
+or @name='scoutHordeStageGS2216'
+or @name='scoutHordeStageGS2236'
+or @name='scoutHordeStageGS2255'
+or @name='scoutHordeStageGS2275'
+or @name='scoutHordeStageGS2295'
+or @name='scoutHordeStageGS2315'
+or @name='scoutHordeStageGS2334'
+or @name='scoutHordeStageGS2354'
+or @name='scoutHordeStageGS2374'
+or @name='scoutHordeStageGS2394'
+or @name='scoutHordeStageGS2414'
+or @name='scoutHordeStageGS2435'
+or @name='scoutHordeStageGS2455'
+or @name='scoutHordeStageGS2475'
+or @name='scoutHordeStageGS2495'
+or @name='scoutHordeStageGS2516'
+or @name='scoutHordeStageGS2536'
+or @name='scoutHordeStageGS2557'
+or @name='scoutHordeStageGS2577'
+or @name='scoutHordeStageGS2598'
+or @name='scoutHordeStageGS2618'
+or @name='scoutHordeStageGS2639'
+or @name='scoutHordeStageGS2660'
+or @name='scoutHordeStageGS2681'
+or @name='scoutHordeStageGS2702'
+or @name='scoutHordeStageGS2723'
+or @name='scoutHordeStageGS2744'
+or @name='scoutHordeStageGS2765'
+or @name='scoutHordeStageGS2786'
+or @name='scoutHordeStageGS2807'
+or @name='scoutHordeStageGS2828'
+or @name='scoutHordeStageGS2849'
+or @name='scoutHordeStageGS2870'
+or @name='scoutHordeStageGS2892'
+or @name='scoutHordeStageGS2913'
+or @name='scoutHordeStageGS2935'
+or @name='scoutHordeStageGS2956'
+or @name='scoutHordeStageGS2978'
+or @name='scoutHordeStageGS2999'
+or @name='scoutHordeStageGS3021'
+or @name='scoutHordeStageGS3043'
+or @name='scoutHordeStageGS3064'
+or @name='scoutHordeStageGS3086'
+or @name='scoutHordeStageGS3108'
+or @name='scoutHordeStageGS3130'
+or @name='scoutHordeStageGS3152'
+or @name='scoutHordeStageGS3174'
+or @name='scoutHordeStageGS3196'
+or @name='scoutHordeStageGS3218'
+or @name='scoutHordeStageGS3240'
+or @name='scoutHordeStageGS3263'
+or @name='scoutHordeStageGS3285'
+or @name='scoutHordeStageGS3307'
+or @name='scoutHordeStageGS3330'
+or @name='scoutHordeStageGS3352'
+or @name='scoutHordeStageGS3375'
+or @name='scoutHordeStageGS3397'
+or @name='scoutHordeStageGS3420'
+or @name='scoutHordeStageGS3442'
+or @name='scoutHordeStageGS3465'
+or @name='scoutHordeStageGS3488'
+or @name='scoutHordeStageGS3510'
+or @name='scoutHordeStageGS3533'
+or @name='scoutHordeStageGS3556'
+or @name='scoutHordeStageGS3579'
+or @name='scoutHordeStageGS3602'
+or @name='scoutHordeStageGS3625'
+or @name='scoutHordeStageGS3648'
+or @name='scoutHordeStageGS3671'
+or @name='scoutHordeStageGS3694'
+or @name='scoutHordeStageGS3718'
+or @name='scoutHordeStageGS3741'
+or @name='scoutHordeStageGS3764'
+or @name='scoutHordeStageGS3787'
+or @name='scoutHordeStageGS3811'
+or @name='scoutHordeStageGS3834'
+or @name='scoutHordeStageGS3858'
+or @name='scoutHordeStageGS3881'
+or @name='scoutHordeStageGS3905'
+or @name='scoutHordeStageGS3929'
+or @name='scoutHordeStageGS3952'
+or @name='scoutHordeStageGS3976'
+or @name='scoutHordeStageGS4000'
+or @name='scoutHordeStageGS4024'
+or @name='scoutHordeStageGS4048'
+or @name='scoutHordeStageGS4072'
+or @name='scoutHordeStageGS4096'
+or @name='scoutHordeStageGS4120'
+or @name='scoutHordeStageGS4144'
+or @name='scoutHordeStageGS4168'
+or @name='scoutHordeStageGS4192'
+or @name='scoutHordeStageGS4216'
+or @name='scoutHordeStageGS4240'
+or @name='scoutHordeStageGS4265'
+or @name='scoutHordeStageGS4289'
+or @name='scoutHordeStageGS4313'
+or @name='scoutHordeStageGS4338'
+or @name='scoutHordeStageGS4362'
+or @name='scoutHordeStageGS4387'
+or @name='scoutHordeStageGS4411'
+or @name='scoutHordeStageGS4485'
+or @name='scoutHordeStageGS4510'
+or @name='scoutHordeStageGS4535'
+or @name='scoutHordeStageGS4560'
+or @name='scoutHordeStageGS4585'
+or @name='scoutHordeStageGS4610'
+or @name='scoutHordeStageGS4635'
+or @name='scoutHordeStageGS4660'
+or @name='scoutHordeStageGS4685'
+or @name='scoutHordeStageGS4710'
+or @name='scoutHordeStageGS4735'
+or @name='scoutHordeStageGS4760'
+or @name='scoutHordeStageGS4786'
+or @name='scoutHordeStageGS4811'
+or @name='scoutHordeStageGS4836'
+or @name='scoutHordeStageGS4862'
+or @name='scoutHordeStageGS4887'
+or @name='scoutHordeStageGS4913'
+or @name='scoutHordeStageGS4938'
+or @name='scoutHordeStageGS4964'
+or @name='scoutHordeStageGS4989'
+or @name='scoutHordeStageGS5015'
+or @name='scoutHordeStageGS5041'
+or @name='scoutHordeStageGS5066'
+or @name='scoutHordeStageGS5092'
+or @name='scoutHordeStageGS5118'
+or @name='scoutHordeStageGS5144'
+or @name='scoutHordeStageGS5170'
+or @name='scoutHordeStageGS5196'
+or @name='scoutHordeStageGS5222'
+or @name='scoutHordeStageGS5248'
+or @name='scoutHordeStageGS5274'
+or @name='scoutHordeStageGS5300'
+or @name='scoutHordeStageGS5326'
+or @name='scoutHordeStageGS5352'
+or @name='scoutHordeStageGS5379'
+or @name='scoutHordeStageGS5405'
+or @name='scoutHordeStageGS5431'
+or @name='scoutHordeStageGS5458'
+or @name='scoutHordeStageGS5484'
+or @name='scoutHordeStageGS5511'
+or @name='scoutHordeStageGS5537'
+or @name='scoutHordeStageGS5564'
+or @name='scoutHordeStageGS5590'
+or @name='scoutHordeStageGS5617'
+or @name='scoutHordeStageGS5644'
+or @name='scoutHordeStageGS5670'
+or @name='scoutHordeStageGS5697'
+or @name='scoutHordeStageGS5724'
+or @name='scoutHordeStageGS5751'
+or @name='scoutHordeStageGS5778']/text()" delim="\n" op="add">
+	EndZgrootLL 	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL
+	EndZgrootferalLL
+	zombiedesertmonsterorcLL, .4
+	zombieimpLL, .4	
+	zombiesnowguardianLL, .4 
+	FrozenBoe, .4
+	zombiesmallbitchLL, .4 
+	zombiespikeLL, .4 
+	zombienecroLL, .4 
+	zombiemutantLL, .4
+	zombiesupermutantLL, .4 
+	zombieWguardianLL, .4
+	EndZgrootradiatedLL, .4
+	zombiebitchQueen, .2
+	zombieminotaurboss, .05
+</csv>
+<!--END OF SCOUT HORDE STAGES-->
+
+<!--FERAL HORDE STAGE(HORDE NIGHTS)-->
+<csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS1'
+or @name='feralHordeStageGS2'
+or @name='feralHordeStageGS4'
+or @name='feralHordeStageGS7'
+or @name='feralHordeStageGS10'
+or @name='feralHordeStageGS13'
+or @name='feralHordeStageGS16'
+or @name='feralHordeStageGS19'
+or @name='feralHordeStageGS23'
+or @name='feralHordeStageGS27'
+or @name='feralHordeStageGS31'
+or @name='feralHordeStageGS35'
+or @name='feralHordeStageGS40'
+or @name='feralHordeStageGS44'
+or @name='feralHordeStageGS49']/text()" delim="\n" op="add">
+	EndZgrootLL 	
+	zombiegrimlinLL, .25
+	zombiegrimlintwinLL, .25
+	zombieporcLL, .25
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS54'
+or @name='feralHordeStageGS59'
+or @name='feralHordeStageGS64'
+or @name='feralHordeStageGS69'
+or @name='feralHordeStageGS74'
+or @name='feralHordeStageGS80'
+or @name='feralHordeStageGS85'
+or @name='feralHordeStageGS91'
+or @name='feralHordeStageGS97'
+or @name='feralHordeStageGS103'
+or @name='feralHordeStageGS109'
+or @name='feralHordeStageGS115'
+or @name='feralHordeStageGS121']/text()" delim="\n" op="add">
+	EndZgrootLL 	
+	zombiegrimlinLL, .2
+	zombiegrimlintwinLL, .2
+	zombieporcLL, .2
+	EndZgrootferalLL, .1
+	zombiedesertmonsterorcLL, .05
+	zombieimpLL, .1
+	zombiebitchQueen, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='feralHordeStageGS127'
+or @name='feralHordeStageGS133'
+or @name='feralHordeStageGS140'
+or @name='feralHordeStageGS147'
+or @name='feralHordeStageGS153'
+or @name='feralHordeStageGS160'
+or @name='feralHordeStageGS167'
+or @name='feralHordeStageGS174'
+or @name='feralHordeStageGS181'
+or @name='feralHordeStageGS188'
+or @name='feralHordeStageGS195'
+or @name='feralHordeStageGS202'
+or @name='feralHordeStageGS210'
+or @name='feralHordeStageGS217'
+or @name='feralHordeStageGS225'
+or @name='feralHordeStageGS232'
+or @name='feralHordeStageGS240'
+or @name='feralHordeStageGS247'
+or @name='feralHordeStageGS255'
+or @name='feralHordeStageGS263'
+or @name='feralHordeStageGS271'
+or @name='feralHordeStageGS279'
+or @name='feralHordeStageGS287'
+or @name='feralHordeStageGS295'
+or @name='feralHordeStageGS304'
+or @name='feralHordeStageGS312'
+or @name='feralHordeStageGS320'
+or @name='feralHordeStageGS329'
+or @name='feralHordeStageGS337'
+or @name='feralHordeStageGS346'
+or @name='feralHordeStageGS354'
+or @name='feralHordeStageGS363'
+or @name='feralHordeStageGS372'
+or @name='feralHordeStageGS381'
+or @name='feralHordeStageGS389'
+or @name='feralHordeStageGS398'
+or @name='feralHordeStageGS407'
+or @name='feralHordeStageGS417'
+or @name='feralHordeStageGS426'
+or @name='feralHordeStageGS435'
+or @name='feralHordeStageGS444'
+or @name='feralHordeStageGS453'
+or @name='feralHordeStageGS463'
+or @name='feralHordeStageGS472'
+or @name='feralHordeStageGS482'
+or @name='feralHordeStageGS491'
+or @name='feralHordeStageGS501'
+or @name='feralHordeStageGS510'
+or @name='feralHordeStageGS520'
+or @name='feralHordeStageGS530'
+or @name='feralHordeStageGS540'
+or @name='feralHordeStageGS550'
+or @name='feralHordeStageGS560'
+or @name='feralHordeStageGS570'
+or @name='feralHordeStageGS580'
+or @name='feralHordeStageGS590'
+or @name='feralHordeStageGS600'
+or @name='feralHordeStageGS610'
+or @name='feralHordeStageGS620'
+or @name='feralHordeStageGS631'
+or @name='feralHordeStageGS641'
+or @name='feralHordeStageGS651'
+or @name='feralHordeStageGS662'
+or @name='feralHordeStageGS672'
+or @name='feralHordeStageGS683'
+or @name='feralHordeStageGS693'
+or @name='feralHordeStageGS704'
+or @name='feralHordeStageGS715'
+or @name='feralHordeStageGS726'
+or @name='feralHordeStageGS736'
+or @name='feralHordeStageGS747'
+or @name='feralHordeStageGS758'
+or @name='feralHordeStageGS769'
+or @name='feralHordeStageGS780'
+or @name='feralHordeStageGS791'
+or @name='feralHordeStageGS802'
+or @name='feralHordeStageGS813'
+or @name='feralHordeStageGS824'
+or @name='feralHordeStageGS836'
+or @name='feralHordeStageGS847'
+or @name='feralHordeStageGS858'
+or @name='feralHordeStageGS870'
+or @name='feralHordeStageGS881'
+or @name='feralHordeStageGS893'
+or @name='feralHordeStageGS904'
+or @name='feralHordeStageGS916'
+or @name='feralHordeStageGS927'
+or @name='feralHordeStageGS939'
+or @name='feralHordeStageGS951'
+or @name='feralHordeStageGS962'
+or @name='feralHordeStageGS974'
+or @name='feralHordeStageGS986'
+or @name='feralHordeStageGS998'
+or @name='feralHordeStageGS1010'
+or @name='feralHordeStageGS1022'
+or @name='feralHordeStageGS1034'
+or @name='feralHordeStageGS1046'
+or @name='feralHordeStageGS1058'
+or @name='feralHordeStageGS1070'
+or @name='feralHordeStageGS1082'
+or @name='feralHordeStageGS1094'
+or @name='feralHordeStageGS1106'
+or @name='feralHordeStageGS1119'
+or @name='feralHordeStageGS1131'
+or @name='feralHordeStageGS1143'
+or @name='feralHordeStageGS1156'
+or @name='feralHordeStageGS1168'
+or @name='feralHordeStageGS1181'
+or @name='feralHordeStageGS1193'
+or @name='feralHordeStageGS1206'
+or @name='feralHordeStageGS1218'
+or @name='feralHordeStageGS1231'
+or @name='feralHordeStageGS1244'
+or @name='feralHordeStageGS1256'
+or @name='feralHordeStageGS1269'
+or @name='feralHordeStageGS1282'
+or @name='feralHordeStageGS1295'
+or @name='feralHordeStageGS1308'
+or @name='feralHordeStageGS1321'
+or @name='feralHordeStageGS1334'
+or @name='feralHordeStageGS1347'
+or @name='feralHordeStageGS1360'
+or @name='feralHordeStageGS1373'
+or @name='feralHordeStageGS1386'
+or @name='feralHordeStageGS1399'
+or @name='feralHordeStageGS1412'
+or @name='feralHordeStageGS1425'
+or @name='feralHordeStageGS1439'
+or @name='feralHordeStageGS1452'
+or @name='feralHordeStageGS1465'
+or @name='feralHordeStageGS1479'
+or @name='feralHordeStageGS1492'
+or @name='feralHordeStageGS1506'
+or @name='feralHordeStageGS1519'
+or @name='feralHordeStageGS1533'
+or @name='feralHordeStageGS1546'
+or @name='feralHordeStageGS1560'
+or @name='feralHordeStageGS1573'
+or @name='feralHordeStageGS1587'
+or @name='feralHordeStageGS1601'
+or @name='feralHordeStageGS1614'
+or @name='feralHordeStageGS1628'
+or @name='feralHordeStageGS1642'
+or @name='feralHordeStageGS1656'
+or @name='feralHordeStageGS1670'
+or @name='feralHordeStageGS1684'
+or @name='feralHordeStageGS1698'
+or @name='feralHordeStageGS1712'
+or @name='feralHordeStageGS1726'
+or @name='feralHordeStageGS1740'
+or @name='feralHordeStageGS1754'
+or @name='feralHordeStageGS1768'
+or @name='feralHordeStageGS1782'
+or @name='feralHordeStageGS1796'
+or @name='feralHordeStageGS1811'
+or @name='feralHordeStageGS1825'
+or @name='feralHordeStageGS1839'
+or @name='feralHordeStageGS1853'
+or @name='feralHordeStageGS1868'
+or @name='feralHordeStageGS1882'
+or @name='feralHordeStageGS1897'
+or @name='feralHordeStageGS1911'
+or @name='feralHordeStageGS1926'
+or @name='feralHordeStageGS1940'
+or @name='feralHordeStageGS1955'
+or @name='feralHordeStageGS1969'
+or @name='feralHordeStageGS1984'
+or @name='feralHordeStageGS1999'
+or @name='feralHordeStageGS2013'
+or @name='feralHordeStageGS2028'
+or @name='feralHordeStageGS2043'
+or @name='feralHordeStageGS2058'
+or @name='feralHordeStageGS2073'
+or @name='feralHordeStageGS2087'
+or @name='feralHordeStageGS2102'
+or @name='feralHordeStageGS2117'
+or @name='feralHordeStageGS2132'
+or @name='feralHordeStageGS2147'
+or @name='feralHordeStageGS2162'
+or @name='feralHordeStageGS2177'
+or @name='feralHordeStageGS2192'
+or @name='feralHordeStageGS2207'
+or @name='feralHordeStageGS2223'
+or @name='feralHordeStageGS2238'
+or @name='feralHordeStageGS2253'
+or @name='feralHordeStageGS2268'
+or @name='feralHordeStageGS2284'
+or @name='feralHordeStageGS2299'
+or @name='feralHordeStageGS2314'
+or @name='feralHordeStageGS2330'
+or @name='feralHordeStageGS2345'
+or @name='feralHordeStageGS2360'
+or @name='feralHordeStageGS2376'
+or @name='feralHordeStageGS2391'
+or @name='feralHordeStageGS2407'
+or @name='feralHordeStageGS2423'
+or @name='feralHordeStageGS2438'
+or @name='feralHordeStageGS2454'
+or @name='feralHordeStageGS2469'
+or @name='feralHordeStageGS2485'
+or @name='feralHordeStageGS2501'
+or @name='feralHordeStageGS2517'
+or @name='feralHordeStageGS2532'
+or @name='feralHordeStageGS2548'
+or @name='feralHordeStageGS2564'
+or @name='feralHordeStageGS2580'
+or @name='feralHordeStageGS2596'
+or @name='feralHordeStageGS2612'
+or @name='feralHordeStageGS2628'
+or @name='feralHordeStageGS2644'
+or @name='feralHordeStageGS2660'
+or @name='feralHordeStageGS2676'
+or @name='feralHordeStageGS2692'
+or @name='feralHordeStageGS2708'
+or @name='feralHordeStageGS2724'
+or @name='feralHordeStageGS2740'
+or @name='feralHordeStageGS2756'
+or @name='feralHordeStageGS2772'
+or @name='feralHordeStageGS2789'
+or @name='feralHordeStageGS2805'
+or @name='feralHordeStageGS2821'
+or @name='feralHordeStageGS2838'
+or @name='feralHordeStageGS2854'
+or @name='feralHordeStageGS2870'
+or @name='feralHordeStageGS2887'
+or @name='feralHordeStageGS2903'
+or @name='feralHordeStageGS2920'
+or @name='feralHordeStageGS2936'
+or @name='feralHordeStageGS2953'
+or @name='feralHordeStageGS2969'
+or @name='feralHordeStageGS2986'
+or @name='feralHordeStageGS3003'
+or @name='feralHordeStageGS3019'
+or @name='feralHordeStageGS3036'
+or @name='feralHordeStageGS3053'
+or @name='feralHordeStageGS3069'
+or @name='feralHordeStageGS3086'
+or @name='feralHordeStageGS3103'
+or @name='feralHordeStageGS3120'
+or @name='feralHordeStageGS3136'
+or @name='feralHordeStageGS3153'
+or @name='feralHordeStageGS3170'
+or @name='feralHordeStageGS3187'
+or @name='feralHordeStageGS3204'
+or @name='feralHordeStageGS3221'
+or @name='feralHordeStageGS3238'
+or @name='feralHordeStageGS3255'
+or @name='feralHordeStageGS3272'
+or @name='feralHordeStageGS3289'
+or @name='feralHordeStageGS3306'
+or @name='feralHordeStageGS3324'
+or @name='feralHordeStageGS3341'
+or @name='feralHordeStageGS3358'
+or @name='feralHordeStageGS3375'
+or @name='feralHordeStageGS3392'
+or @name='feralHordeStageGS3410'
+or @name='feralHordeStageGS3427'
+or @name='feralHordeStageGS3444'
+or @name='feralHordeStageGS3462'
+or @name='feralHordeStageGS3479'
+or @name='feralHordeStageGS3496'
+or @name='feralHordeStageGS3514'
+or @name='feralHordeStageGS3531'
+or @name='feralHordeStageGS3549'
+or @name='feralHordeStageGS3566'
+or @name='feralHordeStageGS3584'
+or @name='feralHordeStageGS3601'
+or @name='feralHordeStageGS3619'
+or @name='feralHordeStageGS3637'
+or @name='feralHordeStageGS3654'
+or @name='feralHordeStageGS3672'
+or @name='feralHordeStageGS3690'
+or @name='feralHordeStageGS3707'
+or @name='feralHordeStageGS3725'
+or @name='feralHordeStageGS3743'
+or @name='feralHordeStageGS3761'
+or @name='feralHordeStageGS3779'
+or @name='feralHordeStageGS3796'
+or @name='feralHordeStageGS3814'
+or @name='feralHordeStageGS3832'
+or @name='feralHordeStageGS3850'
+or @name='feralHordeStageGS3868'
+or @name='feralHordeStageGS3886'
+or @name='feralHordeStageGS3904'
+or @name='feralHordeStageGS3922'
+or @name='feralHordeStageGS3940'
+or @name='feralHordeStageGS3958'
+or @name='feralHordeStageGS3976'
+or @name='feralHordeStageGS3995'
+or @name='feralHordeStageGS4013'
+or @name='feralHordeStageGS4031'
+or @name='feralHordeStageGS4049'
+or @name='feralHordeStageGS4067'
+or @name='feralHordeStageGS4086']/text()" delim="\n" op="add">
+	EndZgrootLL 	
+	zombiegrimlinLL, .7
+	zombiegrimlintwinLL, .7
+	zombieporcLL, .7
+	EndZgrootferalLL, .7
+	zombiedesertmonsterorcLL, .5
+	zombieimpLL, .5
+	zombiesnowguardianLL, .4 
+	FrozenBoe, .4
+	zombiesmallbitchLL, .3
+	zombiespikeLL, .4 
+	zombienecroLL, .4
+	zombiemutantLL, .4
+	zombiesupermutantLL, .4 
+	zombieWguardianLL, .4
+	EndZgrootradiatedLL, .4
+	zombiebitchQueen, .15
+	zombieminotaurboss, .05
+</csv>
+<!--FERAL HORDE STAGE(HORDE NIGHTS)-->
+
+<!--BADASS HORDE STAGE-->
+<csv xpath="/entitygroups/entitygroup[@name='badassHordeStageGS1'
+or @name='badassHordeStageGS3'
+or @name='badassHordeStageGS8'
+or @name='badassHordeStageGS13'
+or @name='badassHordeStageGS21'
+or @name='badassHordeStageGS30']/text()" delim="\n" op="add">
+	EndZgrootLL	
+	zombiegrimlinLL, .2
+	zombiegrimlintwinLL, .2
+	zombieporcLL, .2
+</csv> 
+
+<csv xpath="/entitygroups/entitygroup[@name='badassHordeStageGS40'
+or @name='badassHordeStageGS51'
+or @name='badassHordeStageGS65'
+or @name='badassHordeStageGS79'
+or @name='badassHordeStageGS95'
+or @name='badassHordeStageGS112'
+or @name='badassHordeStageGS130']/text()" delim="\n" op="add">
+	EndZgrootLL
+	EndZgrootferalLL, .35 	
+	zombiegrimlinLL, .35
+	zombiegrimlintwinLL, .35
+	zombieporcLL, .35
+	zombiedesertmonsterorcLL, .2 
+	zombieimpLL, .2
+	zombiebitchQueen, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='badassHordeStageGS150'
+or @name='badassHordeStageGS171'
+or @name='badassHordeStageGS194'
+or @name='badassHordeStageGS217'
+or @name='badassHordeStageGS242'
+or @name='badassHordeStageGS268'
+or @name='badassHordeStageGS296'
+or @name='badassHordeStageGS325'
+or @name='badassHordeStageGS355'
+or @name='badassHordeStageGS386'
+or @name='badassHordeStageGS419'
+or @name='badassHordeStageGS452'
+or @name='badassHordeStageGS488'
+or @name='badassHordeStageGS524'
+or @name='badassHordeStageGS561'
+or @name='badassHordeStageGS600'
+or @name='badassHordeStageGS640'
+or @name='badassHordeStageGS681'
+or @name='badassHordeStageGS724'
+or @name='badassHordeStageGS767'
+or @name='badassHordeStageGS812'
+or @name='badassHordeStageGS858'
+or @name='badassHordeStageGS905'
+or @name='badassHordeStageGS954'
+or @name='badassHordeStageGS1003'
+or @name='badassHordeStageGS1054'
+or @name='badassHordeStageGS1106'
+or @name='badassHordeStageGS1159'
+or @name='badassHordeStageGS1213'
+or @name='badassHordeStageGS1269'
+or @name='badassHordeStageGS1326'
+or @name='badassHordeStageGS1383'
+or @name='badassHordeStageGS1442'
+or @name='badassHordeStageGS1503'
+or @name='badassHordeStageGS1564'
+or @name='badassHordeStageGS1626'
+or @name='badassHordeStageGS1690'
+or @name='badassHordeStageGS1755'
+or @name='badassHordeStageGS1821'
+or @name='badassHordeStageGS1888'
+or @name='badassHordeStageGS1956'
+or @name='badassHordeStageGS2026']/text()" delim="\n" op="add">
+	EndZgrootLL
+	EndZgrootferalLL 
+	EndZgrootradiatedLL, .6	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL
+	zombiedesertmonsterorcLL, .35 
+	zombieimpLL, .35	
+	zombiesnowguardianLL, .1 
+	FrozenBoe, .1	
+	zombiesmallbitchLL, .1 
+	zombiespikeLL, .05 
+	zombienecroLL, .05 
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05
+	zombieWguardianLL, .05
+	EndZgrootradiatedLL, .05
+	zombiebitchQueen, .025
+</csv>
+<!--END OF BADASS HORDE STAGE-->
+
+<!--BADASS ONLY HORDE STAGE-->
+<csv xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS1'
+or @name='badassOnlyHordeStageGS3'
+or @name='badassOnlyHordeStageGS8'
+or @name='badassOnlyHordeStageGS13'
+or @name='badassOnlyHordeStageGS21'
+or @name='badassOnlyHordeStageGS30']/text()" delim="\n" op="add">
+	EndZgrootLL	
+	zombiegrimlinLL, .3
+	zombiegrimlintwinLL, .3
+	zombieporcLL, .3
+</csv> 
+
+<csv xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS40'
+or @name='badassOnlyHordeStageGS51'
+or @name='badassOnlyHordeStageGS65'
+or @name='badassOnlyHordeStageGS79'
+or @name='badassOnlyHordeStageGS95'
+or @name='badassOnlyHordeStageGS112'
+or @name='badassOnlyHordeStageGS130']/text()" delim="\n" op="add">
+	EndZgrootLL
+	EndZgrootferalLL, .75 	
+	zombiegrimlinLL, .75
+	zombiegrimlintwinLL, .75
+	zombieporcLL, .75
+	zombiedesertmonsterorcLL, .5 
+	zombieimpLL, .5
+	zombiebitchQueen, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS150'
+or @name='badassOnlyHordeStageGS171'
+or @name='badassOnlyHordeStageGS194'
+or @name='badassOnlyHordeStageGS217'
+or @name='badassOnlyHordeStageGS242'
+or @name='badassOnlyHordeStageGS268'
+or @name='badassOnlyHordeStageGS296'
+or @name='badassOnlyHordeStageGS325'
+or @name='badassOnlyHordeStageGS355'
+or @name='badassOnlyHordeStageGS386'
+or @name='badassOnlyHordeStageGS419'
+or @name='badassOnlyHordeStageGS452'
+or @name='badassOnlyHordeStageGS488'
+or @name='badassOnlyHordeStageGS524'
+or @name='badassOnlyHordeStageGS561'
+or @name='badassOnlyHordeStageGS600'
+or @name='badassOnlyHordeStageGS640'
+or @name='badassOnlyHordeStageGS681'
+or @name='badassOnlyHordeStageGS724'
+or @name='badassOnlyHordeStageGS767'
+or @name='badassOnlyHordeStageGS812'
+or @name='badassOnlyHordeStageGS858'
+or @name='badassOnlyHordeStageGS905'
+or @name='badassOnlyHordeStageGS954'
+or @name='badassOnlyHordeStageGS1003'
+or @name='badassOnlyHordeStageGS1054'
+or @name='badassOnlyHordeStageGS1106'
+or @name='badassOnlyHordeStageGS1159'
+or @name='badassOnlyHordeStageGS1213'
+or @name='badassOnlyHordeStageGS1269'
+or @name='badassOnlyHordeStageGS1326'
+or @name='badassOnlyHordeStageGS1383'
+or @name='badassOnlyHordeStageGS1442'
+or @name='badassOnlyHordeStageGS1503'
+or @name='badassOnlyHordeStageGS1564'
+or @name='badassOnlyHordeStageGS1626'
+or @name='badassOnlyHordeStageGS1690'
+or @name='badassOnlyHordeStageGS1755'
+or @name='badassOnlyHordeStageGS1821'
+or @name='badassOnlyHordeStageGS1888'
+or @name='badassOnlyHordeStageGS1956'
+or @name='badassOnlyHordeStageGS2026']/text()" delim="\n" op="add">
+	EndZgrootLL
+	EndZgrootferalLL 
+	EndZgrootradiatedLL, .75	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL
+	zombiedesertmonsterorcLL, .5 
+	zombieimpLL, .5	
+	zombiesnowguardianLL, .75 
+	FrozenBoe, .75	
+	zombiesmallbitchLL, .35 
+	zombiespikeLL, .35 
+	zombienecroLL, .35 
+	zombiemutantLL, .5
+	zombiesupermutantLL, .35
+	zombieWguardianLL, .35
+	EndZgrootradiatedLL, .35
+	zombiebitchQueen, .15
+	zombieminotaurboss, .05
+</csv>
+<!--END OF BADASS ONLY HORDE STAGE-->
+
+<!--POLICE CAR HORDE STAGES-->
+<csv xpath="/entitygroups/entitygroup[@name='policeCarHordeStageGS1'
+or @name='policeCarHordeStageGS3'
+or @name='policeCarHordeStageGS8'
+or @name='policeCarHordeStageGS13'
+or @name='policeCarHordeStageGS21'
+or @name='policeCarHordeStageGS30']/text()" delim="\n" op="add">
+	EndZgrootLL	
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15
+</csv> 
+
+<csv xpath="/entitygroups/entitygroup[@name='policeCarHordeStageGS40'
+or @name='policeCarHordeStageGS51'
+or @name='policeCarHordeStageGS65'
+or @name='policeCarHordeStageGS79'
+or @name='policeCarHordeStageGS95'
+or @name='policeCarHordeStageGS112'
+or @name='policeCarHordeStageGS130']/text()" delim="\n" op="add">
+	EndZgrootLL
+	EndZgrootferalLL, .5 	
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15
+	zombiedesertmonsterorcLL, .15 
+	zombieimpLL, .15
+	zombiebitchQueen, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='policeCarHordeStageGS150'
+or @name='policeCarHordeStageGS171'
+or @name='policeCarHordeStageGS194'
+or @name='policeCarHordeStageGS217'
+or @name='policeCarHordeStageGS242'
+or @name='policeCarHordeStageGS268'
+or @name='policeCarHordeStageGS296'
+or @name='policeCarHordeStageGS325'
+or @name='policeCarHordeStageGS355'
+or @name='policeCarHordeStageGS386'
+or @name='policeCarHordeStageGS419'
+or @name='policeCarHordeStageGS452'
+or @name='policeCarHordeStageGS488'
+or @name='policeCarHordeStageGS524'
+or @name='policeCarHordeStageGS561'
+or @name='policeCarHordeStageGS600'
+or @name='policeCarHordeStageGS640'
+or @name='policeCarHordeStageGS681'
+or @name='policeCarHordeStageGS724'
+or @name='policeCarHordeStageGS767'
+or @name='policeCarHordeStageGS812'
+or @name='policeCarHordeStageGS858'
+or @name='policeCarHordeStageGS905'
+or @name='policeCarHordeStageGS954'
+or @name='policeCarHordeStageGS1003'
+or @name='policeCarHordeStageGS1054'
+or @name='policeCarHordeStageGS1106'
+or @name='policeCarHordeStageGS1159'
+or @name='policeCarHordeStageGS1213'
+or @name='policeCarHordeStageGS1269'
+or @name='policeCarHordeStageGS1326'
+or @name='policeCarHordeStageGS1383'
+or @name='policeCarHordeStageGS1442'
+or @name='policeCarHordeStageGS1503'
+or @name='policeCarHordeStageGS1564'
+or @name='policeCarHordeStageGS1626'
+or @name='policeCarHordeStageGS1690'
+or @name='policeCarHordeStageGS1755'
+or @name='policeCarHordeStageGS1821'
+or @name='policeCarHordeStageGS1888'
+or @name='policeCarHordeStageGS1956'
+or @name='policeCarHordeStageGS2026']/text()" delim="\n" op="add">
+	EndZgrootLL
+	EndZgrootferalLL, .5 
+	EndZgrootradiatedLL, .25	
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15
+	zombiedesertmonsterorcLL, .15 
+	zombieimpLL, .15
+	zombiesnowguardianLL, .1 
+	FrozenBoe, .1	
+	zombiesmallbitchLL, .1 
+	zombiespikeLL, .05 
+	zombienecroLL, .05 
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05
+	zombieWguardianLL, .05
+	EndZgrootradiatedLL, .05
+	zombiebitchQueen, .15
+	zombieminotaurboss, .02
+</csv>
+<!--END OF POLICE CAR HORDE STAGES-->
+
+<!--FERAL, RADIATED, AND BADASS GROUPS-->
+<csv xpath="/entitygroups/entitygroup[@name='ZombiesFeral']/text()" delim="\n" op="add" >
+	EndZgrootLL, .10
+	EndZgrootferalLL, .10 	
+	zombiegrimlinLL, .10
+	zombiegrimlintwinLL, .10
+	zombieporcLL, .10 
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieFeralRadiatedGroup']/text()" delim="\n" op="add" >
+	EndZgrootLL, .10
+	EndZgrootferalLL, .10 	
+	zombiegrimlinLL, .10
+	zombiegrimlintwinLL, .10
+	zombieporcLL, .10
+	zombiedesertmonsterorcLL, .10 
+	zombieimpLL, .10
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieBadassGroup']/text()" delim="\n" op="add" >
+	EndZgrootLL, .10
+	EndZgrootferalLL, .10 
+	EndZgrootradiatedLL, .10	
+	zombiegrimlinLL, .10
+	zombiegrimlintwinLL, .10
+	zombieporcLL, .10	
+	zombiedesertmonsterorcLL, .10 
+	zombieimpLL, .10	
+	zombiesnowguardianLL, .10 
+	FrozenBoe, .10	
+	zombiesmallbitchLL, .10 
+	zombiespikeLL, .10 
+	zombienecroLL, .10 
+	zombiemutantLL, .10
+	zombiesupermutantLL, .10 
+	zombieWguardianLL, .10
+	EndZgrootradiatedLL, .10
+	zombiebitchQueen, .10
+</csv>
+<!--END OF FERAL, RADIATED, AND BADASS GROUPS-->
+
+<!--SOLDIER GROUP-->
+<csv xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS1']/text()" delim="\n" op="add" >
+	EndZgrootLL	
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS50']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .1 	
+	zombiegrimlinLL, .1 
+	zombiegrimlintwinLL, .1 
+	zombieporcLL, .1 
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .1 
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS100']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .2	
+	zombiegrimlinLL, .2
+	zombiegrimlintwinLL, .2
+	zombieporcLL, .2
+	zombiedesertmonsterorcLL, .1 
+	zombieimpLL, .1
+	zombiesnowguardianLL, .05
+	FrozenBoe, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS200']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .2 
+	EndZgrootradiatedLL, .15
+	zombiegrimlinLL, .2
+	zombiegrimlintwinLL, .2
+	zombieporcLL, .2	
+	zombiedesertmonsterorcLL, .1 
+	zombieimpLL, .1	
+	zombiesnowguardianLL, .1
+	FrozenBoe, .1	
+	zombiesmallbitchLL, .05
+	zombiespikeLL, .1 
+	zombienecroLL, .1 
+	zombiemutantLL, .1
+	zombiesupermutantLL, .1 
+	zombieWguardianLL, .1
+	zombiebitchQueen, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS400']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .3
+	EndZgrootradiatedLL, .35
+	zombiegrimlinLL, .3
+	zombiegrimlintwinLL, .3
+	zombieporcLL, .3	
+	zombiedesertmonsterorcLL, .15 
+	zombieimpLL, .15
+	zombiesnowguardianLL, .1
+	FrozenBoe, .1	
+	zombiesmallbitchLL, .05
+	zombiespikeLL, .1
+	zombienecroLL, .1
+	zombiemutantLL, .1
+	zombiesupermutantLL, .1
+	zombieWguardianLL, .1
+	zombiebitchQueen, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS800']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .5
+	EndZgrootradiatedLL, .45
+	zombiegrimlinLL, .4
+	zombiegrimlintwinLL, .4
+	zombieporcLL, .4	
+	zombiedesertmonsterorcLL, .15 
+	zombieimpLL, .15
+	zombiesnowguardianLL, .1
+	FrozenBoe, .1	
+	zombiesmallbitchLL, .05
+	zombiespikeLL, .1
+	zombienecroLL, .1
+	zombiemutantLL, .1
+	zombiesupermutantLL, .1
+	zombieWguardianLL, .1
+	zombiebitchQueen, .1
+</csv>
+<!--END OF SOLDIER GROUP-->
+
+<!--JANITOR GROUP-->
+<csv xpath="/entitygroups/entitygroup[@name='zombieJanitorGroupGS1']/text()" delim="\n" op="add" >
+	EndZgrootLL, .5	
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieJanitorGroupGS50']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .1 	
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieJanitorGroupGS100']/text()" delim="\n" op="add" >
+	EndZgrootLL, .7
+	EndZgrootferalLL, .2	
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15
+	zombiedesertmonsterorcLL, .05
+	zombieimpLL, .05
+	zombiesnowguardianLL, .05
+	FrozenBoe, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieJanitorGroupGS200']/text()" delim="\n" op="add" >
+	EndZgrootLL, .55
+	EndZgrootferalLL, .3 
+	EndZgrootradiatedLL, .1	
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15	
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .05	
+	zombiesnowguardianLL, .05 
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .05 
+	zombiespikeLL, .05 
+	zombienecroLL, .05 
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05 
+	zombieWguardianLL, .05
+	zombiebitchQueen, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieJanitorGroupGS400']/text()" delim="\n" op="add" >
+	EndZgrootLL, .4
+	EndZgrootferalLL, .4 
+	EndZgrootradiatedLL, .2	
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15	
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .05	
+	zombiesnowguardianLL, .05 
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .05 
+	zombiespikeLL, .05 
+	zombienecroLL, .05 
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05 
+	zombieWguardianLL, .05
+	zombiebitchQueen, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieJanitorGroupGS800']/text()" delim="\n" op="add" >
+	EndZgrootLL, .25
+	EndZgrootferalLL, .5 
+	EndZgrootradiatedLL, .4	
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15	
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .05	
+	zombiesnowguardianLL, .05 
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .05 
+	zombiespikeLL, .05 
+	zombienecroLL, .05 
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05 
+	zombieWguardianLL, .05
+	zombiebitchQueen, .05
+</csv>
+<!--END OF JANITOR GROUP-->
+
+<!--ZOMBIE GHOST TOWN GROUP-->
+<csv xpath="/entitygroups/entitygroup[@name='ZombieGhostTownGroupGS1']/text()" delim="\n" op="add" >
+	EndZgrootLL	
+	zombiegrimlinLL, .25
+	zombiegrimlintwinLL, .25
+	zombieporcLL, .25
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieGhostTownGroupGS50']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL 	
+	zombiegrimlinLL, .25
+	zombiegrimlintwinLL, .25
+	zombieporcLL, .25
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieGhostTownGroupGS100']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .3 	
+	zombiegrimlinLL, .3
+	zombiegrimlintwinLL, .3
+	zombieporcLL, .3
+	zombiedesertmonsterorcLL, .1 
+	zombieimpLL, .2
+	zombiesnowguardianLL, .05
+	FrozenBoe, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieGhostTownGroupGS200']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .4
+	EndZgrootradiatedLL, .3	
+	zombiegrimlinLL, .3
+	zombiegrimlintwinLL, .3
+	zombieporcLL, .3	
+	zombiedesertmonsterorcLL, .1
+	zombieimpLL, .2
+	zombiesnowguardianLL, .05 
+	FrozenBoe, .1
+	zombiesmallbitchLL, .05 
+	zombiespikeLL, .05
+	zombienecroLL, .05
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05 
+	zombieWguardianLL, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieGhostTownGroupGS400']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .4 
+	EndZgrootradiatedLL, .3	
+	zombiegrimlinLL, .4
+	zombiegrimlintwinLL, .4
+	zombieporcLL, .4	
+	zombiedesertmonsterorcLL, .1
+	zombieimpLL, .2
+	zombiesnowguardianLL, .05 
+	FrozenBoe, .1
+	zombiesmallbitchLL, .05 
+	zombiespikeLL, .05
+	zombienecroLL, .05
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05 
+	zombieWguardianLL, .05
+	zombiebitchQueen, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieGhostTownGroupGS800']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .5 
+	EndZgrootradiatedLL, .45	
+	zombiegrimlinLL, .45
+	zombiegrimlintwinLL, .45
+	zombieporcLL, .45	
+	zombiedesertmonsterorcLL, .15
+	zombieimpLL, .25
+	zombiesnowguardianLL, .1 
+	FrozenBoe, .1
+	zombiesmallbitchLL, .1 
+	zombiespikeLL, .1
+	zombienecroLL, .1
+	zombiemutantLL, .1
+	zombiesupermutantLL, .1 
+	zombieWguardianLL, .1
+	zombiebitchQueen, .05
+</csv>
+<!--END OF ZOMBIE GHOST TOWN GROUP-->
+
+<!--HOSPITAL GROUP-->
+<csv xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS1']/text()" delim="\n" op="add" >
+	EndZgrootLL
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS50']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .35 	
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS100']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .45 	
+	zombiegrimlinLL, .25
+	zombiegrimlintwinLL, .25
+	zombieporcLL, .25
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .1
+	zombiesnowguardianLL, .025
+	FrozenBoe, .05
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS200']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .55
+	EndZgrootradiatedLL, .15	 	
+	zombiegrimlinLL, .35
+	zombiegrimlintwinLL, .35
+	zombieporcLL, .35
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .1
+	zombiesnowguardianLL, .025
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .05
+	zombiespikeLL, .05
+	zombienecroLL, .05 
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05 
+	zombieWguardianLL, .05
+	zombiebitchQueen, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS400']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .65
+	EndZgrootradiatedLL, .35 	
+	zombiegrimlinLL, .45
+	zombiegrimlintwinLL, .45
+	zombieporcLL, .45
+	zombiedesertmonsterorcLL, .1 
+	zombieimpLL, .15
+	zombiesnowguardianLL, .05
+	FrozenBoe, .1	
+	zombiesmallbitchLL, .1
+	zombiespikeLL, .1
+	zombienecroLL, .1 
+	zombiemutantLL, .1
+	zombiesupermutantLL, .05 
+	zombieWguardianLL, .05
+	zombiebitchQueen, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS800']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .75
+	EndZgrootradiatedLL, .55 	
+	zombiegrimlinLL, .55
+	zombiegrimlintwinLL, .55
+	zombieporcLL, .55
+	zombiedesertmonsterorcLL, .1 
+	zombieimpLL, .15
+	zombiesnowguardianLL, .05
+	FrozenBoe, .1	
+	zombiesmallbitchLL, .1
+	zombiespikeLL, .1
+	zombienecroLL, .1 
+	zombiemutantLL, .1
+	zombiesupermutantLL, .05 
+	zombieWguardianLL, .05
+	zombiebitchQueen, .15
+</csv>
+<!--END OF HOSPITAL GROUP-->
+
+<!--LAB WORKER GROUP-->
+<csv xpath="/entitygroups/entitygroup[@name='zombieLabWorkerGroupGS1']/text()" delim="\n" op="add" >
+	EndZgrootLL
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieLabWorkerGroupGS50']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .1 	
+	zombiegrimlinLL, .05
+	zombiegrimlintwinLL, .05
+	zombieporcLL, .05
+	zombiedesertmonsterorcLL, .015 
+	zombieimpLL, .015
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieLabWorkerGroupGS100']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .2 	
+	zombiegrimlinLL, .05
+	zombiegrimlintwinLL, .05
+	zombieporcLL, .05
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieLabWorkerGroupGS200']/text()" delim="\n" op="add" >
+	EndZgrootLL, .8
+	EndZgrootferalLL, .3 
+	EndZgrootradiatedLL, .15	
+	zombiegrimlinLL, .07
+	zombiegrimlintwinLL, .07
+	zombieporcLL, .07
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .025	
+	zombiesmallbitchLL, .025 
+	zombiespikeLL, .025
+	zombienecroLL, .025 
+	zombiemutantLL, .025
+	zombiesupermutantLL, .025 
+	zombieWguardianLL, .025
+	zombiebitchQueen, .015
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieLabWorkerGroupGS400']/text()" delim="\n" op="add" >
+	EndZgrootLL, .5
+	EndZgrootferalLL, .4 
+	EndZgrootradiatedLL, .3	
+	zombiegrimlinLL, .3
+	zombiegrimlintwinLL, .3
+	zombieporcLL, .3
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .05
+	zombiesnowguardianLL, .05 
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .05 
+	zombiespikeLL, .05
+	zombienecroLL, .05 
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05 
+	zombieWguardianLL, .05
+	zombiebitchQueen, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieLabWorkerGroupGS800']/text()" delim="\n" op="add" >
+	EndZgrootLL, .25
+	EndZgrootferalLL, .5 
+	EndZgrootradiatedLL, .45	
+	zombiegrimlinLL, .3
+	zombiegrimlintwinLL, .3
+	zombieporcLL, .3
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .05
+	zombiesnowguardianLL, .05 
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .05 
+	zombiespikeLL, .05
+	zombienecroLL, .05 
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05 
+	zombieWguardianLL, .05
+	zombiebitchQueen, .025
+</csv>
+<!--END OF LAB WORKER GROUP-->
+
+<!--SPIDER GROUP-->
+<!--<csv xpath="/entitygroups/entitygroup[@name='zombieSpiderGroupGS1']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL 	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL
+	zombiedesertmonsterorcLL 
+	zombieimpLL
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieSpiderGroupGS50']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL 	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL
+	zombiedesertmonsterorcLL 
+	zombieimpLL
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieSpiderGroupGS100']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL 	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL
+	zombiedesertmonsterorcLL 
+	zombieimpLL
+	zombiesnowguardianLL 
+	FrozenBoe
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieSpiderGroupGS200']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL 
+	EndZgrootradiatedLL	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL	
+	zombiedesertmonsterorcLL 
+	zombieimpLL	
+	zombiesnowguardianLL 
+	FrozenBoe	
+	zombiesmallbitchLL 
+	zombiespikeLL 
+	zombienecroLL 
+	zombiemutantLL
+	zombiesupermutantLL 
+	zombieWguardianLL
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieSpiderGroupGS400']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL 
+	EndZgrootradiatedLL	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL	
+	zombiedesertmonsterorcLL 
+	zombieimpLL	
+	zombiesnowguardianLL 
+	FrozenBoe	
+	zombiesmallbitchLL 
+	zombiespikeLL 
+	zombienecroLL 
+	zombiemutantLL
+	zombiesupermutantLL 
+	zombieWguardianLL
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='zombieSpiderGroupGS800']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL 
+	EndZgrootradiatedLL	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL	
+	zombiedesertmonsterorcLL 
+	zombieimpLL	
+	zombiesnowguardianLL 
+	FrozenBoe	
+	zombiesmallbitchLL 
+	zombiespikeLL 
+	zombienecroLL 
+	zombiemutantLL
+	zombiesupermutantLL 
+	zombieWguardianLL
+</csv>-->
+<!--END OF SPIDER GROUP-->
+
+<!--BIKER GROUP-->
+<csv xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroupGS1']/text()" delim="\n" op="add" >
+	EndZgrootLL
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroupGS50']/text()" delim="\n" op="add" >
+	EndZgrootLL, .85
+	EndZgrootferalLL, .1 	
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroupGS100']/text()" delim="\n" op="add" >
+	EndZgrootLL, .7
+	EndZgrootferalLL, .2 	
+	zombiegrimlinLL, .2
+	zombiegrimlintwinLL, .2
+	zombieporcLL, .2
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroupGS200']/text()" delim="\n" op="add" >
+	EndZgrootLL, .55
+	EndZgrootferalLL, .3 
+	EndZgrootradiatedLL, .15
+	zombiegrimlinLL, .3
+	zombiegrimlintwinLL, .3
+	zombieporcLL, .3	
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .05
+	zombiesnowguardianLL, .05 
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .05 
+	zombiespikeLL, .05 
+	zombienecroLL, .05 
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05
+	zombieWguardianLL, .05
+	zombiebitchQueen, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroupGS400']/text()" delim="\n" op="add" >
+	EndZgrootLL, .4
+	EndZgrootferalLL, .4 
+	EndZgrootradiatedLL, .3
+	zombiegrimlinLL, .4
+	zombiegrimlintwinLL, .4
+	zombieporcLL, .4	
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .05
+	zombiesnowguardianLL, .05 
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .05 
+	zombiespikeLL, .05 
+	zombienecroLL, .05 
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05
+	zombieWguardianLL, .05
+	zombiebitchQueen, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieBikerBarGroupGS800']/text()" delim="\n" op="add" >
+	EndZgrootLL, .25
+	EndZgrootferalLL, .5 
+	EndZgrootradiatedLL, .45
+	zombiegrimlinLL, .5
+	zombiegrimlintwinLL, .5
+	zombieporcLL, .5	
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .05
+	zombiesnowguardianLL, .05 
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .05 
+	zombiespikeLL, .05 
+	zombienecroLL, .05 
+	zombiemutantLL, .05
+	zombiesupermutantLL, .05
+	zombieWguardianLL, .05
+	zombiebitchQueen, .025
+</csv>
+<!--END OF BIKER GROUP-->
+
+<!--NIGHT CLUB GROUP-->
+<csv xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS1']/text()" delim="\n" op="add" >
+	EndZgrootLL, .45
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS50']/text()" delim="\n" op="add" >
+	EndZgrootLL, .45
+	EndZgrootferalLL, .1 	
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS100']/text()" delim="\n" op="add" >
+	EndZgrootLL, .5
+	EndZgrootferalLL, .2 	
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS200']/text()" delim="\n" op="add" >
+	EndZgrootLL, .5
+	EndZgrootferalLL, .2
+	EndZgrootradiatedLL, .1
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .025	
+	zombiesmallbitchLL, .025
+	zombiespikeLL, .025 
+	zombienecroLL, .025
+	zombiemutantLL, .025
+	zombiesupermutantLL, .025 
+	zombieWguardianLL, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS400']/text()" delim="\n" op="add" >
+	EndZgrootLL, .4
+	EndZgrootferalLL, .2
+	EndZgrootradiatedLL, .1
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .025	
+	zombiesmallbitchLL, .025
+	zombiespikeLL, .025 
+	zombienecroLL, .025
+	zombiemutantLL, .025
+	zombiesupermutantLL, .025 
+	zombieWguardianLL, .025
+	zombiebitchQueen, .015
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieNightClubGroupGS800']/text()" delim="\n" op="add" >
+	EndZgrootLL, .2
+	EndZgrootferalLL, .2
+	EndZgrootradiatedLL, .1
+	zombiegrimlinLL, .15
+	zombiegrimlintwinLL, .15
+	zombieporcLL, .15
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .025	
+	zombiesmallbitchLL, .025
+	zombiespikeLL, .025 
+	zombienecroLL, .025
+	zombiemutantLL, .025
+	zombiesupermutantLL, .025 
+	zombieWguardianLL, .025
+	zombiebitchQueen, .015
+</csv>
+<!--END OF NIGHT CLUB GROUP-->
+
+<!--SPECIAL INFECTED GROUP-->
+<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS1']/text()" delim="\n" op="add" >
+	EndZgrootLL
+	EndZgrootferalLL, .1
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS50']/text()" delim="\n" op="add" >
+	EndZgrootLL, .85
+	EndZgrootferalLL, .1
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS100']/text()" delim="\n" op="add" >
+	EndZgrootLL, .7
+	EndZgrootferalLL, .2
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS200']/text()" delim="\n" op="add" >
+	EndZgrootLL, .45
+	EndZgrootferalLL, .35
+	EndZgrootradiatedLL, .2
+	zombiegrimlinLL, .2
+	zombiegrimlintwinLL, .2
+	zombieporcLL, .2
+	zombiedesertmonsterorcLL, .025 
+	zombieimpLL, .025
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .025	
+	zombiesmallbitchLL, .025
+	zombiespikeLL, .025 
+	zombienecroLL, .025
+	zombiemutantLL, .025
+	zombiesupermutantLL, .025 
+	zombieWguardianLL, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS400']/text()" delim="\n" op="add" >
+	EndZgrootLL, .2
+	EndZgrootferalLL, .4
+	EndZgrootradiatedLL, .4
+	zombiegrimlinLL, .4
+	zombiegrimlintwinLL, .4
+	zombieporcLL, .4
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .05
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .025
+	zombiespikeLL, .025 
+	zombienecroLL, .025
+	zombiemutantLL, .025
+	zombiesupermutantLL, .025 
+	zombieWguardianLL, .025
+	zombiebitchQueen, .015
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='ZombieSpecialInfectedGroupGS800']/text()" delim="\n" op="add" >
+	EndZgrootLL, .1
+	EndZgrootferalLL, .5
+	EndZgrootradiatedLL, .4
+	zombiegrimlinLL, .4
+	zombiegrimlintwinLL, .4
+	zombieporcLL, .4
+	zombiedesertmonsterorcLL, .05 
+	zombieimpLL, .05
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .025
+	zombiespikeLL, .025 
+	zombienecroLL, .025
+	zombiemutantLL, .025
+	zombiesupermutantLL, .025 
+	zombieWguardianLL, .025
+	zombiebitchQueen, .015
+</csv>
+<!--END OF SPECIAL INFECTED GROUP-->
+
+<!--ZOMBIES HOARD GROUP-->
+<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'ZombiesHoard')]/text()" delim="\n" op="add">
+	EndZgrootLL
+	EndZgrootferalLL 
+	EndZgrootradiatedLL	
+	zombiegrimlinLL
+	zombiegrimlintwinLL
+	zombieporcLL	
+	zombiedesertmonsterorcLL 
+	zombieimpLL	
+	zombiesnowguardianLL 
+	FrozenBoe	
+	zombiesmallbitchLL 
+	zombiespikeLL 
+	zombienecroLL 
+	zombiemutantLL
+	zombiesupermutantLL 
+	zombieWguardianLL
+	zombiebitchQueen
+</csv>
+<!--END OF ZOMBIES HOARD GROUP-->
+
+<!--DEFENSE HORDE STAGES-->
+<csv xpath="/entitygroups/entitygroup[@name='defenseHordeStageGS1'
+or @name='defenseHordeStageGS2'
+or @name='defenseHordeStageGS5'
+or @name='defenseHordeStageGS8'
+or @name='defenseHordeStageGS11'
+or @name='defenseHordeStageGS14'
+or @name='defenseHordeStageGS18'
+or @name='defenseHordeStageGS22'
+or @name='defenseHordeStageGS27'
+or @name='defenseHordeStageGS31'
+or @name='defenseHordeStageGS36'
+or @name='defenseHordeStageGS41'
+or @name='defenseHordeStageGS46'
+or @name='defenseHordeStageGS52'
+or @name='defenseHordeStageGS58'
+or @name='defenseHordeStageGS64'
+or @name='defenseHordeStageGS70'
+or @name='defenseHordeStageGS76'
+or @name='defenseHordeStageGS82'
+or @name='defenseHordeStageGS89'
+or @name='defenseHordeStageGS96'
+or @name='defenseHordeStageGS103'
+or @name='defenseHordeStageGS110'
+or @name='defenseHordeStageGS117'
+or @name='defenseHordeStageGS125'
+or @name='defenseHordeStageGS132'
+or @name='defenseHordeStageGS140'
+or @name='defenseHordeStageGS148'
+or @name='defenseHordeStageGS156']/text()" delim="\n" op="add">
+	EndZgrootLL, .1 	
+	zombiegrimlinLL, .1
+	zombiegrimlintwinLL, .1
+	zombieporcLL, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='defenseHordeStageGS164'
+or @name='defenseHordeStageGS172'
+or @name='defenseHordeStageGS181'
+or @name='defenseHordeStageGS189'
+or @name='defenseHordeStageGS198'
+or @name='defenseHordeStageGS207'
+or @name='defenseHordeStageGS216'
+or @name='defenseHordeStageGS225'
+or @name='defenseHordeStageGS234'
+or @name='defenseHordeStageGS243'
+or @name='defenseHordeStageGS252'
+or @name='defenseHordeStageGS262'
+or @name='defenseHordeStageGS272'
+or @name='defenseHordeStageGS281'
+or @name='defenseHordeStageGS291'
+or @name='defenseHordeStageGS301'
+or @name='defenseHordeStageGS311'
+or @name='defenseHordeStageGS322'
+or @name='defenseHordeStageGS332'
+or @name='defenseHordeStageGS343'
+or @name='defenseHordeStageGS353']/text()" delim="\n" op="add">
+	EndZgrootLL, .20 	
+	zombiegrimlinLL, .20
+	zombiegrimlintwinLL, .20
+	zombieporcLL, .20
+	EndZgrootferalLL, .05
+	zombiedesertmonsterorcLL, .05
+	zombieimpLL, .10
+	zombiebitchQueen, .025
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[@name='defenseHordeStageGS364'
+or @name='defenseHordeStageGS374'
+or @name='defenseHordeStageGS385'
+or @name='defenseHordeStageGS396'
+or @name='defenseHordeStageGS407'
+or @name='defenseHordeStageGS419'
+or @name='defenseHordeStageGS430'
+or @name='defenseHordeStageGS441'
+or @name='defenseHordeStageGS453'
+or @name='defenseHordeStageGS464'
+or @name='defenseHordeStageGS476'
+or @name='defenseHordeStageGS488'
+or @name='defenseHordeStageGS500'
+or @name='defenseHordeStageGS512'
+or @name='defenseHordeStageGS524'
+or @name='defenseHordeStageGS536'
+or @name='defenseHordeStageGS548'
+or @name='defenseHordeStageGS560'
+or @name='defenseHordeStageGS573'
+or @name='defenseHordeStageGS585'
+or @name='defenseHordeStageGS598'
+or @name='defenseHordeStageGS610'
+or @name='defenseHordeStageGS623'
+or @name='defenseHordeStageGS636'
+or @name='defenseHordeStageGS649'
+or @name='defenseHordeStageGS662'
+or @name='defenseHordeStageGS675'
+or @name='defenseHordeStageGS688'
+or @name='defenseHordeStageGS702'
+or @name='defenseHordeStageGS715'
+or @name='defenseHordeStageGS729'
+or @name='defenseHordeStageGS742'
+or @name='defenseHordeStageGS756'
+or @name='defenseHordeStageGS769'
+or @name='defenseHordeStageGS783'
+or @name='defenseHordeStageGS797'
+or @name='defenseHordeStageGS811'
+or @name='defenseHordeStageGS825'
+or @name='defenseHordeStageGS839'
+or @name='defenseHordeStageGS853'
+or @name='defenseHordeStageGS868'
+or @name='defenseHordeStageGS882'
+or @name='defenseHordeStageGS896'
+or @name='defenseHordeStageGS911'
+or @name='defenseHordeStageGS925'
+or @name='defenseHordeStageGS940'
+or @name='defenseHordeStageGS955'
+or @name='defenseHordeStageGS970'
+or @name='defenseHordeStageGS985'
+or @name='defenseHordeStageGS1000'
+or @name='defenseHordeStageGS1015'
+or @name='defenseHordeStageGS1030'
+or @name='defenseHordeStageGS1045'
+or @name='defenseHordeStageGS1060'
+or @name='defenseHordeStageGS1075'
+or @name='defenseHordeStageGS1091'
+or @name='defenseHordeStageGS1106'
+or @name='defenseHordeStageGS1122'
+or @name='defenseHordeStageGS1137'
+or @name='defenseHordeStageGS1153'
+or @name='defenseHordeStageGS1169'
+or @name='defenseHordeStageGS1185'
+or @name='defenseHordeStageGS1201'
+or @name='defenseHordeStageGS1217'
+or @name='defenseHordeStageGS1233'
+or @name='defenseHordeStageGS1249'
+or @name='defenseHordeStageGS1265'
+or @name='defenseHordeStageGS1281'
+or @name='defenseHordeStageGS1298'
+or @name='defenseHordeStageGS1314'
+or @name='defenseHordeStageGS1331'
+or @name='defenseHordeStageGS1347'
+or @name='defenseHordeStageGS1364'
+or @name='defenseHordeStageGS1380'
+or @name='defenseHordeStageGS1397'
+or @name='defenseHordeStageGS1414'
+or @name='defenseHordeStageGS1431'
+or @name='defenseHordeStageGS1448'
+or @name='defenseHordeStageGS1465'
+or @name='defenseHordeStageGS1482'
+or @name='defenseHordeStageGS1499'
+or @name='defenseHordeStageGS1516'
+or @name='defenseHordeStageGS1533'
+or @name='defenseHordeStageGS1551'
+or @name='defenseHordeStageGS1568'
+or @name='defenseHordeStageGS1586'
+or @name='defenseHordeStageGS1603'
+or @name='defenseHordeStageGS1621'
+or @name='defenseHordeStageGS1638'
+or @name='defenseHordeStageGS1656'
+or @name='defenseHordeStageGS1674'
+or @name='defenseHordeStageGS1692'
+or @name='defenseHordeStageGS1710'
+or @name='defenseHordeStageGS1728'
+or @name='defenseHordeStageGS1746'
+or @name='defenseHordeStageGS1764'
+or @name='defenseHordeStageGS1782'
+or @name='defenseHordeStageGS1800'
+or @name='defenseHordeStageGS1818'
+or @name='defenseHordeStageGS1837'
+or @name='defenseHordeStageGS1855'
+or @name='defenseHordeStageGS1873'
+or @name='defenseHordeStageGS1892'
+or @name='defenseHordeStageGS1911'
+or @name='defenseHordeStageGS1929'
+or @name='defenseHordeStageGS1948'
+or @name='defenseHordeStageGS1967'
+or @name='defenseHordeStageGS1986'
+or @name='defenseHordeStageGS2004'
+or @name='defenseHordeStageGS2023'
+or @name='defenseHordeStageGS2042'
+or @name='defenseHordeStageGS2061'
+or @name='defenseHordeStageGS2081'
+or @name='defenseHordeStageGS2100'
+or @name='defenseHordeStageGS2119'
+or @name='defenseHordeStageGS2138'
+or @name='defenseHordeStageGS2158'
+or @name='defenseHordeStageGS2177'
+or @name='defenseHordeStageGS2197'
+or @name='defenseHordeStageGS2216'
+or @name='defenseHordeStageGS2236'
+or @name='defenseHordeStageGS2255'
+or @name='defenseHordeStageGS2275'
+or @name='defenseHordeStageGS2295'
+or @name='defenseHordeStageGS2315'
+or @name='defenseHordeStageGS2334'
+or @name='defenseHordeStageGS2354'
+or @name='defenseHordeStageGS2374'
+or @name='defenseHordeStageGS2394'
+or @name='defenseHordeStageGS2414'
+or @name='defenseHordeStageGS2435'
+or @name='defenseHordeStageGS2455'
+or @name='defenseHordeStageGS2475'
+or @name='defenseHordeStageGS2495'
+or @name='defenseHordeStageGS2516'
+or @name='defenseHordeStageGS2536'
+or @name='defenseHordeStageGS2557'
+or @name='defenseHordeStageGS2577'
+or @name='defenseHordeStageGS2598'
+or @name='defenseHordeStageGS2618'
+or @name='defenseHordeStageGS2639'
+or @name='defenseHordeStageGS2660'
+or @name='defenseHordeStageGS2681'
+or @name='defenseHordeStageGS2702'
+or @name='defenseHordeStageGS2723'
+or @name='defenseHordeStageGS2744'
+or @name='defenseHordeStageGS2765'
+or @name='defenseHordeStageGS2786'
+or @name='defenseHordeStageGS2807'
+or @name='defenseHordeStageGS2828'
+or @name='defenseHordeStageGS2849'
+or @name='defenseHordeStageGS2870'
+or @name='defenseHordeStageGS2892'
+or @name='defenseHordeStageGS2913'
+or @name='defenseHordeStageGS2935'
+or @name='defenseHordeStageGS2956'
+or @name='defenseHordeStageGS2978'
+or @name='defenseHordeStageGS2999'
+or @name='defenseHordeStageGS3021'
+or @name='defenseHordeStageGS3043'
+or @name='defenseHordeStageGS3064'
+or @name='defenseHordeStageGS3086'
+or @name='defenseHordeStageGS3108'
+or @name='defenseHordeStageGS3130'
+or @name='defenseHordeStageGS3152'
+or @name='defenseHordeStageGS3174'
+or @name='defenseHordeStageGS3196'
+or @name='defenseHordeStageGS3218'
+or @name='defenseHordeStageGS3240'
+or @name='defenseHordeStageGS3263'
+or @name='defenseHordeStageGS3285'
+or @name='defenseHordeStageGS3307'
+or @name='defenseHordeStageGS3330'
+or @name='defenseHordeStageGS3352'
+or @name='defenseHordeStageGS3375'
+or @name='defenseHordeStageGS3397'
+or @name='defenseHordeStageGS3420'
+or @name='defenseHordeStageGS3442'
+or @name='defenseHordeStageGS3465'
+or @name='defenseHordeStageGS3488'
+or @name='defenseHordeStageGS3510'
+or @name='defenseHordeStageGS3533'
+or @name='defenseHordeStageGS3556'
+or @name='defenseHordeStageGS3579'
+or @name='defenseHordeStageGS3602'
+or @name='defenseHordeStageGS3625'
+or @name='defenseHordeStageGS3648'
+or @name='defenseHordeStageGS3671'
+or @name='defenseHordeStageGS3694'
+or @name='defenseHordeStageGS3718'
+or @name='defenseHordeStageGS3741'
+or @name='defenseHordeStageGS3764'
+or @name='defenseHordeStageGS3787'
+or @name='defenseHordeStageGS3811'
+or @name='defenseHordeStageGS3834'
+or @name='defenseHordeStageGS3858'
+or @name='defenseHordeStageGS3881'
+or @name='defenseHordeStageGS3905'
+or @name='defenseHordeStageGS3929'
+or @name='defenseHordeStageGS3952'
+or @name='defenseHordeStageGS3976'
+or @name='defenseHordeStageGS4000'
+or @name='defenseHordeStageGS4024'
+or @name='defenseHordeStageGS4048'
+or @name='defenseHordeStageGS4072'
+or @name='defenseHordeStageGS4096'
+or @name='defenseHordeStageGS4120'
+or @name='defenseHordeStageGS4144'
+or @name='defenseHordeStageGS4168'
+or @name='defenseHordeStageGS4192'
+or @name='defenseHordeStageGS4216'
+or @name='defenseHordeStageGS4240'
+or @name='defenseHordeStageGS4265'
+or @name='defenseHordeStageGS4289'
+or @name='defenseHordeStageGS4313'
+or @name='defenseHordeStageGS4338'
+or @name='defenseHordeStageGS4362'
+or @name='defenseHordeStageGS4387'
+or @name='defenseHordeStageGS4411'
+or @name='defenseHordeStageGS4485'
+or @name='defenseHordeStageGS4510'
+or @name='defenseHordeStageGS4535'
+or @name='defenseHordeStageGS4560'
+or @name='defenseHordeStageGS4585'
+or @name='defenseHordeStageGS4610'
+or @name='defenseHordeStageGS4635'
+or @name='defenseHordeStageGS4660'
+or @name='defenseHordeStageGS4685'
+or @name='defenseHordeStageGS4710'
+or @name='defenseHordeStageGS4735'
+or @name='defenseHordeStageGS4760'
+or @name='defenseHordeStageGS4786'
+or @name='defenseHordeStageGS4811'
+or @name='defenseHordeStageGS4836'
+or @name='defenseHordeStageGS4862'
+or @name='defenseHordeStageGS4887'
+or @name='defenseHordeStageGS4913'
+or @name='defenseHordeStageGS4938'
+or @name='defenseHordeStageGS4964'
+or @name='defenseHordeStageGS4989'
+or @name='defenseHordeStageGS5015'
+or @name='defenseHordeStageGS5041'
+or @name='defenseHordeStageGS5066'
+or @name='defenseHordeStageGS5092'
+or @name='defenseHordeStageGS5118'
+or @name='defenseHordeStageGS5144'
+or @name='defenseHordeStageGS5170'
+or @name='defenseHordeStageGS5196'
+or @name='defenseHordeStageGS5222'
+or @name='defenseHordeStageGS5248'
+or @name='defenseHordeStageGS5274'
+or @name='defenseHordeStageGS5300'
+or @name='defenseHordeStageGS5326'
+or @name='defenseHordeStageGS5352'
+or @name='defenseHordeStageGS5379'
+or @name='defenseHordeStageGS5405'
+or @name='defenseHordeStageGS5431'
+or @name='defenseHordeStageGS5458'
+or @name='defenseHordeStageGS5484'
+or @name='defenseHordeStageGS5511'
+or @name='defenseHordeStageGS5537'
+or @name='defenseHordeStageGS5564'
+or @name='defenseHordeStageGS5590'
+or @name='defenseHordeStageGS5617'
+or @name='defenseHordeStageGS5644'
+or @name='defenseHordeStageGS5670'
+or @name='defenseHordeStageGS5697'
+or @name='defenseHordeStageGS5724'
+or @name='defenseHordeStageGS5751'
+or @name='defenseHordeStageGS5778']/text()" delim="\n" op="add">
+	EndZgrootLL, .20 	
+	zombiegrimlinLL, .20
+	zombiegrimlintwinLL, .20
+	zombieporcLL, .20
+	EndZgrootferalLL, .05
+	zombiedesertmonsterorcLL, .05
+	zombieimpLL, .10	
+	zombiesnowguardianLL, .025 
+	FrozenBoe, .05	
+	zombiesmallbitchLL, .025
+	zombiespikeLL, .025 
+	zombienecroLL, .025
+	zombiemutantLL, .025
+	zombiesupermutantLL, .025 
+	zombieWguardianLL, .025
+	EndZgrootradiatedLL, .025
+	zombiebitchQueen, .015
+	zombieminotaurboss, .005
+</csv>
+<!--DEFENSE HORDE STAGES-->
+</configs>

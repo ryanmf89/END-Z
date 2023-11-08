@@ -1,0 +1,25 @@
+<configs>
+
+<append xpath="//biome[@name='pine_forest']/decorations">
+    <decoration type="block" blockname="BeehiveEmptyLL" prob="0.0002"/>
+</append>
+
+<append xpath="//biome[@name='pine_forest']/decorations">
+    <decoration type="block" blockname="limetreefullLL" prob="0.002"/>
+	<decoration type="block" blockname="limetreefullLL" prob="0.002"/>
+</append>
+	
+<append xpath="//biome[@name='pine_forest']/decorations">
+    <decoration type="block" blockname="lavenderplantLL" prob=".1"/>
+    <decoration type="block" blockname="lavenderplantLL" prob=".1"/>
+</append>
+
+<append xpath="//biome[@name='wasteland']/decorations">
+    <decoration type="block" blockname="vibeboulderLL" prob=".0003"/>
+</append>
+
+<append xpath="//biome[@name='desert' or @name='snow' or @name='pine_forest']/decorations">
+    <decoration type="block" blockname="brassboulderLL" prob=".0003"/>
+</append>
+
+</configs>

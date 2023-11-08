@@ -1,0 +1,503 @@
+<configs>
+<!-- Make Encumberence Debuff percentage lower to accomodate more locked inventory slots -->
+<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect'][@value='0.026']/@value">0.013</set>
+<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity'][@operation='base_set']/@operation">base_add</set>
+
+<!--ZOMBIE TRACKING-->	
+<append xpath="/buffs">
+<buff name="buffZAlert" hidden="true" remove_on_death="false">
+	<stack_type value="ignore"/>
+	<update_rate value=".45"/>
+<effect_group>
+	<passive_effect name="Tracking" operation="base_set" value="1" tags="zombie,mutant,alien,bandit,animal"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="mutant,alien,bandit" buff="buffBanditZEffect"/>
+				
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="normaltrack" buff="buffZombieZEffect1"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="feraltrack" buff="buffZombieZEffect2"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="radiatedtrack" buff="buffZombieZEffect3"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="awakentrack" buff="buffZombieZEffect7"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="deserttrack" buff="buffZombieZEffect8"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="elitetrack" buff="buffZombieZEffect4"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="screamertrack" buff="buffZombieZEffect5"/>	
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" target_tags="minotaurbosstrack" buff="buffZombieZEffect6"/>	
+</effect_group>
+</buff>
+				
+<buff name="buffZombieZEffect1" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="1"/>
+<effect_group>
+<!--normal zombie-->
+	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAnormalzombie" add="true"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAnormalzombie" add="false"/>
+	
+<!-- Remove buff and start tracking timer -->
+	<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="ZAnormalzombie"/>
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20"/>
+<!-- If crouching, update timer, else reduce timer -->
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="add" value="-1"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20">
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+</triggered_effect>
+<!-- Reset counters -->
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0"/>
+</effect_group>
+</buff>
+		
+		
+<buff name="buffZombieZEffect2" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="1"/>
+<effect_group>
+<!--feral zombie-->
+	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAferalzombie" add="true"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAferalzombie" add="false"/>
+</effect_group>
+</buff>
+		
+<buff name="buffZombieZEffect3" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="1"/>
+<effect_group>
+<!--radiated zombie-->
+	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAradiatedzombie" add="true"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAradiatedzombie" add="false"/>
+</effect_group>
+</buff>
+		
+<buff name="buffZombieZEffect4" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="1"/>
+<effect_group>
+<!--wasteland zombies-->
+	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAelitezombie" add="true"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAelitezombie" add="false"/>
+</effect_group>
+</buff>
+		
+<buff name="buffZombieZEffect5" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="1"/>
+	<effect_group>
+<!--screamer zombie-->
+	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAscreamerzombie" add="true"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAscreamerzombie" add="false"/>
+</effect_group>
+</buff>
+
+<buff name="buffZombieZEffect6" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="1"/>
+	<effect_group>
+<!--minotaur boss-->
+	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAminotaurzombie" add="true"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAminotaurzombie" add="false"/>
+</effect_group>
+</buff>
+
+<buff name="buffZombieZEffect7" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="1"/>
+	<effect_group>
+<!--minotaur boss-->
+	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAawakenzombie" add="true"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAawakenzombie" add="false"/>
+</effect_group>
+</buff>
+
+<buff name="buffZombieZEffect8" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="1"/>
+	<effect_group>
+<!--minotaur boss-->
+	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAdesertzombie" add="true"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAdesertzombie" add="false"/>
+</effect_group>
+</buff>
+
+<buff name="buffZombieZEffect9" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="1"/>
+	<effect_group>
+<!--minotaur boss-->
+	<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="ZAsnowzombie" add="true"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="SetNavObject" nav_object="ZAsnowzombie" add="false"/>
+</effect_group>
+</buff>
+</append>
+
+
+
+<!--ZOMBIE SMELL MEAT AND FAT-->
+<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+	<effect_group name="Get Stalked">
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+	<requirement name="PlayerItemCount" item_name="foodRawMeat" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="8"/></triggered_effect>
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffScentofPrey">
+	<requirement name="PlayerItemCount" item_name="resourceAnimalFat" operation="GTE" value="1"/><requirement name="NotHasBuff" buff="buffScentofPrey"/><requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="7"/></triggered_effect>
+</effect_group>
+</append>
+
+<append xpath="/buffs">
+<buff name="buffScentofPrey" hidden="false" name_key="buffScentofPreyName" description_key="buffScentofPreyDesc" icon="ui_game_symbol_smell" icon_color="219,124,29" showonhud="true" >
+	<stack_type value="replace"/>
+	<duration value="30"/>
+<effect_group name="Get Noticed">
+	<requirement name="ProgressionLevel" progression_name="perkFromTheShadows" operation="LTE" value="1"/>
+	<passive_effect name="LightMultiplier" operation="perc_add" value=".67">
+	<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="65"/>
+</passive_effect>
+	<passive_effect name="NoiseMultiplier" operation="perc_add" value="3"/>
+	<passive_effect name="EnemySearchDuration" operation="perc_add" value="3"/>
+</effect_group>
+<effect_group name="Get Seen Low">
+	<requirement name="ProgressionLevel" progression_name="perkFromTheShadows" operation="GTE" value="2"/>
+	<passive_effect name="LightMultiplier" operation="perc_add" value=".33">
+	<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="65"/>
+</passive_effect>
+	<passive_effect name="NoiseMultiplier" operation="perc_add" value="1"/>
+	<passive_effect name="EnemySearchDuration" operation="perc_add" value="1"/>
+</effect_group>
+<effect_group name="Get Spawns">
+	<requirement name="ProgressionLevel" progression_name="perkFromTheShadows" operation="LTE" value="4"/>
+	<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="prey_horde">
+	<requirement name="RandomRoll" seed_type="Random" min_max="0,200" operation="LTE" value="3"/>
+</triggered_effect>				
+</effect_group>
+</buff>
+</append>
+	
+<!--ULTIMATE SCREAMER-->
+<append xpath="/buffs">
+<buff name="buffzombiebitchQueen01" hidden="true">
+	<duration value=".25"/>
+	<effect_group>
+	<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffzombiebitchQueen02"/>
+	<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="10" buff="buffzombiebitchQueen"/>
+</effect_group>
+	<effect_group>
+	<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="10" buff="buffzombiebitchQueendegrade">
+	<requirement name="StatComparePercCurrentToMax" stat="health" operation="LTE" value=".5"/>
+</triggered_effect>
+</effect_group>
+</buff>
+
+<buff name="buffzombiebitchQueen02" hidden="true">
+	<duration value=".25"/>
+	<effect_group>
+	<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffzombiebitchQueen01"/>
+	<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="10" buff="buffzombiebitchQueen"/>
+</effect_group>
+</buff>
+
+<buff name="buffzombiebitchQueen" name_key="Freezing Temps" tooltip_key="Its not a family reunion, Rekt tell your mom to go home!" icon="ui_game_symbol_cold" icon_color="106, 0, 163" icon_blink="true">
+	<stack_type value="replace"/>
+	<duration value="2"/>
+	<update_rate value="1"/>
+	<effect_group>
+	<requirement name="EntityTagCompare" tags="player"/>
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="2" effect_name="Cold"/>
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Cold"/>
+	<passive_effect name="SpreadDegreesVertical" operation="perc_add" value="15">
+</passive_effect>
+	<passive_effect name="SpreadDegreesHorizontal" operation="perc_add" value="15">
+</passive_effect>
+</effect_group>
+</buff>
+
+<buff name="buffzombiebitchQueendegrade" name_key="What is Happening!" tooltip_key="Your gun durability just went down the toilet" icon="ui_game_symbol_block_repair" icon_color="106, 0, 163" icon_blink="true">
+	<stack_type value="replace"/>
+	<duration value="15"/>
+	<effect_group>
+	<passive_effect name="DegradationPerUse" operation="base_set" value="5">
+</passive_effect>
+</effect_group>
+</buff>
+</append>
+
+<append xpath="/buffs">
+<buff name="buffnofire" name_key="buffnofire" hidden="true">
+	<stack_type value="effect"/>
+	<duration value="0"/>
+
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_add" value="5" buff="buffIsOnFire"/><!--,buffBurningFlamingArrow,buffBurningMolotov,buffBurningEnvironmentHack,buffBurningEnvironment,buffBurningElement-->
+	</effect_group>
+</buff>
+</append>
+
+
+<!--PARTICLE EFFECTS-->
+<!--FIRE PARTICLE-->
+<append xpath="/buffs">
+<buff name="buffp_fireeffect"> 
+	<stack_type value="replace"/>
+	<duration value="0"/>
+			
+<effect_group name="fireeffect">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/p_fireeffect1.unity3d?p_fireeffect" parent_transform="Spine1" local_offset="-.094,0,.055" local_rotation="0,0,90"></triggered_effect>
+			  
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2"></triggered_effect>	
+
+	<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="p_fireeffect" />    
+    <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="p_fireeffect" /> 
+</effect_group>
+</buff>
+</append>
+
+<!--SNOW PARTICLE-->
+<append xpath="/buffs">
+<buff name="buffp_snoweffect"> 
+	<stack_type value="replace"/>
+	<duration value="0"/>
+			
+<effect_group name="snoweffect">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/p_snoweffect1.unity3d?p_snoweffect" parent_transform="Spine1" local_offset="-.094,0,.055" local_rotation="0,0,90"></triggered_effect>
+			  
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2"></triggered_effect>	
+
+	<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="p_snoweffect" />    
+    <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="p_snoweffect" /> 
+</effect_group>
+</buff>
+</append>
+
+<!--GREEN EXPLOSION PARTICLE-->
+<append xpath="/buffs">
+<buff name="buffp_explo"> 
+	<stack_type value="replace"/>
+	<duration value="0"/>
+			
+<effect_group name="explosioneffect">
+	<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/p_explo1.unity3d?p_explo" parent_transform="Spine1" local_offset="-.094,0,.055" local_rotation="0,0,90"></triggered_effect>
+			  
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2"></triggered_effect>	
+
+	<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="p_explo" />    
+    <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="p_explo" /> 
+</effect_group>
+</buff>
+</append>
+
+<!--DESERT HEAT BIOME BUFF-->
+<append xpath="/buffs">
+<buff name="buffdesertheatLL" remove_on_death="false" name_key="buffdesertheatLLName" description_key="buffdesertheatLLDesc" tooltip_key="buffdesertheatLLTooltip" icon="ui_game_symbol_hot" icon_color="106, 0, 163" icon_blink="false" tags="buffdesertheatLL">
+	<stack_type value="ignore"/>
+
+<effect_group name="superheatLL">
+	<requirement name="InBiome" biome="05"/>
+	<requirement name="HasBuff" buff="buffdesertheatLL"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="15"/>
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="30" fade="3" effect_name="Hot"/>
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Hot"/>
+	<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Hot" intensity="0" fade="0"/>
+</effect_group>
+</buff>
+</append>
+
+<!--FROZEN NORTH BIOME BUFF-->
+<append xpath="/buffs">
+<buff name="bufffrozensnowLL" remove_on_death="false" name_key="bufffrozensnowLLName" description_key="bufffrozensnowLLDesc" tooltip_key="bufffrozensnowLLTooltip" icon="ui_game_symbol_cold" icon_color="106, 0, 163" icon_blink="false" tags="bufffrozensnowLL">
+	<stack_type value="ignore"/>
+
+<effect_group name="frozensnowLL">
+	<requirement name="InBiome" biome="01"/>
+	<requirement name="HasBuff" buff="bufffrozensnowLL"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="25"/>
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="30" fade="3" effect_name="Cold2"/>
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Cold2"/>
+	<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Cold2" intensity="0" fade="0"/>
+</effect_group>
+</buff>
+</append>
+
+<!--WASTELAND RADIATION BIOME BUFF-->
+<append xpath="/buffs">
+<buff name="buffradiationwasteLL" remove_on_death="false" name_key="buffradiationwasteLLName" description_key="buffradiationwasteLLDesc" tooltip_key="buffradiationwasteLLTooltip" icon="ui_game_symbol_radiation" icon_color="106, 0, 163" icon_blink="false" tags="buffradiationwasteLL">
+	<stack_type value="ignore"/>
+
+<effect_group name="radiationwasteLL">
+	<requirement name="InBiome" biome="08"/>
+	<requirement name="HasBuff" buff="buffradiationwasteLL"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="50"/>
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="30" fade="3" effect_name="Radiation"/>
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Radiation"/>
+	<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+</effect_group>
+</buff>
+</append>
+
+<!--SKILL POINT CARD-->
+<!--append xpath="/buffs">
+<buff name="buffendzxpcardLL" description="Gives one skill point" icon="ui_game_symbol_lightbulb" icon_color="255,175,175" hidden="true">
+<stack_type value="ignore"/>
+<duration value="1"/>
+
+<effect_group>
+	<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="endzxpcardgivepointsLL" />
+</effect_group>
+</buff>
+</append-->
+
+<append xpath="/buffs">
+<buff name="buffbackpackteleLL" description="Gives one skill point" icon="ui_game_symbol_lightbulb" icon_color="255,175,175" hidden="true">
+<stack_type value="ignore"/>
+<duration value="1"/>
+
+<effect_group>
+	<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="actionbackpackteleLL" />
+</effect_group>
+</buff>
+</append>
+
+<append xpath="/buffs">
+<buff name="buff5coursmealLL" name_key="food5courseLL" description_key="food5courseLLDesc" icon="ui_game_symbol_coin">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".buffPumpkinCheesecakeDisplay"/>
+	<display_value_format value="time"/>
+
+	<effect_group>
+		<passive_effect name="BarteringBuying" operation="base_add" value=".25"/>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffPumpkinCheesecakeDuration" operation="subtract" value="@$MetabolismDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffPumpkinCheesecakeDisplay" operation="set" value="@$buffPumpkinCheesecakeDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffPumpkinCheesecakeDisplay" operation="divide" value="@$MetabolismDuration"/>
+	</effect_group>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPumpkinCheesecake">
+			<requirement name="CVarCompare" cvar="$buffPumpkinCheesecakeDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffPumpkinCheesecakeDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffPumpkinCheesecakeDuration" operation="set" value="0"/>
+</effect_group>
+</buff>
+
+	<buff name="bufffooddoublecheese2f3LL" name_key="bufffooddoublecheese2f3LLName" description_key="bufffooddoublecheese2f3LLDesc" tooltip_key="bufffooddoublecheese2f3LLTooltip" icon="ui_game_symbol_electric_power"  icon_color="0, 252, 156">
+		<stack_type value="replace"/>
+		<duration value="0"/>
+		<display_value value=".buffGrandpasLearningElixirDisplay"/>
+		<display_value_format value="time"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffGrandpasLearningElixirDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffGrandpasLearningElixirDisplay" operation="set" value="@$buffGrandpasLearningElixirDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffGrandpasLearningElixirDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrunkGrandpasLearningElixir">
+				<requirement name="CVarCompare" cvar="$buffGrandpasLearningElixirDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffGrandpasLearningElixirDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffGrandpasLearningElixirDuration" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value=".5"/>
+		</effect_group>
+	</buff>
+</append>
+
+<!--TURNS SURVIVORS INTO ZOMBIES-->
+<append xpath="/buffs">
+<buff name="npcEndZsurvivorTransformLL" name_key="beers" description_key="drunkDesc" tooltip_key="drunkTooltip" icon="ui_game_symbol_beer"> <!-- NoSpawnOndeath to 1-->
+<stack_type value="ignore"/>
+<update_rate value="1"/>	
+<effect_group>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransformLL"/></triggered_effect>	
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransformLL"/></triggered_effect>	      
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransformLL"/></triggered_effect>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransformLL"/></triggered_effect>      
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransformLL"/></triggered_effect>  
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransformLL"/></triggered_effect>       
+</effect_group>
+</buff>
+
+<buff name="npcEndZsurvivorTransform2LL" name_key="beers" description_key="drunkDesc" tooltip_key="drunkTooltip" icon="ui_game_symbol_beer"> <!-- NoSpawnOndeath to 1-->
+<stack_type value="ignore"/>
+<update_rate value="1"/>	
+<effect_group>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation2" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform2LL"/></triggered_effect>	
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform2LL"/></triggered_effect>	      
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation2" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform2LL"/></triggered_effect>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation2" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform2LL"/></triggered_effect>      
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform2LL"/></triggered_effect>  
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform2LL"/></triggered_effect>       
+</effect_group>
+</buff>
+
+<buff name="npcEndZsurvivorTransform3LL" name_key="beers" description_key="drunkDesc" tooltip_key="drunkTooltip" icon="ui_game_symbol_beer"> <!-- NoSpawnOndeath to 1-->
+<stack_type value="ignore"/>
+<update_rate value="1"/>	
+<effect_group>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation3" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform3LL"/></triggered_effect>	
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform3LL"/></triggered_effect>	      
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation3" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform3LL"/></triggered_effect>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation3" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform3LL"/></triggered_effect>      
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform3LL"/></triggered_effect>  
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform3LL"/></triggered_effect>       
+</effect_group>
+</buff>
+
+<buff name="npcEndZsurvivorTransform4LL" name_key="beers" description_key="drunkDesc" tooltip_key="drunkTooltip" icon="ui_game_symbol_beer"> <!-- NoSpawnOndeath to 1-->
+<stack_type value="ignore"/>
+<update_rate value="1"/>	
+<effect_group>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation4" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform4LL"/></triggered_effect>	
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform4LL"/></triggered_effect>	      
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation4" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform4LL"/></triggered_effect>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation4" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform4LL"/></triggered_effect>      
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform4LL"/></triggered_effect>  
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform4LL"/></triggered_effect>       
+</effect_group>
+</buff>
+
+<buff name="npcEndZsurvivorTransform5LL" name_key="beers" description_key="drunkDesc" tooltip_key="drunkTooltip" icon="ui_game_symbol_beer"> <!-- NoSpawnOndeath to 1-->
+<stack_type value="ignore"/>
+<update_rate value="1"/>	
+<effect_group>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation5" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform5LL"/></triggered_effect>	
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform5LL"/></triggered_effect>	      
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation5" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform5LL"/></triggered_effect>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="spawnOverridenpcEndZsurvivorTransformation5" operation="set" value="1">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform5LL"/></triggered_effect>      
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform5LL"/></triggered_effect>  
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="NoSpawnOndeath" operation="set" value="0">
+		<requirement name="HasBuff" buff="npcEndZsurvivorTransform5LL"/></triggered_effect>       
+</effect_group>
+</buff>
+</append>
+
+</configs>
+

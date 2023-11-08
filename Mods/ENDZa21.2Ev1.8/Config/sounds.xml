@@ -1,0 +1,153 @@
+<configs>
+
+<!--FIRE EXTINGUISHER-->
+<append xpath="/Sounds">
+<SoundDataNode name="fire_extinguisher"> 
+	<AudioSource name="Sounds/AudioSource_WeaponFire"/> 
+	<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+    <Noise ID="0" noise="52" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+    <AudioClip ClipName="#@modfolder:Resources/SoundFireE.unity3d?FireExtinguisher.Prefab"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <LocalCrouchVolumeScale value="1"/> 
+	<CrouchNoiseScale value="1"/> 
+	<NoiseScale value="1"/> 
+	<MaxVoices value="30"/> 
+	<MaxVoicesPerEntity value="10"/> 
+	<MaxRepeatRate value="0.001"/> 
+</SoundDataNode>
+</append>
+
+<!--KING SNAKE-->
+<append xpath="/Sounds">
+<SoundDataNode name="snakeroarLL"> 
+	<AudioSource name="Sounds/AudioSource_Creatures"/> 
+	<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+    <Noise ID="0" noise="52" time="5"/>
+    <AudioClip ClipName="#@modfolder:Resources/Soundsnakeroar1.unity3d?snakeroar.Prefab"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <LocalCrouchVolumeScale value="1"/> 
+	<CrouchNoiseScale value="1"/> 
+	<NoiseScale value="15"/> 
+	<MaxVoices value="30"/> 
+	<MaxVoicesPerEntity value="10"/> 
+	<MaxRepeatRate value="0.001"/> 
+</SoundDataNode>
+</append>
+
+<!--GOAT SOUND-->
+<append xpath="/Sounds">
+<SoundDataNode name="goatbleatLL"> 
+	<AudioSource name="Sounds/AudioSource_Creatures"/> 
+	<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+    <Noise ID="0" noise="52" time="5"/>
+    <AudioClip ClipName="#@modfolder:Resources/Soundgoatbleat.unity3d?goatbleat.Prefab"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <LocalCrouchVolumeScale value="1"/> 
+	<CrouchNoiseScale value="1"/> 
+	<NoiseScale value="3"/> 
+	<MaxVoices value="30"/> 
+	<MaxVoicesPerEntity value="10"/> 
+	<MaxRepeatRate value="0.001"/> 
+</SoundDataNode>
+</append>
+
+<!--COW SOUND-->
+<append xpath="/Sounds">
+<SoundDataNode name="cowmooLL"> 
+	<AudioSource name="Sounds/AudioSource_Creatures"/> 
+	<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+    <Noise ID="0" noise="52" time="5"/>
+    <AudioClip ClipName="#@modfolder:Resources/Soundscow.unity3d?cowmoo.Prefab"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <LocalCrouchVolumeScale value="1"/> 
+	<CrouchNoiseScale value="1"/> 
+	<NoiseScale value="3"/> 
+	<MaxVoices value="30"/> 
+	<MaxVoicesPerEntity value="10"/> 
+	<MaxRepeatRate value="0.001"/> 
+</SoundDataNode>
+</append>
+
+<append xpath="/Sounds">
+<SoundDataNode name="cowattackLL"> 
+	<AudioSource name="Sounds/AudioSource_Creatures"/> 
+	<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+    <Noise ID="0" noise="52" time="5"/>
+    <AudioClip ClipName="#@modfolder:Resources/Soundscow.unity3d?cowattack.Prefab"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <LocalCrouchVolumeScale value="1"/> 
+	<CrouchNoiseScale value="1"/> 
+	<NoiseScale value="3"/> 
+	<MaxVoices value="30"/> 
+	<MaxVoicesPerEntity value="10"/> 
+	<MaxRepeatRate value="0.001"/> 
+</SoundDataNode>
+</append>
+
+<append xpath="/Sounds">
+<SoundDataNode name="cowdeadLL"> 
+	<AudioSource name="Sounds/AudioSource_Creatures"/> 
+	<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+    <Noise ID="0" noise="52" time="5"/>
+    <AudioClip ClipName="#@modfolder:Resources/Soundscow.unity3d?cowdead.Prefab"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <LocalCrouchVolumeScale value="1"/> 
+	<CrouchNoiseScale value="1"/> 
+	<NoiseScale value="3"/> 
+	<MaxVoices value="30"/> 
+	<MaxVoicesPerEntity value="10"/> 
+	<MaxRepeatRate value="0.001"/> 
+</SoundDataNode>
+</append>
+
+<!--RAT SOUND-->
+<append xpath="/Sounds">
+<SoundDataNode name="ratattackLL"> 
+	<AudioSource name="Sounds/AudioSource_Creatures"/> 
+	<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+    <Noise ID="0" noise="52" time="5"/>
+    <AudioClip ClipName="#@modfolder:Resources/Soundsrat.unity3d?ratattack.Prefab"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <LocalCrouchVolumeScale value="1"/> 
+	<CrouchNoiseScale value="1"/> 
+	<NoiseScale value="3"/> 
+	<MaxVoices value="30"/> 
+	<MaxVoicesPerEntity value="10"/> 
+	<MaxRepeatRate value="0.001"/> 
+</SoundDataNode>
+</append>
+
+<append xpath="/Sounds">
+<SoundDataNode name="rathurtLL"> 
+	<AudioSource name="Sounds/AudioSource_Creatures"/> 
+	<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+    <Noise ID="0" noise="52" time="5"/>
+    <AudioClip ClipName="#@modfolder:Resources/Soundsrat.unity3d?rathurt.Prefab"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <AudioClip ClipName="" AltSound="true"/>
+    <LocalCrouchVolumeScale value="1"/> 
+	<CrouchNoiseScale value="1"/> 
+	<NoiseScale value="3"/> 
+	<MaxVoices value="30"/> 
+	<MaxVoicesPerEntity value="10"/> 
+	<MaxRepeatRate value="0.001"/> 
+</SoundDataNode>
+</append>
+
+
+</configs>
